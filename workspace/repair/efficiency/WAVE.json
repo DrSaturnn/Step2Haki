@@ -13,7 +13,7 @@
  "max_agents": 23,
  "max_calls": 670,
  "max_tokens": 27000000,
- "set_by": "Jonathan, 2026-11-09 20:10 (\"Budget: 23 agents, 670 calls, 27M agent tokens (rewrite Opus 1, Sonnet 12; review Opus 3 lanes, Sonnet 2); lead 50M\")",
+ "set_by": "Jonathan, 2026-11-09 20:10 (\"Budget: 23 agents, 670 calls, 27M agent tokens (rewrite Opus 1, Sonnet 12; review Opus 3 lanes, Sonnet 2); lead 50M\") ; lead raised to 80M by Jonathan 2026-11-09 (\"Raise to 80M, fresh chat (Rec.)\", D-20261109-8)",
  "previous": {
   "id": "s171",
   "note": "s171 shipped 4ca8cc1 2026-11-09 (Claude lead): 11 psych briefs under TEXTBOOK_STYLE, pms-pmdd held; 26 agents, 43M budget"
@@ -449,10 +449,10 @@
    "agents": 23,
    "calls": 670,
    "tokens": 27000000,
-   "lead_tokens": 50000000
+   "lead_tokens": 80000000
   }
  },
- "max_lead_tokens": 50000000,
+ "max_lead_tokens": 80000000,
  "spent_agents": 0,
  "spent_calls": 0
 }
