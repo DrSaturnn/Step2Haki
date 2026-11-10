@@ -58,8 +58,9 @@ Do not read the page, the runbook, STANDING_DIRECTIONS or the digest whole. Grep
   imaginary friend does not fit"): state the finding alone, and give the competitor its own line or table row. Each hover
   line is a whole statement: no line opens with "And", "Or" or "But" to continue the line above.
 - Hover anchors (D-20261108-5, A1): the trigger button (button.sp-pop, aria-controls the card's id) sits on the term
-  its card explains, inside the line's own text. Where the line has no such term, the button holds a short label of its
-  own (1 to 3 words, a clinical noun such as "Causes"), placed after the line's text. A trigger that shares no content
+  its card explains, inside the line's own text. Where the line has no such term, the hover opens from the fallback
+  marker: an empty button.sp-pop.sp-i (a circled i drawn by the style sheet, aria-label "More information") placed
+  after the line's text; no word label is added (D-20261110-12). A trigger that shares no content
   word with its card title, kicker or first line is counted (prose_lint hover_anchor) unless repair/efficiency/
   ANCHOR_ALLOW.json lists it as a fit.
 - "In practice" lines (C7): keep the line and its fact, with no reference name: "In practice: <fact>" (the Merck Manual, a label or any other source is not named).
@@ -68,9 +69,8 @@ Do not read the page, the runbook, STANDING_DIRECTIONS or the digest whole. Grep
   the practice fact.
 - Abbreviations (D-20261108-9): ECG is on repair/efficiency/ABBREV.json; MAOI, MAO, H1, GABA, SSRI, SNRI and TCA are
   spelled out at first use in each block (TEXTBOOK_STYLE rule 5).
-- Own labels deferred from s170 (repair/s170/anchors/anchor_own_pending.json, verdict "own"): the lane for a brief
-  applies its brief's rows (a 1 to 3 word clinical noun after the line's text, the "label" field as the starting
-  wording) and lists each in NOTES.md.
+- Fallback markers (D-20261110-12): a hover with no fitting term keeps its marker through a rewrite; the lane moves it
+  onto a term only when the rewritten line gains one the card explains, and lists the move in NOTES.md.
 - Screening instruments (STANDING "Step 2 Diagnostic criteria"; settled for PHQ-9 in D-20261108-9): the cutoff line
   that estimates likelihood sits in step 2 as p.sp-note; score bands that grade severity sit in Severity. A cutoff with
   no board source keeps a primary source quote (the instrument's validation paper) and is listed in NOTES.md.

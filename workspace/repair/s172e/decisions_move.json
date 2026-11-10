@@ -4,10 +4,9 @@
   "term": "De Quervain tenosynovitis",
   "cell": "row"
  },
- "wh-pop-5": {
+ "wh-pop-2": {
   "verdict": "move",
-  "term": "Third-trimester numb hands",
-  "cell": "row"
+  "term": "About 2 weeks"
  },
  "lbp-pop-1": {
   "verdict": "move",
@@ -33,6 +32,16 @@
  "bo-pop-3": {
   "verdict": "move",
   "term": "Osteochondroma",
+  "cell": "row"
+ },
+ "bo-pop-1": {
+  "verdict": "move",
+  "term": "Osteoid osteoma",
+  "cell": "row"
+ },
+ "bo-pop-2": {
+  "verdict": "move",
+  "term": "Unicameral bone cyst",
   "cell": "row"
  },
  "shp-pop-2": {
@@ -137,9 +146,19 @@
   "verdict": "move",
   "term": "missing a second dose"
  },
+ "dmn-pop-1": {
+  "verdict": "move",
+  "term": "Normal pressure hydrocephalus",
+  "cell": "row"
+ },
  "dmn-pop-2": {
   "verdict": "move",
   "term": "Creutzfeldt-Jakob disease",
+  "cell": "row"
+ },
+ "ox-pop-1": {
+  "verdict": "move",
+  "term": "Anticholinergic",
   "cell": "row"
  },
  "ox-pop-barb-20261029": {
@@ -188,6 +207,10 @@
   "verdict": "move",
   "term": "Normal",
   "cell": "row"
+ },
+ "pv-pop-2": {
+  "verdict": "move",
+  "term": "Potter features"
  },
  "hbs-pop-5": {
   "verdict": "move",
@@ -286,10 +309,6 @@
   "verdict": "move",
   "term": "normal hormone levels"
  },
- "pmd-pop-2": {
-  "verdict": "move",
-  "term": "depression history"
- },
  "pan-pop-6": {
   "verdict": "move",
   "term": "Generalized anxiety disorder",
@@ -337,6 +356,10 @@
   "verdict": "move",
   "term": "Linezolid",
   "cell": "row"
+ },
+ "pcm-pop-2": {
+  "verdict": "move",
+  "term": "Treatment-resistant depression"
  },
  "pcm-pop-7": {
   "verdict": "move",

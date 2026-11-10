@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Receipts to decisions: python3 repair/s172e/decide.py LANES_DIR OUT_DIR
 
-Reads judge_1/receipt.md, judge_2/receipt.md and second/receipt.md (pipe lines: pop | KEEP/MOVE/LABEL | where | text |
+Usage with a later round: decide.py LANES_DIR OUT_DIR SECOND_LANE (judge_3, when present, replaces the earlier verdict
+of each hover it holds). Reads judge_1/receipt.md, judge_2/receipt.md and the second reader's receipt.md (pipe lines: pop | KEEP/MOVE/LABEL | where | text |
 reason), checks every hover of rows.json has one verdict, prints the counts and the agreement of the second read on
 KEEP against not-KEEP, and writes OUT_DIR/verdicts.json, decisions_move.json (anchors.py apply format) and
-labels_pending.json.
+labels_pending.json (the hovers that take the fallback marker).
 """
 import json
 import os
@@ -31,7 +32,9 @@ def main():
     lanes, outd = sys.argv[1], sys.argv[2]
     rows = json.load(open(os.path.join(lanes, 'rows.json')))
     v, bad = {}, []
-    for n in ('judge_1', 'judge_2'):
+    for n in ('judge_1', 'judge_2', 'judge_3'):
+        if not os.path.exists(os.path.join(lanes, n, 'receipt.md')):
+            continue
         a, b = parse(os.path.join(lanes, n, 'receipt.md'))
         v.update(a)
         bad += b
@@ -42,7 +45,8 @@ def main():
     print('verdicts: %s; missing %d; unknown ids %d; bad lines %d' % (cnt, len(missing), len(extra), len(bad)))
     for x in (missing + extra + bad)[:20]:
         print('  ! ' + x)
-    s, sb = parse(os.path.join(lanes, 'second', 'receipt.md'))
+    sec = sys.argv[3] if len(sys.argv) > 3 else 'second'
+    s, sb = parse(os.path.join(lanes, sec, 'receipt.md'))
     both = [i for i in s if i in v]
     agree = [i for i in both if (s[i]['verdict'] == 'KEEP') == (v[i]['verdict'] == 'KEEP')]
     print('second read: %d rows, agree on KEEP against not-KEEP %d of %d' % (len(s), len(agree), len(both)))

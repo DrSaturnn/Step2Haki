@@ -107,3 +107,12 @@ as a LABEL; no card text is written in this batch.
   (3) a trigger that is a shortened form of the card's subject phrase ("Reactions" for "Reactions to an earlier
   dose"); (4) a condition phrase ("NSAIDs cannot be taken") whose card explains the drug used under that condition.
 - Spend: 3 of 4 agents, 13 of 200 calls, 0.81M of 3M tokens. A second judging round needs agents beyond the 4.
+- Round 2 (D-20261110-12, -13): rubric gained five rulings; fallback marker replaces labels (anchors.py verdict
+  "icon", hovercard.css .sp-pop.sp-i; not applied to the page). judge_3 re-judged the 48 close rows (KEEP 28, MOVE 12,
+  LABEL 8). Merged verdicts: KEEP 272, MOVE 102, LABEL 61. Second read 2 (40 fresh rows, seed 1722): 34 of 40 again
+  (repair/s172e/disagree_2.md). STOP at step 4 a second time. Of the six, two are span fixes of the same anchor
+  (pmd-pop-1, pcb-pop-8). hca-pop-2 ("Surgery", card "Primary hyperparathyroidism") is a round 1 KEEP that ruling 1
+  would move: the 244 round 1 KEEP verdicts not marked borderline were not re-judged under the rulings.
+  Across both samples: of 52 judge KEEP rows the second reader would change 7; of 28 judge fix rows the second reader
+  would keep 5 (3 of them span fixes or the same subject).
+- Spend: 5 of 6 agents, 19 calls, 1.01M of 3M tokens.

@@ -1,4 +1,9 @@
 {
+ "wh-pop-5": {
+  "verdict": "own",
+  "label": "-",
+  "reason": "card on carpal tunnel causes; no term names it"
+ },
  "hip-pop-2": {
   "verdict": "own",
   "label": "Blood supply to the femoral head",
@@ -81,8 +86,8 @@
  },
  "oap-pop-1": {
   "verdict": "own",
-  "label": "In practice",
-  "reason": "borderline; card explains acetaminophen guideline status"
+  "label": "-",
+  "reason": "ruling 2; card on acetaminophen, not named in line"
  },
  "mox-pop-1": {
   "verdict": "own",
@@ -96,8 +101,13 @@
  },
  "ob-pop-7": {
   "verdict": "own",
-  "label": "Symptom relief: sources differ",
-  "reason": "borderline; card explains symptom relief, trigger is survival"
+  "label": "-",
+  "reason": "card on symptom relief; trigger is survival outcome"
+ },
+ "ms-pop-4": {
+  "verdict": "own",
+  "label": "-",
+  "reason": "card on other MASH drugs; none named in line"
  },
  "py-pop-3": {
   "verdict": "own",
@@ -189,6 +199,11 @@
   "label": "All the options",
   "reason": "generic trigger, card lists answer options"
  },
+ "pmd-pop-2": {
+  "verdict": "own",
+  "label": "-",
+  "reason": "card on charting cycle to separate mood from PMS"
+ },
  "pmd-pop-4": {
   "verdict": "own",
   "label": "Physical symptoms",
@@ -201,8 +216,8 @@
  },
  "sm-pop-1": {
   "verdict": "own",
-  "label": "Other signs",
-  "reason": "borderline, card explains other inconsistency signs, not Hoover"
+  "label": "-",
+  "reason": "card on other inconsistency signs, not Hoover test"
  },
  "sm-pop-trem-20261026": {
   "verdict": "own",
@@ -224,11 +239,6 @@
   "label": "Offered options",
   "reason": "generic trigger, card lists answer options"
  },
- "dl-pop-1": {
-  "verdict": "own",
-  "label": "Medications to avoid in at-risk patients",
-  "reason": "borderline, card explains medications to avoid, absent from line"
- },
  "tox-pop-6": {
   "verdict": "own",
   "label": "Alcohol",
@@ -239,20 +249,10 @@
   "label": "Prescription cannabinoid: dronabinol",
   "reason": "card explains dronabinol, absent from line"
  },
- "sb-pop-in-20261025a": {
-  "verdict": "own",
-  "label": "Urine screen",
-  "reason": "borderline, card explains urine screen, absent from line and row"
- },
  "tox-pop-20": {
   "verdict": "own",
   "label": "Disulfiram reaction",
   "reason": "generic trigger, card explains disulfiram reaction, absent from line"
- },
- "pm-pop-osa-20261026": {
-  "verdict": "own",
-  "label": "Risk",
-  "reason": "borderline, card explains sleep apnea risk screen"
  },
  "li-pop-nbc85661": {
   "verdict": "own",
@@ -269,11 +269,6 @@
   "label": "Also",
   "reason": "card explains other atypical uses, not Parkinson psychosis"
  },
- "pcatyp-pop-9": {
-  "verdict": "own",
-  "label": "Tardive",
-  "reason": "borderline, card explains tardive dyskinesia ranking only"
- },
  "pcatyp-pop-11": {
   "verdict": "own",
   "label": "Pneumonia",
@@ -289,6 +284,11 @@
   "label": "Diphenhydramine",
   "reason": "NEEDS-CONTENT, card explains diphenhydramine uses, line is tardive dyskinesia"
  },
+ "pctd-pop-5": {
+  "verdict": "own",
+  "label": "-",
+  "reason": "ruling 2; card on VMAT2 inhibitor label doses, not named"
+ },
  "mac-pop-11": {
   "verdict": "own",
   "label": "Most serious",
@@ -298,5 +298,10 @@
   "verdict": "own",
   "label": "Label",
   "reason": "card explains other cholinomimetic cautions, absent from line"
+ },
+ "adm-pop-6": {
+  "verdict": "own",
+  "label": "-",
+  "reason": "card on use disorder criteria under prescription, not misuse"
  }
 }

@@ -1,0 +1,242 @@
+{
+ "lbp-pop-1": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "no imaging",
+  "reason": "card explains why no imaging, trigger is the diagnosis"
+ },
+ "lbp-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains route of vertebral metastasis"
+ },
+ "hj-pop-1": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "-",
+  "reason": "NEEDS-CONTENT card on urate lowering between flares, row is flare"
+ },
+ "bo-pop-1": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Osteoid osteoma",
+  "reason": "card titled osteoid osteoma, trigger is a drug"
+ },
+ "umb-pop-2": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains staged silo repair, no silo term in row"
+ },
+ "umb-pop-3": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Gastroschisis",
+  "reason": "card gives defects associated with gastroschisis; borderline"
+ },
+ "ox-pop-barb-20261029": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Barbiturate",
+  "reason": "card titled barbiturate overdose, trigger is a symptom"
+ },
+ "mox-pop-1": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "-",
+  "reason": "NEEDS-CONTENT card on acute contusion, line on established lesion"
+ },
+ "bpx-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains C5-C6 root extent"
+ },
+ "lr-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card on current risk calculator (PREVENT); borderline"
+ },
+ "at-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains systemic steroid route and course"
+ },
+ "zk-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains the myotomy plus pouch procedure; borderline"
+ },
+ "dmc-pop-6": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "then yearly",
+  "reason": "card qualifies screening interval, trigger names exams"
+ },
+ "pv-pop-2": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains lung hypoplasia, no lung term present"
+ },
+ "hca-pop-2": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Primary hyperparathyroidism",
+  "reason": "card titled with diagnosis, trigger is management word"
+ },
+ "hbs-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card is SAND mnemonic for papillary necrosis"
+ },
+ "tb-pop-2": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "BCG vaccine",
+  "reason": "card explains BCG effect on skin test"
+ },
+ "bmn-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card qualifies the vancomycin plus ceftriaxone regimen"
+ },
+ "vx-pop-3": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Cirrhosis",
+  "reason": "card explains why cirrhosis needs these vaccines"
+ },
+ "vx-pop-5": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Complement deficiency",
+  "reason": "card explains eculizumab complement block, trigger is vaccine"
+ },
+ "iso-pop-7": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains negative smear release criteria"
+ },
+ "ti-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains CBIT behavioral therapy"
+ },
+ "szp-pop-5": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card gives wider range of suicide death risk"
+ },
+ "pmd-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains normal hormone levels in PMS; borderline"
+ },
+ "pmd-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card separates depression history from premenstrual syndrome; borderline"
+ },
+ "pan-pop-4": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "-",
+  "reason": "card subject ECG, only term is masked"
+ },
+ "sm-pop-14": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card titled psychotherapy"
+ },
+ "eatd-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card lists refeeding complications"
+ },
+ "pm-pop-in-20261025a": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains CT imaging, no imaging term in row"
+ },
+ "li-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card gives target lithium levels"
+ },
+ "pcssri-pop-1": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains effects by receptor type, not transporter block"
+ },
+ "pcssri-pop-8": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "Adequate trial",
+  "reason": "card titled adequate trial"
+ },
+ "pcs-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card on neuropathic pain therapy lines; borderline"
+ },
+ "pctca-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card lists tricyclic pain uses"
+ },
+ "pctd-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains VMAT2 inhibition mechanism"
+ },
+ "mac-pop-4": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "hyperammonemic encephalopathy",
+  "reason": "card explains hyperammonemia, trigger is the drug"
+ },
+ "pcb-pop-8": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card gives withdrawal onset timing; borderline"
+ },
+ "sud-pop-9": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card is disulfiram label detail"
+ },
+ "sud-pop-10": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card is varenicline label detail"
+ },
+ "sud-pop-11": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card on nicotine replacement with angina; borderline"
+ }
+}

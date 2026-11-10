@@ -18,16 +18,16 @@
   "reason": "card defines Phalen and Tinel maneuvers"
  },
  "wh-pop-2": {
-  "verdict": "KEEP",
-  "where": "-",
-  "text": "-",
-  "reason": "borderline; card gives the reexamination and repeat imaging window"
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "About 2 weeks",
+  "reason": "card is about the repeat window interval"
  },
  "wh-pop-5": {
-  "verdict": "MOVE",
-  "where": "rowhead",
-  "text": "Third-trimester numb hands",
-  "reason": "borderline; card lists carpal tunnel causes including pregnancy, trigger is treatment"
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "-",
+  "reason": "card on carpal tunnel causes; no term names it"
  },
  "lbp-pop-1": {
   "verdict": "MOVE",
@@ -156,16 +156,16 @@
   "reason": "card explains osteochondroma malignant change; generic trigger Observe"
  },
  "bo-pop-1": {
-  "verdict": "KEEP",
-  "where": "-",
-  "text": "-",
-  "reason": "borderline; card gives ablation alternative to the NSAID plan for osteoid osteoma"
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Osteoid osteoma",
+  "reason": "card explains osteoid osteoma treatment, trigger is a drug"
  },
  "bo-pop-2": {
-  "verdict": "KEEP",
-  "where": "-",
-  "text": "-",
-  "reason": "borderline; card qualifies observation of unicameral bone cyst by size"
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Unicameral bone cyst",
+  "reason": "ruling 1; card qualifies observation for unicameral bone cyst"
  },
  "shp-pop-1": {
   "verdict": "KEEP",
@@ -195,7 +195,7 @@
   "verdict": "KEEP",
   "where": "-",
   "text": "-",
-  "reason": "borderline; card gives exception to reassurance for newborn murmur"
+  "reason": "card gives newborn exception to reassurance"
  },
  "pmur-pop-2": {
   "verdict": "MOVE",
@@ -243,7 +243,7 @@
   "verdict": "KEEP",
   "where": "-",
   "text": "-",
-  "reason": "borderline; card gives alternative to macrolide for atypical pneumonia"
+  "reason": "card gives doxycycline alternative to the macrolide"
  },
  "nl-pop-2": {
   "verdict": "MOVE",
@@ -255,7 +255,7 @@
   "verdict": "MOVE",
   "where": "rowhead",
   "text": "Patient",
-  "reason": "borderline; card gives patient profile; generic trigger Men"
+  "reason": "card describes typical patient demographics, trigger is sex only"
  },
  "chol-pop-2": {
   "verdict": "KEEP",
@@ -297,7 +297,7 @@
   "verdict": "KEEP",
   "where": "-",
   "text": "-",
-  "reason": "borderline; card gives infant exception to disimpaction"
+  "reason": "card gives infant exception to disimpaction"
  },
  "pcon-pop-3": {
   "verdict": "LABEL",
@@ -531,13 +531,13 @@
   "verdict": "KEEP",
   "where": "-",
   "text": "-",
-  "reason": "borderline; card explains dosing the oral cephalosporin"
+  "reason": "card explains dosing of the oral cephalosporin"
  },
  "dmn-pop-1": {
-  "verdict": "KEEP",
-  "where": "-",
-  "text": "-",
-  "reason": "borderline; card decodes normal pressure hydrocephalus triad including gait"
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Normal pressure hydrocephalus",
+  "reason": "card is the NPH triad mnemonic, trigger is one finding"
  },
  "dmn-pop-2": {
   "verdict": "MOVE",
@@ -558,10 +558,10 @@
   "reason": "card explains cholinesterase inhibitor expectations"
  },
  "ox-pop-1": {
-  "verdict": "KEEP",
-  "where": "-",
-  "text": "-",
-  "reason": "borderline; card mnemonic decodes anticholinergic findings including big pupils"
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Anticholinergic",
+  "reason": "card explains anticholinergic toxidrome, trigger is one finding"
  },
  "ox-pop-barb-20261029": {
   "verdict": "MOVE",
@@ -644,8 +644,8 @@
  "oap-pop-1": {
   "verdict": "LABEL",
   "where": "-",
-  "text": "In practice",
-  "reason": "borderline; card explains acetaminophen guideline status"
+  "text": "-",
+  "reason": "ruling 2; card on acetaminophen, not named in line"
  },
  "sa-pop-2": {
   "verdict": "KEEP",
@@ -669,7 +669,7 @@
   "verdict": "KEEP",
   "where": "-",
   "text": "-",
-  "reason": "borderline; card gives MAS criteria led by ferritin threshold"
+  "reason": "card gives MAS thresholds for ferritin and companion labs"
  },
  "ji-pop-2": {
   "verdict": "KEEP",
@@ -752,8 +752,8 @@
  "ob-pop-7": {
   "verdict": "LABEL",
   "where": "-",
-  "text": "Symptom relief: sources differ",
-  "reason": "borderline; card explains symptom relief, trigger is survival"
+  "text": "-",
+  "reason": "card on symptom relief; trigger is survival outcome"
  },
  "pn-pop-1": {
   "verdict": "KEEP",
@@ -798,10 +798,10 @@
   "reason": "card explains bariatric surgery effect"
  },
  "ms-pop-4": {
-  "verdict": "KEEP",
+  "verdict": "LABEL",
   "where": "-",
   "text": "-",
-  "reason": "borderline; card gives other MASH drug options besides resmetirom"
+  "reason": "card on other MASH drugs; none named in line"
  },
  "zk-pop-1": {
   "verdict": "KEEP",
@@ -837,7 +837,7 @@
   "verdict": "MOVE",
   "where": "line",
   "text": "liver",
-  "reason": "borderline; card explains hepatoblastoma screening, not thyroid ultrasound"
+  "reason": "card on hepatoblastoma screening, liver named in same mask"
  },
  "hp-pop-4": {
   "verdict": "KEEP",
@@ -933,7 +933,7 @@
   "verdict": "KEEP",
   "where": "-",
   "text": "-",
-  "reason": "borderline; card explains eye exam interval after normal exams"
+  "reason": "borderline; card gives eye exam interval exception"
  },
  "ut-pop-2": {
   "verdict": "LABEL",
@@ -972,16 +972,16 @@
   "reason": "card explains peritonitis antibiotic choice; generic trigger Infection"
  },
  "pv-pop-2": {
-  "verdict": "KEEP",
-  "where": "-",
-  "text": "-",
-  "reason": "borderline; card explains lung hypoplasia in Potter sequence"
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "Potter features",
+  "reason": "card explains lung hypoplasia, a Potter feature"
  },
  "pv-pop-1": {
   "verdict": "KEEP",
   "where": "-",
   "text": "-",
-  "reason": "borderline; card explains keyhole sign of outlet obstruction"
+  "reason": "borderline; keyhole sign shows effects of outlet obstruction"
  },
  "hca-pop-2": {
   "verdict": "KEEP",
@@ -1077,7 +1077,7 @@
   "verdict": "KEEP",
   "where": "-",
   "text": "-",
-  "reason": "borderline; card explains pneumococcal meningeal access"
+  "reason": "card explains why pneumococcal vaccine applies to these conditions"
  },
  "cvx-pop-2": {
   "verdict": "KEEP",
@@ -1203,7 +1203,7 @@
   "verdict": "KEEP",
   "where": "-",
   "text": "-",
-  "reason": "borderline; card explains pertussis isolation duration untreated"
+  "reason": "ruling 3; card on pertussis isolation duration untreated"
  },
  "iso-pop-7": {
   "verdict": "KEEP",
@@ -1215,7 +1215,7 @@
   "verdict": "KEEP",
   "where": "-",
   "text": "-",
-  "reason": "borderline; card explains measles isolation duration in immunocompromise"
+  "reason": "ruling 3; card on measles isolation duration exception"
  },
  "fb-pop-2": {
   "verdict": "KEEP",
@@ -1311,7 +1311,7 @@
   "verdict": "KEEP",
   "where": "-",
   "text": "-",
-  "reason": "borderline; card explains cholinesterase inhibitor in Lewy body dementia"
+  "reason": "card on cholinesterase inhibitor use for cognitive symptoms"
  },
  "pd-pop-4": {
   "verdict": "KEEP",
@@ -1347,7 +1347,7 @@
   "verdict": "KEEP",
   "where": "-",
   "text": "-",
-  "reason": "borderline, card explains first-line antipsychotic class"
+  "reason": "card names first-line antipsychotic class, matches trigger"
  },
  "pd-pop-17": {
   "verdict": "KEEP",
@@ -1434,10 +1434,10 @@
   "reason": "card explains normal hormone levels with altered sensitivity"
  },
  "pmd-pop-2": {
-  "verdict": "MOVE",
-  "where": "line",
-  "text": "depression history",
-  "reason": "borderline, card separates baseline mood symptoms from PMS"
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "-",
+  "reason": "card on charting cycle to separate mood from PMS"
  },
  "pmd-pop-3": {
   "verdict": "KEEP",
@@ -1502,8 +1502,8 @@
  "sm-pop-1": {
   "verdict": "LABEL",
   "where": "-",
-  "text": "Other signs",
-  "reason": "borderline, card explains other inconsistency signs, not Hoover"
+  "text": "-",
+  "reason": "card on other inconsistency signs, not Hoover test"
  },
  "sm-pop-2": {
   "verdict": "KEEP",
@@ -1551,13 +1551,13 @@
   "verdict": "KEEP",
   "where": "-",
   "text": "-",
-  "reason": "borderline, card explains features of the nonepileptic episodes"
+  "reason": "card gives other features of the episodes"
  },
  "sm-pop-9": {
   "verdict": "KEEP",
   "where": "-",
   "text": "-",
-  "reason": "borderline, card explains epilepsy coexisting with PNES"
+  "reason": "card gives coexisting epilepsy rate in PNES"
  },
  "sm-pop-11": {
   "verdict": "KEEP",
@@ -1623,7 +1623,7 @@
   "verdict": "MOVE",
   "where": "rowhead",
   "text": "Gastroparesis",
-  "reason": "borderline, card explains gastroparesis causes"
+  "reason": "card lists gastroparesis causes, trigger is one cause"
  },
  "eatd-pop-thy-20261026": {
   "verdict": "LABEL",
@@ -1635,13 +1635,13 @@
   "verdict": "KEEP",
   "where": "-",
   "text": "-",
-  "reason": "borderline, card explains volume contraction from vomiting"
+  "reason": "card explains acid and volume losses from vomiting"
  },
  "eatd-pop-6": {
   "verdict": "KEEP",
   "where": "-",
   "text": "-",
-  "reason": "borderline, card explains add-on drugs the Add step names"
+  "reason": "card names the add-on drugs the label opens"
  },
  "gp-pop-1": {
   "verdict": "KEEP",
@@ -1686,10 +1686,10 @@
   "reason": "card explains other drugs not linked to delirium"
  },
  "dl-pop-1": {
-  "verdict": "LABEL",
+  "verdict": "KEEP",
   "where": "-",
-  "text": "Medications to avoid in at-risk patients",
-  "reason": "borderline, card explains medications to avoid, absent from line"
+  "text": "-",
+  "reason": "card lists medications to avoid in at-risk patients"
  },
  "tox-pop-1": {
   "verdict": "KEEP",
@@ -1707,7 +1707,7 @@
   "verdict": "MOVE",
   "where": "rowhead",
   "text": "Inhalant intoxication",
-  "reason": "borderline, card explains inhalant intoxication broadly"
+  "reason": "card explains inhalant intoxication broadly, trigger is one finding"
  },
  "tox-pop-7": {
   "verdict": "KEEP",
@@ -1725,7 +1725,7 @@
   "verdict": "KEEP",
   "where": "-",
   "text": "-",
-  "reason": "borderline, card explains what standard panels miss"
+  "reason": "card states which drugs standard panels miss"
  },
  "tox-pop-12": {
   "verdict": "KEEP",
@@ -1737,7 +1737,7 @@
   "verdict": "KEEP",
   "where": "-",
   "text": "-",
-  "reason": "borderline, card explains seizure causes on and off drugs"
+  "reason": "card on seizure on stopping versus on the drug"
  },
  "sb-pop-s150c": {
   "verdict": "KEEP",
@@ -1746,10 +1746,10 @@
   "reason": "card explains unhealthy drinking thresholds"
  },
  "sb-pop-in-20261025a": {
-  "verdict": "LABEL",
+  "verdict": "KEEP",
   "where": "-",
-  "text": "Urine screen",
-  "reason": "borderline, card explains urine screen, absent from line and row"
+  "text": "-",
+  "reason": "borderline; card on MDMA detection on urine screen"
  },
  "tox-pop-17": {
   "verdict": "KEEP",
@@ -1776,10 +1776,10 @@
   "reason": "card explains uses of motivational interviewing"
  },
  "pm-pop-osa-20261026": {
-  "verdict": "LABEL",
+  "verdict": "KEEP",
   "where": "-",
-  "text": "Risk",
-  "reason": "borderline, card explains sleep apnea risk screen"
+  "text": "-",
+  "reason": "card gives risk screen that weighs snoring"
  },
  "pm-pop-hsat-20261026": {
   "verdict": "KEEP",
@@ -1797,7 +1797,7 @@
   "verdict": "KEEP",
   "where": "-",
   "text": "-",
-  "reason": "borderline, card explains imaging for pancreatic cancer"
+  "reason": "card gives first imaging for suspected pancreatic cancer"
  },
  "db-pop-adol-20261028": {
   "verdict": "KEEP",
@@ -1851,7 +1851,7 @@
   "verdict": "KEEP",
   "where": "-",
   "text": "-",
-  "reason": "borderline, card explains myalgias from statin versus hypothyroidism"
+  "reason": "card on statin versus hypothyroid cause of myalgias"
  },
  "li-pop-nbc85661": {
   "verdict": "LABEL",
@@ -2001,7 +2001,7 @@
   "verdict": "MOVE",
   "where": "rowhead",
   "text": "Linezolid",
-  "reason": "borderline, card explains linezolid interaction"
+  "reason": "card explains linezolid interactions broadly"
  },
  "pctca-pop-1": {
   "verdict": "KEEP",
@@ -2040,10 +2040,10 @@
   "reason": "card explains monoamine oxidase A and B"
  },
  "pcm-pop-2": {
-  "verdict": "KEEP",
-  "where": "-",
-  "text": "-",
-  "reason": "borderline, card explains MAOI restriction to treatment-resistant depression"
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "Treatment-resistant depression",
+  "reason": "ruling 4; card on MAOI use in treatment-resistant depression"
  },
  "pcm-pop-3": {
   "verdict": "KEEP",
@@ -2118,10 +2118,10 @@
   "reason": "card explains the weight-neutral three"
  },
  "pcatyp-pop-9": {
-  "verdict": "LABEL",
+  "verdict": "KEEP",
   "where": "-",
-  "text": "Tardive",
-  "reason": "borderline, card explains tardive dyskinesia ranking only"
+  "text": "-",
+  "reason": "card applies movement-risk ranking to tardive dyskinesia"
  },
  "pcatyp-pop-10": {
   "verdict": "KEEP",
@@ -2220,10 +2220,10 @@
   "reason": "card explains reserpine washout"
  },
  "pctd-pop-5": {
-  "verdict": "KEEP",
+  "verdict": "LABEL",
   "where": "-",
   "text": "-",
-  "reason": "borderline, card gives dose caps with strong CYP2D6 inhibitor"
+  "reason": "ruling 2; card on VMAT2 inhibitor label doses, not named"
  },
  "mac-pop-2": {
   "verdict": "MOVE",
@@ -2271,7 +2271,7 @@
   "verdict": "KEEP",
   "where": "-",
   "text": "-",
-  "reason": "borderline, card explains lamotrigine pregnancy risk"
+  "reason": "card on lamotrigine pregnancy cleft risk"
  },
  "mac-pop-11": {
   "verdict": "LABEL",
@@ -2343,7 +2343,7 @@
   "verdict": "KEEP",
   "where": "-",
   "text": "-",
-  "reason": "borderline, card explains benzodiazepine binding versus barbiturates"
+  "reason": "borderline; card contrasts benzodiazepine site and action with barbiturates"
  },
  "pcb-pop-5": {
   "verdict": "MOVE",
@@ -2442,10 +2442,10 @@
   "reason": "generic trigger, card explains stimulant label warnings"
  },
  "adm-pop-6": {
-  "verdict": "KEEP",
+  "verdict": "LABEL",
   "where": "-",
   "text": "-",
-  "reason": "borderline, card explains prescribed use versus use disorder"
+  "reason": "card on use disorder criteria under prescription, not misuse"
  },
  "adm-pop-7": {
   "verdict": "KEEP",
@@ -2511,7 +2511,7 @@
   "verdict": "KEEP",
   "where": "-",
   "text": "-",
-  "reason": "borderline, card explains disulfiram reaction"
+  "reason": "card explains the disulfiram reaction"
  },
  "sud-pop-4": {
   "verdict": "KEEP",
@@ -2583,7 +2583,7 @@
   "verdict": "KEEP",
   "where": "-",
   "text": "-",
-  "reason": "borderline, card explains reaction window after disulfiram dose"
+  "reason": "card gives reaction window after a disulfiram dose"
  },
  "sud-pop-18": {
   "verdict": "KEEP",

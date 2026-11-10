@@ -9,13 +9,15 @@ p, dd, dt, div), kicker (.sp-k), title (.sp-ct) and the body text (title and kic
 content words the trigger shares with the title, kicker and the body's first line (0 marks a row to judge first).
 
 Decisions JSON: {"<pop id>": {"verdict": "fits"} | {"verdict": "move", "term": "<exact text in the line>"} |
-{"verdict": "own", "label": "<short trigger label>"}}.
+{"verdict": "own", "label": "<short trigger label>"} | {"verdict": "icon"}}.
 - move: the trigger button moves onto the first occurrence of `term` in the same line's text, outside any other tag
   (the old trigger text stays as plain text where it was). Visible text is unchanged.
   With "cell": "row" the trigger and its card move onto the first occurrence of `term` in the first cell of the same
   table row (the row head); the old trigger text stays as plain text where it was.
 - own: the trigger button is emptied of the line text (that text stays in the line as plain text) and a new button with
   `label` is placed right after the line's last text, before the card body. The label is the only new visible text.
+- icon: the trigger text stays in the line as plain text and an empty marker button (class "sp-pop sp-i", drawn as a
+  circled i by the style sheet) is placed right before the card body. No visible text is added.
 Untouched: hovers not named in the decisions file, and hovers marked fits.
 """
 import json
@@ -242,6 +244,12 @@ def apply(page_path, dec_path, out_path):
                           (a, z, open_tag + whole[a:z] + '</button>')]
                 else:
                     ed = [(m.start(), m.end(), btext), (a, z, open_tag + whole[a:z] + '</button>')]
+            elif d['verdict'] == 'icon':
+                if kind != 'term':
+                    miss.append(pid + ': marker applies to a term trigger only')
+                    continue
+                tag = re.sub(r'class="[^"]*"', 'class="sp-pop sp-i"', open_tag, count=1)[:-1] + ' aria-label="More information">'
+                ed = [(m.start(), m.end(), btext), (bs[0], bs[0], tag + '</button>')]
             elif d['verdict'] == 'own':
                 label = d['label']
                 ed = [(m.start(), m.end(), btext), (bs[0], bs[0], ' ' + open_tag + label + '</button>')]
