@@ -1,7 +1,7 @@
 # s172c: docs refactor. One home per document, a three-path router, plan files a cheaper agent can run
 
-Status: LAUNCHED 2026-11-10; steps 0 to 8 done in chat 2 on wip/s172c in both repos; waiting on Jonathan's "ship"
-(tools and docs only, no page change). Scripts: workspace/repair/s172c/ (project_cleanup.py, its input and output).
+Status: SHIPPED 2026-11-10 (Jonathan "ship" 13:19; wip/s172c fast-forwarded to main in both repos; tools and docs
+only, no page change). Scripts: workspace/repair/s172c/ (project_cleanup.py, its input and output).
 Not read whole: DECISIONS_DIGEST, OPEN_WORK history, STANDING_DIRECTIONS (edited by anchored replacement and grep).
 
 ## Jonathan's words
@@ -60,8 +60,9 @@ Not read whole: DECISIONS_DIGEST, OPEN_WORK history, STANDING_DIRECTIONS (edited
   here has no credentials for the private repo; the gh_token covers the public repo only). Jonathan runs
   `git -C ~/step2haki-private pull` on the Mac; until then that clone has no docs/ folder.
 - DONE step 8: DIGEST lines; gate and tests green; presented.
-- NEXT on "ship": fast-forward main to wip/s172c in both repos; State entry "s172c SHIPPED"; docstate.py sync; the
-  three copies (project handoff and RESUME, Mac Documents handoff); delete claude/pending/DOCS_REFACTOR.md.
+- DONE ship (Jonathan 2026-11-10 13:19: "ship"): main fast-forwarded in both repos; State entry "s172c SHIPPED";
+  docstate.py sync; the handoff copied to the project and ~/Documents/Step2Haki, RESUME to the project;
+  claude/pending/DOCS_REFACTOR.md deleted from the project (this file is the record).
 
 ## Open after this batch
 - Context at the first edit on the next two launches (Evidence 7).
@@ -82,7 +83,5 @@ Not read whole: DECISIONS_DIGEST, OPEN_WORK history, STANDING_DIRECTIONS (edited
 | 5 | APPLY | OPEN_WORK split | done |
 | 6 | APPLY | Runbook read order by type, planning chats, launch.py, closing steps | done; two launch measurements open |
 | 7 | APPLY | Project cleanup; Mac refresh | done except the Mac private pull |
-| 8 | APPLY | DIGEST lines; gate; present; ship on "ship" | presented |
+| 8 | APPLY | DIGEST lines; gate; present; ship on "ship" | shipped 2026-11-10 |
 
-## Launch line
-"Step2Haki: continue s172c per claude/RESUME.md." Or reply "ship".
