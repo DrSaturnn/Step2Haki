@@ -11,7 +11,7 @@
  "max_agents": 6,
  "max_calls": 200,
  "max_tokens": 3000000,
- "set_by": "Jonathan, 2026-11-10 16:07 (\"Budget: 4 agents, 200 calls, 3M agent tokens (judging Opus 2, second reader Sonnet 1, review Sonnet 1); lead 30M\") ; agents raised to 6 by Jonathan 2026-11-10 16:23 (\"we can go based on your recommendations.\", D-20261110-13)",
+ "set_by": "Jonathan, 2026-11-10 16:07 (\"Budget: 4 agents, 200 calls, 3M agent tokens (judging Opus 2, second reader Sonnet 1, review Sonnet 1); lead 30M\") ; agents raised to 6 by Jonathan 2026-11-10 16:23 (\"we can go based on your recommendations.\", D-20261110-13) ; lead raised to 36M by Jonathan 2026-11-10 17:29 (\"ship, lead 36M\", D-20261110-15)",
  "previous": {
   "id": "s172",
   "note": "s172 content psych B under TEXTBOOK_STYLE: eating-disorders, defense-mechanisms, delirium, substance, stages-change, psych-medical, disruptive-behavior, ssri-ef"
@@ -455,5 +455,5 @@
    "tokens": 3000000
   }
  },
- "max_lead_tokens": 30000000
+ "max_lead_tokens": 36000000
 }
