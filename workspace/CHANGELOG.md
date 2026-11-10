@@ -2,6 +2,18 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-11-10 s172e: s172e: hover anchors re-judged; 86 triggers moved onto the term their card explains, 76 open from a circled i marker; no brief wording changed
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Other page changes (nav, headers, scripts): +376 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 54 checks, base HEAD | allowlisted 21 | 0 failure(s) (stamp 2026-11-10 18:01: same inputs)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0 (stamp 2026-11-10 18:02: same inputs)
+  vendor: clean (808907 source shingles; page 0.009%) (stamp 2026-11-10 18:20: same inputs)
+```
+
 ## 2026-11-09 s172: s172: 13 psych briefs in review-book style (eating disorders, defense mechanisms, delirium, substance, stages of change, psych-medical, disruptive behavior, SSRI, antipsychotic and lithium adverse effects, tricyclic toxicity, suicide risk, intimate partner violence)
 
 ```
