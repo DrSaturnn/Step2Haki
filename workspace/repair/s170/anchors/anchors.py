@@ -12,10 +12,13 @@ Decisions JSON: {"<pop id>": {"verdict": "fits"} | {"verdict": "move", "term": "
 {"verdict": "own", "label": "<short trigger label>"} | {"verdict": "icon"}}.
 - move: the trigger button moves onto the first occurrence of `term` in the same line's text, outside any other tag
   (the old trigger text stays as plain text where it was). Visible text is unchanged.
-  With "cell": "row" the trigger and its card move onto the first occurrence of `term` in the first cell of the same
-  table row (the row head); the old trigger text stays as plain text where it was.
-- own: the trigger button is emptied of the line text (that text stays in the line as plain text) and a new button with
-  `label` is placed right after the line's last text, before the card body. The label is the only new visible text.
+  With "cell": "row" the trigger moves onto the first occurrence of `term` in the first cell of the same
+  table row (the row head); the old trigger text stays as plain text where it was, and the card body stays in place
+  (the page finds it by id).
+  For a term trigger the term is found in the visible text of the whole line, whole words only, with the trigger's own
+  text counted as line text (an occurrence inside the old trigger wins, then the first in reading order), so a move may
+  trim or extend the present trigger and may hold whole inline tags; a term inside a mask is refused unless the old
+  trigger sat in a mask.
 - icon: the trigger text stays in the line as plain text and an empty marker button (class "sp-pop sp-i", drawn as a
   circled i by the style sheet) is placed right before the card body. No visible text is added.
 Untouched: hovers not named in the decisions file, and hovers marked fits.
@@ -179,9 +182,130 @@ def row_head_term(whole, pos, term):
     return None
 
 
+def card_ranges(seg):
+    """start, end of every hover card body in seg (balanced spans)."""
+    out = []
+    for m in re.finditer(r'<span class="sp-pop-b"', seg):
+        if out and m.start() < out[-1][1]:
+            continue
+        depth, k = 0, len(seg)
+        for t in re.finditer(r'<span\b|</span>', seg[m.start():]):
+            depth += 1 if t.group(0) == '<span' else -1
+            if depth == 0:
+                k = m.start() + t.end()
+                break
+        out.append((m.start(), k))
+    return out
+
+
+def balance(raw):
+    """(unmatched closing tags, unmatched opening tags) of raw, by tag name order."""
+    stack, closes = [], []
+    for t in re.finditer(r'<(/?)([a-zA-Z0-9]+)\b[^>]*?(/?)>', raw):
+        if t.group(3) or t.group(2) in ('br', 'img', 'hr'):
+            continue
+        if not t.group(1):
+            stack.append(t.group(2))
+        elif stack and stack[-1] == t.group(2):
+            stack.pop()
+        else:
+            closes.append(t.group(2))
+    return closes, stack
+
+
+def masked_at(block, p):
+    """True when offset p of block lies inside a study-mode mask element."""
+    for m in re.finditer(r'<(span|b)\b[^>]*\bclass="(?:nm )?mask(?: w5om)?"[^>]*>', block[:p]):
+        tag, depth = m.group(1), 1
+        for t in re.finditer(r'<%s\b|</%s>' % (tag, tag), block[m.end():p]):
+            depth += 1 if not t.group(0).startswith('</') else -1
+            if depth == 0:
+                break
+        if depth > 0:
+            return True
+    return False
+
+
+
+def span_move(whole, pid, term):
+    """whole with the trigger of pid re-placed on `term`, found in the visible text of the trigger's own block with the
+    trigger's text counted as line text; the term may overlap the old trigger and may hold whole inline tags. Returns
+    (new whole, None) or (whole, reason)."""
+    m = next((x for x in BTN.finditer(whole) if x.group(2) == pid), None)
+    if not m:
+        return whole, 'no trigger'
+    enc = enclosing(whole, m.start())
+    if not enc:
+        return whole, 'no line'
+    open_tag = whole[m.start():m.start() + whole[m.start():].index('>') + 1]
+    block = whole[enc[0]:m.start()] + m.group(3) + whole[m.end():enc[1]]
+    skip = card_ranges(block) + [(x.start(), x.end()) for x in re.finditer(r'<button\b.*?</button>', block, re.S)]
+    chars, pos = [], []
+    for t in re.finditer(r'<[^>]+>|[^<]+', block):
+        if t.group(0).startswith('<') or any(a <= t.start() < z for a, z in skip):
+            continue
+        if chars:
+            chars.append('\x00')
+            pos.append(-1)
+        for k, ch in enumerate(t.group(0)):
+            chars.append(ch)
+            pos.append(t.start() + k)
+    text = ''.join(chars)
+    pat = r'(?<![A-Za-z0-9])' + r'[\s\x00]*'.join(re.escape(w) for w in re.split(r'\s+', term.strip())) + r'(?![A-Za-z0-9])'
+    t0 = m.start() - enc[0]
+    t1 = t0 + len(m.group(3))
+    hits = sorted(re.finditer(pat, text), key=lambda h: not (pos[h.start()] < t1 and pos[h.end() - 1] >= t0))
+    if not hits:
+        return whole, 'term "%s" not in the visible text of its line' % term
+    was_masked = masked_at(block, t0)
+    why = None
+    for hit in hits:
+        a, z = pos[hit.start()], pos[hit.end() - 1] + 1
+        if masked_at(block, a) and not was_masked:
+            why = 'term "%s" sits inside a mask' % term
+            continue
+        ok = True
+        for _ in range(4):
+            closes, opens = balance(block[a:z])
+            if not closes and not opens:
+                break
+            pre = re.search(r'<([a-zA-Z0-9]+)\b[^>]*>$', block[:a])
+            post = re.match(r'</([a-zA-Z0-9]+)>', block[z:])
+            if closes and pre and pre.group(1) == closes[0] and 'mask' not in pre.group(0):
+                a = pre.start()
+            elif opens and post and post.group(1) == opens[-1]:
+                z += post.end()
+            else:
+                ok = False
+                break
+        inner = block[a:z]
+        if not ok or balance(inner) != ([], []):
+            why = 'term "%s" cuts through a tag' % term
+            continue
+        if any(a < e and s0 < z for s0, e in skip) or 'mask"' in inner or 'class="mask' in inner:
+            why = 'term "%s" crosses a card, a button or a mask' % term
+            continue
+        break
+    else:
+        return whole, why
+    block = block[:a] + open_tag + inner + '</button>' + block[z:]
+    return whole[:enc[0]] + block + whole[enc[1]:], None
+
+
 def apply(page_path, dec_path, out_path):
     page = site_build.unwrap(P.read_page(page_path))
     dec = json.load(open(dec_path))
+    sp_a = {x.group(2) for x in BTN.finditer(page) if 'sp-a' in x.group(1).split()}
+    spans, span_miss = {k: v for k, v in dec.items() if v.get('verdict') == 'move' and not v.get('cell') and k in sp_a}, []
+    dec = {k: v for k, v in dec.items() if k not in spans}
+    for b in reversed(list(P.briefs(page))):
+        whole = page[b.start:b.end]
+        for pid, d in spans.items():
+            if 'aria-controls="%s"' % pid in whole:
+                whole, why = span_move(whole, pid, d['term'])
+                if why:
+                    span_miss.append('%s: %s' % (pid, why))
+        page = page[:b.start] + whole + page[b.end:]
     edits, done, miss = [], 0, []
     for b in P.briefs(page):
         whole = page[b.start:b.end]
@@ -214,10 +338,10 @@ def apply(page_path, dec_path, out_path):
                     miss.append('%s: term "%s" not in plain text of the first cell of its row' % (pid, d['term']))
                     continue
                 a, z = found
-                gap = re.match(r'\s*', whole[m.end():bs[0]]).end() if bs[0] >= m.end() and not txt(whole[m.end():bs[0]]) else 0
-                keep = btext if kind == 'term' else ''
-                ed = [(m.start(), m.end() + gap, keep), (bs[0], bs[3], ''),
-                      (a, z, open_tag + whole[a:z] + '</button>' + whole[bs[0]:bs[3]])]
+                if kind != 'term':
+                    miss.append(pid + ': a row move applies to a term trigger only')
+                    continue
+                ed = [(m.start(), m.end(), btext), (a, z, open_tag + whole[a:z] + '</button>')]
             elif d['verdict'] == 'move':
                 seg_s, seg_e = enc[0], m.start()
                 after_s, after_e = m.end(), bs[0]
@@ -263,6 +387,8 @@ def apply(page_path, dec_path, out_path):
     for s, e, r in edits:
         page = page[:s] + r + page[e:]
     open(out_path, 'w', encoding='utf-8').write(site_build.wrap(page))
+    done += len(spans) - len(span_miss)
+    miss += span_miss
     print('apply: %d hovers changed; %d not applied' % (done, len(miss)))
     for x in miss:
         print('  MISS ' + x)

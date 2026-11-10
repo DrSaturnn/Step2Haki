@@ -35,3 +35,24 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+def span_tests():
+    line = ('<div class="brief"><p><b><button type="button" class="sp-pop sp-a" aria-controls="q1">Alpha</button></b> beta, '
+            'gamma <span class="sp-pop-b" id="q1" hidden>Body alpha beta.</span> delta <span class="mask">eps</span></p></div>')
+    out, why = A.span_move(line, 'q1', 'Alpha beta')
+    assert not why and '<button type="button" class="sp-pop sp-a" aria-controls="q1"><b>Alpha</b> beta</button>' in out, (out, why)
+    assert A.txt(out) == A.txt(line)
+    out, why = A.span_move(line, 'q1', 'delta')
+    assert not why and 'aria-controls="q1">delta</button>' in out and '<b>Alpha</b>' in out
+    assert A.span_move(line, 'q1', 'Body alpha')[1]            # card text is never a target
+    assert A.span_move(line, 'q1', 'delta eps')[1]             # a mask boundary is never crossed
+    line2 = '<div><p>A <button type="button" class="sp-pop sp-a" aria-controls="q2">hot</button> <b>cat (old)</b> sat <span class="sp-pop-b" id="q2" hidden>x</span></p></div>'
+    assert A.span_move(line2, 'q2', 'hot cat')[1]              # cutting through a tag is refused
+    out, why = A.span_move(line2, 'q2', 'hot cat (old)')
+    assert not why and '>hot <b>cat (old)</b></button>' in out
+    print('test_anchors span: 6 passed, 0 failed')
+
+
+if __name__ == '__main__':
+    span_tests()

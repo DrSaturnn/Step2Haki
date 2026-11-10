@@ -1,0 +1,625 @@
+{
+ "wh-pop-4": {
+  "verdict": "move",
+  "term": "De Quervain tenosynovitis",
+  "cell": "row"
+ },
+ "wh-pop-2": {
+  "verdict": "move",
+  "term": "About 2 weeks"
+ },
+ "lbp-pop-1": {
+  "verdict": "move",
+  "term": "no imaging"
+ },
+ "lbp-pop-5": {
+  "verdict": "move",
+  "term": "TNF"
+ },
+ "ht-pop-1": {
+  "verdict": "move",
+  "term": "lateral femoral cutaneous nerve"
+ },
+ "na-pop-2": {
+  "verdict": "icon",
+  "note": "row head is a drawer button or already a trigger"
+ },
+ "lg-pop-1": {
+  "verdict": "move",
+  "term": "reflexes preserved"
+ },
+ "bo-pop-3": {
+  "verdict": "move",
+  "term": "Osteochondroma",
+  "cell": "row"
+ },
+ "bo-pop-1": {
+  "verdict": "move",
+  "term": "Osteoid osteoma",
+  "cell": "row"
+ },
+ "bo-pop-2": {
+  "verdict": "move",
+  "term": "Unicameral bone cyst",
+  "cell": "row"
+ },
+ "shp-pop-2": {
+  "verdict": "move",
+  "term": "1 to 3 years"
+ },
+ "pmur-pop-2": {
+  "verdict": "icon",
+  "note": "row head is a drawer button or already a trigger"
+ },
+ "hfc-pop-1": {
+  "verdict": "move",
+  "term": "viral myocarditis"
+ },
+ "nb-pop-2": {
+  "verdict": "move",
+  "term": "phase of the noise"
+ },
+ "ri-pop-5": {
+  "verdict": "move",
+  "term": "Nasal foreign body",
+  "cell": "row"
+ },
+ "ri-pop-3": {
+  "verdict": "move",
+  "term": "Typical pneumonia",
+  "cell": "row"
+ },
+ "nl-pop-2": {
+  "verdict": "move",
+  "term": "Bronchopulmonary dysplasia",
+  "cell": "row"
+ },
+ "chol-pop-1": {
+  "verdict": "move",
+  "term": "Patient",
+  "cell": "row"
+ },
+ "fd-pop-2": {
+  "verdict": "move",
+  "term": "proton pump inhibitor"
+ },
+ "rlq-pop-1": {
+  "verdict": "move",
+  "term": "imaging before the operation"
+ },
+ "rlq-pop-2": {
+  "verdict": "move",
+  "term": "appendicitis"
+ },
+ "ogib-pop-1": {
+  "verdict": "move",
+  "term": "scan"
+ },
+ "ogib-pop-2": {
+  "verdict": "move",
+  "term": "Meckel diverticulum",
+  "cell": "row"
+ },
+ "ogib-pop-3": {
+  "verdict": "move",
+  "term": "Juvenile polyp",
+  "cell": "row"
+ },
+ "umb-pop-1": {
+  "verdict": "move",
+  "term": "hernia"
+ },
+ "umb-pop-2": {
+  "verdict": "move",
+  "term": "surgery"
+ },
+ "umb-pop-3": {
+  "verdict": "move",
+  "term": "Gastroschisis",
+  "cell": "row"
+ },
+ "scr-pop-3": {
+  "verdict": "move",
+  "term": "Epididymitis",
+  "cell": "row"
+ },
+ "herp-pop-2": {
+  "verdict": "move",
+  "term": "Hand-foot-and-mouth disease",
+  "cell": "row"
+ },
+ "frc-pop-2": {
+  "verdict": "move",
+  "term": "varicella vaccine"
+ },
+ "aif-pop-1": {
+  "verdict": "move",
+  "term": "febrile neonate (28 days or younger)",
+  "note": "judge term \"febrile neonate\" cut through a bold tag; widened to the bold phrase"
+ },
+ "aif-pop-2": {
+  "verdict": "move",
+  "term": "1 to 3 months"
+ },
+ "aif-pop-3": {
+  "verdict": "move",
+  "term": "missing a second dose"
+ },
+ "dmn-pop-1": {
+  "verdict": "move",
+  "term": "Normal pressure hydrocephalus",
+  "cell": "row"
+ },
+ "dmn-pop-2": {
+  "verdict": "move",
+  "term": "Creutzfeldt-Jakob disease",
+  "cell": "row"
+ },
+ "ox-pop-1": {
+  "verdict": "icon",
+  "note": "row head is a drawer button or already a trigger"
+ },
+ "ox-pop-barb-20261029": {
+  "verdict": "move",
+  "term": "Barbiturate",
+  "cell": "row"
+ },
+ "slp-pop-14": {
+  "verdict": "icon",
+  "note": "row head is a drawer button or already a trigger"
+ },
+ "slp-pop-23": {
+  "verdict": "fits",
+  "note": "judge term \"Sleep agents\" is the label of another hover in the same cell; trigger \"Medication\" stays (lead call)"
+ },
+ "tix-pop-1": {
+  "verdict": "move",
+  "term": "Plagiocephaly"
+ },
+ "lp-pop-1": {
+  "verdict": "move",
+  "term": "37 weeks"
+ },
+ "ms-pop-1": {
+  "verdict": "move",
+  "term": "diagnosis of exclusion"
+ },
+ "hp-pop-3": {
+  "verdict": "move",
+  "term": "liver"
+ },
+ "tef-pop-1": {
+  "verdict": "move",
+  "term": "head elevated"
+ },
+ "dmc-pop-1": {
+  "verdict": "move",
+  "term": "perfusion"
+ },
+ "dmc-pop-5": {
+  "verdict": "move",
+  "term": "light chains"
+ },
+ "dmc-pop-7": {
+  "verdict": "move",
+  "term": "Normal",
+  "cell": "row"
+ },
+ "pv-pop-2": {
+  "verdict": "move",
+  "term": "Potter features"
+ },
+ "hbs-pop-5": {
+  "verdict": "move",
+  "term": "Splenic sequestration"
+ },
+ "tb-pop-2": {
+  "verdict": "move",
+  "term": "BCG vaccine",
+  "cell": "row"
+ },
+ "bmn-pop-1": {
+  "verdict": "move",
+  "term": "Bacterial",
+  "cell": "row"
+ },
+ "bmn-pop-5": {
+  "verdict": "move",
+  "term": "rifampin, ciprofloxacin or ceftriaxone"
+ },
+ "vx-pop-3": {
+  "verdict": "move",
+  "term": "Cirrhosis",
+  "cell": "row"
+ },
+ "vx-pop-4": {
+  "verdict": "move",
+  "term": "Asplenia",
+  "cell": "row"
+ },
+ "vx-pop-5": {
+  "verdict": "move",
+  "term": "Complement deficiency or eculizumab",
+  "cell": "row"
+ },
+ "rm-pop-1": {
+  "verdict": "move",
+  "term": "2 to 14 days"
+ },
+ "rm-pop-3": {
+  "verdict": "move",
+  "term": "amoxicillin or cefuroxime"
+ },
+ "rm-pop-4": {
+  "verdict": "move",
+  "term": "one dose of doxycycline"
+ },
+ "pt-pop-1": {
+  "verdict": "move",
+  "term": "Lemierre syndrome",
+  "cell": "row"
+ },
+ "pt-pop-3": {
+  "verdict": "move",
+  "term": "incision and drainage"
+ },
+ "pt-pop-4": {
+  "verdict": "move",
+  "term": "incision and drainage"
+ },
+ "an-pop-2": {
+  "verdict": "move",
+  "term": "anterolateral thigh"
+ },
+ "ti-pop-5": {
+  "verdict": "move",
+  "term": "Adulthood"
+ },
+ "ti-pop-13": {
+  "verdict": "move",
+  "term": "VMAT2 inhibitor"
+ },
+ "pkd-pop-2": {
+  "verdict": "move",
+  "term": "carbidopa with levodopa"
+ },
+ "pkd-pop-7": {
+  "verdict": "move",
+  "term": "Levodopa adverse effects",
+  "cell": "row"
+ },
+ "pkd-pop-8": {
+  "verdict": "move",
+  "term": "Levodopa adjunct",
+  "cell": "row"
+ },
+ "md-pop-in-20261025a": {
+  "verdict": "move",
+  "term": "Postpartum depression screening"
+ },
+ "md-pop-17": {
+  "verdict": "move",
+  "term": "Seasonal pattern",
+  "cell": "row"
+ },
+ "pmd-pop-1": {
+  "verdict": "move",
+  "term": "normal hormone levels"
+ },
+ "pan-pop-6": {
+  "verdict": "move",
+  "term": "Generalized anxiety disorder",
+  "cell": "row"
+ },
+ "ocd-pop-1": {
+  "verdict": "move",
+  "term": "ERP"
+ },
+ "eatd-pop-1": {
+  "verdict": "move",
+  "term": "purging"
+ },
+ "eatd-pop-5": {
+  "verdict": "move",
+  "term": "Gastroparesis",
+  "cell": "row"
+ },
+ "gp-pop-5": {
+  "verdict": "move",
+  "term": "multidisciplinary care"
+ },
+ "sb-pop-in-20261025b": {
+  "verdict": "move",
+  "term": "Inhalant intoxication",
+  "cell": "row"
+ },
+ "pks150b-pop-1": {
+  "verdict": "move",
+  "term": "Depression associated with Parkinson disease"
+ },
+ "ssr-pop-3": {
+  "verdict": "move",
+  "term": "postsynaptic stimulation"
+ },
+ "pcssri-pop-1": {
+  "verdict": "move",
+  "term": "postsynaptic stimulation"
+ },
+ "pcssri-pop-8": {
+  "verdict": "icon",
+  "note": "judge term \"Adequate trial\" sits inside a mask while the trigger does not; marker instead (lead call)"
+ },
+ "pca-pop-8": {
+  "verdict": "move",
+  "term": "Linezolid",
+  "cell": "row"
+ },
+ "pcm-pop-2": {
+  "verdict": "move",
+  "term": "Treatment-resistant depression"
+ },
+ "pcm-pop-7": {
+  "verdict": "move",
+  "term": "Diet limits"
+ },
+ "pcatyp-pop-7": {
+  "verdict": "move",
+  "term": "aripiprazole, lurasidone, ziprasidone"
+ },
+ "pctyp-pop-3": {
+  "verdict": "move",
+  "term": "retinal deposits"
+ },
+ "pcachol-pop-2": {
+  "verdict": "move",
+  "term": "IV relief"
+ },
+ "mac-pop-2": {
+  "verdict": "move",
+  "term": "nephrogenic diabetes insipidus"
+ },
+ "mac-pop-4": {
+  "verdict": "move",
+  "term": "hyperammonemic encephalopathy"
+ },
+ "mac-pop-9": {
+  "verdict": "move",
+  "term": "Pregnancy, valproate"
+ },
+ "mac-pop-12": {
+  "verdict": "move",
+  "term": "Carbamazepine overdose"
+ },
+ "mac-pop-13": {
+  "verdict": "move",
+  "term": "Valproate overdose"
+ },
+ "mac-pop-14": {
+  "verdict": "icon",
+  "note": "judge term \"Lamotrigine rash\" sits inside a mask while the trigger does not; marker instead (lead call)"
+ },
+ "pcb-pop-3": {
+  "verdict": "move",
+  "term": "short-acting"
+ },
+ "pcb-pop-5": {
+  "verdict": "move",
+  "term": "Agents cleared by glucuronidation alone"
+ },
+ "pcb-pop-8": {
+  "verdict": "move",
+  "term": "Within 1 to 2 days"
+ },
+ "pcx-pop-8": {
+  "verdict": "move",
+  "term": "Alcohol, with buspirone",
+  "cell": "row"
+ },
+ "adm-pop-5": {
+  "verdict": "move",
+  "term": "label warning"
+ },
+ "adm-pop-8": {
+  "verdict": "move",
+  "term": "sleepiness"
+ },
+ "pcz-pop-4": {
+  "verdict": "move",
+  "term": "day-after psychomotor depression"
+ },
+ "pco-pop-1": {
+  "verdict": "move",
+  "term": "liver disease"
+ },
+ "sud-pop-12": {
+  "verdict": "move",
+  "term": "Disulfiram reaction"
+ },
+ "pcoth-pop-2": {
+  "verdict": "move",
+  "term": "phentermine"
+ },
+ "wh-pop-5": {
+  "verdict": "icon"
+ },
+ "hip-pop-2": {
+  "verdict": "icon"
+ },
+ "hj-pop-1": {
+  "verdict": "icon"
+ },
+ "lg-pop-3": {
+  "verdict": "icon"
+ },
+ "bo-pop-4": {
+  "verdict": "icon"
+ },
+ "nbcy-pop-1": {
+  "verdict": "icon"
+ },
+ "nbcy-pop-2": {
+  "verdict": "icon"
+ },
+ "pcon-pop-3": {
+  "verdict": "icon"
+ },
+ "cvs-pop-1": {
+  "verdict": "icon"
+ },
+ "cvs-pop-3": {
+  "verdict": "icon"
+ },
+ "abm-pop-1": {
+  "verdict": "icon"
+ },
+ "rta-pop-2": {
+  "verdict": "icon"
+ },
+ "lad-pop-1": {
+  "verdict": "icon"
+ },
+ "slp-pop-9": {
+  "verdict": "icon"
+ },
+ "pmr-pop-1": {
+  "verdict": "icon"
+ },
+ "oap-pop-2": {
+  "verdict": "icon"
+ },
+ "oap-pop-3": {
+  "verdict": "icon"
+ },
+ "oap-pop-1": {
+  "verdict": "icon"
+ },
+ "mox-pop-1": {
+  "verdict": "icon"
+ },
+ "ob-pop-4": {
+  "verdict": "icon"
+ },
+ "ob-pop-7": {
+  "verdict": "icon"
+ },
+ "ms-pop-4": {
+  "verdict": "icon"
+ },
+ "py-pop-3": {
+  "verdict": "icon"
+ },
+ "ut-pop-2": {
+  "verdict": "icon"
+ },
+ "npr-pop-1": {
+  "verdict": "icon"
+ },
+ "hbs-pop-1": {
+  "verdict": "icon"
+ },
+ "iso-pop-4": {
+  "verdict": "icon"
+ },
+ "ti-pop-6": {
+  "verdict": "icon"
+ },
+ "ti-pop-11": {
+  "verdict": "icon"
+ },
+ "ti-pop-12": {
+  "verdict": "icon"
+ },
+ "pkd-pop-1": {
+  "verdict": "icon"
+ },
+ "pkd-pop-4": {
+  "verdict": "icon"
+ },
+ "pkd-pop-6": {
+  "verdict": "icon"
+ },
+ "pd-pop-7": {
+  "verdict": "icon"
+ },
+ "pd-pop-13": {
+  "verdict": "icon"
+ },
+ "pd-pop-nb085f91": {
+  "verdict": "icon"
+ },
+ "pd-pop-nb56fa9a": {
+  "verdict": "icon"
+ },
+ "szp-pop-nb87769b": {
+  "verdict": "icon"
+ },
+ "bm-pop-nbad2767": {
+  "verdict": "icon"
+ },
+ "bm-pop-nbadba59": {
+  "verdict": "icon"
+ },
+ "pmd-pop-2": {
+  "verdict": "icon"
+ },
+ "pmd-pop-4": {
+  "verdict": "icon"
+ },
+ "pan-pop-4": {
+  "verdict": "icon"
+ },
+ "sm-pop-1": {
+  "verdict": "icon"
+ },
+ "sm-pop-trem-20261026": {
+  "verdict": "icon"
+ },
+ "ts-pop-1": {
+  "verdict": "icon"
+ },
+ "eatd-pop-thy-20261026": {
+  "verdict": "icon"
+ },
+ "gp-pop-nb15ab97": {
+  "verdict": "icon"
+ },
+ "tox-pop-6": {
+  "verdict": "icon"
+ },
+ "tox-pop-11": {
+  "verdict": "icon"
+ },
+ "tox-pop-20": {
+  "verdict": "icon"
+ },
+ "li-pop-nbc85661": {
+  "verdict": "icon"
+ },
+ "pcatyp-pop-5": {
+  "verdict": "icon"
+ },
+ "pcatyp-pop-6": {
+  "verdict": "icon"
+ },
+ "pcatyp-pop-11": {
+  "verdict": "icon"
+ },
+ "pctyp-pop-4": {
+  "verdict": "icon"
+ },
+ "pcachol-pop-3": {
+  "verdict": "icon"
+ },
+ "pctd-pop-5": {
+  "verdict": "icon"
+ },
+ "mac-pop-11": {
+  "verdict": "icon"
+ },
+ "pccog-pop-3": {
+  "verdict": "icon"
+ },
+ "adm-pop-6": {
+  "verdict": "icon"
+ }
+}
