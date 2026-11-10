@@ -12,6 +12,8 @@ Decisions JSON: {"<pop id>": {"verdict": "fits"} | {"verdict": "move", "term": "
 {"verdict": "own", "label": "<short trigger label>"}}.
 - move: the trigger button moves onto the first occurrence of `term` in the same line's text, outside any other tag
   (the old trigger text stays as plain text where it was). Visible text is unchanged.
+  With "cell": "row" the trigger and its card move onto the first occurrence of `term` in the first cell of the same
+  table row (the row head); the old trigger text stays as plain text where it was.
 - own: the trigger button is emptied of the line text (that text stays in the line as plain text) and a new button with
   `label` is placed right after the line's last text, before the card body. The label is the only new visible text.
 Untouched: hovers not named in the decisions file, and hovers marked fits.
@@ -152,6 +154,29 @@ def text_positions(seg):
     return ''.join(raw), pos
 
 
+def row_head_term(whole, pos, term):
+    """start, end of the first occurrence of term in the plain text of the first cell of the table row around pos
+    (outside buttons, card bodies and masks); None when the row, the cell or the term is missing."""
+    rs = whole.rfind('<tr', 0, pos)
+    re_ = whole.find('</tr>', pos)
+    if rs < 0 or re_ < 0 or whole.find('</tr>', rs, pos) >= 0:
+        return None
+    c = re.compile(r'<(td|th)\b[^>]*>').search(whole, rs, re_)
+    if not c:
+        return None
+    ce = whole.find('</%s>' % c.group(1), c.end(), re_)
+    if ce < 0 or c.end() <= pos < ce:
+        return None
+    cell = whole[c.end():ce]
+    skip = [(x.start(), x.end()) for x in re.finditer(
+        r'<button\b.*?</button>|<span class="sp-pop-b".*?</span>(?=\s*(?:<|$))|<span class="mask">.*?</span>', cell, re.S)]
+    for t in re.finditer(r'(?<=>)[^<]+|^[^<]+', cell):
+        k = t.group(0).find(term)
+        if k >= 0 and not any(s0 <= t.start() + k < e0 for s0, e0 in skip):
+            return c.end() + t.start() + k, c.end() + t.start() + k + len(term)
+    return None
+
+
 def apply(page_path, dec_path, out_path):
     page = site_build.unwrap(P.read_page(page_path))
     dec = json.load(open(dec_path))
@@ -181,6 +206,16 @@ def apply(page_path, dec_path, out_path):
             elif kind == 'standalone' and d['verdict'] == 'move':
                 miss.append(pid + ': standalone trigger has no line text to move onto')
                 continue
+            elif d['verdict'] == 'move' and d.get('cell') == 'row':
+                found = row_head_term(whole, m.start(), d['term'])
+                if not found:
+                    miss.append('%s: term "%s" not in plain text of the first cell of its row' % (pid, d['term']))
+                    continue
+                a, z = found
+                gap = re.match(r'\s*', whole[m.end():bs[0]]).end() if bs[0] >= m.end() and not txt(whole[m.end():bs[0]]) else 0
+                keep = btext if kind == 'term' else ''
+                ed = [(m.start(), m.end() + gap, keep), (bs[0], bs[3], ''),
+                      (a, z, open_tag + whole[a:z] + '</button>' + whole[bs[0]:bs[3]])]
             elif d['verdict'] == 'move':
                 seg_s, seg_e = enc[0], m.start()
                 after_s, after_e = m.end(), bs[0]
