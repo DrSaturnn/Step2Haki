@@ -20,7 +20,8 @@ Decisions JSON: {"<pop id>": {"verdict": "fits"} | {"verdict": "move", "term": "
   trim or extend the present trigger and may hold whole inline tags; a term inside a mask is refused unless the old
   trigger sat in a mask.
 - icon: the trigger text stays in the line as plain text and an empty marker button (class "sp-pop sp-i", drawn as a
-  circled i by the style sheet) is placed right before the card body. No visible text is added.
+  circled i by the style sheet) is placed at the end of the phrase the old trigger opened (before the next punctuation
+  mark or tag; right after the old trigger text when none follows). No visible text is added.
 Untouched: hovers not named in the decisions file, and hovers marked fits.
 """
 import json
@@ -373,7 +374,9 @@ def apply(page_path, dec_path, out_path):
                     miss.append(pid + ': marker applies to a term trigger only')
                     continue
                 tag = re.sub(r'class="[^"]*"', 'class="sp-pop sp-i"', open_tag, count=1)[:-1] + ' aria-label="More information">'
-                ed = [(m.start(), m.end(), btext), (bs[0], bs[0], tag + '</button>')]
+                run = re.match(r'[^<.;:,?!]*', whole[m.end():bs[0]] if bs[0] >= m.end() else '')
+                at = m.end() + (len(run.group(0).rstrip()) if run else 0)
+                ed = [(m.start(), m.end(), btext), (at, at, tag + '</button>')]
             elif d['verdict'] == 'own':
                 label = d['label']
                 ed = [(m.start(), m.end(), btext), (bs[0], bs[0], ' ' + open_tag + label + '</button>')]

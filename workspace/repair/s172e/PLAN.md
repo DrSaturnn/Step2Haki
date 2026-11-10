@@ -116,3 +116,17 @@ as a LABEL; no card text is written in this batch.
   Across both samples: of 51 judge KEEP rows the second reader would change 7; of 29 judge fix rows the second reader
   would keep 5 (3 of them span fixes or the same subject).
 - Spend: 5 of 6 agents, 19 calls, 1.01M of 3M tokens.
+- Steps 5 to 7 (D-20261110-14: fixes applied below the agreement bar). repair/s172e/decisions.json applied with
+  anchors.py: 86 moves (23 onto the row head), 76 fallback markers, 1 lead KEEP (slp-pop-23). Lead calls on judge
+  targets: 4 row heads that are drawer buttons or already triggers, 2 terms inside a mask and 9 moves the review
+  lane flagged as study-mode leaks became markers (marker stays inside the mask); aif-pop-1 widened to its bold phrase.
+  Checks: gate text key 0 changed briefs; gate PASS 54 checks; render, preflight, vendor pass; anchor tests 12.
+  Allow list 421 to 102 (57 judged term triggers, 45 label-trigger pairs carried unjudged; repair/s172e/allow.py).
+  Review lane (Sonnet, 162 hovers): 30 LEAK lines, 4 SPAN (LOW). 9 leaks were new and are fixed; 21 are cards that
+  state a masked answer and were already reachable from a visible trigger before this batch (open item, list in
+  repair/efficiency/lanes/s172e/review/receipt.md). SPAN: marker now sits at the end of the phrase. The fixes after
+  the review were not re-reviewed (agent cap reached): checked by script (no marker or flagged move changed mask state).
+- Spend: 6 of 6 agents, 24 calls, 1.29M of 3M tokens; lead about 29.5M of 30M at the report.
+- Open after this batch: about 35 to 40 poor anchors estimated among the 272 KEEP verdicts; 21 pre-existing hover
+  leaks; pcachol-pop-3 and mac-pop-11 need new card content; 45 unjudged label-trigger pairs and the label triggers
+  already on the page (marker or term at each brief's rewrite); STANDING edit made hover receipts stale.
