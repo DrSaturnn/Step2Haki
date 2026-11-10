@@ -82,6 +82,7 @@ def rule_doc_errors(digest, ws):
 DOCS_HOME = {'BATCH_RUNBOOK.md', 'STANDING_DIRECTIONS.md', 'DECISIONS_DIGEST.md', 'OPEN_WORK.md', 'OPEN_WORK_CLOSED.md',
              'STEP2HAKI_HANDOFF.md', 'RESUME.md', 'SHIPLOG.md', 'PLAN_TEMPLATE.md'}
 PROJECT_MIRRORS = {'claude/RESUME.md', 'claude/STEP2HAKI_HANDOFF.md', 'claude/PLAN_TEMPLATE.md'}
+PROJECT_MIRRORS.add('claude/design/Workup_5a.html')   # a design file kept in the project only
 PATH_DOCS = ['BATCH_RUNBOOK.md', 'STANDING_DIRECTIONS.md']       # stable rule documents: checked in the gate
 STATE_DOCS = ['RESUME.md', 'STEP2HAKI_HANDOFF.md']               # rewritten every step: checked with the state checks
 STATE_CAP = 3

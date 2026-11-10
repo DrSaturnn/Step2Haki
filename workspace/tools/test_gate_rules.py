@@ -215,6 +215,22 @@ finally:
     open(_st, 'w', encoding='utf-8').write(_keep)
 hit = '[doc-lint] STANDING_DIRECTIONS cites D-19990101-1, which is not in the digest' in o
 print(('ok  ' if hit else 'BAD ') + 'STANDING citing a digest id that does not exist: expects gate FAIL doc-lint'); bad += not hit
+_rs = docs_path.doc('RESUME.md'); _keep = open(_rs, encoding='utf-8').read()   # s172c: RESUME against the handoff State
+try:
+    open(_rs, 'w', encoding='utf-8').write(_keep.replace('**Batch state: ', '**Batch state: s000 OPEN 1999-01-01 was ', 1))
+    o = gate(PAGE)[1]
+finally:
+    open(_rs, 'w', encoding='utf-8').write(_keep)
+hit = '[doc-lint] RESUME batch line reads "s000 OPEN 1999-01-01 was ' in o
+print(('ok  ' if hit else 'BAD ') + 'a RESUME batch line that disagrees with the handoff State: expects gate FAIL doc-lint'); bad += not hit
+_st = docs_path.doc('STANDING_DIRECTIONS.md'); _keep = open(_st, encoding='utf-8').read()   # s172c: a stale path in a rule document
+try:
+    open(_st, 'w', encoding='utf-8').write(_keep + '\n- test line: see claude/DECISIONS_DIGEST.md\n')
+    o = gate(PAGE)[1]
+finally:
+    open(_st, 'w', encoding='utf-8').write(_keep)
+hit = '[doc-lint] STANDING_DIRECTIONS.md line' in o and 'claude/DECISIONS_DIGEST.md names a document that lives in the private docs/' in o
+print(('ok  ' if hit else 'BAD ') + 'STANDING naming a deleted project copy: expects gate FAIL doc-lint'); bad += not hit
 _i = PAGE.find('</style>')
 o = gate(PAGE[:_i] + 'a.zz{transition:opacity .3s ease}' + PAGE[_i:])[1]
 hit = '[ui-lint] motion_not_spring' in o
@@ -232,6 +248,6 @@ print(('ok  ' if hit else 'BAD ') + 'data-sys naming the section the brief sits 
 o = gate(_sys(_other))[1]
 hit = '[nav-sys] %s has data-sys="%s" but sits in section %s' % (_b.id, _other, _h3) in o
 print(('ok  ' if hit else 'BAD ') + 'data-sys naming another section: expects gate FAIL nav-sys'); bad += not hit
-total = 1 + WRAPPED + 9 + 2 + 3 + 3 + 4 + 2 + 3 + 6 + 2
+total = 1 + WRAPPED + 9 + 2 + 3 + 3 + 4 + 2 + 3 + 6 + 2 + 2
 print('%d/%d passed' % (total - bad, total))
 sys.exit(1 if bad else 0)

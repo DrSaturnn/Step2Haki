@@ -286,4 +286,4 @@ def doc_lint_errors():
         return [str(ex)]
     if not (os.path.exists(dg) and os.path.exists(st)):
         return ['DECISIONS_DIGEST.md or STANDING_DIRECTIONS.md is missing from ' + os.path.dirname(dg)]
-    return doc_lint.errors(dg, st) + doc_lint.rule_doc_errors(dg, WS)
+    return doc_lint.errors(dg, st) + doc_lint.rule_doc_errors(dg, WS) + doc_lint.path_errors(os.path.dirname(dg), WS)

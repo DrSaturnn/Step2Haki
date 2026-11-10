@@ -115,7 +115,7 @@ CATALOG = {
                 'put the color in a theme token and reference it with var(); a theme file never names a component'),
     'ui-retired': ('nothing in the Retired table of docs/ui/UI_MAP.md is back in the page: no retired selector, id, class prefix, custom property or label (tools/spine/ui_retired.py; D-20261105-1, s169)',
                    'remove what came back, or, when the item is live again on purpose, take its row out of the Retired table in the same commit with the decision that brought it back'),
-    'doc-lint': ('DECISIONS_DIGEST and STANDING_DIRECTIONS hold one live answer per question: supersession marked both ways, no citation of a superseded or missing id (tools/spine/doc_lint.py; D-20261105-2)',
+    'doc-lint': ('DECISIONS_DIGEST and STANDING_DIRECTIONS hold one live answer per question: supersession marked both ways, no citation of a superseded or missing id; the rule documents name no path that does not exist; the RESUME batch line equals the handoff State and the State stays capped (tools/spine/doc_lint.py; D-20261105-2, D-20261110-1)',
                  'mark the old line "(superseded by D-...)" in the same commit, or cite the live id in STANDING_DIRECTIONS'),
     'prose-lint': ('no brief\'s prose lint count (tools/spine/prose_lint.py, review-book register) rises above tools/spine/prose_baseline.json, and a brief new to the baseline has none (D-20261106-9, D-20261106-11)',
                    'rewrite the flagged lines per repair/efficiency/TEXTBOOK_STYLE.md; a permitted near miss goes in the lint\'s ALLOW list with a test'),
@@ -737,7 +737,8 @@ def check_lints(page, page_path, ref_html, g, attr_only=False):
     except FileNotFoundError:
         dg = st = ''
     if os.path.exists(dg) and os.path.exists(st):
-        for e in doc_lint.errors(dg, st) + doc_lint.rule_doc_errors(dg, REPO):
+        dd = os.path.dirname(dg)   # s172c: stale paths in the rule documents; RESUME against the State; the State cap
+        for e in doc_lint.errors(dg, st) + doc_lint.rule_doc_errors(dg, REPO) + doc_lint.path_errors(dd, REPO) + doc_lint.state_errors(dd, REPO):
             g.fail('doc-lint', e[:80], e)
     else:
         g.fail('doc-lint', 'missing', 'DECISIONS_DIGEST.md or STANDING_DIRECTIONS.md is missing from the private docs/ (tools/docs_path.py)')
