@@ -116,7 +116,7 @@ DOCS = ['DECISIONS_DIGEST.md', 'STANDING_DIRECTIONS.md', 'BATCH_RUNBOOK.md', 'ui
 
 def g_docs():
     """the private docs the tools read (gate doc-lint, verify specs, ui-retired); the handoff, RESUME and OPEN_WORK
-    change at every step; the gate's state checks read the handoff and RESUME (s172c), and they stay out of the
+    change at every step; the gate's state checks read the handoff and RESUME, and they stay out of the
     stamp on purpose: a State rewrite must not void every stamp, and resume.py, launch.py and docstate.py rerun those
     checks at every chat start and State rewrite"""
     d = _docs()

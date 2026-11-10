@@ -215,7 +215,7 @@ finally:
     open(_st, 'w', encoding='utf-8').write(_keep)
 hit = '[doc-lint] STANDING_DIRECTIONS cites D-19990101-1, which is not in the digest' in o
 print(('ok  ' if hit else 'BAD ') + 'STANDING citing a digest id that does not exist: expects gate FAIL doc-lint'); bad += not hit
-_rs = docs_path.doc('RESUME.md'); _keep = open(_rs, encoding='utf-8').read()   # s172c: RESUME against the handoff State
+_rs = docs_path.doc('RESUME.md'); _keep = open(_rs, encoding='utf-8').read()   # RESUME against the handoff State
 try:
     open(_rs, 'w', encoding='utf-8').write(_keep.replace('**Batch state: ', '**Batch state: s000 OPEN 1999-01-01 was ', 1))
     o = gate(PAGE)[1]
@@ -223,7 +223,7 @@ finally:
     open(_rs, 'w', encoding='utf-8').write(_keep)
 hit = '[doc-lint] RESUME batch line reads "s000 OPEN 1999-01-01 was ' in o
 print(('ok  ' if hit else 'BAD ') + 'a RESUME batch line that disagrees with the handoff State: expects gate FAIL doc-lint'); bad += not hit
-_st = docs_path.doc('STANDING_DIRECTIONS.md'); _keep = open(_st, encoding='utf-8').read()   # s172c: a stale path in a rule document
+_st = docs_path.doc('STANDING_DIRECTIONS.md'); _keep = open(_st, encoding='utf-8').read()   # a stale path in a rule document
 try:
     open(_st, 'w', encoding='utf-8').write(_keep + '\n- test line: see claude/DECISIONS_DIGEST.md\n')
     o = gate(PAGE)[1]

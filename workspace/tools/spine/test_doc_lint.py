@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Tests for the s172c doc_lint checks: (a) stale paths in rule documents, (b) RESUME batch line against the handoff
+"""Tests for the doc_lint path, state and plan checks: (a) stale paths in rule documents, (b) RESUME batch line against the handoff
 State, (c) the State cap, (d) plan files. Run: python3 tools/spine/test_doc_lint.py"""
 import os, sys, tempfile
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))

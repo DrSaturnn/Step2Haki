@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""launch.py (s172c; Jonathan 2026-11-10: "pointing agents better"): the read order for a launch, by batch type.
+"""launch.py: the read order for a launch, by batch type.
 
   python3 tools/spine/launch.py <content|patch|site|tools|plan> [--plan FILE] [--batch ID]
 

@@ -36,7 +36,7 @@ def main(argv):
     hand = open(docs_path.doc('STEP2HAKI_HANDOFF.md'), encoding='utf-8').read()
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     import doc_lint
-    ents = doc_lint.state_entries(hand)   # s172c: the State holds the open batch (or last ship) and the one before it
+    ents = doc_lint.state_entries(hand)   # the State holds the open batch (or last ship) and the one before it
     st = '## State\n\n' + '\n'.join(b for _, b in ents[:2])
     print(st, '\n')
     for e in doc_lint.state_errors(docs_path.docs_dir(), WS):

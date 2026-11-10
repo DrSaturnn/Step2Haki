@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""project_cleanup.py (s172c step 7, picks 1 and 2): classify every project document by whether a repo holds a record
-of it. Input: project_docs.txt (the project's doc list, 2026-11-10). A record is (a) the same relative path in the
+"""project_cleanup.py: classify every project document by whether a repo holds a record
+of it. Input: project_docs.txt (the project's doc list). A record is (a) the same relative path in the
 private repo, (b) the same file name anywhere in either clone (git ls-files; generic names such as lean.py excluded), or (c) for a file named for a shipped
 batch, that batch's file workspace/repair/<batch>/<BATCH>.md (the folder alone is not a record). Names only: the project copies were not compared byte for byte.
 Output: project_cleanup.md with DELETE (record found) and KEEP (live, or no record) lists."""

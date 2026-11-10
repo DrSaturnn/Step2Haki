@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""docstate.py (s172c; Jonathan 2026-11-10: "resolve all these issues with the .mds"): keeps the three state files in
+"""docstate.py: keeps the three state files in
 step after the lead rewrites the handoff State by hand.
 
   python3 tools/spine/docstate.py sync      # run after every State rewrite, before the commit

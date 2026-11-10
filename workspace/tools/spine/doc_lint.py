@@ -13,7 +13,7 @@ Usage:
   python3 doc_lint.py DIGEST.md STANDING.md --docs WORKSPACE --state   # also the state checks (resume.py, launch.py, docstate.py)
   python3 doc_lint.py --plan PLAN.md                          # a plan file before launch (launch.py runs this)
 
-s172c (Jonathan 2026-11-10: "resolve all these issues with the .mds"), four more checks:
+Path, state and plan checks:
 - path_errors (gate, launch gate): the runbook and STANDING_DIRECTIONS name no path that does not exist: a document
   that lives in the private docs/ cited as claude/<doc> or repair/efficiency/<doc>, or a tools/, repair/efficiency/,
   repair/ui/, docs/ or claude/ path missing from the clones. Placeholders (<batch>, sNN, *) and claude/pending/ (plan
