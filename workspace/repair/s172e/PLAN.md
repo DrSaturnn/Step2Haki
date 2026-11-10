@@ -87,3 +87,23 @@ as a LABEL; no card text is written in this batch.
   the review lane will report a leak.
 - Every remaining step is written for an Opus lead. Verdict names: the plan says KEEP, MOVE, LABEL; the tool says
   fits, move, own.
+
+## Batch record (launch chat, 2026-11-10)
+- Launch: launch.py patch read list 91.0 KB; context at the first edit about 139k (usage_ledger --context). Hooks live
+  through the plugin (155 hook tests; probe launch with no model refused).
+- Step 1b DONE: anchors.py move with "cell": "row" (row_head_term), repair/s170/anchors/test_anchors.py 6 of 6; on a
+  scratch page wh-pop-4 opens from "De Quervain tenosynovitis".
+- Step 2 DONE: 435 term-anchored hovers in 122 briefs (repair/s172e/packets.py); lanes 219 and 216; sample 40, seed 172.
+  170 of the 435 triggers sit inside a study-mode mask.
+- Step 3 DONE: verdicts KEEP 278, MOVE 97 (32 onto the row head), LABEL 60; every hover judged once
+  (repair/s172e/verdicts.json; rubric repair/s172e/JUDGE_RULES.md). 48 verdicts carry "borderline" (KEEP 34, MOVE 7,
+  LABEL 7). NEEDS-CONTENT: pcachol-pop-3, mac-pop-11.
+- Step 4 STOP: second read agrees on KEEP against not-KEEP for 34 of 40, under the 36 the plan requires. The six rows
+  are in repair/s172e/disagree.md: four judged KEEP and read as not-KEEP (bo-pop-2 "Observe", pcon-pop-1, cvx-pop-2
+  "Reactions", iso-pop-6 "5 days"), two the reverse (oap-pop-1, dmc-pop-7). Rows neither reader called borderline:
+  23 of 25 agree. Nothing applied; the page is unchanged.
+- Rubric gaps the six rows show: (1) a management word ("Observe") whose card qualifies that action for the row's
+  diagnosis; (2) a number whose card restates what the number measures with a condition ("5 days", untreated);
+  (3) a trigger that is a shortened form of the card's subject phrase ("Reactions" for "Reactions to an earlier
+  dose"); (4) a condition phrase ("NSAIDs cannot be taken") whose card explains the drug used under that condition.
+- Spend: 3 of 4 agents, 13 of 200 calls, 0.81M of 3M tokens. A second judging round needs agents beyond the 4.

@@ -1,0 +1,422 @@
+{
+ "wh-pop-4": {
+  "verdict": "move",
+  "term": "De Quervain tenosynovitis",
+  "cell": "row"
+ },
+ "wh-pop-5": {
+  "verdict": "move",
+  "term": "Third-trimester numb hands",
+  "cell": "row"
+ },
+ "lbp-pop-1": {
+  "verdict": "move",
+  "term": "no imaging"
+ },
+ "lbp-pop-5": {
+  "verdict": "move",
+  "term": "TNF"
+ },
+ "ht-pop-1": {
+  "verdict": "move",
+  "term": "lateral femoral cutaneous nerve"
+ },
+ "na-pop-2": {
+  "verdict": "move",
+  "term": "Radial head subluxation",
+  "cell": "row"
+ },
+ "lg-pop-1": {
+  "verdict": "move",
+  "term": "reflexes preserved"
+ },
+ "bo-pop-3": {
+  "verdict": "move",
+  "term": "Osteochondroma",
+  "cell": "row"
+ },
+ "shp-pop-2": {
+  "verdict": "move",
+  "term": "1 to 3 years"
+ },
+ "pmur-pop-2": {
+  "verdict": "move",
+  "term": "Hypertrophic cardiomyopathy",
+  "cell": "row"
+ },
+ "hfc-pop-1": {
+  "verdict": "move",
+  "term": "viral myocarditis"
+ },
+ "nb-pop-2": {
+  "verdict": "move",
+  "term": "phase of the noise"
+ },
+ "ri-pop-5": {
+  "verdict": "move",
+  "term": "Nasal foreign body",
+  "cell": "row"
+ },
+ "ri-pop-3": {
+  "verdict": "move",
+  "term": "Typical pneumonia",
+  "cell": "row"
+ },
+ "nl-pop-2": {
+  "verdict": "move",
+  "term": "Bronchopulmonary dysplasia",
+  "cell": "row"
+ },
+ "chol-pop-1": {
+  "verdict": "move",
+  "term": "Patient",
+  "cell": "row"
+ },
+ "fd-pop-2": {
+  "verdict": "move",
+  "term": "proton pump inhibitor"
+ },
+ "rlq-pop-1": {
+  "verdict": "move",
+  "term": "imaging before the operation"
+ },
+ "rlq-pop-2": {
+  "verdict": "move",
+  "term": "appendicitis"
+ },
+ "ogib-pop-1": {
+  "verdict": "move",
+  "term": "scan"
+ },
+ "ogib-pop-2": {
+  "verdict": "move",
+  "term": "Meckel diverticulum",
+  "cell": "row"
+ },
+ "ogib-pop-3": {
+  "verdict": "move",
+  "term": "Juvenile polyp",
+  "cell": "row"
+ },
+ "umb-pop-1": {
+  "verdict": "move",
+  "term": "hernia"
+ },
+ "umb-pop-2": {
+  "verdict": "move",
+  "term": "surgery"
+ },
+ "umb-pop-3": {
+  "verdict": "move",
+  "term": "Gastroschisis",
+  "cell": "row"
+ },
+ "scr-pop-3": {
+  "verdict": "move",
+  "term": "Epididymitis",
+  "cell": "row"
+ },
+ "herp-pop-2": {
+  "verdict": "move",
+  "term": "Hand-foot-and-mouth disease",
+  "cell": "row"
+ },
+ "frc-pop-2": {
+  "verdict": "move",
+  "term": "varicella vaccine"
+ },
+ "aif-pop-1": {
+  "verdict": "move",
+  "term": "febrile neonate"
+ },
+ "aif-pop-2": {
+  "verdict": "move",
+  "term": "1 to 3 months"
+ },
+ "aif-pop-3": {
+  "verdict": "move",
+  "term": "missing a second dose"
+ },
+ "dmn-pop-2": {
+  "verdict": "move",
+  "term": "Creutzfeldt-Jakob disease",
+  "cell": "row"
+ },
+ "ox-pop-barb-20261029": {
+  "verdict": "move",
+  "term": "Barbiturate",
+  "cell": "row"
+ },
+ "slp-pop-14": {
+  "verdict": "move",
+  "term": "Major depressive disorder",
+  "cell": "row"
+ },
+ "slp-pop-23": {
+  "verdict": "move",
+  "term": "Sleep agents"
+ },
+ "tix-pop-1": {
+  "verdict": "move",
+  "term": "Plagiocephaly"
+ },
+ "lp-pop-1": {
+  "verdict": "move",
+  "term": "37 weeks"
+ },
+ "ms-pop-1": {
+  "verdict": "move",
+  "term": "diagnosis of exclusion"
+ },
+ "hp-pop-3": {
+  "verdict": "move",
+  "term": "liver"
+ },
+ "tef-pop-1": {
+  "verdict": "move",
+  "term": "head elevated"
+ },
+ "dmc-pop-1": {
+  "verdict": "move",
+  "term": "perfusion"
+ },
+ "dmc-pop-5": {
+  "verdict": "move",
+  "term": "light chains"
+ },
+ "dmc-pop-7": {
+  "verdict": "move",
+  "term": "Normal",
+  "cell": "row"
+ },
+ "hbs-pop-5": {
+  "verdict": "move",
+  "term": "Splenic sequestration"
+ },
+ "tb-pop-2": {
+  "verdict": "move",
+  "term": "BCG vaccine",
+  "cell": "row"
+ },
+ "bmn-pop-1": {
+  "verdict": "move",
+  "term": "Bacterial",
+  "cell": "row"
+ },
+ "bmn-pop-5": {
+  "verdict": "move",
+  "term": "rifampin, ciprofloxacin or ceftriaxone"
+ },
+ "vx-pop-3": {
+  "verdict": "move",
+  "term": "Cirrhosis",
+  "cell": "row"
+ },
+ "vx-pop-4": {
+  "verdict": "move",
+  "term": "Asplenia",
+  "cell": "row"
+ },
+ "vx-pop-5": {
+  "verdict": "move",
+  "term": "Complement deficiency or eculizumab",
+  "cell": "row"
+ },
+ "rm-pop-1": {
+  "verdict": "move",
+  "term": "2 to 14 days"
+ },
+ "rm-pop-3": {
+  "verdict": "move",
+  "term": "amoxicillin or cefuroxime"
+ },
+ "rm-pop-4": {
+  "verdict": "move",
+  "term": "one dose of doxycycline"
+ },
+ "pt-pop-1": {
+  "verdict": "move",
+  "term": "Lemierre syndrome",
+  "cell": "row"
+ },
+ "pt-pop-3": {
+  "verdict": "move",
+  "term": "incision and drainage"
+ },
+ "pt-pop-4": {
+  "verdict": "move",
+  "term": "incision and drainage"
+ },
+ "an-pop-2": {
+  "verdict": "move",
+  "term": "anterolateral thigh"
+ },
+ "ti-pop-5": {
+  "verdict": "move",
+  "term": "Adulthood"
+ },
+ "ti-pop-13": {
+  "verdict": "move",
+  "term": "VMAT2 inhibitor"
+ },
+ "pkd-pop-2": {
+  "verdict": "move",
+  "term": "carbidopa with levodopa"
+ },
+ "pkd-pop-7": {
+  "verdict": "move",
+  "term": "Levodopa adverse effects",
+  "cell": "row"
+ },
+ "pkd-pop-8": {
+  "verdict": "move",
+  "term": "Levodopa adjunct",
+  "cell": "row"
+ },
+ "md-pop-in-20261025a": {
+  "verdict": "move",
+  "term": "Postpartum depression screening"
+ },
+ "md-pop-17": {
+  "verdict": "move",
+  "term": "Seasonal pattern",
+  "cell": "row"
+ },
+ "pmd-pop-1": {
+  "verdict": "move",
+  "term": "normal hormone levels"
+ },
+ "pmd-pop-2": {
+  "verdict": "move",
+  "term": "depression history"
+ },
+ "pan-pop-6": {
+  "verdict": "move",
+  "term": "Generalized anxiety disorder",
+  "cell": "row"
+ },
+ "ocd-pop-1": {
+  "verdict": "move",
+  "term": "ERP"
+ },
+ "eatd-pop-1": {
+  "verdict": "move",
+  "term": "purging"
+ },
+ "eatd-pop-5": {
+  "verdict": "move",
+  "term": "Gastroparesis",
+  "cell": "row"
+ },
+ "gp-pop-5": {
+  "verdict": "move",
+  "term": "multidisciplinary care"
+ },
+ "sb-pop-in-20261025b": {
+  "verdict": "move",
+  "term": "Inhalant intoxication",
+  "cell": "row"
+ },
+ "pks150b-pop-1": {
+  "verdict": "move",
+  "term": "Depression associated with Parkinson disease"
+ },
+ "ssr-pop-3": {
+  "verdict": "move",
+  "term": "postsynaptic stimulation"
+ },
+ "pcssri-pop-1": {
+  "verdict": "move",
+  "term": "postsynaptic stimulation"
+ },
+ "pcssri-pop-8": {
+  "verdict": "move",
+  "term": "Adequate trial"
+ },
+ "pca-pop-8": {
+  "verdict": "move",
+  "term": "Linezolid",
+  "cell": "row"
+ },
+ "pcm-pop-7": {
+  "verdict": "move",
+  "term": "Diet limits"
+ },
+ "pcatyp-pop-7": {
+  "verdict": "move",
+  "term": "aripiprazole, lurasidone, ziprasidone"
+ },
+ "pctyp-pop-3": {
+  "verdict": "move",
+  "term": "retinal deposits"
+ },
+ "pcachol-pop-2": {
+  "verdict": "move",
+  "term": "IV relief"
+ },
+ "mac-pop-2": {
+  "verdict": "move",
+  "term": "nephrogenic diabetes insipidus"
+ },
+ "mac-pop-4": {
+  "verdict": "move",
+  "term": "hyperammonemic encephalopathy"
+ },
+ "mac-pop-9": {
+  "verdict": "move",
+  "term": "Pregnancy, valproate"
+ },
+ "mac-pop-12": {
+  "verdict": "move",
+  "term": "Carbamazepine overdose"
+ },
+ "mac-pop-13": {
+  "verdict": "move",
+  "term": "Valproate overdose"
+ },
+ "mac-pop-14": {
+  "verdict": "move",
+  "term": "Lamotrigine rash"
+ },
+ "pcb-pop-3": {
+  "verdict": "move",
+  "term": "short-acting"
+ },
+ "pcb-pop-5": {
+  "verdict": "move",
+  "term": "Agents cleared by glucuronidation alone"
+ },
+ "pcb-pop-8": {
+  "verdict": "move",
+  "term": "Within 1 to 2 days"
+ },
+ "pcx-pop-8": {
+  "verdict": "move",
+  "term": "Alcohol, with buspirone",
+  "cell": "row"
+ },
+ "adm-pop-5": {
+  "verdict": "move",
+  "term": "label warning"
+ },
+ "adm-pop-8": {
+  "verdict": "move",
+  "term": "sleepiness"
+ },
+ "pcz-pop-4": {
+  "verdict": "move",
+  "term": "day-after psychomotor depression"
+ },
+ "pco-pop-1": {
+  "verdict": "move",
+  "term": "liver disease"
+ },
+ "sud-pop-12": {
+  "verdict": "move",
+  "term": "Disulfiram reaction"
+ },
+ "pcoth-pop-2": {
+  "verdict": "move",
+  "term": "phentermine"
+ }
+}

@@ -1,0 +1,302 @@
+{
+ "hip-pop-2": {
+  "verdict": "own",
+  "label": "Blood supply to the femoral head",
+  "reason": "card explains femoral head blood supply; generic trigger hip"
+ },
+ "hj-pop-1": {
+  "verdict": "own",
+  "label": "Urate lowering",
+  "reason": "card explains urate lowering between flares, not flare NSAID"
+ },
+ "lg-pop-3": {
+  "verdict": "own",
+  "label": "Night pain",
+  "reason": "card explains night pain causes; trigger is exam order"
+ },
+ "bo-pop-4": {
+  "verdict": "own",
+  "label": "Fever",
+  "reason": "NEEDS-CONTENT; card explains fever in Ewing sarcoma, line reads radiographs"
+ },
+ "nbcy-pop-1": {
+  "verdict": "own",
+  "label": "Other causes of tachypnea",
+  "reason": "NEEDS-CONTENT; card lists tachypnea causes, line defines central cyanosis"
+ },
+ "nbcy-pop-2": {
+  "verdict": "own",
+  "label": "CHARGE syndrome",
+  "reason": "card defines CHARGE syndrome; trigger is one component"
+ },
+ "pcon-pop-3": {
+  "verdict": "own",
+  "label": "In practice",
+  "reason": "card explains abdominal radiograph for nonresponse, not manometry"
+ },
+ "cvs-pop-1": {
+  "verdict": "own",
+  "label": "Natural history",
+  "reason": "NEEDS-CONTENT; card explains cyclic vomiting course, line on enamel"
+ },
+ "cvs-pop-3": {
+  "verdict": "own",
+  "label": "Between bouts",
+  "reason": "card explains care between bouts; trigger names bout treatment"
+ },
+ "abm-pop-1": {
+  "verdict": "own",
+  "label": "Denys-Drash",
+  "reason": "card defines Denys-Drash syndrome; generic trigger Well child"
+ },
+ "rta-pop-2": {
+  "verdict": "own",
+  "label": "Urine anion gap",
+  "reason": "card explains urine anion gap, not urine pH"
+ },
+ "lad-pop-1": {
+  "verdict": "own",
+  "label": "In practice",
+  "reason": "card explains observation interval for small node"
+ },
+ "slp-pop-9": {
+  "verdict": "own",
+  "label": "Also NREM",
+  "reason": "card explains confusional arousals, a sleepwalking look-alike"
+ },
+ "pmr-pop-1": {
+  "verdict": "own",
+  "label": "In practice",
+  "reason": "card explains steroid-sparing methotrexate, not lowest dose"
+ },
+ "oap-pop-2": {
+  "verdict": "own",
+  "label": "Ketorolac",
+  "reason": "card explains ketorolac limits; generic trigger there"
+ },
+ "oap-pop-3": {
+  "verdict": "own",
+  "label": "Hip",
+  "reason": "card explains hip osteoarthritis; generic trigger First drug"
+ },
+ "oap-pop-1": {
+  "verdict": "own",
+  "label": "In practice",
+  "reason": "borderline; card explains acetaminophen guideline status"
+ },
+ "mox-pop-1": {
+  "verdict": "own",
+  "label": "In practice",
+  "reason": "card explains acute contusion care, not established lesion"
+ },
+ "ob-pop-4": {
+  "verdict": "own",
+  "label": "Methacholine: watch for",
+  "reason": "NEEDS-CONTENT; card explains methacholine specificity, line grades airflow"
+ },
+ "ob-pop-7": {
+  "verdict": "own",
+  "label": "Symptom relief: sources differ",
+  "reason": "borderline; card explains symptom relief, trigger is survival"
+ },
+ "py-pop-3": {
+  "verdict": "own",
+  "label": "Papillary necrosis",
+  "reason": "card explains papillary necrosis, not obstruction"
+ },
+ "ut-pop-2": {
+  "verdict": "own",
+  "label": "Scars",
+  "reason": "card explains DMSA renal scintigraphy, not no-imaging rule"
+ },
+ "npr-pop-1": {
+  "verdict": "own",
+  "label": "Which antibiotic",
+  "reason": "card explains peritonitis antibiotic choice; generic trigger Infection"
+ },
+ "hbs-pop-1": {
+  "verdict": "own",
+  "label": "HbF by age",
+  "reason": "card explains fetal hemoglobin decline, not absent HbA"
+ },
+ "iso-pop-4": {
+  "verdict": "own",
+  "label": "Staphylococcal food poisoning",
+  "reason": "card explains staphylococcal food poisoning, not RSV"
+ },
+ "ti-pop-6": {
+  "verdict": "own",
+  "label": "Myoclonus",
+  "reason": "card explains myoclonus, not stereotypy rhythm"
+ },
+ "ti-pop-11": {
+  "verdict": "own",
+  "label": "In practice",
+  "reason": "card explains second-line tic drugs, not alpha-2 agonists"
+ },
+ "ti-pop-12": {
+  "verdict": "own",
+  "label": "If tics stay severe",
+  "reason": "card explains deep brain stimulation and botulinum toxin"
+ },
+ "pkd-pop-1": {
+  "verdict": "own",
+  "label": "Why",
+  "reason": "card explains nonmotor prodrome; generic trigger What"
+ },
+ "pkd-pop-4": {
+  "verdict": "own",
+  "label": "Supportive care",
+  "reason": "card explains physical therapy; generic trigger First"
+ },
+ "pkd-pop-6": {
+  "verdict": "own",
+  "label": "Adverse effects",
+  "reason": "card explains amantadine adverse effects; generic trigger Complication"
+ },
+ "pd-pop-7": {
+  "verdict": "own",
+  "label": "Schizophreniform",
+  "reason": "card explains schizophreniform course, absent from line"
+ },
+ "pd-pop-13": {
+  "verdict": "own",
+  "label": "Withdrawal",
+  "reason": "card explains alcohol withdrawal hallucinations, no term in line"
+ },
+ "pd-pop-nb085f91": {
+  "verdict": "own",
+  "label": "All the options",
+  "reason": "generic trigger, card lists answer options"
+ },
+ "pd-pop-nb56fa9a": {
+  "verdict": "own",
+  "label": "All the options",
+  "reason": "generic trigger, card lists answer options"
+ },
+ "szp-pop-nb87769b": {
+  "verdict": "own",
+  "label": "Options offered",
+  "reason": "generic trigger, card lists answer options"
+ },
+ "bm-pop-nbad2767": {
+  "verdict": "own",
+  "label": "All the options",
+  "reason": "generic trigger, card lists answer options"
+ },
+ "bm-pop-nbadba59": {
+  "verdict": "own",
+  "label": "All the options",
+  "reason": "generic trigger, card lists answer options"
+ },
+ "pmd-pop-4": {
+  "verdict": "own",
+  "label": "Physical symptoms",
+  "reason": "generic trigger, card explains physical symptom relief"
+ },
+ "pan-pop-4": {
+  "verdict": "own",
+  "label": "ECG findings to look for",
+  "reason": "card explains ECG findings, ECG term is masked"
+ },
+ "sm-pop-1": {
+  "verdict": "own",
+  "label": "Other signs",
+  "reason": "borderline, card explains other inconsistency signs, not Hoover"
+ },
+ "sm-pop-trem-20261026": {
+  "verdict": "own",
+  "label": "Look-alikes",
+  "reason": "card explains other tremor types, absent from line"
+ },
+ "ts-pop-1": {
+  "verdict": "own",
+  "label": "Image rehearsal therapy",
+  "reason": "card explains image rehearsal therapy, absent from line"
+ },
+ "eatd-pop-thy-20261026": {
+  "verdict": "own",
+  "label": "Hidden anorexia",
+  "reason": "card explains hidden anorexia, absent from line and row"
+ },
+ "gp-pop-nb15ab97": {
+  "verdict": "own",
+  "label": "Offered options",
+  "reason": "generic trigger, card lists answer options"
+ },
+ "dl-pop-1": {
+  "verdict": "own",
+  "label": "Medications to avoid in at-risk patients",
+  "reason": "borderline, card explains medications to avoid, absent from line"
+ },
+ "tox-pop-6": {
+  "verdict": "own",
+  "label": "Alcohol",
+  "reason": "card explains alcohol intoxication, absent from line and row"
+ },
+ "tox-pop-11": {
+  "verdict": "own",
+  "label": "Prescription cannabinoid: dronabinol",
+  "reason": "card explains dronabinol, absent from line"
+ },
+ "sb-pop-in-20261025a": {
+  "verdict": "own",
+  "label": "Urine screen",
+  "reason": "borderline, card explains urine screen, absent from line and row"
+ },
+ "tox-pop-20": {
+  "verdict": "own",
+  "label": "Disulfiram reaction",
+  "reason": "generic trigger, card explains disulfiram reaction, absent from line"
+ },
+ "pm-pop-osa-20261026": {
+  "verdict": "own",
+  "label": "Risk",
+  "reason": "borderline, card explains sleep apnea risk screen"
+ },
+ "li-pop-nbc85661": {
+  "verdict": "own",
+  "label": "All the options",
+  "reason": "generic trigger, card lists answer options"
+ },
+ "pcatyp-pop-5": {
+  "verdict": "own",
+  "label": "Psychotic",
+  "reason": "card explains psychotic depression, absent from line"
+ },
+ "pcatyp-pop-6": {
+  "verdict": "own",
+  "label": "Also",
+  "reason": "card explains other atypical uses, not Parkinson psychosis"
+ },
+ "pcatyp-pop-9": {
+  "verdict": "own",
+  "label": "Tardive",
+  "reason": "borderline, card explains tardive dyskinesia ranking only"
+ },
+ "pcatyp-pop-11": {
+  "verdict": "own",
+  "label": "Pneumonia",
+  "reason": "card explains pneumonia risk, absent from line"
+ },
+ "pctyp-pop-4": {
+  "verdict": "own",
+  "label": "Antiemetics",
+  "reason": "card explains D2-blocking antiemetics, absent from line"
+ },
+ "pcachol-pop-3": {
+  "verdict": "own",
+  "label": "Diphenhydramine",
+  "reason": "NEEDS-CONTENT, card explains diphenhydramine uses, line is tardive dyskinesia"
+ },
+ "mac-pop-11": {
+  "verdict": "own",
+  "label": "Most serious",
+  "reason": "NEEDS-CONTENT, card explains SJS, line is eosinophilia"
+ },
+ "pccog-pop-3": {
+  "verdict": "own",
+  "label": "Label",
+  "reason": "card explains other cholinomimetic cautions, absent from line"
+ }
+}

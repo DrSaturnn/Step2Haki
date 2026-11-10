@@ -1,0 +1,2612 @@
+{
+ "wh-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains scaphoid fracture blood supply and its risks"
+ },
+ "wh-pop-4": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "De Quervain tenosynovitis",
+  "reason": "card explains De Quervain, trigger is a test"
+ },
+ "wh-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card defines Phalen and Tinel maneuvers"
+ },
+ "wh-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card gives the reexamination and repeat imaging window"
+ },
+ "wh-pop-5": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Third-trimester numb hands",
+  "reason": "borderline; card lists carpal tunnel causes including pregnancy, trigger is treatment"
+ },
+ "lbp-pop-1": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "no imaging",
+  "reason": "card explains why no imaging in acute back pain"
+ },
+ "lbp-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains ankylosing spondylitis and its spondyloarthritis family"
+ },
+ "lbp-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains metastatic route to the vertebrae"
+ },
+ "lbp-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains HLA-B27"
+ },
+ "lbp-pop-5": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "TNF",
+  "reason": "card explains second-line therapy and TNF blockade, not NSAID"
+ },
+ "hip-pop-2": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Blood supply to the femoral head",
+  "reason": "card explains femoral head blood supply; generic trigger hip"
+ },
+ "hip-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains when femoral neck fracture takes arthroplasty"
+ },
+ "ht-pop-1": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "lateral femoral cutaneous nerve",
+  "reason": "card lists sensory-only nerves; trigger is the symptom"
+ },
+ "hj-pop-1": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Urate lowering",
+  "reason": "card explains urate lowering between flares, not flare NSAID"
+ },
+ "lm-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains avascular necrosis in Perthes disease"
+ },
+ "lm-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains Perthes radiographs including fragmentation timing"
+ },
+ "na-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains abuse frequency in humerus fractures"
+ },
+ "na-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains radial head subluxation mechanism"
+ },
+ "na-pop-2": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Radial head subluxation",
+  "reason": "card explains radial nerve in subluxation; trigger is a time label"
+ },
+ "na-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains posterior fat pad meaning"
+ },
+ "lg-pop-3": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Night pain",
+  "reason": "card explains night pain causes; trigger is exam order"
+ },
+ "lg-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains vital capacity intubation threshold"
+ },
+ "lg-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card describes growing pains pattern"
+ },
+ "lg-pop-1": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "reflexes preserved",
+  "reason": "card explains preserved reflexes separating myositis from Guillain-Barre"
+ },
+ "bo-pop-4": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Fever",
+  "reason": "NEEDS-CONTENT; card explains fever in Ewing sarcoma, line reads radiographs"
+ },
+ "bo-pop-3": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Osteochondroma",
+  "reason": "card explains osteochondroma malignant change; generic trigger Observe"
+ },
+ "bo-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card gives ablation alternative to the NSAID plan for osteoid osteoma"
+ },
+ "bo-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card qualifies observation of unicameral bone cyst by size"
+ },
+ "shp-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card defines Neer and other cuff maneuvers"
+ },
+ "shp-pop-2": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "1 to 3 years",
+  "reason": "card explains adhesive capsulitis recovery duration"
+ },
+ "shp-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains subacromial glucocorticoid injection"
+ },
+ "shp-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains adhesive capsulitis treatment"
+ },
+ "pmur-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card gives exception to reassurance for newborn murmur"
+ },
+ "pmur-pop-2": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Hypertrophic cardiomyopathy",
+  "reason": "card explains transient hypertrophic cardiomyopathy in infant of diabetic mother"
+ },
+ "nbcy-pop-1": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Other causes of tachypnea",
+  "reason": "NEEDS-CONTENT; card lists tachypnea causes, line defines central cyanosis"
+ },
+ "nbcy-pop-2": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "CHARGE syndrome",
+  "reason": "card defines CHARGE syndrome; trigger is one component"
+ },
+ "hfc-pop-1": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "viral myocarditis",
+  "reason": "card lists other viruses causing myocarditis"
+ },
+ "nb-pop-2": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "phase of the noise",
+  "reason": "card explains phase of airway noise; trigger is fragment"
+ },
+ "ri-pop-5": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Nasal foreign body",
+  "reason": "card explains nasal foreign body removal and complications"
+ },
+ "ri-pop-3": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Typical pneumonia",
+  "reason": "card explains pneumonia organisms by age; trigger is a film finding"
+ },
+ "ri-pop-6": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card gives alternative to macrolide for atypical pneumonia"
+ },
+ "nl-pop-2": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Bronchopulmonary dysplasia",
+  "reason": "card explains bronchopulmonary dysplasia care and prevention"
+ },
+ "chol-pop-1": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Patient",
+  "reason": "borderline; card gives patient profile; generic trigger Men"
+ },
+ "chol-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card names the second agent for primary biliary cholangitis"
+ },
+ "fd-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains why whole cow's milk"
+ },
+ "fd-pop-2": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "proton pump inhibitor",
+  "reason": "card explains PPI preference in eosinophilic esophagitis; generic trigger"
+ },
+ "rlq-pop-1": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "imaging before the operation",
+  "reason": "card explains imaging before appendectomy debate"
+ },
+ "rlq-pop-2": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "appendicitis",
+  "reason": "card explains diarrhea in appendicitis, not Campylobacter"
+ },
+ "pcon-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains juice as an osmotic laxative"
+ },
+ "pcon-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card gives infant exception to disimpaction"
+ },
+ "pcon-pop-3": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "In practice",
+  "reason": "card explains abdominal radiograph for nonresponse, not manometry"
+ },
+ "cvs-pop-1": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Natural history",
+  "reason": "NEEDS-CONTENT; card explains cyclic vomiting course, line on enamel"
+ },
+ "cvs-pop-3": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Between bouts",
+  "reason": "card explains care between bouts; trigger names bout treatment"
+ },
+ "ogib-pop-1": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "scan",
+  "reason": "card explains Meckel scan yield"
+ },
+ "ogib-pop-2": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Meckel diverticulum",
+  "reason": "card gives Meckel rule of 2s; generic trigger Toddler"
+ },
+ "ogib-pop-3": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Juvenile polyp",
+  "reason": "card explains juvenile polyp natural history, not colonoscopy"
+ },
+ "umb-pop-1": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "hernia",
+  "reason": "card explains umbilical hernia repair timing"
+ },
+ "umb-pop-2": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "surgery",
+  "reason": "card explains staged silo surgical repair"
+ },
+ "umb-pop-3": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Gastroschisis",
+  "reason": "card explains defects associated with gastroschisis"
+ },
+ "scr-pop-3": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Epididymitis",
+  "reason": "card explains epididymitis organisms by age; trigger is exam finding"
+ },
+ "scr-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains varicocele"
+ },
+ "scr-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains testicular tumor markers"
+ },
+ "plu-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains why normal sodium prompts water deprivation"
+ },
+ "plu-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains copeptin as stand-in for vasopressin level"
+ },
+ "inc-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains cough stress test failure"
+ },
+ "inc-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains bethanechol efficacy"
+ },
+ "abm-pop-1": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Denys-Drash",
+  "reason": "card defines Denys-Drash syndrome; generic trigger Well child"
+ },
+ "abm-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains high blood pressure in Wilms tumor"
+ },
+ "rta-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains normal anion gap acidosis"
+ },
+ "rta-pop-2": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Urine anion gap",
+  "reason": "card explains urine anion gap, not urine pH"
+ },
+ "pfe-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains nephrotic syndrome in children, minimal change disease"
+ },
+ "pfe-pop-5": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains normal blood pressure in nephrotic syndrome"
+ },
+ "pfe-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains poststreptococcal glomerulonephritis course"
+ },
+ "pfe-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains hereditary angioedema"
+ },
+ "pfe-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains newborn infectious conjunctivitis"
+ },
+ "lad-pop-1": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "In practice",
+  "reason": "card explains observation interval for small node"
+ },
+ "lad-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card discusses empiric antibiotic choice including clindamycin"
+ },
+ "lad-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains azithromycin use in cat-scratch disease"
+ },
+ "herp-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains herpangina sites including tonsillar pillars"
+ },
+ "herp-pop-2": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Hand-foot-and-mouth disease",
+  "reason": "card explains hand-foot-and-mouth overlap with herpangina; generic trigger"
+ },
+ "herp-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains oral antivirals for herpetic gingivostomatitis"
+ },
+ "herp-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains splenomegaly rupture risk"
+ },
+ "frc-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains who gets acyclovir"
+ },
+ "frc-pop-2": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "varicella vaccine",
+  "reason": "card explains vaccine timing and VariZIG; generic trigger Immune"
+ },
+ "frc-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains vitamin A in measles"
+ },
+ "aif-pop-1": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "febrile neonate",
+  "reason": "card explains febrile infant age rule; trigger is adjective"
+ },
+ "aif-pop-2": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "1 to 3 months",
+  "reason": "card explains workup in 61 to 90 day infants"
+ },
+ "aif-pop-3": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "missing a second dose",
+  "reason": "card explains underimmunized febrile child; trigger bare number"
+ },
+ "aif-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card explains dosing the oral cephalosporin"
+ },
+ "dmn-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card decodes normal pressure hydrocephalus triad including gait"
+ },
+ "dmn-pop-2": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Creutzfeldt-Jakob disease",
+  "reason": "card explains Creutzfeldt-Jakob forms; trigger is a symptom"
+ },
+ "dmn-pop-in-20261025a": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains HIV-associated dementia"
+ },
+ "dmn-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains cholinesterase inhibitor expectations"
+ },
+ "ox-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card mnemonic decodes anticholinergic findings including big pupils"
+ },
+ "ox-pop-barb-20261029": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Barbiturate",
+  "reason": "card compares barbiturate with benzodiazepine overdose"
+ },
+ "slp-pop-9": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Also NREM",
+  "reason": "card explains confusional arousals, a sleepwalking look-alike"
+ },
+ "slp-pop-14": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Major depressive disorder",
+  "reason": "card explains sleep study in depression; trigger is duration"
+ },
+ "slp-pop-in-20261025a": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains sleep hygiene habits"
+ },
+ "slp-pop-18": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains CBT for insomnia components"
+ },
+ "slp-pop-19": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card contests melatonin first-line order"
+ },
+ "slp-pop-20": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains dopamine agonist guidance"
+ },
+ "slp-pop-23": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "Sleep agents",
+  "reason": "card explains sleep agent risks; generic trigger Medication"
+ },
+ "pmr-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains temporal artery biopsy"
+ },
+ "pmr-pop-1": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "In practice",
+  "reason": "card explains steroid-sparing methotrexate, not lowest dose"
+ },
+ "oap-pop-2": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Ketorolac",
+  "reason": "card explains ketorolac limits; generic trigger there"
+ },
+ "oap-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains intra-articular glucocorticoid"
+ },
+ "oap-pop-3": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Hip",
+  "reason": "card explains hip osteoarthritis; generic trigger First drug"
+ },
+ "oap-pop-1": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "In practice",
+  "reason": "borderline; card explains acetaminophen guideline status"
+ },
+ "sa-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains hip position with effusion"
+ },
+ "sa-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card gives Kocher criteria probabilities by count"
+ },
+ "ji-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains ESR fall in MAS"
+ },
+ "ji-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card gives MAS criteria led by ferritin threshold"
+ },
+ "ji-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains uveitis slit-lamp screening intervals"
+ },
+ "mox-pop-1": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "In practice",
+  "reason": "card explains acute contusion care, not established lesion"
+ },
+ "pox-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains wound care prophylaxis"
+ },
+ "tix-pop-1": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "Plagiocephaly",
+  "reason": "card explains head-deformity imaging pathway, not torticollis"
+ },
+ "bpx-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains C5-C6 root extent"
+ },
+ "lr-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains current risk calculator"
+ },
+ "lr-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains lipid screening ages"
+ },
+ "lr-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains USPSTF framework differences"
+ },
+ "chd-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains knee-chest position"
+ },
+ "kw-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains low-dose aspirin in Kawasaki"
+ },
+ "kw-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains echocardiography timing"
+ },
+ "ob-pop-5": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card gives spirometry bronchodilator threshold"
+ },
+ "ob-pop-4": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Methacholine: watch for",
+  "reason": "NEEDS-CONTENT; card explains methacholine specificity, line grades airflow"
+ },
+ "ob-pop-7": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Symptom relief: sources differ",
+  "reason": "borderline; card explains symptom relief, trigger is survival"
+ },
+ "pn-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card gives pneumoconiosis lobe mnemonic"
+ },
+ "slg-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains antifungal role in ABPA"
+ },
+ "at-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains systemic steroid route"
+ },
+ "lp-pop-1": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "37 weeks",
+  "reason": "card explains cholestasis delivery timing, not ursodeoxycholic acid"
+ },
+ "ms-pop-1": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "diagnosis of exclusion",
+  "reason": "card explains newer positive MASLD criteria"
+ },
+ "ms-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains 7 to 10% weight loss target"
+ },
+ "ms-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains bariatric surgery effect"
+ },
+ "ms-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card gives other MASH drug options besides resmetirom"
+ },
+ "zk-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains Zenker confirmation"
+ },
+ "zk-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains no specific treatment for small diverticulum"
+ },
+ "zk-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains cricopharyngeal myotomy"
+ },
+ "hp-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains proctocolectomy timing"
+ },
+ "hp-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains upper endoscopy start age"
+ },
+ "hp-pop-3": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "liver",
+  "reason": "borderline; card explains hepatoblastoma screening, not thyroid ultrasound"
+ },
+ "hp-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card gives Peutz-Jeghers endoscopy start ages"
+ },
+ "bi-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains how PEG works"
+ },
+ "bi-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains methylnaltrexone class contraindication"
+ },
+ "tef-pop-1": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "head elevated",
+  "reason": "card explains infant positioning; generic trigger Nothing"
+ },
+ "wd-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains penicillamine harms"
+ },
+ "py-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains pregnancy pyelonephritis risk"
+ },
+ "py-pop-3": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Papillary necrosis",
+  "reason": "card explains papillary necrosis, not obstruction"
+ },
+ "bp-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains 1+ hematuria"
+ },
+ "bp-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card gives postvoid residual threshold for outlet obstruction"
+ },
+ "dmc-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains diabetic neuropathy fiber types"
+ },
+ "dmc-pop-1": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "perfusion",
+  "reason": "card explains why perfusion still needs checking"
+ },
+ "dmc-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card gives normal foot perfusion criteria"
+ },
+ "dmc-pop-5": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "light chains",
+  "reason": "card explains light chain detection, not UACR"
+ },
+ "dmc-pop-7": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Normal",
+  "reason": "card defines normal ABI range"
+ },
+ "dmc-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains ACE inhibitor start criteria"
+ },
+ "dmc-pop-6": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card explains eye exam interval after normal exams"
+ },
+ "ut-pop-2": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Scars",
+  "reason": "card explains DMSA renal scintigraphy, not no-imaging rule"
+ },
+ "ut-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains why mild reflux resolves"
+ },
+ "en-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains enuresis resolution rate"
+ },
+ "ak-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains ibuprofen kidney mechanism"
+ },
+ "ak-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card lists drugs causing acute interstitial nephritis"
+ },
+ "npr-pop-1": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Which antibiotic",
+  "reason": "card explains peritonitis antibiotic choice; generic trigger Infection"
+ },
+ "pv-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card explains lung hypoplasia in Potter sequence"
+ },
+ "pv-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card explains keyhole sign of outlet obstruction"
+ },
+ "hca-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card lists surgery criteria in asymptomatic hyperparathyroidism"
+ },
+ "hbs-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card gives papillary necrosis mnemonic"
+ },
+ "hbs-pop-5": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "Splenic sequestration",
+  "reason": "card explains splenic sequestration; generic trigger Young child"
+ },
+ "hbs-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains HbA exceeding HbS"
+ },
+ "hbs-pop-1": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "HbF by age",
+  "reason": "card explains fetal hemoglobin decline, not absent HbA"
+ },
+ "tb-pop-2": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "BCG vaccine",
+  "reason": "card explains BCG effect on skin test"
+ },
+ "bmn-pop-1": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Bacterial",
+  "reason": "card gives bacterial CSF numbers; generic trigger High"
+ },
+ "bmn-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains ampicillin plus cefotaxime"
+ },
+ "bmn-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains narrowing vancomycin plus ceftriaxone"
+ },
+ "bmn-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains dexamethasone limits"
+ },
+ "bmn-pop-5": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "rifampin, ciprofloxacin or ceftriaxone",
+  "reason": "card explains prophylaxis drug choice by age"
+ },
+ "vx-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains zoster vaccine status"
+ },
+ "vx-pop-3": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Cirrhosis",
+  "reason": "card explains infection risk in cirrhosis"
+ },
+ "vx-pop-4": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Asplenia",
+  "reason": "card explains encapsulated organism risk in asplenia"
+ },
+ "vx-pop-5": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Complement deficiency or eculizumab",
+  "reason": "card explains eculizumab and Neisseria killing"
+ },
+ "vx-pop-6": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card explains pneumococcal meningeal access"
+ },
+ "cvx-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains status of prior-dose reactions"
+ },
+ "cvx-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains rotavirus age cutoff"
+ },
+ "cpd-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains ceftriaxone plus doxycycline guidance"
+ },
+ "cpd-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains test of cure timing"
+ },
+ "rm-pop-1": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "2 to 14 days",
+  "reason": "card explains RMSF incubation; trigger bare number"
+ },
+ "rm-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains doxycycline tooth staining risk"
+ },
+ "rm-pop-3": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "amoxicillin or cefuroxime",
+  "reason": "card explains amoxicillin or cefuroxime for young children"
+ },
+ "rm-pop-4": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "one dose of doxycycline",
+  "reason": "card gives criteria for single-dose doxycycline"
+ },
+ "pt-pop-1": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Lemierre syndrome",
+  "reason": "card explains Lemierre organism and spread; generic trigger"
+ },
+ "pt-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains heterophile test sensitivity"
+ },
+ "pt-pop-3": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "incision and drainage",
+  "reason": "card compares incision and drainage with aspiration"
+ },
+ "pt-pop-4": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "incision and drainage",
+  "reason": "card explains when surgery is needed, not airway"
+ },
+ "pt-pop-5": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains tonsillectomy timing"
+ },
+ "an-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains why bradykinin angioedema lacks hives"
+ },
+ "an-pop-2": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "anterolateral thigh",
+  "reason": "card explains why thigh injection"
+ },
+ "iso-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains hand hygiene"
+ },
+ "iso-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains adenovirus precautions"
+ },
+ "iso-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains SARS precautions"
+ },
+ "iso-pop-4": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Staphylococcal food poisoning",
+  "reason": "card explains staphylococcal food poisoning, not RSV"
+ },
+ "iso-pop-5": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains soap for C. difficile"
+ },
+ "iso-pop-6": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card explains pertussis isolation duration untreated"
+ },
+ "iso-pop-7": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains smear release rule"
+ },
+ "iso-pop-8": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card explains measles isolation duration in immunocompromise"
+ },
+ "fb-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains Salmonella age cutoffs"
+ },
+ "fb-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains fidaxomicin recurrence benefit"
+ },
+ "ti-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card gives tic male to female ratio"
+ },
+ "ti-pop-5": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "Adulthood",
+  "reason": "card explains tic persistence into adulthood; generic trigger About"
+ },
+ "ti-pop-6": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Myoclonus",
+  "reason": "card explains myoclonus, not stereotypy rhythm"
+ },
+ "ti-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card defines CBIT behavioral therapy"
+ },
+ "ti-pop-11": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "In practice",
+  "reason": "card explains second-line tic drugs, not alpha-2 agonists"
+ },
+ "ti-pop-12": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "If tics stay severe",
+  "reason": "card explains deep brain stimulation and botulinum toxin"
+ },
+ "ti-pop-13": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "VMAT2 inhibitor",
+  "reason": "card explains VMAT2 inhibitor and antipsychotic mechanisms"
+ },
+ "pkd-pop-1": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Why",
+  "reason": "card explains nonmotor prodrome; generic trigger What"
+ },
+ "pkd-pop-2": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "carbidopa with levodopa",
+  "reason": "card explains carbidopa levodopa pairing"
+ },
+ "pkd-pop-4": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Supportive care",
+  "reason": "card explains physical therapy; generic trigger First"
+ },
+ "pkd-pop-6": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Adverse effects",
+  "reason": "card explains amantadine adverse effects; generic trigger Complication"
+ },
+ "pkd-pop-7": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Levodopa adverse effects",
+  "reason": "card explains timing of levodopa adverse effects"
+ },
+ "pkd-pop-8": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Levodopa adjunct",
+  "reason": "card explains other adjunct mechanisms, not entacapone"
+ },
+ "pkd-pop-9": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card explains cholinesterase inhibitor in Lewy body dementia"
+ },
+ "pd-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains schizophrenia mechanism"
+ },
+ "pd-pop-7": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Schizophreniform",
+  "reason": "card explains schizophreniform course, absent from line"
+ },
+ "pd-pop-13": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Withdrawal",
+  "reason": "card explains alcohol withdrawal hallucinations, no term in line"
+ },
+ "pd-pop-nb085f91": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "All the options",
+  "reason": "generic trigger, card lists answer options"
+ },
+ "pd-pop-nb56fa9a": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "All the options",
+  "reason": "generic trigger, card lists answer options"
+ },
+ "pd-pop-16": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline, card explains first-line antipsychotic class"
+ },
+ "pd-pop-17": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains early antipsychotic response"
+ },
+ "pd-pop-20": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains therapeutic alliance"
+ },
+ "szp-pop-5": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains lifetime suicide death figure"
+ },
+ "szp-pop-nb87769b": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Options offered",
+  "reason": "generic trigger, card lists answer options"
+ },
+ "szp-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains CBT for psychosis"
+ },
+ "bm-pop-nbad2767": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "All the options",
+  "reason": "generic trigger, card lists answer options"
+ },
+ "bm-pop-nbadba59": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "All the options",
+  "reason": "generic trigger, card lists answer options"
+ },
+ "md-pop-10": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains laboratory studies in depression"
+ },
+ "md-pop-in-20261025a": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "Postpartum depression screening",
+  "reason": "card explains universal postpartum depression screening"
+ },
+ "md-pop-blues-20261026": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains postpartum blues"
+ },
+ "md-pop-17": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Seasonal pattern",
+  "reason": "card explains seasonal pattern, trigger is a season"
+ },
+ "md-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains SSRI mechanism"
+ },
+ "md-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains TCA mechanism"
+ },
+ "pmd-pop-1": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "normal hormone levels",
+  "reason": "card explains normal hormone levels with altered sensitivity"
+ },
+ "pmd-pop-2": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "depression history",
+  "reason": "borderline, card separates baseline mood symptoms from PMS"
+ },
+ "pmd-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains PMDD symptom set"
+ },
+ "pmd-pop-4": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Physical symptoms",
+  "reason": "generic trigger, card explains physical symptom relief"
+ },
+ "cb-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains clusters including cluster B"
+ },
+ "cc-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains cluster C medications"
+ },
+ "pan-pop-4": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "ECG findings to look for",
+  "reason": "card explains ECG findings, ECG term is masked"
+ },
+ "pan-pop-s150e": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains past trauma versus PTSD"
+ },
+ "pan-pop-6": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Generalized anxiety disorder",
+  "reason": "duration trigger, card distinguishes generalized anxiety disorder"
+ },
+ "ocd-pop-1": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "ERP",
+  "reason": "card explains ERP, trigger carries extra words"
+ },
+ "ocd-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains clomipramine second-line status"
+ },
+ "sm-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains la belle indifference"
+ },
+ "sm-pop-1": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Other signs",
+  "reason": "borderline, card explains other inconsistency signs, not Hoover"
+ },
+ "sm-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains confirming factitious disorder"
+ },
+ "sm-pop-nx1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card is the rationale the trigger labels"
+ },
+ "sm-pop-nx3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card is the rationale the trigger labels"
+ },
+ "sm-pop-trem-20261026": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Look-alikes",
+  "reason": "card explains other tremor types, absent from line"
+ },
+ "sm-pop-nx4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card is the rationale the trigger labels"
+ },
+ "sm-pop-okn-20261026n": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card is the rationale the trigger labels"
+ },
+ "sm-pop-split-20261028": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains vibration splitting"
+ },
+ "sm-pop-8": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline, card explains features of the nonepileptic episodes"
+ },
+ "sm-pop-9": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline, card explains epilepsy coexisting with PNES"
+ },
+ "sm-pop-11": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains other factitious clues"
+ },
+ "sm-pop-nx5": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card is the rationale the trigger labels"
+ },
+ "sm-pop-12": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains insulinoma"
+ },
+ "sm-pop-13": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains other causes of low glucose"
+ },
+ "sm-pop-14": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains psychotherapy"
+ },
+ "sm-pop-16": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains comorbid conditions"
+ },
+ "ts-pop-1": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Image rehearsal therapy",
+  "reason": "card explains image rehearsal therapy, absent from line"
+ },
+ "eatd-pop-1": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "purging",
+  "reason": "card explains compensatory behaviors such as purging"
+ },
+ "eatd-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains refeeding complications"
+ },
+ "eatd-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains other anorexia findings"
+ },
+ "eatd-pop-5": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Gastroparesis",
+  "reason": "borderline, card explains gastroparesis causes"
+ },
+ "eatd-pop-thy-20261026": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Hidden anorexia",
+  "reason": "card explains hidden anorexia, absent from line and row"
+ },
+ "eatd-pop-in-20261025a": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline, card explains volume contraction from vomiting"
+ },
+ "eatd-pop-6": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline, card explains add-on drugs the Add step names"
+ },
+ "gp-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains levator ani syndrome"
+ },
+ "gp-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains vulvodynia forms"
+ },
+ "gp-pop-nb15ab97": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Offered options",
+  "reason": "generic trigger, card lists answer options"
+ },
+ "gp-pop-5": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "multidisciplinary care",
+  "reason": "card explains components of multidisciplinary care"
+ },
+ "dl-pop-para-20261026": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains tapering first"
+ },
+ "dl-pop-exhx": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains psychiatric and substance history"
+ },
+ "dl-pop-exdrugs": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains other drugs not linked to delirium"
+ },
+ "dl-pop-1": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Medications to avoid in at-risk patients",
+  "reason": "borderline, card explains medications to avoid, absent from line"
+ },
+ "tox-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains the withdrawal seizure window"
+ },
+ "tox-pop-6": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Alcohol",
+  "reason": "card explains alcohol intoxication, absent from line and row"
+ },
+ "sb-pop-in-20261025b": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Inhalant intoxication",
+  "reason": "borderline, card explains inhalant intoxication broadly"
+ },
+ "tox-pop-7": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains chronic methamphetamine use"
+ },
+ "tox-pop-11": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Prescription cannabinoid: dronabinol",
+  "reason": "card explains dronabinol, absent from line"
+ },
+ "tox-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline, card explains what standard panels miss"
+ },
+ "tox-pop-12": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains the withdrawal seizure window"
+ },
+ "sb-pop-bzsz-20261026": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline, card explains seizure causes on and off drugs"
+ },
+ "sb-pop-s150c": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains unhealthy drinking thresholds"
+ },
+ "sb-pop-in-20261025a": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Urine screen",
+  "reason": "borderline, card explains urine screen, absent from line and row"
+ },
+ "tox-pop-17": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains buprenorphine starting dose"
+ },
+ "tox-pop-20": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Disulfiram reaction",
+  "reason": "generic trigger, card explains disulfiram reaction, absent from line"
+ },
+ "tox-pop-22": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains avoiding precipitated withdrawal"
+ },
+ "soc-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains uses of motivational interviewing"
+ },
+ "pm-pop-osa-20261026": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Risk",
+  "reason": "borderline, card explains sleep apnea risk screen"
+ },
+ "pm-pop-hsat-20261026": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains sleep apnea testing sequence"
+ },
+ "pks150b-pop-1": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "Depression associated with Parkinson disease",
+  "reason": "trigger is a fragment, card explains Parkinson depression"
+ },
+ "pm-pop-in-20261025a": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline, card explains imaging for pancreatic cancer"
+ },
+ "db-pop-adol-20261028": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card is the rationale the trigger labels"
+ },
+ "ssr-pop-3": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "postsynaptic stimulation",
+  "reason": "card explains which serotonin receptors are stimulated"
+ },
+ "ssr-pop-5": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains QT interval"
+ },
+ "ssr-pop-11": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains discontinuation syndrome mimics"
+ },
+ "ssr-pop-12": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains maintenance therapy"
+ },
+ "ssr-pop-13": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains interacting drugs"
+ },
+ "ap-pop-13": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains refractory neuroleptic malignant syndrome"
+ },
+ "ap-pop-16": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains QTc prolongation"
+ },
+ "li-pop-in-20261025a": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline, card explains myalgias from statin versus hypothyroidism"
+ },
+ "li-pop-nbc85661": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "All the options",
+  "reason": "generic trigger, card lists answer options"
+ },
+ "li-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains baseline ECG"
+ },
+ "li-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains target lithium levels"
+ },
+ "tt-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains anticholinergic toxidrome of muscarinic block"
+ },
+ "sr-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains suicide risk factor mnemonic"
+ },
+ "sr-pop-gun-20261028": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains firearm access restriction"
+ },
+ "sr-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains no-suicide contract"
+ },
+ "ipv-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains reporting her own abuse"
+ },
+ "pcssri-pop-1": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "postsynaptic stimulation",
+  "reason": "card explains SSRI effects by stimulated receptor"
+ },
+ "pcssri-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains other sertraline effects"
+ },
+ "pcssri-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains SSRI sexual dysfunction"
+ },
+ "pcssri-pop-5": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains drug causes of SIADH"
+ },
+ "pcssri-pop-6": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains citalopram QT precautions"
+ },
+ "pcssri-pop-8": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "Adequate trial",
+  "reason": "card explains adequate trial length, trigger is dose"
+ },
+ "pcssri-pop-9": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains SSRI bleeding mechanism"
+ },
+ "pcs-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains therapy lines for neuropathic pain"
+ },
+ "pcs-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains SNRI most common adverse effects"
+ },
+ "pcs-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains SNRI discontinuation symptoms"
+ },
+ "pca-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains vilazodone"
+ },
+ "pca-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains mirtazapine receptor blockade"
+ },
+ "pca-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains bupropion adverse effects"
+ },
+ "pca-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains mirtazapine agranulocytosis"
+ },
+ "pca-pop-5": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains confirming the urine drug screen"
+ },
+ "pca-pop-7": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains the urologic emergency"
+ },
+ "pca-pop-8": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Linezolid",
+  "reason": "borderline, card explains linezolid interaction"
+ },
+ "pctca-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains tertiary and secondary amines"
+ },
+ "pctca-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains class IA antiarrhythmics"
+ },
+ "pctca-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains tricyclic pain uses"
+ },
+ "pctca-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains doxepin insomnia indication"
+ },
+ "pctca-pop-6": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains clomipramine seizure risk"
+ },
+ "pcm-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains monoamine oxidase A and B"
+ },
+ "pcm-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline, card explains MAOI restriction to treatment-resistant depression"
+ },
+ "pcm-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains MAOI dose timing"
+ },
+ "pcm-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains other antidotes"
+ },
+ "pcm-pop-5": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains phenelzine overdose course"
+ },
+ "pcm-pop-6": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains tyramine foods"
+ },
+ "pcm-pop-7": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "Diet limits",
+  "reason": "generic trigger, card explains MAOI diet duration"
+ },
+ "pcatyp-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains asenapine"
+ },
+ "pcatyp-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains iloperidone"
+ },
+ "pcatyp-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains olanzapine with fluoxetine"
+ },
+ "pcatyp-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains paliperidone"
+ },
+ "pcatyp-pop-5": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Psychotic",
+  "reason": "card explains psychotic depression, absent from line"
+ },
+ "pcatyp-pop-6": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Also",
+  "reason": "card explains other atypical uses, not Parkinson psychosis"
+ },
+ "pcatyp-pop-7": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "aripiprazole, lurasidone, ziprasidone",
+  "reason": "card explains the weight-neutral three"
+ },
+ "pcatyp-pop-9": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Tardive",
+  "reason": "borderline, card explains tardive dyskinesia ranking only"
+ },
+ "pcatyp-pop-10": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains QT-prolonging atypicals"
+ },
+ "pcatyp-pop-11": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Pneumonia",
+  "reason": "card explains pneumonia risk, absent from line"
+ },
+ "pctyp-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains fluphenazine thermoregulation effect"
+ },
+ "pctyp-pop-3": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "retinal deposits",
+  "reason": "card explains thioridazine retinopathy"
+ },
+ "pctyp-pop-4": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Antiemetics",
+  "reason": "card explains D2-blocking antiemetics, absent from line"
+ },
+ "pctyp-pop-5": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains who gets movement effects"
+ },
+ "pctyp-pop-6": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains tardive dyskinesia cumulative risk"
+ },
+ "pctyp-pop-7": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains pimozide interacting pairs"
+ },
+ "pcachol-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains benefit from muscarinic block"
+ },
+ "pcachol-pop-2": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "IV relief",
+  "reason": "card explains IV versus intramuscular onset"
+ },
+ "pcachol-pop-3": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Diphenhydramine",
+  "reason": "NEEDS-CONTENT, card explains diphenhydramine uses, line is tardive dyskinesia"
+ },
+ "pcachol-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains benztropine confusion and psychosis"
+ },
+ "pctd-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains switching to deutetrabenazine"
+ },
+ "pctd-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains tetrabenazine in tardive dyskinesia"
+ },
+ "pctd-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains VMAT2 mechanism"
+ },
+ "pctd-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains reserpine washout"
+ },
+ "pctd-pop-5": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline, card gives dose caps with strong CYP2D6 inhibitor"
+ },
+ "mac-pop-2": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "nephrogenic diabetes insipidus",
+  "reason": "card explains nephrogenic diabetes insipidus mechanism"
+ },
+ "mac-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains more valproate adverse effects"
+ },
+ "mac-pop-4": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "hyperammonemic encephalopathy",
+  "reason": "card explains valproate hyperammonemia"
+ },
+ "mac-pop-5": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains carbamazepine vitamin D effect"
+ },
+ "mac-pop-6": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains oxcarbazepine cross-reaction"
+ },
+ "mac-pop-8": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains topiramate adverse effects"
+ },
+ "mac-pop-9": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "Pregnancy, valproate",
+  "reason": "card explains valproate in pregnancy"
+ },
+ "mac-pop-10": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline, card explains lamotrigine pregnancy risk"
+ },
+ "mac-pop-11": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Most serious",
+  "reason": "NEEDS-CONTENT, card explains SJS, line is eosinophilia"
+ },
+ "mac-pop-12": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "Carbamazepine overdose",
+  "reason": "card explains carbamazepine overdose signs"
+ },
+ "mac-pop-13": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "Valproate overdose",
+  "reason": "card explains valproate overdose workup"
+ },
+ "mac-pop-14": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "Lamotrigine rash",
+  "reason": "generic trigger, card explains lamotrigine rash timing"
+ },
+ "pccog-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains rivastigmine patch use"
+ },
+ "pccog-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains cholinesterase inhibitor adverse effects"
+ },
+ "pccog-pop-3": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Label",
+  "reason": "card explains other cholinomimetic cautions, absent from line"
+ },
+ "pccog-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains memantine interactions"
+ },
+ "pcb-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains alprazolam contraindication"
+ },
+ "pcb-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains lorazepam contraindication"
+ },
+ "pcb-pop-3": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "short-acting",
+  "reason": "card explains benzodiazepine half-life classes"
+ },
+ "pcb-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline, card explains benzodiazepine binding versus barbiturates"
+ },
+ "pcb-pop-5": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "Agents cleared by glucuronidation alone",
+  "reason": "trigger fragment, card explains glucuronidated LOT agents"
+ },
+ "pcb-pop-6": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains interdose rebound anxiety"
+ },
+ "pcb-pop-7": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains more addictive benzodiazepines"
+ },
+ "pcb-pop-8": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "Within 1 to 2 days",
+  "reason": "trigger fragment, card explains withdrawal onset"
+ },
+ "pcx-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains buspirone clearance"
+ },
+ "pcx-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains buspirone serotonin 1A action"
+ },
+ "pcx-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains buspirone dosing"
+ },
+ "pcx-pop-5": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains hydroxyzine uses"
+ },
+ "pcx-pop-6": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains hydroxyzine QT risk"
+ },
+ "pcx-pop-7": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains gabapentin dosing"
+ },
+ "pcx-pop-8": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Alcohol, with buspirone",
+  "reason": "generic trigger, card explains buspirone with alcohol"
+ },
+ "adm-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains guanfacine forms"
+ },
+ "adm-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains ADHD treatment under age 6"
+ },
+ "adm-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains alpha-2 agonists in ADHD"
+ },
+ "adm-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains other stimulant effects"
+ },
+ "adm-pop-5": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "label warning",
+  "reason": "generic trigger, card explains stimulant label warnings"
+ },
+ "adm-pop-6": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline, card explains prescribed use versus use disorder"
+ },
+ "adm-pop-7": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains atomoxetine contraindications"
+ },
+ "adm-pop-8": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "sleepiness",
+  "reason": "card explains added sedation"
+ },
+ "adm-pop-10": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains BP measurement on stimulants"
+ },
+ "pcz-pop-4": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "day-after psychomotor depression",
+  "reason": "generic trigger, card explains next-day impairment"
+ },
+ "pcz-pop-6": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains ramelteon with fluvoxamine"
+ },
+ "pco-pop-1": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "liver disease",
+  "reason": "generic trigger, card explains hepatic impairment limits"
+ },
+ "pco-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains suvorexant dosing"
+ },
+ "pco-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains suvorexant dependence"
+ },
+ "pco-pop-5": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains strong CYP3A4 inhibitor position"
+ },
+ "sud-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains nicotine replacement efficacy"
+ },
+ "sud-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline, card explains disulfiram reaction"
+ },
+ "sud-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains methadone accumulation"
+ },
+ "sud-pop-5": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains varenicline receptor"
+ },
+ "sud-pop-6": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains opioid use disorder maintenance"
+ },
+ "sud-pop-8": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains acamprosate renal limit"
+ },
+ "sud-pop-9": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains disulfiram label warnings"
+ },
+ "sud-pop-10": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains varenicline adverse effects"
+ },
+ "sud-pop-11": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains nicotine replacement with angina"
+ },
+ "sud-pop-12": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "Disulfiram reaction",
+  "reason": "card explains severe disulfiram reaction"
+ },
+ "sud-pop-13": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains buprenorphine start timing"
+ },
+ "sud-pop-14": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains disulfiram start interval"
+ },
+ "sud-pop-16": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains clozapine level rise after quitting"
+ },
+ "sud-pop-17": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline, card explains reaction window after disulfiram dose"
+ },
+ "sud-pop-18": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains postmarketing events warning"
+ },
+ "pcoth-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains phentermine contraindications"
+ },
+ "pcoth-pop-2": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "phentermine",
+  "reason": "card explains phentermine labeled duration"
+ },
+ "pcoth-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains modafinil serious rash"
+ }
+}
