@@ -696,7 +696,11 @@ def main(argv):
     stamp = not fast and '--mech' not in argv
     if stamp:
         import stamps as ST
-        g0 = ST.verify_groups(argv[0])
+        try:
+            g0 = ST.verify_groups(argv[0])
+        except Exception as ex:  # noqa: BLE001  a stamp error writes no stamp; verify itself is unchanged
+            print('stamp: not written (%s: %s)' % (type(ex).__name__, str(ex)[:160]))
+            stamp = False
     v = Verify(argv[0], fast, keep).run()
     for line in v.ok + v.base + v.warn + v.fix:
         print(line)
@@ -713,11 +717,14 @@ def main(argv):
     line = 'verify %s: READY (mechanical checks pass and the acc, read and flags receipts are current and PASS)%s' % (
         v.bid, ' [conditional PASS replayed: %s]' % note if note else '')
     if stamp:
-        g1 = ST.verify_groups(argv[0])
+        try:
+            g1 = ST.verify_groups(argv[0])
+        except Exception:  # noqa: BLE001
+            g1 = None
         if g1 == g0:
             ST.write('verify', ST.folder_name(argv[0]), g0, summary=line, bid=v.bid)
         else:
-            print('stamp: not written (inputs changed during the run: %s)' % ', '.join(sorted(k for k in g0 if g0[k] != g1.get(k))))
+            print('stamp: not written (inputs changed during the run: %s)' % ', '.join(sorted(k for k in g0 if g0[k] != (g1 or {}).get(k))))
     print(line)
     return 0
 

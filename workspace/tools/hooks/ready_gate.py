@@ -77,7 +77,10 @@ def main(b):
         if not d:
             bad.append('%s: no local spine folder' % bid)
             continue
-        hit, changed = ST.lookup('verify', ST.folder_name(d), ST.verify_groups(d))
+        try:
+            hit, changed = ST.lookup('verify', ST.folder_name(d), ST.verify_groups(d))
+        except Exception as ex:  # noqa: BLE001  a stamp error never passes a brief: verify runs
+            hit, changed = None, ['stamp error %s: %s' % (type(ex).__name__, str(ex)[:120])]
         if hit:
             hits.append('%s (stamp %s)' % (bid, hit['date']))
             continue

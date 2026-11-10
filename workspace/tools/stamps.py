@@ -50,6 +50,8 @@ def fhash(p):
         st = os.stat(p)
     except OSError:
         return '-'
+    if not os.path.isfile(p):   # a directory or a symlink to one (git lists an untracked symlink as a file)
+        return 'dir:' + (os.readlink(p) if os.path.islink(p) else '')
     k = (p, st.st_size, st.st_mtime_ns)
     if k not in _cache:
         h = hashlib.sha256()
@@ -290,7 +292,11 @@ def main(argv):
     check, pending = argv[1], argv[2]
     page = argv[argv.index('--page') + 1] if '--page' in argv else None
     attr = argv[argv.index('--attr-only') + 1] if '--attr-only' in argv else None
-    groups = ship_groups(check, page, attr)
+    try:
+        groups = ship_groups(check, page, attr)
+    except Exception as ex:  # noqa: BLE001  a stamp error never skips a check: the check runs and no stamp is written
+        print('%s: runs (stamp error: %s: %s)' % (check, type(ex).__name__, str(ex)[:160]))
+        return 1
     name = check
     json.dump({'check': check, 'name': name, 'groups': groups}, open(pending, 'w', encoding='utf-8'))
     hit, changed = lookup(check, name, groups)

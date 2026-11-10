@@ -302,6 +302,8 @@ try:
     sys.path.insert(0, TOOLS_DIR)
     import stamps as _S
     import ui_gate as _U
+    expect('a directory in a hashed group (an untracked symlink git lists as a file) hashes as a directory',
+           (0 if _S.fhash(T).startswith('dir:') else 1, ''), 0)
     expect('perf and a11y baselines are ui_gate inputs only (a perf fix reruns perf alone)',
            (0 if not set(_S.files(WS, ['tools/**/*.json'], exclude=_S.UI_ONLY)) & _S.UI_ONLY and
             'tools/spine/perf_baseline.json' in _U.TOOLS['perf'] and
