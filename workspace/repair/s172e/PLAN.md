@@ -113,6 +113,6 @@ as a LABEL; no card text is written in this batch.
   (repair/s172e/disagree_2.md). STOP at step 4 a second time. Of the six, two are span fixes of the same anchor
   (pmd-pop-1, pcb-pop-8). hca-pop-2 ("Surgery", card "Primary hyperparathyroidism") is a round 1 KEEP that ruling 1
   would move: the 244 round 1 KEEP verdicts not marked borderline were not re-judged under the rulings.
-  Across both samples: of 52 judge KEEP rows the second reader would change 7; of 28 judge fix rows the second reader
+  Across both samples: of 51 judge KEEP rows the second reader would change 7; of 29 judge fix rows the second reader
   would keep 5 (3 of them span fixes or the same subject).
 - Spend: 5 of 6 agents, 19 calls, 1.01M of 3M tokens.
