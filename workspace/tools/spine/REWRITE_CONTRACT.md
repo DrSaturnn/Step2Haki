@@ -84,6 +84,17 @@ Do not read the page, the runbook, STANDING_DIRECTIONS or the digest whole. Grep
   line, mimic line, next step), then remove the block with "carried_by".
 - Step 2 holds diagnostic criteria only. A workup ladder found there moves to the Workup step (raw change + NOTES.md row).
 
+## Tool limits (s171 lanes lost about 8 calls each learning these)
+
+- Write {rd}/rewrite_{batch}.json and NOTES.md with the Write tool, and change them with the Edit tool. A shell command
+  that writes a file (heredoc, redirect, python open(..., 'w')) outside the lane folder is refused by the lane gate.
+- tools/ is read-only for lanes. Do not cd anywhere: run the check command exactly as written below.
+- Read units.json and the style file by grep or a line range; a whole read of a large file costs calls and context.
+- Shared one-word claims (a label such as "Borderline" whose text sits in more than one unit) stay where they are when
+  their text survives; collect handles them, so do not move them by hand.
+- Raw changes carry the claims whose text sits in their old html; "claims": [] counts as unset. Dropping a claim takes
+  "cut" (a cuts.json id) or "carried_by".
+
 ## Check, then finish
 
 Run from the workspace folder (/home/claude/Step2Haki/workspace):

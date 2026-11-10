@@ -1,8 +1,8 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). Jonathan sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
- "id": "s171",
- "open": false,
- "plan_step": "s171",
+ "id": "s172",
+ "open": true,
+ "plan_step": "s172",
  "roles": [
   "brief-build",
   "brief-rewrite",
@@ -10,16 +10,16 @@
   "patch-review-opus",
   "probe"
  ],
- "max_agents": 26,
- "max_calls": 620,
- "max_tokens": 43000000,
- "set_by": "Jonathan, 2026-11-08 19:44 (\"Budget: 20 agents, 620 calls, 25M agent tokens (rewrite Opus 1, Sonnet 11; review Opus 3 lanes, Sonnet 1); lead 50M\") ; raised to 32M tokens by Jonathan 2026-11-08 (AskUserQuestion: \"Raise to 32M (Recommended)\": review round 1 and a round 2 on briefs not READY, after the rewrite lanes used 23.55M) ; raised to 41M tokens and 24 agents by Jonathan 2026-11-08 chat 2 (\"4 more fix lanes (Rec.)\", D-20261108-11) ; raised to 25 agents and 42.5M tokens by Jonathan 2026-11-09 chat 3 (\"One more Opus lane (Rec.)\", D-20261109-1) ; raised to 26 agents and 43M by Jonathan 2026-11-09 (\"Reword + 1 small lane (Rec.)\", D-20261109-3)",
+ "max_agents": 23,
+ "max_calls": 670,
+ "max_tokens": 27000000,
+ "set_by": "Jonathan, 2026-11-09 20:10 (\"Budget: 23 agents, 670 calls, 27M agent tokens (rewrite Opus 1, Sonnet 12; review Opus 3 lanes, Sonnet 2); lead 50M\")",
  "previous": {
-  "id": "s170",
-  "note": "s170 shipped 5d380d3 2026-11-08 (Claude lead): content pilot under TEXTBOOK_STYLE on 7 briefs; 15 agents"
+  "id": "s171",
+  "note": "s171 shipped 4ca8cc1 2026-11-09 (Claude lead): 11 psych briefs under TEXTBOOK_STYLE, pms-pmdd held; 26 agents, 43M budget"
  },
- "opened": "2026-11-08 19:44 EST",
- "note": "s171 content psych A under TEXTBOOK_STYLE: psychosis-duration, sz-psychosocial, bipolar-mania, pms-pmdd, panic, ocd, somatic, trauma-stress, gppd, sexual-dysfunction, cluster-b, cluster-c",
+ "opened": "2026-11-09 20:10 EST",
+ "note": "s172 content psych B under TEXTBOOK_STYLE: eating-disorders, defense-mechanisms, delirium, substance, stages-change, psych-medical, disruptive-behavior, ssri-effects, antipsych-effects, lithium-effects, tca-tox, suicide-risk, ipv",
  "batch_budgets": {
   "s138": {
    "agents": 20,
@@ -440,9 +440,15 @@
    }
   },
   "s171": {
-   "agents": 20,
+   "agents": 26,
    "calls": 620,
-   "tokens": 32000000,
+   "tokens": 43000000,
+   "lead_tokens": 50000000
+  },
+  "s172": {
+   "agents": 23,
+   "calls": 670,
+   "tokens": 27000000,
    "lead_tokens": 50000000
   }
  },
