@@ -96,7 +96,7 @@ as a LABEL; no card text is written in this batch.
 - Step 2 DONE: 435 term-anchored hovers in 122 briefs (repair/s172e/packets.py); lanes 219 and 216; sample 40, seed 172.
   170 of the 435 triggers sit inside a study-mode mask.
 - Step 3 DONE: verdicts KEEP 278, MOVE 97 (32 onto the row head), LABEL 60; every hover judged once
-  (repair/s172e/verdicts.json; rubric repair/s172e/JUDGE_RULES.md). 48 verdicts carry "borderline" (KEEP 34, MOVE 7,
+  (repair/s172e/data/verdicts.json; rubric repair/s172e/JUDGE_RULES.md). 48 verdicts carry "borderline" (KEEP 34, MOVE 7,
   LABEL 7). NEEDS-CONTENT: pcachol-pop-3, mac-pop-11.
 - Step 4 STOP: second read agrees on KEEP against not-KEEP for 34 of 40, under the 36 the plan requires. The six rows
   are in repair/s172e/disagree.md: four judged KEEP and read as not-KEEP (bo-pop-2 "Observe", pcon-pop-1, cvx-pop-2
@@ -116,7 +116,7 @@ as a LABEL; no card text is written in this batch.
   Across both samples: of 51 judge KEEP rows the second reader would change 7; of 29 judge fix rows the second reader
   would keep 5 (3 of them span fixes or the same subject).
 - Spend: 5 of 6 agents, 19 calls, 1.01M of 3M tokens.
-- Steps 5 to 7 (D-20261110-14: fixes applied below the agreement bar). repair/s172e/decisions.json applied with
+- Steps 5 to 7 (D-20261110-14: fixes applied below the agreement bar). repair/s172e/data/decisions.json applied with
   anchors.py: 86 moves (23 onto the row head), 76 fallback markers, 1 lead KEEP (slp-pop-23). Lead calls on judge
   targets: 4 row heads that are drawer buttons or already triggers, 2 terms inside a mask and 9 moves the review
   lane flagged as study-mode leaks became markers (marker stays inside the mask); aif-pop-1 widened to its bold phrase.
