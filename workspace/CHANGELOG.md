@@ -2,6 +2,32 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-11-09 s172: s172: 13 psych briefs in review-book style (eating disorders, defense mechanisms, delirium, substance, stages of change, psych-medical, disruptive behavior, SSRI, antipsychotic and lithium adverse effects, tricyclic toxicity, suicide risk, intimate partner violence)
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Briefs changed (13):
+  - eating-disorders (Eating Disorders): prose edited (+1026 chars)
+  - defense-mechanisms (Defense Mechanisms): prose edited (-24 chars)
+  - delirium (Delirium): prose edited (+152 chars)
+  - substance (Substance Intoxication and Withdrawal): prose edited (+2222 chars)
+  - stages-change (Stages of Change and Motivational Interviewing): prose edited (-446 chars)
+  - psych-medical (Medication- and Illness-Induced Psychiatric Disorders): prose edited (+391 chars)
+  - disruptive-behavior (Disruptive Behavior in a Child): prose edited (+0 chars)
+  - ssri-effects (SSRI Adverse Effects): prose edited (-27 chars)
+  - antipsych-effects (Antipsychotic Adverse Effects): prose edited (+927 chars)
+  - lithium-effects (Lithium Therapy): prose edited (+1099 chars)
+  - tca-tox (Anticholinergic and Tricyclic Toxicity): prose edited (+108 chars)
+  - suicide-risk (Suicide Risk Assessment): prose edited (+662 chars)
+  - ipv (Intimate Partner Violence): prose edited (-718 chars)
+Other page changes (nav, headers, scripts): +629 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 54 checks, base HEAD | allowlisted 21 | 0 failure(s) (stamp 2026-11-09 23:39: same inputs)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0 (stamp 2026-11-09 23:40: same inputs)
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
 ## 2026-11-09 s171: s171: eleven psychiatry briefs in review-book style (pms-pmdd held)
 
 ```
