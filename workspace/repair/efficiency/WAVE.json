@@ -9,10 +9,10 @@
   "patch-review-opus",
   "probe"
  ],
- "max_agents": 23,
+ "max_agents": 26,
  "max_calls": 650,
  "max_tokens": 24000000,
- "set_by": "D-20261110-24",
+ "set_by": "D-20261110-24, D-20261110-25",
  "previous": {
   "id": "s172f",
   "note": "s172f tools: ship time, launch guard, closing allowance; no page change ; shipped 357882e 2026-11-10"
@@ -462,12 +462,12 @@
    "lead_tokens": 25000000
   },
   "s173": {
-   "agents": 23,
+   "agents": 26,
    "calls": 650,
    "tokens": 24000000,
-   "lead_tokens": 45000000
+   "lead_tokens": 55000000
   }
  },
- "max_lead_tokens": 45000000,
+ "max_lead_tokens": 55000000,
  "max_lead_close_tokens": 3000000
 }
