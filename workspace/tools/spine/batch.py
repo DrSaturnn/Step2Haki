@@ -161,14 +161,14 @@ def s8(argv):
     facts.append('verify_all: %d of %d READY%s' % (len(ready), len(ids), '; ' + ' | '.join(notready) if notready else ''))
     ok &= len(ready) == len(ids)
     comma = ','.join(ids)
-    checks = [('gate', py('tools/gate.py', page, '--base', 'HEAD'), 'gate:'),
-              ('render', sh(['node', 'tools/render.js', page]), 'render:'),
-              ('preflight', py('tools/preflight.py', page, '--base', 'HEAD'), '^preflight'),
-              ('vendor', py('tools/vendor_scan.py', '--page', page), 'shared'),
-              ('squeeze', py(os.path.join(HERE, 'squeeze_check.py'), page, comma, timeout=600), 'squeeze_check'),
-              ('pointer', py(os.path.join(HERE, 'pointer_check.py'), page, comma, timeout=600), 'pointer_check')]
+    page_checks = [('gate', py('tools/gate.py', page, '--base', 'HEAD'), 'gate:'),
+                   ('render', sh(['node', 'tools/render.js', page]), 'render:'),
+                   ('preflight', py('tools/preflight.py', page, '--base', 'HEAD'), '^preflight'),
+                   ('vendor', py('tools/vendor_scan.py', '--page', page), 'shared'),
+                   ('squeeze', py(os.path.join(HERE, 'squeeze_check.py'), page, comma, timeout=600), 'squeeze_check'),
+                   ('pointer', py(os.path.join(HERE, 'pointer_check.py'), page, comma, timeout=600), 'pointer_check')]
     with open(os.path.join(L, 's8_page_checks.log'), 'w', encoding='utf-8') as fh:
-        for name, r, pat in checks:
+        for name, r, pat in page_checks:
             fh.write('== %s\n%s\n' % (name, r.stdout + r.stderr))
             line = last(r, 2 if name == 'vendor' else 1, pat)
             facts.append('%s: %s' % (name, line))

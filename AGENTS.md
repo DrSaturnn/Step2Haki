@@ -19,7 +19,8 @@ ships without the owner's "ship".
 | Sources and each brief's build folder | private repo, local-only/ (copied over workspace/ at session start) |
 | Site code, tools, hooks | this repo, workspace/site/ and workspace/tools/ |
 | Style and format specs, header and abbreviation lists, cost ledgers | this repo, workspace/repair/efficiency/ |
-| A batch's record and edit files | this repo, workspace/repair/<batch>/ |
+| A batch's plan and record | private repo, docs/batches/<batch>/ |
+| A batch's edit files and scripts | this repo, workspace/repair/<batch>/ |
 | Plan files before launch | the Claude project, claude/pending/ |
 
 Tools find the private documents through workspace/tools/docs_path.py.

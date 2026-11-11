@@ -79,6 +79,8 @@ rc, o = run_checks('https://claude.ai/code/session_abc123', 1)
 case(rc == 1 and 'ABORT at ui-gate' in o, 'a failing checks-only run returns 1 (s8 then does not present)')
 rc, o = run_checks('https://claude.ai/code/session_abc123', 0)
 case(rc == 0 and 'every check passed' in o, 'a passing checks-only run returns 0')
+shadow = sorted(set(BT.s8.__code__.co_varnames) & {'checks', 'py', 'sh', 'last', 'spend', 'words', 'folders'})
+case(not shadow, 's8 keeps the module functions it calls (no local of the same name: %s)' % ', '.join(shadow))
 import shutil  # noqa: E402
 shutil.rmtree(os.path.join(BT.WS, 'local', 's000selftest'), ignore_errors=True)
 print('launch and checks: %s' % ('all passed' if not bad else '%d failed' % bad))
