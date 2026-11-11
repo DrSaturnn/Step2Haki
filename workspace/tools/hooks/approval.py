@@ -32,7 +32,12 @@ def fsha(p):
     return hashlib.sha256(open(p, 'rb').read()).hexdigest()
 
 
-def batch_sha(b):
+def batch_sha(b, tools=False):
+    """tools: a batch with no edit files is bound to the tracked tools and site code as they stand"""
+    if tools:
+        g = lambda *x: subprocess.run(['git'] + list(x) + ['--', 'tools', 'site'], capture_output=True, text=True,
+                                      cwd=C.WS).stdout
+        return hashlib.sha256((g('ls-files', '-s') + g('diff', 'HEAD')).encode()).hexdigest(), ['tools/', 'site/']
     files = sorted(glob.glob(os.path.join(C.WS, 'repair', b, '*.json')))
     if not files:
         sys.exit('approval: repair/%s has no batch files' % b)
@@ -92,7 +97,7 @@ def present(b, shots, tools=False):
     if not entry:
         sys.exit('approval present: add the changelog entry for %s first (repair/changelog/axlog.py); it is part of '
                  'what the owner approves' % b)
-    bs, files = batch_sha(b)
+    bs, files = batch_sha(b, tools)
     page = build(b)
     m = {'batch': b, 'presented_at': time.strftime('%Y-%m-%dT%H:%M:%S'), 'presented_epoch': time.time(),
          'batch_sha': bs, 'files': files, 'log_sha': C.sha(entry), 'page_sha': fsha(page),
@@ -156,7 +161,7 @@ def check(b, page):
               'wait for the owner to reply "ship".' % (b, b))
         return 1
     a = json.load(open(p, encoding='utf-8'))
-    bs, _ = batch_sha(b)
+    bs, _ = batch_sha(b, a.get('tools'))
     entry = TOOLS_LOG if a.get('tools') else log_entry(b)
     bad = []
     if a.get('batch_sha') != bs:

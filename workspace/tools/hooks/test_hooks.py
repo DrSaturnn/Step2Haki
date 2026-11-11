@@ -460,6 +460,10 @@ try:
     expect('present with no changelog entry and no --tools', (r.returncode, ''), 1)
     r = subprocess.run([sys.executable, os.path.join(H, 'approval.py'), 'present', TB, '--tools'], env=E2, capture_output=True, text=True)
     expect('present --tools with no changelog entry', (r.returncode, r.stdout + r.stderr), 0)
+    r = subprocess.run([sys.executable, os.path.join(H, 'approval.py'), 'present', 's000nofiles', '--tools'], env=E2, capture_output=True, text=True)
+    expect('present --tools for a batch with no edit files', (r.returncode, r.stdout + r.stderr), 0)
+    r = subprocess.run([sys.executable, os.path.join(H, 'approval.py'), 'present', 's000nofiles'], env=E2, capture_output=True, text=True)
+    expect('present without --tools for a batch with no edit files', (r.returncode, ''), 1)
 finally:
     shutil.rmtree(T, ignore_errors=True)
     shutil.rmtree(TBD, ignore_errors=True)
