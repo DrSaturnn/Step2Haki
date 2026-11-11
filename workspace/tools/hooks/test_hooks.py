@@ -454,6 +454,12 @@ try:
     expect('approval of a presentation with no screenshots', (chk().returncode, ''), 0)
     open(page, 'a').write('<!-- changed -->')
     expect('check after the page changed', (chk().returncode, ''), 1)
+    # a tools batch has no changelog entry: present --tools records without one, and check follows the record
+    E2 = {k: v for k, v in ENV.items() if k != 'AX_TEST_LOG'}
+    r = subprocess.run([sys.executable, os.path.join(H, 'approval.py'), 'present', TB], env=E2, capture_output=True, text=True)
+    expect('present with no changelog entry and no --tools', (r.returncode, ''), 1)
+    r = subprocess.run([sys.executable, os.path.join(H, 'approval.py'), 'present', TB, '--tools'], env=E2, capture_output=True, text=True)
+    expect('present --tools with no changelog entry', (r.returncode, r.stdout + r.stderr), 0)
 finally:
     shutil.rmtree(T, ignore_errors=True)
     shutil.rmtree(TBD, ignore_errors=True)

@@ -80,11 +80,15 @@ def build(b):
     return out
 
 
-def present(b, shots):
+TOOLS_LOG = 'tools batch: no changelog entry'
+
+
+def present(b, shots, tools=False):
+    """tools: a batch that leaves the page as it is (ship.sh --tools) has no changelog entry to approve"""
     missing = [s for s in shots if not os.path.isfile(s)]
     if missing:
         sys.exit('approval present: missing screenshot(s): %s' % ', '.join(missing))
-    entry = log_entry(b)
+    entry = TOOLS_LOG if tools else log_entry(b)
     if not entry:
         sys.exit('approval present: add the changelog entry for %s first (repair/changelog/axlog.py); it is part of '
                  'what the owner approves' % b)
@@ -92,7 +96,7 @@ def present(b, shots):
     page = build(b)
     m = {'batch': b, 'presented_at': time.strftime('%Y-%m-%dT%H:%M:%S'), 'presented_epoch': time.time(),
          'batch_sha': bs, 'files': files, 'log_sha': C.sha(entry), 'page_sha': fsha(page),
-         'shots': {os.path.abspath(s): fsha(s) for s in shots}, 'status': 'pending'}
+         'shots': {os.path.abspath(s): fsha(s) for s in shots}, 'status': 'pending', 'tools': bool(tools)}
     json.dump(m, open(C.state('present', '%s.json' % b), 'w', encoding='utf-8'), indent=1)
     old = C.state('approvals', '%s.json' % b)
     if os.path.exists(old):
@@ -153,7 +157,7 @@ def check(b, page):
         return 1
     a = json.load(open(p, encoding='utf-8'))
     bs, _ = batch_sha(b)
-    entry = log_entry(b)
+    entry = TOOLS_LOG if a.get('tools') else log_entry(b)
     bad = []
     if a.get('batch_sha') != bs:
         bad.append('the batch files changed after approval')
@@ -184,7 +188,7 @@ if __name__ == '__main__':
     if not a:
         sys.exit(__doc__.strip().splitlines()[3].strip())
     if a[0] == 'present':
-        sys.exit(present(a[1], a[2:]))
+        sys.exit(present(a[1], [x for x in a[2:] if x != '--tools'], '--tools' in a))
     if a[0] == 'hook':
         sys.exit(hook())
     if a[0] == 'check':
