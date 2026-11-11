@@ -146,6 +146,10 @@ def s8(argv):
     r = py('repair/build.py', batch, '--out', page)
     facts.append('build: ' + last(r))
     ok &= r.returncode == 0
+    if ok:   # as ship.sh does: styles and scripts from site/, and search.json beside the page for the gate
+        r = py('tools/site_build.py', page)
+        facts.append('site_build: ' + last(r, 1, 'site_build: css'))
+        ok &= r.returncode == 0
     ready, notready = [], []
     for i in range(0, len(ids), 3):
         grp = ids[i:i + 3]
@@ -164,9 +168,11 @@ def s8(argv):
     page_checks = [('gate', py('tools/gate.py', page, '--base', 'HEAD'), 'gate:'),
                    ('render', sh(['node', 'tools/render.js', page]), 'render:'),
                    ('preflight', py('tools/preflight.py', page, '--base', 'HEAD'), '^preflight'),
-                   ('vendor', py('tools/vendor_scan.py', '--page', page), 'shared'),
-                   ('squeeze', py(os.path.join(HERE, 'squeeze_check.py'), page, comma, timeout=600), 'squeeze_check'),
-                   ('pointer', py(os.path.join(HERE, 'pointer_check.py'), page, comma, timeout=600), 'pointer_check')]
+                   ('vendor', py('tools/vendor_scan.py', '--page', page), 'shared')]
+    if ids:   # per-brief checks; a batch that rebuilds no brief has none to run
+        page_checks += [
+            ('squeeze', py(os.path.join(HERE, 'squeeze_check.py'), page, comma, timeout=600), 'squeeze_check'),
+            ('pointer', py(os.path.join(HERE, 'pointer_check.py'), page, comma, timeout=600), 'pointer_check')]
     with open(os.path.join(L, 's8_page_checks.log'), 'w', encoding='utf-8') as fh:
         for name, r, pat in page_checks:
             fh.write('== %s\n%s\n' % (name, r.stdout + r.stderr))

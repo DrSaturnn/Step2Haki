@@ -101,14 +101,17 @@ def _docs():
 def g_tools_code():
     rel = files(WS, ['tools/**/*.py', 'tools/**/*.js', 'tools/**/*.sh', 'repair/build.py'], exclude=())
     rel = [r for r in rel if not r.startswith(('tools/plugin/', 'tools/hooks/'))]
-    rel.append('package-lock.json')
+    rel += ['package-lock.json', 'package.json']
     return ghash(WS, rel, 'node %s | python %s' % (_run(['node', '--version']), sys.version.split()[0]))
 
 
 def g_tools_data():
     rel = files(WS, ['tools/**/*.json', 'tools/**/*.txt', 'tools/**/*.csv', 'tools/**/*.md', 'tools/tests/**/*'],
                 exclude=UI_ONLY)
-    return ghash(WS, [r for r in rel if not r.startswith(('tools/plugin/', 'tools/hooks/'))])
+    rel = [r for r in rel if not r.startswith(('tools/plugin/', 'tools/hooks/'))]
+    # read by the gate and outside the patterns above: the fixture page of the rule self-test, the agent definitions
+    rel += files(WS, ['tools/fixtures/**/*', 'tools/hooks/agents/*.md', 'tools/plugin/**/agents/*.md'])
+    return ghash(WS, sorted(set(rel)))
 
 
 DOCS = ['DECISIONS_DIGEST.md', 'STANDING_DIRECTIONS.md', 'BATCH_RUNBOOK.md', 'ui/UI_MAP.md']
