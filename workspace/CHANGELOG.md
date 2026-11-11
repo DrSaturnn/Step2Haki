@@ -2,6 +2,31 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-11-11 s173: feat(briefs): rewrite twelve psych drug cards in review-book style
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Briefs changed (12):
+  - pc-atypical (Atypical antipsychotics): prose edited (-2 chars)
+  - pc-typical (Typical antipsychotics): prose edited (+203 chars)
+  - pc-antichol (Anticholinergic): prose edited (-23 chars)
+  - pc-td (Tardive dyskinesia agents): prose edited (+92 chars)
+  - pc-cog (Cognitive agents): prose edited (+408 chars)
+  - pc-benzo (Benzodiazepines): prose edited (+194 chars)
+  - pc-anxiety (Other anxiety agents): prose edited (+156 chars)
+  - adhd-meds (ADHD): prose edited (+459 chars)
+  - pc-sleep (Sleep agents): prose edited (+289 chars)
+  - pc-orexin (Orexin antagonists): prose edited (+85 chars)
+  - sud-meds (Substance use and cessation): prose edited (+639 chars)
+  - pc-other (Other agents): prose edited (+352 chars)
+Other page changes (nav, headers, scripts): +582 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 54 checks, base HEAD | allowlisted 21 | 0 failure(s) (stamp 2026-11-11 06:39: same inputs)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0 (stamp 2026-11-11 06:39: same inputs)
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
 ## 2026-11-10 s172f: chore(tools): cut ship time and move the internal record out
 
 ```
