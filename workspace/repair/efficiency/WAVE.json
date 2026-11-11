@@ -1,24 +1,23 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). The owner sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
- "id": "s173",
- "open": false,
- "plan_step": "s173",
+ "id": "s173b",
+ "open": true,
+ "plan_step": "s173b",
  "roles": [
-  "brief-rewrite",
   "patch-review",
   "patch-review-opus",
   "probe"
  ],
- "max_agents": 27,
- "max_calls": 650,
- "max_tokens": 24000000,
- "set_by": "D-20261110-24, D-20261110-25, D-20261111-1",
+ "max_agents": 2,
+ "max_calls": 40,
+ "max_tokens": 1000000,
+ "set_by": "D-20261111-4",
  "previous": {
-  "id": "s172f",
-  "note": "s172f tools: ship time, launch guard, closing allowance; no page change ; shipped 357882e 2026-11-10"
+  "id": "s173",
+  "note": "s173 content, 12 psych pharm cards under TEXTBOOK_STYLE; mood-anticonv held ; shipped 0b78ee3 2026-11-11"
  },
- "opened": "2026-11-10 22:54 EST",
- "note": "s173 content, psych pharm cards under TEXTBOOK_STYLE: pc-atypical, pc-typical, pc-antichol, pc-td, mood-anticonv, pc-cog, pc-benzo, pc-anxiety, adhd-meds, pc-sleep, pc-orexin, sud-meds, pc-other",
+ "opened": "2026-11-11 08:45 EST",
+ "note": "s173b patch: mood-anticonv held rewrite; claim S327 moved to the leukocyte line unit; one Opus review of the card",
  "batch_budgets": {
   "s138": {
    "agents": 20,
@@ -466,8 +465,14 @@
    "calls": 650,
    "tokens": 24000000,
    "lead_tokens": 60000000
+  },
+  "s173b": {
+   "agents": 2,
+   "calls": 40,
+   "tokens": 1000000,
+   "lead_tokens": 15000000
   }
  },
- "max_lead_tokens": 60000000,
+ "max_lead_tokens": 15000000,
  "max_lead_close_tokens": 3000000
 }
