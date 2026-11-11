@@ -27,6 +27,11 @@ AUTO = json.load(open('local/s173/auto_moves.json'))
 for b in ('pc-typical', 'pc-td', 'pc-orexin'):
     MOVES.setdefault(b, {})
 
+MOVES['pc-atypical'].update({'S108': 'U035', 'S183': 'U053', 'S185': 'U053', 'S187': 'U053'})
+MOVES['pc-antichol'].update({'S126': 'U031', 'S128': 'U031', 'S130': 'U031'})
+MOVES['mood-anticonv'].update({'S315': 'U053', 'S317': 'U053', 'S319': 'U053', 'S323': 'U060', 'S325': 'U060', 'S327': 'U060',
+                               'S339': 'U030', 'S343': 'U030', 'S292': 'U098', 'S267': 'U089'})
+
 def sh(*a):
     return subprocess.run(list(a), capture_output=True, text=True)
 
