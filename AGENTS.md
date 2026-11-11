@@ -2,11 +2,11 @@
 
 Step2Haki is a Step 2 CK study page. The deployed page is discriminator-briefs-site/index.html (Vercel); the working
 page is workspace/index.html. Briefs are built and changed in batches by a lead agent under a runbook, and nothing
-ships without Jonathan's "ship".
+ships without the owner's "ship".
 
 ## Start here
 1. Clone both repos side by side: this one, and the private repo DrSaturnn/Step2Haki-private (rules, state, sources).
-2. Read docs/RESUME.md in the private repo. It picks one of three paths from Jonathan's first line: continue an open
+2. Read docs/RESUME.md in the private repo. It picks one of three paths from the owner's first line: continue an open
    batch, launch a new batch, or plan without building.
 3. Run the tool that path names. Both print the core rules before anything else:
    - continue: `python3 workspace/tools/spine/resume.py`
@@ -36,9 +36,9 @@ repo directly:
   agent writes only inside its lane.
 - The gate (workspace/tools/gate.py): 54 checks on the page, plus the document checks of
   workspace/tools/spine/doc_lint.py.
-- Approval (workspace/tools/hooks/approval.py): ship.sh refuses a batch without Jonathan's recorded "ship".
+- Approval (workspace/tools/hooks/approval.py): ship.sh refuses a batch without the owner's recorded "ship".
 
 ## Other leads
 Claude leads. Codex led batches from 2026-10-21 to 2026-10-23 and does not take the lead, launch, build or ship
-unless Jonathan assigns it in writing; workspace/repair/efficiency/CODEX_LEAD.md describes that mode and predates the
+unless the owner assigns it in writing; workspace/repair/efficiency/CODEX_LEAD.md describes that mode and predates the
 move of the internal documents to the private repo.

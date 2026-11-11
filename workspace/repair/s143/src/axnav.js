@@ -1,4 +1,4 @@
-/* s143: the Lithium Glance mockup's sidebar as one component (Jonathan 2026-10-15). Presentation only: no text is
+/* s143: the Lithium Glance mockup's sidebar as one component (2026-10-15). Presentation only: no text is
    invented. The old #navlinks list stays in the page, hidden, because the shelf, Board-style only and search scripts
    write their filters onto it; this list mirrors its visibility and counts and draws the mockup's parts:
    systems that fold (chevron, name, count), brief tiles, and under the current brief its step rail with the fill and

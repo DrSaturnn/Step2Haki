@@ -1,5 +1,5 @@
 /* Type C page setup (one time, before the first Type C ship). Source of truth: tools/typec/typec.css.
-   Chosen by Jonathan 2026-09-29: accent-bar serif section headers; compact illness script (iPhone: option B stacked
+   Chosen by 2026-09-29: accent-bar serif section headers; compact illness script (iPhone: option B stacked
    with a color bar per disease; iPad and desktop: side-by-side table); dense row cards; first steps grouped. */
 nav.jump{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 16px}
 nav.jump a{font:600 12px/1 var(--sans,system-ui);padding:7px 10px;border-radius:999px;background:#E3EEE5;color:#1E4A28;text-decoration:none}
@@ -285,7 +285,7 @@ figure.lcp{margin:18px 0;padding:15px 15px 10px;border-radius:18px;background:va
 .lcp .wr2{display:grid;grid-template-columns:minmax(112px,30%) 1fr;gap:4px 14px;margin:8px 0 0;font-size:14.5px;line-height:1.42}
 .lcp .wr2 + .wr2{border-top:1px solid var(--hair);padding-top:8px}
 .lcp .wr2 b{font-size:10.5px;font-weight:700;letter-spacing:.06em;line-height:1.35;text-transform:uppercase;color:var(--muted);padding-top:3px}
-/* "Diagnostic workup" kicker above every workup path (Jonathan 2026-10-02) */
+/* "Diagnostic workup" kicker above every workup path (2026-10-02) */
 .lcp .kick{margin:0 0 7px;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
 .lcp .pt-tx{margin:0;font-size:14.5px;line-height:1.45}
 /* bottom line: short paragraphs with indented lists */
@@ -310,13 +310,13 @@ figure.lcp{margin:18px 0;padding:15px 15px 10px;border-radius:18px;background:va
 
 .lcw .wt.low{height:30px} .lcw .wt.low em{top:15px}
 /* mnemonic: the acronym's letters stack in one tinted column and read down as the word on their own, while each
-   word stays whole (Jonathan 2026-10-01) */
+   word stays whole (2026-10-01) */
 dl.rows.mnem{background:linear-gradient(90deg,rgba(10,84,97,.085) 0 28px,transparent 28px);border-radius:10px 0 0 10px;padding:2px 0}
 dl.rows.mnem > dt{padding:8px 16px 8px 28px;text-indent:-23px;line-height:1.3;white-space:normal}
 dl.rows.mnem > dt b.mn{display:inline-block;min-width:22px;text-indent:0;text-align:right;font-family:var(--serif);font-size:22px;line-height:1;font-weight:700;letter-spacing:0;color:var(--criteria,#0a5461);vertical-align:-2px;margin-right:1px;padding-right:0}
 dl.rows.mnem > dd{padding-top:10px;padding-bottom:8px;font-size:14.5px;line-height:1.42}
 /* question stems in lines (tools/typec/stemfmt.py): a lead line, indented findings on the bottom line's indent rule,
-   plain lines, then a muted data line; the same layout inside NBME question blocks (Jonathan 2026-10-01) */
+   plain lines, then a muted data line; the same layout inside NBME question blocks (2026-10-01) */
 .stem .sl,.stem .si,.stem .ss,.stem .sd,.nbstem .sl,.nbstem .si,.nbstem .ss,.nbstem .sd{display:block}
 .stem .si,.nbstem .si{margin:0 0 0 3px;padding:2px 0 2px 12px;border-left:2px solid rgba(84,74,196,.28)}
 .stem .sl + .si,.nbstem .sl + .si{margin-top:4px}
@@ -328,7 +328,7 @@ dl.rows.mnem > dd{padding-top:10px;padding-bottom:8px;font-size:14.5px;line-heig
 #nav .brand p.axbuild{margin-top:2px;font-size:10.5px;opacity:.7;letter-spacing:.02em}
 .axupdate{position:fixed;left:0;right:0;margin:0 auto;width:fit-content;top:calc(10px + env(safe-area-inset-top,0px));z-index:9999;display:flex;align-items:center;gap:12px;max-width:calc(100vw - 24px);box-sizing:border-box;padding:10px 12px 10px 16px;border-radius:14px;background:#2B2F36;color:#fff;font:600 13.5px/1.3 var(--sans,system-ui);box-shadow:0 8px 28px rgba(0,0,0,.25)}
 .axupdate button{flex:none;border:0;border-radius:9px;padding:8px 12px;background:var(--accent,#544AC4);color:#fff;font:700 13px/1 var(--sans,system-ui);cursor:pointer;min-height:36px}
-/* index button (s47, Jonathan: frosted pill, top left; hides while the page scrolls, back once it stops).
+/* index button (s47, the owner: frosted pill, top left; hides while the page scrolls, back once it stops).
    Phones and tablets only; the bottom bar's Index button gives way to it. */
 #navtab{display:none}
 @media (max-width:980px){
@@ -344,7 +344,7 @@ dl.rows.mnem > dd{padding-top:10px;padding-bottom:8px;font-size:14.5px;line-heig
   #navtab.hid,body.navopen #navtab{opacity:0;transform:translateY(-14px);pointer-events:none}
 }
 @media print{ #navtab{display:none!important} }
-/* per-row scale (Jonathan 2026-10-01): each timeline row carries its own tick labels, right under its bars */
+/* per-row scale (2026-10-01): each timeline row carries its own tick labels, right under its bars */
 .lcw .rax{position:relative;height:15px;margin:-5px 0 8px}
 .lcw .rax span{position:absolute;left:var(--x);transform:translateX(-50%);font-size:10.5px;font-weight:700;color:var(--muted);white-space:nowrap;line-height:1}
 .lcw .rax span.a0{transform:none} .lcw .rax span.a1{transform:translateX(-100%)}
@@ -370,7 +370,7 @@ dl.rows.mnem > dd{padding-top:10px;padding-bottom:8px;font-size:14.5px;line-heig
 .lcc .lc-key i.cs{position:static;width:15px;height:10px;border-radius:3px}
 .lcc .wl.dec{font-weight:600;color:var(--psy3)}
 .lcc .note a{font-weight:600}
-/* ============ Mimic course tables v6 (s111, Jonathan): a key inside every row, hub groups as panels, rows as cards ============ */
+/* ============ Mimic course tables v6 (s111, the owner): a key inside every row, hub groups as panels, rows as cards ============ */
 .lcc{--card:#FCFCFC}
 .lcc .wrows{display:flex;flex-direction:column;gap:10px}
 .lcc .wgb{padding:10px 8px 8px;border-radius:14px;background:color-mix(in srgb,var(--recess) 70%,transparent)}

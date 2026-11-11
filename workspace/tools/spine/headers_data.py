@@ -9,7 +9,7 @@ HEADERS.json:
   retired_patterns: regexes for the families ("..., most tempting first", question titles);
   allowed: approved names and approved new headings; known: every structural header on PAGE when the list was made,
   minus retired. A touched brief's structural headers must be in allowed or known (prose_lint header_new, counted on
-  touched briefs): a header that is in neither is new and needs Jonathan's approval (TEXTBOOK_STYLE rule 6), which adds
+  touched briefs): a header that is in neither is new and needs the owner's approval (TEXTBOOK_STYLE rule 6), which adds
   it to allowed. C6 (D-20261108-2): a block heading that is the plain name of a drug, disease, syndrome, exposure or
   test already named in the brief needs no separate approval; block headings are listed in the batch report.
 """

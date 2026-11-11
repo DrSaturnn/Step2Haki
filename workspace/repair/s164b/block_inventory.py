@@ -51,7 +51,7 @@ def main(argv):
         rows.append({'kind': 'style', 'id': b['id'], 'start': b['start'], 'len': len(text),
                      'rules': sum(1 for r in rules if r['block'] == b['id']),
                      'batches': sorted(set(BATCH.findall(text)), key=lambda x: (int(re.match(r'\d+', x).group()), x)),
-                     'jonathan': len(re.findall(r'Jonathan', text)), 'head': head_comment(text),
+                     'jonathan': len(re.findall(r'the owner', text)), 'head': head_comment(text),
                      'overridden_by': dict(over[b['id']].most_common(8))})
     for m in re.finditer(r'<script([^>]*)>(.*?)</script>', html, re.S):
         attrs, text = m.group(1), m.group(2)
@@ -62,7 +62,7 @@ def main(argv):
         bid = re.search(r'id="([^"]+)"', attrs)
         rows.append({'kind': kind, 'id': bid.group(1) if bid else 'anon@%d' % m.start(), 'start': m.start(), 'len': len(text),
                      'batches': sorted(set(BATCH.findall(text)), key=lambda x: (int(re.match(r'\d+', x).group()), x)),
-                     'jonathan': len(re.findall(r'Jonathan', text)), 'head': head_comment(text),
+                     'jonathan': len(re.findall(r'the owner', text)), 'head': head_comment(text),
                      'storage': sorted(set(re.findall(r"localStorage\.(?:get|set|remove)Item\('([^']+)'", text))),
                      'iife': text.count('(function')})
     json.dump(rows, open(os.path.join(WS, 'local', 's164b', 'blocks.json'), 'w'), indent=1)
@@ -70,7 +70,7 @@ def main(argv):
         for r in rows:
             f.write('## %s %s @%d, %d chars%s\n' % (r['kind'], r['id'], r['start'], r['len'],
                     (', %d rules' % r['rules']) if r['kind'] == 'style' else ''))
-            f.write('batches: %s; Jonathan x%d%s\n' % (' '.join(r['batches'][:30]), r['jonathan'],
+            f.write('batches: %s; the owner x%d%s\n' % (' '.join(r['batches'][:30]), r['jonathan'],
                     ('; storage ' + ' '.join(r['storage'])) if r.get('storage') else ''))
             if r.get('overridden_by'):
                 f.write('overridden by: %s\n' % ', '.join('%s %d' % kv for kv in r['overridden_by'].items()))

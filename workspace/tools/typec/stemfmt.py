@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""stemfmt.py: scannable question stems and NBME question blocks for lean briefs (Jonathan 2026-10-01).
+"""stemfmt.py: scannable question stems and NBME question blocks for lean briefs (2026-10-01).
 
 A stem is a list of lines, each (kind, text):
   'l'  lead line: age, sex and the complaint (opens the stem, I2)
@@ -45,7 +45,7 @@ def restem(li, stem, explanation=None, bump=True):
 
 def nbq(nid, n, stem, ask, competing, two, decider):
     """An NBME question in its framing block: compact stem with every clue, the competing answers (pull, then the
-    masked reason it fails) and the final two (the masked decider). Not in the bank (Jonathan 2026-10-01)."""
+    masked reason it fails) and the final two (the masked decider). Not in the bank (2026-10-01)."""
     lis = ''.join(f'<li><b>{o}</b>: {pull} <span class="mask">{why}</span></li>' for o, pull, why in competing)
     return (f'<div class="pearls nbq" data-nbme="{nid}"><span class="lbl">NBME question {n}</span>'
             f'<p class="nbstem">{stem}</p><p class="nbask">{ask}</p><span class="nbh">Competing answers</span><ul>{lis}</ul>'

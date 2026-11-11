@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""folder_of (Jonathan 2026-10-24, fewer lead calls): the local spine folder that builds a brief, found from each
+"""folder_of (2026-10-24, fewer lead calls): the local spine folder that builds a brief, found from each
 folder's 10_*_spine.json (or claim_map.json primary_id), so a lead never searches for "DEM" or "N4" by hand.
 
   python3 tools/spine/folder_of.py <brief-id> [<brief-id> ...]   one line per id: id, then its folder (or "no folder")

@@ -32,7 +32,7 @@ for a in ('CBC', 'BUN', 'US', 'CT', 'MRI', 'BP', 'HR'):
 for a in ('MRV', 'ECG', 'UA', 'FSGS', 'PSGN'):
     expect('allowlist does not have %s' % a, a not in ACR_OK)
 
-# ---- hover bodies are not counted (Jonathan 2026-10-13)
+# ---- hover bodies are not counted (2026-10-13)
 hv = ('<p>keep1 <button class="sp-pop">label</button><span class="sp-pop-b" id="x" hidden><span class="sp-ct">In practice:</span>'
       'gone1 <span class="mask">gone2</span> gone3</span> keep2</p>')
 expect('hover body dropped, nested spans included', all(w not in strip_hover(hv) for w in ('gone1', 'gone2', 'gone3', 'In practice')))
@@ -42,14 +42,14 @@ expect('no hover: unchanged', strip_hover('<span class="mask">m</span>') == '<sp
 expect('words do not run together across a dropped hover', 'keep1' in strip_hover('a<span class="sp-pop-b">x</span>b') or 'a b' in strip_hover('a<span class="sp-pop-b">x</span>b'))
 
 
-# ---- the collapsed systems panel is not counted; its summary line is (Jonathan 2026-10-13)
+# ---- the collapsed systems panel is not counted; its summary line is (2026-10-13)
 sy = ('<p>keep3</p><details class="sp-sys"><summary>What tics do<small>detail</small></summary>'
       '<div class="sp-sysr"><span class="k">gone4</span><span class="f">gone5</span></div></details><p>keep4</p>')
 expect('systems panel body dropped', 'gone4' not in strip_collapsed(sy) and 'gone5' not in strip_collapsed(sy))
 expect('summary line and text around it kept', all(w in strip_collapsed(sy) for w in ('What tics do', 'keep3', 'keep4')))
 expect('other details kept', 'x' in strip_collapsed('<details class="other"><summary>s</summary>x</details>'))
 
-# ---- s154c: the pause point is not counted (Jonathan 2026-10-26)
+# ---- s154c: the pause point is not counted (2026-10-26)
 pp = 'keep5 <div class="sp-pause"><b class="pp-t">Pause point</b>\n<div class="pp-b">\n<span class="sl">gone6</span>\n<span class="pp-a">&rarr; <span class="mask">gone7</span></span>\n</div>\n<p class="pp-x">gone8</p>\n</div> keep6'
 expect('pause point blocks dropped, nested divs included', all(w not in strip_pause(pp) for w in ('gone6', 'gone7', 'gone8', 'Pause point')))
 expect('text around the pause point kept', all(w in strip_pause(pp) for w in ('keep5', 'keep6')))

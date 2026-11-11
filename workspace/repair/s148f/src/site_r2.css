@@ -1,4 +1,4 @@
-/* ============ s148f: site layer after s148d (Jonathan 2026-10-19/20; claude/pending/SITE_UI_R2.md, SITE_S148F.md).
+/* ============ s148f: site layer after s148d (2026-10-19/20; claude/pending/SITE_UI_R2.md, SITE_S148F.md).
    Reference: the Lithium Glance mockup (artifact 5UNkq7ozkp26rjgiqYWPFt), replicated, with the current accent bar.
    1 question tiles  2 hover motion  3 linked briefs  4 muted tints  5 one shading rule  6 carried phone fixes.
    Every rule leads with the s148b prefix so it outranks the earlier and dark layers; colors are theme tokens. ============ */
@@ -213,7 +213,7 @@ html:is([data-theme],:not([data-theme])) body .lcp .tile > :first-child:is(.th,.
 
 /* ---------- 6. carried fixes ---------- */
 /* every brief renders lazily (content-visibility:auto), which clips its painting to its own box: the shadows of cards
-   that reach the brief's edge were cut off in a hard vertical line (Jonathan 2026-10-20). Let the clip reach past the box
+   that reach the brief's edge were cut off in a hard vertical line (2026-10-20). Let the clip reach past the box
    far enough for the deepest card shadow (var(--e1): 24 + 10 px); layout and the lazy rendering are unchanged. */
 html.cv .brief{overflow-clip-margin:40px}
 /* .sp-spec first column: may wrap (mdd's <br> workaround no longer needed); kept from being squeezed */

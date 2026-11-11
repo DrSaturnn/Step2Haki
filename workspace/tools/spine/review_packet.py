@@ -43,7 +43,7 @@ line 4 the verdict; then `Findings`, numbered; then, for a PASS-IF, `Replacement
 
 Verdicts:
 - `Verdict: PASS`: no findings that need a change, or only LOW findings you do not need fixed.
-- `Verdict: PASS-IF` (conditional PASS, Jonathan 2026-10-12): no HIGH or MED, and every LOW you want fixed comes with an
+- `Verdict: PASS-IF` (conditional PASS, 2026-10-12): no HIGH or MED, and every LOW you want fixed comes with an
   exact replacement. The brief then ships READY with any of your replacements applied and nothing else changed.
 - `Verdict: FAIL`: any HIGH or MED stands.
 
@@ -208,7 +208,7 @@ def part_rules(part):
         return ('# Structure rules for this review (from STANDING_DIRECTIONS.md)\n\n' + section(sd, 'Brief structure (decision spine)')
                 + '\n## Tables in your folder (s147)\n\nALIASES.json (other names) and ABBREV.json (the abbreviation allowlist) '
                 'are in your folder. Grep them for the names and abbreviations you check; do not read them whole.\n')
-    if part == 'acc':   # s146b: card dispositions (Jonathan 2026-10-17)
+    if part == 'acc':   # s146b: card dispositions (2026-10-17)
         return ('# Card dispositions (acc)\n\nWhen cards.md and cards_disposition.json are in your folder: every AnKing card the '
                 "brief's board terms reach has a disposition (covered:S### claim ids, owner:<brief>, scope:<reason>, "
                 'not-topic, conflict:<fact>). Spot-check them: a "covered" card whose fact the cited claims do not teach, or a '
@@ -217,7 +217,7 @@ def part_rules(part):
     return ''
 
 
-READ_TABLES = ('ALIASES.json', 'ABBREV.json')   # s147 (Jonathan): the read part judges other names and abbreviations
+READ_TABLES = ('ALIASES.json', 'ABBREV.json')   # s147: the read part judges other names and abbreviations
 
 
 def copy_read_tables(read_dir):

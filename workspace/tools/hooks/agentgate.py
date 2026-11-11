@@ -52,7 +52,7 @@ def main():
         C.refuse('LAUNCH GATE: refused: %s.' % bad)
     w = C.wave()
     if not w or not w.get('open'):
-        C.refuse('LAUNCH GATE: refused: no open wave (repair/efficiency/WAVE.json). Jonathan sets each wave budget.')
+        C.refuse('LAUNCH GATE: refused: no open wave (repair/efficiency/WAVE.json). The owner sets each wave budget.')
     if w.get('plan_step') and h['plan_step'] != w['plan_step']:
         C.refuse('LAUNCH GATE: refused: plan step %r is not the open wave\'s (%r).' % (h['plan_step'], w['plan_step']))
     if w.get('roles') and role not in w['roles']:

@@ -25,7 +25,7 @@ Per note (one JSON line):
   hy          the Extra field split into statements [{id, key, text}]: id = <nid or guid>.<key>, key = first 10 hex
               of sha1 of the normalized text (stable across re-exports and reordering); a line ending in ":" is a
               header and is prefixed to the lines under it instead of standing alone. The Extra field is the deck's
-              pink text, the high-yield notes (Jonathan 2026-10-09: "the extra"; the AnKingOverhaul notetype CSS
+              pink text, the high-yield notes (2026-10-09; the AnKingOverhaul notetype CSS
               colors #extra navy, magenta in night mode)
   marks       emphasis spans inside Extra: [{kind: b|u|i|color, color, text}]
   other       other text fields (non-empty after stripping media), {field name (column number without --db): text}

@@ -10,7 +10,7 @@ Source of truth: tools/hooks/agents/lean-reviewer.md in the Step2Haki repo; this
 
 ## Hooks (0.2.0, s148 item 9)
 
-Jonathan, 2026-10-18: "how can we make the hooks install automatically done btw ive been having to approve them each time". The three hooks that tools/hooks/install.sh writes into a session's settings now ship in this plugin (hooks/hooks.json), so they load with the plugin at session start:
+2026-10-18. The three hooks that tools/hooks/install.sh writes into a session's settings now ship in this plugin (hooks/hooks.json), so they load with the plugin at session start:
 
 - PreToolUse on Agent and Task: agentgate.py (H1, the launch gate);
 - PreToolUse on every tool: callgate.py (H2 to H4: lanes, git and per-agent call budgets);

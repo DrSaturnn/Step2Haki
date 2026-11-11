@@ -1,5 +1,5 @@
 {
- "_doc": "Shared abbreviation allowlist (Jonathan 2026-10-12, DECISIONS_DIGEST): very commonly used labs and imaging are written short; anything not listed is spelled out at first use or in a hover. tools/spine/verify.py (V1) reads this file. New entries are listed in the batch report.",
+ "_doc": "Shared abbreviation allowlist (2026-10-12, DECISIONS_DIGEST): very commonly used labs and imaging are written short; anything not listed is spelled out at first use or in a hover. tools/spine/verify.py (V1) reads this file. New entries are listed in the batch report.",
  "labs_imaging": {
   "CBC": "complete blood count",
   "BUN": "blood urea nitrogen",
@@ -10,7 +10,7 @@
   "ALT": "alanine aminotransferase",
   "ECG": "electrocardiogram"
  },
- "_labs_imaging_note": "CT angio and CT angiography are covered by CT (Jonathan's list: CBC, BUN, US for ultrasound, CT, CT angio or CT angiography, MRI). Replaces the 2026-10-11 CT-only exception.",
+ "_labs_imaging_note": "CT angio and CT angiography are covered by CT (the owner's list: CBC, BUN, US for ultrasound, CT, CT angio or CT angiography, MRI). Replaces the 2026-10-11 CT-only exception.",
  "site_conventions": {
   "BP": "blood pressure (vignette convention)",
   "HR": "heart rate (vignette convention)",
@@ -48,22 +48,22 @@
   {
    "entry": "CBC",
    "date": "2026-10-12",
-   "by": "Jonathan"
+   "by": "owner"
   },
   {
    "entry": "BUN",
    "date": "2026-10-12",
-   "by": "Jonathan"
+   "by": "owner"
   },
   {
    "entry": "CT",
    "date": "2026-10-12",
-   "by": "Jonathan"
+   "by": "owner"
   },
   {
    "entry": "MRI",
    "date": "2026-10-12",
-   "by": "Jonathan"
+   "by": "owner"
   },
   {
    "entry": "SAND",

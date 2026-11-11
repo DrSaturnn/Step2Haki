@@ -41,7 +41,7 @@ def measure(html):
     js = '\n'.join(re.findall(r'<script(?![^>]*application/(?:ld\+)?json)[^>]*>(.*?)</script>', html, re.S))
     comments = (re.findall(r'/\*.*?\*/', css, re.S) + re.findall(r'/\*.*?\*/', js, re.S)
                 + re.findall(r'(?<![:\'"\\/])//[^\n]*', js) + re.findall(r'<!--.*?-->', html, re.S))
-    narration = [c for c in comments if re.search(r'Jonathan|\bs1\d\d[a-z]?\b|DIGEST|STANDING|handoff|Decided', c)]
+    narration = [c for c in comments if re.search(r'the owner|\bs1\d\d[a-z]?\b|DIGEST|STANDING|handoff|Decided', c)]
     return {
         'style_blocks': len(styles),
         'script_blocks': len(re.findall(r'<script\b', html)),
@@ -56,7 +56,7 @@ def measure(html):
     }
 
 THEME_SEL = re.compile(r'^(?:(?:html|:root)?(?:\[data-(?:theme|axa|glass)[^\]]*\])+\s*)+$')
-# a scoped token (Jonathan 2026-11-05, s164b): '<theme prefix> <scope>' holding only --t- custom properties, where the
+# a scoped token (2026-11-05, s164b): '<theme prefix> <scope>' holding only --t- custom properties, where the
 # theme value uses a variable that the scope element sets below the root (.axm-flat, figure.sw, .lcc)
 THEME_SCOPED = re.compile(r'^(?:(?:html|:root)?(?:\[data-(?:theme|axa|glass)[^\]]*\])+\s+)+\S.*$')
 RAW_COLOR = re.compile(r'#[0-9a-fA-F]{3,8}\b|\b(?:rgba?|hsla?|hwb|lab|lch|oklab|oklch|color)\(|'

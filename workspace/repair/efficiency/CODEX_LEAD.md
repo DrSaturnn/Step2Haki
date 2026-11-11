@@ -1,17 +1,17 @@
 # Codex as the Step2Haki lead (interim; written by Claude 2026-10-21)
 
-Jonathan, 2026-10-21 (DECISIONS_DIGEST): "i want chatgpt to temporarily take over the whole process due to limited
+2026-10-21 (DECISIONS_DIGEST): "i want chatgpt to temporarily take over the whole process due to limited
 usage with claude. So i want it able to reproduce the a whole brief on its own, of which you can audit and create
 specific intructions for chatgpt to follow." Model: GPT-6.1 Sol in Codex.
 
-**Dormant since 2026-10-23 (after the s150b ship).** Jonathan: "I’m transitioning back to Claude as lead." Claude leads
+**Dormant since 2026-10-23 (after the s150b ship).** the owner Claude leads
 from s151 under BATCH_RUNBOOK.md with its own hooks, reviewer lanes, approval hook and ship.sh (no AX_LEAD). This file
-applies again only when Jonathan assigns Codex; until then Codex does not take the lock (section 0).
+applies again only when the owner assigns Codex; until then Codex does not take the lock (section 0).
 
-Jonathan, 2026-10-23 (DECISIONS_DIGEST), after Claude's audit of s150: "ill have codex ship. make the needed changes for
+2026-10-23 (DECISIONS_DIGEST), after Claude's audit of s150: "ill have codex ship. make the needed changes for
 codex to ensure for the remaining batches. additionally ensure codex is able to author a new brief, as we will pick up
 with new psych questions to cover as well." From s150 on, Codex ships (section 5), runs the S8 audit itself in a fresh
-task (section 5 and CODEX_AUDIT.md), and authors new briefs (section 9). Claude audits only when Jonathan asks.
+task (section 5 and CODEX_AUDIT.md), and authors new briefs (section 9). Claude audits only when the owner asks.
 
 This file lists only what differs when Codex leads. Everything else is the runbook (/home/claude/step2haki-private/docs/BATCH_RUNBOOK.md),
 unchanged: the steps S1 to S9, the standing calls (section 3), the self-check (section 4), the report (section 5), the
@@ -23,7 +23,7 @@ STANDING_DIRECTIONS, then the plan, then the runbook, then this file.
 The handoff State (/home/claude/step2haki-private/docs/STEP2HAKI_HANDOFF.md) carries a line `- **Lead:** <Claude | Codex>, since <date
 time>, chat <n>`. Before any work:
 1. fetch the batch branch (wip/sNN in both repos) and read the State;
-2. if the Lead line names the other agent and Jonathan has not told you to take over, stop and ask him;
+2. if the Lead line names the other agent and the owner has not told you to take over, stop and ask him;
 3. to take over, rewrite the Lead line first, commit and push it alone, then start.
 Only one lead works a branch at a time. Never push to a branch another session is pushing to (on 2026-10-21 a
 duplicate chat opened on wip/s149 by accident; it stopped before pushing, which is the right behavior).
@@ -49,7 +49,7 @@ The runbook's read list names project paths (claude/...). Their copies:
 | the reviewer agent's standing rules (Claude's lean-reviewer) | public workspace/tools/hooks/agents/lean-reviewer.md: paste its body (below the front matter) at the top of every reviewer task (section 3) |
 
 The skills marked RETIRED in their descriptions stay retired. When a skill says "use the Skill tool" or names a Claude
-tool, read its SKILL.md and do the steps with the shell. Edit a mirror only when Jonathan changes the rule it holds,
+tool, read its SKILL.md and do the steps with the shell. Edit a mirror only when the owner changes the rule it holds,
 and say so in the batch file so Claude syncs the project copy on return.
 
 ## 2. Session start (replaces handoff "Session start" items 1, 3 and 4)
@@ -77,7 +77,7 @@ and say so in the batch file so Claude syncs the project copy on return.
    git clone --depth 1 https://github.com/DrSaturnn/Step2Haki-private /home/claude/step2haki-private
    git -C /home/claude/Step2Haki switch -c wip/sNN && git -C /home/claude/step2haki-private switch -c wip/sNN
    ```
-   Then the runbook's launch acts, Codex-mapped: the digest line in Jonathan's words; WAVE.json (id sNN, open true, the
+   Then the runbook's launch acts, Codex-mapped: the digest line in the owner's words; WAVE.json (id sNN, open true, the
    reviewer budget as max_agents, max_calls, max_tokens, the lead figure as max_lead_tokens, previous = the closed
    wave); the batch file repair/sNN/SNN.md (copy the header and section layout of repair/s149/S149.md); the Lead line
    (section 0); the State. Commit and push both repos.
@@ -111,7 +111,7 @@ lead's own session, so the work is not grading itself.
   RECEIPT_FORMAT.md). Start each reviewer task with only: the Role, Plan step, Lane and Budget lines, then "Read
   INSTRUCTIONS.md in your lane first". The reviewer reads only its lane folder and writes only its receipts.
 - Models: acc on GPT-6.1 Sol at xhigh; read and flags at high; display at medium, given the screenshot sheets (it
-  reads images). The plan table's Claude model names map to these until Jonathan says otherwise; record the mapping
+  reads images). The plan table's Claude model names map to these until the owner says otherwise; record the mapping
   in the batch file.
 - A receipt that does not follow RECEIPT_FORMAT.md does not count; verify parses it. Relaunch that lane.
 - Write-first: each reviewer writes one brief's receipt before opening the next brief's packet.
@@ -150,11 +150,11 @@ S8, in this order:
 5. The changelog entry (repair/changelog/axlog.py; reader-facing; the s149 and s150 entries are the model).
 6. `python3 tools/hooks/approval.py present sNN <every approval sheet>`: it builds the page and binds the batch files,
    the changelog entry, the page and the sheets (state in ~/.config/axbx/hooks on the Mac).
-7. Send Jonathan the report (runbook section 5, with the audit section) and the sheets, ending with: Reply "ship" to
+7. Send the owner the report (runbook section 5, with the audit section) and the sheets, ending with: Reply "ship" to
    publish, or name what to change. Rewrite State: "S8 presented by Codex; waiting for ship."
 
 Recording the approval (Codex has no prompt hook):
-- Only Jonathan's own reply approves. When his latest message to you is the plain word "ship" (optionally "ship sNN"),
+- Only the owner's own reply approves. When his latest message to you is the plain word "ship" (optionally "ship sNN"),
   relay that message verbatim through the same recorder Claude's hook uses:
   ```
   python3 -c 'import json,sys; print(json.dumps({"prompt": sys.argv[1], "session_id": "codex"}))' "<his reply, verbatim>" \
@@ -164,7 +164,7 @@ Recording the approval (Codex has no prompt hook):
   several are pending) and prints "[approval hook] Approval recorded for sNN". Anything else ("ship it", "looks good",
   "ship after X", a question) records nothing: apply the changes he names, re-run S3 and S6 (S7 if accuracy changed),
   present again, and wait.
-- Never feed the recorder a message Jonathan did not send, never relay an older message, never relay for a batch you
+- Never feed the recorder a message the owner did not send, never relay an older message, never relay for a batch you
   did not present on this machine, and never create or edit files under ~/.config/axbx/hooks/approvals by hand.
 
 S9:
@@ -174,23 +174,23 @@ S9:
 2. ship.sh commits on the batch branch. With no token file it prints "push skipped: no token": then push with your
    own credentials, `git push origin HEAD:main`, and push wip/sNN.
 3. Confirm the deploy: `curl -s "https://step2haki.vercel.app/version.json?t=$(date +%s)"` shows sNN (allow a few
-   minutes); if the network refuses, ask Jonathan to check.
+   minutes); if the network refuses, ask the owner to check.
 4. Private repo: commit the batch's local-only changes on wip/sNN, merge it into main, push both.
 5. The log commit: OPEN_WORK.md line, the batch file's S9 section, ledger_codex.csv rows, WAVE.json closed, the
    handoff State ("No batch open", the ship commit and page sha) and the next launch prompt (runbook section 9).
 6. Mac copies, as the handoff lists them: STEP2HAKI_HANDOFF.md, index.html and axbx-repo.bundle into
    ~/Documents/Step2Haki/ (`git bundle create ... --all`). No scratch files, tarballs or work folders in Documents.
-7. The claude.ai project's handoff copy is out of Codex's reach: list it as owed in the State (Claude or Jonathan
+7. The claude.ai project's handoff copy is out of Codex's reach: list it as owed in the State (Claude or the owner
    uploads it).
 8. Clean trees in both repos, then the closing message with the next launch prompt in its own code block.
 
 ## 6. Other Claude-only pieces
 
 - Site-layer pilots (runbook section 8 step 1) are private claude.ai artifacts: write the pilot as an HTML file under
-  repair/pilots/<name>/ and tell Jonathan where it is (he opens it locally or from the branch).
+  repair/pilots/<name>/ and tell the owner where it is (he opens it locally or from the branch).
 - Mac copies: Codex runs on the Mac and makes them at S9 (section 5). The claude.ai project's handoff copy stays owed
-  to Claude or Jonathan.
-- Questions to Jonathan follow runbook section 6: one question, multiple choice, with a recommendation.
+  to Claude or the owner.
+- Questions to the owner follow runbook section 6: one question, multiple choice, with a recommendation.
 
 ## 7. Authoring: what has gone wrong before (read before S1 and S2)
 
@@ -231,7 +231,7 @@ These are the failure modes the mechanical checks caught in s146 to s149. Expect
 17. **Web.** The fetch allowlist is not worked around (no curl, mirrors or caches). Search results can carry links
     labeled "honeypot link": never follow them.
 18. **Scope.** New rows only when a board source keys them; anything that would change what a student learns or how
-    the site looks beyond the digest and STANDING_DIRECTIONS is a question for Jonathan (runbook section 6).
+    the site looks beyond the digest and STANDING_DIRECTIONS is a question for the owner (runbook section 6).
 
 Added 2026-10-22 from the s149 review rounds (2 HIGH, 43 MED across six briefs; each was a build error the
 mechanical checks passed):
@@ -283,10 +283,10 @@ passed):
     for glued buttons, broken Pairs with cards, squeezed columns and study-mode leaks (the s150 defects were visible
     on the sheets).
 
-## 7a. Open options (Jonathan has not decided)
+## 7a. Open options (the owner has not decided)
 
 Found in the s150 consistency comparison (repair/s150/audit/RULES_PROPOSED.md items 35 to 38). Both ways are allowed
-today. Until Jonathan decides, build new and rebuilt briefs the way the s149 Claude builds do, and do not reopen a
+today. Until the owner decides, build new and rebuilt briefs the way the s149 Claude builds do, and do not reopen a
 shipped brief for these alone:
 - Time course: plotted horizontal duration bars when the sources give durations (his standing preference for
   horizontal duration timelines), text rows only when they do not. s150 used text rows throughout.
@@ -299,11 +299,11 @@ shipped brief for these alone:
 ## 8. Handing back to Claude
 
 At every step end the State is current, the batch file holds every call, and both repos are pushed. Claude resumes
-with the restart line when Jonathan asks for it; since 2026-10-23 Codex ships its own batches (section 5).
+with the restart line when the owner asks for it; since 2026-10-23 Codex ships its own batches (section 5).
 
 ## 9. Authoring a new brief (added 2026-10-23; new psych questions)
 
-A new brief exists only when Jonathan names it (title, entry type, placement) in a launch prompt. Codex proposes; it
+A new brief exists only when the owner names it (title, entry type, placement) in a launch prompt. Codex proposes; it
 never creates a brief he did not name, and never merges or retires one (runbook section 6).
 
 1. **Intake.** New board questions go through the board-brief skill (private claude/skills/board-brief/SKILL.md; run
@@ -312,7 +312,7 @@ never creates a brief he did not name, and never merges or retires one (runbook 
    entry type (disease, drug or hub), system, lens and psych family group. Keep every UWorld QID the AnKing cards
    point to. Report the proposals: a general title covering as wide a topic as is reasonable (STANDING_DIRECTIONS,
    brief titles), and the live briefs that would point to it. Amendments to live briefs wait for their next batch.
-2. **Launch** (section 2 item 4) with the briefs Jonathan names. Budget the S8 audit task and its follow-up round.
+2. **Launch** (section 2 item 4) with the briefs the owner names. Budget the S8 audit task and its follow-up round.
 3. **The worked example is s148e** (three new psych briefs): repair/s148e/S148E.md, and the private folders
    repair/migration/psych/TCA/spine (drug), TOXHUB/spine (hub) and PDB/spine (disease). Goldens by entry type: disease
    mdd; drug lithium-effects or antipsych-effects; hub voices. Copy the current code pattern (reasons, bold bottom

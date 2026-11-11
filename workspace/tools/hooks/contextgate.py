@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""H6, context alarm (PostToolUse, every tool; Jonathan 2026-10-26 after s154f chat 3 ran to about 240k unnoticed;
-rebased 2026-10-27, Jonathan: "yes lets make those changes", after the lead reported that a fresh chat already measured
+"""H6, context alarm (PostToolUse, every tool; 2026-10-26 after s154f chat 3 ran to about 240k unnoticed;
+rebased 2026-10-27, the owner, after the lead reported that a fresh chat already measured
 129k before any batch work, so the fixed 200k/225k marks left about 70k of working room and would force a restart
 in the middle of a review round).
 Reads the lead's own transcript after each tool call and measures its current context (input + cache write + cache

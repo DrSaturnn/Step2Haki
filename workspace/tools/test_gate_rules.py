@@ -3,11 +3,19 @@
 
 The page gate (tools/gate.py, run by tools/ship.sh on every ship) must fail a placeholder, a hedged
 failure trigger and a sourceless mnemonic in a topic brief, a Part II (bs) brief and an Aquifer (aq)
-brief alike, whatever skill wrote it. The live page must pass as is (pre-existing findings are baselined
-in tools/gate_allowlist.txt).
+brief alike, whatever skill wrote it.
 
-  python3 tools/test_gate_rules.py        exit 1 if any case misbehaves
+  python3 tools/test_gate_rules.py                     exit 1 if any case misbehaves
+  AXBX_PAGE=PAGE python3 tools/test_gate_rules.py      the same cases on another page (the full page: about a minute a case)
+
+The cases run on the fixture page tools/fixtures/gate_page/ (tools/fixtures/make_gate_page.py cuts it from the live
+page: the briefs the cases read, with the page chrome), so a gate run takes about a second. Counts are compared with
+the page under test: the UI and prose baselines the gate reads here are measured from that page, so a planted hit
+always rises above its baseline, whatever the shipped baselines hold. The cases that edit a rule document run on a
+scratch copy of the private docs/, and the missing-baseline case points the gate at a path that does not exist, so
+no file of the working tree or the private clone changes while the test runs.
 """
+import json
 import os
 import re
 import shutil
@@ -19,9 +27,33 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from pagelib import items, briefs, read_page  # noqa: E402
 
-# ship.sh sets AXBX_PAGE to the page it is about to ship (its coverage rows and allowlist match that page, not the old one)
-PAGE_PATH = os.environ.get('AXBX_PAGE') or os.path.join(os.path.dirname(HERE), 'index.html')
+FIXTURE = os.path.join(HERE, 'fixtures', 'gate_page')
+PAGE_PATH = os.environ.get('AXBX_PAGE') or os.path.join(FIXTURE, 'index.html')
 PAGE = read_page(PAGE_PATH)
+sys.path.insert(0, os.path.join(HERE, 'spine'))
+import docs_path  # noqa: E402
+import prose_lint  # noqa: E402
+import ui_lint  # noqa: E402
+
+# the environment of every gate run: baselines measured from the page under test, the page's coverage rows, and a
+# scratch copy of the private docs (docs/batches/ and the folders beside docs/ are linked, for the path checks)
+_T = tempfile.mkdtemp()
+_ui = json.load(open(os.path.join(HERE, 'spine', 'ui_baseline.json'), encoding='utf-8'))
+_ui.update({k: v for k, v in ui_lint.measure(PAGE).items() if not k.startswith('_')})
+json.dump(_ui, open(os.path.join(_T, 'ui_baseline.json'), 'w', encoding='utf-8'))
+json.dump(prose_lint.page_counts(PAGE), open(os.path.join(_T, 'prose_baseline.json'), 'w', encoding='utf-8'))
+DOCS = os.path.join(_T, 'private', 'docs')
+shutil.copytree(docs_path.docs_dir(), DOCS, ignore=shutil.ignore_patterns('batches'))
+if os.path.isdir(docs_path.batch_dir('')):
+    os.symlink(docs_path.batch_dir('').rstrip(os.sep), os.path.join(DOCS, 'batches'))
+for _n in os.listdir(docs_path.private_root()):
+    if _n not in ('docs', '.git'):
+        os.symlink(os.path.join(docs_path.private_root(), _n), os.path.join(_T, 'private', _n))
+ENV = dict(os.environ, AXBX_UI_BASELINE=os.path.join(_T, 'ui_baseline.json'),
+           AXBX_PROSE_BASELINE=os.path.join(_T, 'prose_baseline.json'), S2H_PRIVATE=os.path.join(_T, 'private'))
+_cov = os.path.join(os.path.dirname(os.path.abspath(PAGE_PATH)), 'repair', 'nbme', 'coverage.csv')
+if os.path.exists(_cov):
+    ENV['AXBX_NBME_COVERAGE'] = _cov
 # s164c: a wrapped page's prebuilt search index (search.json beside it) is gate-checked; content-rule cases below run on
 # mutated copies with no index of their own, so they skip that check (AXBX_GATE_SKIP_INDEX=1)
 INDEX = os.path.join(os.path.dirname(os.path.abspath(PAGE_PATH)), 'search.json')
@@ -35,7 +67,7 @@ def gate(html, index=None):
     open(p, 'w', encoding='utf-8').write(html)
     if index:
         shutil.copyfile(index, os.path.join(d, 'search.json'))
-    env = dict(os.environ, AXBX_GATE_SKIP_INDEX='1' if index is None else '0')
+    env = dict(ENV, AXBX_GATE_SKIP_INDEX='1' if index is None else '0')
     r = subprocess.run([sys.executable, os.path.join(HERE, 'gate.py'), p, '--base', 'none'], capture_output=True, text=True, env=env)
     return r.returncode, r.stdout
 
@@ -43,7 +75,7 @@ def gate(html, index=None):
 bad = 0
 rc, out = gate(PAGE, INDEX if (WRAPPED and os.path.exists(INDEX)) else None)
 ok = rc == 0
-print(('ok  ' if ok else 'BAD ') + ('page to ship' if os.environ.get('AXBX_PAGE') else 'live page') + ' passes the gate (pre-existing findings baselined)' + ('' if ok else '\n' + out[:600]))
+print(('ok  ' if ok else 'BAD ') + ('the page under test' if os.environ.get('AXBX_PAGE') else 'the fixture page') + ' passes the gate (pre-existing findings baselined)' + ('' if ok else '\n' + out[:600]))
 bad += not ok
 if WRAPPED:
     rc, out = gate(PAGE, '')
@@ -68,7 +100,7 @@ cut = PAGE[:it0.start] + PAGE[it0.end:]
 d = tempfile.mkdtemp(); ref = os.path.join(d, 'ref.html'); open(ref, 'w', encoding='utf-8').write(PAGE)
 cur = os.path.join(d, 'index.html'); open(cur, 'w', encoding='utf-8').write(cut)
 def gate_base(env):
-    r = subprocess.run([sys.executable, os.path.join(HERE, 'gate.py'), cur, '--base', ref], capture_output=True, text=True, env=dict(os.environ, **env))
+    r = subprocess.run([sys.executable, os.path.join(HERE, 'gate.py'), cur, '--base', ref], capture_output=True, text=True, env=dict(ENV, **env))
     return r.stdout
 arch = os.path.join(os.path.dirname(HERE), 'repair', 'archive', '_selftest.html')
 os.makedirs(os.path.dirname(arch), exist_ok=True); open(arch, 'w', encoding='utf-8').write(PAGE[it0.start:it0.end])
@@ -191,23 +223,23 @@ print(('ok  ' if hit else 'BAD ') + 'a brief whose prose count rose above its ba
 _d = tempfile.mkdtemp(); _bp = os.path.join(_d, 'base.html'); open(_bp, 'w', encoding='utf-8').write(PAGE)
 _mp = os.path.join(_d, 'index.html'); open(_mp, 'w', encoding='utf-8').write(PAGE[:_sb.inner_end] + '<p>Onset within days.</p>' + PAGE[_sb.inner_end:])
 _r = subprocess.run([sys.executable, os.path.join(HERE, 'gate.py'), _mp, '--base', _bp], capture_output=True, text=True,
-                    env=dict(os.environ, AXBX_GATE_SKIP_INDEX='1'))
+                    env=dict(ENV, AXBX_GATE_SKIP_INDEX='1'))
 hit = '[prose-touched] %s' % _sb.id in _r.stdout
 print(('ok  ' if hit else 'BAD ') + 'a changed brief that still has prose hits: expects gate FAIL prose-touched'); bad += not hit
 _seg2 = PAGE[_sb.start:_sb.end]; _j = _seg2.find('<p', _seg2.find('<h5'))
 open(_mp, 'w', encoding='utf-8').write(PAGE[:_sb.start] + _seg2[:_j] + '<p data-zz="1"' + _seg2[_j + 2:] + PAGE[_sb.end:])
 _r = subprocess.run([sys.executable, os.path.join(HERE, 'gate.py'), _mp, '--base', _bp], capture_output=True, text=True,
-                    env=dict(os.environ, AXBX_GATE_SKIP_INDEX='1'))
+                    env=dict(ENV, AXBX_GATE_SKIP_INDEX='1'))
 hit = '[prose-touched]' not in _r.stdout
 print(('ok  ' if hit else 'BAD ') + 'an attribute-only change to a brief with prose hits: expects no prose-touched'); bad += not hit
-_pb = os.path.join(HERE, 'spine', 'prose_baseline.json'); os.rename(_pb, _pb + '.away')
+_pb = ENV['AXBX_PROSE_BASELINE']; ENV['AXBX_PROSE_BASELINE'] = os.path.join(_T, 'no_such_baseline.json')
 try:
     o = gate(PAGE)[1]
 finally:
-    os.rename(_pb + '.away', _pb)
+    ENV['AXBX_PROSE_BASELINE'] = _pb
 hit = '[prose-lint] tools/spine/prose_baseline.json is missing' in o
 print(('ok  ' if hit else 'BAD ') + 'a missing prose baseline: expects gate FAIL prose-lint'); bad += not hit
-import docs_path; _st = docs_path.doc('STANDING_DIRECTIONS.md'); _keep = open(_st, encoding='utf-8').read()
+_st = os.path.join(DOCS, 'STANDING_DIRECTIONS.md'); _keep = open(_st, encoding='utf-8').read()
 try:
     open(_st, 'w', encoding='utf-8').write(_keep + '\n- test line [D-19990101-1]\n')
     o = gate(PAGE)[1]
@@ -215,7 +247,7 @@ finally:
     open(_st, 'w', encoding='utf-8').write(_keep)
 hit = '[doc-lint] STANDING_DIRECTIONS cites D-19990101-1, which is not in the digest' in o
 print(('ok  ' if hit else 'BAD ') + 'STANDING citing a digest id that does not exist: expects gate FAIL doc-lint'); bad += not hit
-_rs = docs_path.doc('RESUME.md'); _keep = open(_rs, encoding='utf-8').read()   # RESUME against the handoff State
+_rs = os.path.join(DOCS, 'RESUME.md'); _keep = open(_rs, encoding='utf-8').read()   # RESUME against the handoff State
 try:
     open(_rs, 'w', encoding='utf-8').write(_keep.replace('**Batch state: ', '**Batch state: s000 OPEN 1999-01-01 was ', 1))
     o = gate(PAGE)[1]
@@ -223,7 +255,7 @@ finally:
     open(_rs, 'w', encoding='utf-8').write(_keep)
 hit = '[doc-lint] RESUME batch line reads "s000 OPEN 1999-01-01 was ' in o
 print(('ok  ' if hit else 'BAD ') + 'a RESUME batch line that disagrees with the handoff State: expects gate FAIL doc-lint'); bad += not hit
-_st = docs_path.doc('STANDING_DIRECTIONS.md'); _keep = open(_st, encoding='utf-8').read()   # a stale path in a rule document
+_st = os.path.join(DOCS, 'STANDING_DIRECTIONS.md'); _keep = open(_st, encoding='utf-8').read()   # a stale path in a rule document
 try:
     open(_st, 'w', encoding='utf-8').write(_keep + '\n- test line: see claude/DECISIONS_DIGEST.md\n')
     o = gate(PAGE)[1]
@@ -249,5 +281,6 @@ o = gate(_sys(_other))[1]
 hit = '[nav-sys] %s has data-sys="%s" but sits in section %s' % (_b.id, _other, _h3) in o
 print(('ok  ' if hit else 'BAD ') + 'data-sys naming another section: expects gate FAIL nav-sys'); bad += not hit
 total = 1 + WRAPPED + 9 + 2 + 3 + 3 + 4 + 2 + 3 + 6 + 2 + 2
+shutil.rmtree(_T, ignore_errors=True)
 print('%d/%d passed' % (total - bad, total))
 sys.exit(1 if bad else 0)

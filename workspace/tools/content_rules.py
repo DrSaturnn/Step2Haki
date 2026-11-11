@@ -26,7 +26,7 @@ TIMEBOUND = re.compile(r'\d|\b(?:hours?|days?|weeks?|months?|dose|doses|trial of
 MN_SOURCES = ('first aid', 'anking', 'amboss', 'uworld', 'nbme', 'boards and beyond', 'boards & beyond', 'sketchy',
               'pixorize', 'pathoma', 'onlinemeded', 'online meded', 'step-up', 'step up to', 'case files', 'medbullets',
               'bootcamp', 'lecturio', 'osmosis', 'source explanation')
-# The attribution must be checkable: a URL, or a card/page Jonathan pasted or keeps in the local sources.
+# The attribution must be checkable: a URL, or a card/page the owner pasted or keeps in the local sources.
 CHECKABLE = re.compile(r'https?://|\bpasted\b|\blocal:|repair/sources/|source explanation', re.I)
 MN_BAD = re.compile(r'\b(authored|invented|original|made up|claude|ai-generated|none|unknown|n/?a)\b', re.I)
 
@@ -118,7 +118,7 @@ def mnemonic_sources(bid, inner):
         elif not CHECKABLE.search(src):
             # R12 review: "First Aid Step 1" was named from memory and no reviewer could confirm it.
             out.append(('K3', key, '%s mnemonic "%s": data-mn-src="%s" names a resource but gives nothing a reviewer can open: add a URL '
-                        'to a page that teaches it, or "pasted:" / "local:" for a card or page Jonathan supplied' % (bid, label, src)))
+                        'to a page that teaches it, or "pasted:" / "local:" for a card or page the owner supplied' % (bid, label, src)))
     return out
 
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""patch: one command per step of a patch batch (Jonathan 2026-10-24: "we need to be even more token efficient with the
+"""patch: one command per step of a patch batch (2026-10-24: "we need to be even more token efficient with the
 whole process"; runbook section 8b). The lead runs these and reads only their one-line outputs; details go to files.
 
   python3 tools/spine/patch.py setup <batch>                  hooks (install, /root copy, tests), start-up context
@@ -20,7 +20,7 @@ whole process"; runbook section 8b). The lead runs these and reads only their on
 Folders hold the s150e layout: facts_spec_<batch>.json, delta_<batch>.json, baseline_<batch>.html,
 baseline_brief_text_<batch>.txt and a build.py that runs repair/migration/spine/<batch>_delta.py.
 
-Combined review (patches only, Jonathan 2026-10-24 "One reviewer per lane (patches)"): one reviewer judges the acc, read
+Combined review (patches only, 2026-10-24 "One reviewer per lane (patches)"): one reviewer judges the acc, read
 and flags parts of every changed line in its lane and writes one receipt.md with a section per brief and part. Lanes
 holding a changed number, dose or next step run as patch-review-opus; the rest as patch-review (Sonnet).
 """
@@ -338,8 +338,13 @@ def file_receipts(batch, rnd):
 
 
 # ---------------------------------------------------------------- sync
+PUBLIC_SYNC = 'chore: update the batch records'   # the public repo's side of a sync: budget, ledger and baseline files
+
+
 def sync(batch, msg, folders):
-    tail = '\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>'
+    """msg is the private repo's commit message; the public commit, when the sync leaves anything to commit there, takes
+    the conventional subject PUBLIC_SYNC with the batch in a trailer (tools/githooks/commit-msg)"""
+    tail = '\n\nCo-Authored-By: %s' % os.environ.get('AX_COAUTHOR', 'Claude Opus 5.5 <noreply@anthropic.com>')
     sess = os.environ.get('AX_SESSION')
     if sess:
         tail += '\nClaude-Session: ' + sess
@@ -351,7 +356,8 @@ def sync(batch, msg, folders):
         sh(['cp', '-a', f + '/.', dst + '/'], check=True)
     # s170 chat 4: the lane receipts (repair/efficiency/lanes/<batch>) and label caches fetched in the batch
     # (repair/sources/web) are gitignored in the public repo; chat 3 lost both with its container.
-    for extra in ('repair/migration/spine/%s_delta.py' % batch, 'local/%s' % batch,
+    # local/stamps: the check stamps (tools/stamps.py), so the next chat's restore starts with them
+    for extra in ('repair/migration/spine/%s_delta.py' % batch, 'local/%s' % batch, 'local/stamps',
                   'repair/migration/spine/packets', 'repair/migration/spine/reviews',
                   'repair/efficiency/lanes/%s' % batch, 'repair/sources/web'):
         s = os.path.join(WS, extra)
@@ -366,7 +372,8 @@ def sync(batch, msg, folders):
     for repo in (REPO, PRIV):
         sh(['git', 'add', '-A'], cwd=repo)
         if sh(['git', 'diff', '--cached', '--quiet'], cwd=repo).returncode:
-            sh(['git'] + GIT_ID + ['commit', '-q', '-m', msg + tail], cwd=repo, check=True)
+            m = msg if repo == PRIV else PUBLIC_SYNC + '\n\nBatch: %s' % batch
+            sh(['git'] + GIT_ID + ['commit', '-q', '-m', m + tail], cwd=repo, check=True)
         br = sh(['git', 'branch', '--show-current'], cwd=repo).stdout.strip()
         r = sh(['git', 'push', '-q', '-u', 'origin', 'HEAD:refs/heads/' + br], cwd=repo)
         head = sh(['git', 'rev-parse', '--short', 'HEAD'], cwd=repo).stdout.strip()

@@ -6,7 +6,7 @@ import json, os
 HERE = os.path.dirname(os.path.abspath(__file__))
 css = open(os.path.join(HERE, 'src', 'phase2.css'), encoding='utf-8').read()
 js = open(os.path.join(HERE, 'src', 'phase2.js'), encoding='utf-8').read()
-note = 's137 site layout Phase 2, display layer (claude/pending/S137.md; Jonathan 2026-10-14 "Display layer")'
+note = 's137 site layout Phase 2, display layer (claude/pending/S137.md; 2026-10-14 "Display layer")'
 edits = [
     {'op': 'replace_global', 'find': "var a = b.querySelector('.bb-rl a.cur');", 'with': "var a = b.querySelector('.bb-rl a.cur') || (window.axRailOf && window.axRailOf(b) ? window.axRailOf(b).querySelector('.bb-rl a.cur') : null);   /* s137: the rail may sit in the sidebar */", 'note': note + ': the toolbar finds the current section in a nested rail'},
     {'op': 'replace_global', 'find': '</head>', 'with': '<style id="ax-s137">\n' + css + '</style>\n</head>', 'note': note + ': the style block'},

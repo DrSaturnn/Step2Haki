@@ -555,7 +555,7 @@ def main():
         # the brief that carries that item (P1 sourced delirium rows to another brief's item)
         src_items = source_items(open(src_arg, encoding='utf-8').read())
         on_brief = {a.get('data-nbme') for a, _ in new_items.values() if a.get('data-nbme')}
-        # lean briefs (Jonathan 2026-10-01): an NBME question lives in its "How NBME framed it" block, not in the bank
+        # lean briefs (2026-10-01): an NBME question lives in its "How NBME framed it" block, not in the bank
         on_brief |= set(re.findall(r'<div class="pearls nbq"[^>]*data-nbme="([^"]+)"', new))
         # a clue row quotes one clue, not the whole stem: rows over 25 words do not count toward C2
         ctoks = [set(re.findall(r'[a-z0-9]+(?:[./][a-z0-9]+)*', norm(c.get('text', '')))) for c in claims

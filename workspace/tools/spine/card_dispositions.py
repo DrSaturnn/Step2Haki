@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""card_dispositions (s146b, Jonathan 2026-10-17): every AnKing card a brief's board terms reach gets a recorded
+"""card_dispositions (s146b, 2026-10-17): every AnKing card a brief's board terms reach gets a recorded
 disposition, so a skipped board fact is caught mechanically rather than left to the lead's judgment.
 
   python3 tools/spine/card_dispositions.py make <brief-id> <brief folder> [--cap 90]

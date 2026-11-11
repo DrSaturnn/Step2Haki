@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Conditional PASS (Jonathan 2026-10-12, DECISIONS_DIGEST; claude/pending/POST_SHIP_R3.md section 2).
+"""Conditional PASS (2026-10-12, DECISIONS_DIGEST; claude/pending/POST_SHIP_R3.md section 2).
 
 A reviewer with only LOW findings may write "Verdict: PASS-IF" and a Replacements block of exact text edits:
 
@@ -19,7 +19,7 @@ Rules (enforced here):
     order and condition words (first, then, before, after, only, if, unless, except, until and the like) and
     diagnosis, drug and test names (repair/efficiency/ALIASES.json and ABBREV.json). Otherwise that part needs the
     normal follow-up review.
-  - s148 fix 8 (Jonathan 2026-10-18): a replacement from another part whose only meaning change is ADDED hedge words
+  - s148 fix 8 (2026-10-18): a replacement from another part whose only meaning change is ADDED hedge words
     still counts as wording-only when every added hedge word appears in a quote that the claim map cites for the line
     the replacement lands in (claim_map.json source_says, facts.json quote). Removing a hedge, or changing a number,
     a negation, an order or condition word or a name, still needs the normal follow-up review.

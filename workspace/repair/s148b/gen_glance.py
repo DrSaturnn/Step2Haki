@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""s148b (site layer, Jonathan 2026-10-18): writes repair/s148b/40_glance_body.json from the live page.
+"""s148b (site layer, 2026-10-18): writes repair/s148b/40_glance_body.json from the live page.
 The brief body in the Lithium Glance mockup's type and tiles (claude/pending/SITE_BODY_GLANCE.md, Decided A to D, work
 plan items 1 and 4): src/glance_body.css as <style id="ax-s148b"> and src/onset.js as <script id="ax-s148b-on">, both
 appended at the end of the body so they follow every earlier layer. No brief text or markup changes."""

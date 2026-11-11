@@ -11,7 +11,7 @@ fails the run, so a new narration comment is not passed over.
 import glob, os, re, sys
 
 WS = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-NARR = re.compile(r'Jonathan|\bs1\d\d[a-z]?\b|DIGEST|STANDING|handoff|Decided|D-20\d{6}|20\d\d-\d\d-\d\d|\br\d\b')
+NARR = re.compile(r'the owner|\bs1\d\d[a-z]?\b|DIGEST|STANDING|handoff|Decided|D-20\d{6}|20\d\d-\d\d-\d\d|\br\d\b')
 COMMENT = re.compile(r'/\*.*?\*/|(?<![:\'"\\/])//[^\n]*', re.S)
 
 NEW = {

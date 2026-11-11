@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""What a continuation chat reads, and nothing more (Jonathan 2026-10-26, after s154f chat 3 ran past the restart point
+"""What a continuation chat reads, and nothing more (2026-10-26, after s154f chat 3 ran past the restart point
 reading whole docs). Run once after the clone, before anything else:
 
   python3 /home/claude/Step2Haki/workspace/tools/spine/resume.py [batch]
@@ -51,9 +51,7 @@ def main(argv):
         print('No open batch in the State: a launch runs python3 tools/spine/launch.py <type> for its read order.')
         print(RULES)
         return 0
-    bf = os.path.join(WS, 'repair', batch, batch.upper() + '.md')
-    if not os.path.exists(bf) and os.path.exists(os.path.join(WS, 'repair', batch, 'PLAN.md')):
-        bf = os.path.join(WS, 'repair', batch, 'PLAN.md')   # a batch launched from a plan file (launch.py --plan)
+    bf = docs_path.batch_file(batch) or os.path.join(docs_path.batch_dir(batch), batch.upper() + '.md')
     if os.path.exists(bf):
         lines = open(bf, encoding='utf-8').read().split('\n')
         heads = [(i + 1, l) for i, l in enumerate(lines) if l.startswith('## ')]

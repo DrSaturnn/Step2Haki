@@ -10,7 +10,7 @@ Rules: a quote is a single fragment (no "...", no editorial brackets); it must a
 blocks scripts) cannot be checked here: it is listed for the auditor, never counted as verified. An AnKing card
 (local: repair/sources/anki/anki_cards.txt) or a local question explanation (repair/sources/sNN_questions.md) is
 accepted on kind=board rows: evidence of what Step 2 rewards, used where the literature or practice differs from the
-exam or no fetched source covers the exam answer (Jonathan 2026-10-10: follow NBME, then UWorld, then AnKing on such
+exam or no fetched source covers the exam answer (2026-10-10: follow NBME, then UWorld, then AnKing on such
 disagreements); and on kind=mnemonic rows. Its words never go on the page (shingle_check).
 Exit 1 on any failure.
 """

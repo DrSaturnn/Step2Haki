@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""stamps.py: input-hash stamps for the ship checks (s171b; D-20261109-4, Jonathan 2026-11-09: "no reason to run things
+"""stamps.py: input-hash stamps for the ship checks (s171b; D-20261109-4, 2026-11-09: "no reason to run things
 unnecessarily unless there was a rationale").
 
 A check that passed writes a stamp: one sha256 per group of the files it reads, and the combined key. The next run of

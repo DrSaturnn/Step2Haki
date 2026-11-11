@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""G-APPROVE, made mechanical (Jonathan 2026-10-12): ship.sh refuses a batch unless an approval record exists, and the
-record is written only after Jonathan says "ship" in reply to the presented report (screenshots optional since
-2026-10-24: Jonathan checks the live site; the record binds the batch files, the changelog entry and the built page).
+"""G-APPROVE, made mechanical (2026-10-12): ship.sh refuses a batch unless an approval record exists, and the
+record is written only after the owner says "ship" in reply to the presented report (screenshots optional since
+2026-10-24: The owner checks the live site; the record binds the batch files, the changelog entry and the built page).
 
   approval.py present sNN [SHOT ...]         lead: after the report is ready, register the batch (pending); screenshots
                                             are optional (a layout batch may still bind them)
-  approval.py hook                          UserPromptSubmit hook: Jonathan's message; "ship" approves the pending batch
+  approval.py hook                          UserPromptSubmit hook: The owner's message approves the pending batch
   approval.py check sNN PAGE                ship.sh: PAGE is the batch built by repair/build.py; exit 0 only if approved
   approval.py status                        print pending and approved batches
 
@@ -87,7 +87,7 @@ def present(b, shots):
     entry = log_entry(b)
     if not entry:
         sys.exit('approval present: add the changelog entry for %s first (repair/changelog/axlog.py); it is part of '
-                 'what Jonathan approves' % b)
+                 'what the owner approves' % b)
     bs, files = batch_sha(b)
     page = build(b)
     m = {'batch': b, 'presented_at': time.strftime('%Y-%m-%dT%H:%M:%S'), 'presented_epoch': time.time(),
@@ -98,16 +98,16 @@ def present(b, shots):
     if os.path.exists(old):
         os.remove(old)              # a new presentation voids any earlier approval of this batch
     print('approval: %s presented (%d files, %d screenshot(s), page %s). Send the report; ship.sh will run only '
-          'after Jonathan replies "ship".' % (b, len(files), len(shots), m['page_sha'][:12]))
+          'after the owner replies "ship".' % (b, len(files), len(shots), m['page_sha'][:12]))
     return 0
 
 
 SHIP = re.compile(r'(?<![\w-])ship(?![\w-])', re.I)
-# Jonathan approves with the plain word "ship" (2026-10-12), optionally naming the batch: "ship", "Ship.", "ship s132".
+# The owner approves with the plain word "ship" (2026-10-12), optionally naming the batch: "ship", "Ship.", "ship s132".
 # Anything longer (a sentence that mentions ship, a condition, a question) is not an approval.
 PLAIN = re.compile(r'\s*ship(?:\s+(s\d+[a-z]?))?\s*[.!]?\s*', re.I)
 # The harness puts its own notes (for example the user's local time) at the start of the prompt text, in
-# <system-reminder> blocks (seen 2026-10-12 on Jonathan's "ship" for s132). Only leading blocks are dropped before the
+# <system-reminder> blocks (seen 2026-10-12 on the owner's "ship" for s132). Only leading blocks are dropped before the
 # plain-word test; what remains must still be exactly the plain word.
 HARNESS = re.compile(r'\A(?:\s*<system-reminder>.*?</system-reminder>)+', re.S)
 
@@ -132,7 +132,7 @@ def hook():
         pend = [(p, m) for p, m in pend if m['batch'].lower() == plain.group(1).lower()]
     if len(pend) != 1:
         print('[approval hook] "ship" seen, but %d batches are pending and the message does not name one; no approval '
-              'recorded. Ask Jonathan which batch.' % len(pend))
+              'recorded. Ask the owner which batch.' % len(pend))
         return 0
     p, m = pend[0]
     rec = dict(m, status='approved', approved_at=time.strftime('%Y-%m-%dT%H:%M:%S'), approved_epoch=time.time(),
@@ -141,7 +141,7 @@ def hook():
     m['status'] = 'approved'
     json.dump(m, open(p, 'w', encoding='utf-8'), indent=1)
     C.log_event('approved', batch=m['batch'], quote=prompt[:300])
-    print('[approval hook] Approval recorded for %s from Jonathan\'s message (page %s).' % (m['batch'], m['page_sha'][:12]))
+    print('[approval hook] Approval recorded for %s from the owner\'s message (page %s).' % (m['batch'], m['page_sha'][:12]))
     return 0
 
 
@@ -149,7 +149,7 @@ def check(b, page):
     p = os.path.join(C.STATE, 'approvals', '%s.json' % b)
     if not os.path.exists(p):
         print('approval: no approval record for %s. Present it (approval.py present %s), send the report, and '
-              'wait for Jonathan to reply "ship".' % (b, b))
+              'wait for the owner to reply "ship".' % (b, b))
         return 1
     a = json.load(open(p, encoding='utf-8'))
     bs, _ = batch_sha(b)

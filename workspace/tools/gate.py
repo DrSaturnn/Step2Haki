@@ -70,7 +70,7 @@ CATALOG = {
     'no-letters-pct': ('no option letters or vendor selection percentages in .vignette Q lines or .trapline',
                        'drop "(A)", "choice C", "22% chose"; keep labeled clinical probabilities only'),
     'anchor': ('every static href="#x" and .scaleref data-scale resolves to an id', 'point it at an existing id'),
-    'no-emdash': ('no em dash (U+2014, &mdash;, &#8212;) in visible page text or visible attributes (Jonathan: no em dashes; s103 converted them to spaced en dashes, which columnize() also splits on)',
+    'no-emdash': ('no em dash (U+2014, &mdash;, &#8212;) in visible page text or visible attributes (no em dashes; s103 converted them to spaced en dashes, which columnize also splits on)',
                   'use a spaced en dash (&ndash;) or a colon'),
     'mode-css': ('no CSS selector styles page content through body.flat or body.study (s92: it restyled every brief at once and froze the switches)', 'write the rule as body .axm-flat X, body X.axm-flat (or axm-study); rules on body itself may stay body.flat'),
     'pairs-with': ('each <b> in a "Pairs with" block matches a brief <h4> (quoted/question discriminators exempt)',
@@ -364,7 +364,7 @@ def check_page(page, g, page_path):
                 g.fail('nav-link', bid, '%s is in Presentations but is not a hub (data-entry="hub") or data-sys="presentations"' % bid)
             elif cls != ['']:
                 g.fail('nav-link', bid, '%s needs exactly one plain link in Presentations, has %r' % (bid, cls))
-        # s161c (Jonathan 2026-11-03, "remove all duplicated briefs"): every brief has exactly one link in the sidebar,
+        # s161c (2026-11-03): every brief has exactly one link in the sidebar,
         # a hub in Presentations (plain), any other brief in its system (classed by kind); was s146c (a hub in both)
         for b in bl:
             want = ''   # s167c N13: the board-style and Aquifer link classes are retired
@@ -426,7 +426,7 @@ def check_page(page, g, page_path):
                 g.fail('item-options', iid, '%s (%s): key/d1/d2 empty or not distinct: %r / %r / %r' % (iid, i.brief_id, k, d1, d2))
         if 'data-lead-in' in a and not norm(a['data-lead-in']):
             g.fail('item-leadin', iid, '%s has an empty data-lead-in' % iid)
-        # s148g per-choice reasons (Jonathan 2026-10-20): all three or none, each one non-empty line
+        # s148g per-choice reasons (2026-10-20): all three or none, each one non-empty line
         why = [a.get(k) for k in ('data-key-why', 'data-d1-why', 'data-d2-why')]
         if any(w is not None for w in why):
             if not all(w is not None and norm(w) for w in why):
@@ -546,7 +546,7 @@ def check_page(page, g, page_path):
     # ---- nbme coverage
     cov = os.path.join(os.path.dirname(os.path.abspath(page_path)), 'repair', 'nbme', 'coverage.csv')
     if not os.path.exists(cov):
-        cov = os.path.join(REPO, 'repair', 'nbme', 'coverage.csv')
+        cov = os.environ.get('AXBX_NBME_COVERAGE') or os.path.join(REPO, 'repair', 'nbme', 'coverage.csv')
     page_n = set()
     for v in re.findall(r'data-nbme="([^"]*)"', body):
         page_n.update(v.split())
@@ -627,7 +627,7 @@ def check_base(page, ref_html, bl, it, g):
         if b.id and b.id not in cur_b and b.id not in replaced:
             g.fail('never-delete', b.id, 'brief %s existed at base and is missing now' % b.id)
     cur = {i.id: i for i in it}
-    # retired items (Jonathan 2026-09-30: psych briefs cut to the tested core): an item leaves the page only through the
+    # retired items (2026-09-30: psych briefs cut to the tested core): an item leaves the page only through the
     # tracked ledger tools/retired_items.csv, with its full <li> HTML kept in the archive file the row names
     led = os.environ.get('AXBX_RETIRED') or os.path.join(os.path.dirname(os.path.abspath(__file__)), 'retired_items.csv')
     retired = {}
@@ -702,7 +702,9 @@ def check_lints(page, page_path, ref_html, g, attr_only=False):
     if spine not in sys.path:
         sys.path.insert(0, spine)
     import ui_lint, doc_lint, prose_lint  # noqa: E401
-    base_path = os.path.join(spine, 'ui_baseline.json')
+    # AXBX_UI_BASELINE, AXBX_PROSE_BASELINE, AXBX_NBME_COVERAGE: tools/test_gate_rules.py only (the counts and the
+    # coverage rows of the page its cases run on)
+    base_path = os.environ.get('AXBX_UI_BASELINE') or os.path.join(spine, 'ui_baseline.json')
     if not os.path.exists(base_path):
         g.fail('ui-lint', 'baseline', 'tools/spine/ui_baseline.json is missing; restore it from git')
     base = json.load(open(base_path, encoding='utf-8')) if os.path.exists(base_path) else {}
@@ -742,7 +744,7 @@ def check_lints(page, page_path, ref_html, g, attr_only=False):
             g.fail('doc-lint', e[:80], e)
     else:
         g.fail('doc-lint', 'missing', 'DECISIONS_DIGEST.md or STANDING_DIRECTIONS.md is missing from the private docs/ (tools/docs_path.py)')
-    pbase_path = os.path.join(spine, 'prose_baseline.json')
+    pbase_path = os.environ.get('AXBX_PROSE_BASELINE') or os.path.join(spine, 'prose_baseline.json')
     if not os.path.exists(pbase_path):
         g.fail('prose-lint', 'baseline', 'tools/spine/prose_baseline.json is missing; restore it from git')
     pbase = json.load(open(pbase_path, encoding='utf-8')) if os.path.exists(pbase_path) else None

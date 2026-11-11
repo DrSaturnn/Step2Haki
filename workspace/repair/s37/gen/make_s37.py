@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""make_s37.py: writes repair/s37/*.json. Psych goes live for Jonathan's review (2026-09-30, his approval):
+"""make_s37.py: writes repair/s37/*.json. Psych goes live for the owner's review (2026-09-30, his approval):
 s36 page setup (psych shelf, section, Type C CSS, hide-empty-section fix), 9 psych briefs, Kawasaki migration.
 Replayable: python3 repair/s37/gen/make_s37.py <psych drafts dir>  (brief sources: <dir>/<P1..N6>/brief.html)."""
 import json, os, re, shutil, subprocess, sys

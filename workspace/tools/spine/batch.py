@@ -7,9 +7,14 @@ section 2 S8 and S9). The lead reads the one-line outputs and the facts file; lo
       preflight, vendor scan, squeeze_check and pointer_check on the batch page; word counts; spend by role and lead
       total; then approval.py present (only when every brief is READY and every check passes). Writes
       local/<batch>/s8_facts.md, the facts the section 5 report needs.
-  python3 tools/spine/batch.py ship <batch> "<message>"
-      after Jonathan's "ship": ship.sh with AX_SESSION, then pushes HEAD to main by hand when ship.sh had no token
-      (fast-forward only). Prints the commit and page sha.
+      Before presenting it runs the checks step below; a failure stops before the report.
+  python3 tools/spine/batch.py checks <batch> [--tools]
+      ship.sh --checks-only (every ship check, nothing written; passes are stamped, so the ship repeats none of them);
+      AX_SESSION is checked first. --tools for a batch that leaves the page as it is. Log local/<batch>/s8_checks.log.
+  python3 tools/spine/batch.py ship <batch> "<message>" [--tools]
+      after the "ship" reply: closes WAVE.json and records the lead row (so they ride in the ship commit), then ship.sh
+      with AX_SESSION, then pushes HEAD to main by hand when ship.sh had no token (fast-forward only). <message> is the
+      public commit subject, "type(scope): summary". Prints the commit and page sha.
   python3 tools/spine/batch.py post <batch> "<commit message>" <brief id> [...]
       after the lead has written OPEN_WORK, the batch file's S9 section, the DIGEST line and the handoff State: closes
       WAVE.json, records the lead row, syncs the folders, local/<batch>, packets and reviews into the private clone
@@ -89,6 +94,39 @@ def words(page, ids):
     return out
 
 
+SESSION = re.compile(r'^https://claude\.ai/code/session_[A-Za-z0-9]+$')
+
+
+def checks(argv):
+    """ship.sh --checks-only for the batch; 0 when every check passed"""
+    a = [x for x in argv if not x.startswith('--')]
+    batch = a[0]
+    if not (SESSION.match(os.environ.get('AX_SESSION', '')) or os.environ.get('AX_LEAD') == 'codex'):
+        print('checks %s: set AX_SESSION=https://claude.ai/code/session_<id> first (ship.sh stops at its trailer step without it)' % batch)
+        return 1
+    log = os.path.join(WS, 'local', batch, 's8_checks.log')
+    os.makedirs(os.path.dirname(log), exist_ok=True)
+    cmd = [os.environ.get('AX_SHIP_SH') or os.path.join(WS, 'tools', 'ship.sh'), batch, 'chore: run the ship checks', '--checks-only']
+    r = subprocess.run(cmd + (['--tools'] if '--tools' in argv else []), capture_output=True, text=True, cwd=WS)
+    open(log, 'w', encoding='utf-8').write(r.stdout + r.stderr)
+    lines = [l for l in (r.stdout + r.stderr).splitlines() if l.strip()]
+    verdict = next((l for l in reversed(lines) if l.startswith('ship ')), lines[-1] if lines else '')
+    extra = '\n'.join(lines[lines.index(verdict) + 1:][:6]) if r.returncode and verdict in lines else ''
+    times = next((l for l in reversed(lines) if l.startswith('times: ')), '')
+    print('checks %s: %s%s%s (log local/%s/s8_checks.log)' % (batch, verdict, '\n' + extra if extra else '', '; ' + times if times else '', batch))
+    return r.returncode
+
+
+def close_wave(batch):
+    p = os.path.join(WS, 'repair', 'efficiency', 'WAVE.json')
+    s = open(p, encoding='utf-8').read()
+    if json.loads(s).get('id') == batch and json.loads(s).get('open'):
+        open(p, 'w', encoding='utf-8').write(re.sub(r'"open":\s*true', '"open": false', s, count=1))
+        print('wave %s closed' % batch)
+    r = py('tools/hooks/usage_ledger.py', '--lead', '--record', batch)
+    print('lead: ' + last(r, 1, 'lead'))
+
+
 def s8(argv):
     present = '--no-present' not in argv
     a = [x for x in argv if not x.startswith('--')]
@@ -151,6 +189,10 @@ def s8(argv):
     facts.append('lead: %d chat row(s), %.1fM tokens (figure %s)' % (len(lead), lt / 1e6,
                  '%.0fM' % (w['max_lead_tokens'] / 1e6) if w.get('max_lead_tokens') else 'none in WAVE.json'))
     if present and ok:
+        rc = checks([batch])
+        facts.append('ship checks (ship.sh --checks-only): %s' % ('PASS' if rc == 0 else 'FAIL, see local/%s/s8_checks.log' % batch))
+        ok &= rc == 0
+    if present and ok:
         r = py('tools/hooks/approval.py', 'present', batch)
         facts.append('present: ' + last(r))
         ok &= r.returncode == 0
@@ -167,12 +209,15 @@ def s8(argv):
 
 
 def ship(argv):
-    batch, msg = argv[0], argv[1]
+    a = [x for x in argv if not x.startswith('--')]
+    batch, msg = a[0], a[1]
+    close_wave(batch)
     env = dict(os.environ)
     env.setdefault('AX_SESSION', os.environ.get('AX_SESSION', ''))
     log = os.path.join(WS, 'local', batch, 's9_ship.log')
     os.makedirs(os.path.dirname(log), exist_ok=True)
-    r = subprocess.run([os.path.join(WS, 'tools', 'ship.sh'), batch, msg], capture_output=True, text=True, cwd=WS, env=env)
+    r = subprocess.run([os.path.join(WS, 'tools', 'ship.sh'), batch, msg] + (['--tools'] if '--tools' in argv else []),
+                       capture_output=True, text=True, cwd=WS, env=env)
     open(log, 'w', encoding='utf-8').write(r.stdout + r.stderr)
     out = r.stdout + r.stderr
     if r.returncode:
@@ -195,14 +240,6 @@ def ship(argv):
 
 def post(argv):
     batch, msg, ids = argv[0], argv[1], argv[2:]
-    p = os.path.join(WS, 'repair', 'efficiency', 'WAVE.json')
-    s = open(p, encoding='utf-8').read()
-    if json.loads(s).get('id') == batch:
-        s2 = re.sub(r'"open":\s*true', '"open": false', s, count=1)
-        open(p, 'w', encoding='utf-8').write(s2)
-        print('wave %s closed' % batch)
-    r = py('tools/hooks/usage_ledger.py', '--lead', '--record', batch)
-    print('lead: ' + last(r, 1, 'lead'))
     import patch
     patch.sync(batch, msg, ids)
     for repo, name in ((REPO, 'public'), (PRIV, 'private')):
@@ -220,9 +257,9 @@ def post(argv):
 
 
 def main(argv):
-    if not argv or argv[0] not in ('s8', 'ship', 'post'):
+    if not argv or argv[0] not in ('s8', 'checks', 'ship', 'post'):
         sys.exit(__doc__.strip().splitlines()[3].strip())
-    return {'s8': s8, 'ship': ship, 'post': post}[argv[0]](argv[1:])
+    return {'s8': s8, 'checks': checks, 'ship': ship, 'post': post}[argv[0]](argv[1:])
 
 
 if __name__ == '__main__':

@@ -1,4 +1,4 @@
-/* s148f site layer (Jonathan 2026-10-19/20): question tiles one size with the mockup's chip row, a Review grouped by
+/* s148f site layer (2026-10-19/20): question tiles one size with the mockup's chip row, a Review grouped by
    result, hover cards that animate out as well as in, linked-brief previews with an open icon, and Pairs with as a list.
    Presentation only: no brief text or markup in the page source changes. */
 (function(){

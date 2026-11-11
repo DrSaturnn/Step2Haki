@@ -2379,7 +2379,7 @@ Checks:
   vendor: clean (59413 source shingles; page 0.015%)
 ```
 
-## 2026-10-06 s112: Legibility: hub axis labels opaque again; hub table frame removed (Jonathan picked option A)
+## 2026-10-06 s112: Legibility: hub axis labels opaque again; hub table frame removed (the owner picked option A)
 
 ```
 Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
@@ -3157,7 +3157,7 @@ Checks:
   vendor: clean (56601 source shingles; page 0.023%)
 ```
 
-## 2026-10-04 s87: one sans font everywhere: --serif token now resolves to the system sans stack (Jonathan disliked the serif)
+## 2026-10-04 s87: one sans font everywhere: --serif token now resolves to the system sans stack (the owner disliked the serif)
 
 ```
 Page: 190 briefs, 2138 items -> 190 briefs, 2138 items
@@ -3580,7 +3580,7 @@ Checks:
   vendor: clean (56601 source shingles; page 0.028%)
 ```
 
-## 2026-10-03 s66: s66: retitle 100 briefs to their broadest honest topic (Jonathan 2026-10-03: generalized titles); decision clauses moved to the subtitle line; Pairs with, wording-guide links and sidebar labels follow; merge heads retitled only where the head alone fits the new title; merges to follow cluster by cluster
+## 2026-10-03 s66: s66: retitle 100 briefs to their broadest honest topic (2026-10-03: generalized titles); decision clauses moved to the subtitle line; Pairs with, wording-guide links and sidebar labels follow; merge heads retitled only where the head alone fits the new title; merges to follow cluster by cluster
 
 ```
 Page: 216 briefs, 2121 items -> 216 briefs, 2121 items

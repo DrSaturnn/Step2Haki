@@ -4,7 +4,7 @@ State lives outside the repo in /home/claude/.config/axbx/hooks (subagents may n
   launches.jsonl   one line per allowed Agent launch (H1)
   agents/<id>.json role, lane and call count per subagent (T8, H4)
   present/<b>.json the screenshots manifest the lead registered for batch b (G-APPROVE)
-  approvals/<b>.json written only by the UserPromptSubmit hook when Jonathan says "ship" (G-APPROVE)
+  approvals/<b>.json written only by the UserPromptSubmit hook when the owner says "ship" (G-APPROVE)
   events.jsonl     every refusal, for the record
 """
 import glob
@@ -68,7 +68,7 @@ def sha(text):
 
 def header(prompt):
     """Role:, Plan step:, Lane: and optional Budget: lines from the top of a launch prompt (the first 6 non-blank
-    lines). Budget: may only lower the role's call budget (Jonathan 2026-10-12: a per-launch call limit, enforced)."""
+    lines). Budget: may only lower the role's call budget (2026-10-12: a per-launch call limit, enforced)."""
     out = {}
     lines = [l.strip() for l in (prompt or '').splitlines() if l.strip()][:6]
     for l in lines:
@@ -153,7 +153,7 @@ CHARS_PER_TOKEN = 3.8   # English prose and JSON, Claude tokenizer; used only fo
 def usage(path):
     """API calls and tokens of one agent transcript, de-duplicated by message id. Streamed chunks of one message share an
     id, and only the later chunks carry the final output count (the first records 1 to 8 tokens), so each field takes
-    its largest value per message (Jonathan 2026-10-12: fix the output undercount).
+    its largest value per message (2026-10-12: fix the output undercount).
 
     Sonnet transcripts keep only the starting output figure (s134 cost review), so output_est counts what the agent
     actually wrote (text, thinking and tool-call inputs, each block once) at CHARS_PER_TOKEN, and tokens uses the larger

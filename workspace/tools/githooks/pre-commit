@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
-"""Public-repo pre-commit guard (s155, 2026-10-28; after commit 41dcbdf force-added the gitignored review lanes, with
-AnKing card text and UWorld-derived quotes, to public wip/s155). Refuses a commit that stages, as added or changed:
+"""Public-repo pre-commit guard. The public repo holds the site, the build, the tools and the edit files; vendor text,
+review files and the internal record (plans, batch records, decisions and who made them) live in the private repo.
+Refuses a commit that stages, as added or changed:
   1. any path the repo's ignore rules exclude (catches `git add -f`);
   2. any path under a tools/local_only.txt pattern (vendor text; never tracked);
   3. any review or vendor file by name or folder: cards.md, facts.json, boards.md, board_index.txt,
-     cards_disposition.json, line_sources.txt, receipt.md, or a lanes/, packets/ or local-only/ folder.
+     cards_disposition.json, line_sources.txt, receipt.md, or a lanes/, packets/ or local-only/ folder;
+  4. a plan or batch record: PLAN.md or S<batch>.md (their home is docs/batches/<batch>/ in the private repo);
+  5. an added line that matches a pattern of the private guard file (docs/public_guard.txt: names and quoted
+     replies). The reference to a decision is its digest id. A clone with no private repo beside it has no guard
+     file and skips this check.
 Deleting such a path is always allowed (that is how a leak is untracked). Lanes, packets and receipts reach the
 private repo only through `patch.py sync` / `batch.py post`. Installed by tools/hooks/install.sh (core.hooksPath).
 No bypass flag: if a path is wrongly caught, fix the rule here in its own commit.
@@ -18,6 +23,34 @@ import sys
 NAMES = {'cards.md', 'facts.json', 'boards.md', 'board_index.txt', 'cards_disposition.json', 'line_sources.txt',
          'receipt.md'}
 FOLDERS = re.compile(r'(^|/)(lanes|packets|local-only)/')
+RECORD = re.compile(r'^(PLAN|S\d+[A-Za-z]?)\.md$')
+
+
+def guard_patterns():
+    p = os.environ.get('S2H_PUBLIC_GUARD')
+    if not p:
+        try:
+            sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+            import docs_path
+            p = docs_path.doc('public_guard.txt')
+        except Exception:  # noqa: BLE001
+            return []
+    if not os.path.exists(p):
+        return []
+    return [re.compile(l.split('#', 1)[0].strip()) for l in open(p, encoding='utf-8') if l.split('#', 1)[0].strip()]
+
+
+def guarded_lines(pats):
+    """(path, line) for each added line that matches a guard pattern"""
+    if not pats:
+        return []
+    out, path = [], None
+    for l in git('diff', '--cached', '-U0', '--no-color', '--diff-filter=ACMRT').split('\n'):
+        if l.startswith('+++ '):
+            path = l[6:] if l.startswith('+++ b/') else None
+        elif l.startswith('+') and not l.startswith('+++') and path and any(p.search(l) for p in pats):
+            out.append((path, l[1:].strip()[:70]))
+    return out
 
 
 def git(*a, inp=None):
@@ -58,13 +91,19 @@ def main():
     for p in staged:
         why = ('ignored by .gitignore' if p in ignored else
                'local-only pattern %s' % under(p, pats) if under(p, pats) else
-               'review or vendor file' if os.path.basename(p) in NAMES or FOLDERS.search(p) else None)
+               'review or vendor file' if os.path.basename(p) in NAMES or FOLDERS.search(p) else
+               'plan or batch record: private repo, docs/batches/<batch>/' if RECORD.match(os.path.basename(p)) else None)
         if why:
             bad.append('  %s  (%s)' % (p, why))
+    seen = {}
+    for p, l in guarded_lines(guard_patterns()):
+        seen.setdefault(p, l)
+    bad += ['  %s  (an added line matches the private guard list: "%s")' % (p, l) for p, l in sorted(seen.items())]
     if bad:
         sys.stderr.write('PUBLIC-REPO GUARD: commit refused; %d staged path(s) must never be in the public repo:\n%s\n'
                          'Unstage them (git rm -r --cached <path>). Lanes, packets and receipts go to the private repo '
-                         'through patch.py sync. Never `git add -f` here.\n' % (len(bad), '\n'.join(bad[:20])))
+                         'through patch.py sync; plans and batch records to its docs/batches/; a decision is cited by '
+                         'its digest id. Never `git add -f` here.\n' % (len(bad), '\n'.join(bad[:20])))
         return 1
     return 0
 

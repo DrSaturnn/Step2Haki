@@ -56,7 +56,7 @@ def lead(d):
     if d.get('tool_name') in ('Write', 'Edit', 'NotebookEdit'):
         p = C.norm(ti.get('file_path') or ti.get('notebook_path'), d.get('cwd'))
         if C.inside(p, appr):
-            C.refuse('APPROVAL GATE: approval records are written only by the hook, when Jonathan says "ship" in reply '
+            C.refuse('APPROVAL GATE: approval records are written only by the hook, when the owner says "ship" in reply '
                      'to the screenshots.')
         if C.inside(p, os.path.join(C.WS, 'local', 'stamps')):
             C.refuse('STAMP GATE (s171b): stamps are written only by a check that passed (verify.py READY, ship.sh, '
@@ -64,7 +64,7 @@ def lead(d):
     if d.get('tool_name') == 'Bash':
         cmd = ti.get('command', '')
         # the lead may read or mention the state, but may not feed the approval hook a message, point the hooks at
-        # another state folder, or write into the approvals folder (G-APPROVE: only Jonathan's own message approves)
+        # another state folder, or write into the approvals folder (G-APPROVE: only the owner's own message approves)
         if (re.search(r'approval\.py["\']?\s+hook\b', cmd) or re.search(r'\bAX_HOOK_STATE\s*=', cmd)
                 or (re.search(r'hooks/approvals', cmd) and re.search(WRITE_OPS, cmd))):
             C.refuse('APPROVAL GATE: the lead may not run the approval hook, redirect the hook state, or write approval '
@@ -134,7 +134,7 @@ def agent_record(d):
 
 
 def budget(role_budget, line):
-    """a launch prompt's Budget: line lowers the role's call budget, never raises it (Jonathan 2026-10-12)"""
+    """a launch prompt's Budget: line lowers the role's call budget, never raises it (2026-10-12)"""
     m = re.match(r'\s*(\d+)', line or '')
     return min(int(role_budget), int(m.group(1))) if m else int(role_budget)
 
