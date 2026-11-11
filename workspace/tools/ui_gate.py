@@ -119,7 +119,7 @@ def main(argv):
                        '--out', os.path.join(WS, 'local', 'ui_gate', 'parity.json')] + (['--allow', allow] if allow else [])
                 ok &= run_t('parity', cmd, 'UI-CHECK SAME')
         if 'theme' not in skip:
-            # s170 (Jonathan 2026-11-08 "ensure theme audits are optimized"): theme_gate runs only when a change a theme can
+            # s170 (2026-11-08 "ensure theme audits are optimized"): theme_gate runs only when a change a theme can
             # show reached the page since the tracked record (tools/style_surface.py); a pass is recorded there
             sys.path.insert(0, os.path.join(WS, 'tools'))
             import style_surface as SS

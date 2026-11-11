@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
-# ship.sh sNN "<message>" [--attr-only] [--checks-only]
+# ship.sh sNN "<message>" [--attr-only] [--checks-only] [--tools]
+# <message> is the commit subject in the public form, "type(scope): summary" (tools/githooks/commit-msg); the batch id
+# goes into the "Batch:" trailer, and AX_DECISION=<digest id> adds a "Decision:" trailer.
+# --tools: a batch that changes tools or docs and leaves the page as it is: the built page must equal the deployed
+# page byte for byte; no changelog entry, build stamp, version.json or briefs.json is written.
 # One call per batch, from anywhere. Workspace = this script's parent; repo root = Step2Haki.
 #  1. build repair/sNN/*.json onto a scratch copy; rules self-tests (test_migrate_check, test_gate_rules);
 #     gate (every brief type, incl. source-and-scope G1-G3, K3; base HEAD; --attr-only also asserts
@@ -14,7 +18,8 @@
 #     and the offline files (s165 D-20261106-5: sw.js stamped with the build, manifest.webmanifest, icons/; written by
 #     site_build --pwa-only beside the stamped scratch page)
 #  3. commit body from the page diff (tools/changelog.py), prepended to workspace/CHANGELOG.md
-#  4. commit "<sNN>: <message>" + body + trailers
+#  4. one commit on top of origin main: "<message>" + body + trailers. On a batch branch the branch's own commits are
+#     squashed into it (soft reset to origin main, which must be an ancestor of HEAD), so main gets one commit per batch
 #  G-APPROVE and G-READY run right after the build (tools/hooks/approval.py, tools/hooks/ready_gate.py).
 #  5. push origin main only if /home/claude/.config/axbx/gh_token exists (one-shot extraheader via
 #     GIT_CONFIG_* env: never in .git/config, argv or output); else "push skipped: no token"
@@ -33,12 +38,29 @@ git -C "$ROOT" config user.email 297481111+DrSaturnn@users.noreply.github.com; g
 SITE="$ROOT/discriminator-briefs-site/index.html"
 OUT="${AX_OUT:-/mnt/user-data/outputs}"   # Codex on the Mac: AX_OUT=<a scratch folder outside Documents>
 TOKF=/home/claude/.config/axbx/gh_token
-B="${1:-}"; MSG="${2:-}"; MODE=""; CHECKS_ONLY=""
-for a in "${@:3}"; do case "$a" in --attr-only) MODE=--attr-only;; --checks-only) CHECKS_ONLY=1;;
+B="${1:-}"; MSG="${2:-}"; MODE=""; CHECKS_ONLY=""; TOOLS=""
+for a in "${@:3}"; do case "$a" in --attr-only) MODE=--attr-only;; --checks-only) CHECKS_ONLY=1;; --tools) TOOLS=1;;
   *) echo "ship.sh: unknown option $a"; exit 2;; esac; done
-if [[ ! "$B" =~ ^s[0-9A-Za-z_-]+$ || -z "$MSG" ]]; then echo 'usage: tools/ship.sh sNN "<message>" [--attr-only] [--checks-only]'; exit 2; fi
+if [[ ! "$B" =~ ^s[0-9A-Za-z_-]+$ || -z "$MSG" ]]; then echo 'usage: tools/ship.sh sNN "<message>" [--attr-only] [--checks-only] [--tools]'; exit 2; fi
 cd "$WS" || exit 2
-TMP="$(mktemp -d /tmp/axbx-ship-XXXXXX)"; trap 'rm -rf "$TMP"' EXIT
+# the message and the branch are checked before any check runs, so a ship cannot fail on them at its last step
+if [[ -z "$CHECKS_ONLY" ]]; then
+  o=$(python3 tools/githooks/commit-msg --check "$MSG" 2>&1) || { echo "ship $B: ABORT at message (nothing written)"; echo "$o"; exit 1; }
+  if [[ "$(git -C "$ROOT" branch --show-current)" != main ]]; then
+    git -C "$ROOT" fetch -q origin main 2>/dev/null && git -C "$ROOT" merge-base --is-ancestor FETCH_HEAD HEAD || {
+      echo "ship $B: ABORT at branch (nothing written)"; echo "origin main could not be fetched or is not an ancestor of HEAD: merge main into the batch branch first"; exit 1; }
+    MAIN_SHA=$(git -C "$ROOT" rev-parse FETCH_HEAD)
+  fi
+fi
+TMP="$(mktemp -d /tmp/axbx-ship-XXXXXX)"
+# step timers: tm NAME closes the step that just ran; finish (on every exit, an abort included) prints the table and
+# writes local/<batch>/ship_times.json
+now(){ python3 -c 'import time; print("%.2f" % time.time())'; }
+T_START=$(now); T_LAST=$T_START; : > "$TMP/times.tsv"
+tm(){ local n; n=$(now); printf '%s\t%s\t%s\n' "$1" "$T_LAST" "$n" >> "$TMP/times.tsv"; T_LAST=$n; }
+finish(){ local rc=$?; python3 tools/ship_times.py "$TMP/times.tsv" "$B" "$T_START" "$rc" "${CHECKS_ONLY:+checks-only}" "$TMP/ui_gate.txt" 2>/dev/null
+  rm -rf "$TMP"; }
+trap finish EXIT
 fail(){ echo "ship $B: ABORT at $1 (nothing written)"; [[ -n "${2:-}" ]] && echo "$2"; exit 1; }
 # stamps: st CHECK [ARGS] exits 0 and prints the stored line when the check's stamp matches its inputs; stc CHECK LINE
 # writes the stamp after the check passed (the key taken by st, before the check ran)
@@ -47,7 +69,7 @@ st(){ local c=$1; shift; python3 tools/stamps.py check "$c" "$TMP/stamps/$c.json
 stc(){ python3 tools/stamps.py commit "$TMP/stamps/$1.json" "${2:-}" >/dev/null 2>&1 || echo "stamp: $1 not written"; }
 # Commit trailers come from the shipping session, never hardcoded (s131: the old trailer named another chat).
 #   AX_SESSION=https://claude.ai/code/session_<id> tools/ship.sh sNN "..."   (AX_COAUTHOR optional)
-#   Codex lead (Jonathan 2026-10-23, CODEX_LEAD.md section 5): AX_LEAD=codex tools/ship.sh sNN "..."; the trailer is
+#   Codex lead (2026-10-23, CODEX_LEAD.md section 5): AX_LEAD=codex tools/ship.sh sNN "..."; the trailer is
 #   "Lead: Codex (GPT-6.1 Sol)" and no Claude trailer is written. The approval and READY gates are the same.
 AX_COAUTHOR="${AX_COAUTHOR:-Claude Opus 5.5 <noreply@anthropic.com>}"
 if [[ "${AX_LEAD:-}" == codex ]]; then
@@ -62,32 +84,35 @@ else
 o=$(python3 repair/build.py "$B" --out "$TMP/index.html" 2>&1) || fail build "$o"; echo "$o"
 # site layer (s164b, D-20261105-6): the page's styles and scripts come from workspace/site/ (tools/site_build.py:
 # one style and one script bundle, comments stripped, minified); brief markup is left byte-identical
-o=$(python3 tools/site_build.py "$TMP/index.html" 2>&1) || fail site-build "$o"; echo "$o"
-# G-APPROVE (Jonathan 2026-10-12): an approval record must exist for exactly this build, written by the
-# UserPromptSubmit hook when Jonathan says "ship" in reply to the presented report (tools/hooks/approval.py)
+o=$(python3 tools/site_build.py "$TMP/index.html" 2>&1) || fail site-build "$o"; echo "$o"; tm build
+# G-APPROVE (2026-10-12): an approval record must exist for exactly this build, written by the
+# UserPromptSubmit hook when the owner says "ship" in reply to the presented report (tools/hooks/approval.py)
 if [[ -n "$CHECKS_ONLY" ]]; then o=$(python3 tools/hooks/approval.py check "$B" "$TMP/index.html" 2>&1) || o="approval: not approved (checks only; a ship needs it): $(echo "$o" | head -1)"
 else o=$(python3 tools/hooks/approval.py check "$B" "$TMP/index.html" 2>&1) || fail approval "$o"; fi; echo "$o"
 # G-READY: a spine build ships only when verify says READY (mechanical checks plus four current receipts)
-o=$(python3 tools/hooks/ready_gate.py "$B" 2>&1) || fail ready "$o"; echo "$o"
+o=$(python3 tools/hooks/ready_gate.py "$B" 2>&1) || fail ready "$o"; echo "$o"; tm approval-ready
 # stamp the build for the page's version label and update check (s43): <meta name="ax-build"> now, version.json in step 2
 STAMP_DAY=$(TZ=America/New_York date +%Y-%m-%d)
-python3 - "$TMP/index.html" "$B" "$STAMP_DAY" <<'PY' || fail stamp
+python3 - "$TMP/index.html" "$B" "$STAMP_DAY" "${TOOLS:+$SITE}" <<'PY' || fail stamp
 import re, sys
-p, b, d = sys.argv[1:]
+p, b, d, live = sys.argv[1:]
 s = open(p, encoding='utf-8').read()
-s = re.sub(r'<meta name="ax-build" content="[^"]*">', '<meta name="ax-build" content="%s|%s">' % (b, d), s, count=1)
+tag = '<meta name="ax-build" content="%s|%s">' % (b, d)
+if live:   # --tools: the deployed page's stamp is kept
+    tag = re.search(r'<meta name="ax-build" content="[^"]*">', open(live, encoding='utf-8').read()).group(0)
+s = re.sub(r'<meta name="ax-build" content="[^"]*">', lambda m: tag, s, count=1)
 open(p, 'w', encoding='utf-8').write(s)
 PY
 # offline files beside the stamped page: sw.js carries the build stamp, so each ship is a new worker and cache
 o=$(python3 tools/site_build.py "$TMP/index.html" --pwa-only 2>&1) || fail offline-files "$o"; echo "$o"
 # change log (s74): fill <script id="axlog"> from repair/changelog/axlog.py; every shipped build needs an entry there
 LOGJSON=$(python3 repair/changelog/axlog.py 2>&1) || fail changelog "$LOGJSON"
-AXLOG="$LOGJSON" python3 - "$TMP/index.html" "$B" <<'PY' || fail changelog "add an entry for $B to repair/changelog/axlog.py (reader-facing note; merges as [new title, [old titles]])"
+AXLOG="$LOGJSON" AX_TOOLS="$TOOLS" python3 - "$TMP/index.html" "$B" <<'PY' || fail changelog "add an entry for $B to repair/changelog/axlog.py (reader-facing note; merges as [new title, [old titles]])"
 import json, os, re, sys
 p, b = sys.argv[1], sys.argv[2]
 data = os.environ['AXLOG']; log = json.loads(data)
 n = re.sub(r'^s0*', '', b)   # a lettered patch batch (s146b) has its own entry, v "146b"
-if not re.fullmatch(r'\d+[a-z]?', n) or n not in [str(e['v']) for e in log]:
+if not os.environ.get('AX_TOOLS') and (not re.fullmatch(r'\d+[a-z]?', n) or n not in [str(e['v']) for e in log]):
     sys.exit(1)
 s = open(p, encoding='utf-8').read()
 safe = data.strip().replace('</', '<\\/')
@@ -97,25 +122,29 @@ if k != 1:
 open(p, 'w', encoding='utf-8').write(s)
 PY
 echo "changelog: $(echo "$LOGJSON" | python3 -c 'import json,sys; print(len(json.load(sys.stdin)))') entries"
+if [[ -n "$TOOLS" ]]; then cmp -s "$TMP/index.html" "$SITE" || fail tools-only "the built page differs from the deployed page: a batch that changes the page ships without --tools, with a changelog entry"
+  echo "tools-only: the built page equals the deployed page"; fi
+tm stamp-offline-changelog
 # rules self-tests: the checks themselves must still catch every known defect, on every brief type
-# stamps: rules-migrate and rules-gate rerun when a tool, tool data file, rule doc or the site changed (OPEN_WORK "Ship
-# time": the gate code and its rule files); the page to ship is judged by the gate check below
+# stamps: rules-migrate and rules-gate rerun when a file they load changed. rules-gate runs its cases on the fixture
+# page (tools/fixtures/gate_page/), with counts taken from that page; the page to ship is judged by the gate check below
 if ! st rules-migrate; then
   o=$(python3 tools/test_migrate_check.py 2>&1) || fail rules-selftest "$(echo "$o" | grep -E '^BAD|passed')"
-  echo "rules: self-test $(echo "$o" | tail -1)"; stc rules-migrate "rules: self-test $(echo "$o" | tail -1)"; fi
+  echo "rules: self-test $(echo "$o" | tail -1)"; stc rules-migrate "rules: self-test $(echo "$o" | tail -1)"; fi; tm rules-migrate
 if ! st rules-gate; then
-  o2=$(AXBX_PAGE="$TMP/index.html" python3 tools/test_gate_rules.py 2>&1) || fail rules-selftest "$(echo "$o2" | grep -E '^BAD|passed')"
-  echo "rules: all brief types $(echo "$o2" | tail -1)"; stc rules-gate "rules: all brief types $(echo "$o2" | tail -1)"; fi
+  o2=$(python3 tools/test_gate_rules.py 2>&1) || fail rules-selftest "$(echo "$o2" | grep -E '^BAD|passed')"
+  echo "rules: all brief types $(echo "$o2" | tail -1)"; stc rules-gate "rules: all brief types $(echo "$o2" | tail -1)"; fi; tm rules-gate
 GA=(--base HEAD); SA=(); [[ "$MODE" == "--attr-only" ]] && GA=(--attr-only HEAD) && SA=(--attr-only HEAD)
 if GATE=$(st gate --page "$TMP/index.html" "${SA[@]}"); then GATE=$(echo "$GATE" | tail -1); else echo "$GATE"
-  GATE=$(python3 tools/gate.py "$TMP/index.html" "${GA[@]}" 2>&1) || fail gate "$GATE"; GATE=$(echo "$GATE" | head -1); stc gate "$GATE"; fi; echo "$GATE"
+  GATE=$(python3 tools/gate.py "$TMP/index.html" "${GA[@]}" 2>&1) || fail gate "$GATE"; GATE=$(echo "$GATE" | head -1); stc gate "$GATE"; fi; echo "$GATE"; tm gate
 if RENDER=$(st render --page "$TMP/index.html"); then RENDER=$(echo "$RENDER" | tail -1); else echo "$RENDER"
-  RENDER=$(node tools/render.js "$TMP/index.html" 2>&1) || fail render "$RENDER"; RENDER=$(echo "$RENDER" | head -1); stc render "$RENDER"; fi; echo "$RENDER"
+  RENDER=$(node tools/render.js "$TMP/index.html" 2>&1) || fail render "$RENDER"; RENDER=$(echo "$RENDER" | head -1); stc render "$RENDER"; fi; echo "$RENDER"; tm render
 # standing UI tests (UI_REFACTOR_PLAN 6b): parity with the live page, theme gate, axe scan, performance budget.
 # repair/<batch>/ui_allow.json lists the batch's intended style changes; UI_GATE_BASE=<live commit + intended change page>
 # replaces the live page as the parity reference; UI_GATE_SKIP=parity (a content batch); each is disclosed in the report.
 UA=(); [ -f "repair/$B/ui_allow.json" ] && UA=(--allow "repair/$B/ui_allow.json"); [ -n "${UI_GATE_SKIP:-}" ] && UA+=(--skip "$UI_GATE_SKIP")
-UIG=$(python3 tools/ui_gate.py "$TMP/index.html" "${UI_GATE_BASE:-$SITE}" "${UA[@]}" 2>&1) || fail ui-gate "$UIG"; echo "$UIG" | grep -E '^(parity|theme|a11y|perf|twopane|UI-GATE)'
+UIG=$(python3 tools/ui_gate.py "$TMP/index.html" "${UI_GATE_BASE:-$SITE}" "${UA[@]}" 2>&1); UIRC=$?; echo "$UIG" > "$TMP/ui_gate.txt"; tm ui-gate
+[[ $UIRC -eq 0 ]] || fail ui-gate "$UIG"; echo "$UIG" | grep -E '^(parity|theme|a11y|perf|twopane|UI-GATE)'
 TRACKED_LO=$(python3 - "$WS" <<'PY'
 import os, subprocess, sys
 sys.path.insert(0, os.path.join(sys.argv[1], 'tools'))
@@ -128,6 +157,7 @@ files = subprocess.run(['git', '-C', top, 'ls-files'], capture_output=True, text
 print('\n'.join(f for f in files if f and v.is_local(f, lo)))
 PY
 )
+tm local-only
 [[ -z "$TRACKED_LO" ]] || fail local-only "tracked local-only paths (git rm --cached them): $TRACKED_LO"
 if [[ ! -d repair/sources ]]; then o=$(python3 tools/vendor_scan.py 2>&1) || fail vendor-scan "$o"
   VEND="vendor: NOT CHECKED (repair/sources missing: restore axbx-local-only.tar.gz)"
@@ -137,7 +167,7 @@ else echo "$VEND"
   VEND="vendor: clean ($(echo "$o" | head -1 | grep -o '[0-9]* source shingles'); page $(echo "$o" | grep '(workspace/index.html)' | grep -o '[0-9.]*%'))"
   stc vendor-scan "$VEND"
 fi
-echo "$VEND"
+echo "$VEND"; tm vendor-scan
 # P7 (s105): judge tracked edit files against the page about to ship, so a wording change that
 # orphans a source run in an old sNN json fails this ship instead of the next one (s103)
 if [[ -d repair/sources ]]; then
@@ -145,9 +175,9 @@ if [[ -d repair/sources ]]; then
     o=$(python3 tools/vendor_scan.py --page "$TMP/index.html" 2>&1) || fail vendor-orphan "$o
 fix: reword or reorder the flagged file's run (git add it), as in s103"
     stc vendor-orphan "vendor-orphan: clean against the page to ship"; fi
-fi
+fi; tm vendor-orphan
 # advisory content checks (P1-P6): never abort; settle each line or pass it to the auditor
-python3 tools/preflight.py "$TMP/index.html" --base HEAD 2>&1 | head -40
+python3 tools/preflight.py "$TMP/index.html" --base HEAD 2>&1 | head -40; tm preflight
 if [[ -n "$CHECKS_ONLY" ]]; then echo "ship $B: checks only: every check passed (nothing written)"; exit 0; fi
 
 # ---- 2. write the page and the deployed copy
@@ -165,6 +195,7 @@ restore(){ cp "$TMP/index.keep.html" index.html; [[ -f "$TMP/site.keep.html" ]] 
     if [[ -e "$TMP/keep/$f" ]]; then rm -rf "$(dirname "$SITE")/$f"; cp -r "$TMP/keep/$f" "$(dirname "$SITE")/$f"
     elif [[ -n "${PW_WRITTEN:-}" ]]; then rm -rf "$(dirname "$SITE")/$f"; fi; done
   for f in ui_baseline prose_baseline; do [[ -f "$TMP/$f.keep.json" ]] && cp "$TMP/$f.keep.json" "tools/spine/$f.json"; done
+  [[ -n "${ORIG_HEAD_SHA:-}" ]] && git -C "$ROOT" reset -q --soft "$ORIG_HEAD_SHA"
   git -C "$ROOT" reset -q; }
 if cmp -s "$TMP/index.html" "$SITE"; then SITELINE="Site: discriminator-briefs-site/index.html unchanged (no deploy)"
 else SITELINE="Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)"; fi
@@ -179,17 +210,18 @@ mkdir -p "$TMP/keep"; for f in sw.js manifest.webmanifest icons; do [[ -e "$(dir
 PW_WRITTEN=1; rm -rf "$(dirname "$SITE")/icons"
 cp "$TMP/sw.js" "$TMP/manifest.webmanifest" "$(dirname "$SITE")/" && cp -r "$TMP/icons" "$(dirname "$SITE")/icons" || { restore; fail offline-files "could not copy sw.js, manifest.webmanifest or icons/"; }
 VERF="$(dirname "$SITE")/version.json"; [[ -f "$VERF" ]] && cp "$VERF" "$TMP/version.keep.json"
-grep -q 'name="ax-build"' "$SITE" && printf '{"build":"%s","date":"%s"}\n' "$B" "$STAMP_DAY" > "$VERF"
+[[ -z "$TOOLS" ]] && grep -q 'name="ax-build"' "$SITE" && printf '{"build":"%s","date":"%s"}\n' "$B" "$STAMP_DAY" > "$VERF"
 # briefs.json: brief index for the companion extension, regenerated from the page being deployed
 BJF="$(dirname "$SITE")/briefs.json"; [[ -f "$BJF" ]] && cp "$BJF" "$TMP/briefs.keep.json"
-BJ_WRITTEN=1
-BJ=$(python3 tools/briefs_json.py "$SITE" "$B" "$STAMP_DAY" "$BJF" 2>&1) || { restore; fail briefs-json "$BJ"; }
-echo "$BJ"
-echo "$SITELINE"
+if [[ -z "$TOOLS" ]]; then BJ_WRITTEN=1
+  BJ=$(python3 tools/briefs_json.py "$SITE" "$B" "$STAMP_DAY" "$BJF" 2>&1) || { restore; fail briefs-json "$BJ"; }
+  echo "$BJ"; fi
+echo "$SITELINE"; tm write-page
 
 # ---- 3. commit body + CHANGELOG entry
 python3 tools/changelog.py "$TMP/prev.html" index.html --site "$SITELINE" --check "$GATE" --check "$RENDER" --check "$VEND" \
-  --entry "$B: $MSG" --changelog CHANGELOG.md > "$TMP/body.txt" || { restore; fail changelog; }
+  --entry "$B: $MSG" --changelog CHANGELOG.md > "$TMP/body.raw" || { restore; fail changelog; }
+fold -s -w 72 "$TMP/body.raw" | sed 's/[[:space:]]*$//' > "$TMP/body.txt"
 
 # ---- 4. commit
 # ratchets (D-20261106-11): a ship that lowered a UI or prose count locks the lower count in, in the same commit;
@@ -197,6 +229,11 @@ python3 tools/changelog.py "$TMP/prev.html" index.html --site "$SITELINE" --chec
 for f in ui_baseline prose_baseline; do cp "tools/spine/$f.json" "$TMP/$f.keep.json"; done
 o=$(python3 tools/spine/ui_lint.py index.html --tighten tools/spine/ui_baseline.json 2>&1) || { restore; fail ui-baseline "$o"; }; echo "$o"
 o=$(python3 tools/spine/prose_lint.py index.html --tighten tools/spine/prose_baseline.json 2>&1) || { restore; fail prose-baseline "$o"; }; echo "$o"
+# one commit per batch on main: a batch branch's own commits are squashed into the ship commit
+if [[ -n "${MAIN_SHA:-}" ]]; then
+  ORIG_HEAD_SHA=$(git -C "$ROOT" rev-parse HEAD)
+  git -C "$ROOT" reset -q --soft "$MAIN_SHA" || { restore; fail squash "could not reset to origin main"; }
+fi
 git -C "$ROOT" add -A -- workspace "discriminator-briefs-site/index.html" >/dev/null 2>&1
 [[ -f "$ROOT/discriminator-briefs-site/version.json" ]] && git -C "$ROOT" add -- "discriminator-briefs-site/version.json" >/dev/null 2>&1
 [[ -f "$ROOT/discriminator-briefs-site/briefs.json" ]] && git -C "$ROOT" add -- "discriminator-briefs-site/briefs.json" >/dev/null 2>&1
@@ -205,10 +242,12 @@ git -C "$ROOT" add -A -- "discriminator-briefs-site/sw.js" "discriminator-briefs
 if git -C "$ROOT" diff --cached --quiet; then
   echo "commit: nothing to commit"
 else
-  { echo "$B: $MSG"; echo; cat "$TMP/body.txt"; echo; echo "$TRAILER"; } > "$TMP/msg.txt"
+  { echo "$MSG"; echo; cat "$TMP/body.txt"; echo; echo "Batch: $B"; [[ -n "${AX_DECISION:-}" ]] && echo "Decision: $AX_DECISION"
+    echo "$TRAILER"; } > "$TMP/msg.txt"
   git -C "$ROOT" commit -q -F "$TMP/msg.txt" || { restore; fail commit; }
   echo "commit: $(git -C "$ROOT" log -1 --format='%h %s') ($(git -C "$ROOT" rev-list --count HEAD) commits)"
 fi
+tm changelog-commit
 
 # ---- 5. push (token never on disk in .git/config, never in argv, never printed)
 PUSHRC=0
@@ -227,6 +266,7 @@ if [[ -s "$TOKF" ]]; then
 else
   echo "push skipped: no token"
 fi
+tm push
 
 # ---- 6. outputs
 if ! mkdir -p "$OUT" 2>/dev/null || [[ ! -w "$OUT" ]]; then
@@ -250,5 +290,6 @@ if [[ -n "$LOCAL" ]]; then
   LT="axbx-local-only.tar.gz $(tar -tzf "$OUT/axbx-local-only.tar.gz" | grep -vc '/$') files"
 else LT="axbx-local-only.tar.gz skipped (no local-only files on disk)"; fi
 SHA256="sha256sum"; command -v sha256sum >/dev/null 2>&1 || SHA256="shasum -a 256"   # the Mac has shasum only
+tm outputs
 echo "outputs: index.html sha256 $($SHA256 "$OUT/index.html" | cut -c1-12), axbx-repo.bundle $(du -h "$OUT/axbx-repo.bundle" | cut -f1), $LT"
 exit $PUSHRC

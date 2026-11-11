@@ -3,7 +3,7 @@
 
 The golden brief (tools/tests/migrate/golden_hip.html, the approved septic hip Type C brief) must PASS with no WARN.
 Each mutation injects one defect that has happened or that a rule forbids; the checker must FAIL with the expected code.
-When a reviewer or Jonathan finds a defect the checker missed, add a check to migrate_check.py AND a mutation here
+When a reviewer or the owner finds a defect the checker missed, add a check to migrate_check.py AND a mutation here
 in the same batch (tools/MIGRATION_CONTRACT.md, "defect to rule").
 
   python3 tools/test_migrate_check.py        exit 1 if any case misbehaves
@@ -132,7 +132,7 @@ r = run(LIS[0], GOLD, dict(GMAP, items=[{'id': re.search(r'data-item-id="(q_\w+)
 hit = any(f.startswith('C1') for f in r['fails'])
 print(('ok  ' if hit else 'BAD ') + 'old stem clue without a clue row: expects FAIL C1')
 bad += not hit
-# K1/K2: a highlighted mnemonic and its scale reference (Jonathan 2026-09-28: CRASH and Burn was flattened into a tile)
+# K1/K2: a highlighted mnemonic and its scale reference (2026-09-28: CRASH and Burn was flattened into a tile)
 MN_OLD = ('<div class="crit"><b>Diagnosis</b> 4 of 5 <span class="scaleref" data-scale="t-mn">ABC criteria</span></div>'
           '<h5>ABC Rule</h5><ul class="plain" id="t-mn"><li><b>A</b>lpha &ndash; <b>first</b> thing</li>'
           '<li><b>B</b>eta &ndash; second</li><li><b>C</b>harlie &ndash; third</li></ul>')
@@ -160,7 +160,7 @@ r = run('<div class="pearls"><span class="lbl">Mnemonic</span> <b>5 Ts</b> the c
 hit = any('5 ts' in f for f in r['fails'])
 print(('ok  ' if hit else 'BAD ') + 'pearl mnemonic term lost: expects FAIL K1')
 bad += not hit
-# ---- source and scope (Jonathan 2026-09-29: content from the pasted or a verified source, Step 2 scope, mnemonics
+# ---- source and scope (2026-09-29: content from the pasted or a verified source, Step 2 scope, mnemonics
 # identified not invented; tools/content_rules.py is shared with tools/gate.py, which runs it on every brief type)
 LAD = '<td>Still febrile or CRP not falling at 48 to 72 h &#x26A0;&#xFE0E;: MRI, repeat drainage</td>'
 assert LAD in GOLD

@@ -21,7 +21,7 @@ def main(argv):
         sys.exit(__doc__.strip().splitlines()[3].strip())
     import shots
     # s150c: shots.py's default 30 s Playwright timeout killed tall desktop captures; every page opened here gets 240 s.
-    # Patched here, not in shots.py (Jonathan 2026-10-24: no scratch wrappers)
+    # Patched here, not in shots.py (2026-10-24: no scratch wrappers)
     from playwright.sync_api._generated import Browser, BrowserContext
     for cls in (Browser, BrowserContext):
         if getattr(cls.new_page, '_ax240', False):

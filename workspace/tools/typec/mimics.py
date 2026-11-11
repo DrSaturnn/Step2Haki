@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""mimics.py: the single source for mimic comparison rows (hub and spoke, Jonathan 2026-10-03).
+"""mimics.py: the single source for mimic comparison rows (hub and spoke, 2026-10-03).
 
 A mimic row is written ONCE here and rendered by lifechart.course_table() into every brief that uses it: the full hub
 brief for a presenting complaint, and the short slice in each topic brief. The rendered row carries a hash of its HTML

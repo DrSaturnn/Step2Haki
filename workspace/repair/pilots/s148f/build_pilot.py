@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """s148f pilot (runbook section 8): the live page plus the s148f batch, plus a pilot-only switch for the muted tints
-(proposal, Jonathan judges). The switch never ships: ship builds come from repair/s148f/*.json only.
+(proposal, the owner judges). The switch never ships: ship builds come from repair/s148f/*.json only.
 
   python3 repair/pilots/s148f/build_pilot.py <out.html>
 """

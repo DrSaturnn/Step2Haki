@@ -16,7 +16,7 @@
     "q_68855b91ca5f5bfcb31c"
    ],
    "ledger": "repair/migration/merge/pyelo/claim_map.json (local-only)",
-   "note": "merge (Jonathan 2026-10-03: publish each after review, in batches)"
+   "note": "merge (2026-10-03: publish each after review, in batches)"
   },
   {
    "op": "replace_global",

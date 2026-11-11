@@ -54,7 +54,7 @@ try:
             'types': {'x': 'presentation hub'},
             'prior': {'acc': {b: os.path.join(T, 'r1', 'acc_%s.md' % b) for b in ('x', 'y')}},
             'adjudication': {b: os.path.join(T, 'r1', 'adj_%s.md' % b) for b in ('x', 'y')},
-            'notes': {'acc': ['the treatment ladders inside the hubs stay (Jonathan)']},
+            'notes': {'acc': ['the treatment ladders inside the hubs stay']},
             'extra_judge': {'acc': ['Timelines: each Decides-it cell leads with its timeline.']}}
     rows = LN.build(spec)
     lane = rows[0][0]

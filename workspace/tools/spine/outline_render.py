@@ -190,7 +190,7 @@ def lcw(b, r):
 
 
 def split_band(band):
-    """First step split (Jonathan 2026-10-20; s148g): a band [clue, orders, findings, pair] whose optional pair lists, for
+    """First step split (2026-10-20; s148g): a band [clue, orders, findings, pair] whose optional pair lists, for
     each finding in order, the 1-based number of the order it belongs to renders as one row group per order, each spanning
     only its own results; the band's clue heads the first group (later groups carry class w5k and no clue). A band with
     no pair, or with one order, renders as one group, exactly as before. Yields (clue or None, orders, findings)."""

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""style_surface.py: what a theme or legibility audit can see, so an audit runs only on what changed (Jonathan
+"""style_surface.py: what a theme or legibility audit can see, so an audit runs only on what changed (the owner
 2026-11-08, s170: "yes lets enforce it. Absolutely, ensure theme audits are optimized").
 
 A page's style surface is (1) every CSS rule of the built page, flattened with its @media/@layer context, and (2) every

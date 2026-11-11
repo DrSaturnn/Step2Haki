@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pre-review lint (s148 efficiency fix 6, Jonathan 2026-10-18). Advisory: verify --mech prints its findings as
+"""Pre-review lint (s148 efficiency fix 6, 2026-10-18). Advisory: verify --mech prints its findings as
 "warn lint:" lines and never fails on them; the lead clears or answers each one in the S6 self-check (runbook section 4,
 item 15) before any reviewer runs. It catches the categories that drew most s148 round-1 MEDs:
 
@@ -10,19 +10,19 @@ item 15) before any reviewer runs. It catches the categories that drew most s148
   threshold   one decision with two thresholds: the same "past/after/within/under/over N unit" phrase with values that
               overlap but differ (backpain "past 4 to 6 weeks" against "past 6 weeks")
   number      a number in a claim that none of its cited quotes holds
-  prose       (s148f, Jonathan 2026-10-19) a figure of speech in a next-move, meaning or action cell ("Chase the medical
+  prose       (s148f, 2026-10-19) a figure of speech in a next-move, meaning or action cell ("Chase the medical
               cause"), or a caption, label or zone name that is not the term a clinician or textbook uses ("A night by
               stage", "By presentation"); the clinical term or the concrete action replaces it
-  bold        (s148g, Jonathan 2026-10-20) a bottom line with no bold: it bolds its key words and criteria (the deciding
+  bold        (s148g, 2026-10-20) a bottom line with no bold: it bolds its key words and criteria (the deciding
               counts, durations, ages and cutoffs, the diagnosis named, the action chosen); hover text does not count
-  reasons     (s148g, Jonathan 2026-10-20) a practice item without its three per-choice reasons (data-key-why,
+  reasons     (s148g, 2026-10-20) a practice item without its three per-choice reasons (data-key-why,
               data-d1-why, data-d2-why); every brief merged or rewritten from s149 on writes them in its own S2
   spacing     (s150 audit, 2026-10-23) a hover button (sp-pop) glued to the word before it: text or a closing tag
               runs straight into the button, so the page reads "symptomsIn practice"; write +' '+ before the pop
   pairs       (s150 audit, 2026-10-23) a Pairs with clause naming two titles ("<i>A</i> and <i>B</i>: ..."): the card
               renderer makes a card for A whose description reads "And"; one title per clause
-  pause-format (s154c, Jonathan 2026-10-26) the pause point is question-style blocks (div.sp-pause, pp-b, masked answer)
-  mask-leak   (Jonathan 2026-10-24, no screenshots) a short study-mode answer (4 words or fewer) given away by its own
+  pause-format (s154c, 2026-10-26) the pause point is question-style blocks (div.sp-pause, pp-b, masked answer)
+  mask-leak   (2026-10-24, no screenshots) a short study-mode answer (4 words or fewer) given away by its own
               card label or row's first cell: the answer's head word (first content word of 5 letters or more) is in
               the label ("Thiamine" labeling a card whose masked answer is "thiamine"); relabel or mask the repeat
 
@@ -376,7 +376,7 @@ def _pp_words(h):
 
 
 def pause_format(brief_html):
-    """s154c (Jonathan 2026-10-26: "let's go with the recommended type for pause points. let's apply to all of them."):
+    """s154c (2026-10-26):
     a spine brief's pause point is div.sp-pause with the label b.pp-t, then one div.pp-b per bait (span.sl setup first,
     an optional span.si.pp-off with the baits in <em>, an optional deciding span.si wholly masked, and span.pp-a whose
     answer is masked), then at most one p.pp-x. Returns the problems (gate.py fails on them; lint warns)."""
@@ -387,7 +387,7 @@ def pause_format(brief_html):
         out.append('pause-format: the pause point is a paragraph (p.sp-pause); use the question-style blocks')
     i = brief_html.find('<div class="sp-pause">')
     if i < 0:
-        # s154j (Jonathan 2026-10-28, "Pause point content"): a brief with no real board bait keeps no pause point
+        # s154j (2026-10-28): a brief with no real board bait keeps no pause point
         return out
     depth, j = 0, len(brief_html)
     for t in re.finditer(r'<(/?)div\b[^>]*>', brief_html[i:]):
@@ -419,7 +419,7 @@ def pause_format(brief_html):
                 decs.append(ln)
             else:
                 out.append('pause-format: block %d has a line that is neither offered-as nor a masked deciding line' % i)
-        # s154j (Jonathan 2026-10-28: "go with checker rule"): a block exists for a real bait, so it names the bait,
+        # s154j (2026-10-28): a block exists for a real bait, so it names the bait,
         # shows the clue that defeats it, and its answer says what is right, not only that the bait is wrong
         if not offs:
             out.append('pause-content: block %d offers no bait (span.si.pp-off)' % i)

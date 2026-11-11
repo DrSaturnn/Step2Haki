@@ -1,6 +1,6 @@
 # workspace
 
-The working folder behind the Step2Haki site: the study page source (`index.html`), the tools that edit, check and ship it, and the notes that carry the project between sessions. Start with `CURRENT_STATE.md`.
+The working folder behind the Step2Haki site: the study page source (`index.html`), the tools that edit, check and ship it, and the notes that carry the project between sessions. Start with `tools/EDITS.md`.
 
 - Edit the page only through edits files (`tools/EDITS.md`), never by hand or by DOM re-serialization.
 - Ship a batch with `tools/ship.sh sNN "<message>"`: it builds `repair/sNN/*.json`, runs the gate, the jsdom render and the vendor-text scan, copies the page to `../discriminator-briefs-site/index.html` (the folder Vercel deploys), commits with a generated summary (also in `CHANGELOG.md`) and pushes when a token is configured.

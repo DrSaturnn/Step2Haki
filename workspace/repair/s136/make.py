@@ -103,18 +103,18 @@ for key, name, h in GA.ACCENTS:
         d.append('--axh-%s:%s' % (t, GD.fmt(c, 1)))
     sel = '[data-theme="dark"]' if key == 'slate' else '[data-theme="dark"][data-axa="%s"],[data-theme="dark"] [data-axa="%s"]' % (key, key)
     acc_css.append(sel + '{' + ';'.join(d) + '}')
-dark = ('\n/* ---- dark theme (Jonathan 2026-10-14): tokens, then every color rule repeated for dark (tools/glance_dark.py) ---- */\n'
+dark = ('\n/* ---- dark theme (2026-10-14): tokens, then every color rule repeated for dark (tools/glance_dark.py) ---- */\n'
         '[data-theme="dark"]{color-scheme:dark;' + ';'.join('%s:%s' % kv for kv in tok.items()) + '}\n'
         + '\n'.join(acc_css) + '\n' + GD.dark_css(head_css) + '\n')
 css = css + dark
 
-note = 's136 site layout Phase 1 (claude/pending/S136.md; Jonathan 2026-10-13 and 14)'
-RV = 's136 review in the status bar (Jonathan 2026-10-14)'
+note = 's136 site layout Phase 1 (claude/pending/S136.md; 2026-10-13 and 14)'
+RV = 's136 review in the status bar (2026-10-14)'
 AXRV = '''
   /* s136: the status-bar Review sheet (repair/s136/src/review.js) drives this scheduler through window.axRv */
   window.axRv={
     current:current, nameOf:nameOf, initials:initials,
-    due:function(){ var id=current(); return id?split(id).due.length:0; },   /* scheduled reviews only, never the shelf total (Jonathan 2026-10-14) */
+    due:function{ var id=current; return id?split(id).due.length:0; },   /* scheduled reviews only, never the shelf total (2026-10-14) */
     pick:function(){ var id=current(); return id?previewPick(id):[]; },
     people:function(){
       var mine=mineOnly(), out=[];
@@ -173,12 +173,12 @@ BS_NEW = PREVIEW + '''function buildSession(id){
 BOOT = "  paintChip();\n  try{ syncRoster(function(){ paintChip(); }); }catch(e){ mark('off'); }"
 RVEDITS = [
     {'op': 'replace_global', 'find': "  if(bdg){ bdg.textContent=d; bdg.setAttribute('data-n', (id&&d)?'1':'0'); }",
-     'with': "  if(bdg){ var rd=id?split(id).due.length:0; bdg.textContent=rd; bdg.setAttribute('data-n', rd?'1':'0'); }   /* scheduled reviews only, never the shelf total (Jonathan 2026-10-14) */",
+     'with': "  if(bdg){ var rd=id?split(id).due.length:0; bdg.textContent=rd; bdg.setAttribute('data-n', rd?'1':'0'); }   /* scheduled reviews only, never the shelf total (2026-10-14) */",
      'note': RV + ': the phone Review badge counts scheduled reviews only'},
-    {'op': 'replace_global', 'find': 'var PER_SESSION=5, PER_BRIEF=3;', 'with': 'var PER_SESSION=3, PER_BRIEF=3;   /* 3 briefs a session (Jonathan 2026-10-14) */', 'note': RV + ': 3 briefs a session'},
+    {'op': 'replace_global', 'find': 'var PER_SESSION=5, PER_BRIEF=3;', 'with': 'var PER_SESSION=3, PER_BRIEF=3;   /* 3 briefs a session (2026-10-14) */', 'note': RV + ': 3 briefs a session'},
     {'op': 'replace_global', 'find': BS_OLD, 'with': BS_NEW, 'note': RV + ': the sheet previews the session it starts'},
     {'op': 'replace_global', 'find': BOOT, 'with': BOOT + AXRV, 'note': RV + ': window.axRv for the status-bar sheet'},
-    # Study is renamed Recall (Jonathan 2026-10-14: "may need to rename study also since that may cause some confusion"):
+    # Study is renamed Recall (2026-10-14):
     # Recall mode hides answers for active recall; Review is the spaced-repetition session
     {'op': 'replace_global', 'find': '<span class="nm">STUDY MODE</span>', 'with': '<span class="nm">RECALL MODE</span>', 'note': RV + ': Study mode is Recall mode'},
     {'op': 'replace_global', 'find': '\'<button type="button" data-act="study" aria-pressed="false"><span>Study</span></button>\'', 'with': '\'<button type="button" data-act="study" aria-pressed="false"><span>Recall</span></button>\'', 'note': RV + ': Study is Recall on the phone bar'},

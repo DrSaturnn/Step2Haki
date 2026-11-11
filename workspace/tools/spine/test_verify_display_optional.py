@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Offline test (Jonathan 2026-10-24, no screenshots): READY needs acc, read and flags; display counts only when current.
+"""Offline test (2026-10-24, no screenshots): READY needs acc, read and flags; display counts only when current.
 
 Runs Verify.holistic() on stub receipts in a temporary workspace (no page, no brief folder needed).
 

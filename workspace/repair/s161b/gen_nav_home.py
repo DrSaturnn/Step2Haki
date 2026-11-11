@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""s161b (site layer, Jonathan 2026-11-03): writes repair/s161b/40_nav_home.json from the live page.
+"""s161b (site layer, 2026-11-03): writes repair/s161b/40_nav_home.json from the live page.
 One home per brief in the sidebar (the step rail always under the system tile; the Presentations tile marked with a dot;
 groups the sidebar opened close behind the reader); browsing Presentations keeps the sidebar on Presentations; the
 shelf picker becomes a card under the search; the flat theme is the default. Pilot: repair/pilots/nav-home/make_pilot.py

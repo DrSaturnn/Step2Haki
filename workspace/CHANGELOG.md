@@ -2,6 +2,18 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-11-10 s172f: chore(tools): cut ship time and move the internal record out
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Page content unchanged.
+Site: discriminator-briefs-site/index.html unchanged (no deploy)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 54 checks, base HEAD | allowlisted 21 | 0 failure(s) (stamp 2026-11-10 22:39: same inputs)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0 (stamp 2026-11-10 21:52: same inputs)
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
 ## 2026-11-10 s172e: s172e: hover anchors re-judged; 86 triggers moved onto the term their card explains, 76 open from a circled i marker; no brief wording changed
 
 ```
@@ -2379,7 +2391,7 @@ Checks:
   vendor: clean (59413 source shingles; page 0.015%)
 ```
 
-## 2026-10-06 s112: Legibility: hub axis labels opaque again; hub table frame removed (Jonathan picked option A)
+## 2026-10-06 s112: Legibility: hub axis labels opaque again; hub table frame removed (the owner picked option A)
 
 ```
 Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
@@ -3157,7 +3169,7 @@ Checks:
   vendor: clean (56601 source shingles; page 0.023%)
 ```
 
-## 2026-10-04 s87: one sans font everywhere: --serif token now resolves to the system sans stack (Jonathan disliked the serif)
+## 2026-10-04 s87: one sans font everywhere: --serif token now resolves to the system sans stack (the owner disliked the serif)
 
 ```
 Page: 190 briefs, 2138 items -> 190 briefs, 2138 items
@@ -3580,7 +3592,7 @@ Checks:
   vendor: clean (56601 source shingles; page 0.028%)
 ```
 
-## 2026-10-03 s66: s66: retitle 100 briefs to their broadest honest topic (Jonathan 2026-10-03: generalized titles); decision clauses moved to the subtitle line; Pairs with, wording-guide links and sidebar labels follow; merge heads retitled only where the head alone fits the new title; merges to follow cluster by cluster
+## 2026-10-03 s66: s66: retitle 100 briefs to their broadest honest topic (2026-10-03: generalized titles); decision clauses moved to the subtitle line; Pairs with, wording-guide links and sidebar labels follow; merge heads retitled only where the head alone fits the new title; merges to follow cluster by cluster
 
 ```
 Page: 216 briefs, 2121 items -> 216 briefs, 2121 items

@@ -1,4 +1,4 @@
-"""Pilot (not shipped): Presentations as its own section (Jonathan 2026-11-03: "cant we just remove all duplicated briefs
+"""Pilot (not shipped): Presentations as its own section (2026-11-03: "cant we just remove all duplicated briefs
 and keep the same dropdowns? so its just presentations?"; "just having a presentations carry its own order of each
 system as sub headers, then having the rest of the systems as normal").
 Every brief in the sidebar's Presentations group leaves its system: on the page it moves, byte for byte, into a new
@@ -90,7 +90,7 @@ def sub(old, new):
     assert s.count(old) == 1, (s.count(old), old[:80]); s = s.replace(old, new)
 sub("var SHORT={msk:'MSK',", "var SHORT={presentations:'CC',msk:'MSK',")
 sub('</head>', '''<style id="ax-pres">
-/* s161c Presentations section (Jonathan 2026-11-03): a sub-header per system above its complaint briefs */
+/* s161c Presentations section (2026-11-03): a sub-header per system above its complaint briefs */
 .psub{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:34px 0 14px;padding:0 4px 8px;border-bottom:1px solid var(--hair)}
 .psub .t{font-family:var(--serif);font-size:19px;font-weight:600;color:var(--ink)}
 .psub .n{font:700 11.5px/1 var(--sans);color:var(--muted);letter-spacing:.4px}

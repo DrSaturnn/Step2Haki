@@ -1,4 +1,4 @@
-"""Offline regression for Jonathan's 2026-10-22 source-domain approval. No network calls."""
+"""Offline regression for the owner's 2026-10-22 source-domain approval. No network calls."""
 import importlib.util
 from pathlib import Path
 

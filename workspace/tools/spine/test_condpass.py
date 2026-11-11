@@ -62,7 +62,7 @@ expect('dropped number refused', CP.hard_problems('as in rung 1', 'as in the fir
 expect('long new text refused', CP.hard_problems('a', ' '.join(['w'] * 41)))
 expect('plain rewording allowed', not CP.hard_problems('urinalysis mean minimal change', 'urinalysis point to minimal change'))
 
-# ---- wording-only test (hedge words are meaning, Jonathan 2026-10-12)
+# ---- wording-only test (hedge words are meaning, 2026-10-12)
 T = {'Minimal change disease', 'membranous nephropathy', 'CT'}
 expect('rewording is wording-only', CP.wording_only('mean minimal change disease', 'point to minimal change disease', T))
 expect('dropping a hedge is not', not CP.wording_only('usually Streptococcus pneumoniae', 'Streptococcus pneumoniae', T))
@@ -140,7 +140,7 @@ try:
 finally:
     shutil.rmtree(d, ignore_errors=True)
 
-# ---- s148 fix 8: an added hedge backed by the cited quote is wording-only (Jonathan 2026-10-18)
+# ---- s148 fix 8: an added hedge backed by the cited quote is wording-only (2026-10-18)
 Q50 = ['NSAIDs may be contraindicated for patients with [renal] insufficiency']
 Q06 = ['Pain may be felt in the inguinal area (likely the most specific area) or greater trochanter']
 expect('fix 8: oa-pharm b50 "which may be contraindicated" passes',

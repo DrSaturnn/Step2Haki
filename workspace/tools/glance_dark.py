@@ -1,4 +1,4 @@
-"""glance_dark: the s136 dark theme (Jonathan 2026-10-14: "throw in a dark mode as well that mimics apples darker
+"""glance_dark: the s136 dark theme (2026-10-14: "throw in a dark mode as well that mimics apples darker
 tinted liquid glass") as CSS, written into the s136 style block by repair/s136/make.py.
 
   python3 tools/glance_dark.py --test

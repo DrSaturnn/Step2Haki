@@ -5,8 +5,8 @@
                                      the briefs, views, themes and modes a style change since the last audit can reach;
                                      exits 0 with "nothing to audit" when no rule or element signature changed
   python3 tools/legib_audit.py PAGE --briefs a,b,c --force "REASON" [--views phone,desk] [--modes sculpted,flat,study]
-                                     a fixed run (a measurement change, a check Jonathan asks for); refused without --force
-                                     (Jonathan 2026-11-08: "yes lets enforce it. Absolutely, ensure theme audits are optimized")
+                                     a fixed run (a measurement change, a check the owner asks for); refused without --force
+                                     (2026-11-08)
   A run records the audited surface in repair/efficiency/style_audits.json (not with --css: a candidate is not shipped).
 
 For every text node in each sampled brief, in every view and mode:
@@ -88,7 +88,7 @@ COLLECT = r"""
 """ % json.dumps(COMPONENTS)
 
 HIDE = "#%s, #%s *, #%s *::before, #%s *::after{color:transparent!important;-webkit-text-fill-color:transparent!important;text-shadow:none!important}"
-# s147 (Jonathan): the dotted underline on pointer links (.xref) has its own decoration color, so it stayed painted in the
+# s147: the dotted underline on pointer links (.xref) has its own decoration color, so it stayed painted in the
 # text-transparent capture and read as an edge running through the link's own text (a false clash on every pointer link).
 # The underline is part of the link, not its background: hide it in the capture as well.
 HIDE_XREF = "#%s .xref, #%s .xref *{text-decoration-color:transparent!important}"
@@ -175,7 +175,7 @@ def main():
                     if a.accent: rec['accent'] = a.accent
                     ctx.add_init_script("try{localStorage.setItem('ax-settings',%s)}catch(e){}" % json.dumps(json.dumps({'v': 1, 's': rec})))
                 pg = ctx.new_page()
-                pg.set_default_timeout(240000)   # s150c: 30 s screenshot timeouts on tall pages (Jonathan 2026-10-24: no wrappers)
+                pg.set_default_timeout(240000)   # s150c: 30 s screenshot timeouts on tall pages (2026-10-24: no wrappers)
                 pg.goto('file://' + os.path.abspath(a.page) + '?axall#' + bids[0]); pg.wait_for_timeout(2500)
                 if a.css:
                     pg.add_style_tag(content=open(a.css, encoding='utf-8').read()); pg.wait_for_timeout(300)

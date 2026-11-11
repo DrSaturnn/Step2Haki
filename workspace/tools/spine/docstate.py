@@ -30,8 +30,8 @@ import docs_path  # noqa: E402
 KEEP = 2
 SHIPLOG_HEAD = ('# Step2Haki ship log (append only)\n\n'
                 'State entries moved out of STEP2HAKI_HANDOFF.md by tools/spine/docstate.py sync, oldest first. Read by grep on\n'
-                'the batch id (grep -n "^- \\*\\*s172 " docs/SHIPLOG.md), never whole. Entries older than s160 are in the public\n'
-                'repo, workspace/repair/efficiency/STATE_ARCHIVE.md. Open follow-ups live in docs/OPEN_WORK.md.\n')
+                'the batch id (grep -n "^- \\*\\*s172 " docs/SHIPLOG.md), never whole. Entries older than s160 are in\n'
+                'docs/archive_public/STATE_ARCHIVE.md. Open follow-ups live in docs/OPEN_WORK.md.\n')
 
 
 def sync(docs, date=None):

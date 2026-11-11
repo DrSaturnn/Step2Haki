@@ -1,4 +1,4 @@
-"""Pilot (not shipped), s161b candidate: one home per brief in the sidebar (Jonathan 2026-11-03, "lets do one home per brief").
+"""Pilot (not shipped), s161b candidate: one home per brief in the sidebar (2026-11-03).
 A brief listed under Presentations and under its system has one home, its system tile: the step rail always sits there and
 only that tile is current. The Presentations tile is marked (a dot), never current. A group the sidebar opened itself
 closes when the reader moves to a brief in another group, with the list held still. The old s141 nesting stops moving the
@@ -30,7 +30,7 @@ sub("""  function setBrief(id){   // s146c: a hub has two tiles; the rail follow
     drawRail(it);
     keep(it.el, !!prev, true);
   }""",
-"""  function setBrief(id){   // s161b (Jonathan 2026-11-03, "one home per brief"): the rail always sits under the home tile (the system tile; a
+"""  function setBrief(id){   // s161b (2026-11-03): the rail always sits under the home tile (the system tile; a
                            // Presentations-only brief's home is its Presentations tile); the other tile is marked, never current (was s146c: the
                            // rail followed the tile clicked or the row scrolled from, so it hopped between groups and depended on scroll direction)
     var prev = cur.brief, all = tiles[id] || [], it = byId[id] || null, s = scroller();
@@ -76,7 +76,7 @@ sub("""    document.body.classList.toggle('ax-nest', WIDE.matches);
     if(!WIDE.matches || window.AXN){ putBack(); return; }   // s161b: the s143 sidebar draws its own rail""")
 
 
-# 6. r2 (Jonathan 2026-11-03, "can we fix the presentations list?"): browsing from Presentations keeps the sidebar on
+# 6. r2 (2026-11-03): browsing from Presentations keeps the sidebar on
 #    Presentations. A click on a Presentations tile sets stay; while it is set the sidebar never scrolls toward the home
 #    rail, and it follows the current brief's Presentations tile (the dot) when there is one. A click on a system tile or
 #    a step ends it. The rail stays home under the system tile throughout.
@@ -89,7 +89,7 @@ sub("""  function keep(n, smooth, top){
 sub("""    if(a.classList.contains('axn-s')) go(a.getAttribute('href').slice(1), +a.dataset.i);""",
 """    if(a.classList.contains('axn-s')){ stay = null; go(a.getAttribute('href').slice(1), +a.dataset.i); }""")
 
-# 7. r5 (Jonathan 2026-11-03: "make the shelf specific drop down in the rail rather than settings"; r4's subtitle
+# 7. r5 (2026-11-03; r4's subtitle
 #    switcher: "no it should be more obvious tbf"): a shelf card sits between the brand row and the search, always shown:
 #    an accent book icon, a small "Shelf" label over the shelf name in bold, and a chevron. The page's shelf <select> lies
 #    invisibly over the card, so the system picker opens and every shelf script keeps working. It leaves the sheet.
@@ -127,7 +127,7 @@ sub("""#nav.axn .axn-sub{white-space:nowrap;overflow:hidden;text-overflow:ellips
 #nav.axn .axn-shelfrow .ch{display:flex;color:var(--axn-mute)}
 #nav.axn .axn-shelfrow select{position:absolute;inset:0;width:100%;height:100%;margin:0;padding:0;border:0;border-radius:14px;opacity:0;cursor:pointer;font-size:16px;-webkit-appearance:none;appearance:none;background:none;box-shadow:none}""")
 
-# 8. r3 (Jonathan 2026-11-03, "can you make the default settings flat?"): the flat theme is on unless the reader has
+# 8. r3 (2026-11-03): the flat theme is on unless the reader has
 #    turned it off (a stored '0' keeps sculpted).
 sub("""  if(localStorage.getItem('ax-flat')==='1') b.classList.add('flat');""",
 """  if(localStorage.getItem('ax-flat')!=='0') b.classList.add('flat');   // s161b r3: flat is the default""")

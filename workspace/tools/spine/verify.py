@@ -54,7 +54,7 @@ PY = sys.executable
 # MIGRATION_CONTRACT V1 allowlist, plus Roman numerals and clock times
 ACR_OK = {'CRASH', 'ST', 'GI', 'COVID', 'SARS', 'II', 'III', 'HR', 'RR', 'BP', 'IV', 'US', 'NBME',
           'VI', 'VII', 'VIII', 'IX', 'XI', 'XII', 'AM', 'PM'}
-# the shared allowlist (Jonathan 2026-10-12): very common labs and imaging written short; everything else spelled out
+# the shared allowlist (2026-10-12): very common labs and imaging written short; everything else spelled out
 ABBREV = os.path.join(HERE, '..', '..', 'repair', 'efficiency', 'ABBREV.json')
 if os.path.exists(ABBREV):
     _ab = json.load(open(ABBREV, encoding='utf-8'))
@@ -429,7 +429,7 @@ class Verify:
     # ---- 10. the whole-picture gate: mechanical checks are necessary, never sufficient
     PARTS = {'acc': ('brief', 'live', 'bank', 'facts', 'claims', 'specs'), 'read': ('brief', 'live', 'siblings', 'specs'),
              'display': ('brief', 'live', 'display', 'specs'), 'flags': ('outline', 'facts', 'live')}
-    # Jonathan 2026-10-24 (no screenshots): READY needs acc, read and flags; a display receipt counts only when it is
+    # 2026-10-24 (no screenshots): READY needs acc, read and flags; a display receipt counts only when it is
     # current (a layout or new display-pattern batch still runs the display part, and its FAIL still blocks)
     OPTIONAL = ('display',)
     PAGE = os.path.join(WS, 'index.html')
@@ -439,7 +439,7 @@ class Verify:
     def deps(self, html=None, claims=None, outline=None):
         """the dependency hashes each review part is bound to (10 hex characters each). 'live' is the brief as it
         stands on the page: any edit to the live brief, however small (an approval-gated fix between rebuilds), makes
-        every receipt of that brief stale, so it is reviewed again in R5 or R7 (Jonathan 2026-10-12)."""
+        every receipt of that brief stale, so it is reviewed again in R5 or R7 (2026-10-12)."""
         def h(b):
             return hashlib.sha1(b if isinstance(b, bytes) else b.encode('utf-8')).hexdigest()[:10]
 
@@ -467,7 +467,7 @@ class Verify:
 
     def holistic(self):
         """READY needs the current acc, read and flags receipts to say PASS on what each judged; display counts only when
-        its receipt is current (Jonathan 2026-10-24: no screenshots)"""
+        its receipt is current (2026-10-24: no screenshots)"""
         self.ready = 'no review'
         bid = getattr(self, 'bid', None)
         if not bid or not getattr(self, 'brief_html', ''):

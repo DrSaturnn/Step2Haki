@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""squeeze_check (Jonathan 2026-10-24, no screenshots): find text squeezed into a narrow column on a phone, from the
+"""squeeze_check (2026-10-24, no screenshots): find text squeezed into a narrow column on a phone, from the
 rendered DOM, with no images. Replaces the screenshot reading for the runbook's "widen, never shorten" rule.
 
 A text block is flagged when, at a 390 px phone width, it wraps to 3 or more lines with 2.5 words per line or fewer and

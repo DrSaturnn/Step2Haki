@@ -87,6 +87,9 @@ def batch_total(wave):
     return rev, leads, lt
 
 
+CLOSE_ALLOWANCE = 3000000   # WAVE.json max_lead_close_tokens overrides it
+
+
 def lead(argv):
     for p in C.lead_transcripts():
         u, f = C.usage(p), C.first_context(p) or {}
@@ -99,9 +102,12 @@ def lead(argv):
         rev, leads, lt = batch_total(wave)
         w = C.wave() or {}
         cap = w.get('max_lead_tokens') if w.get('id') == wave else None
+        close = w.get('max_lead_close_tokens', CLOSE_ALLOWANCE) if cap else None
         print('batch %s: reviewers %d agents, %d calls, %d tokens; lead %d session row(s), %d tokens%s; total %d tokens%s'
               % (wave, rev['agents'], rev['calls'], rev['tokens'], len(leads), lt,
-                 ' (lead cap %s, shown only; the gate enforces reviewer caps)' % cap if cap else '',
+                 ' (lead cap %s, hard before the report; after "ship", the ship and the closing steps may spend %s more, '
+                 'reported in the closing message: %s left before the cap, %s with the closing allowance; shown only, '
+                 'the gate enforces reviewer caps)' % (cap, close, cap - lt, cap + close - lt) if cap else '',
                  rev['tokens'] + lt, ' (the wave budget, %s tokens, caps the reviewers)' % w.get('max_tokens') if w.get('id') == wave else ''))
         print('ledger: %s' % os.path.relpath(LEAD, C.WS))
     return 0

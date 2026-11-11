@@ -31,7 +31,7 @@ from pagelib import read_page, brief_by_id  # noqa: E402
 import w5split  # noqa: E402
 import extract as X  # noqa: E402
 
-NOTE = 's148h (Jonathan 2026-10-20: per-choice reasons; First step split)'
+NOTE = 's148h (2026-10-20: per-choice reasons; First step split)'
 ORDER = ('psychosis-duration voices sz-psychosocial bipolar-mania mdd cluster-b panic somatic gppd delirium toxidrome '
          'substance psych-medical disruptive-behavior ssri-effects antipsych-effects lithium-effects tca-tox suicide-risk '
          'ipv tics peds-sleep bs-learning').split()

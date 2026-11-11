@@ -1,7 +1,7 @@
-/* s137: site layout Phase 2, display layer (claude/pending/S137.md; Jonathan 2026-10-14 "Display layer").
+/* s137: site layout Phase 2, display layer (claude/pending/S137.md; 2026-10-14 "Display layer").
    Presentation only: never adds, removes or rewords brief content; the brief HTML in the page is unchanged.
    1. Diagnostic workup as Test | Result | Means tables per numbered zone (header cells, row spans, group tints).
-   2. Clue table column "Next best step" (Jonathan 2026-10-13; was "Next move").
+   2. Clue table column  (2026-10-13; was "Next move").
    3. Mnemonic rows: the key text sits in its own cell beside the tinted capital.
    4. Desktop: the current brief's section steps nest under it in the sidebar (fill-to-current-link rule kept). */
 (function(){

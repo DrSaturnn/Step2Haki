@@ -5,8 +5,10 @@
 
 Prints every document the batch type reads, with the line range and size of each section (read them with
 sed -n A,Bp), the total against the old ten-document order read whole, and the doc and state checks
-(doc_lint). With --plan FILE it checks the plan file (doc_lint.plan_errors); with --batch ID as well, a passing plan
-is copied to repair/<batch>/PLAN.md, the batch record from then on. The table in the runbook ("Read order by batch
+(doc_lint). With --batch ID it first refuses a batch that is already open (the handoff State shows the id OPEN, or the
+branch wip/<id> exists on the remote of either repo): a second chat continues an open batch through RESUME path A and
+never launches it again. With --plan FILE it checks the plan file (doc_lint.plan_errors); with --batch ID as well, a
+passing plan is copied to docs/batches/<batch>/PLAN.md in the private repo, the batch record from then on. The table in the runbook ("Read order by batch
 type") names the same documents; ORDER below is what a launch follows.
 
 A document outside a type's list is grepped for the topic of the edit in hand. DECISIONS_DIGEST is never read whole.
@@ -14,6 +16,7 @@ A document outside a type's list is grepped for the topic of the edit in hand. D
 import os
 import re
 import shutil
+import subprocess
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -36,7 +39,7 @@ ORDER = {
     'plan': [('@RESUME.md', ['C.', 'Reading rules']), ('@PLAN_TEMPLATE.md', None), (R, ['11.'])],
 }
 ALSO = {
-    'content': ['the batch section of the plan file (claude/pending/, or repair/<batch>/PLAN.md)',
+    'content': ['the batch section of the plan file (claude/pending/, or private docs/batches/<batch>/PLAN.md)',
                 'BRIEF_AMEND_LIST rows of the batch briefs (grep, private claude/pending/BRIEF_AMEND_LIST.md)',
                 'conditional PASS: claude/pending/POST_SHIP_R3.md section 2 (project)'],
     'patch': ['the intake proposals named in the launch prompt', 'BRIEF_AMEND_LIST rows of the batch briefs (grep)'],
@@ -65,9 +68,40 @@ def sections(text):
     return out
 
 
+def remote_heads(repo, batch):
+    """names of the remote branches wip/<batch> of one clone (empty when there is none or the remote cannot be read)"""
+    try:
+        r = subprocess.run(['git', '-C', repo, 'ls-remote', '--heads', 'origin', 'wip/' + batch],
+                           capture_output=True, text=True, timeout=60)
+    except (OSError, subprocess.SubprocessError):
+        return []
+    return [l.split('\t')[-1] for l in r.stdout.splitlines() if l.strip()]
+
+
+def open_reasons(batch, handoff_text, heads=remote_heads, repos=None):
+    """why a launch of batch must stop: one line per sign that the batch is already open"""
+    why = []
+    for head, _ in doc_lint.state_entries(handoff_text):
+        if re.match(r'%s OPEN\b' % re.escape(batch), head):
+            why.append('the handoff State shows "%s"' % head)
+    if repos is None:
+        repos = [('public', os.path.dirname(WS)), ('private', docs_path.private_root())]
+    for name, repo in repos:
+        if heads(repo, batch):
+            why.append('the %s repo has the remote branch wip/%s' % (name, batch))
+    return why
+
+
 def main(a):
     if not a or a[0] not in ORDER:
         print(__doc__); return 2
+    if '--batch' in a:
+        b = a[a.index('--batch') + 1]
+        why = open_reasons(b, open(path(H), encoding='utf-8').read())
+        if why:
+            print('LAUNCH REFUSED: batch %s is already open (%s). Continue it in this chat through RESUME path A '
+                  '("Step2Haki: continue the current batch per claude/RESUME.md"); a new batch needs a new id.' % (b, '; '.join(why)))
+            return 1
     kind = a[0]; total = 0; missing = 0
     print('Core rules (STANDING_DIRECTIONS):')
     for l in doc_lint.core_rules(open(path(S), encoding='utf-8').read()):
@@ -108,11 +142,11 @@ def main(a):
         if perr:
             rc = 1
         elif '--batch' in a:
-            dest = os.path.join(WS, 'repair', a[a.index('--batch') + 1], 'PLAN.md')
+            dest = os.path.join(docs_path.batch_dir(a[a.index('--batch') + 1]), 'PLAN.md')
             os.makedirs(os.path.dirname(dest), exist_ok=True)
             if os.path.abspath(plan) != dest:
                 shutil.copyfile(plan, dest)
-            print('Plan file passes; batch record: %s' % os.path.relpath(dest, WS))
+            print('Plan file passes; batch record (private repo): %s' % os.path.relpath(dest, docs_path.private_root()))
     for e in errs:
         print('  DOC-LINT', e)
     print('DOC-LINT %s' % ('FAIL (%d)' % len(errs) if errs else 'PASS'))

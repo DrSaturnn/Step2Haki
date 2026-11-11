@@ -316,7 +316,7 @@ try:
                     ('echo {} > workspace/local/stamps/gate/gate.json', 2),
                     ('python3 tools/stamps.py show', 0), ('AX_STAMPS=off tools/ship.sh s1 "m" --checks-only', 0)):
         expect('lead %s' % c[:44], run('callgate.py', {'tool_name': 'Bash', 'tool_input': {'command': c}}), want)
-    # ---- H4 per-launch limit (Jonathan 2026-10-12): a Budget: line lowers the role budget, never raises it
+    # ---- H4 per-launch limit (2026-10-12): a Budget: line lowers the role budget, never raises it
     for aid, line in (('b1', 'Budget: 1'), ('b2', 'Budget: 99 calls'), ('b3', 'Budget: none')):
         PB = 'Role: probe\nPlan step: R2\nLane: %s\n%s\n\nprobe %s' % (LANE, line, aid)
         transcript(aid, PB)
@@ -446,7 +446,7 @@ try:
     expect('check after the batch file changed post-approval', (chk().returncode, ''), 1)
     open(bf, 'w').write(keep)
     expect('check with the approved batch restored', (chk().returncode, ''), 0)
-    # 2026-10-24 (Jonathan): no screenshots; present binds the batch, changelog and page alone
+    # 2026-10-24: no screenshots; present binds the batch, changelog and page alone
     r = subprocess.run([sys.executable, os.path.join(H, 'approval.py'), 'present', TB], env=ENV, capture_output=True, text=True)
     expect('present with no screenshots', (r.returncode, r.stdout + r.stderr), 0)
     expect('check after a new presentation, before ship', (chk().returncode, ''), 1)
@@ -454,6 +454,16 @@ try:
     expect('approval of a presentation with no screenshots', (chk().returncode, ''), 0)
     open(page, 'a').write('<!-- changed -->')
     expect('check after the page changed', (chk().returncode, ''), 1)
+    # a tools batch has no changelog entry: present --tools records without one, and check follows the record
+    E2 = {k: v for k, v in ENV.items() if k != 'AX_TEST_LOG'}
+    r = subprocess.run([sys.executable, os.path.join(H, 'approval.py'), 'present', TB], env=E2, capture_output=True, text=True)
+    expect('present with no changelog entry and no --tools', (r.returncode, ''), 1)
+    r = subprocess.run([sys.executable, os.path.join(H, 'approval.py'), 'present', TB, '--tools'], env=E2, capture_output=True, text=True)
+    expect('present --tools with no changelog entry', (r.returncode, r.stdout + r.stderr), 0)
+    r = subprocess.run([sys.executable, os.path.join(H, 'approval.py'), 'present', 's000nofiles', '--tools'], env=E2, capture_output=True, text=True)
+    expect('present --tools for a batch with no edit files', (r.returncode, r.stdout + r.stderr), 0)
+    r = subprocess.run([sys.executable, os.path.join(H, 'approval.py'), 'present', 's000nofiles'], env=E2, capture_output=True, text=True)
+    expect('present without --tools for a batch with no edit files', (r.returncode, ''), 1)
 finally:
     shutil.rmtree(T, ignore_errors=True)
     shutil.rmtree(TBD, ignore_errors=True)
@@ -482,7 +492,7 @@ try:
         os.makedirs(os.path.dirname(p), exist_ok=True)
         open(p, 'w').write('x')
         _g('add', '-f', rel) if force else _g('add', rel)
-        r = _g('commit', '-qm', 't')
+        r = _g('commit', '-qm', 'test: commit one file')
         _g('reset', '-q', '--hard', 'HEAD')
         _g('clean', '-qfdx')
         return r.returncode
@@ -497,7 +507,7 @@ try:
     _g('-c', 'core.hooksPath=/dev/null', 'add', 'workspace/tools/old/facts.json')
     _g('-c', 'core.hooksPath=/dev/null', 'commit', '-qm', 'seed a leak')
     _g('rm', '-q', '--cached', 'workspace/tools/old/facts.json')
-    expect('guard: untracking a leaked file is allowed', (_g('commit', '-qm', 'untrack').returncode, ''), 0)
+    expect('guard: untracking a leaked file is allowed', (_g('commit', '-qm', 'chore: untrack a file').returncode, ''), 0)
 finally:
     shutil.rmtree(_G, ignore_errors=True)
 print('test_hooks: %d passed, %d failed' % (ok, bad))
