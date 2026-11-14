@@ -369,7 +369,7 @@ class Verify:
         P.write_page(pv, new)
         self.G('build', 'preview %+d chars' % (len(new) - len(page)))
         for name, args, okf in [
-                ('gate', [PY, 'tools/gate.py', pv], lambda rc, o: rc == 0),
+                ('gate', [PY, 'tools/gate.py', pv, '--no-doc-lint'], lambda rc, o: rc == 0),
                 ('render.js', ['node', 'tools/render.js', pv], lambda rc, o: rc == 0),
                 ('preflight', [PY, 'tools/preflight.py', pv, '--base', 'HEAD'], lambda rc, o: self.p1_ok(o, new)),
                 ('vendor_scan', [PY, 'tools/vendor_scan.py', '--page', pv], lambda rc, o: rc == 0 and ' 0 flagged' in o),
@@ -693,7 +693,8 @@ def main(argv):
     # s171b (D-20261109-4): a full run that ends READY writes a stamp of its inputs (tools/stamps.py), so ready_gate.py
     # accepts the S8 verdict at the ship and runs verify again only when an input changed. The key is taken before and
     # after the run; a run whose inputs moved under it writes no stamp.
-    stamp = not fast and '--mech' not in argv
+    stamp = not fast and '--mech' not in argv and '--no-stamp' not in argv   # --no-stamp: tools/test_stamps.py
+    argv = [a for a in argv if a != '--no-stamp']
     if stamp:
         import stamps as ST
         try:

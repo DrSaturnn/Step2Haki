@@ -2,7 +2,8 @@
 """patch: one command per step of a patch batch (2026-10-24: "we need to be even more token efficient with the
 whole process"; runbook section 8b). The lead runs these and reads only their one-line outputs; details go to files.
 
-  python3 tools/spine/patch.py setup <batch>                  hooks (install, /root copy, tests), start-up context
+  python3 tools/spine/patch.py setup <batch>                  the live hook probe (stops when no hook fired on this
+                                                              command), the git guard, hook tests, start-up context
   python3 tools/spine/patch.py s3 <batch> <folder>...         facts_from_spec + build + copy 10_*.json, verify --mech,
                                                               batch page, gate, render, preflight, vendor, squeeze
   python3 tools/spine/patch.py review <batch> <round> --opus <folder,...> --sonnet <folder,...> [--since-round K]
@@ -69,14 +70,118 @@ def logdir(batch):
 
 
 # ---------------------------------------------------------------- setup
+HOOK_MARK = 'tools/hooks/callgate.py'
+PROBE_WINDOW = 120   # seconds between the hook's mark and this command starting
+
+
+def _settings():
+    out = []
+    if os.environ.get('AX_HOOK_STATE') and os.environ.get('AX_SETTINGS'):   # test_hooks.py only
+        return [p for p in os.environ['AX_SETTINGS'].split(os.pathsep) if os.path.isfile(p)]
+    for p in (os.path.expanduser('~/.claude/settings.json'), '/home/claude/.claude/settings.json', '/root/.claude/settings.json'):
+        if p not in out and os.path.isfile(p):
+            out.append(p)
+    return out
+
+
+def _settings_hooks(p):
+    try:
+        return HOOK_MARK in open(p, encoding='utf-8').read()
+    except OSError:
+        return False
+
+
+def _strip_settings(p):
+    """remove the Step2Haki hooks install.sh wrote from one settings file; anything else in the file stays"""
+    cfg = json.load(open(p, encoding='utf-8'))
+    hooks = cfg.get('hooks') or {}
+    for ev in list(hooks):
+        hooks[ev] = [h for h in hooks[ev] if 'tools/hooks/' not in json.dumps(h)]
+        if not hooks[ev]:
+            del hooks[ev]
+    if not hooks:
+        cfg.pop('hooks', None)
+    json.dump(cfg, open(p, 'w', encoding='utf-8'), indent=1)
+
+
 def setup(batch):
-    sh('bash tools/hooks/install.sh', check=True)
-    os.makedirs('/root/.claude', exist_ok=True)
-    os.makedirs('/home/claude/.config/axbx/hooks', exist_ok=True)
-    shutil.copy('/home/claude/.claude/settings.json', '/root/.claude/settings.json')
-    t = sh([sys.executable, 'tools/hooks/test_hooks.py']).stdout.strip().splitlines()[-1:]
+    """the live hook probe first: the PreToolUse hook marks this very command (callgate.beat writes
+    setup_probe.json when the lead's command is `patch.py setup`). No fresh mark means the harness did not run the
+    hooks, and setup stops with a non-zero exit instead of reporting "hooks installed" (once the settings fallback was
+    installed, this harness never ran it, and the plugin's own hooks deferred to it, so no hook fired all batch)."""
+    import time
+    sys.path.insert(0, os.path.join(WS, 'tools', 'hooks'))
+    import common as C
+    now = time.time()
+    pp, sp = C.state('setup_probe.json'), C.state('setup_state.json')
+    try:
+        probe = json.load(open(pp, encoding='utf-8'))
+        os.remove(pp)                               # a mark proves one command only
+    except (OSError, ValueError):
+        probe = None
+    try:
+        st = json.load(open(sp, encoding='utf-8'))
+    except (OSError, ValueError):
+        st = {}
+    live = bool(probe) and -5 <= now - probe.get('epoch', 0) <= PROBE_WINDOW
+    with_hooks = [p for p in _settings() if _settings_hooks(p)]
+    if not live:
+        if with_hooks:
+            for p in with_hooks:
+                _strip_settings(p)
+            st['settings_dead'] = True
+            json.dump(st, open(sp, 'w', encoding='utf-8'))
+            C.log_event('setup-probe', live=False, batch=batch, action='removed settings hooks')
+            print('setup %s: HOOKS NOT LIVE. The settings hooks (%s) did not fire on this command, so this harness does '
+                  'not run them, and while they are installed the plugin\'s hooks defer to them (plugin hooks/run.sh). '
+                  'They are removed. Run this command once more: the plugin\'s hooks get the next call.' % (batch, ', '.join(with_hooks)))
+            sys.exit(3)
+        if not st.get('settings_dead'):
+            sh('bash tools/hooks/install.sh', check=True)
+            os.makedirs('/root/.claude', exist_ok=True)
+            if os.path.abspath(os.path.expanduser('~/.claude/settings.json')) != '/home/claude/.claude/settings.json':
+                shutil.copy('/home/claude/.claude/settings.json', os.path.expanduser('~/.claude/settings.json'))
+            st['installed'] = True
+            json.dump(st, open(sp, 'w', encoding='utf-8'))
+            C.log_event('setup-probe', live=False, batch=batch, action='installed settings hooks')
+            print('setup %s: HOOKS NOT LIVE yet. No hook marked this command (no plugin hooks in this session); the '
+                  'settings hooks are installed. Run this command once more to probe them.' % batch)
+            sys.exit(3)
+        C.log_event('setup-probe', live=False, batch=batch, action='stop')
+        print('setup %s: HOOKS NOT LIVE. Neither the plugin\'s hooks nor the settings hooks fire in this harness. STOP: no '
+              'agent launch, no approval record and no context alarm will work (runbook section 6: a required hook '
+              'test fails). Tell the owner; do not run the batch.' % batch)
+        sys.exit(4)
+    route = 'settings' if with_hooks else 'plugin'
+    sh('bash tools/hooks/install.sh --no-settings', check=True)
+    C.log_event('setup-probe', live=True, batch=batch, route=route)
+    t = sh([sys.executable, 'tools/hooks/test_hooks.py'])
+    tl = t.stdout.strip().splitlines()[-1:]
     c = sh([sys.executable, 'tools/hooks/usage_ledger.py', '--context']).stdout.strip().splitlines()[-1:]
-    print('setup %s: hooks installed (/root/.claude copy); %s; context %s' % (batch, ' '.join(t), ' '.join(c)))
+    notes = []
+    try:
+        h6 = json.load(open(C.state('h6_live.json'), encoding='utf-8'))
+        if now - h6.get('epoch', 0) > 900:
+            h6 = None
+    except (OSError, ValueError):
+        h6 = None
+    if not h6:
+        notes.append('WARNING H6 context alarm NOT LIVE (no PostToolUse hook fired in the last 15 min; the plugin '
+                     'carries it from 0.3.1): watch the context by hand and restart by section 7')
+    if not probe.get('transcript'):
+        notes.append('WARNING no transcript file on disk in this harness (%s): H6, the usage ledger and the per-agent '
+                     'call gate cannot measure here' % (probe.get('transcript_path') or 'the hook input names none'))
+    kinds = set()
+    try:
+        kinds = {json.loads(l).get('kind') for l in open(C.state('events.jsonl'), encoding='utf-8') if l.strip()}
+    except (OSError, ValueError):
+        pass
+    if 'prompt-seen' not in kinds:
+        notes.append('note: no prompt-seen event yet (the approval hook is proven at the owner\'s next message)')
+    print('setup %s: HOOKS LIVE (%s route; the launch gate and call gate marked this command); %s; context %s%s' % (
+        batch, route, ' '.join(tl), ' '.join(c) or 'not measured', ''.join('\n  ' + n for n in notes)))
+    if t.returncode:
+        sys.exit(1)
 
 
 # ---------------------------------------------------------------- s3

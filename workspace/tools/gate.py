@@ -2,7 +2,7 @@
 """gate.py: mechanical invariants of the AxBx page (study-page-builder + board-brief contract).
 
 Usage
-  python3 tools/gate.py [page] [--base REF|FILE] [--attr-only REF|FILE] [--allow FILE] [--list]
+  python3 tools/gate.py [page] [--base REF|FILE] [--attr-only REF|FILE] [--allow FILE] [--no-doc-lint] [--list]
     page         default: <repo>/index.html
     --base       comparison for never-delete / id-immutability / version-bump checks (default HEAD;
                  'none' skips). A git ref resolves to REF:index.html; an existing path is read as a file.
@@ -695,7 +695,7 @@ def check_attr_only(page, ref_html, g):
 
 
 
-def check_lints(page, page_path, ref_html, g, attr_only=False):
+def check_lints(page, page_path, ref_html, g, attr_only=False, docs=True):
     """UI, doc and prose ratchets (D-20261106-11): counts may fall, never rise; a brief whose text changed carries no
     prose hits (skipped under --attr-only, which already forbids text changes). A missing baseline or rule file fails."""
     spine = os.path.join(REPO, 'tools', 'spine')
@@ -738,7 +738,9 @@ def check_lints(page, page_path, ref_html, g, attr_only=False):
         dg, st = docs_path.doc('DECISIONS_DIGEST.md'), docs_path.doc('STANDING_DIRECTIONS.md')
     except FileNotFoundError:
         dg = st = ''
-    if os.path.exists(dg) and os.path.exists(st):
+    if not docs:   # --no-doc-lint (verify's preview): the documents are judged by the ship gate and the launch gate
+        pass
+    elif os.path.exists(dg) and os.path.exists(st):
         dd = os.path.dirname(dg)   # stale paths in the rule documents; RESUME against the State; the State cap
         for e in doc_lint.stable_errors(dg, st, REPO) + doc_lint.state_errors(dd, REPO):
             g.fail('doc-lint', e[:80], e)
@@ -772,6 +774,8 @@ def main(argv):
     args, page_path, base, attr_ref = list(argv), None, 'HEAD', None
     allow_path = os.path.join(REPO, 'tools', 'gate_allowlist.txt')
     base_given = False
+    no_docs = '--no-doc-lint' in args
+    args = [a for a in args if a != '--no-doc-lint']
     if '--list' in args:
         for k, (d, fx) in CATALOG.items():
             print('%-18s %s\n%-18s fix: %s' % (k, d, '', fx))
@@ -800,7 +804,7 @@ def main(argv):
     ref_html = load_ref(base)
     if ref_html is not None:
         check_base(page, ref_html, bl, it, g)
-    check_lints(page, page_path, ref_html, g, attr_only=bool(attr_ref))
+    check_lints(page, page_path, ref_html, g, attr_only=bool(attr_ref), docs=not no_docs)
     n_attr = None
     if attr_ref:
         n_attr = check_attr_only(page, load_ref(attr_ref), g)

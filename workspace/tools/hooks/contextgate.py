@@ -52,6 +52,13 @@ def main():
     except ValueError:
         return 0
     tp = d.get('transcript_path') or ''
+    if not d.get('agent_id') and '/subagents/' not in tp:   # the lead's PostToolUse reached this hook (patch.py setup reads it)
+        try:
+            import time
+            json.dump({'epoch': time.time(), 'transcript': bool(tp and os.path.isfile(tp))},
+                      open(C.state('h6_live.json'), 'w', encoding='utf-8'))
+        except OSError:
+            pass
     if d.get('agent_id') or '/subagents/' in tp or not tp:
         return 0
     n = current(tp)
