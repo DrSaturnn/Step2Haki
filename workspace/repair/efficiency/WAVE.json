@@ -9,10 +9,10 @@
   "patch-review-opus",
   "probe"
  ],
- "max_agents": 24,
+ "max_agents": 26,
  "max_calls": 700,
  "max_tokens": 26000000,
- "set_by": "D-20261114-1",
+ "set_by": "D-20261114-3",
  "previous": {
   "id": "s173b",
   "note": "s173b patch, mood-anticonv held rewrite; shipped b0d7f6c 2026-11-11"
@@ -474,7 +474,7 @@
    "lead_tokens": 15000000
   },
   "s174": {
-   "agents": 24,
+   "agents": 26,
    "calls": 700,
    "tokens": 26000000,
    "lead_tokens": 45000000
