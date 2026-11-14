@@ -2,6 +2,32 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-11-14 s174: content(briefs): rewrite thirteen presentation hubs in review-book style
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Briefs changed (13):
+  - scaphoid (Wrist and Hand Pain and Numbness): prose edited (+558 chars)
+  - backpain (Low Back Pain in an Adult): prose edited (+684 chars)
+  - hippos (Hip Injury in an Adult): prose edited (+53 chars)
+  - gtps (Hip and Thigh Pain and Numbness): prose edited (+122 chars)
+  - septic-bursitis (Hot Joint or Bursa in an Adult): prose edited (+291 chars)
+  - limp (The Limping Child): prose edited (-1230 chars)
+  - nursemaid (Arm Injury in a Young Child): prose edited (+694 chars)
+  - growing-pains (Leg Pain in a Child): prose edited (-843 chars)
+  - bone-tumors (Bone Lesions in a Child): prose edited (+237 chars)
+  - shoulder-rom (Shoulder Pain): prose edited (+661 chars)
+  - ped-murmur (Heart Murmurs in a Child): prose edited (+174 chars)
+  - right-murmurs (Heart Murmurs in an Adult): prose edited (-75 chars)
+  - newborn-cyanosis (Cyanosis in the Newborn): prose edited (+77 chars)
+Other page changes (nav, headers, scripts): +704 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 54 checks, base HEAD | allowlisted 21 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0 (stamp 2026-11-14 16:20: same inputs)
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
 ## 2026-11-11 s173b: feat(briefs): rewrite the mood stabilizer card in review-book style
 
 ```

@@ -61,6 +61,20 @@ if __name__=='__main__':build(HERE)
 '''
 
 
+
+LOCK_WAIVER = re.compile(r'\bH\d+\b')
+
+
+def copy_lock_keys(x, d):
+    """Copy the lock keys of a lane change into its delta change. "lock": false (meaning_lock skips the change) is
+    honored only for a header-list rename whose reason names the header row (Hn), so a lane cannot waive the lock
+    on a content line."""
+    for k in ('lock_ok', 'lock_reason', 'cut', 'note'):
+        if x.get(k):
+            d[k] = x[k]
+    if x.get('lock') is False and LOCK_WAIVER.search(x.get('lock_reason') or ''):
+        d['lock'] = False
+
 def sh(cmd):
     return subprocess.run(cmd, capture_output=True, text=True, cwd=WS)
 
@@ -412,9 +426,7 @@ def collect(batch, bid):
                 probs.append('%s carried_by %s: not a changed unit' % (c['uid'], j))
         if cb:
             d['carried_by'] = cb
-        for k in ('lock_ok', 'lock_reason', 'cut', 'note'):
-            if x.get(k):
-                d[k] = x[k]
+        copy_lock_keys(x, d)
         new_plain = norm(plain(c['new']))
         old_plain = norm(u.get('text') or plain(c['old']))
         # an empty "claims" list counts as unset: dropping a claim takes "cut" (s171: lanes wrote "claims": [] on raws)
