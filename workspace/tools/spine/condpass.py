@@ -185,7 +185,9 @@ def forms(t, kind):
 
 def undo(text, reps, kind):
     """replay the replacements backwards on one file's text. Returns (text, applied ids, problem or None).
-    A replacement whose new text is absent was not applied; one whose new text occurs more than once is ambiguous."""
+    A replacement whose new text is absent was not applied; in html, one whose new text occurs more than once is
+    ambiguous. In json (the claim map) one changed line can sit in several claims, so every occurrence is undone; the
+    caller's hash check still decides whether the result is the judged state."""
     applied = []
     for n, old, new in reps:
         hit = None
@@ -198,13 +200,13 @@ def undo(text, reps, kind):
             pairs += [(H.escape(bn, quote=True), H.escape(bo, quote=True))]
         for fo_new, fo_old in pairs:
             c = text.count(fo_new)
-            if c > 1:
+            if c > 1 and kind != 'json':
                 return text, applied, 'replacement %s is ambiguous (its new text occurs %d times)' % (n, c)
-            if c == 1:
+            if c:
                 hit = (fo_new, fo_old)
                 break
         if hit:
-            text = text.replace(hit[0], hit[1], 1)
+            text = text.replace(hit[0], hit[1], -1 if kind == 'json' else 1)
             applied.append(n)
     return text, applied, None
 
