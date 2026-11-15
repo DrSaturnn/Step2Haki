@@ -185,6 +185,26 @@ def setup(batch):
 
 
 # ---------------------------------------------------------------- s3
+def outline_guard(f, batch):
+    """a rewrite moves outline.json to outline_before_<batch>.json so verify builds from the delta; a restore from the
+    private copy can bring the old file back. Removes it when it equals the moved copy; returns a STOP message when the
+    two differ, None when there is nothing to do."""
+    o, b = os.path.join(f, 'outline.json'), os.path.join(f, 'outline_before_%s.json' % batch)
+    if not (os.path.exists(o) and os.path.exists(b)):
+        return None
+    if open(o, 'rb').read() == open(b, 'rb').read():
+        os.remove(o)
+        return 'removed a restored outline.json (same as outline_before_%s.json)' % batch
+    return 'STOP: outline.json and outline_before_%s.json differ; verify would render the outline, not the rewrite' % batch
+
+
+def stale_delta(f, batch):
+    """True when the lane file was edited after the delta was last collected"""
+    rw = os.path.join(f, 'rewrite_%s' % batch, 'rewrite_%s.json' % batch)
+    d = os.path.join(f, 'delta_%s.json' % batch)
+    return os.path.exists(rw) and (not os.path.exists(d) or os.path.getmtime(rw) > os.path.getmtime(d))
+
+
 def s3(batch, folders):
     L = logdir(batch)
     os.makedirs(os.path.join(WS, 'repair', batch), exist_ok=True)
@@ -192,6 +212,19 @@ def s3(batch, folders):
     for x in folders:
         f = folder(x)
         b = brief_id(f, batch)
+        g = outline_guard(f, batch)
+        if g and g.startswith('STOP'):
+            res.append('%s %s' % (b, g))
+            continue
+        if g:
+            res.append('%s %s' % (b, g))
+        if stale_delta(f, batch):
+            r = sh([sys.executable, 'tools/spine/rewrite_lanes.py', 'check', batch, b])
+            fx = [l for l in (r.stdout + r.stderr).splitlines() if l.startswith('FIX')]
+            if r.returncode:
+                res.append('%s lane check FAIL (the lane file was newer than its delta): %s' % (b, ' | '.join(fx)[:300]))
+                continue
+            res.append('%s delta re-collected (the lane file was newer)' % b)
         spec = os.path.join(f, 'facts_spec_%s.json' % batch)
         if os.path.exists(spec):
             r = sh([sys.executable, 'tools/spine/facts_from_spec.py', spec])
@@ -215,7 +248,8 @@ def s3(batch, folders):
                       ('preflight', [sys.executable, 'tools/preflight.py', page, '--base', 'HEAD']),
                       ('vendor', [sys.executable, 'tools/vendor_scan.py', '--page', page]),
                       ('squeeze', [sys.executable, 'tools/spine/squeeze_check.py', page,
-                                   ','.join(brief_id(folder(x), batch) for x in folders)])):
+                                   ','.join(brief_id(folder(x), batch) for x in folders)]),
+                      ('size', [sys.executable, 'tools/spine/size_check.py', page])):
         r = sh(cmd)
         open(os.path.join(L, 's3_%s.log' % name), 'w').write(r.stdout + r.stderr)
         lines = [l for l in (r.stdout + r.stderr).splitlines() if l.strip()]
@@ -460,6 +494,10 @@ def sync(batch, msg, folders):
         dst = os.path.join(PRIV, 'local-only', rel)
         os.makedirs(dst, exist_ok=True)
         sh(['cp', '-a', f + '/.', dst + '/'], check=True)
+        if os.path.exists(os.path.join(f, 'outline_before_%s.json' % batch)) and not os.path.exists(os.path.join(f, 'outline.json')):
+            stale = os.path.join(dst, 'outline.json')
+            if os.path.exists(stale):
+                os.remove(stale)
     # s170 chat 4: the lane receipts (repair/efficiency/lanes/<batch>) and label caches fetched in the batch
     # (repair/sources/web) are gitignored in the public repo; chat 3 lost both with its container.
     # local/stamps: the check stamps (tools/stamps.py), so the next chat's restore starts with them

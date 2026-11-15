@@ -478,6 +478,33 @@ def collect(batch, bid):
     return probs, len(out)
 
 
+def claim_ids(f):
+    """{claim key: fact ids} from claim_map.json; a claim from new_claims (id 900 and up) is keyed by its text, since
+    those ids are numbered in order at each build"""
+    p = os.path.join(f, 'claim_map.json')
+    if not os.path.exists(p):
+        return {}
+    out = {}
+    for c in json.load(open(p, encoding='utf-8')).get('claims', []):
+        n = re.match(r'S(\d+)$', c.get('id', ''))
+        k = c['id'] if n and int(n.group(1)) < 900 else 'text:' + c.get('new_text', '')
+        out[k] = set(c.get('derived_from') or [])
+    return out
+
+
+def lost_ids(before, after, batch):
+    """problems for fact ids a claim held in claim_map.json before the build and lost in it: the build rebuilds the
+    claim map from claims_before_<batch>.json, so an id added there by hand is dropped"""
+    out = []
+    for k, ids in before.items():
+        gone = sorted(ids - after.get(k, ids))
+        if gone and k in after:
+            out.append('claim %s lost fact ids %s in the rebuild (claim_map.json is rebuilt from claims_before_%s.json; '
+                       'add them as a new_claims entry over the same text in rewrite_%s.json)'
+                       % (k if not k.startswith('text:') else k[5:65], ', '.join(gone), batch, batch))
+    return out
+
+
 def check(batch, bid):
     probs, n = collect(batch, bid)
     f = folder_of(bid)
@@ -486,9 +513,12 @@ def check(batch, bid):
         if r.returncode:
             probs.append('facts_from_spec: ' + (r.stdout + r.stderr).strip()[-300:])
     if not probs:
+        held = claim_ids(f)
         r = sh([sys.executable, os.path.join(f, 'build.py')])
         if r.returncode:
             probs.append('build.py: ' + (r.stdout + r.stderr).strip()[-400:])
+        else:
+            probs += lost_ids(held, claim_ids(f), batch)
     if not probs:
         import meaning_lock as ML
         import prose_lint as pl
