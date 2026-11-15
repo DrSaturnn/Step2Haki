@@ -464,6 +464,49 @@ try:
     expect('present --tools for a batch with no edit files', (r.returncode, r.stdout + r.stderr), 0)
     r = subprocess.run([sys.executable, os.path.join(H, 'approval.py'), 'present', 's000nofiles'], env=E2, capture_output=True, text=True)
     expect('present without --tools for a batch with no edit files', (r.returncode, ''), 1)
+    # ---- call gate with no transcript on disk: the role and lane come from the launch record
+    import time as _t
+    json.dump({'id': 'NT', 'open': True, 'plan_step': 'R2', 'max_agents': 9, 'max_calls': 99, 'max_tokens': 10 ** 9},
+              open(ENV['AX_WAVE'], 'w'))
+
+    def nt_launch(tag, tid, budget=''):
+        pr = 'Role: probe\nPlan step: R2\nLane: %s\n%s\nprobe %s' % (LANE, budget, tag)
+        return launch(pr, transcript_path='', tool_use_id=tid)
+
+    def nt_call(aid, tool, ti, **kw):
+        d = {'hook_event_name': 'PreToolUse', 'tool_name': tool, 'tool_input': ti, 'agent_id': aid,
+             'agent_type': 'general-purpose', 'session_id': 'S', 'cwd': WS, 'transcript_path': ''}
+        d.update(kw)
+        return run('callgate.py', d)
+
+    expect('no transcript, no launch in the wave: refused', nt_call('n0', 'Read', {'file_path': LANE + '/x'}), 2)
+    expect('no transcript: launch recorded', nt_launch('one', 'tu-1', 'Budget: 2'), 0)
+    lead = os.path.join(T, 'lead.jsonl')
+    open(lead, 'w').write('{}\n')
+    expect('a harness with transcripts, agent transcript missing: refused',
+           nt_call('n1', 'Read', {'file_path': LANE + '/x'}, transcript_path=lead), 2)
+    expect('no transcript, another agent type: refused',
+           nt_call('n1', 'Read', {'file_path': LANE + '/x'}, agent_type='other'), 2)
+    expect('no transcript, one unheld launch: read allowed', nt_call('n1', 'Read', {'file_path': LANE + '/x'}), 0)
+    expect('no transcript: write outside the lane refused',
+           nt_call('n1', 'Write', {'file_path': WS + '/tools/x.py', 'content': 'x'}), 2)
+    expect('no transcript: Budget line kept, third call refused', nt_call('n1', 'Read', {'file_path': LANE + '/x'}), 2)
+    expect('no transcript: a second agent cannot take a held launch', nt_call('n2', 'Read', {'file_path': LANE + '/x'}), 2)
+    expect('no transcript: two launches recorded (a)', nt_launch('two', 'tu-2'), 0)
+    expect('no transcript: two launches recorded (b)', nt_launch('three', 'tu-3'), 0)
+    expect('no transcript, two unheld launches: refused', nt_call('n3', 'Read', {'file_path': LANE + '/x'}), 2)
+    lp = os.path.join(ENV['AX_HOOK_STATE'], 'launches.jsonl')
+    rows = [json.loads(l) for l in open(lp)]
+    old = _t.strftime('%Y-%m-%dT%H:%M:%S', _t.localtime(_t.time() - 900))
+    for r_ in rows:
+        if r_.get('tool_use_id') == 'tu-2':
+            r_['t'] = old
+    open(lp, 'w').write(''.join(json.dumps(r_) + '\n' for r_ in rows))
+    expect('no transcript, one launch past the window: the other binds', nt_call('n4', 'Read', {'file_path': LANE + '/x'}), 0)
+    expect('no transcript, only an old launch left: refused', nt_call('n5', 'Read', {'file_path': LANE + '/x'}), 2)
+    json.dump({'id': 'NT', 'open': False, 'plan_step': 'R2', 'max_agents': 9, 'max_calls': 99, 'max_tokens': 10 ** 9},
+              open(ENV['AX_WAVE'], 'w'))
+    expect('no transcript, wave closed: refused', nt_call('n6', 'Read', {'file_path': LANE + '/x'}), 2)
 finally:
     shutil.rmtree(T, ignore_errors=True)
     shutil.rmtree(TBD, ignore_errors=True)

@@ -2,7 +2,10 @@
 """PreToolUse on every tool. Lead calls: only the approval records are protected (G-APPROVE: they are written by the
 UserPromptSubmit hook alone). Subagent calls:
   T8  role and lane come from the Role: and Lane: lines of the agent's own launch prompt, read from its transcript, and
-      the launch must be one H1 recorded; otherwise every call is refused (fail closed);
+      the launch must be one H1 recorded; otherwise every call is refused (fail closed). Where the harness keeps no
+      transcript on disk (the hook input names none), the role and lane come from the launch record instead: the one
+      launch of the open wave made in the last BIND_WINDOW seconds that no agent holds yet; none or more than one, and
+      every call is refused;
   H4  calls are counted per agent and refused past the role's budget (tools/hooks/roles.json);
   H2  Write, Edit and NotebookEdit only inside the lane, never a forbidden path;
   H3  Bash: no git history changes or pushes, ship.sh, mac_sync, ~/.config, .claude or the token; a command that writes
@@ -137,8 +140,13 @@ def agent_record(d):
         return p, json.load(open(p, encoding='utf-8'))
     tr = C.agent_transcript(aid, d)
     if not tr:
-        C.refuse('CALL GATE: no transcript found for agent %s, so its role and lane are unknown; every call is refused.'
-                 % aid, agent=aid)
+        rec = from_launch_record(aid, d)
+        if not rec:
+            C.refuse('CALL GATE: no transcript found for agent %s, so its role and lane are unknown; every call is '
+                     'refused.' % aid, agent=aid)
+        save(p, rec)
+        C.log_event('bind', agent=aid, launch=rec['launch'], role=rec['role'], lane=rec['lane'])
+        return p, rec
     text = C.first_user_text(tr)
     h = C.header(text)
     if 'role' not in h or 'lane' not in h:
@@ -149,9 +157,51 @@ def agent_record(d):
         C.refuse('CALL GATE: agent %s was not launched through the launch gate; every call is refused.' % aid, agent=aid)
     cfg = C.roles()
     rec = {'agent_id': aid, 'role': h['role'], 'lane': os.path.realpath(h['lane']), 'wave': launched[-1]['wave'],
-           'budget': budget(cfg['roles'].get(h['role'], {}).get('budget', 0), h.get('budget')), 'count': 0, 'transcript': tr}
+           'budget': budget(cfg['roles'].get(h['role'], {}).get('budget', 0), h.get('budget')), 'count': 0, 'transcript': tr,
+           'launch': launched[-1].get('tool_use_id')}
     save(p, rec)
     return p, rec
+
+
+BIND_WINDOW = 300      # seconds between a recorded launch and its agent's first call
+
+
+def from_launch_record(aid, d):
+    """the agent record for a harness with no transcript on disk, or None. Used only when the hook input names no
+    transcript file, so a harness that keeps transcripts still fails closed on a missing one. The agent takes the one
+    launch of the open wave that no agent holds and that was recorded in the last BIND_WINDOW seconds; with none, or
+    with more than one (lanes launched together cannot be told apart without their prompts), there is no record."""
+    tp = d.get('transcript_path') or ''
+    if tp and os.path.isfile(tp):
+        return None
+    w = C.wave()
+    if not w or not w.get('open'):
+        return None
+    held = set()
+    adir = os.path.dirname(C.state('agents', 'x'))
+    for f in os.listdir(adir):
+        if f.endswith('.json'):
+            try:
+                held.add(json.load(open(os.path.join(adir, f), encoding='utf-8')).get('launch'))
+            except (OSError, ValueError):
+                continue
+    now, kind, free = time.time(), d.get('agent_type') or '', []
+    for l in C.launches(w['id']):
+        try:
+            age = now - time.mktime(time.strptime(l.get('t', ''), '%Y-%m-%dT%H:%M:%S'))
+        except ValueError:
+            continue
+        if not l.get('tool_use_id') or l['tool_use_id'] in held or not 0 <= age <= BIND_WINDOW:
+            continue
+        if kind and l.get('agent_type') and l['agent_type'] != kind:
+            continue
+        free.append(l)
+    if len(free) != 1:
+        return None
+    l, cfg = free[0], C.roles()
+    return {'agent_id': aid, 'role': l['role'], 'lane': os.path.realpath(l['lane']), 'wave': l['wave'],
+            'budget': budget(cfg['roles'].get(l['role'], {}).get('budget', 0), l.get('budget')), 'count': 0,
+            'transcript': None, 'launch': l['tool_use_id']}
 
 
 def budget(role_budget, line):
