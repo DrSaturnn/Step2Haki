@@ -8,10 +8,10 @@
   "patch-review-opus",
   "probe"
  ],
- "max_agents": 3,
+ "max_agents": 4,
  "max_calls": 50,
  "max_tokens": 1500000,
- "set_by": "D-20261114-10",
+ "set_by": "D-20261114-10, D-20261114-13",
  "previous": {
   "id": "s174c",
   "note": "s174c tools: stamp groups per check, live hook probe; shipped 2d81398 2026-11-14"
@@ -485,7 +485,7 @@
    "lead_tokens": 20000000
   },
   "s174b": {
-   "agents": 3,
+   "agents": 4,
    "calls": 50,
    "tokens": 1500000,
    "lead_tokens": 15000000

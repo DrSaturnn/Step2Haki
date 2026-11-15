@@ -69,7 +69,8 @@ def main():
         C.refuse('LAUNCH GATE: refused: doc_lint fails (%d): %s. Fix DECISIONS_DIGEST or STANDING_DIRECTIONS first '
                  '(python3 tools/spine/doc_lint.py DIGEST STANDING --docs workspace).' % (len(bad), bad[0][:160]))
     rec = {'t': time.strftime('%Y-%m-%dT%H:%M:%S'), 'wave': w['id'], 'role': role, 'model': model, 'lane': h['lane'],
-           'agent_type': ti.get('subagent_type') or '', 'plan_step': h['plan_step'], 'prompt_sha': C.sha(ti.get('prompt', '')), 'tool_use_id': d.get('tool_use_id')}
+           'agent_type': ti.get('subagent_type') or '', 'plan_step': h['plan_step'], 'prompt_sha': C.sha(ti.get('prompt', '')), 'tool_use_id': d.get('tool_use_id'),
+           'budget': h.get('budget')}
     with open(C.state('launches.jsonl'), 'a', encoding='utf-8') as f:
         f.write(json.dumps(rec) + '\n')
     return 0
