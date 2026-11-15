@@ -5,7 +5,7 @@ whole process"; runbook section 8b). The lead runs these and reads only their on
   python3 tools/spine/patch.py setup <batch>                  the live hook probe (stops when no hook fired on this
                                                               command), the git guard, hook tests, start-up context
   python3 tools/spine/patch.py s3 <batch> <folder>...         facts_from_spec + build + copy 10_*.json, verify --mech,
-                                                              batch page, gate, render, preflight, vendor, squeeze
+                                                              batch page, search index, gate, render, preflight, vendor, squeeze
   python3 tools/spine/patch.py review <batch> <round> --opus <folder,...> --sonnet <folder,...> [--since-round K]
                                  [--per-lane N] [--note FILE]   (s154c: lanes of at most N briefs; FILE appended to INSTRUCTIONS.md)
                                                               packets (--since), one combined lane per model,
@@ -209,6 +209,7 @@ def s3(batch, folders):
     page = os.path.join(L, 'index.html')
     out = []
     for name, cmd in (('build', [sys.executable, 'repair/build.py', batch, '--out', page]),
+                      ('search', ['node', 'tools/search_index.js', page, os.path.join(L, 'search.json')]),
                       ('gate', [sys.executable, 'tools/gate.py', page, '--base', 'HEAD']),
                       ('render', ['node', 'tools/render.js', page]),
                       ('preflight', [sys.executable, 'tools/preflight.py', page, '--base', 'HEAD']),
