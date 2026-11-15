@@ -2,6 +2,31 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-11-15 s176: content(briefs): rewrite twelve presentation hubs in review-book style
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Briefs changed (12):
+  - polyuria (Polyuria): prose edited (-663 chars)
+  - bs-incontinence (Urinary Incontinence): prose edited (+559 chars)
+  - bs-abdominal-mass (Abdominal Mass in a Young Child): prose edited (-527 chars)
+  - bs-distal-rta (Hypokalemia and Acid-Base Disorders in a Child): prose edited (-350 chars)
+  - aq-puffy-eyes (Child with Puffy Eyes): prose edited (+844 chars)
+  - lymphadenitis (Lymphadenopathy): prose edited (-905 chars)
+  - herpangina (Oral Lesions in a Child): prose edited (+335 chars)
+  - bs-fever-rash-arthralgia (Fever and Rash in a Child): prose edited (-2545 chars)
+  - aq-infant-fever (Fever in an Infant): prose edited (+600 chars)
+  - dementia (Cognitive Decline and Dementia in an Adult): prose edited (+592 chars)
+  - toxidrome (Suspected Overdose or Toxidrome): prose edited (+250 chars)
+  - peds-sleep (Sleep Problems): prose edited (+2032 chars)
+Other page changes (nav, headers, scripts): +769 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 54 checks, base HEAD | allowlisted 21 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
 ## 2026-11-15 s175: content(briefs): rewrite fourteen presentation hubs in review-book style
 
 ```
