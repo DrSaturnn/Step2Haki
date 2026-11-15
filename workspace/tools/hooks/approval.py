@@ -108,7 +108,33 @@ def present(b, shots, tools=False):
         os.remove(old)              # a new presentation voids any earlier approval of this batch
     print('approval: %s presented (%d files, %d screenshot(s), page %s). Send the report; ship.sh will run only '
           'after the owner replies "ship".' % (b, len(files), len(shots), m['page_sha'][:12]))
+    for w in hook_warnings():
+        print(w)
     return 0
+
+
+def hook_warnings():
+    """what the hook state says about the hooks in this container: a "ship" is recorded only when the
+    prompt hook fires, so a container where it has not fired is named before the report goes out"""
+    out = []
+    kinds = set()
+    try:
+        for line in open(os.path.join(C.STATE, 'events.jsonl'), encoding='utf-8'):
+            try:
+                kinds.add(json.loads(line).get('kind'))
+            except ValueError:
+                pass
+    except OSError:
+        pass
+    if not os.path.exists(os.path.join(C.STATE, 'live.json')):
+        out.append('approval: WARNING: no hook has fired in this container (no live.json). The owner\'s "ship" will not '
+                   'be recorded. Run `python3 tools/spine/patch.py setup <batch>` before sending the report.')
+    elif 'prompt-seen' not in kinds:
+        out.append('approval: WARNING: no prompt-seen event in this container: the UserPromptSubmit hook has not been '
+                   'seen to fire here (a message sent before the checkout existed proves nothing either way). If the '
+                   'owner\'s "ship" writes no approval record, follow the runbook, section 8, "A ship the hook did not '
+                   'record"; do not run the hook yourself.')
+    return out
 
 
 SHIP = re.compile(r'(?<![\w-])ship(?![\w-])', re.I)

@@ -510,5 +510,47 @@ try:
     expect('guard: untracking a leaked file is allowed', (_g('commit', '-qm', 'chore: untrack a file').returncode, ''), 0)
 finally:
     shutil.rmtree(_G, ignore_errors=True)
+# ---- the live hook probe: the lead's heartbeat, the setup probe, the approval warning
+_st = ENV['AX_HOOK_STATE']
+for _f in ('live.json', 'setup_probe.json', 'setup_state.json'):
+    if os.path.exists(os.path.join(_st, _f)):
+        os.remove(os.path.join(_st, _f))
+_w = subprocess.run([sys.executable, '-c', 'import sys; sys.path.insert(0, %r); import approval as A; print("\\n".join(A.hook_warnings()))' % H],
+                    capture_output=True, text=True, env=ENV).stdout
+expect('present warns when no hook has fired at all', (0 if 'no hook has fired' in _w else 1, _w), 0)
+run('callgate.py', {'tool_name': 'Bash', 'tool_input': {'command': 'ls'}, 'cwd': WS, 'session_id': 'p1'})
+expect('heartbeat: a lead call writes live.json and no setup mark',
+       (0 if os.path.exists(os.path.join(_st, 'live.json')) and not os.path.exists(os.path.join(_st, 'setup_probe.json')) else 1, ''), 0)
+_ev = os.path.join(_st, 'events.jsonl')
+_keep = open(_ev).read() if os.path.exists(_ev) else ''
+open(_ev, 'w').write(''.join(l + '\n' for l in _keep.splitlines() if '"prompt-seen"' not in l))
+_w = subprocess.run([sys.executable, '-c', 'import sys; sys.path.insert(0, %r); import approval as A; print("\\n".join(A.hook_warnings()))' % H],
+                    capture_output=True, text=True, env=ENV).stdout
+expect('present warns when no prompt-seen event exists', (0 if 'no prompt-seen event' in _w else 1, _w), 0)
+run('approval.py', {'prompt': 'hello'}, 'hook')
+_w = subprocess.run([sys.executable, '-c', 'import sys; sys.path.insert(0, %r); import approval as A; print("\\n".join(A.hook_warnings()))' % H],
+                    capture_output=True, text=True, env=ENV).stdout
+expect('present: no warning once the prompt hook has fired', (0 if not _w.strip() else 1, _w), 0)
+_set = os.path.join(T, 'settings.json')
+json.dump({'model': 'x', 'hooks': {'PreToolUse': [{'matcher': '', 'hooks': [{'type': 'command', 'command': 'python3 /x/tools/hooks/callgate.py'}]},
+                                                  {'matcher': 'Bash', 'hooks': [{'type': 'command', 'command': 'other-tool'}]}]}}, open(_set, 'w'))
+_E = dict(ENV, AX_SETTINGS=_set)
+_patch = os.path.join(WS, 'tools', 'spine', 'patch.py')
+r = subprocess.run([sys.executable, _patch, 'setup', TB], capture_output=True, text=True, env=_E, cwd=WS)
+_cfg = json.load(open(_set))
+expect('setup with no hook mark and dead settings hooks: exit 3, the hooks removed, the rest of the file kept',
+       (0 if r.returncode == 3 and 'HOOKS NOT LIVE' in r.stdout and 'callgate' not in json.dumps(_cfg) and _cfg.get('model') == 'x'
+        and 'other-tool' in json.dumps(_cfg) else 1, r.stdout + r.stderr), 0)
+r = subprocess.run([sys.executable, _patch, 'setup', TB], capture_output=True, text=True, env=_E, cwd=WS)
+expect('setup with no hook mark after the fallback was removed: exit 4 and STOP',
+       (0 if r.returncode == 4 and 'STOP' in r.stdout else 1, r.stdout + r.stderr), 0)
+run('callgate.py', {'tool_name': 'Bash', 'tool_input': {'command': 'python3 tools/spine/patch.py setup s0'}, 'cwd': WS, 'session_id': 'p1'})
+expect('heartbeat: a `patch.py setup` command leaves the setup mark',
+       (0 if os.path.exists(os.path.join(_st, 'setup_probe.json')) else 1, ''), 0)
+_old = json.load(open(os.path.join(_st, 'setup_probe.json'))); _old['epoch'] -= 3600
+json.dump(_old, open(os.path.join(_st, 'setup_probe.json'), 'w'))
+r = subprocess.run([sys.executable, _patch, 'setup', TB], capture_output=True, text=True, env=_E, cwd=WS)
+expect('setup: a stale mark (an hour old) is not proof; the mark is used once',
+       (0 if r.returncode == 4 and not os.path.exists(os.path.join(_st, 'setup_probe.json')) else 1, r.stdout + r.stderr), 0)
 print('test_hooks: %d passed, %d failed' % (ok, bad))
 sys.exit(1 if bad else 0)

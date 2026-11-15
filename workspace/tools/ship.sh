@@ -134,6 +134,11 @@ if ! st rules-migrate; then
 if ! st rules-gate; then
   o2=$(python3 tools/test_gate_rules.py 2>&1) || fail rules-selftest "$(echo "$o2" | grep -E '^BAD|passed')"
   echo "rules: all brief types $(echo "$o2" | tail -1)"; stc rules-gate "rules: all brief types $(echo "$o2" | tail -1)"; fi; tm rules-gate
+# rules-stamps: every file a check opens is inside its stamp groups (tools/test_stamps.py traces each check);
+# reruns when any tool changed
+if ! st rules-stamps; then
+  o3=$(python3 tools/test_stamps.py 2>&1) || fail rules-selftest "$(echo "$o3" | grep -E '^BAD|passed')"
+  echo "rules: stamp groups $(echo "$o3" | tail -1)"; stc rules-stamps "rules: stamp groups $(echo "$o3" | tail -1)"; fi; tm rules-stamps
 GA=(--base HEAD); SA=(); [[ "$MODE" == "--attr-only" ]] && GA=(--attr-only HEAD) && SA=(--attr-only HEAD)
 if GATE=$(st gate --page "$TMP/index.html" "${SA[@]}"); then GATE=$(echo "$GATE" | tail -1); else echo "$GATE"
   GATE=$(python3 tools/gate.py "$TMP/index.html" "${GA[@]}" 2>&1) || fail gate "$GATE"; GATE=$(echo "$GATE" | head -1); stc gate "$GATE"; fi; echo "$GATE"; tm gate

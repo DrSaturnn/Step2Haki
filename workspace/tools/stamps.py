@@ -17,15 +17,18 @@ miss (a deliberate cold run); passes still write stamps. callgate refuses hand w
   python3 tools/stamps.py commit PENDING [SUMMARY]   write the stamp from PENDING (ship.sh, after the check passed)
   python3 tools/stamps.py show [CHECK]               list the stamps
 
-Checks (ship.sh): rules-migrate, rules-gate, gate, render, vendor-scan, vendor-orphan; verify (one stamp per spine
-folder, written by verify.py on READY); ui_gate tests (parity, a11y, perf, twopane; theme keeps style_surface's record).
-Groups are deliberately wide (every Python and JS tool, every tool data file): a check reruns when any tool it could
-load changed. The perf and a11y baselines belong only to ui_gate, so fixing one (the s171 abort) reruns only perf or a11y.
+Checks (ship.sh): rules-migrate, rules-gate, rules-stamps, gate, render, vendor-scan, vendor-orphan; verify (one stamp
+per spine folder, written by verify.py on READY); ui_gate tests (parity, a11y, perf, twopane; theme keeps
+style_surface's record). Each group holds only what its check opens (spec() below): the code closure of the
+check's entry scripts, its data and documents, its page, folder or tree. tools/test_stamps.py (ship step rules-stamps)
+traces each check and fails on a file opened outside its groups. Files opened and left out on purpose are listed in
+EXEMPT with the reason.
 """
 import glob
 import hashlib
 import json
 import os
+import re
 import subprocess
 import sys
 import time
@@ -35,8 +38,6 @@ WS = os.path.dirname(HERE)
 # AX_STAMPS_DIR is honored only beside AX_HOOK_STATE (test_hooks.py), a variable callgate refuses in the lead's commands
 STORE = (os.environ.get('AX_STAMPS_DIR') if os.environ.get('AX_HOOK_STATE') else None) or os.path.join(WS, 'local', 'stamps')
 KEEP = 5
-UI_ONLY = {'tools/spine/perf_baseline.json', 'tools/spine/a11y_baseline.json'}
-
 _cache = {}
 
 
@@ -97,113 +98,140 @@ def _docs():
         return None
 
 
-# ---- the groups
-def g_tools_code():
-    rel = files(WS, ['tools/**/*.py', 'tools/**/*.js', 'tools/**/*.sh', 'repair/build.py'], exclude=())
-    rel = [r for r in rel if not r.startswith(('tools/plugin/', 'tools/hooks/'))]
-    rel += ['package-lock.json', 'package.json']
-    return ghash(WS, rel, 'node %s | python %s' % (_run(['node', '--version']), sys.version.split()[0]))
+# ---- what each check reads. A group hashes only files its check opens: the code it runs (the static closure
+# of its entry scripts: imports, required modules and script paths named in the code), the data and documents named
+# for it below, and its page, folder or tree. tools/test_stamps.py traces a real run of each check and fails when it
+# opens a file outside its groups, so a new read is added here before a stamp can go stale on it.
+CODE_DIRS = ('tools', 'tools/spine', 'tools/typec', 'tools/hooks', 'tools/githooks', 'repair', 'repair/migration/spine',
+             'repair/changelog')
+ENTRY = {'rules-migrate': ['tools/test_migrate_check.py'], 'rules-gate': ['tools/test_gate_rules.py'],
+         'gate': ['tools/gate.py'], 'verify': ['tools/spine/verify.py'], 'render': ['tools/render.js'],
+         'vendor-scan': ['tools/vendor_scan.py'], 'vendor-orphan': ['tools/vendor_scan.py']}
+_IMP = re.compile(r'^[ \t]*(?:from[ \t]+([\w.]+)[ \t]+import[ \t]+([\w., \t]+)|import[ \t]+([\w., \t]+))', re.M)
+_LIT = re.compile(r'''['"]([\w./-]*\w\.(?:py|js|mjs|sh))['"]''')
+_REQ = re.compile(r'''require\(\s*['"](\.{1,2}/[^'"]+)['"]\s*\)''')
+_closure = {}
 
 
-def g_tools_data():
-    rel = files(WS, ['tools/**/*.json', 'tools/**/*.txt', 'tools/**/*.csv', 'tools/**/*.md', 'tools/tests/**/*'],
-                exclude=UI_ONLY)
-    rel = [r for r in rel if not r.startswith(('tools/plugin/', 'tools/hooks/'))]
-    # read by the gate and outside the patterns above: the fixture page of the rule self-test, the agent definitions
-    rel += files(WS, ['tools/fixtures/**/*', 'tools/hooks/agents/*.md', 'tools/plugin/**/agents/*.md'])
-    return ghash(WS, sorted(set(rel)))
+def _deps(rel):
+    """the code files one file names: imported modules, required scripts, script paths in string literals"""
+    p = os.path.join(WS, rel)
+    try:
+        src = open(p, encoding='utf-8', errors='replace').read()
+    except OSError:
+        return set()
+    here = os.path.dirname(rel)
+    dirs = [here] + [d for d in CODE_DIRS if d != here]
+    out = set()
+
+    def add(cands):
+        for c in cands:
+            c = os.path.normpath(c).replace(os.sep, '/')
+            if not c.startswith('..') and os.path.isfile(os.path.join(WS, c)):
+                out.add(c)
+    if rel.endswith('.py'):
+        for a, b, c in _IMP.findall(src):
+            names = set()
+            for chunk in (a, b, c):
+                for n in re.split(r'[,\s]+', chunk or ''):
+                    if n and n != 'as':
+                        names.update((n.split('.')[0], n.split('.')[-1], n.replace('.', '/')))
+            add('%s/%s.py' % (d, n) for d in dirs for n in names)
+    for r in _REQ.findall(src):
+        add(os.path.join(here, r + x) for x in ('', '.js', '.json'))
+    for lit in _LIT.findall(src):
+        add([lit, os.path.join(here, lit)] + ['%s/%s' % (d, os.path.basename(lit)) for d in dirs])
+    return out
 
 
-DOCS = ['DECISIONS_DIGEST.md', 'STANDING_DIRECTIONS.md', 'BATCH_RUNBOOK.md', 'ui/UI_MAP.md']
+def closure(entries):
+    """every code file a run of the entry scripts can load (a superset: a path named only in a message counts)"""
+    key = tuple(sorted(entries))
+    if key not in _closure:
+        seen, todo = set(), [e for e in entries if os.path.isfile(os.path.join(WS, e))]
+        while todo:
+            r = todo.pop()
+            if r not in seen:
+                seen.add(r)
+                todo += sorted(_deps(r) - seen)
+        _closure[key] = sorted(seen)
+    return _closure[key]
 
 
-def g_docs():
-    """the private docs the tools read (gate doc-lint, verify specs, ui-retired); the handoff, RESUME and OPEN_WORK
-    change at every step; the gate's state checks read the handoff and RESUME, and they stay out of the
-    stamp on purpose: a State rewrite must not void every stamp, and resume.py, launch.py and docstate.py rerun those
-    checks at every chat start and State rewrite"""
-    d = _docs()
-    return ghash(d, DOCS) if d else 'none'
+def _versions():
+    return 'node %s | python %s' % (_run(['node', '--version']), sys.version.split()[0])
 
 
+UI_ONLY = {'tools/spine/perf_baseline.json', 'tools/spine/a11y_baseline.json'}
 # records the tools write as they run (budgets, audit and context records, the State archive); no check reads them as
 # rules, and counting them would void every stamp at the next theme pass or State move
 RECORDS = ('WAVE.json', 'style_audits.json', 'context_baseline.json', 'STATE_ARCHIVE.md', 'RESULTS.md')
+TOOL_DATA = ['tools/**/*.json', 'tools/**/*.txt', 'tools/**/*.csv', 'tools/**/*.md', 'tools/tests/**/*',
+             'tools/fixtures/**/*']
+RULES = ['repair/efficiency/*.json', 'repair/efficiency/*.md', 'repair/migration/spine/rules/*.md']
+GATE_REPO = ['repair/migration/**/spine/06_*_retire.json', 'repair/archive/**/*', 'repair/nbme/coverage.csv']
+BASE_PAGE = ['repair/migration/**/spine/05_*_new.json', 'repair/migration/**/spine/06_*_retire.json']
+# the private documents each check opens. The gate's doc-lint reads the digest; verify runs the gate with
+# --no-doc-lint (the documents are judged by the ship gate, the launch gate, launch.py, resume.py and docstate.py), so
+# a decision line written between S8 and the ship leaves every verify stamp in place.
+GATE_DOCS = ['DECISIONS_DIGEST.md', 'STANDING_DIRECTIONS.md', 'BATCH_RUNBOOK.md', 'PLAN_TEMPLATE.md', 'ui/*.md']
+DOCS = {'gate': GATE_DOCS, 'rules-gate': GATE_DOCS, 'verify': ['STANDING_DIRECTIONS.md', 'ui/UI_MAP.md']}
+# files a check opens that stay out of its key on purpose, each with its reason (the trace test allows only these)
+EXEMPT = {
+    'gate': [('docs:RESUME.md', 'state file: the state checks rerun at every State rewrite (docstate, resume, launch)'),
+             ('docs:STEP2HAKI_HANDOFF.md', 'state file: as RESUME')],
+    'rules-gate': [('docs:*', 'the self-test copies docs/ whole into its fixture; the files its cases judge are in '
+                              'the docs group')],
+    'verify': [('repair/efficiency/WAVE.json', 'only the wave id is read (basepage); the id is in the page group'),
+               ('repair/migration/*/spine/10_*_spine.json', 'other folders: read only for the brief id (ids group)'),
+               ('repair/migration/*/*/spine/10_*_spine.json', 'as above, hub folders'),
+               ('tree:changed', 'changed and untracked files of the working tree, read by the preview vendor_scan; '
+                                'ship.sh runs vendor-scan and vendor-orphan on that tree at every ship whose tree changed')],
+}
 
 
-def g_rules():
-    """TEXTBOOK_STYLE, ABBREV, ALIASES, HEADERS and the other top-level rule files; the rules sheets"""
-    rel = files(WS, ['repair/efficiency/*.json', 'repair/efficiency/*.md', 'repair/migration/spine/rules/*.md'],
-                exclude={'repair/efficiency/' + f for f in RECORDS})
-    return ghash(WS, rel)
-
-
-def g_site():
-    return ghash(WS, files(WS, ['site/**/*']))
-
-
-def g_sources():
-    return ghash(WS, files(WS, ['repair/sources/**/*']))
-
-
-def g_gate_repo():
-    """repo files the gate reads beside the page: retirements, archived items, the NBME coverage table"""
-    return ghash(WS, files(WS, ['repair/migration/**/spine/06_*_retire.json', 'repair/archive/**/*', 'repair/nbme/coverage.csv']))
-
-
-def g_base_page():
-    """what tools/spine/basepage.py adds to the working page: pending shells, retirements, the wave's site files (the
-    wave id from WAVE.json; its spend fields change as agents run)"""
-    rel = files(WS, ['repair/migration/**/spine/05_*_new.json', 'repair/migration/**/spine/06_*_retire.json'])
-    try:
-        w = json.load(open(os.path.join(WS, 'repair', 'efficiency', 'WAVE.json'), encoding='utf-8')).get('wave') or ''
-    except (OSError, ValueError, AttributeError):
-        w = ''
-    if w:
-        rel += files(WS, ['repair/%s/0[0-4]_*.json' % w])
-    return ghash(WS, rel, 'wave %s | HEAD:index.html %s' % (w, head_page()))
+def _data(check):
+    tool = [r for r in files(WS, TOOL_DATA, exclude=UI_ONLY) if not r.startswith(('tools/plugin/', 'tools/hooks/'))]
+    tool += files(WS, ['tools/hooks/agents/*.md', 'tools/plugin/**/agents/*.md'])
+    if check == 'rules-migrate':
+        return files(WS, ['tools/tests/**/*'])
+    return sorted(set(tool))
 
 
 def head_page():
     return _run(['git', 'rev-parse', 'HEAD:./index.html']) or '-'
 
 
-def g_repo():
+def page_hash(p):
+    return fhash(os.path.abspath(p))[:16] if p else '-'
+
+
+def _wave():
+    try:
+        return json.load(open(os.path.join(WS, 'repair', 'efficiency', 'WAVE.json'), encoding='utf-8')).get('wave') or ''
+    except (OSError, ValueError, AttributeError):
+        return ''
+
+
+def _ids():
+    """(path, brief id) of every spine folder's edit file: verify maps brief ids to folders through them"""
+    out = []
+    for e in files(WS, ['repair/migration/*/*/spine/10_*_spine.json', 'repair/migration/*/*/*/spine/10_*_spine.json']):
+        try:
+            out.append('%s=%s' % (e, json.load(open(os.path.join(WS, e), encoding='utf-8'))['edits'][0]['brief']))
+        except (OSError, ValueError, KeyError, IndexError):
+            out.append(e + '=?')
+    return '\n'.join(out)
+
+
+def _repo():
     """everything vendor_scan reads: the tracked files (index blobs and working-tree changes) and untracked files git
     does not ignore"""
     idx = _run(['git', 'ls-files', '-s'])
     top = _run(['git', 'rev-parse', '--show-toplevel'])
     changed = _run(['git', 'ls-files', '-m', '--full-name']).splitlines() + \
         _run(['git', 'ls-files', '--others', '--exclude-standard', '--full-name']).splitlines()
-    return ghash(top, sorted(set(changed)), idx)
-
-
-def page_hash(p):
-    return fhash(os.path.abspath(p))[:16] if p else '-'
-
-
-def beside(p, name):
-    return page_hash(os.path.join(os.path.dirname(os.path.abspath(p)), name)) if p else '-'
-
-
-# ---- keys per check
-def verify_groups(folder):
-    """verify.py on one spine folder: the folder, its receipts, the page it builds on, the rules, the tools, the
-    sources (logs written into the folder, such as verify_all.log, are left out). Left out on purpose: the tracked tree its preview vendor_scan also reads; ship.sh runs vendor-scan and
-    vendor-orphan on that tree at every ship whose tree changed."""
-    folder = os.path.abspath(folder)
-    bid = brief_id(folder)
-    rec = files(WS, ['repair/migration/spine/reviews/%s_*.md' % bid]) if bid else []
-    return {'folder': ghash(folder, [r for r in files(folder, ['**/*']) if not r.endswith('.log')]),
-            'receipts': ghash(WS, rec, bid or '?'),
-            'page': page_hash(os.path.join(WS, 'index.html')) + g_base_page(),
-            'rules': g_rules(), 'docs': g_docs(), 'site': g_site(),
-            'tools': g_tools_code(), 'tool-data': g_tools_data(), 'sources': g_sources()}
-
-
-def folder_name(folder):
-    """a spine folder's stamp name: its path under the workspace"""
-    return os.path.relpath(os.path.abspath(folder), WS).replace(os.sep, '/')
+    return top, sorted(set(changed)), idx
 
 
 def brief_id(folder):
@@ -215,28 +243,88 @@ def brief_id(folder):
     return None
 
 
-def ship_groups(check, page=None, attr_only=None):
+def folder_name(folder):
+    """a spine folder's stamp name: its path under the workspace"""
+    return os.path.relpath(os.path.abspath(folder), WS).replace(os.sep, '/')
+
+
+def spec(check, page=None, attr_only=None, folder=None):
+    """{group: (root, [file under root, ...], extra text)}: what the check's key covers. hashed() turns it into the
+    stored groups; covered() lists the files for the trace test."""
+    d = _docs()
+    code = lambda extra=(): (WS, closure(ENTRY[check] + list(extra)) + ['package-lock.json', 'package.json'], _versions())
+    docs = (d, files(d, DOCS[check]), '') if d and check in DOCS else (WS, [], 'none')
+    rules = (WS, files(WS, RULES, exclude={'repair/efficiency/' + f for f in RECORDS}), '')
+    site = (WS, files(WS, ['site/**/*']), '')
+    sources = (WS, files(WS, ['repair/sources/**/*']), '')
+    pg = os.path.abspath(page) if page else None
+    one = lambda p, extra='': ('/', [p.lstrip('/')] if p else [], extra)
     if check == 'rules-migrate':
-        return {'tools': g_tools_code(), 'tool-data': g_tools_data()}
+        return {'tools': code(), 'tool-data': (WS, _data(check), '')}
     if check == 'rules-gate':
         # the gate's code and rule files (OPEN_WORK "Ship time"); the page to ship is gated by the gate check itself
-        return {'tools': g_tools_code(), 'tool-data': g_tools_data(), 'docs': g_docs(), 'rules': g_rules(),
-                'site': g_site(), 'gate-repo': g_gate_repo()}
+        return {'tools': code(), 'tool-data': (WS, _data(check), ''), 'docs': docs, 'rules': rules, 'site': site,
+                'gate-repo': (WS, files(WS, GATE_REPO), '')}
     if check == 'gate':
-        return {'page': page_hash(page), 'search-index': beside(page, 'search.json'),
-                'base': ('attr-only ' + _run(['git', 'rev-parse', '%s:./index.html' % attr_only])) if attr_only else head_page(),
-                'tools': g_tools_code(), 'tool-data': g_tools_data(), 'docs': g_docs(), 'rules': g_rules(),
-                'site': g_site(), 'gate-repo': g_gate_repo()}
+        base = ('attr-only ' + _run(['git', 'rev-parse', '%s:./index.html' % attr_only])) if attr_only else head_page()
+        return {'page': one(pg), 'search-index': one(os.path.join(os.path.dirname(pg), 'search.json') if pg else None),
+                'base': (WS, [], base), 'tools': code(), 'tool-data': (WS, _data(check), ''), 'docs': docs,
+                'rules': rules, 'site': site, 'gate-repo': (WS, files(WS, GATE_REPO), '')}
     if check == 'render':
-        return {'page': page_hash(page), 'tools': ghash(WS, ['tools/render.js', 'tools/render_allowlist.txt',
-                                                              'package-lock.json'], _run(['node', '--version']))}
-    if check == 'vendor-scan':
-        return {'repo': g_repo(), 'sources': g_sources(),
-                'tools': ghash(WS, ['tools/vendor_scan.py', 'tools/local_only.txt'])}
-    if check == 'vendor-orphan':
-        return {'page': page_hash(page), 'repo': g_repo(), 'sources': g_sources(),
-                'tools': ghash(WS, ['tools/vendor_scan.py', 'tools/local_only.txt'])}
+        return {'page': one(pg), 'tools': (WS, ['tools/render.js', 'tools/render_allowlist.txt', 'package-lock.json',
+                                                'package.json'], _run(['node', '--version']))}
+    if check in ('vendor-scan', 'vendor-orphan'):
+        top, changed, idx = _repo()
+        g = {'repo': (top, changed, idx), 'sources': sources,
+             'tools': (WS, closure(ENTRY[check]) + ['tools/local_only.txt'], '')}
+        if check == 'vendor-orphan':
+            g['page'] = one(pg)
+        return g
+    if check == 'verify':
+        # verify.py on one spine folder: the folder (logs it writes there left out), its receipts, the page it builds
+        # on, the rules, the documents, the site layer, the code (with the folder's build.py and the delta tool it
+        # imports), the tool data and the sources. Left out on purpose: the tracked tree its preview vendor_scan also
+        # reads; ship.sh runs vendor-scan and vendor-orphan on that tree at every ship whose tree changed.
+        folder = os.path.abspath(folder)
+        bid = brief_id(folder)
+        w = _wave()
+        base = files(WS, BASE_PAGE) + (files(WS, ['repair/%s/0[0-4]_*.json' % w]) if w else [])
+        fb = os.path.relpath(os.path.join(folder, 'build.py'), WS).replace(os.sep, '/')
+        return {'folder': (folder, [r for r in files(folder, ['**/*']) if not r.endswith('.log')], ''),
+                'receipts': (WS, files(WS, ['repair/migration/spine/reviews/%s_*.md' % bid]) if bid else [], bid or '?'),
+                'page': (WS, ['index.html'] + base, 'wave %s | HEAD:index.html %s' % (w, head_page())),
+                'ids': (WS, [], _ids()), 'rules': rules, 'docs': docs, 'site': site,
+                'tools': code([fb] if not fb.startswith('..') else []), 'tool-data': (WS, _data(check), ''),
+                'gate-repo': (WS, files(WS, GATE_REPO), ''), 'sources': sources}
+    if check == 'rules-stamps':
+        # the trace test itself: rerun when any tool, tool data file or delta tool changed
+        allc = [r for r in files(WS, ['tools/**/*.py', 'tools/**/*.js', 'tools/**/*.sh', 'repair/build.py',
+                                      'repair/migration/spine/*.py']) if not r.startswith('tools/plugin/')]
+        return {'tools': (WS, allc + ['package-lock.json', 'package.json'], _versions()),
+                'tool-data': (WS, _data(check), '')}
     raise SystemExit('stamps: unknown check %s' % check)
+
+
+def hashed(sp):
+    return {g: ghash(root, rels, extra) for g, (root, rels, extra) in sp.items()}
+
+
+def covered(check, sp):
+    """absolute paths the key covers (the trace test compares a run's opens against this)"""
+    out = {os.path.realpath(os.path.join(root, r)) for root, rels, _ in sp.values() for r in rels}
+    if 'repo' in sp:   # the index hash covers every tracked file
+        top = sp['repo'][0]
+        out |= {os.path.realpath(os.path.join(top, r)) for r in _run(['git', 'ls-files', '--full-name', ':/']).splitlines()}
+    return out
+
+
+def verify_groups(folder):
+    return hashed(spec('verify', folder=folder))
+
+
+def ship_groups(check, page=None, attr_only=None):
+    return hashed(spec(check, page, attr_only))
+
 
 
 # ---- store

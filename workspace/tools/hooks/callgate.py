@@ -17,6 +17,7 @@ import os
 import re
 import shlex
 import sys
+import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import common as C  # noqa: E402
@@ -50,7 +51,27 @@ def git_writes(cmd):
     return None
 
 
+SETUP_CMD = re.compile(r'patch\.py["\']?\s+setup\b')
+
+
+def beat(d):
+    """the lead's own call reached this hook: live.json is the proof that the harness runs the PreToolUse hooks, and
+    setup_probe.json is the mark `patch.py setup` looks for from its own command (a batch once ran
+    with no hook firing and nothing noticed). A failed write never blocks the call."""
+    try:
+        tp = d.get('transcript_path') or ''
+        cmd = (d.get('tool_input') or {}).get('command', '') if d.get('tool_name') == 'Bash' else ''
+        rec = {'epoch': time.time(), 't': time.strftime('%Y-%m-%dT%H:%M:%S'), 'tool': d.get('tool_name'),
+               'session_id': d.get('session_id'), 'transcript_path': tp, 'transcript': bool(tp and os.path.isfile(tp))}
+        save(C.state('live.json'), rec)
+        if SETUP_CMD.search(cmd or ''):
+            save(C.state('setup_probe.json'), rec)
+    except Exception:  # noqa: BLE001
+        pass
+
+
 def lead(d):
+    beat(d)
     ti = d.get('tool_input') or {}
     appr = os.path.join(C.STATE, 'approvals')
     if d.get('tool_name') in ('Write', 'Edit', 'NotebookEdit'):

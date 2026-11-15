@@ -1,5 +1,11 @@
 # step2haki-tools
 
+## Context alarm and the settings fallback (0.3.1)
+
+Checked in the claude.ai project chat harness: the plugin's PreToolUse hooks fire (the call gate refused a probe command), so this harness does load hooks from the synced account plugin. It does not run hooks from a settings.json written during the session. One batch ran with no hook at all because `patch.py setup` installed the settings fallback, which this harness never ran, and run.sh deferred to it. `patch.py setup` now probes first, installs the settings fallback only when no plugin hook marked its command, and removes a fallback that did not fire.
+
+0.3.1 adds PostToolUse: contextgate.py (H6, the context alarm), which 0.3.0 left to the settings fallback. Until 0.3.1 is uploaded to the account, H6 does not fire in this harness and `patch.py setup` prints a warning.
+
 ## Builder agent (0.3.0, s153)
 
 The runbook's S1 to S3 builder pilot (2026-10-25) launches role brief-build as agent type `lean-builder` on Opus (tools/hooks/roles.json). This harness reads agent types only from the account plugin, not from /root/.claude/agents or /home/claude/.claude/agents copied in mid-session (checked s153, 2026-10-25), so 0.3.0 adds agents/lean-builder.md. Source of truth: tools/hooks/agents/lean-builder.md.
