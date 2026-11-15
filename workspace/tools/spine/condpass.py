@@ -208,7 +208,38 @@ def undo(text, reps, kind):
         if hit:
             text = text.replace(hit[0], hit[1], -1 if kind == 'json' else 1)
             applied.append(n)
+        elif kind == 'html':
+            back, prob = undo_across_tags(text, new, old)
+            if prob:
+                return text, applied, 'replacement %s %s' % (n, prob)
+            if back is not None:
+                text = back
+                applied.append(n)
     return text, applied, None
+
+
+def undo_across_tags(text, new, old):
+    """the html with one occurrence of new turned back into old when the receipt quoted a line whose plain text
+    crosses inline tags (a bold term before its colon): tags may sit anywhere in the shared start and end, and only
+    the differing middle, which must hold no tag, is replaced. Returns (html or None, problem or None)."""
+    for fo_new, fo_old in zip(forms(new, 'html'), forms(old, 'html')):
+        i = 0
+        while i < min(len(fo_new), len(fo_old)) and fo_new[i] == fo_old[i]:
+            i += 1
+        j = 0
+        while j < min(len(fo_new), len(fo_old)) - i and fo_new[-1 - j] == fo_old[-1 - j]:
+            j += 1
+        pre, mid, suf = fo_new[:i], fo_new[i:len(fo_new) - j], fo_new[len(fo_new) - j:]
+        tag = r'(?:<[^>]+>)*'
+        loose = lambda t: tag.join(re.escape(c) for c in t)
+        pat = re.compile(loose(pre) + tag + '(' + re.escape(mid) + ')' + tag + loose(suf))
+        ms = list(pat.finditer(text))
+        if len(ms) > 1:
+            return None, 'is ambiguous across tags (its new text occurs %d times)' % len(ms)
+        if ms:
+            m = ms[0]
+            return text[:m.start(1)] + fo_old[i:len(fo_old) - j] + text[m.end(1):], None
+    return None, None
 
 
 def pool(receipts, table=None, quotes=None):

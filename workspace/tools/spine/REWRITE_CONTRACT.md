@@ -49,6 +49,9 @@ Do not read the page, the runbook, STANDING_DIRECTIONS or the digest whole. Grep
   that is part of a longer claim updates that claim's text in place. Name "claims" only when you move a claim to a
   different unit. A new fact needs a new claim with a fact id, and that fact must come from facts.json or from
   facts_local with a quote that occurs verbatim in its source (tools/spine/facts_from_spec.py checks every quote).
+- Claim support: never edit claim_map.json; every check rebuilds it from claims_before_{batch}.json, so a fact id added
+  there is dropped (check reports "lost fact ids"). To add support to a line, write a new_claims entry over the line's
+  text with every fact id it needs.
 - Hover lines (TEXTBOOK_STYLE rule 6; site/css/components/lines.css): inside span.sp-pop-b each line is
   `<span class="sp-l">...</span>`; a cause-and-effect line under the line above is
   `<span class="sp-l sp-la"><span class="op op-a" role="img" aria-label="leads to"></span> ...</span>`; a block

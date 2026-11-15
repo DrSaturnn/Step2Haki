@@ -2,6 +2,18 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-11-15 s176b: fix(tools): stop the patch pipeline losing review fixes and runs
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Page content unchanged.
+Site: discriminator-briefs-site/index.html unchanged (no deploy)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 54 checks, base HEAD | allowlisted 21 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
 ## 2026-11-15 s176: content(briefs): rewrite twelve presentation hubs in review-book style
 
 ```
