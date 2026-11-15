@@ -20,18 +20,32 @@ def split(old, new):
     while j < min(len(old), len(new)) - i and old[-1 - j] == new[-1 - j]: j += 1
     while i and not old[i - 1].isspace() and old[i - 1].isalnum() and i < len(old) and old[i:i + 1].isalnum(): i -= 1   # whole words
     return old[:i], old[i:len(old) - j], old[len(old) - j:], new[i:len(new) - j]
+def _ws(g, want, closing_side):
+    """gap g (tags and whitespace only) with exactly one space when want, none otherwise; tags kept."""
+    bare = re.sub(r'(<[^>]+>)|\s+', lambda x: x.group(1) or '', g)
+    if not want: return bare
+    if bare != g: return re.sub(r'(<[^>]+>)|\s+', lambda x: x.group(1) or ' ', g)
+    return bare + ' ' if (closing_side or bare.startswith('</')) else ' ' + bare
 def sub(s, old, new):
-    """s with old -> new, or None; s is html (entities unescaped by the caller)."""
+    """s with old -> new, or None (LEFT); s is html (entities unescaped by the caller). The space at each edge of the
+    replaced middle follows the new text; a middle whose html holds a tag is LEFT, since replacing it would drop the tag."""
     pre, mo, suf, mn = split(old, new)
     parts = [p for p in (rx(pre), rx(mo), rx(suf))]
-    pat = re.compile('(' + parts[0] + ')' + TAG + '(' + parts[1] + ')' + TAG + '(' + parts[2] + ')')
+    pat = re.compile('(' + parts[0] + ')(' + TAG + ')(' + parts[1] + ')(' + TAG + ')(' + parts[2] + ')')
     ms = list(pat.finditer(s))
     if len(ms) != 1: return None
     m = ms[0]
-    if not mo.strip():      # pure insertion: put the new middle right after the prefix
-        return s[:m.end(1)] + mn + s[m.end(1):]
-    lead = ' ' if (mn[:1] != ' ' and mo[:1] == ' ') else ''
-    return s[:m.start(2)] + lead + mn.strip() + (' ' if mo.endswith(' ') or (mn.endswith(' ')) else '') + s[m.end(2):]
+    if re.search(r'<[^>]+>', m.group(3)): return None
+    lw = (pre[-1:].isspace() or mn[:1].isspace()) if pre else None
+    rw = (mn[-1:].isspace() or suf[:1].isspace()) if suf else None
+    if not mo.strip():      # pure insertion: one gap
+        g = m.group(2) + m.group(4)
+        tags = re.sub(r'(<[^>]+>)|\s+', lambda x: x.group(1) or '', g)
+        body = (' ' if lw else '') + mn.strip() + (' ' if rw else '') if mn.strip() else (' ' if (lw or rw) else '')
+        return s[:m.end(1)] + (body + tags if tags.startswith('<') and not tags.startswith('</') else tags + body) + s[m.start(5):]
+    L = m.group(2) if lw is None else _ws(m.group(2), lw, True)
+    R = m.group(4) if rw is None else _ws(m.group(4), rw, False)
+    return s[:m.start(2)] + L + mn.strip() + R + s[m.end(4):]
 out, cache = [], {}
 for line in open(src, encoding='utf-8'):
     m = re.match(r'\s*[-*]?\s*`?PAIR (\S+) \| OLD: (.*?) \| NEW: (.*?)`?\s*$', line)
