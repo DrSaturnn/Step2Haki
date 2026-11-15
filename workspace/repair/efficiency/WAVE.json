@@ -1,24 +1,24 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). The owner sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
- "id": "s175",
- "open": false,
- "plan_step": "s175",
+ "id": "s176",
+ "open": true,
+ "plan_step": "s176",
  "roles": [
   "brief-rewrite",
   "patch-review",
   "patch-review-opus",
   "probe"
  ],
- "max_agents": 24,
- "max_calls": 700,
- "max_tokens": 25000000,
- "set_by": "D-20261114-15",
+ "max_agents": 22,
+ "max_calls": 600,
+ "max_tokens": 23000000,
+ "set_by": "D-20261115-3",
  "previous": {
-  "id": "s174b",
-  "note": "s174b patch: myocarditis held rewrite; shipped 2be0611 2026-11-14"
+  "id": "s175",
+  "note": "s175 content: Presentations hubs B; shipped c5e8345 2026-11-15"
  },
- "opened": "2026-11-14 20:55 EST",
- "note": "s175 content, Presentations hubs B (14 respiratory, GI and GU hubs) under TEXTBOOK_STYLE; runbook 8b",
+ "opened": "2026-11-15 11:50 EST",
+ "note": "s176 content, Presentations hubs C (12 renal, ID, neuro, psych and sleep hubs) under TEXTBOOK_STYLE; runbook 8b",
  "batch_budgets": {
   "s138": {
    "agents": 20,
@@ -496,8 +496,14 @@
    "calls": 700,
    "tokens": 25000000,
    "lead_tokens": 45000000
+  },
+  "s176": {
+   "agents": 22,
+   "calls": 600,
+   "tokens": 23000000,
+   "lead_tokens": 55000000
   }
  },
- "max_lead_tokens": 45000000,
+ "max_lead_tokens": 55000000,
  "max_lead_close_tokens": 3000000
 }
