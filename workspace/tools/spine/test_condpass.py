@@ -95,6 +95,10 @@ expect('ambiguous new text is a problem', pr is not None)
 js = json.dumps({'t': 'He said "card 1 above" twice'})
 t, ap, pr = CP.undo(js, [(5, 'card A', 'card 1 above')], 'json')
 expect('json form is found', ap == [5])
+js3 = json.dumps({'claims': [{'new_text': 'Row: Asthma; reflux unlikely'}, {'new_text': 'Row: Asthma; reflux unlikely'}]})
+t, ap, pr = CP.undo(js3, [(6, 'Asthma; no reflux', 'Asthma; reflux unlikely')], 'json')
+expect('json: a line shared by several claims is undone in every claim', ap == [6] and pr is None
+       and t.count('Asthma; no reflux') == 2 and 'reflux unlikely' not in t)
 
 # ---- pool: own replacements always; others only when wording-only
 rec = {'read': ('PASS-IF', [(1, 'mean minimal change disease', 'point to minimal change disease'),

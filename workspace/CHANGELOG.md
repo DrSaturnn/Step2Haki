@@ -2,6 +2,33 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-11-15 s175: content(briefs): rewrite fourteen presentation hubs in review-book style
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Briefs changed (14):
+  - cough (Chronic Cough): prose edited (-12 chars)
+  - hypoxemia-mech (Hypoxemia): prose edited (+352 chars)
+  - airway (Noisy Breathing in a Child): prose edited (+336 chars)
+  - uri (Respiratory Infection in a Child): prose edited (-433 chars)
+  - bpd (Lung Disease in the Newborn and Preterm Infant): prose edited (+174 chars)
+  - cholestasis (Abnormal Liver Tests): prose edited (+155 chars)
+  - infant-stool (Stool Changes in a Well Infant): prose edited (+267 chars)
+  - feeding-refusal (Feeding an Infant or Toddler): prose edited (+319 chars)
+  - rlq-pain (Right Lower Quadrant Pain): prose edited (+204 chars)
+  - peds-constipation (Constipation in a Child): prose edited (+344 chars)
+  - cyclic-vomiting (Recurrent Vomiting in a Child): prose edited (+179 chars)
+  - occult-gi-bleed (GI Bleeding in a Child): prose edited (+643 chars)
+  - bs-umbilical (Umbilical Findings in a Newborn): prose edited (+868 chars)
+  - scrotum (Scrotal Pain and Masses): prose edited (+818 chars)
+Other page changes (nav, headers, scripts): +899 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 54 checks, base HEAD | allowlisted 21 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
 ## 2026-11-14 s174b: content(briefs): rewrite the child heart failure hub
 
 ```
