@@ -11,11 +11,12 @@ var CH = [
   ['dx', 'Differential', [['now', 'As now'], ['a', 'A: tighter cards'], ['b', 'B: one card, hairline rows']], get('dx', 'now')],
   ['nav', 'Browse opens as (r5)', [['drawer', 'Side drawer over the page'], ['push', 'Side drawer, page slides aside'], ['screen', 'Full screen (r3)']], get('nav', 'drawer')],
   ['surf', 'Surface (r5, light only)', [['axbx', 'AxBx deck'], ['axbx24', 'AxBx deck, 24 px corners'], ['now', 'Sculpted (now)']], get('surf', 'axbx')],
-  ['home', 'Home (r4)', [['list', 'List (r3)'], ['tiles', 'Tiles']], get('home', 'list')],
+  ['home', 'Home (r4)', [['desk', 'Study desk (r8)'], ['list', 'List (r3)'], ['tiles', 'Tiles (r4)']], get('home', 'desk')],
   ['tabs', 'Tab bar (r4)', [['float', 'Floating capsule'], ['dock', 'Docked (r3)']], get('tabs', 'float')]
 ];
 if(!H.getAttribute('data-ph-nav')) H.setAttribute('data-ph-nav', 'drawer');
 if(!H.getAttribute('data-ph-tabs')) H.setAttribute('data-ph-tabs', 'float');
+if(!H.getAttribute('data-ph-home')) H.setAttribute('data-ph-home', 'desk');
 if(!H.getAttribute('data-ph-surf')) H.setAttribute('data-ph-surf', 'axbx');
 function mount(){
   var s = document.getElementById('axdisp'); if(!s || s.querySelector('.php')) return !!s;
@@ -102,7 +103,16 @@ var n = 0; (function w(){ if(!mount() && ++n < 40) setTimeout(w, 150); })();
    card, the Presentations groups as a row of cards, the systems as a two-column grid. Every tile is built from the
    page's own section cards and opens what they open; nothing is stored. */
 (function(){
-  if(get('home', 'list') !== 'tiles' || get('layout', 'solo') === 'long') return;
+  var hmode = get('home', 'desk');
+  if(hmode === 'list' || get('layout', 'solo') === 'long') return;
+  var seg = 'sys';
+  function recent(){ try{ return JSON.parse(localStorage.getItem('ph-recent') || '[]') || []; }catch(e){ return []; } }
+  AX.on('brief:step', function(st){
+    if(!st || !st.el || !st.el.id) return;
+    var x = st.secs[st.cur] || {}, r = recent().filter(function(o){ return o.id !== st.el.id; });
+    r.unshift({id: st.el.id, t: st.title, n: x.n || '', l: x.l || '', h: x.el && x.el.id ? x.el.id : st.el.id});
+    try{ localStorage.setItem('ph-recent', JSON.stringify(r.slice(0, 4))); }catch(e){}
+  });
   var mw = document.querySelector('main .masthead .wrap'); if(!mw) return;
   var box = document.createElement('div'); box.id = 'phhome'; mw.insertBefore(box, mw.firstChild);
   var CHEV = '<i class="hh-go" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></i>';
@@ -126,6 +136,31 @@ var n = 0; (function w(){ if(!mount() && ++n < 40) setTimeout(w, 150); })();
     var sys = secs.filter(function(s){ return s !== pres && s.n !== null; });
     var els = [];
     function ref(el){ els.push(el); return ' data-i="' + (els.length - 1) + '"'; }
+    if(hmode === 'desk'){
+      var ARW = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>';
+      var rc = recent(), who = !!me;
+      var d = '<div class="hh-top"><h1>Step2Haki</h1><button type="button" class="hh-me" data-do="review" aria-label="Review and profiles">' +
+        (me ? esc(me) : '<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8.2" r="4.2"/><path d="M3.8 20.5c.7-4.2 4.1-6.6 8.2-6.6s7.500 2.400 8.2 6.600z"/></svg>') + '</button></div>' +
+        '<div class="hh-sub"><span>' + esc(meta.slice(0, 2).join(' · ')) + '</span><label class="hh-shelf"><span>' + esc(cur.t) + '</span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 9.500l5-5 5 5M7 14.500l5 5 5-5"/></svg>' +
+        '<select aria-label="Shelf">' + shelves.map(function(s){ return '<option value="' + s.id + '"' + (s.on ? ' selected' : '') + (s.soon ? ' disabled' : '') + '>' + esc(s.t) + (s.soon ? ' (soon)' : '') + '</option>'; }).join('') + '</select></label></div>' +
+        '<button type="button" class="hh-s" data-do="search"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.500"/><path d="M16 16l4.500 4.500"/></svg><span>Search topics, findings, drugs</span></button>';
+      if(rc.length){
+        d += '<div class="hh-card hh-list"><button type="button" class="hh-c" data-do="go" data-h="' + esc(rc[0].h) + '"><span class="hh-cx"><em>Continue</em><b>' + esc(rc[0].t) + '</b>' + (rc[0].l ? '<i>' + esc((rc[0].n ? rc[0].n + ' · ' : '') + rc[0].l) + '</i>' : '') + '</span><span class="hh-play">' + ARW + '</span></button>' +
+          rc.slice(1).map(function(o){ return '<button type="button" class="hh-r" data-do="go" data-h="' + esc(o.id) + '"><span>' + esc(o.t) + '</span><span class="hh-ch">' + ARW + '</span></button>'; }).join('') + '</div>';
+      }
+      d += '<button type="button" class="hh-card hh-rv" data-do="review"><span class="hh-cx"><b>Review</b><i>' + (who ? (due ? due + ' due in ' + esc(cur.t) : 'Nothing due in ' + esc(cur.t)) : 'Choose who is studying to schedule reviews') + '</i></span><span class="hh-pill' + (who && due ? ' on' : '') + '">' + (who ? (due ? 'Start' : 'Open') : 'Set up') + '</span></button>';
+      d += '<div class="hh-h"><h2>Browse</h2><span>' + esc(cur.t) + '</span></div><div class="hh-card hh-list"><div class="hh-seg" role="group" aria-label="Browse by"><button type="button" data-do="seg" data-v="sys" aria-pressed="' + (seg === 'sys') + '">By system</button>' +
+        (pres && groups.length ? '<button type="button" data-do="seg" data-v="cc" aria-pressed="' + (seg === 'cc') + '">By complaint</button>' : '') + '</div>' +
+        (seg === 'cc' && pres ? groups.map(function(g){ return '<button type="button" class="hh-r"' + ref(g.el) + '><span>' + esc(g.t) + '</span><span class="hh-b">' + esc(g.n) + '</span><span class="hh-ch">' + ARW + '</span></button>'; }).join('')
+          : sys.map(function(s){ return '<button type="button" class="hh-r"' + ref(s.el) + '><span>' + esc(s.t) + '</span><span class="hh-b">' + s.n + '</span><span class="hh-ch">' + ARW + '</span></button>'; }).join('')) + '</div>';
+      d += '<div class="hh-h"><h2>Guides</h2></div>' + (guide.length ? '<div class="hh-card hh-list">' + guide.map(function(s){ return '<button type="button" class="hh-r"' + ref(s.el) + '><span>' + esc(s.t) + '</span><span class="hh-ch">' + ARW + '</span></button>'; }).join('') + '</div>' : '');
+      box.innerHTML = d; box._els = els;
+      var ft = document.getElementById('phfoot');
+      if(!ft){ ft = document.createElement('button'); ft.type = 'button'; ft.id = 'phfoot'; var w = document.querySelector('main .wrap:not(.masthead .wrap)') || document.querySelector('main'); w.appendChild(ft);
+        ft.addEventListener('click', function(){ var l = document.querySelector('.masthead .axlogbtn'); if(l) l.click(); }); }
+      ft.textContent = [meta[4], meta[2]].filter(Boolean).join(' \u00b7 ');
+      return;
+    }
     var h = '<div class="hh-top"><h1>Step2Haki</h1><button type="button" class="hh-me" data-do="review" aria-label="Review and profiles">' +
       (me ? esc(me) : '<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8.2" r="4.2"/><path d="M3.8 20.5c.7-4.2 4.1-6.6 8.2-6.6s7.500 2.400 8.2 6.600z"/></svg>') + '</button></div>' +
       '<div class="hh-sub"><span>' + esc(meta.slice(0, 2).join(' · ')) + '</span><label class="hh-shelf"><span>' + esc(cur.t) + '</span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 9.500l5-5 5 5M7 14.500l5 5 5-5"/></svg>' +
@@ -145,6 +180,9 @@ var n = 0; (function w(){ if(!mount() && ++n < 40) setTimeout(w, 150); })();
   }
   box.addEventListener('click', function(e){
     var b = e.target.closest('button'); if(!b) return;
+    if(b.dataset['do'] === 'seg'){ seg = b.dataset.v; draw(); return; }
+    if(b.dataset['do'] === 'go'){ location.hash = '#' + b.dataset.h; return; }
+    if(b.dataset['do'] === 'search'){ AX.emit('nav:open'); var q = document.querySelector('#nav input[type="search"], #nav #search, #nav .axn-srch input'); if(q) q.focus(); return; }
     if(b.dataset['do'] === 'review'){ var r = document.querySelector('#mbar [data-act="review"]'); if(r) r.click(); return; }
     var el = box._els && box._els[+b.dataset.i]; if(el) el.dispatchEvent(new MouseEvent('click', {bubbles: true, cancelable: true}));
   });
@@ -155,6 +193,8 @@ var n = 0; (function w(){ if(!mount() && ++n < 40) setTimeout(w, 150); })();
   });
   draw(); setTimeout(draw, 1200);
   document.addEventListener('ax-shelf', function(){ setTimeout(draw, 30); });
+  function back(){ setTimeout(function(){ if(!H.classList.contains('ph-open')) draw(); }, 80); }
+  window.addEventListener('hashchange', back); window.addEventListener('popstate', back); AX.on('phone:home', back);
 })();
 
 /* numbered side rail: shows while scrolling, fades; drag scrubs through the brief; a tap snaps to the nearest stop */

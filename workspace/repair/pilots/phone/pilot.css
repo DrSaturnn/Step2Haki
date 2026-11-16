@@ -46,10 +46,10 @@ html[data-ph-dx="b"] .brief.sp .sp-dx table.dense thead th:nth-child(3)::before{
 @media (max-width:1100px){
 /* Home as tiles (iOS Fitness Summary and Sharing) */
 #phhome{display:none}
-html[data-ph-home="tiles"].ph-solo #phhome{display:block}
-html[data-ph-home="tiles"].ph-solo .masthead{padding:calc(env(safe-area-inset-top,0px) + 18px) 0 4px;margin:0}
-html[data-ph-home="tiles"].ph-solo .masthead .wrap>:not(#phhome){display:none}
-html[data-ph-home="tiles"].ph-solo main .wrap>:is(.sectwrap,.psub){display:none!important}
+html:is([data-ph-home="tiles"],[data-ph-home="desk"]).ph-solo #phhome{display:block}
+html:is([data-ph-home="tiles"],[data-ph-home="desk"]).ph-solo .masthead{padding:calc(env(safe-area-inset-top,0px) + 18px) 0 4px;margin:0}
+html:is([data-ph-home="tiles"],[data-ph-home="desk"]).ph-solo .masthead .wrap>:not(#phhome){display:none}
+html:is([data-ph-home="tiles"],[data-ph-home="desk"]).ph-solo main .wrap>:is(.sectwrap,.psub){display:none!important}
 #phhome button{all:unset;box-sizing:border-box;cursor:pointer;-webkit-tap-highlight-color:transparent}
 #phhome button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 #phhome .hh-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
@@ -87,7 +87,7 @@ html[data-ph-home="tiles"].ph-solo main .wrap>:is(.sectwrap,.psub){display:none!
 #phhome .hh-n b{font:650 32px/1 var(--sans);letter-spacing:-.01em;font-variant-numeric:tabular-nums;color:var(--accent)}
 #phhome .hh-f{margin-top:8px;font:700 10.5px/1 var(--sans);letter-spacing:.09em;text-transform:uppercase;color:var(--faint)}
 #phhome .hh-l{width:100%;margin-bottom:10px}
-html[data-ph-home="tiles"].ph-solo:not(.ph-open) main .wrap>details.fmdrop{margin-top:10px}
+html:is([data-ph-home="tiles"],[data-ph-home="desk"]).ph-solo:not(.ph-open) main .wrap>details.fmdrop{margin-top:10px}
 
 /* floating tab capsule (iOS Fitness): inset from the edges, the current tab in a recessed pill */
 html[data-ph-tabs="float"]{--tab-h:calc(82px + env(safe-area-inset-bottom,0px))}
@@ -149,4 +149,34 @@ html[data-ph-nav="push"] body.navopen:not(.navset) #phscrim{left:var(--dw)}
 html[data-ph-tabs="float"]:is([data-ph-nav="drawer"],[data-ph-nav="push"]) #phscrim{bottom:0}
 html[data-ph-tabs="float"]:is([data-ph-nav="drawer"],[data-ph-nav="push"]) body:not(.navset) #nav{border-radius:0 20px 20px 0}
 html[data-ph-tabs="float"][data-ph-nav="push"] body:not(.navset) #nav{border-radius:0}
+}
+
+/* ===== r8: Home as a study desk: search, continue, review, then one Browse card (by system or by complaint), guides ===== */
+@media (max-width:1100px){
+#phhome .hh-s{display:flex;align-items:center;gap:10px;width:100%;height:46px;padding:0 14px;margin:0 0 14px;border-radius:14px;background:var(--recess);box-shadow:var(--inner-2);font:500 16px/1 var(--sans);color:var(--muted)}
+#phhome .hh-list{padding:0;overflow:hidden;margin:0 0 12px}
+#phhome .hh-list:active{transform:none}
+#phhome .hh-c{display:flex;align-items:center;gap:12px;width:100%;padding:14px 14px 13px 16px}
+#phhome .hh-cx{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:3px}
+#phhome .hh-cx em{font:800 10.5px/1.2 var(--sans);font-style:normal;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+#phhome .hh-cx b{font:700 17px/1.25 var(--sans);color:var(--ink)}
+#phhome .hh-cx i{font:600 13.5px/1.3 var(--sans);font-style:normal;color:var(--muted)}
+#phhome .hh-c .hh-cx i{font:800 10.5px/1.3 var(--sans);letter-spacing:.07em;text-transform:uppercase;color:var(--confirm)}
+#phhome .hh-play{flex:none;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--ink);color:var(--raised)}
+#phhome .hh-r{display:flex;align-items:center;gap:10px;width:100%;min-height:46px;padding:6px 12px 6px 16px;border-top:1px solid var(--hair);font:600 15.5px/1.25 var(--sans);color:var(--ink)}
+#phhome .hh-r>span:first-child{flex:1 1 auto;min-width:0}
+#phhome .hh-r:active,#phhome .hh-c:active{background:var(--recess)}
+#phhome .hh-b{flex:none;min-width:28px;height:22px;padding:0 6px;border-radius:6px;display:flex;align-items:center;justify-content:center;background:var(--recess-2,var(--recess));font:700 12px/1 var(--sans);font-variant-numeric:tabular-nums;color:var(--ink-2)}
+#phhome .hh-ch{flex:none;display:flex;color:var(--faint)}
+#phhome .hh-rv{flex-direction:row;align-items:center;gap:12px;width:100%;padding:14px 14px 14px 16px;margin:0 0 4px}
+#phhome .hh-pill{flex:none;height:32px;padding:0 14px;border-radius:99px;display:flex;align-items:center;background:var(--recess-2,var(--recess));font:700 13.5px/1 var(--sans);color:var(--ink)}
+#phhome .hh-pill.on{background:var(--accent);color:#FFFFFF}
+#phhome .hh-seg{display:flex;gap:3px;margin:10px 10px 8px;padding:3px;border-radius:11px;background:var(--recess)}
+#phhome .hh-seg button{flex:1 1 0;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font:650 13.5px/1 var(--sans);color:var(--muted)}
+#phhome .hh-seg button[aria-pressed="true"]{background:var(--raised);box-shadow:var(--ec);color:var(--ink)}
+html[data-ph-home="desk"] #phhome .hh-h{margin:22px 0 10px}
+html[data-ph-home="desk"] #phhome .hh-h h2{font-size:20px}
+#phfoot{display:none}
+html[data-ph-home="desk"].ph-solo:not(.ph-open) #phfoot{all:unset;display:block;box-sizing:border-box;width:100%;margin:18px 0 0;text-align:center;font:500 12.5px/1.4 var(--sans);color:var(--muted);cursor:pointer}
+html[data-ph-home="desk"].ph-solo:not(.ph-open) main .wrap>div:last-of-type:not([class]):not([id]){font-size:12.5px}
 }

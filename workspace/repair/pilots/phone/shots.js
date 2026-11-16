@@ -18,7 +18,7 @@ const { serve } = require('../../../tools/serve_page.js');
   await shot('01_home');
   await p.mouse.move(195, 400); await p.mouse.wheel(0, 900); await shot('02_home_scroll');
   // a Presentations group row on Home opens Browse at its group
-  const row = await p.$('#phhome .hh-g') || await p.$('main .wrap > .psub'); if (row) { await row.click(); await shot('03_browse_from_home'); }
+  const row = await p.$('#phhome .hh-seg ~ .hh-r') || await p.$('#phhome .hh-g') || await p.$('main .wrap > .psub'); if (row) { await row.click(); await shot('03_browse_from_home'); }
   log('navopen', await p.evaluate(() => document.body.classList.contains('navopen')));
   // pick the first visible brief tile in the open group
   const tile = await p.$('#axn .axn-dz.on a.axn-b:not([hidden])'); const tid = tile && await tile.getAttribute('data-id');

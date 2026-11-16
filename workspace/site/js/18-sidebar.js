@@ -110,7 +110,7 @@
   }
 
   /* ---------- list ---------- */
-  var tiles = {}, pref = null, curIt = null, stay = null, list, groups = [], byId = {}, cur = {brief: null, step: -1}, rail = null, lock = 0, open = {};
+  var tiles = {}, pref = null, curIt = null, stay = null, list, groups = [], byId = {}, cur = {brief: null, step: -1}, rail = null, lock = 0, revealed = 0, open = {};
   function build(){
     var host = document.getElementById('navscroll') || old.parentNode;
     list = el('div'); list.id = 'axn'; list.setAttribute('role', 'navigation'); list.setAttribute('aria-label', 'All briefs');
@@ -306,6 +306,7 @@
   AX.on('nav:reveal', function(o){
     var all = tiles[o.id] || [], it = o.pres ? all[0] : all[all.length - 1]; if(!it) return;
     if(it.g.btn.getAttribute('aria-expanded') !== 'true') fold(it.g, true, false);
+    revealed = Date.now() + 400;   // the open that came with this reveal keeps the group in view
     var s = scroller(); if(s) s.scrollTop += it.g.btn.getBoundingClientRect().top - s.getBoundingClientRect().top - 8;
   });
   // an in-page link to another brief ("Pairs with" cross-references, links in brief text) takes the same path; links
@@ -331,7 +332,7 @@
     window.addEventListener('scroll', kick, {passive: true});
     window.addEventListener('resize', function(){ paint(); kick(); });
     // opening the phone index brings the current brief into view
-    new MutationObserver(function(){ if(document.body.classList.contains('navopen') && cur.brief && byId[cur.brief]) keep(byId[cur.brief].el, false, true); })
+    new MutationObserver(function(){ if(Date.now() < revealed) return; if(document.body.classList.contains('navopen') && cur.brief && byId[cur.brief]) keep(byId[cur.brief].el, false, true); })
       .observe(document.body, {attributes: true, attributeFilter: ['class']});
     var h = decodeURIComponent(location.hash.slice(1));
     if(h && AX.brief.ensure(h)){ seat(h, Date.now() + 3500); window.addEventListener('load', function(){ if(!moved && seated !== h) seat(h, Date.now() + 1500); }); }
