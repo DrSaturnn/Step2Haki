@@ -41,3 +41,84 @@ html[data-ph-dx="b"] .brief.sp .sp-dx table.dense thead th{display:block;padding
 html[data-ph-dx="b"] .brief.sp .sp-dx table.dense thead th:first-child{display:none}
 html[data-ph-dx="b"] .brief.sp .sp-dx table.dense thead th:nth-child(3)::before{content:"\2192\00a0";color:var(--accent);font-weight:700}
 }
+
+/* ===== r4 (2026-11-15): Home as tiles, floating tab capsule, AxBx deck surface. Pilot only. ===== */
+@media (max-width:1100px){
+/* Home as tiles (iOS Fitness Summary and Sharing) */
+#phhome{display:none}
+html[data-ph-home="tiles"].ph-solo #phhome{display:block}
+html[data-ph-home="tiles"].ph-solo .masthead{padding:calc(env(safe-area-inset-top,0px) + 18px) 0 4px;margin:0}
+html[data-ph-home="tiles"].ph-solo .masthead .wrap>:not(#phhome){display:none}
+html[data-ph-home="tiles"].ph-solo main .wrap>:is(.sectwrap,.psub){display:none!important}
+#phhome button{all:unset;box-sizing:border-box;cursor:pointer;-webkit-tap-highlight-color:transparent}
+#phhome button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#phhome .hh-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+#phhome h1{margin:0;font:800 34px/1.1 var(--sans);letter-spacing:-.02em;color:var(--ink)}
+#phhome .hh-me{flex:none;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--raised);box-shadow:var(--e2);font:800 15px/1 var(--sans);letter-spacing:.02em;color:var(--ink-2)}
+#phhome .hh-sub{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:6px 0 16px;font:500 15px/1.3 var(--sans);color:var(--muted)}
+#phhome .hh-shelf{position:relative;display:inline-flex;align-items:center;gap:5px;min-height:32px;font:650 15px/1 var(--sans);color:var(--accent)}
+#phhome .hh-shelf select{position:absolute;inset:0;width:100%;height:100%;opacity:0;font-size:16px}
+#phhome .hh-card{display:flex;flex-direction:column;background:var(--raised);box-shadow:var(--e2);border-radius:var(--ph-r,22px);padding:14px 14px 13px;color:var(--ink);transition:transform .3s var(--snp)}
+#phhome .hh-card:active{transform:scale(.975)}
+#phhome .hh-ct{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;font:700 16px/1.25 var(--sans);color:var(--ink)}
+#phhome .hh-go{flex:none;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--recess-2,var(--recess));color:var(--muted)}
+#phhome .hh-hero{width:100%;padding:16px 16px 18px}
+#phhome .hh-hero .hh-ct{font-size:18px}
+#phhome .hh-hr{display:flex;align-items:flex-end;gap:22px;margin-top:14px}
+#phhome .hh-big{flex:none;min-width:96px;display:flex;align-items:baseline;gap:5px}
+#phhome .hh-big b{font:750 54px/1 var(--sans);letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--accent)}
+#phhome .hh-big em,#phhome .hh-n em{font:800 11px/1 var(--sans);font-style:normal;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+#phhome .hh-ms{flex:1 1 auto;display:flex;flex-direction:column;gap:7px}
+#phhome .hh-ms>span{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding-top:7px;border-top:1px solid var(--hair)}
+#phhome .hh-ms>span:first-child{border-top:0;padding-top:0}
+#phhome .hh-ms i{font:500 14px/1.2 var(--sans);font-style:normal;color:var(--muted)}
+#phhome .hh-ms b{font:700 14px/1.2 var(--sans);color:var(--ink)}
+#phhome .hh-h{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:28px 0 12px}
+#phhome .hh-h h2{margin:0;font:800 24px/1.15 var(--sans);letter-spacing:-.01em;color:var(--ink)}
+#phhome .hh-h span{font:500 14px/1.2 var(--sans);color:var(--muted)}
+#phhome .hh-row{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x proximity;scroll-padding:0 18px;margin:-14px -18px -18px;padding:14px 18px 22px;scrollbar-width:none}
+#phhome .hh-row::-webkit-scrollbar{display:none}
+#phhome .hh-g{flex:0 0 150px;min-height:108px;justify-content:space-between;scroll-snap-align:start}
+#phhome .hh-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#phhome .hh-t{min-height:132px;min-width:0}
+#phhome .hh-t .hh-ct>:first-child,#phhome .hh-g .hh-ct{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+#phhome .hh-t .hh-ct{display:flex}
+#phhome .hh-n{display:flex;align-items:baseline;gap:4px;margin-top:auto;padding-top:10px}
+#phhome .hh-n b{font:650 32px/1 var(--sans);letter-spacing:-.01em;font-variant-numeric:tabular-nums;color:var(--accent)}
+#phhome .hh-f{margin-top:8px;font:700 10.5px/1 var(--sans);letter-spacing:.09em;text-transform:uppercase;color:var(--faint)}
+#phhome .hh-l{width:100%;margin-bottom:10px}
+html[data-ph-home="tiles"].ph-solo:not(.ph-open) main .wrap>details.fmdrop{margin-top:10px}
+
+/* floating tab capsule (iOS Fitness): inset from the edges, the current tab in a recessed pill */
+html[data-ph-tabs="float"]{--tab-h:calc(82px + env(safe-area-inset-bottom,0px))}
+html[data-ph-tabs="float"] #mbar{left:14px;right:14px;bottom:calc(10px + env(safe-area-inset-bottom,0px));height:62px;padding:5px;border-radius:31px;border:0;background:var(--ph-glass,rgba(244,245,246,.78));-webkit-backdrop-filter:blur(22px) saturate(1.6);backdrop-filter:blur(22px) saturate(1.6);box-shadow:0 10px 30px rgba(20,24,26,.22),0 1px 3px rgba(20,24,26,.14),inset 0 0 0 1px rgba(255,255,255,.7)}
+html[data-ph-tabs="float"] #mbar button{margin:0;border-radius:26px;gap:3px;transition:background .3s var(--snp),color .3s var(--snp)}
+html[data-ph-tabs="float"] #mbar button[aria-current="page"]{background:rgba(24,28,30,.08)}
+html[data-ph-tabs="float"] #mbar button[data-act="review"] .bdg{top:-28px}
+html[data-ph-tabs="float"] #nav{height:100vh;height:100dvh}
+html[data-ph-tabs="float"] #navscroll{padding-bottom:var(--tab-h)}
+html[data-ph-tabs="float"] body.navset #nav #axdisp{bottom:calc(var(--tab-h) + 2px)}
+[data-theme="dark"][data-ph-tabs="float"] #mbar{background:rgba(30,31,38,.72);box-shadow:0 10px 30px rgba(0,0,0,.5),inset 0 0 0 1px rgba(255,255,255,.10)}
+[data-theme="dark"][data-ph-tabs="float"] #mbar button[aria-current="page"]{background:rgba(255,255,255,.10)}
+}
+
+/* AxBx deck surface (values read from the deck's XML): flat #ECEDF1 canvas, #F3F4F8 cards with a white hairline edge and one
+   shadow straight down (blur 14, offset 6, #545A78 at 32%), ink #1C1D22. Token values only; light theme only. */
+html[data-ph-surf="axbx"]:not([data-theme="dark"]){
+--canvas-a:#ECEDF1;--canvas-b:#ECEDF1;--porcelain:#F3F4F8;--card:#F3F4F8;--raised:#F3F4F8;--recess:#E4E6EC;--recess-2:#DDDFE7;
+--hair:rgba(84,90,120,.16);--ink:#1C1D22;--ink-2:#2E3038;--muted:#6A6F7E;--faint:#8C91A0;
+--lt:rgba(255,255,255,0);--lt-soft:rgba(255,255,255,0);--dk:rgba(84,90,120,.20);--dk-soft:rgba(84,90,120,.14);
+--e1:0 6px 14px rgba(84,90,120,.30),inset 0 0 0 1px rgba(255,255,255,.95);
+--e2:0 4px 10px rgba(84,90,120,.26),inset 0 0 0 1px rgba(255,255,255,.95);
+--ec:0 2px 5px rgba(84,90,120,.24),inset 0 0 0 1px rgba(255,255,255,.95);
+--inner:inset 0 1px 3px rgba(84,90,120,.26),inset 0 0 0 1px rgba(84,90,120,.08);--inner-2:inset 0 1px 2px rgba(84,90,120,.22),inset 0 0 0 1px rgba(84,90,120,.07);
+--lip:inset 0 0 0 1px rgba(255,255,255,.95);--r-card:14px;--ph-r:14px;--ph-glass:rgba(243,244,248,.80);
+--p-F4F5F5:#F3F4F8;--p-F3F4F4:#F3F4F8;--p-EEF0F0:#F3F4F8;--p-EDEEEE:#F3F4F8;--p-E9EBEB:#F3F4F8;--p-E7E9E9:#F3F4F8;--p-F2F4F4:#F3F4F8;--p-EFF1F1:#F3F4F8;--p-EDEFEF:#F3F4F8;--p-E6E8E8:#F1F2F6;--p-E2E5E5:#E4E6EC;--p-E0E3E3:#E4E6EC;--p-DCDFDF:#DDDFE7;--p-EFF0F0-a0:rgba(243,244,248,0)}
+html[data-ph-surf="axbx"]:not([data-theme="dark"]) #phhome .hh-go{border-radius:6px;background:#DDDFE7;color:#2E3038}
+html[data-ph-surf="axbx"]:not([data-theme="dark"]) #phhome .hh-n b,html[data-ph-surf="axbx"]:not([data-theme="dark"]) #phhome .hh-big b{color:#1C1D22}
+html[data-ph-surf="axbx"]:not([data-theme="dark"]) #phhome .hh-n em,html[data-ph-surf="axbx"]:not([data-theme="dark"]) #phhome .hh-big em{color:#6A6F7E}
+html[data-ph-surf="axbx"]:not([data-theme="dark"]) #phhome .hh-hero{background:#1C1D22;box-shadow:0 6px 14px rgba(84,90,120,.32);color:#FFFFFF}
+html[data-ph-surf="axbx"]:not([data-theme="dark"]) #phhome .hh-hero :is(.hh-ct,.hh-ms b,.hh-big b){color:#FFFFFF}
+html[data-ph-surf="axbx"]:not([data-theme="dark"]) #phhome .hh-hero :is(.hh-ms i,.hh-big em){color:#B4B8C4}
+html[data-ph-surf="axbx"]:not([data-theme="dark"]) #phhome .hh-hero .hh-ms>span{border-top-color:rgba(255,255,255,.14)}
+html[data-ph-surf="axbx"]:not([data-theme="dark"]) #phhome .hh-hero .hh-go{background:#2E3038;color:#FFFFFF}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""s148g bold key words in bottom lines (Jonathan 2026-10-20: "still bolding the key words/criteria"; bold only, no
+"""s148g bold key words in bottom lines (2026-10-20; bold only, no
 wording change). Library plus a dump tool.
 
   python3 repair/s148g/blbold.py dump [brief ...]     print each bottom line's text, one block per line, hovers removed

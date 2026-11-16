@@ -316,11 +316,11 @@ def workup_path(title, steps, step=None):
             for name, res in st['tests']:
                 rs = ''.join(f'<p class="wr2"><b>{r}</b><span class="mask">{m}</span></p>' for r, m in res)
                 ts.append(f'<div class="wt2"><p class="tn">{name}</p>{rs}</div>')
-            body = f'<div class="tile{" first" if st.get("kind") == "first" else ""}">' + '<i class="plus" aria-label="and"></i>'.join(ts) + '</div>'
+            body = f'<div class="tile{" first" if st.get("kind") == "first" else ""}">' + '<i class="plus" role="img" aria-label="and"></i>'.join(ts) + '</div>'
         if st.get('text'):
             body += f'<p class="pt-tx">{st["text"]}</p>'
         out.append(f'<li class="pt{" end" if st.get("kind") == "end" else ""}"><span class="when">{st["when"]}</span>{body}</li>')
-    # every workup path is labelled as the diagnostic workup (Jonathan 2026-10-02)
+    # every workup path is labelled as the diagnostic workup (2026-10-02)
     return f'<figure class="lcp"><p class="kick">Diagnostic workup</p>{_title(title, step)}<ol class="path">{"".join(out)}</ol></figure>'
 
 
@@ -394,7 +394,7 @@ def course_row(rid, r, axis):
 def course_table(title, rows, axis, hub, groups=None, full=False, hub_href=None, hub_title=None, step=None, note=''):
     """Mimic comparison on a life-course axis. rows: {id: row} from mimics.ROWS. groups: [(label, [ids])] for a hub;
     otherwise the order of `rows`. full=True marks the hub copy (data-mimic-full). hub_href links a spoke to its hub."""
-    # v6 (s111, Jonathan): each row carries its own key (no table-wide legend); a hub's groups are separate panels
+    # v6 (s111, the owner): each row carries its own key (no table-wide legend); a hub's groups are separate panels
     order = groups or [(None, list(rows))]
     out = []
     for label, ids in order:

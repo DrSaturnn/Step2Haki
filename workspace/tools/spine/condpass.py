@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Conditional PASS (Jonathan 2026-10-12, DECISIONS_DIGEST; claude/pending/POST_SHIP_R3.md section 2).
+"""Conditional PASS (2026-10-12, DECISIONS_DIGEST; claude/pending/POST_SHIP_R3.md section 2).
 
 A reviewer with only LOW findings may write "Verdict: PASS-IF" and a Replacements block of exact text edits:
 
@@ -19,7 +19,7 @@ Rules (enforced here):
     order and condition words (first, then, before, after, only, if, unless, except, until and the like) and
     diagnosis, drug and test names (repair/efficiency/ALIASES.json and ABBREV.json). Otherwise that part needs the
     normal follow-up review.
-  - s148 fix 8 (Jonathan 2026-10-18): a replacement from another part whose only meaning change is ADDED hedge words
+  - s148 fix 8 (2026-10-18): a replacement from another part whose only meaning change is ADDED hedge words
     still counts as wording-only when every added hedge word appears in a quote that the claim map cites for the line
     the replacement lands in (claim_map.json source_says, facts.json quote). Removing a hedge, or changing a number,
     a negation, an order or condition word or a name, still needs the normal follow-up review.
@@ -185,7 +185,9 @@ def forms(t, kind):
 
 def undo(text, reps, kind):
     """replay the replacements backwards on one file's text. Returns (text, applied ids, problem or None).
-    A replacement whose new text is absent was not applied; one whose new text occurs more than once is ambiguous."""
+    A replacement whose new text is absent was not applied; in html, one whose new text occurs more than once is
+    ambiguous. In json (the claim map) one changed line can sit in several claims, so every occurrence is undone; the
+    caller's hash check still decides whether the result is the judged state."""
     applied = []
     for n, old, new in reps:
         hit = None
@@ -198,15 +200,46 @@ def undo(text, reps, kind):
             pairs += [(H.escape(bn, quote=True), H.escape(bo, quote=True))]
         for fo_new, fo_old in pairs:
             c = text.count(fo_new)
-            if c > 1:
+            if c > 1 and kind != 'json':
                 return text, applied, 'replacement %s is ambiguous (its new text occurs %d times)' % (n, c)
-            if c == 1:
+            if c:
                 hit = (fo_new, fo_old)
                 break
         if hit:
-            text = text.replace(hit[0], hit[1], 1)
+            text = text.replace(hit[0], hit[1], -1 if kind == 'json' else 1)
             applied.append(n)
+        elif kind == 'html':
+            back, prob = undo_across_tags(text, new, old)
+            if prob:
+                return text, applied, 'replacement %s %s' % (n, prob)
+            if back is not None:
+                text = back
+                applied.append(n)
     return text, applied, None
+
+
+def undo_across_tags(text, new, old):
+    """the html with one occurrence of new turned back into old when the receipt quoted a line whose plain text
+    crosses inline tags (a bold term before its colon): tags may sit anywhere in the shared start and end, and only
+    the differing middle, which must hold no tag, is replaced. Returns (html or None, problem or None)."""
+    for fo_new, fo_old in zip(forms(new, 'html'), forms(old, 'html')):
+        i = 0
+        while i < min(len(fo_new), len(fo_old)) and fo_new[i] == fo_old[i]:
+            i += 1
+        j = 0
+        while j < min(len(fo_new), len(fo_old)) - i and fo_new[-1 - j] == fo_old[-1 - j]:
+            j += 1
+        pre, mid, suf = fo_new[:i], fo_new[i:len(fo_new) - j], fo_new[len(fo_new) - j:]
+        tag = r'(?:<[^>]+>)*'
+        loose = lambda t: tag.join(re.escape(c) for c in t)
+        pat = re.compile(loose(pre) + tag + '(' + re.escape(mid) + ')' + tag + loose(suf))
+        ms = list(pat.finditer(text))
+        if len(ms) > 1:
+            return None, 'is ambiguous across tags (its new text occurs %d times)' % len(ms)
+        if ms:
+            m = ms[0]
+            return text[:m.start(1)] + fo_old[i:len(fo_old) - j] + text[m.end(1):], None
+    return None, None
 
 
 def pool(receipts, table=None, quotes=None):

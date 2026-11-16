@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""s146c (site layer, Jonathan 2026-10-17): writes repair/s146c/40_nav.json from the live page.
+"""s146c (site layer, 2026-10-17): writes repair/s146c/40_nav.json from the live page.
 A Presentations group of hubs first in the sidebar; Psychiatry briefs regrouped in six disorder families (sidebar
 sub-labels and page order); the sidebar rail follows the row the reader is in; the desktop top bar names the brief
 before its step; 110% scale on windows 1500 px and wider. Pilot: repair/pilots/nav/make_pilot.py (same changes)."""
@@ -62,7 +62,7 @@ R = [('var list, groups = [], byId = {}, cur = {brief: null, step: -1}',
       """    cl.textContent = label || 'Step2Haki';
     var bn = bar.querySelector('.axbn'), hh = b ? b.querySelector('h4') : null, nm = hh ? hh.textContent.trim() : '';   // s146c
     bn.textContent = nm; bn.title = nm; bn.hidden = !nm || nm === label;"""),
-     ('</head>', '<style id="ax-s146c">\n/* s146c: brief name in the desktop top bar; 110% scale on windows 1500 px and wider (Jonathan 2026-10-17) */\n'
+     ('</head>', '<style id="ax-s146c">\n/* s146c: brief name in the desktop top bar; 110% scale on windows 1500 px and wider (2026-10-17) */\n'
       '#axbar .axcur{max-width:520px}\n#axbar .axbn{font:600 14px/1.2 var(--sans);color:var(--muted);white-space:nowrap;overflow:hidden;'
       'text-overflow:ellipsis;max-width:240px;padding-right:12px;margin-right:2px;border-right:1px solid var(--hair)}\n'
       '#axbar .axbn[hidden]{display:none}\n@media (min-width:1500px){html{zoom:1.1}}\n</style>\n</head>')]

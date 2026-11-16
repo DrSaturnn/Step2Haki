@@ -4,7 +4,8 @@
    node tools/a11y_scan.js PAGE [--views desk,phone] [--configs a,b] [--sample 20] [--out OUT.json]
                                 [--baseline tools/spine/a11y_baseline.json] [--write]
 
-   Per view and setting the page is loaded with every brief rendered (?axall); the sample is every k-th brief (k = briefs /
+   Per view two pages load with every brief rendered (?axall) and take every other setting, switched in place (--fresh:
+   one load per view and setting, as before s169); the sample is every k-th brief (k = briefs /
    sample) plus #nav, #axbar and #modes. axe runs the WCAG 2.0 and 2.1 A and AA rules on that set; only serious and
    critical violations are kept, counted per rule as nodes.
    --baseline: exit 1 when a view/setting/rule count is above the baseline (a rule missing from the baseline counts 0).
@@ -20,7 +21,17 @@ const CONFIGS = {
 function arg(a, k, d) { const i = a.indexOf(k); return i >= 0 ? a[i + 1] : d; }
 const AXE = fs.readFileSync(require.resolve('axe-core/axe.min.js'), 'utf8');
 
-async function scan(browser, file, view, cfg, sample) {
+// one load per view (s169, D-20261107-14): the page loads in flat light Read, then each setting is switched in place the
+// way ui_check and theme_gate switch it, and axe runs again; --fresh loads the page once per setting instead
+const APPLY = s => { const H = document.documentElement, B = document.body;
+  B.classList.toggle('flat', s.flat); B.classList.toggle('study', s.study);
+  if (s.dark) H.setAttribute('data-theme', 'dark'); else H.removeAttribute('data-theme');
+  if (s.tinted) H.setAttribute('data-glass', 'tinted'); else H.removeAttribute('data-glass');
+  // the page restyles regions a few per frame after a mode switch: wait until the region counts hold for 10 frames
+  return new Promise(r => { let last = '', same = 0, n = 0; const tick = () => { const k = document.querySelectorAll('.axm-flat').length + ':' + document.querySelectorAll('.axm-study').length;
+    same = k === last ? same + 1 : 0; last = k; if (same >= 10 || ++n > 3000) r(); else requestAnimationFrame(tick); }; requestAnimationFrame(tick); }); };
+const STATE = cfg => ({ flat: !/sculpted/.test(cfg), dark: /dark|tinted/.test(cfg), tinted: /tinted/.test(cfg), study: /recall/.test(cfg) });
+async function load(browser, file, view, cfg) {
   const V = VIEWS[view];
   const ctx = await browser.newContext({ viewport: { width: V.width, height: V.height }, isMobile: !!V.isMobile, hasTouch: !!V.hasTouch, deviceScaleFactor: 1 });
   await ctx.addInitScript(s => { try { localStorage.clear(); for (const k in s) localStorage.setItem(k, s[k]); } catch (e) {} }, CONFIGS[cfg]);
@@ -29,7 +40,10 @@ async function scan(browser, file, view, cfg, sample) {
   await p.waitForTimeout(2500);
   await p.addStyleTag({ content: '*,*::before,*::after{transition:none!important;animation:none!important}' });
   await p.addScriptTag({ content: AXE });
-  const res = await p.evaluate(async n => {
+  return { p, ctx };
+}
+async function axeRun(p, sample) {
+  return p.evaluate(async n => {
     const ids = [...document.querySelectorAll('.brief[id]')].map(e => e.id), k = Math.ceil(ids.length / n);
     const include = ids.filter((_, i) => i % k === 0).map(id => ['#' + CSS.escape(id)]).concat([['#nav'], ['#axbar'], ['#modes']])
       .filter(s => document.querySelector(s[0]));
@@ -41,7 +55,11 @@ async function scan(browser, file, view, cfg, sample) {
     }
     return { briefs: include.length - 3, out };
   }, sample);
-  await ctx.close();
+}
+async function scan(browser, file, view, cfg, sample) {
+  const o = await load(browser, file, view, cfg);
+  const res = await axeRun(o.p, sample);
+  await o.ctx.close();
   return res;
 }
 
@@ -51,12 +69,32 @@ async function scan(browser, file, view, cfg, sample) {
   const views = arg(a, '--views', 'desk,phone').split(','), configs = arg(a, '--configs', Object.keys(CONFIGS).join(',')).split(',');
   const sample = +arg(a, '--sample', '20'), out = arg(a, '--out'), bl = arg(a, '--baseline'), t0 = Date.now();
   const browser = await chromium.launch(), counts = {}, detail = {};
-  for (const view of views) for (const cfg of configs) {
-    const t = Date.now(), r = await scan(browser, file, view, cfg, sample), key = view + ':' + cfg;
-    counts[key] = {}; detail[key] = r.out;
-    for (const id in r.out) counts[key][id] = r.out[id].count;
-    console.log('a11y ' + key + ': ' + r.briefs + ' briefs, ' + Object.keys(r.out).length + ' rules, ' +
-      Object.values(counts[key]).reduce((s, x) => s + x, 0) + ' nodes (' + Math.round((Date.now() - t) / 1000) + ' s)');
+  const fresh = a.includes('--fresh');
+  // two pages per view, each loaded once and taking every other setting (axe's contrast pass is most of the time and
+  // runs on one core per page)
+  const worker = async (view, list) => {
+    const base = fresh ? null : await load(browser, file, view, 'flat-light-read');
+    const got = [];
+    for (const cfg of list) {
+      const t = Date.now();
+      let r;
+      if (fresh) r = await scan(browser, file, view, cfg, sample);
+      else { await base.p.evaluate(APPLY, STATE(cfg)); r = await axeRun(base.p, sample); }
+      got.push([cfg, r, Date.now() - t]);
+    }
+    if (base) await base.ctx.close();
+    return got;
+  };
+  for (const view of views) {
+    const parts = await Promise.all([0, 1].map(k => worker(view, configs.filter((_, i) => i % 2 === k))));
+    const byCfg = new Map([].concat(...parts).map(x => [x[0], x]));
+    for (const cfg of configs) {
+      const [, r, ms] = byCfg.get(cfg), key = view + ':' + cfg;
+      counts[key] = {}; detail[key] = r.out;
+      for (const id in r.out) counts[key][id] = r.out[id].count;
+      console.log('a11y ' + key + ': ' + r.briefs + ' briefs, ' + Object.keys(r.out).length + ' rules, ' +
+        Object.values(counts[key]).reduce((s, x) => s + x, 0) + ' nodes (' + Math.round(ms / 1000) + ' s)');
+    }
   }
   await browser.close();
   if (out) fs.writeFileSync(out, JSON.stringify({ counts, detail }, null, 1));

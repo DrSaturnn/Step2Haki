@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""s148f (site layer, Jonathan 2026-10-19/20): writes repair/s148f/*.json from the live page.
+"""s148f (site layer, 2026-10-19/20): writes repair/s148f/*.json from the live page.
 
   40_site_r2.json   src/site_r2.css as <style id="ax-s148f"> and src/site_r2.js as <script id="ax-s148f-js">, appended at
                     the end of the body so they follow every earlier layer (as s148b).

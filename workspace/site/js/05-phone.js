@@ -105,10 +105,10 @@ function home(){
 }
 function back(){ if(solo && fromHome && history.length > 1) history.back(); else home(); }
 
-/* Home lists the sections: a section, its bands and the Presentations groups open Browse at their group */
+/* Home lists the sections: a section and the Presentations groups open Browse at their group */
 function reveal(e){
   if(!SOLO || !NARROW.matches || solo || e.defaultPrevented) return;
-  var t = e.target.closest && e.target.closest('main .wrap > :is(.sectwrap,.psub,.bsband)'); if(!t) return;
+  var t = e.target.closest && e.target.closest('main .wrap > :is(.sectwrap,.psub)'); if(!t) return;
   if(e.target.closest('a,button,select,input,details')) return;
   var pres = t.classList.contains('psub'), n = t.nextElementSibling;
   while(n && !n.classList.contains('brief')){

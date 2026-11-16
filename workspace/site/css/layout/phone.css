@@ -54,7 +54,7 @@ html.ph-open #phead .ph-back{display:flex}
 #phead .ph-steps button[aria-current="step"]+button{box-shadow:none}
 
 /* one brief per screen: the open brief alone; Home lists the sections */
-html.ph-solo main .wrap>:is(.sectwrap,.psub,.bsband){cursor:pointer}
+html.ph-solo main .wrap>:is(.sectwrap,.psub){cursor:pointer}
 html.ph-open main{padding-top:calc(var(--ph-h) + 12px)}
 html.ph-open .brief .bb-end .bb-next{font-weight:700}
 }

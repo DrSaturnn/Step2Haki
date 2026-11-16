@@ -13,7 +13,7 @@ Rules
   S2 schema     every block and rich part renders; every cited id is in SRC; a drawer names a brief or alias on
                 the page; a plain string holds markup only (learner words go in {"t", "ids"})
   C1 cap        words above the Practice header: disease 1,300, drug 1,000, presentation 700 (soft: an overage listed in
-                "cap_overage" {reason, would_go} for Jonathan is a flag, not an error; 2026-10-12)
+                "cap_overage" {reason, would_go} for the owner is a flag, not an error; 2026-10-12)
   C2 counts     bottom line 1 to 3 lines, flagged when its key words are not bold (s148g); Insights exactly two lines
   D1 tempting   a differential table (last head "Decides it") gives "tempting": one reason per row (FLAG on goldens)
   D2 decides    a Decides-it cell does not open with an action verb (give, treat, order...): it names what decides
@@ -70,13 +70,13 @@ def rx(s):
 
 
 def strip_aka(html):
-    """alias words (a diagnosis's other names, <span class="aka">) do not count against the soft cap (Jonathan 2026-10-12)"""
+    """alias words (a diagnosis's other names, <span class="aka">) do not count against the soft cap (2026-10-12)"""
     return re.sub(r'<span class="aka">.*?</span>', ' ', html, flags=re.S)
 
 
 def strip_hover(html):
     """hover-card bodies (<span class="sp-pop-b">, nested spans included) do not count against the soft cap: hovers keep
-    content without lengthening the brief (Jonathan 2026-10-13). The hover's button label still counts."""
+    content without lengthening the brief (2026-10-13). The hover's button label still counts."""
     out, i = [], 0
     while True:
         j = html.find('<span class="sp-pop-b"', i)
@@ -96,13 +96,13 @@ def strip_hover(html):
 
 def strip_collapsed(html):
     """the collapsed systems panel (<details class="sp-sys">, "What the disease does, by system") does not count against
-    the soft cap, like hovers (Jonathan 2026-10-13); its summary line still counts"""
+    the soft cap, like hovers (2026-10-13); its summary line still counts"""
     return re.sub(r'(<details class="sp-sys"[^>]*>\s*<summary\b.*?</summary>).*?</details>', r'\1 ', html, flags=re.S)
 
 
 def strip_pause(html):
     """the pause point (div.sp-pause, s154c question-style blocks; or a legacy p.sp-pause) does not count against the
-    soft cap, like hovers (Jonathan 2026-10-26: "these pause points wont be counted in the overall word count either")"""
+    soft cap, like hovers (2026-10-26)"""
     html = re.sub(r'<p class="sp-pause">.*?</p>', ' ', html, flags=re.S)
     out, i = [], 0
     while True:
@@ -258,11 +258,11 @@ class Check:
         cap = CAPS.get(o['entry'])
         listed = (o.get('cap_overage') or {}).get('reason')
         if cap and words > cap * 1.02 and listed:
-            # soft caps (Jonathan 2026-10-12): an overage for board-tested content is allowed when it is listed for him
+            # soft caps (2026-10-12): an overage for board-tested content is allowed when it is listed for him
             # with its count and what would have to go; the outline names it in "cap_overage": {"reason", "would_go"}
             self.flag('C1', 'body', '%d words, %d over the cap of about %d; listed overage: %s' % (words, words - cap, cap, listed))
-        elif cap and words > cap * 1.02:          # the caps are "about" (Jonathan 2026-10-10): 2% slack, then an error
-            self.err('C1', 'body', '%d words above the Practice header, cap about %d' % (words, cap), 'cut, move guideline-only detail into a hover or the systems panel (neither is counted), or list the overage for Jonathan in "cap_overage"')
+        elif cap and words > cap * 1.02:          # the caps are  (2026-10-10): 2% slack, then an error
+            self.err('C1', 'body', '%d words above the Practice header, cap about %d' % (words, cap), 'cut, move guideline-only detail into a hover or the systems panel (neither is counted), or list the overage for the owner in "cap_overage"')
         elif cap and words > cap:
             self.flag('C1', 'body', '%d words, just over the cap of about %d' % (words, cap))
         self.words = words
@@ -270,7 +270,7 @@ class Check:
             if isinstance(b, dict) and b.get('type') == 'bottom' and not 1 <= len(b['lines']) <= 3:
                 self.err('C2', 'body[%d]:bottom' % k, '%d bottom-line lines' % len(b['lines']), 'keep 1 to 3')
             if isinstance(b, dict) and b.get('type') == 'bottom' and '"b":' not in json.dumps(b['lines']) and '<b>' not in json.dumps(b['lines']):
-                self.flag('C2', 'body[%d]:bottom' % k, 'bottom line has no bold: bold its key words and criteria with {"b": ...} (s148g, Jonathan 2026-10-20)')
+                self.flag('C2', 'body[%d]:bottom' % k, 'bottom line has no bold: bold its key words and criteria with {"b": ...} (s148g, 2026-10-20)')
             if isinstance(b, dict) and b.get('type') == 'script2' and self.o.get('entry') != 'card':   # s159: a card's drug rows hold no Insights
                 ins = [lines for key, lines in b['rows'] if key == 'Insights']
                 if len(ins) != 1 or len(ins[0]) != 2:

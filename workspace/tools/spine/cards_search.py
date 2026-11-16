@@ -1,4 +1,4 @@
-"""cards_search: find AnKing cards by words, to learn what the exam rewards (Jonathan 2026-10-10: on a literature vs
+"""cards_search: find AnKing cards by words, to learn what the exam rewards (2026-10-10: on a literature vs
 board disagreement, follow NBME, then UWorld, then AnKing).
 
   python3 tools/spine/cards_search.py "lithium" "dialysis" [--any] [--max 12] [--step2]

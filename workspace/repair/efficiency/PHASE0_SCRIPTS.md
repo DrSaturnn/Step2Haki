@@ -35,7 +35,7 @@ Status 2026-10-10: built and committed (tools/spine/).
 - verify.py:
   - --fast takes about 2 s per brief, and the full run about 40 s.
   - `verify.py --shipped --fast`: all 17 spine briefs pass the MECHANICAL checks, and each rebuilds byte-identical to the page. That is not a quality verdict.
-  - Correction, the same day (Jonathan: "passed" must mean the brief reads as one whole, not that rules are met):
+  - Correction, the same day (the owner must mean the brief reads as one whole, not that rules are met):
     - verify now reports three states. FAIL is a mechanical failure. MECH means the mechanical checks pass but the brief is not ready. READY means the newest holistic review (repair/migration/spine/HOLISTIC_REVIEW.md) names the current brief text by its sha and says PASS.
     - Exit codes: 0 READY, 2 MECH, 1 FAIL.
   - First holistic reviews (repair/migration/spine/reviews/*_r1.md) all FAIL, with no HIGH findings:
@@ -186,7 +186,7 @@ Status 2026-10-10: built and committed (tools/spine/).
 
 Link repairs (inventory): one brief (bone-tumors) carries UWorld QIDs in data-nid, and 69 card ids do not resolve. A script lists them and the Lead fixes them in the batch that rebuilds each brief, not as a separate ship.
 
-## Decisions (both accepted by Jonathan 2026-10-10)
+## Decisions (both accepted by 2026-10-10)
 
 - **D1. Replace the filler with outline_render.py (recommended).**
   - The pilot arms become:

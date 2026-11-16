@@ -134,7 +134,36 @@ var AX = (function () {
     return { get: get, set: set, remove: remove, version: VERSION };
   })();
 
+  /* A settings choice drawn as a row of options (role radiogroup): label, then one button per option; arrow keys move
+     the choice. opts: [[value, label], ...]; pick(value) runs on a choice; the returned row has set(value) to repaint. */
+  function seg(label, opts, value, pick) {
+    var row = document.createElement('div'); row.className = 'axd-seg';
+    var nm = document.createElement('span'); nm.className = 'nm'; nm.textContent = label; row.appendChild(nm);
+    var box = document.createElement('div'); box.className = 'axd-opts'; box.setAttribute('role', 'radiogroup'); box.setAttribute('aria-label', label);
+    opts.forEach(function (o) {
+      var b = document.createElement('button'); b.type = 'button'; b.setAttribute('role', 'radio'); b.dataset.v = o[0]; b.textContent = o[1];
+      box.appendChild(b);
+    });
+    row.appendChild(box);
+    function set(v) { box.querySelectorAll('button').forEach(function (b) { var on = b.dataset.v === String(v); b.setAttribute('aria-checked', on ? 'true' : 'false'); b.tabIndex = on ? 0 : -1; }); }
+    box.addEventListener('click', function (e) { var b = e.target.closest('button'); if (b) { set(b.dataset.v); pick(b.dataset.v); } });
+    box.addEventListener('keydown', function (e) {
+      var d = e.key === 'ArrowRight' || e.key === 'ArrowDown' ? 1 : (e.key === 'ArrowLeft' || e.key === 'ArrowUp' ? -1 : 0);
+      if (!d) return; e.preventDefault();
+      var bs = Array.prototype.slice.call(box.querySelectorAll('button')), i = 0;
+      bs.forEach(function (b, j) { if (b.getAttribute('aria-checked') === 'true') i = j; });
+      var n = bs[(i + d + bs.length) % bs.length]; set(n.dataset.v); pick(n.dataset.v); n.focus();
+    });
+    set(value); row.set = set;
+    return row;
+  }
+  /* Where a link to an element lands: by default the element itself; a layout that moves brief parts (Two-pane)
+     replaces it and returns {el, top}, the element to bring to the top of the window and its distance from the top. */
+  var landingFn = null;
+  function landing(t) { var r = landingFn && t ? landingFn(t) : null; return r || { el: t, top: null }; }
+
   var AX = { module: module, on: on, off: off, emit: emit, teardown: teardown, modules: mods, settings: settings,
+    ui: { seg: seg }, landing: landing, setLanding: function (fn) { landingFn = fn; },
     brief: { each: each, build: build, ensure: ensure, isBuilt: isBuilt, content: content, fresh: fresh, holder: holder, all: briefs, pending: pending, buildAll: buildAll, copy: copy, items: items, qtype: qtype, prompt: prompt } };
   return AX;
 })();

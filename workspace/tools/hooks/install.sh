@@ -6,7 +6,9 @@ set -euo pipefail
 H="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 mkdir -p /home/claude/.claude /home/claude/.config/axbx/hooks
 chmod 700 /home/claude/.config/axbx /home/claude/.config/axbx/hooks
-python3 - "$H" <<'PY'
+# --no-settings (patch.py setup, when the plugin's hooks are live): the git guard, the state folders and the agent
+# types only. Settings hooks beside live plugin hooks would make the plugin defer to them (plugin hooks/run.sh).
+[[ "${1:-}" == --no-settings ]] || python3 - "$H" <<'PY'
 import json, os, sys
 h = sys.argv[1]
 p = '/home/claude/.claude/settings.json'

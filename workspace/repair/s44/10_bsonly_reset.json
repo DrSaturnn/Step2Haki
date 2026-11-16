@@ -3,7 +3,7 @@
   {
    "op": "replace_global",
    "find": "try{ boardOnly=localStorage.getItem('ax-bsonly')==='1'; }catch(e){}",
-   "with": "/* BOARD-STYLE ONLY starts off on every visit (Jonathan 2026-10-01: a remembered switch hid whole shelves on one device). */\ntry{ localStorage.removeItem('ax-bsonly'); }catch(e){}",
+   "with": "/* BOARD-STYLE ONLY starts off on every visit (2026-10-01: a remembered switch hid whole shelves on one device). */\ntry{ localStorage.removeItem('ax-bsonly'); }catch(e){}",
    "note": "board-style filter no longer remembered"
   },
   {

@@ -1,5 +1,5 @@
 {
- "_doc": "Shared table of diagnoses with more than one name (Jonathan 2026-10-12, DECISIONS_DIGEST). A brief names the diagnosis with its other names at first mention and in its differential row, in <span class=\"aka\">(...)</span>, which the soft word cap does not count. Every alias carries a board or naming source: AnKing card nid, a local UWorld or NBME item, or DSM-5-TR or ICD. Grow it per batch. Sources are cited by id only (AnKing nid, local UWorld file); vendor wording stays out of the repo.",
+ "_doc": "Shared table of diagnoses with more than one name (2026-10-12, DECISIONS_DIGEST). A brief names the diagnosis with its other names at first mention and in its differential row, in <span class=\"aka\">(...)</span>, which the soft word cap does not count. Every alias carries a board or naming source: AnKing card nid, a local UWorld or NBME item, or DSM-5-TR or ICD. Grow it per batch. Sources are cited by id only (AnKing nid, local UWorld file); vendor wording stays out of the repo.",
  "entries": [
   {
    "name": "Minimal change disease",

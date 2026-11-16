@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""s161c (site layer, Jonathan 2026-11-03/04): writes repair/s161c/40_presentations.json from the live page.
+"""s161c (site layer, 2026-11-03/04): writes repair/s161c/40_presentations.json from the live page.
 Presentations becomes its own section: each of its briefs leaves its system and is listed once, on the page in a new
 Presentations section after "How to Use This" and in the sidebar's Presentations group, under a sub-header per system
 in page order. Pilot: repair/pilots/presentations/make_pilot.py (this script runs it for the sidebar, styles and script,

@@ -68,6 +68,16 @@
    "model": "opus",
    "budget": 25,
    "agent": "lean-reviewer"
+  },
+  "brief-rewrite": {
+   "model": "sonnet",
+   "budget": 40,
+   "agent": "lean-builder"
+  },
+  "cold-read": {
+   "model": "haiku",
+   "budget": 12,
+   "agent": "lean-reviewer"
   }
  },
  "lane_roots": [

@@ -260,7 +260,7 @@
   {
    "op": "replace_global",
    "find": "</head>",
-   "with": "<style id=\"ax-pres\">\n/* s161c Presentations section (Jonathan 2026-11-03): a sub-header per system above its complaint briefs */\n.psub{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:34px 0 14px;padding:0 4px 8px;border-bottom:1px solid var(--hair)}\n.psub .t{font-family:var(--serif);font-size:19px;font-weight:600;color:var(--ink)}\n.psub .n{font:700 11.5px/1 var(--sans);color:var(--muted);letter-spacing:.4px}\n@media print{.psub{display:none}}\n</style>\n\n</head>"
+   "with": "<style id=\"ax-pres\">\n/* s161c Presentations section (2026-11-03): a sub-header per system above its complaint briefs */\n.psub{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:34px 0 14px;padding:0 4px 8px;border-bottom:1px solid var(--hair)}\n.psub .t{font-family:var(--serif);font-size:19px;font-weight:600;color:var(--ink)}\n.psub .n{font:700 11.5px/1 var(--sans);color:var(--muted);letter-spacing:.4px}\n@media print{.psub{display:none}}\n</style>\n\n</head>"
   },
   {
    "op": "replace_global",

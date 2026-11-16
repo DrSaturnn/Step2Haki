@@ -52,7 +52,7 @@ def main():
         C.refuse('LAUNCH GATE: refused: %s.' % bad)
     w = C.wave()
     if not w or not w.get('open'):
-        C.refuse('LAUNCH GATE: refused: no open wave (repair/efficiency/WAVE.json). Jonathan sets each wave budget.')
+        C.refuse('LAUNCH GATE: refused: no open wave (repair/efficiency/WAVE.json). The owner sets each wave budget.')
     if w.get('plan_step') and h['plan_step'] != w['plan_step']:
         C.refuse('LAUNCH GATE: refused: plan step %r is not the open wave\'s (%r).' % (h['plan_step'], w['plan_step']))
     if w.get('roles') and role not in w['roles']:
@@ -69,7 +69,8 @@ def main():
         C.refuse('LAUNCH GATE: refused: doc_lint fails (%d): %s. Fix DECISIONS_DIGEST or STANDING_DIRECTIONS first '
                  '(python3 tools/spine/doc_lint.py DIGEST STANDING --docs workspace).' % (len(bad), bad[0][:160]))
     rec = {'t': time.strftime('%Y-%m-%dT%H:%M:%S'), 'wave': w['id'], 'role': role, 'model': model, 'lane': h['lane'],
-           'agent_type': ti.get('subagent_type') or '', 'plan_step': h['plan_step'], 'prompt_sha': C.sha(ti.get('prompt', '')), 'tool_use_id': d.get('tool_use_id')}
+           'agent_type': ti.get('subagent_type') or '', 'plan_step': h['plan_step'], 'prompt_sha': C.sha(ti.get('prompt', '')), 'tool_use_id': d.get('tool_use_id'),
+           'budget': h.get('budget')}
     with open(C.state('launches.jsonl'), 'a', encoding='utf-8') as f:
         f.write(json.dumps(rec) + '\n')
     return 0

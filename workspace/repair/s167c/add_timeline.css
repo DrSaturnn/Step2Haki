@@ -1,0 +1,4 @@
+/* s167c N16 (D-20261107-9): one axis per window chart, above the rows; the rails keep their ticks as gridlines */
+.lcw .wax{margin:0 0 4px}
+.lcw .wax .rax{margin:0}
+@media (--min700){.lcw .wax .rax{grid-column:2}}

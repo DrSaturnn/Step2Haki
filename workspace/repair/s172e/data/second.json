@@ -1,0 +1,242 @@
+{
+ "wh-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card explains scaphoid fracture consequences"
+ },
+ "bo-pop-3": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Osteochondroma",
+  "reason": "card explains osteochondroma malignant change, trigger is management word"
+ },
+ "bo-pop-2": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Unicameral bone cyst",
+  "reason": "card explains unicameral bone cyst, trigger is management word"
+ },
+ "pcon-pop-1": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Juice and toileting",
+  "reason": "card explains juice laxative and toilet training, not the drug"
+ },
+ "plu-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card explains vasopressin measurement via copeptin"
+ },
+ "rta-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains normal anion gap"
+ },
+ "slp-pop-19": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card explains RBD treatment order"
+ },
+ "oap-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card explains acetaminophen when NSAIDs cannot be taken"
+ },
+ "sa-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card gives Kocher criteria count probabilities"
+ },
+ "pox-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains wound care"
+ },
+ "pn-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card is the lobe mnemonic"
+ },
+ "hp-pop-2": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains upper endoscopy timing"
+ },
+ "dmc-pop-7": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card gives normal range for the reading"
+ },
+ "bmn-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains dexamethasone limits"
+ },
+ "vx-pop-4": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Asplenia",
+  "reason": "borderline; card explains asplenia and encapsulated organisms"
+ },
+ "cvx-pop-2": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "Reactions to an earlier dose",
+  "reason": "card is about those four reactions; trigger generic"
+ },
+ "iso-pop-6": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Untreated",
+  "reason": "card explains untreated isolation duration, trigger is a number"
+ },
+ "ti-pop-13": {
+  "verdict": "MOVE",
+  "where": "line",
+  "text": "VMAT2 inhibitor",
+  "reason": "card explains VMAT2 inhibitor and antipsychotic, not CBIT"
+ },
+ "pkd-pop-9": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains cholinesterase inhibitor in Lewy body dementia"
+ },
+ "pd-pop-17": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card is early response to antipsychotic"
+ },
+ "pd-pop-20": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card is therapeutic alliance"
+ },
+ "md-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card is SSRI mechanism"
+ },
+ "pan-pop-s150e": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card is past trauma"
+ },
+ "eatd-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card lists other findings"
+ },
+ "eatd-pop-thy-20261026": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Hidden anorexia",
+  "reason": "card explains hidden anorexia, trigger is one symptom"
+ },
+ "tox-pop-4": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card explains panels missing synthetic cathinones"
+ },
+ "tox-pop-20": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Disulfiram reaction",
+  "reason": "card explains disulfiram reaction; no such term in line"
+ },
+ "tox-pop-22": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card is precipitated withdrawal avoidance"
+ },
+ "pm-pop-osa-20261026": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Risk",
+  "reason": "card is OSA risk screen; snoring is one item"
+ },
+ "pcssri-pop-5": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card gives drug causes of SIADH"
+ },
+ "pctyp-pop-4": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Antiemetics",
+  "reason": "card explains D2-blocking antiemetics; no such term in line"
+ },
+ "pctyp-pop-7": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card extends pimozide contraindicated pairs"
+ },
+ "pcachol-pop-1": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card explains benztropine anticholinergic action"
+ },
+ "mac-pop-11": {
+  "verdict": "LABEL",
+  "where": "-",
+  "text": "Most serious",
+  "reason": "NEEDS-CONTENT card explains SJS on lamotrigine, not eosinophilia"
+ },
+ "pcx-pop-8": {
+  "verdict": "MOVE",
+  "where": "rowhead",
+  "text": "Alcohol, with buspirone",
+  "reason": "card explains buspirone and alcohol; trigger generic"
+ },
+ "pco-pop-5": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains CYP3A4 inhibitor handling"
+ },
+ "sud-pop-8": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains acamprosate renal contraindication"
+ },
+ "sud-pop-13": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "card explains buprenorphine first-dose timing"
+ },
+ "sud-pop-18": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card explains post-marketing events and warning"
+ },
+ "pcoth-pop-3": {
+  "verdict": "KEEP",
+  "where": "-",
+  "text": "-",
+  "reason": "borderline; card extends modafinil serious rash reactions"
+ }
+}

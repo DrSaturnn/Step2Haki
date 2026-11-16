@@ -65,6 +65,35 @@ no upload can disturb it, and new briefs join the review rotation on their own.
 One rule: **never rename a brief's id.** Ids are how deep links, cross-links and
 everyone's review history find a brief. Move briefs between systems freely.
 
+## Contributing
+
+Commit messages follow [Conventional Commits](https://www.conventionalcommits.org/).
+The `commit-msg` hook in `workspace/tools/githooks/` checks each message.
+
+```
+type(scope): summary
+
+Body: what changed and why, wrapped at 72 characters.
+
+Batch: <id>
+Decision: <id>
+```
+
+- **Types:** `feat`, `fix`, `content`, `style`, `refactor`, `test`, `docs`,
+  `chore`. The scope is optional.
+- **Subject:** imperative ("add", "fix", "move"), lower-case start, at most
+  72 characters, no final period.
+- **Body:** required when a change is more than 30 lines or 3 files.
+- **Trailers:** `Batch` names the work batch; `Decision` cites the decision
+  record the change follows.
+- **History:** each batch lands on `main` as one squashed commit.
+
+Install the hooks once per clone:
+
+```
+git config core.hooksPath workspace/tools/githooks
+```
+
 ## Caveat
 
 Assembled from question-based study sessions. Clinical content reflects standard

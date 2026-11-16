@@ -1,6 +1,6 @@
 # Recurring failures and what catches them
 
-The failure types that audits kept finding (Jonathan, 2026-10-05, from the s98 to s104 audit
+The failure types that audits kept finding (2026-10-05, from the s98 to s104 audit
 rounds). `tools/preflight.py` runs inside `ship.sh` and prints warnings. It never aborts a ship.
 Run it before the audit as well (`python3 tools/preflight.py <built page> --base HEAD`) and paste
 its lines into the audit packet. The auditor settles each line and covers the parts no script can.

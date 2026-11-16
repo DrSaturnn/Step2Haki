@@ -1,4 +1,4 @@
-/* s148b: onset timeline placement (Jonathan 2026-10-18, "the timeline boxes should adapt to fit all text within it";
+/* s148b: onset timeline placement (2026-10-18;
    claude/pending/SITE_BODY_GLANCE.md, Decided D). After layout and on every resize: walk the events left to right and put
    each card on the lowest tier where it overlaps no card (8 px gap), its leader line crosses no card below it, and it
    covers no leader line from above; each tier sits on the tallest card below it and the chart height follows. If the

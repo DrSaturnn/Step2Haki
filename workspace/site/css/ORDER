@@ -9,6 +9,7 @@ layout layout/rail.css
 layout layout/toolbar.css
 layout layout/drawer.css
 layout layout/offline.css
+layout layout/twopane.css
 components components/review.css
 components components/search.css
 components components/changelog.css
@@ -16,6 +17,7 @@ components components/nbme.css
 components components/cards.css
 components components/links.css
 components components/hovercard.css
+components components/lines.css
 components components/bank.css
 components components/workup.css
 components components/ladder.css
@@ -26,3 +28,4 @@ components components/table.css
 components components/offline.css
 base base.css
 components components/brief.css
+components components/twopane.css

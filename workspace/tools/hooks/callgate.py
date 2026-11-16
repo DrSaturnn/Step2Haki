@@ -2,7 +2,10 @@
 """PreToolUse on every tool. Lead calls: only the approval records are protected (G-APPROVE: they are written by the
 UserPromptSubmit hook alone). Subagent calls:
   T8  role and lane come from the Role: and Lane: lines of the agent's own launch prompt, read from its transcript, and
-      the launch must be one H1 recorded; otherwise every call is refused (fail closed);
+      the launch must be one H1 recorded; otherwise every call is refused (fail closed). Where the harness keeps no
+      transcript on disk (the hook input names none), the role and lane come from the launch record instead: the one
+      launch of the open wave made in the last BIND_WINDOW seconds that no agent holds yet; none or more than one, and
+      every call is refused;
   H4  calls are counted per agent and refused past the role's budget (tools/hooks/roles.json);
   H2  Write, Edit and NotebookEdit only inside the lane, never a forbidden path;
   H3  Bash: no git history changes or pushes, ship.sh, mac_sync, ~/.config, .claude or the token; a command that writes
@@ -17,6 +20,7 @@ import os
 import re
 import shlex
 import sys
+import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import common as C  # noqa: E402
@@ -50,22 +54,49 @@ def git_writes(cmd):
     return None
 
 
+SETUP_CMD = re.compile(r'patch\.py["\']?\s+setup\b')
+
+
+def beat(d):
+    """the lead's own call reached this hook: live.json is the proof that the harness runs the PreToolUse hooks, and
+    setup_probe.json is the mark `patch.py setup` looks for from its own command (a batch once ran
+    with no hook firing and nothing noticed). A failed write never blocks the call."""
+    try:
+        tp = d.get('transcript_path') or ''
+        cmd = (d.get('tool_input') or {}).get('command', '') if d.get('tool_name') == 'Bash' else ''
+        rec = {'epoch': time.time(), 't': time.strftime('%Y-%m-%dT%H:%M:%S'), 'tool': d.get('tool_name'),
+               'session_id': d.get('session_id'), 'transcript_path': tp, 'transcript': bool(tp and os.path.isfile(tp))}
+        save(C.state('live.json'), rec)
+        if SETUP_CMD.search(cmd or ''):
+            save(C.state('setup_probe.json'), rec)
+    except Exception:  # noqa: BLE001
+        pass
+
+
 def lead(d):
+    beat(d)
     ti = d.get('tool_input') or {}
     appr = os.path.join(C.STATE, 'approvals')
     if d.get('tool_name') in ('Write', 'Edit', 'NotebookEdit'):
         p = C.norm(ti.get('file_path') or ti.get('notebook_path'), d.get('cwd'))
         if C.inside(p, appr):
-            C.refuse('APPROVAL GATE: approval records are written only by the hook, when Jonathan says "ship" in reply '
+            C.refuse('APPROVAL GATE: approval records are written only by the hook, when the owner says "ship" in reply '
                      'to the screenshots.')
+        if C.inside(p, os.path.join(C.WS, 'local', 'stamps')):
+            C.refuse('STAMP GATE (s171b): stamps are written only by a check that passed (verify.py READY, ship.sh, '
+                     'ui_gate.py); never by hand.')
     if d.get('tool_name') == 'Bash':
         cmd = ti.get('command', '')
         # the lead may read or mention the state, but may not feed the approval hook a message, point the hooks at
-        # another state folder, or write into the approvals folder (G-APPROVE: only Jonathan's own message approves)
+        # another state folder, or write into the approvals folder (G-APPROVE: only the owner's own message approves)
         if (re.search(r'approval\.py["\']?\s+hook\b', cmd) or re.search(r'\bAX_HOOK_STATE\s*=', cmd)
                 or (re.search(r'hooks/approvals', cmd) and re.search(WRITE_OPS, cmd))):
             C.refuse('APPROVAL GATE: the lead may not run the approval hook, redirect the hook state, or write approval '
                      'records by command.')
+        if (re.search(r'\bAX_(VERIFY|STAMPS_DIR)\s*=', cmd) or re.search(r'stamps\.py["\']?\s+commit\b', cmd)
+                or (re.search(r'local/stamps', cmd) and re.search(WRITE_OPS, cmd))):
+            C.refuse('STAMP GATE (s171b): the lead may not commit a stamp by hand, point the stamps at another store, '
+                     'swap verify.py for a stub, or write into local/stamps by command.')
         if forced_public_add(cmd, d.get('cwd') or ''):
             C.refuse('PUBLIC-REPO GATE: no forced git add in the public clone (s155: 41dcbdf force-added the ignored '
                      'review lanes, vendor text, to public wip/s155). An ignored path is ignored on purpose: lanes, '
@@ -109,8 +140,13 @@ def agent_record(d):
         return p, json.load(open(p, encoding='utf-8'))
     tr = C.agent_transcript(aid, d)
     if not tr:
-        C.refuse('CALL GATE: no transcript found for agent %s, so its role and lane are unknown; every call is refused.'
-                 % aid, agent=aid)
+        rec = from_launch_record(aid, d)
+        if not rec:
+            C.refuse('CALL GATE: no transcript found for agent %s, so its role and lane are unknown; every call is '
+                     'refused.' % aid, agent=aid)
+        save(p, rec)
+        C.log_event('bind', agent=aid, launch=rec['launch'], role=rec['role'], lane=rec['lane'])
+        return p, rec
     text = C.first_user_text(tr)
     h = C.header(text)
     if 'role' not in h or 'lane' not in h:
@@ -121,13 +157,55 @@ def agent_record(d):
         C.refuse('CALL GATE: agent %s was not launched through the launch gate; every call is refused.' % aid, agent=aid)
     cfg = C.roles()
     rec = {'agent_id': aid, 'role': h['role'], 'lane': os.path.realpath(h['lane']), 'wave': launched[-1]['wave'],
-           'budget': budget(cfg['roles'].get(h['role'], {}).get('budget', 0), h.get('budget')), 'count': 0, 'transcript': tr}
+           'budget': budget(cfg['roles'].get(h['role'], {}).get('budget', 0), h.get('budget')), 'count': 0, 'transcript': tr,
+           'launch': launched[-1].get('tool_use_id')}
     save(p, rec)
     return p, rec
 
 
+BIND_WINDOW = 300      # seconds between a recorded launch and its agent's first call
+
+
+def from_launch_record(aid, d):
+    """the agent record for a harness with no transcript on disk, or None. Used only when the hook input names no
+    transcript file, so a harness that keeps transcripts still fails closed on a missing one. The agent takes the one
+    launch of the open wave that no agent holds and that was recorded in the last BIND_WINDOW seconds; with none, or
+    with more than one (lanes launched together cannot be told apart without their prompts), there is no record."""
+    tp = d.get('transcript_path') or ''
+    if tp and os.path.isfile(tp):
+        return None
+    w = C.wave()
+    if not w or not w.get('open'):
+        return None
+    held = set()
+    adir = os.path.dirname(C.state('agents', 'x'))
+    for f in os.listdir(adir):
+        if f.endswith('.json'):
+            try:
+                held.add(json.load(open(os.path.join(adir, f), encoding='utf-8')).get('launch'))
+            except (OSError, ValueError):
+                continue
+    now, kind, free = time.time(), d.get('agent_type') or '', []
+    for l in C.launches(w['id']):
+        try:
+            age = now - time.mktime(time.strptime(l.get('t', ''), '%Y-%m-%dT%H:%M:%S'))
+        except ValueError:
+            continue
+        if not l.get('tool_use_id') or l['tool_use_id'] in held or not 0 <= age <= BIND_WINDOW:
+            continue
+        if kind and l.get('agent_type') and l['agent_type'] != kind:
+            continue
+        free.append(l)
+    if len(free) != 1:
+        return None
+    l, cfg = free[0], C.roles()
+    return {'agent_id': aid, 'role': l['role'], 'lane': os.path.realpath(l['lane']), 'wave': l['wave'],
+            'budget': budget(cfg['roles'].get(l['role'], {}).get('budget', 0), l.get('budget')), 'count': 0,
+            'transcript': None, 'launch': l['tool_use_id']}
+
+
 def budget(role_budget, line):
-    """a launch prompt's Budget: line lowers the role's call budget, never raises it (Jonathan 2026-10-12)"""
+    """a launch prompt's Budget: line lowers the role's call budget, never raises it (2026-10-12)"""
     m = re.match(r'\s*(\d+)', line or '')
     return min(int(role_budget), int(m.group(1))) if m else int(role_budget)
 

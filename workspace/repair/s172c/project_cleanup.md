@@ -1,0 +1,128 @@
+# s172c step 7: project documents (made by project_cleanup.py, 2026-11-10)
+
+Record test: names only (same path in the private repo, same file name in either clone, or the batch folder).
+
+## DELETE from the project (37)
+
+- claude/pending/content_audit_s169/content_audit.py: pick 2; record private:claude/pending/content_audit_s169/content_audit.py
+- claude/TEXTBOOK_STYLE.md: pick 1, rule document; record public:workspace/repair/efficiency/TEXTBOOK_STYLE.md
+- claude/pending/layout_mock/doc_lint.py: pick 2; record public:workspace/tools/spine/doc_lint.py
+- claude/pending/layout_mock/UI_REFACTOR_PLAN.md: pick 2; record private:docs/ui/UI_REFACTOR_PLAN.md
+- claude/pending/layout_mock/ui_baseline.json: pick 2; record public:workspace/tools/spine/ui_baseline.json
+- claude/pending/layout_mock/ui_lint.py: pick 2; record public:workspace/tools/spine/ui_lint.py
+- claude/pending/layout_mock/UI_ARCHITECTURE.md: pick 2; record private:docs/ui/UI_ARCHITECTURE.md
+- claude/pending/layout_mock/FIT_TO_SCREEN.md: pick 2; record private:docs/ui/FIT_TO_SCREEN.md
+- claude/pending/criteria_step2/placement_phrases.txt: pick 2; record private:claude/pending/criteria_step2/placement_phrases.txt
+- claude/pending/criteria_step2/spy_test.js: pick 2; record private:claude/pending/criteria_step2/spy_test.js
+- claude/pending/criteria_step2/move_criteria.py: pick 2; record private:claude/pending/criteria_step2/move_criteria.py
+- claude/pending/criteria_step2/step_refs.txt: pick 2; record private:claude/pending/criteria_step2/step_refs.txt
+- claude/pending/CRITERIA_STEP2.md: pick 2; record private:claude/pending/CRITERIA_STEP2.md
+- claude/pending/S161B_NAV_HOME.md: pick 2; record public:workspace/repair/s161b/S161B.md
+- claude/pending/s161b/make_pilot.py: pick 2; record public:workspace/repair/pilots/nav-home/make_pilot.py (+4)
+- claude/CARD_SPEC.md: pick 1, rule document; record public:workspace/repair/efficiency/CARD_SPEC.md
+- claude/pending/PSYCH_PHARM_V2.md: pick 2; record private:claude/pending/PSYCH_PHARM_V2.md
+- claude/pending/PSYCH_PHARM_SECTION.md: pick 2; record private:claude/pending/PSYCH_PHARM_SECTION.md
+- claude/pending/S154F.md: pick 2; record private:claude/pending/S154F.md
+- claude/pending/NBME_VS_UWORLD.md: pick 2; record private:claude/pending/NBME_VS_UWORLD.md
+- claude/pending/PAUSE_POINT_ROLLOUT.md: pick 2; record private:claude/pending/PAUSE_POINT_ROLLOUT.md
+- claude/pending/SITE_UI_R2.md: pick 2; record private:claude/pending/SITE_UI_R2.md
+- claude/pending/SHIP_ORDER_PSYCH.md: pick 2; record private:claude/pending/SHIP_ORDER_PSYCH.md
+- claude/pending/SITE_BODY_GLANCE.md: pick 2; record private:claude/pending/SITE_BODY_GLANCE.md
+- claude/pending/BATCHES_S141_S150.md: pick 2; record private:claude/pending/BATCHES_S141_S150.md
+- claude/pending/S137.md: pick 2; record public:workspace/repair/s137/S137.md
+- claude/pending/31_rail_fill.json: pick 2; record public:workspace/repair/s136/31_rail_fill.json
+- claude/pending/s130/30_workup5a.json: pick 2; record public:workspace/repair/s130/30_workup5a.json
+- claude/pending/s130/10_hematuria_workup5a.json: pick 2; record public:workspace/repair/s130/10_hematuria_workup5a.json
+- claude/design/WORKUP_5A_SPEC.md: pick 1, rule document; record public:workspace/repair/efficiency/WORKUP_5A_SPEC.md
+- claude/PHASE0_SCRIPTS.md: pick 1, rule document; record public:workspace/repair/efficiency/PHASE0_SCRIPTS.md
+- claude/SPINE_SCALE_PLAN.md: pick 1, rule document; record public:workspace/repair/efficiency/SPINE_SCALE_PLAN.md
+- claude/SPINE_SPEC.md: pick 1, rule document; record private:claude/SPINE_SPEC.md
+- claude/CURRENT_STATE.md: pick 2; record public:workspace/CURRENT_STATE.md
+- claude/PENDING_DECISIONS.md: pick 2; record public:workspace/PENDING_DECISIONS.md
+- claude/merge_plan.md: pick 2; record public:workspace/repair/merge_plan.md
+- claude/EDITS.md: pick 2; record public:workspace/tools/EDITS.md
+
+## KEEP (82)
+
+- claude/pending/DOCS_REFACTOR.md: live: s172c plan, open until its ship
+- claude/PLAN_TEMPLATE.md: live: mirror of docs/PLAN_TEMPLATE.md
+- claude/pending/S172B.md: live: picked, not launched
+- claude/pending/two_pane_r2/measure_all.json: live: s172b scripts
+- claude/pending/two_pane_r2/rail.js: live: s172b scripts
+- claude/pending/two_pane_r2/lib.js: live: s172b scripts
+- claude/pending/two_pane_r2/variants.js: live: s172b scripts
+- claude/pending/two_pane_r2/measure.js: live: s172b scripts
+- claude/pending/two_pane_r2/p3_prototype.diff: live: s172b scripts
+- claude/pending/CONTENT_BATCHES_S170.md: live: launch prompts s173 to s181
+- claude/pending/POST_REFACTOR_LEDGER.md: live: ledger N1 to N20, items open
+- claude/pending/S166_PHONE_PILOT.md: live: s166 paused, not shipped
+- claude/pending/layout_mock/DIGEST_ADD_2026-11-05.md: no record found in either repo
+- claude/pending/layout_mock/make_rows.py: no record found in either repo
+- claude/pending/layout_mock/make_sheet.py: no record found in either repo
+- claude/pending/layout_mock/make_cols.py: no record found in either repo
+- claude/pending/layout_mock/make_fit.py: no record found in either repo
+- claude/pending/layout_mock/make_mock.py: no record found in either repo
+- claude/pending/mobilenav/shots_r1.js: live: s166 paused
+- claude/pending/mobilenav/strip_check.js: live: s166 paused
+- claude/pending/mobilenav/dx_shots.js: live: s166 paused
+- claude/pending/mobilenav/dx.css: live: s166 paused
+- claude/pending/mobilenav/rail_shots.js: live: s166 paused
+- claude/pending/mobilenav/pv_shots.js: live: s166 paused
+- claude/pending/mobilenav/shots.js: live: s166 paused
+- claude/pending/mobilenav/make_mn.py: live: s166 paused
+- claude/pending/mobilenav/mn.js: live: s166 paused
+- claude/pending/mobilenav/mn.css: live: s166 paused
+- claude/pending/MOBILE_NAV_PILOT.md: no record found in either repo
+- claude/pending/PSYCH_PHARM_BATCHES.md: no record found in either repo
+- claude/STEP2HAKI_HANDOFF.md: live: the project instruction's copy
+- claude/pending/NEW_BRIEFS_2026-10-30.md: live: open proposals
+- claude/RESUME.md: live: mirror of docs/RESUME.md
+- claude/pending/PSYCH_FORMAT_AUDIT.md: no record found in either repo
+- claude/pending/nbme_mockup/notes.html: live: mockup not built
+- claude/pending/nbme_mockup/mock.js: live: mockup not built
+- claude/pending/nbme_mockup/mock.css: live: mockup not built
+- claude/pending/nbme_mockup/build.py: live: mockup not built
+- claude/pending/NBME_PRESENTATION_SPEC.md: live: mockup not built
+- claude/pending/NEW_BRIEFS_2026-10-26.md: live: open proposals
+- claude/pending/S136_RECORD.md: no record found in either repo
+- claude/pending/S136.md: no record found in either repo
+- claude/pending/GLANCE_LAYOUT_PLAN.md: no record found in either repo
+- claude/pending/hover_cap.patch: no record found in either repo
+- claude/archive/lean-brief_SKILL_2026-10-12.md: no record found in either repo
+- claude/archive/brief-migration_SKILL_2026-10-12.md: no record found in either repo
+- claude/archive/nbme-intake_SKILL_2026-10-12.md: no record found in either repo
+- claude/archive/board-brief_SKILL_2026-10-12.md: no record found in either repo
+- claude/pending/S134.md: no record found in either repo
+- claude/pending/POST_SHIP_R3.md: live: read order, conditional PASS
+- claude/pending/R3_NEPHROTIC.md: no record found in either repo
+- claude/pending/STEP_A_EDITS.md: no record found in either repo
+- claude/pending/BRIEF_AMEND_LIST.md: live: work queue
+- claude/pending/pilot5a/make_batch.py: no record found in either repo
+- claude/pending/pilot5a/build_preview.py: no record found in either repo
+- claude/pending/pilot5a/hematuria_5a.py: no record found in either repo
+- claude/pending/pilot5a/w5a.py: no record found in either repo
+- claude/pending/WORKUP_5A_PILOT.md: no record found in either repo
+- claude/pending/workup-5a-records.patch: no record found in either repo
+- claude/design/Workup_5a.html: live: design file named by STANDING_DIRECTIONS
+- claude/pending/WORKUP_DESIGN.md: no record found in either repo
+- claude/archive/HANDOFF_2026-10-03_merge_era.md: no record found in either repo
+- claude/pending/SMOOTH_JUMP.md: no record found in either repo
+- claude/pending/smooth_jump_edits.json: no record found in either repo
+- claude/pending/ANKI_CARDS_s125.md: no record found in either repo
+- claude/pending/BRIEFS_JSON.md: no record found in either repo
+- claude/pending/briefs-json-ship.patch: no record found in either repo
+- claude/pending/PSYCH_SPINE_PROGRESS.md: no record found in either repo
+- claude/pending/TICS_s118.md: no record found in either repo
+- claude/S112_LEGIBILITY_PLAN.md: no record found in either repo
+- claude/AMEND_LEDGER.md: no record found in either repo
+- claude/merge-tools/merge_audit_prompt.txt: no record found in either repo
+- claude/PENDING_BRIEFS.md: no record found in either repo
+- claude/pending/SOURCES_decisions.md: no record found in either repo
+- claude/pending/gen_decisions.py: no record found in either repo
+- claude/merge-tools/prep_merge.py: no record found in either repo
+- claude/merge-tools/optlen.py: no record found in either repo
+- claude/merge-tools/wc_run.py: no record found in either repo
+- claude/merge-tools/mkpacket.sh: no record found in either repo
+- claude/merge-tools/packet.py: no record found in either repo
+- claude/merge-tools/lean.py: no record found in either repo
+- claude/merge-tools/setup.py: no record found in either repo

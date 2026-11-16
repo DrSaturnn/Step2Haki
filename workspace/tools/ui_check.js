@@ -15,7 +15,8 @@
        :focus-within or :active is measured with that state forced (CDP) on up to --max-state elements. Custom
        properties and motion properties are left out (their effect shows in the real properties; motion is checked by
        ui_lint). An element is keyed by its path from the nearest ancestor with an id, so an element added elsewhere does
-       not shift the keys. Exit 1 when a difference is not in ALLOW.json ([{sel, prop, setting?}]).
+       not shift the keys. Exit 1 when a difference is not in ALLOW.json ([{sel, prop, setting?}]; prop may be
+   "(count)" or "(element)" for an element added, removed or no longer matched).
 */
 'use strict';
 const fs = require('fs'), path = require('path');
@@ -225,8 +226,9 @@ async function run(a) {
     return new Promise(r => { let last = '', same = 0, n = 0; const tick = () => { const k = document.querySelectorAll('.axm-flat').length + ':' + document.querySelectorAll('.axm-study').length;
       same = k === last ? same + 1 : 0; last = k; if (same >= 10 || ++n > 3000) r(); else requestAnimationFrame(tick); }; requestAnimationFrame(tick); }); };
   const got = { base: {}, cand: {} };
-  // view by view: both pages are measured, compared and dropped before the next view (all views at once ran out of heap)
-  for (const view of views) { for (const [k, f] of [['base', a[1]], ['cand', a[2]]]) {
+  // view by view: both pages are measured, compared and dropped before the next view (all views at once ran out of heap);
+  // within a view the two pages load and measure at the same time (s169, D-20261107-14)
+  for (const view of views) { await Promise.all([['base', a[1]], ['cand', a[2]]].map(async ([k, f]) => {
     const browser = await chromium.launch();
     const t1 = Date.now();
     const o = await openPage(browser, f, view, 'flat-light-read', true);
@@ -242,7 +244,7 @@ async function run(a) {
     }
     errs[view + ' ' + k] = o.errs.slice(0, 5);
     await browser.close();
-  }
+  }));
   for (const cfg of configs) {
     const setting = view + ':' + cfg;
     const cmp = (A, B, label) => {
@@ -251,10 +253,10 @@ async function run(a) {
         if (!rb || rb.bad) { diffs.push({ setting, sel, path: '-', prop: '(selector)', before: 'ok', after: rb ? rb.bad : 'missing' }); continue; }
         if (label === 'plain') matched += Object.keys(ra.out).length;
         for (const p of Object.keys(ra.out)) { const x = ra.out[p], y = rb.out[p];
-          if (!y) { if (ra.n === rb.n) diffs.push({ setting, sel, path: p, prop: '(element)', before: 'present', after: 'absent' }); continue; }
+          if (!y) { if (ra.n === rb.n && !allowed(sel, '(element)', setting)) diffs.push({ setting, sel, path: p, prop: '(element)', before: 'present', after: 'absent' }); continue; }
           for (const k of Object.keys(x)) if (x[k] !== y[k] && !allowed(sel, k, setting)) diffs.push({ setting, sel, path: p, prop: k, before: x[k], after: y[k], state: label === 'state' ? (ra.state || '') : undefined });
         }
-        if (ra.n !== rb.n) diffs.push({ setting, sel, path: '-', prop: '(count)', before: ra.n, after: rb.n });
+        if (ra.n !== rb.n && !allowed(sel, '(count)', setting)) diffs.push({ setting, sel, path: '-', prop: '(count)', before: ra.n, after: rb.n });
       } };
     cmp(got.base[setting].m, got.cand[setting].m, 'plain');
     cmp(got.base[setting].s, got.cand[setting].s, 'state');

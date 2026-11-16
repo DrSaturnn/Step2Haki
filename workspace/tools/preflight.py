@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""preflight.py: advisory checks for the content errors audits keep finding (Jonathan, 2026-10-05).
+"""preflight.py: advisory checks for the content errors audits keep finding (2026-10-05).
 
   python3 tools/preflight.py NEW.html [--base REV | --old OLD.html] [--sources DIR] [--all] [--json]
 

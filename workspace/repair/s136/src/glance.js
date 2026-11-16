@@ -1,6 +1,6 @@
 /* s136: site layout Phase 1 (claude/pending/S136.md). Presentation only; never adds or removes brief text.
-   1. Accent setting (Jonathan 2026-10-14): a reader choice under the theme switches, stored per viewer; Slate default.
-      Dark theme (Jonathan 2026-10-14): a switch beside Flat theme, stored per viewer (ax-theme), light by default.
+   1. Accent setting (2026-10-14): a reader choice under the theme switches, stored per viewer; Slate default.
+      Dark theme (2026-10-14): a switch beside Flat theme, stored per viewer (ax-theme), light by default.
    2. Desktop hovers: open on pointer enter, close on leave, stay open once clicked (a second click closes).
    3. Desktop glass toolbar: the current section's number and name, Read and Recall, open or close every panel.
    4. Sidebar systems fold and unfold; the system holding the current brief opens itself. */
@@ -23,7 +23,7 @@
   try { var tv = localStorage.getItem(THEME); dark = tv === 'dark' || tv === 'tinted'; tint = tv === 'tinted'; } catch(e){}
   if(cur !== 'slate') root.setAttribute('data-axa', cur);
   if(dark) root.setAttribute('data-theme', 'dark');
-  if(tint) root.setAttribute('data-glass', 'tinted');   // tinted glass (Jonathan 2026-10-14): dark plus accent-tinted translucent surfaces
+  if(tint) root.setAttribute('data-glass', 'tinted');   // tinted glass (2026-10-14): dark plus accent-tinted translucent surfaces
   /* Each region carries both attributes while a switch walks the page, so the dark accent rule (which needs both on
      one element or the theme on an ancestor) always matches. */
   function mark(c){

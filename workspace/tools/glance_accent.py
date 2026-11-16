@@ -1,4 +1,4 @@
-"""glance_accent: s136 accent setting (Jonathan 2026-10-14) as edits for repair/build.py.
+"""glance_accent: s136 accent setting (2026-10-14) as edits for repair/build.py.
 
   python3 tools/glance_accent.py <page.html> <out.json>      write the edits (replace_global ops)
   python3 tools/glance_accent.py --test                      offline checks
@@ -22,7 +22,7 @@ import json
 import re
 import sys
 
-ACCENTS = [  # (key, name, hex): Jonathan 2026-10-14; Slate is the default. Two of his hexes are a little darker here so
+ACCENTS = [  # (key, name, hex): 2026-10-14; Slate is the default. Two of his hexes are a little darker here so
     # their labels keep 4.5:1 with margin on the darkest accent tint they sit on (the bottom line's), measured by
     # legib_audit s136: Indigo #5856D6 -> #504ED4 (was 4.31:1 there), then #4A48C6 (container 3: the small bottom-line label on backpain's tint, 3.3:1 measured), Rose #B0306A -> #AA2E66 (was 4.49:1).
     ('slate', 'Slate', '#3B5B8C'), ('indigo', 'Indigo', '#4A48C6'), ('purple', 'Purple', '#544AC4'),
@@ -154,7 +154,7 @@ def build(page):
                 ga -= 1
                 find, w = page[ga] + find, page[ga] + w
             ops.append({'op': 'replace_global', 'find': find, 'with': w,
-                        'note': 's136 accent setting (Jonathan 2026-10-14): accent literals read the accent tokens'})
+                        'note': 's136 accent setting (2026-10-14): accent literals read the accent tokens'})
     return ops, sorted(used)
 
 

@@ -1,0 +1,70 @@
+[
+ {
+  "sel": "body .axm-flat #modes .flatt .knob",
+  "prop": "(count)"
+ },
+ {
+  "sel": "body .axm-flat #modes .flatt .track",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axdisp .axd-grp[data-grp=\"layout\"]",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axdisp .axd-grp",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axdisp .axd-grp + .axd-grp",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axdisp .axd-gh",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axdisp .axd-gb",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axdisp #modes .axd-seg",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axdisp #modes .axd-opts",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axdisp #modes .axd-opts button",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axdisp #modes .axd-opts button:hover",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axdisp #modes .axd-opts button[aria-checked=\"true\"]",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axdisp #modes .axd-opts button:focus-visible",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#nav .axn-col",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#nav.axn .axn-col",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#nav.axn .axn-col:focus-visible",
+  "prop": "(count)"
+ },
+ {
+  "sel": "body .axm-study #modes .study .knob",
+  "prop": "(element)"
+ }
+]

@@ -17,7 +17,8 @@ WS = os.path.abspath(os.path.join(H, '..', '..'))
 T = tempfile.mkdtemp(prefix='hooktest-')
 ENV = dict(os.environ, AX_HOOK_STATE=os.path.join(T, 'state'), AX_TRANSCRIPTS=os.path.join(T, 'projects'),
            AX_WAVE=os.path.join(T, 'WAVE.json'), AX_LEDGER=os.path.join(T, 'ledger.csv'),
-           AX_LEDGER_LEAD=os.path.join(T, 'ledger_lead.csv'), AX_TEST_LOG='{"v": 0, "note": "test"}')
+           AX_LEDGER_LEAD=os.path.join(T, 'ledger_lead.csv'), AX_TEST_LOG='{"v": 0, "note": "test"}',
+           AX_STAMPS_DIR=os.path.join(T, 'stamps'))
 TB = 's0hooktest'                                  # a throwaway batch folder, removed at the end
 TBD = os.path.join(WS, 'repair', TB)
 LANE = os.path.join(WS, 'repair', 'migration', 'peds', 'nephrotic-child', 'spine')
@@ -232,7 +233,90 @@ try:
     rg = subprocess.run([sys.executable, os.path.join(H, 'ready_gate.py'), 's0readytest'], capture_output=True, text=True, env=ENV)
     expect('G-READY ignores a small edit', (rg.returncode, rg.stdout + rg.stderr), 0)
     shutil.rmtree(RB, ignore_errors=True)
-    # ---- H4 per-launch limit (Jonathan 2026-10-12): a Budget: line lowers the role budget, never raises it
+    # ---- s171b stamps (D-20261109-4): ready_gate accepts verify's READY stamp, runs verify on a miss or a changed input
+    SF = os.path.join(WS, 'repair', 'migration', '_s0stamptest', 'stamp', 'spine')   # ignored path: no git change
+    os.makedirs(SF, exist_ok=True)
+    spec = json.dumps({'edits': [{'op': 'replace_brief', 'brief': 's0-stamp-test',
+                                  'html': '<div class="brief" id="s0-stamp-test" data-spine="2"></div>'}]})
+    open(os.path.join(SF, '10_s0_stamp_test_spine.json'), 'w').write(spec)
+    os.makedirs(RB, exist_ok=True)
+    open(os.path.join(RB, '10_s0_stamp_test_spine.json'), 'w').write(spec)
+    STUB, SLOG = os.path.join(T, 'stub_verify.py'), os.path.join(T, 'stub_verify.log')
+    open(STUB, 'w').write('import sys\nopen(%r, "a").write(sys.argv[1] + "\\n")\nprint("verify stub: FAIL")\nsys.exit(1)\n' % SLOG)
+    SENV = dict(ENV, AX_VERIFY=STUB)
+    TOOLS_DIR = os.path.join(WS, 'tools')
+
+    def stamp_now():
+        return subprocess.run([sys.executable, '-c', 'import sys; sys.path.insert(0, %r); import stamps as S; '
+                               'S.write("verify", S.folder_name(%r), S.verify_groups(%r), summary="verify s0-stamp-test: READY")'
+                               % (TOOLS_DIR, SF, SF)], env=ENV, capture_output=True, text=True).returncode
+
+    def gate_run(env=None):
+        if os.path.exists(SLOG):
+            os.remove(SLOG)
+        r = subprocess.run([sys.executable, os.path.join(H, 'ready_gate.py'), 's0readytest'], capture_output=True,
+                           text=True, env=env or SENV)
+        return r.returncode, r.stdout + r.stderr, os.path.exists(SLOG)
+    rc, out, ran = gate_run()
+    expect('stamp miss (no stamp): ready_gate runs verify', (0 if rc == 1 and ran and 'stamp miss: no stamp' in out else 1, out), 0)
+    expect('stamp written', (stamp_now(), ''), 0)
+    rc, out, ran = gate_run()
+    expect('stamp hit: READY without running verify', (0 if rc == 0 and not ran and 'by stamp' in out else 1, out), 0)
+    open(os.path.join(SF, 'verify_all.log'), 'w').write('a log written after the run')
+    rc, out, ran = gate_run()
+    expect('stamp hit: a log in the folder is not an input', (0 if rc == 0 and not ran else 1, out), 0)
+    open(os.path.join(SF, 'outline.json'), 'w').write('{"changed": 1}')
+    rc, out, ran = gate_run()
+    expect('changed input: stamp miss names the folder, verify runs',
+           (0 if rc == 1 and ran and 'stamp miss: folder' in out else 1, out), 0)
+    stamp_now()
+    rc, out, ran = gate_run()
+    expect('restamped after the change: hit again', (0 if rc == 0 and not ran else 1, out), 0)
+    rc, out, ran = gate_run(dict(SENV, AX_STAMPS='off'))
+    expect('AX_STAMPS=off: verify runs despite a matching stamp', (0 if rc == 1 and ran and 'AX_STAMPS=off' in out else 1, out), 0)
+    sp = os.path.join(ENV['AX_STAMPS_DIR'], 'verify', 'repair__migration___s0stamptest__stamp__spine.json')
+    before = json.load(open(sp))['entries']
+    vf = subprocess.run([sys.executable, os.path.join(WS, 'tools', 'spine', 'verify.py'), SF], capture_output=True,
+                        text=True, env=ENV)
+    expect('verify FAIL writes no stamp', (0 if vf.returncode == 1 and json.load(open(sp))['entries'] == before else 1,
+                                           vf.stdout[-200:]), 0)
+    shutil.rmtree(os.path.dirname(os.path.dirname(SF)), ignore_errors=True)
+    shutil.rmtree(RB, ignore_errors=True)
+    # ship.sh checks: stamps.py check misses, commit, then hits; a changed page misses and names it
+    pg, pend = os.path.join(T, 'page.html'), os.path.join(T, 'pend.json')
+    open(pg, 'w').write('<html>a</html>')
+
+    def stp(*a):
+        return subprocess.run([sys.executable, os.path.join(TOOLS_DIR, 'stamps.py')] + list(a), capture_output=True,
+                              text=True, env=ENV)
+    r = stp('check', 'render', pend, '--page', pg)
+    expect('ship stamp miss before any pass', (r.returncode, r.stdout), 1)
+    stp('commit', pend, 'render: PASS 209 briefs')
+    r = stp('check', 'render', pend, '--page', pg)
+    expect('ship stamp hit prints the stored line',
+           (0 if r.returncode == 0 and 'render: PASS 209 briefs (stamp' in r.stdout else 1, r.stdout), 0)
+    open(pg, 'w').write('<html>b</html>')
+    r = stp('check', 'render', pend, '--page', pg)
+    expect('ship stamp: changed page misses and names it',
+           (0 if r.returncode == 1 and 'stamp miss: page' in r.stdout else 1, r.stdout), 0)
+    sys.path.insert(0, TOOLS_DIR)
+    import stamps as _S
+    import ui_gate as _U
+    expect('a directory in a hashed group (an untracked symlink git lists as a file) hashes as a directory',
+           (0 if _S.fhash(T).startswith('dir:') else 1, ''), 0)
+    expect('perf and a11y baselines are ui_gate inputs only (a perf fix reruns perf alone)',
+           (0 if not set(_S.files(WS, ['tools/**/*.json'], exclude=_S.UI_ONLY)) & _S.UI_ONLY and
+            'tools/spine/perf_baseline.json' in _U.TOOLS['perf'] and
+            'tools/spine/perf_baseline.json' not in _U.TOOLS['parity'] + _U.TOOLS['a11y'] + _U.TOOLS['twopane'] else 1, ''), 0)
+    # G-STAMP: the lead cannot forge a stamp or swap verify for a stub
+    expect('lead writes a stamp', run('callgate.py', {'tool_name': 'Write', 'tool_input': {
+        'file_path': os.path.join(WS, 'local', 'stamps', 'verify', 'x.json')}}), 2)
+    for c, want in (('AX_VERIFY=/bin/true tools/ship.sh s1 "m"', 2), ('python3 tools/stamps.py commit /tmp/p.json', 2),
+                    ('AX_STAMPS_DIR=/tmp/x python3 tools/hooks/ready_gate.py s1', 2),
+                    ('echo {} > workspace/local/stamps/gate/gate.json', 2),
+                    ('python3 tools/stamps.py show', 0), ('AX_STAMPS=off tools/ship.sh s1 "m" --checks-only', 0)):
+        expect('lead %s' % c[:44], run('callgate.py', {'tool_name': 'Bash', 'tool_input': {'command': c}}), want)
+    # ---- H4 per-launch limit (2026-10-12): a Budget: line lowers the role budget, never raises it
     for aid, line in (('b1', 'Budget: 1'), ('b2', 'Budget: 99 calls'), ('b3', 'Budget: none')):
         PB = 'Role: probe\nPlan step: R2\nLane: %s\n%s\n\nprobe %s' % (LANE, line, aid)
         transcript(aid, PB)
@@ -280,7 +364,10 @@ try:
     PD = os.path.join(T, 'priv', 'docs')
     os.makedirs(PD, exist_ok=True)
     open(os.path.join(PD, 'STANDING_DIRECTIONS.md'), 'w').write('- rule [D-20260101-1]\n')
-    open(os.path.join(PD, 'DECISIONS_DIGEST.md'), 'w').write('- 2026-01-01 [D-20260101-1] {t} a\n')
+    import json as _json   # the scratch digest also holds the ids tools/spine/allow_baseline.json names
+    _ab = sorted({r['id'] for r in _json.load(open(os.path.join(WS, 'tools', 'spine', 'allow_baseline.json'))).values()})
+    open(os.path.join(PD, 'DECISIONS_DIGEST.md'), 'w').write('- 2026-01-01 [D-20260101-1] {t} a\n' + ''.join(
+        '- %s-%s-%s [%s] {process} allow list baseline\n' % (i[2:6], i[6:8], i[8:10], i) for i in _ab))
     ENV['S2H_PRIVATE'] = os.path.dirname(PD)
     expect('H1 launch allowed when doc_lint passes', blaunch('lean-builder', 'opus', ' 4'), 0)
     open(os.path.join(PD, 'DECISIONS_DIGEST.md'), 'a').write('- 2026-01-02 [D-20260102-1] {t} b, supersedes D-20260101-1\n')
@@ -359,7 +446,7 @@ try:
     expect('check after the batch file changed post-approval', (chk().returncode, ''), 1)
     open(bf, 'w').write(keep)
     expect('check with the approved batch restored', (chk().returncode, ''), 0)
-    # 2026-10-24 (Jonathan): no screenshots; present binds the batch, changelog and page alone
+    # 2026-10-24: no screenshots; present binds the batch, changelog and page alone
     r = subprocess.run([sys.executable, os.path.join(H, 'approval.py'), 'present', TB], env=ENV, capture_output=True, text=True)
     expect('present with no screenshots', (r.returncode, r.stdout + r.stderr), 0)
     expect('check after a new presentation, before ship', (chk().returncode, ''), 1)
@@ -367,6 +454,59 @@ try:
     expect('approval of a presentation with no screenshots', (chk().returncode, ''), 0)
     open(page, 'a').write('<!-- changed -->')
     expect('check after the page changed', (chk().returncode, ''), 1)
+    # a tools batch has no changelog entry: present --tools records without one, and check follows the record
+    E2 = {k: v for k, v in ENV.items() if k != 'AX_TEST_LOG'}
+    r = subprocess.run([sys.executable, os.path.join(H, 'approval.py'), 'present', TB], env=E2, capture_output=True, text=True)
+    expect('present with no changelog entry and no --tools', (r.returncode, ''), 1)
+    r = subprocess.run([sys.executable, os.path.join(H, 'approval.py'), 'present', TB, '--tools'], env=E2, capture_output=True, text=True)
+    expect('present --tools with no changelog entry', (r.returncode, r.stdout + r.stderr), 0)
+    r = subprocess.run([sys.executable, os.path.join(H, 'approval.py'), 'present', 's000nofiles', '--tools'], env=E2, capture_output=True, text=True)
+    expect('present --tools for a batch with no edit files', (r.returncode, r.stdout + r.stderr), 0)
+    r = subprocess.run([sys.executable, os.path.join(H, 'approval.py'), 'present', 's000nofiles'], env=E2, capture_output=True, text=True)
+    expect('present without --tools for a batch with no edit files', (r.returncode, ''), 1)
+    # ---- call gate with no transcript on disk: the role and lane come from the launch record
+    import time as _t
+    json.dump({'id': 'NT', 'open': True, 'plan_step': 'R2', 'max_agents': 9, 'max_calls': 99, 'max_tokens': 10 ** 9},
+              open(ENV['AX_WAVE'], 'w'))
+
+    def nt_launch(tag, tid, budget=''):
+        pr = 'Role: probe\nPlan step: R2\nLane: %s\n%s\nprobe %s' % (LANE, budget, tag)
+        return launch(pr, transcript_path='', tool_use_id=tid)
+
+    def nt_call(aid, tool, ti, **kw):
+        d = {'hook_event_name': 'PreToolUse', 'tool_name': tool, 'tool_input': ti, 'agent_id': aid,
+             'agent_type': 'general-purpose', 'session_id': 'S', 'cwd': WS, 'transcript_path': ''}
+        d.update(kw)
+        return run('callgate.py', d)
+
+    expect('no transcript, no launch in the wave: refused', nt_call('n0', 'Read', {'file_path': LANE + '/x'}), 2)
+    expect('no transcript: launch recorded', nt_launch('one', 'tu-1', 'Budget: 2'), 0)
+    lead = os.path.join(T, 'lead.jsonl')
+    open(lead, 'w').write('{}\n')
+    expect('a harness with transcripts, agent transcript missing: refused',
+           nt_call('n1', 'Read', {'file_path': LANE + '/x'}, transcript_path=lead), 2)
+    expect('no transcript, another agent type: refused',
+           nt_call('n1', 'Read', {'file_path': LANE + '/x'}, agent_type='other'), 2)
+    expect('no transcript, one unheld launch: read allowed', nt_call('n1', 'Read', {'file_path': LANE + '/x'}), 0)
+    expect('no transcript: write outside the lane refused',
+           nt_call('n1', 'Write', {'file_path': WS + '/tools/x.py', 'content': 'x'}), 2)
+    expect('no transcript: Budget line kept, third call refused', nt_call('n1', 'Read', {'file_path': LANE + '/x'}), 2)
+    expect('no transcript: a second agent cannot take a held launch', nt_call('n2', 'Read', {'file_path': LANE + '/x'}), 2)
+    expect('no transcript: two launches recorded (a)', nt_launch('two', 'tu-2'), 0)
+    expect('no transcript: two launches recorded (b)', nt_launch('three', 'tu-3'), 0)
+    expect('no transcript, two unheld launches: refused', nt_call('n3', 'Read', {'file_path': LANE + '/x'}), 2)
+    lp = os.path.join(ENV['AX_HOOK_STATE'], 'launches.jsonl')
+    rows = [json.loads(l) for l in open(lp)]
+    old = _t.strftime('%Y-%m-%dT%H:%M:%S', _t.localtime(_t.time() - 900))
+    for r_ in rows:
+        if r_.get('tool_use_id') == 'tu-2':
+            r_['t'] = old
+    open(lp, 'w').write(''.join(json.dumps(r_) + '\n' for r_ in rows))
+    expect('no transcript, one launch past the window: the other binds', nt_call('n4', 'Read', {'file_path': LANE + '/x'}), 0)
+    expect('no transcript, only an old launch left: refused', nt_call('n5', 'Read', {'file_path': LANE + '/x'}), 2)
+    json.dump({'id': 'NT', 'open': False, 'plan_step': 'R2', 'max_agents': 9, 'max_calls': 99, 'max_tokens': 10 ** 9},
+              open(ENV['AX_WAVE'], 'w'))
+    expect('no transcript, wave closed: refused', nt_call('n6', 'Read', {'file_path': LANE + '/x'}), 2)
 finally:
     shutil.rmtree(T, ignore_errors=True)
     shutil.rmtree(TBD, ignore_errors=True)
@@ -395,7 +535,7 @@ try:
         os.makedirs(os.path.dirname(p), exist_ok=True)
         open(p, 'w').write('x')
         _g('add', '-f', rel) if force else _g('add', rel)
-        r = _g('commit', '-qm', 't')
+        r = _g('commit', '-qm', 'test: commit one file')
         _g('reset', '-q', '--hard', 'HEAD')
         _g('clean', '-qfdx')
         return r.returncode
@@ -410,8 +550,50 @@ try:
     _g('-c', 'core.hooksPath=/dev/null', 'add', 'workspace/tools/old/facts.json')
     _g('-c', 'core.hooksPath=/dev/null', 'commit', '-qm', 'seed a leak')
     _g('rm', '-q', '--cached', 'workspace/tools/old/facts.json')
-    expect('guard: untracking a leaked file is allowed', (_g('commit', '-qm', 'untrack').returncode, ''), 0)
+    expect('guard: untracking a leaked file is allowed', (_g('commit', '-qm', 'chore: untrack a file').returncode, ''), 0)
 finally:
     shutil.rmtree(_G, ignore_errors=True)
+# ---- the live hook probe: the lead's heartbeat, the setup probe, the approval warning
+_st = ENV['AX_HOOK_STATE']
+for _f in ('live.json', 'setup_probe.json', 'setup_state.json'):
+    if os.path.exists(os.path.join(_st, _f)):
+        os.remove(os.path.join(_st, _f))
+_w = subprocess.run([sys.executable, '-c', 'import sys; sys.path.insert(0, %r); import approval as A; print("\\n".join(A.hook_warnings()))' % H],
+                    capture_output=True, text=True, env=ENV).stdout
+expect('present warns when no hook has fired at all', (0 if 'no hook has fired' in _w else 1, _w), 0)
+run('callgate.py', {'tool_name': 'Bash', 'tool_input': {'command': 'ls'}, 'cwd': WS, 'session_id': 'p1'})
+expect('heartbeat: a lead call writes live.json and no setup mark',
+       (0 if os.path.exists(os.path.join(_st, 'live.json')) and not os.path.exists(os.path.join(_st, 'setup_probe.json')) else 1, ''), 0)
+_ev = os.path.join(_st, 'events.jsonl')
+_keep = open(_ev).read() if os.path.exists(_ev) else ''
+open(_ev, 'w').write(''.join(l + '\n' for l in _keep.splitlines() if '"prompt-seen"' not in l))
+_w = subprocess.run([sys.executable, '-c', 'import sys; sys.path.insert(0, %r); import approval as A; print("\\n".join(A.hook_warnings()))' % H],
+                    capture_output=True, text=True, env=ENV).stdout
+expect('present warns when no prompt-seen event exists', (0 if 'no prompt-seen event' in _w else 1, _w), 0)
+run('approval.py', {'prompt': 'hello'}, 'hook')
+_w = subprocess.run([sys.executable, '-c', 'import sys; sys.path.insert(0, %r); import approval as A; print("\\n".join(A.hook_warnings()))' % H],
+                    capture_output=True, text=True, env=ENV).stdout
+expect('present: no warning once the prompt hook has fired', (0 if not _w.strip() else 1, _w), 0)
+_set = os.path.join(T, 'settings.json')
+json.dump({'model': 'x', 'hooks': {'PreToolUse': [{'matcher': '', 'hooks': [{'type': 'command', 'command': 'python3 /x/tools/hooks/callgate.py'}]},
+                                                  {'matcher': 'Bash', 'hooks': [{'type': 'command', 'command': 'other-tool'}]}]}}, open(_set, 'w'))
+_E = dict(ENV, AX_SETTINGS=_set)
+_patch = os.path.join(WS, 'tools', 'spine', 'patch.py')
+r = subprocess.run([sys.executable, _patch, 'setup', TB], capture_output=True, text=True, env=_E, cwd=WS)
+_cfg = json.load(open(_set))
+expect('setup with no hook mark and dead settings hooks: exit 3, the hooks removed, the rest of the file kept',
+       (0 if r.returncode == 3 and 'HOOKS NOT LIVE' in r.stdout and 'callgate' not in json.dumps(_cfg) and _cfg.get('model') == 'x'
+        and 'other-tool' in json.dumps(_cfg) else 1, r.stdout + r.stderr), 0)
+r = subprocess.run([sys.executable, _patch, 'setup', TB], capture_output=True, text=True, env=_E, cwd=WS)
+expect('setup with no hook mark after the fallback was removed: exit 4 and STOP',
+       (0 if r.returncode == 4 and 'STOP' in r.stdout else 1, r.stdout + r.stderr), 0)
+run('callgate.py', {'tool_name': 'Bash', 'tool_input': {'command': 'python3 tools/spine/patch.py setup s0'}, 'cwd': WS, 'session_id': 'p1'})
+expect('heartbeat: a `patch.py setup` command leaves the setup mark',
+       (0 if os.path.exists(os.path.join(_st, 'setup_probe.json')) else 1, ''), 0)
+_old = json.load(open(os.path.join(_st, 'setup_probe.json'))); _old['epoch'] -= 3600
+json.dump(_old, open(os.path.join(_st, 'setup_probe.json'), 'w'))
+r = subprocess.run([sys.executable, _patch, 'setup', TB], capture_output=True, text=True, env=_E, cwd=WS)
+expect('setup: a stale mark (an hour old) is not proof; the mark is used once',
+       (0 if r.returncode == 4 and not os.path.exists(os.path.join(_st, 'setup_probe.json')) else 1, r.stdout + r.stderr), 0)
 print('test_hooks: %d passed, %d failed' % (ok, bad))
 sys.exit(1 if bad else 0)

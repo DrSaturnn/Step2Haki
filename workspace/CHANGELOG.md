@@ -2,6 +2,513 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-11-15 s176c: fix(tools): run the s3 brief checks in parallel
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Page content unchanged.
+Site: discriminator-briefs-site/index.html unchanged (no deploy)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 54 checks, base HEAD | allowlisted 21 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
+## 2026-11-15 s176b: fix(tools): stop the patch pipeline losing review fixes and runs
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Page content unchanged.
+Site: discriminator-briefs-site/index.html unchanged (no deploy)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 54 checks, base HEAD | allowlisted 21 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
+## 2026-11-15 s176: content(briefs): rewrite twelve presentation hubs in review-book style
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Briefs changed (12):
+  - polyuria (Polyuria): prose edited (-663 chars)
+  - bs-incontinence (Urinary Incontinence): prose edited (+559 chars)
+  - bs-abdominal-mass (Abdominal Mass in a Young Child): prose edited (-527 chars)
+  - bs-distal-rta (Hypokalemia and Acid-Base Disorders in a Child): prose edited (-350 chars)
+  - aq-puffy-eyes (Child with Puffy Eyes): prose edited (+844 chars)
+  - lymphadenitis (Lymphadenopathy): prose edited (-905 chars)
+  - herpangina (Oral Lesions in a Child): prose edited (+335 chars)
+  - bs-fever-rash-arthralgia (Fever and Rash in a Child): prose edited (-2545 chars)
+  - aq-infant-fever (Fever in an Infant): prose edited (+600 chars)
+  - dementia (Cognitive Decline and Dementia in an Adult): prose edited (+592 chars)
+  - toxidrome (Suspected Overdose or Toxidrome): prose edited (+250 chars)
+  - peds-sleep (Sleep Problems): prose edited (+2032 chars)
+Other page changes (nav, headers, scripts): +769 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 54 checks, base HEAD | allowlisted 21 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
+## 2026-11-15 s175: content(briefs): rewrite fourteen presentation hubs in review-book style
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Briefs changed (14):
+  - cough (Chronic Cough): prose edited (-12 chars)
+  - hypoxemia-mech (Hypoxemia): prose edited (+352 chars)
+  - airway (Noisy Breathing in a Child): prose edited (+336 chars)
+  - uri (Respiratory Infection in a Child): prose edited (-433 chars)
+  - bpd (Lung Disease in the Newborn and Preterm Infant): prose edited (+174 chars)
+  - cholestasis (Abnormal Liver Tests): prose edited (+155 chars)
+  - infant-stool (Stool Changes in a Well Infant): prose edited (+267 chars)
+  - feeding-refusal (Feeding an Infant or Toddler): prose edited (+319 chars)
+  - rlq-pain (Right Lower Quadrant Pain): prose edited (+204 chars)
+  - peds-constipation (Constipation in a Child): prose edited (+344 chars)
+  - cyclic-vomiting (Recurrent Vomiting in a Child): prose edited (+179 chars)
+  - occult-gi-bleed (GI Bleeding in a Child): prose edited (+643 chars)
+  - bs-umbilical (Umbilical Findings in a Newborn): prose edited (+868 chars)
+  - scrotum (Scrotal Pain and Masses): prose edited (+818 chars)
+Other page changes (nav, headers, scripts): +899 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 54 checks, base HEAD | allowlisted 21 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
+## 2026-11-14 s174b: content(briefs): rewrite the child heart failure hub
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Briefs changed (1):
+  - myocarditis (Heart Failure in a Child): prose edited (-57 chars)
+Other page changes (nav, headers, scripts): +361 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 54 checks, base HEAD | allowlisted 21 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
+## 2026-11-14 s174c: chore(tools): narrow the check stamps and probe the hooks at setup
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Page content unchanged.
+Site: discriminator-briefs-site/index.html unchanged (no deploy)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 54 checks, base HEAD | allowlisted 21 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
+## 2026-11-14 s174: content(briefs): rewrite thirteen presentation hubs in review-book style
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Briefs changed (13):
+  - scaphoid (Wrist and Hand Pain and Numbness): prose edited (+558 chars)
+  - backpain (Low Back Pain in an Adult): prose edited (+684 chars)
+  - hippos (Hip Injury in an Adult): prose edited (+53 chars)
+  - gtps (Hip and Thigh Pain and Numbness): prose edited (+122 chars)
+  - septic-bursitis (Hot Joint or Bursa in an Adult): prose edited (+291 chars)
+  - limp (The Limping Child): prose edited (-1230 chars)
+  - nursemaid (Arm Injury in a Young Child): prose edited (+694 chars)
+  - growing-pains (Leg Pain in a Child): prose edited (-843 chars)
+  - bone-tumors (Bone Lesions in a Child): prose edited (+237 chars)
+  - shoulder-rom (Shoulder Pain): prose edited (+661 chars)
+  - ped-murmur (Heart Murmurs in a Child): prose edited (+174 chars)
+  - right-murmurs (Heart Murmurs in an Adult): prose edited (-75 chars)
+  - newborn-cyanosis (Cyanosis in the Newborn): prose edited (+77 chars)
+Other page changes (nav, headers, scripts): +704 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 54 checks, base HEAD | allowlisted 21 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0 (stamp 2026-11-14 16:20: same inputs)
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
+## 2026-11-11 s173b: feat(briefs): rewrite the mood stabilizer card in review-book style
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Briefs changed (1):
+  - mood-anticonv (Lithium and anticonvulsants): prose edited (+687 chars)
+Other page changes (nav, headers, scripts): +315 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 54 checks, base HEAD | allowlisted 21 | 0 failure(s) (stamp 2026-11-11 09:09: same inputs)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0 (stamp 2026-11-11 09:10: same inputs)
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
+## 2026-11-11 s173: feat(briefs): rewrite twelve psych drug cards in review-book style
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Briefs changed (12):
+  - pc-atypical (Atypical antipsychotics): prose edited (-2 chars)
+  - pc-typical (Typical antipsychotics): prose edited (+203 chars)
+  - pc-antichol (Anticholinergic): prose edited (-23 chars)
+  - pc-td (Tardive dyskinesia agents): prose edited (+92 chars)
+  - pc-cog (Cognitive agents): prose edited (+408 chars)
+  - pc-benzo (Benzodiazepines): prose edited (+194 chars)
+  - pc-anxiety (Other anxiety agents): prose edited (+156 chars)
+  - adhd-meds (ADHD): prose edited (+459 chars)
+  - pc-sleep (Sleep agents): prose edited (+289 chars)
+  - pc-orexin (Orexin antagonists): prose edited (+85 chars)
+  - sud-meds (Substance use and cessation): prose edited (+639 chars)
+  - pc-other (Other agents): prose edited (+352 chars)
+Other page changes (nav, headers, scripts): +582 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 54 checks, base HEAD | allowlisted 21 | 0 failure(s) (stamp 2026-11-11 06:39: same inputs)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0 (stamp 2026-11-11 06:39: same inputs)
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
+## 2026-11-10 s172f: chore(tools): cut ship time and move the internal record out
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Page content unchanged.
+Site: discriminator-briefs-site/index.html unchanged (no deploy)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 54 checks, base HEAD | allowlisted 21 | 0 failure(s) (stamp 2026-11-10 22:39: same inputs)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0 (stamp 2026-11-10 21:52: same inputs)
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
+## 2026-11-10 s172e: s172e: hover anchors re-judged; 86 triggers moved onto the term their card explains, 76 open from a circled i marker; no brief wording changed
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Other page changes (nav, headers, scripts): +376 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 54 checks, base HEAD | allowlisted 21 | 0 failure(s) (stamp 2026-11-10 18:01: same inputs)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0 (stamp 2026-11-10 18:02: same inputs)
+  vendor: clean (808907 source shingles; page 0.009%) (stamp 2026-11-10 18:20: same inputs)
+```
+
+## 2026-11-09 s172: s172: 13 psych briefs in review-book style (eating disorders, defense mechanisms, delirium, substance, stages of change, psych-medical, disruptive behavior, SSRI, antipsychotic and lithium adverse effects, tricyclic toxicity, suicide risk, intimate partner violence)
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Briefs changed (13):
+  - eating-disorders (Eating Disorders): prose edited (+1026 chars)
+  - defense-mechanisms (Defense Mechanisms): prose edited (-24 chars)
+  - delirium (Delirium): prose edited (+152 chars)
+  - substance (Substance Intoxication and Withdrawal): prose edited (+2222 chars)
+  - stages-change (Stages of Change and Motivational Interviewing): prose edited (-446 chars)
+  - psych-medical (Medication- and Illness-Induced Psychiatric Disorders): prose edited (+391 chars)
+  - disruptive-behavior (Disruptive Behavior in a Child): prose edited (+0 chars)
+  - ssri-effects (SSRI Adverse Effects): prose edited (-27 chars)
+  - antipsych-effects (Antipsychotic Adverse Effects): prose edited (+927 chars)
+  - lithium-effects (Lithium Therapy): prose edited (+1099 chars)
+  - tca-tox (Anticholinergic and Tricyclic Toxicity): prose edited (+108 chars)
+  - suicide-risk (Suicide Risk Assessment): prose edited (+662 chars)
+  - ipv (Intimate Partner Violence): prose edited (-718 chars)
+Other page changes (nav, headers, scripts): +629 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 54 checks, base HEAD | allowlisted 21 | 0 failure(s) (stamp 2026-11-09 23:39: same inputs)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0 (stamp 2026-11-09 23:40: same inputs)
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
+## 2026-11-09 s171: s171: eleven psychiatry briefs in review-book style (pms-pmdd held)
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Briefs changed (11):
+  - psychosis-duration (Psychosis): prose edited (+3057 chars)
+  - sz-psychosocial (Schizophrenia: Long-Term Care): prose edited (+1895 chars)
+  - bipolar-mania (Bipolar Disorder): prose edited (+1055 chars)
+  - cluster-b (Cluster B Personality Disorders): prose edited (+172 chars)
+  - cluster-c (Cluster C Personality Disorders): prose edited (+535 chars)
+  - panic (Panic Disorder and Other Anxiety): prose edited (+150 chars)
+  - ocd (Obsessive-Compulsive and Related Disorders): prose edited (+437 chars)
+  - somatic (Somatic Symptom and Related Disorders): prose edited (+2104 chars)
+  - trauma-stress (Trauma, Stress and Dissociative Disorders): prose edited (+31 chars)
+  - gppd (Genito-Pelvic Pain/Penetration Disorder): prose edited (+1658 chars)
+  - sexual-dysfunction (Sexual Dysfunction): prose edited (-905 chars)
+Other page changes (nav, headers, scripts): +730 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 54 checks, base HEAD | allowlisted 21 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
+## 2026-11-08 s170: s170: content pilot under TEXTBOOK_STYLE on 7 briefs (pc-ssri, pc-snri, pc-antidep, pc-tca, pc-maoi, mdd, voices); hover-line display, V1 term triggers, A1 anchor pass; audit planning tools
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Briefs changed (7):
+  - voices (Hears Voices or Holds Odd Beliefs): prose edited (+251 chars)
+  - mdd (Major Depressive Disorder): prose edited (+1884 chars)
+  - pc-ssri (SSRIs): prose edited (-246 chars)
+  - pc-snri (SNRIs): prose edited (+1523 chars)
+  - pc-antidep (Other antidepressants): prose edited (+716 chars)
+  - pc-tca (TCAs): prose edited (+659 chars)
+  - pc-maoi (MAOIs): prose edited (+629 chars)
+Other page changes (nav, headers, scripts): +1322 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 54 checks, base HEAD | allowlisted 21 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
+## 2026-11-08 s169: s169: quiz beside the sidebar with the Brief tab, Recall in the brief column, Previous, Profile and backup in the Review sheet's look; Recall reveal in workup tables; UI_MAP Retired gate check; faster ui_gate
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Other page changes (nav, headers, scripts): -10551 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 51 checks, base HEAD | allowlisted 21 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: NOT CHECKED (repair/sources missing: restore axbx-local-only.tar.gz)
+```
+
+## 2026-11-07 s168: Two-pane desktop layout and grouped Display settings
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Other page changes (nav, headers, scripts): +27707 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 50 checks, base HEAD | allowlisted 21 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
+## 2026-11-07 s167c: components and sidebar: hover cards open from the term, shared timeline axis, Board-style and Aquifer markers removed, 13 briefs moved, sidebar rebuilt
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Briefs changed (209):
+  - scaphoid (Wrist and Hand Pain and Numbness): attrs set (brief data-sys); prose edited (+155 chars)
+  - backpain (Low Back Pain in an Adult): attrs set (brief data-sys); prose edited (+163 chars)
+  - hippos (Hip Injury in an Adult): attrs set (brief data-sys); prose edited (+62 chars)
+  - gtps (Hip and Thigh Pain and Numbness): attrs set (brief data-sys); prose edited (+35 chars)
+  - septic-bursitis (Hot Joint or Bursa in an Adult): attrs set (brief data-sys); prose edited (+31 chars)
+  - limp (The Limping Child): attrs set (brief data-sys); prose edited (-1935 chars)
+  - nursemaid (Arm Injury in a Young Child): attrs set (brief data-sys); prose edited (-996 chars)
+  - growing-pains (Leg Pain in a Child): attrs set (brief data-sys); prose edited (-966 chars)
+  - bone-tumors (Bone Lesions in a Child): attrs set (brief data-sys); prose edited (-786 chars)
+  - shoulder-rom (Shoulder Pain): attrs set (brief data-navlabel,data-sys); prose edited (+124 chars)
+  - ped-murmur (Heart Murmurs in a Child): attrs set (brief data-sys); prose edited (+62 chars)
+  - right-murmurs (Heart Murmurs in an Adult): attrs set (brief data-sys)
+  - newborn-cyanosis (Cyanosis in the Newborn): attrs set (brief data-sys); prose edited (+62 chars)
+  - myocarditis (Heart Failure in a Child): attrs set (brief data-sys); prose edited (+31 chars)
+  - bs-shock (Shock in Children): attrs set (brief data-sys)
+  - cough (Chronic Cough): attrs set (brief data-sys)
+  - hypoxemia-mech (Hypoxemia): attrs set (brief data-sys)
+  - airway (Noisy Breathing in a Child): attrs set (brief data-sys); prose edited (-60 chars)
+  - uri (Respiratory Infection in a Child): attrs set (brief data-sys); prose edited (+93 chars)
+  - bpd (Lung Disease in the Newborn and Preterm Infant): attrs set (brief data-sys); prose edited (-60 chars)
+  - cholestasis (Abnormal Liver Tests): attrs set (brief data-sys); prose edited (+62 chars)
+  - infant-stool (Stool Changes in a Well Infant): attrs set (brief data-sys)
+  - feeding-refusal (Feeding an Infant or Toddler): attrs set (brief data-sys); prose edited (+62 chars)
+  - rlq-pain (Right Lower Quadrant Pain): attrs set (brief data-sys); prose edited (+62 chars)
+  - peds-constipation (Constipation in a Child): attrs set (brief data-sys); prose edited (+93 chars)
+  - cyclic-vomiting (Recurrent Vomiting in a Child): attrs set (brief data-sys); prose edited (+62 chars)
+  - occult-gi-bleed (GI Bleeding in a Child): attrs set (brief data-sys); prose edited (+93 chars)
+  - bs-umbilical (Umbilical Findings in a Newborn): attrs set (brief data-navlabel,data-sys); prose edited (+93 chars)
+  - scrotum (Scrotal Pain and Masses): attrs set (brief data-sys); prose edited (+93 chars)
+  - polyuria (Polyuria): attrs set (brief data-sys); prose edited (+66 chars)
+  - bs-incontinence (Urinary Incontinence): attrs set (brief data-sys); prose edited (+66 chars)
+  - bs-abdominal-mass (Abdominal Mass in a Young Child): attrs set (brief data-navlabel,data-sys); prose edited (+66 chars)
+  - bs-distal-rta (Hypokalemia and Acid-Base Disorders in a Child): attrs set (brief data-sys); prose edited (+62 chars)
+  - aq-puffy-eyes (Child with Puffy Eyes): attrs set (brief data-sys); prose edited (+155 chars)
+  - aq-bruising (Bruising and Purpura in a Child): attrs set (brief data-navlabel,data-sys)
+  - lymphadenitis (Lymphadenopathy): attrs set (brief data-sys); prose edited (+93 chars)
+  - herpangina (Oral Lesions in a Child): attrs set (brief data-sys); prose edited (+124 chars)
+  - bs-fever-rash-arthralgia (Fever and Rash in a Child): attrs set (brief data-sys); prose edited (+93 chars)
+  - aq-infant-fever (Fever in an Infant): attrs set (brief data-navlabel,data-sys); prose edited (+124 chars)
+  - bs-genital-ulcer (Genital Ulcers): attrs set (brief data-sys)
+  - aq-infant-hypotonia (Hypotonia in an Infant): attrs set (brief data-navlabel,data-sys)
+  - aq-child-headache (Headache in a School-Age Child): attrs set (brief data-navlabel,data-sys)
+  - bs-eyelid-lump (Eyelid Lumps and Swelling in a Child): attrs set (brief data-navlabel,data-sys)
+  - bs-reye (Encephalopathy and Cerebral Edema in a Child): attrs set (brief data-sys)
+  - voices (Hears Voices or Holds Odd Beliefs): attrs set (brief data-sys)
+  - dementia (Cognitive Decline and Dementia in an Adult): attrs set (brief data-sys); prose edited (+34 chars)
+  - toxidrome (Suspected Overdose or Toxidrome): attrs set (brief data-sys); prose edited (+62 chars)
+  - bs-learning (School Difficulty in a Child): attrs set (brief data-sys)
+  - peds-sleep (Sleep Problems): attrs set (brief data-navlabel,data-sys); prose edited (-1408 chars)
+  - pmr (Polymyalgia Rheumatica): attrs set (brief data-sys); prose edited (+66 chars)
+  - oa-pharm (Osteoarthritis): attrs set (brief data-sys); prose edited (+124 chars)
+  - septic-hip (Septic Arthritis and Transient Synovitis in a Child): attrs set (brief data-sys); prose edited (-270 chars)
+  - sjia (Juvenile Idiopathic Arthritis): attrs set (brief data-sys); prose edited (-582 chars)
+  - scfe (Slipped Capital Femoral Epiphysis): attrs set (brief data-sys)
+  - myositis-ossificans (Muscle Contusion and Myositis Ossificans): attrs set (brief data-sys); prose edited (+31 chars)
+  - scheuermann (Adolescent Kyphosis): attrs set (brief data-sys)
+  - bs-puncture-osteomyelitis (Foot Puncture Wounds and Osteomyelitis): attrs set (brief data-sys); prose edited (+31 chars)
+  - bs-torticollis (Torticollis and Plagiocephaly in an Infant): attrs set (brief data-sys); prose edited (+31 chars)
+  - bs-brachial-plexus (Brachial Plexus Injury at Birth): attrs set (brief data-sys); prose edited (+31 chars)
+  - growth (Developmental Milestones and Normal Growth): attrs set (brief data-sys)
+  - neonatal-maternal-labs (Maternal Effects in the Newborn): attrs set (brief data-sys); prose edited (+11 chars)
+  - aneuploidy (Genetic Syndromes Recognized at Birth): attrs set (brief data-sys); prose edited (+44 chars)
+  - bs-preterm-followup (Follow-Up of the Preterm Infant): attrs set (brief data-navlabel,data-sys)
+  - chf (Heart Failure): attrs set (brief data-sys)
+  - ascvd (Lipid Screening and Statin Therapy): attrs set (brief data-sys); prose edited (-113 chars)
+  - angina (Stable Ischemic Heart Disease): attrs set (brief data-sys); prose edited (-206 chars)
+  - ie-ppx (Infective Endocarditis Prophylaxis): attrs set (brief data-navlabel,data-sys)
+  - dvt (Venous Thromboembolism): attrs set (brief data-sys); prose edited (-200 chars)
+  - cyanotic-chd (Congenital Heart Disease): attrs set (brief data-sys); prose edited (+31 chars)
+  - htn-drugs (Hypertension in an Adult): attrs set (brief data-sys)
+  - kawasaki (Kawasaki Disease): attrs set (brief data-sys); prose edited (+62 chars)
+  - arf (Acute Rheumatic Fever): attrs set (brief data-sys)
+  - del22q11 (22q11.2 Deletion Syndrome): attrs set (brief data-navlabel,data-sys)
+  - bs-adolescent-bp (High Blood Pressure in a Child or Adolescent): attrs set (brief data-sys)
+  - copd (Obstructive Lung Disease): attrs set (brief data-sys); prose edited (+2 chars)
+  - pneumoconiosis (Occupational Lung Disease): attrs set (brief data-sys); prose edited (+31 chars)
+  - rhinitis (Rhinitis): attrs set (brief data-sys)
+  - sinopulm-structural (Recurrent Respiratory Infection and Structural Lung Disease): attrs set (brief data-sys); prose edited (+35 chars)
+  - asthma (Asthma): attrs set (brief data-sys); prose edited (+31 chars)
+  - liver-preg (Liver Disease in Pregnancy): attrs set (brief data-sys); prose edited (+31 chars)
+  - masld (Fatty Liver Disease): attrs set (brief data-sys); prose edited (+124 chars)
+  - zenker (Zenker Diverticulum): attrs set (brief data-sys); prose edited (+93 chars)
+  - fap (Hereditary Polyposis Syndromes): attrs set (brief data-sys); prose edited (+124 chars)
+  - neonatal-jaundice (Jaundice in a Newborn): attrs set (brief data-sys); prose edited (+44 chars)
+  - neonatal-bowel (The Distended Abdomen in a Newborn or Infant): attrs set (brief data-sys)
+  - bs-impaction (Constipation and Fecal Impaction in an Adult): attrs set (brief data-sys); prose edited (+62 chars)
+  - bs-tef (Tracheoesophageal Fistula and Esophageal Atresia): attrs set (brief data-sys); prose edited (+31 chars)
+  - bs-wilson (Wilson Disease): attrs set (brief data-sys); prose edited (+31 chars)
+  - pyelo (Pyelonephritis): attrs set (brief data-sys); prose edited (+62 chars)
+  - bph (Benign Prostatic Hyperplasia and Urinary Retention): attrs set (brief data-sys); prose edited (+66 chars)
+  - nephropathy (Diabetes Complications and Annual Care): attrs set (brief data-sys); prose edited (+233 chars)
+  - hematuria (Hematuria and Nephritic Syndrome): attrs set (brief data-sys)
+  - peds-uti-recurrent (Urinary Tract Infection in a Child): attrs set (brief data-sys); prose edited (+62 chars)
+  - enuresis (Enuresis): attrs set (brief data-sys); prose edited (+31 chars)
+  - peds-aki (Acute Kidney Injury in a Child): attrs set (brief data-sys); prose edited (+62 chars)
+  - nephrotic-child (Proteinuria and Nephrotic Syndrome in a Child): attrs set (brief data-sys); prose edited (-58 chars)
+  - bs-puv (Posterior Urethral Valves): attrs set (brief data-sys); prose edited (+62 chars)
+  - thyroid (Thyroid Disease in an Adult): attrs set (brief data-sys); prose edited (+11 chars)
+  - gynecomastia (Male Breast Enlargement): attrs set (brief data-sys)
+  - prolactin (Hyperprolactinemia): attrs set (brief data-sys)
+  - osteoporosis (Osteoporosis Screening and Treatment): attrs set (brief data-sys); prose edited (+11 chars)
+  - congenital-hypothyroid (Congenital Hypothyroidism): attrs set (brief data-sys)
+  - tumor-syndromes (Inherited Tumor Syndromes): attrs set (brief data-sys)
+  - precocious-puberty (Puberty): attrs set (brief data-navlabel,data-sys); prose edited (+11 chars)
+  - homocystinuria (Tall Stature and Marfanoid Habitus): attrs set (brief data-sys)
+  - bs-short-stature (Abnormal Growth in a Child): attrs set (brief data-sys); prose edited (+55 chars)
+  - hypercalcemia (Hypercalcemia): attrs set (brief data-sys); prose edited (+31 chars)
+  - anemia-thrombocytopenia (Anemia with Thrombocytopenia): attrs set (brief data-sys)
+  - drug-hemolysis (Hemolytic Anemia): attrs set (brief data-sys); prose edited (+44 chars)
+  - dipstick-mismatch (Dark Urine: Hemoglobin, Myoglobin or Blood): attrs set (brief data-sys)
+  - microcytic-anemia (Microcytic Anemia): attrs set (brief data-sys)
+  - factor-inhibitor (Hemophilia): attrs set (brief data-sys)
+  - transfusion (Transfusion Reactions): attrs set (brief data-sys)
+  - bs-leukemia (Acute Leukemia in a Child): attrs set (brief data-sys)
+  - scd-dyspnea (Sickle Cell Disease and Trait): attrs set (brief data-sys); prose edited (+124 chars)
+  - tb (Tuberculosis): attrs set (brief data-sys); prose edited (+31 chars)
+  - meningitis (Bacterial Meningitis): attrs set (brief data-sys); prose edited (+155 chars)
+  - hiv-vax (Vaccines in Special Populations): attrs set (brief data-sys); prose edited (+155 chars)
+  - dtap (Childhood Vaccine Schedule and Contraindications): attrs set (brief data-sys); prose edited (+62 chars)
+  - cervicitis (Cervicitis and Pelvic Inflammatory Disease): attrs set (brief data-sys); prose edited (+62 chars)
+  - ig-panel (Antibody Deficiencies): attrs set (brief data-sys)
+  - rmsf (Tick-Borne Illness): attrs set (brief data-sys); prose edited (+124 chars)
+  - cgd (Neutrophil Disorders: Number and Function): attrs set (brief data-sys)
+  - bs-pta (Deep Neck Infections): attrs set (brief data-sys); prose edited (+155 chars)
+  - bs-torch (Congenital Infections (TORCH)): attrs set (brief data-sys)
+  - bs-neonatal-sepsis (Fever and Sepsis in the Newborn): attrs set (brief data-sys); prose edited (-669 chars)
+  - bs-anaphylaxis (Anaphylaxis): attrs set (brief data-sys); prose edited (+62 chars)
+  - bs-isolation (Isolation Precautions): attrs set (brief data-sys); prose edited (+260 chars)
+  - bs-foodborne (Infectious Diarrhea): attrs set (brief data-sys); prose edited (+62 chars)
+  - hearing (Hearing Loss and Chronic Ear Disease): attrs set (brief data-sys); prose edited (+33 chars)
+  - redeye (The Red Eye): attrs set (brief data-sys)
+  - cluster (Primary Headache in an Adult): attrs set (brief data-sys)
+  - sellar-mass (Brain Tumors in a Child): attrs set (brief data-sys); prose edited (+22 chars)
+  - peds-headache-imaging (Headache in a Child: Imaging and Treatment): attrs set (brief data-sys)
+  - febrile-seizure (Seizure with Fever in a Child): attrs set (brief data-navlabel,data-sys)
+  - cerebral-palsy (Cerebral Palsy): attrs set (brief data-sys)
+  - abrs-complications (Sinusitis and Its Complications): attrs set (brief data-sys)
+  - vpshunt (Hydrocephalus and Shunt Complications): attrs set (brief data-sys)
+  - retinitis-pigmentosa (Night Blindness): attrs set (brief data-sys)
+  - tics (Tics and Tic Disorders): attrs set (brief data-sys); prose edited (+51 chars)
+  - bs-tethered (Spinal Dysraphism): attrs set (brief data-sys)
+  - bs-peds-stroke (Stroke in a Child or Adolescent): attrs set (brief data-navlabel,data-sys)
+  - bs-imprinting (Imprinting Disorders: Angelman and Prader-Willi): attrs set (brief data-sys)
+  - parkinson (Parkinson Disease and Parkinsonism): attrs set (brief data-sys); prose edited (-99 chars)
+  - psoriasis (Scaly Rashes): attrs set (brief data-sys)
+  - cellulitis (Skin and Soft Tissue Infection): attrs set (brief data-sys)
+  - eczemaherp (Atopic Dermatitis): attrs set (brief data-sys)
+  - peds-alopecia (Hair Loss in a Child): attrs set (brief data-sys)
+  - neonatal-rash (Rashes in the Newborn and Infant): attrs set (brief data-sys); prose edited (-1998 chars)
+  - bs-scabies (Scabies): attrs set (brief data-sys)
+  - preg-vax (Vaccines in Pregnancy): attrs set (brief data-sys); prose edited (-1250 chars)
+  - cervical (Cervical Cancer Screening): attrs set (brief data-sys); prose edited (+22 chars)
+  - ectopic (Ectopic Pregnancy): attrs set (brief data-sys)
+  - hpv (Adolescent Vaccines): attrs set (brief data-sys); prose edited (-2028 chars)
+  - adolescent-aub (Abnormal Uterine Bleeding): attrs set (brief data-sys); prose edited (+55 chars)
+  - contraception (Contraception): attrs set (brief data-sys)
+  - teratogens (Teratogenic Exposures): attrs set (brief data-sys)
+  - primary-amenorrhea (Primary Amenorrhea): attrs set (brief data-sys)
+  - smoking (Preventive Care: Ranking Interventions): attrs set (brief data-sys)
+  - preop (Preoperative Evaluation): attrs set (brief data-sys)
+  - elder (Elder Abuse): attrs set (brief data-sys)
+  - bs-nat-fracture (Suspected Child Abuse): attrs set (brief data-sys)
+  - vegan (Vitamins and Nutritional Deficiencies): attrs set (brief data-sys)
+  - bs-adolescent-confid (Adolescent Confidentiality): attrs set (brief data-sys)
+  - capacity (Decision-Making Capacity and Informed Consent): attrs set (brief data-sys)
+  - psychosis-duration (Psychosis): attrs set (brief data-navgrp,data-sys); prose edited (-539 chars)
+  - sz-psychosocial (Schizophrenia: Long-Term Care): attrs set (brief data-navgrp,data-sys); prose edited (+128 chars)
+  - bipolar-mania (Bipolar Disorder): attrs set (brief data-navgrp,data-sys); prose edited (-774 chars)
+  - mdd (Major Depressive Disorder): attrs set (brief data-navgrp,data-sys); prose edited (+0 chars)
+  - pms-pmdd (Premenstrual Syndrome and Premenstrual Dysphoric Disorder): attrs set (brief data-navgrp,data-sys); prose edited (-134 chars)
+  - cluster-b (Cluster B Personality Disorders): attrs set (brief data-navgrp,data-sys); prose edited (+31 chars)
+  - cluster-c (Cluster C Personality Disorders): attrs set (brief data-navgrp,data-sys); prose edited (-238 chars)
+  - panic (Panic Disorder and Other Anxiety): attrs set (brief data-navgrp,data-sys); prose edited (-769 chars)
+  - ocd (Obsessive-Compulsive and Related Disorders): attrs set (brief data-navgrp,data-sys); prose edited (+66 chars)
+  - somatic (Somatic Symptom and Related Disorders): attrs set (brief data-navgrp,data-sys); prose edited (-436 chars)
+  - trauma-stress (Trauma, Stress and Dissociative Disorders): attrs set (brief data-navgrp,data-sys); prose edited (+31 chars)
+  - eating-disorders (Eating Disorders): attrs set (brief data-navgrp,data-sys); prose edited (+221 chars)
+  - gppd (Genito-Pelvic Pain/Penetration Disorder): attrs set (brief data-navgrp,data-sys); prose edited (+124 chars)
+  - sexual-dysfunction (Sexual Dysfunction): attrs set (brief data-navgrp,data-sys)
+  - defense-mechanisms (Defense Mechanisms): attrs set (brief data-navgrp,data-sys)
+  - delirium (Delirium): attrs set (brief data-navgrp,data-sys); prose edited (-401 chars)
+  - substance (Substance Intoxication and Withdrawal): attrs set (brief data-navgrp,data-sys); prose edited (-840 chars)
+  - stages-change (Stages of Change and Motivational Interviewing): attrs set (brief data-navgrp,data-sys); prose edited (+35 chars)
+  - psych-medical (Medication- and Illness-Induced Psychiatric Disorders): attrs set (brief data-navgrp,data-sys); prose edited (+128 chars)
+  - disruptive-behavior (Disruptive Behavior in a Child): attrs set (brief data-navgrp,data-sys); prose edited (+35 chars)
+  - ssri-effects (SSRI Adverse Effects): attrs set (brief data-navgrp,data-sys); prose edited (+91 chars)
+  - antipsych-effects (Antipsychotic Adverse Effects): attrs set (brief data-navgrp,data-sys); prose edited (-120 chars)
+  - lithium-effects (Lithium Therapy): attrs set (brief data-navgrp,data-sys); prose edited (+124 chars)
+  - tca-tox (Anticholinergic and Tricyclic Toxicity): attrs set (brief data-navgrp,data-sys); prose edited (+31 chars)
+  - suicide-risk (Suicide Risk Assessment): attrs set (brief data-navgrp,data-sys); prose edited (+93 chars)
+  - ipv (Intimate Partner Violence): attrs set (brief data-navgrp,data-sys); prose edited (+62 chars)
+  - pc-ssri (SSRIs): attrs set (brief data-navgrp,data-sys); prose edited (-236 chars)
+  - pc-snri (SNRIs): attrs set (brief data-navgrp,data-sys); prose edited (+62 chars)
+  - pc-antidep (Other antidepressants): attrs set (brief data-navgrp,data-sys); prose edited (+128 chars)
+  - pc-tca (TCAs): attrs set (brief data-navgrp,data-sys); prose edited (+186 chars)
+  - pc-maoi (MAOIs): attrs set (brief data-navgrp,data-sys); prose edited (-1790 chars)
+  - pc-atypical (Atypical antipsychotics): attrs set (brief data-navgrp,data-sys); prose edited (-386 chars)
+  - pc-typical (Typical antipsychotics): attrs set (brief data-navgrp,data-sys); prose edited (-1125 chars)
+  - pc-antichol (Anticholinergic): attrs set (brief data-navgrp,data-sys); prose edited (+128 chars)
+  - pc-td (Tardive dyskinesia agents): attrs set (brief data-navgrp,data-sys); prose edited (+167 chars)
+  - mood-anticonv (Lithium and anticonvulsants): attrs set (brief data-navgrp,data-sys); prose edited (-1376 chars)
+  - pc-cog (Cognitive agents): attrs set (brief data-navgrp,data-sys); prose edited (-875 chars)
+  - pc-benzo (Benzodiazepines): attrs set (brief data-navgrp,data-sys); prose edited (-744 chars)
+  - pc-anxiety (Other anxiety agents): attrs set (brief data-navgrp,data-sys); prose edited (+124 chars)
+  - adhd-meds (ADHD): attrs set (brief data-navgrp,data-sys); prose edited (-39 chars)
+  - pc-sleep (Sleep agents): attrs set (brief data-navgrp,data-sys); prose edited (-217 chars)
+  - pc-orexin (Orexin antagonists): attrs set (brief data-navgrp,data-sys); prose edited (+43 chars)
+  - sud-meds (Substance use and cessation): attrs set (brief data-navgrp,data-sys); prose edited (-706 chars)
+  - pc-other (Other agents): attrs set (brief data-navgrp,data-sys); prose edited (+101 chars)
+Other page changes (nav, headers, scripts): -8979 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 50 checks, base HEAD | allowlisted 21 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
 ## 2026-11-07 s167b: s167b: sculpted light default; dark theme switch in one frame
 
 ```
@@ -2051,7 +2558,7 @@ Checks:
   vendor: clean (59413 source shingles; page 0.015%)
 ```
 
-## 2026-10-06 s112: Legibility: hub axis labels opaque again; hub table frame removed (Jonathan picked option A)
+## 2026-10-06 s112: Legibility: hub axis labels opaque again; hub table frame removed (the owner picked option A)
 
 ```
 Page: 177 briefs, 2164 items -> 177 briefs, 2164 items
@@ -2829,7 +3336,7 @@ Checks:
   vendor: clean (56601 source shingles; page 0.023%)
 ```
 
-## 2026-10-04 s87: one sans font everywhere: --serif token now resolves to the system sans stack (Jonathan disliked the serif)
+## 2026-10-04 s87: one sans font everywhere: --serif token now resolves to the system sans stack (the owner disliked the serif)
 
 ```
 Page: 190 briefs, 2138 items -> 190 briefs, 2138 items
@@ -3252,7 +3759,7 @@ Checks:
   vendor: clean (56601 source shingles; page 0.028%)
 ```
 
-## 2026-10-03 s66: s66: retitle 100 briefs to their broadest honest topic (Jonathan 2026-10-03: generalized titles); decision clauses moved to the subtitle line; Pairs with, wording-guide links and sidebar labels follow; merge heads retitled only where the head alone fits the new title; merges to follow cluster by cluster
+## 2026-10-03 s66: s66: retitle 100 briefs to their broadest honest topic (2026-10-03: generalized titles); decision clauses moved to the subtitle line; Pairs with, wording-guide links and sidebar labels follow; merge heads retitled only where the head alone fits the new title; merges to follow cluster by cluster
 
 ```
 Page: 216 briefs, 2121 items -> 216 briefs, 2121 items

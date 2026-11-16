@@ -4,7 +4,7 @@
    "op": "replace_global",
    "find": "</head>",
    "note": "desktop sidebar held by insets, not 100vh",
-   "with": "<style id=\"ax-s161d\">\n/* s161d: the desktop sidebar fits the window at the 110% zoom of wide windows (Jonathan 2026-11-04) */\n@media (min-width:1101px){#nav.axn{top:16px;bottom:16px;height:auto}}\n</style>\n</head>"
+   "with": "<style id=\"ax-s161d\">\n/* s161d: the desktop sidebar fits the window at the 110% zoom of wide windows (2026-11-04) */\n@media (min-width:1101px){#nav.axn{top:16px;bottom:16px;height:auto}}\n</style>\n</head>"
   }
  ]
 }

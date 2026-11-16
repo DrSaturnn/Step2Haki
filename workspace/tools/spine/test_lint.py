@@ -97,7 +97,7 @@ expect('number: a number word in the quote counts',
        L.lint_number([('S5', 'Repeat films in 2 weeks', ['repeat radiographs in two weeks'])]) == [])
 expect('number: 50,000 matches 50,000', L.lint_number([('S6', 'over 50,000 cells', ['WBC > 50,000/mcL'])]) == [])
 
-# ---- prose (s148f; Jonathan 2026-10-19: "chase the medical cause is an ai euphemism", "A night by stage", "by presentation")
+# ---- prose (s148f; 2026-10-19)
 w5 = '<figure class="lcp w5a"><p class="w5z">%s</p><div class="w5t"><div class="w5b"><div class="w5c">Clue</div><div class="w5o"><span class="mask w5om"><span class="w5ol">%s</span></span></div></div></div></figure>'
 expect('prose: "Chase the medical cause" in a workup step', len(L.lint_prose(w5 % ('Next step', 'Chase the medical cause'))) == 1)
 expect('prose: a concrete test passes', L.lint_prose(w5 % ('Next step', 'TSH, CBC, metabolic panel')) == [])
@@ -112,7 +112,7 @@ expect('prose: header "The tell" flagged', len(L.lint_prose('<table><thead><tr><
 expect('prose: practice bank not swept', L.lint_prose('<h5 class="tsec authored-hdr">Practice</h5>' + (w5 % ('Next step', 'Chase it'))) == [])
 
 # ---- whole folder: brief.html plus claim map and facts
-# s148g bold and reasons (Jonathan 2026-10-20)
+# s148g bold and reasons (2026-10-20)
 BL = '<div class="brief sp" id="x"><div class="dp"><span class="lbl">Bottom line</span><ul class="bl"><li>%s</li></ul></div><div class="sp-script">%s</div>'
 expect('bold: tics bottom line with no bold flagged', len(L.lint_bold(BL % ('2 or more motor tics, at least 1 year', '<b>Script bold</b>'))) == 1)
 expect('bold: bold in a hover card does not count', len(L.lint_bold(BL % ('Tics <button type="button" class="sp-pop">Why</button><span class="sp-pop-b" hidden><b>x</b></span>', ''))) == 1)
@@ -146,7 +146,7 @@ expect('spacing: after a closed figure passes', L.lint_spacing('awake play.</spa
 PW = '<div class="pearls"><span class="lbl">Pairs with</span> %s</div>'
 expect('pairs: two titles in one clause', len(L.lint_pairs(PW % '<i>Slipped Capital Femoral Epiphysis</i> and <i>The Limping Child</i>: hips.')) == 1)
 expect('pairs: one title per clause passes', L.lint_pairs(PW % '<i>A</i>: one. <i>B</i>: two.') == [])
-# ---- mask-leak (Jonathan 2026-10-24, no screenshots)
+# ---- mask-leak (2026-10-24, no screenshots)
 CARD = '<div class="sp-row"><span class="sp-src">%s</span><b class="sp-f">Alcohol use with confusion</b><p class="sp-commit"><b>If</b> x, <b>choose</b> <span class="mask">%s</span>.</p></div>'
 expect('mask-leak: card label repeats the short answer', len(L.lint_maskleak(CARD % ('Thiamine', 'Thiamine first'))) == 1)
 expect('mask-leak: a neutral label passes', L.lint_maskleak(CARD % ('Alcohol or malnutrition', 'Thiamine first')) == [])
@@ -154,7 +154,7 @@ expect('mask-leak: a long answer is skipped', L.lint_maskleak(CARD % ('Thiamine'
 ROW = '<table><tbody><tr><td>%s</td><td><span><span class="mask">%s</span></span></td></tr></tbody></table>'
 expect('mask-leak: first cell repeats the answer', len(L.lint_maskleak(ROW % ('Tobacco smoking', 'Smoking'))) == 1)
 expect('mask-leak: first cell without the answer passes', L.lint_maskleak(ROW % ('Gait, incontinence, apathy', 'Normal pressure hydrocephalus')) == [])
-# ---- pause-format (s154c, Jonathan 2026-10-26: question-style pause points)
+# ---- pause-format (s154c, 2026-10-26: question-style pause points)
 PPOK = ('<div class="brief sp" id="x" data-spine="2"><div class="sp-pause"><b class="pp-t">Pause point</b>\n'
         '<div class="pp-b">\n<span class="sl">Setup</span>\n<span class="si pp-off">Offered as <em>bait</em></span>\n'
         '<span class="si"><span class="mask">Decider</span></span>\n<span class="pp-a">&rarr; <span class="mask">Answer</span></span>\n'
@@ -168,7 +168,7 @@ expect('pause-format: an unmasked deciding line fails', any('neither' in x for x
 expect('pause-format: two extra lines fail', any('extra line' in x for x in L.pause_format(PPOK.replace('<p class="pp-x">Extra.</p>', '<p class="pp-x">A.</p>\n<p class="pp-x">B.</p>'))))
 expect('pause-format: a pp-b with data-nbme passes (s154f)', L.pause_format(PPOK.replace('<div class="pp-b">', '<div class="pp-b" data-nbme="psych-form-085f91">')) == [])
 expect('pause-format: a pp-b with another attribute still fails (s154f)', L.pause_format(PPOK.replace('<div class="pp-b">', '<div class="pp-b" data-x="1">')) != [])
-# ---- pause-content (s154j, Jonathan 2026-10-28: "go with checker rule")
+# ---- pause-content (s154j, 2026-10-28)
 expect('pause-content: a block with no offered bait fails', any('offers no bait' in x for x in L.pause_format(PPOK.replace('<span class="si pp-off">Offered as <em>bait</em></span>\n', ''))))
 expect('pause-content: a block with no deciding line fails', any('no deciding line' in x for x in L.pause_format(PPOK.replace('<span class="si"><span class="mask">Decider</span></span>\n', ''))))
 expect('pause-content: a bare negation answer fails', any('only negates' in x for x in L.pause_format(PPOK.replace('<span class="mask">Answer</span>', '<span class="mask">Not croup</span>'))))

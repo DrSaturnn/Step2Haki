@@ -334,7 +334,7 @@ function syncPull(id, then){
     var res=mergeBox(id, r.body.data && r.body.data.box);
     if(r.body.hasPin) setPinKnown(id,true);
     mark('on');
-    paintChip();
+    paintBadge();
     if(then) then(res);
   }).catch(function(){ mark('off'); if(then) then(null); });
 }
@@ -349,7 +349,7 @@ function syncPush(id, then){
       /* The server merges on write and returns the result; adopting it is what
          stops this device pushing a stale view again next time. */
       if(r.body && r.body.data) mergeBox(id, r.body.data.box);
-      mark('on'); paintChip(); if(then) then({ok:true});
+      mark('on'); paintBadge(); if(then) then({ok:true});
     }).catch(function(){ mark('off'); if(then) then(null); });
 }
 function pinOf(id){
@@ -395,59 +395,24 @@ function syncLine(){
 }
 
 /* ---------- the launcher + panel ---------- */
-var chip, chips=[], anchorEl=null, panel, lastFocus=null, sessionFocus=null;
+var anchorEl=null, panel, lastFocus=null, sessionFocus=null;
 
 function dueFor(id){ var s=split(id); return s.due.length+s.fresh.length; }
-function dueCount(){
-  var id=current(); if(!id) return pool().length;
-  return dueFor(id);
-}
-function paintChip(){
-  var id=current(), d=dueCount(), nm=id?nameOf(id):'Not signed in';
-  chips.forEach(function(c){
-    c.querySelector('.av').textContent = id?initials(nm):'+';
-    c.querySelector('.nm').textContent = nm;
-    c.querySelector('.due').textContent = d;
-    c.querySelector('.cap').textContent = !id ? 'briefs waiting'
-      : d===0 ? 'nothing due today' : (d===1?'brief due today':'briefs due today');
-    c.querySelector('.cta').textContent = !id ? 'Pick your name'
-      : d===0 ? 'Read ahead' : 'Start review';
-    c.setAttribute('data-due', (id&&d===0)?'0':'1');
-    c.setAttribute('aria-label', id ? ('Review – '+nm+', '+d+' due')
-                                    : 'Review – pick your name');
-  });
+function paintBadge(){
   var bdg=document.querySelector('#mbar [data-act="review"] .bdg');
-  if(bdg){ var rd=id?split(id).due.length:0; bdg.textContent=rd; bdg.setAttribute('data-n', rd?'1':'0'); }   /* scheduled reviews only, never the shelf total */
+  if(bdg){ var id=current(), rd=id?split(id).due.length:0; bdg.textContent=rd; bdg.setAttribute('data-n', rd?'1':'0'); }   /* scheduled reviews only, never the shelf total */
 }
-function buildLauncher(kind){
-  var launch=el('div');
-  launch.className = kind==='mast' ? 'rvmast' : 'rvside';
-  if(kind!=='mast') launch.id='rvlaunch';
-  launch.appendChild(el('span','lbl','Review'));
-  var chip=el('button');
-  chip.className='rvbtn';
-  if(kind!=='mast') chip.id='rvbtn';      /* the sidebar tile keeps the id */
-  chip.type='button';
-  chip.setAttribute('aria-haspopup','dialog');
-  chip.setAttribute('aria-expanded','false');
-  chip.setAttribute('aria-controls','rvpanel');
-  chip.innerHTML='<span class="hd"><span class="av"></span><span class="nm"></span></span>'+
-                 '<span class="bd"><b class="due">0</b><span class="cap"></span></span>'+
-                 '<span class="cta"></span>';
-  chip.addEventListener('click',function(){
-    if(panelOpen() && anchorEl===chip) return closePanel();
-    openPanel(chip);                      /* re-anchor if the other tile opened it */
-  });
-  launch.appendChild(chip);
-  chips.push(chip);
-  return launch;
+/* The panel opens from the Review sheet's "Profile and backup" (14-glance.js), anchored on the toolbar's Review pill, or
+   the phone bar's Review button. */
+function trigger(){
+  var a=document.querySelector('#axbar .axrvb'); if(a && a.offsetParent) return a;
+  return document.querySelector('#mbar [data-act="review"]');
 }
-
 function panelOpen(){ return panel && !panel.hidden; }
 function openPanel(anchor){
   if(!panel) buildPanel();
   lastFocus=anchor||document.activeElement;
-  anchorEl=anchor||chips[0]||null;
+  anchorEl=anchor||trigger()||null;
   renderPanel();
   /* Refresh in the background — the panel is usable immediately and
      re-renders only if the server actually had something newer. */
@@ -455,7 +420,6 @@ function openPanel(anchor){
     syncPull(current(), function(){ if(panelOpen()) renderPanel(); });
   });
   panel.hidden=false;
-  chips.forEach(function(c){ c.setAttribute('aria-expanded', c===anchorEl?'true':'false'); });
   place(anchor);
   var f=panel.querySelector('select,input,button.go,button.mini');
   if(f) try{ f.focus({preventScroll:true}); }catch(e){ f.focus(); }
@@ -463,19 +427,21 @@ function openPanel(anchor){
 function closePanel(){
   if(!panel||panel.hidden) return;
   panel.hidden=true;
-  chips.forEach(function(c){ c.setAttribute('aria-expanded','false'); });
   if(lastFocus) try{ lastFocus.focus({preventScroll:true}); }catch(e){}
   lastFocus=null;
 }
 function place(anchor){
-  anchor = anchor || anchorEl || chips[0];
+  anchor = anchor || anchorEl || trigger();
   if(!anchor || !panel) return;
   if(window.matchMedia('(max-width:900px)').matches){ panel.style.top=''; panel.style.left=''; return; }
   var r=anchor.getBoundingClientRect(), z=parseFloat(getComputedStyle(document.documentElement).zoom)||1;   /* zoomed px in, CSS px out */
   var pw=(panel.offsetWidth||330)*z, ph=(panel.offsetHeight||420)*z;
   var vw=document.documentElement.clientWidth||window.innerWidth;
   var vh=window.innerHeight, M=12, left, top;
-  if(r.width>420){
+  if(anchor.closest && anchor.closest('#axbar')){
+    /* the toolbar's Review pill: the panel takes the Review sheet's place, its right edge under the pill's */
+    left=r.right-pw; top=r.bottom+10;
+  } else if(r.width>420){
     /* a wide anchor — the masthead bar — reads as a header: the panel belongs
        under its left edge, not off the end of it. */
     left=r.left; top=r.bottom+10;
@@ -502,11 +468,10 @@ function buildPanel(){
   panel.setAttribute('aria-label','Review and profiles');
   document.body.appendChild(panel);
 
-  /* dismissals: click away, Escape, the chip again, the × */
+  /* dismissals: click away (the Review pill included: it opens the sheet instead), Escape, the × */
   document.addEventListener('mousedown',function(e){
     if(!panelOpen()) return;
     if(panel.contains(e.target)) return;
-    for(var ci=0; ci<chips.length; ci++) if(chips[ci].contains(e.target)) return;
     if(e.target.closest && e.target.closest('#mbar')) return;
     closePanel();
   });
@@ -543,21 +508,20 @@ function signedOutHTML(){
     if(q.length<4 && !q.some(function(x){ return x.id===p.id; })) q.push(p);
   });
   if(!q.length){
-    return '<p class="note">Progress is saved under the name you pick, so your schedule '+
-           'stays separate from anyone else studying here.</p>'+newNameHTML()+
-           '<div class="foot"><button class="mini" data-act="showimp" type="button">Import a code</button></div>';
+    return newNameHTML()+
+           '<div class="rvl rows"><button class="row-b" data-act="showimp" type="button">Import a code</button></div>';
   }
-  var h='<p class="note">Pick up where you left off.</p><div class="who">';
+  var h='<p class="rvk">Pick up where you left off</p><div class="rvl rows">';
   q.forEach(function(p){
     var d=dueFor(p.id);
-    h+='<button class="whob" type="button" data-act="use" data-id="'+esc(p.id)+'">'+
+    h+='<button class="row-b whob" type="button" data-act="use" data-id="'+esc(p.id)+'">'+
        '<span class="av">'+esc(initials(p.name))+'</span>'+
        '<span class="nm">'+esc(p.name)+'</span>'+
        '<span class="due" data-n="'+(d?'1':'0')+'">'+d+'</span></button>';
   });
-  h+='</div><div class="foot quiet">'+
-     '<button class="mini" data-act="other" type="button">Someone else</button>'+
-     '<button class="mini" data-act="showimp" type="button">Import a code</button>'+
+  h+='</div><div class="rvl rows">'+
+     '<button class="row-b" data-act="other" type="button">Someone else</button>'+
+     '<button class="row-b" data-act="showimp" type="button">Import a code</button>'+
      '</div>';
   return h;
 }
@@ -578,57 +542,58 @@ function askPinIfNeeded(id){
 
 function renderPanel(){
   var id=current(), list=profiles();
-  var h='<div class="ph"><b>Review</b><button class="x" type="button" aria-label="Close">✕</button></div>';
+  var h;
 
   if(!id){
-    h+=signedOutHTML()+
-       syncLine();   /* a first-time user must be told if sync is not working */
+    h='<header class="rvh"><div class="who"><b>Who is studying?</b><small>Progress is saved under your name.</small></div>'+
+      '<button class="rvx x" type="button" aria-label="Close"></button></header>'+
+      signedOutHTML()+
+      syncLine();   /* a first-time user must be told if sync is not working */
   } else {
     var s=split(id), t=today();
-    var d=s.data, n=s.due.length+s.fresh.length;
+    var d=s.data, n=s.due.length+s.fresh.length, due=s.due.length;
     var learned=Object.keys(d.box).length;
     var mature=Object.keys(d.box).filter(function(k){ return d.box[k].b>=4; }).length;
-    h+='<div class="row"><select id="rvsel" aria-label="Profile">';
-    list.forEach(function(p){
-      h+='<option value="'+esc(p.id)+'"'+(p.id===id?' selected':'')+'>'+esc(p.name)+'</option>';
-    });
-    h+='</select><button class="mini" data-act="new" type="button">New</button></div>';
-    h+='<div class="stats">'+
+    h='<header class="rvh"><span class="av">'+esc(initials(nameOf(id)))+'</span><div class="who"><b>'+esc(nameOf(id))+'</b>'+
+      '<small>'+(due ? (due===1 ? '1 review due today' : due+' reviews due today') : 'Nothing due today')+'</small></div>'+
+      '<button class="rvx x" type="button" aria-label="Close"></button></header>';
+    h+='<p class="rvk">Progress</p><div class="rvl stats">'+
        '<div><b>'+n+'</b><span>Due</span></div>'+
        '<div><b>'+learned+'</b><span>Seen</span></div>'+
        '<div><b>'+mature+'</b><span>Solid</span></div>'+
-       '<div><b>'+pool().length+'</b><span>On shelf</span></div>'+
-       '</div>';
+       '<div><b>'+pool().length+'</b><span>On shelf</span></div>';
     var counts=[0,0,0,0,0];
     Object.keys(d.box).forEach(function(k){ var b=d.box[k].b; if(b>=1&&b<=5) counts[b-1]++; });
     var tot=pool().length||1;
     h+='<div class="boxes" aria-hidden="true">';
     counts.forEach(function(c){ h+='<i><b style="width:'+Math.round(100*c/tot)+'%"></b></i>'; });
-    h+='</div>';
+    h+='</div></div>';
     h+=syncLine();      /* sync state leads: it is what you need to know first */
-    h+='<button class="go" data-act="start" type="button"'+(n||s.later.length?'':' disabled')+'>'+
-       (n? 'Review '+Math.min(PER_SESSION,n)+' briefs' : 'Nothing due – read ahead')+'</button>';
-    h+='<button class="go alt" data-act="quiz" type="button"'+(n||s.later.length?'':' disabled')+'>'+
-       'Quiz me instead – up to '+(PER_SESSION*PER_BRIEF)+' questions</button>';
+    h+='<button class="rvgo go" data-act="start" type="button"'+(n||s.later.length?'':' disabled')+'>'+
+       (n? 'Review '+Math.min(PER_SESSION,n)+' briefs' : 'Nothing due, read ahead')+'</button>';
+    h+='<button class="rvalt go alt" data-act="quiz" type="button"'+(n||s.later.length?'':' disabled')+'>'+
+       'Quiz me, up to '+(PER_SESSION*PER_BRIEF)+' questions</button>';
     if(availabilityText()) h+='<p class="msg availability">'+esc(availabilityText())+'</p>';
-    h+='<div class="foot">'+
-       '<button class="mini" data-act="rename" type="button">Rename</button>'+
-       '<button class="mini" data-act="pin" type="button">'+(pinOf(id)?'PIN set':'Set PIN')+'</button>'+
-       '<button class="mini" data-act="reset" type="button">Start over</button>'+
-       '<button class="mini" data-act="remove" type="button">Remove</button>'+
+    h+='<p class="rvk">Profile</p><div class="rvl rows">'+
+       '<button class="row-b" data-act="rename" type="button">Rename</button>'+
+       '<button class="row-b" data-act="pin" type="button">'+(pinOf(id)?'Change PIN':'Set PIN')+'</button>'+
+       '<button class="row-b" data-act="new" type="button">Add a person</button>'+
+       '<button class="row-b warn" data-act="reset" type="button">Start over</button>'+
+       '<button class="row-b warn" data-act="remove" type="button">Remove</button>'+
        '</div>';
     /* Backup is no longer how progress travels between devices — sync is. It
        stays because it is the only copy that exists outside the store, so it
        reads as insurance now rather than as transport. */
-    h+='<div class="foot quiet">'+
-       '<button class="mini" data-act="signout" type="button">Not you?</button>'+
-       '<button class="mini" data-act="showexp" type="button">Backup code</button>'+
-       '<button class="mini" data-act="showimp" type="button">Restore from a code</button>'+
+    h+='<p class="rvk">Backup</p><div class="rvl rows">'+
+       '<button class="row-b" data-act="showexp" type="button">Backup code</button>'+
+       '<button class="row-b" data-act="showimp" type="button">Restore from a code</button>'+
        '</div>';
   }
   h+='<div id="rvio"></div>';
+  h+='<footer class="rvf"><button type="button" data-act="'+(id?'signout':'less')+'">'+(id?'Switch person':'Back')+'</button>'+
+     (id?'<button type="button" data-act="less">Fewer options</button>':'')+'</footer>';
   panel.innerHTML=h;
-  paintChip();
+  paintBadge();
 
   panel.onclick=function(e){
     var b=e.target.closest('button'); if(!b) return;
@@ -652,7 +617,7 @@ function renderPanel(){
       var f0=panel.querySelector('#rvnew'); if(f0) f0.focus();
       place(); return;
     }
-    if(a==='signout'){ signOut(); renderPanel(); place(); return; }
+    if(a==='signout'||a==='less'){ closePanel(); AX.emit('review:sheet', a==='signout'?'who':'auto'); return; }
     if(a==='add'){
       var v=panel.querySelector('#rvnew'), vp=panel.querySelector('#rvnewpin');
       var nid2=addProfile(v?v.value:'');
@@ -728,7 +693,7 @@ function renderPanel(){
     if(a==='doreset'){
       var zid=current(); if(!zid) return;
       putData(zid,{v:1,box:{},runs:0,last:null});
-      paintChip();
+      paintBadge();
       /* The store merges on write and never truncates, so an empty push would
          leave the old schedule sitting there. Drop the record, then re-create
          it empty — which also keeps the name on the roster. */
@@ -884,7 +849,7 @@ function startReview(who){
   if(!window.__axShelf){ return startQuiz(who); }      /* transform too old */
   var built=buildSession(who);
   if(!built.briefs.length){
-    openPanel(chip);
+    openPanel(trigger());
     var s0=panel.querySelector('#rvio');
     if(s0) s0.innerHTML='<p class="msg bad">This shelf has no briefs to review.</p>';
     return;
@@ -981,9 +946,9 @@ function endReview(save){
   document.body.classList.remove('reviewing');
   if(bar) bar.hidden=true;
   window.__axShelf.clear();
-  rev=null; paintChip();
+  rev=null; paintBadge();
   window.scrollTo({top:0});
-  if(save && moves.length){ openPanel(chip);
+  if(save && moves.length){ openPanel(trigger());
     var slot=panel.querySelector('#rvio');
     if(slot) slot.innerHTML='<p class="msg">'+moves.length+' brief'+(moves.length===1?'':'s')+
       ' scored \u2013 '+moves.filter(function(m){return m.up;}).length+' moved up.</p>';
@@ -997,28 +962,38 @@ function startQuiz(who){
   sessionFocus=document.activeElement;
   var built=buildSession(who);
   if(!built.queue.length){
-    openPanel(chip);
+    openPanel(trigger());
     var slot=panel.querySelector('#rvio');
     if(slot) slot.innerHTML='<p class="msg bad">This shelf has no quiz items yet. '+
       'Switch to Step 2 for the pooled view. '+esc(availabilityText())+'</p>';
     return;
   }
-  sess={who:who,queue:built.queue,briefs:built.briefs,i:0,result:{},answered:false};
+  sess={who:who,queue:built.queue,briefs:built.briefs,i:0,result:{},answered:false,seen:[],priorStudy:document.body.classList.contains('study')};
   built.briefs.forEach(function(b){ sess.result[b.id]={ok:0,n:0}; });
   if(!box) buildSessionShell();
+  AX.emit('layout:hold', true);
+  setStudy(true);   /* briefs opened beside the quiz start in Recall; the switch over the brief turns it off */
   box.hidden=false;
   document.body.classList.add('rvopen');
   renderCard();
 }
+function setStudy(on){
+  document.body.classList.toggle('study',on);
+  AX.settings.set('study',on?'1':'0');
+  var rc=box && box.querySelector('.rvq-pane .rc'); if(rc) rc.setAttribute('aria-pressed',on?'true':'false');
+}
 function endSession(save){
   if(save && sess) grade(sess.who,sess.briefs,sess.result);
+  if(sess) setStudy(sess.priorStudy);
   sess=null;
+  closeSource();
   if(box){
     var c=box.querySelector('.sh .confirm'); if(c) c.parentNode.removeChild(c);
     box.hidden=true;
   }
   document.body.classList.remove('rvopen');
-  paintChip();
+  AX.emit('layout:hold', false);
+  paintBadge();
   if(sessionFocus && sessionFocus.isConnected) try{ sessionFocus.focus({preventScroll:true}); }catch(e){}
   sessionFocus=null;
 }
@@ -1041,19 +1016,107 @@ function grade(who,briefs,result){
   return moves;
 }
 
+/* The quiz sits beside the sidebar on the page's own background, in two columns on a wide screen: the question on
+   the left, the right column empty until a brief opens there (its source link, a sidebar tile or a link inside the
+   brief). The brief's own node moves into the right column and back to its place when the column closes or the quiz
+   ends. Narrower screens show one column at a time; the Brief tab switches between them. */
+var pane=null, paneBody=null, paneTitle=null, paneHold=null, paneBrief=null;
+function briefFor(id){
+  var t=id && document.getElementById(id); if(!t) return null;
+  if(t.classList.contains('brief')) return {brief:t, at:null};
+  var b=t.closest && t.closest('.brief'); return b ? {brief:b, at:t} : null;
+}
+/* the page's mode carriers (01-transform axm-flat, axm-study) sit on the outermost element without a brief: when a brief
+   moves into the column the quiz frame stops being one, and becomes one again when it leaves */
+function carry(n, on){ ['flat','study'].forEach(function(m){ n.classList.toggle('axm-'+m, !!on && document.body.classList.contains(m)); }); }
+function autoBrief(){ return AX.settings.get('quizbrief')!=='0'; }
+function openSource(id, quiet){
+  if(AX.brief.ensure(id)===null && !document.getElementById(id)) return false;
+  var f=briefFor(id); if(!f) return false;
+  if(paneBrief!==f.brief){
+    closeSource();
+    paneHold=document.createComment('rv-pane'); f.brief.parentNode.insertBefore(paneHold,f.brief);
+    paneBrief=f.brief; paneBrief.dataset.rvDisplay=paneBrief.style.display; paneBrief.style.display='';
+    carry(box,false); paneBody.appendChild(paneBrief); carry(paneBrief,true);
+    var h=paneBrief.querySelector(':scope > h4'); paneTitle.textContent=h?h.textContent.replace(/\s+/g,' ').trim():'';
+  }
+  box.classList.add('has-brief');
+  if(f.at) f.at.scrollIntoView({block:'start'}); else paneBody.scrollTop=0;
+  return true;
+}
+function closeSource(){
+  if(paneBrief && paneHold && paneHold.parentNode){
+    paneBrief.style.display=paneBrief.dataset.rvDisplay||''; delete paneBrief.dataset.rvDisplay;
+    paneHold.parentNode.replaceChild(paneBrief,paneHold);
+  }
+  paneBrief=null; paneHold=null;
+  if(box) carry(box,true);
+  if(paneTitle) paneTitle.textContent='';
+  if(box) box.classList.remove('has-brief');
+}
+function wide(){ return window.matchMedia('(min-width:1101px)').matches; }
+/* The Brief tab, top right of the quiz, is the one control for the brief. On a wide screen it shows or hides the right
+   column (setting quizbrief, on by default): while it is on, a question's brief opens there once the question is
+   answered, and a new question starts with the column empty. On a narrower screen it switches between the answered
+   question and its brief. */
+function paintTab(){
+  if(!box) return;
+  var on=wide() ? autoBrief() : !!paneBrief;
+  box.classList.toggle('pane-on', wide() && autoBrief());
+  bt.setAttribute('aria-pressed', on?'true':'false');
+  bt.disabled = !wide() && !(sess && sess.answered) && !paneBrief;
+}
+var bt=null;
+function tabClick(){
+  if(!sess) return;
+  var cur=sess.queue[sess.i].brief.id;
+  if(wide()){
+    var on=!autoBrief(); AX.settings.set('quizbrief', on?'1':'0');
+    if(!on) closeSource(); else if(sess.answered) openSource(cur, true);
+  } else if(paneBrief){ closeSource(); }
+  else if(sess.answered){ openSource(cur, true); }
+  paintTab();
+}
 function buildSessionShell(){
   box=el('div'); box.id='rvsession'; box.hidden=true;
   box.innerHTML=
-    '<div class="sh"><span class="who"></span>'+
+    '<button class="bt" type="button" aria-pressed="true" aria-controls="rvq-pane">'+
+    '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3.2c1.9-.8 4-.8 6 .6 2-1.4 4.1-1.4 6-.6v9.4c-1.9-.8-4-.8-6 .6-2-1.4-4.1-1.4-6-.6zM8 3.8v9.4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>'+
+    '<span>Brief</span></button>'+
+    '<div class="rvq"><section class="rvq-main"><div class="sh">'+
+    '<span class="who"></span>'+
     '<span class="prog"><b style="width:0%"></b></span>'+
     '<span class="ct"></span>'+
     '<button class="x" type="button" aria-label="End review">✕</button></div>'+
-    '<div class="sb"><div class="sw"></div></div>';
+    '<div class="sb"><div class="sw"></div></div></section>'+
+    '<section class="rvq-pane" id="rvq-pane" aria-label="Brief"><div class="ph">'+
+    '<b class="t"></b>'+
+    '<button class="rc" type="button" aria-pressed="true"><span class="track"><span class="knob"></span></span>Recall</button>'+
+    '</div>'+
+    '<div class="pb"></div></section></div>';
   document.body.appendChild(box);
+  pane=box.querySelector('.rvq-pane'); paneBody=pane.querySelector('.pb'); paneTitle=pane.querySelector('.t');
+  bt=box.querySelector('.bt');
+  bt.addEventListener('click',tabClick);
+  pane.querySelector('.rc').addEventListener('click',function(){ setStudy(!document.body.classList.contains('study')); });
+  window.matchMedia('(min-width:1101px)').addEventListener('change',function(){ if(sess) paintTab(); });
+  /* while the quiz is open, a link to a brief anywhere on the page opens that brief in the right column */
+  document.addEventListener('click',function(e){
+    if(!sess||!box||box.hidden||e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button) return;
+    var a=e.target.closest && e.target.closest('a[href^="#"]'); if(!a) return;
+    var id=a.getAttribute('href').slice(1); try{ id=decodeURIComponent(id); }catch(x){}
+    if(!id || !(AX.brief.ensure(id)||briefFor(id))) return;
+    e.preventDefault(); e.stopPropagation();
+    if(document.body.classList.contains('navopen')) AX.emit('nav:close');   /* Browse closes as it does for a page jump */
+    if(wide() && !autoBrief()) AX.settings.set('quizbrief','1');   /* a brief asked for by name shows the column */
+    openSource(id, true); paintTab();
+  },true);
   box.querySelector('.x').addEventListener('click',askEnd);
   document.addEventListener('keydown',function(e){
     if(!sess||!box||box.hidden) return;
-    if(e.key==='Escape'){ e.preventDefault(); askEnd(); return; }
+    if(e.key==='Escape'){ e.preventDefault(); if(paneBrief && !wide()){ closeSource(); paintTab(); } else askEnd(); return; }
+    if(pane && pane.contains(document.activeElement)) return;   /* keys typed while reading the brief stay with the brief */
+    if(e.key==='ArrowLeft'){ var pv=box.querySelector('.pv'); if(pv){ e.preventDefault(); pv.click(); } return; }
     if(!sess.answered){
       var k=({'1':0,'2':1,'3':2,'a':0,'b':1,'c':2})[e.key.toLowerCase()];
       if(k!=null){ var bs=box.querySelectorAll('.opts button'); if(bs[k]){ e.preventDefault(); bs[k].click(); } }
@@ -1111,9 +1174,14 @@ function card(entry){
 }
 
 
+/* A question seen earlier in the session comes back as it was: the same choice order and, once answered, its marks and
+   explanation; an answer is scored once and cannot be changed. */
 function renderCard(){
-  var e=sess.queue[sess.i], c=card(e), sw=box.querySelector('.sw');
-  sess.answered=false;
+  var e=sess.queue[sess.i], sw=box.querySelector('.sw');
+  var seen=sess.seen[sess.i]||(sess.seen[sess.i]={c:card(e),pick:null});
+  var c=seen.c;
+  sess.answered=seen.pick!==null;
+  closeSource(); paintTab();
   box.querySelector('.who').textContent=nameOf(sess.who);
   box.querySelector('.ct').textContent=(sess.i+1)+' / '+sess.queue.length;
   box.querySelector('.prog b').style.width=Math.round(100*sess.i/sess.queue.length)+'%';
@@ -1123,19 +1191,17 @@ function renderCard(){
   c.opts.forEach(function(o,i){
     h+='<button type="button" data-option-id="'+esc(o.optionId)+'" data-r="'+(o.right?1:0)+'"><span class="k">'+'ABC'[i]+'</span>'+(o.rw?'<span class="qx-ol">'+esc(o.text)+'<span class="qx-rsn">'+esc(o.rw)+'</span></span>':esc(o.text))+'</button>';
   });
-  h+='</div><div class="slot"></div>';
+  h+='</div><div class="slot"></div><div class="qnav">'+
+     (sess.i?'<button class="pv" type="button">Previous</button>':'')+'</div>';
   sw.dataset.itemId=c.itemId;
   sw.dataset.itemVersion=c.itemVersion;
   sw.dataset.itemStatus=c.itemStatus;
   sw.dataset.correctOptionId=c.correctOptionId;
   sw.innerHTML=h;
   box.querySelector('.sb').scrollTop=0;
+  var pv=sw.querySelector('.pv'); if(pv) pv.onclick=function(){ sess.i--; renderCard(); };
 
-  sw.querySelector('.opts').onclick=function(ev){
-    var b=ev.target.closest('button'); if(!b||sess.answered) return;
-    sess.answered=true;
-    var right=b.dataset.r==='1';
-    var r=sess.result[e.brief.id]; r.n++; if(right) r.ok++;
+  function show(b){
     Array.prototype.forEach.call(sw.querySelectorAll('.opts button'),function(x){
       x.disabled=true;
       if(x.dataset.r==='1') x.classList.add('ok');
@@ -1144,16 +1210,29 @@ function renderCard(){
     var last=sess.i>=sess.queue.length-1;
     sw.querySelector('.slot').innerHTML=
       '<p class="src">'+esc(e.brief.title)+'</p>'+
-      '<div class="why">'+c.why+'</div>'+
-      '<p><a class="source-link" href="#'+esc(e.brief.id)+'">Open source brief</a></p>'+
-      '<button class="nx" type="button">'+(last?'Finish':'Next')+'</button>';
-    sw.querySelector('.source-link').onclick=function(){ endSession(true); };
-    var nx=sw.querySelector('.nx');
-    nx.focus({preventScroll:true});
+      '<div class="why">'+c.why+'</div>';
+    if(autoBrief() && wide()) openSource(e.brief.id, true);
+    paintTab();
+    var nx=el('button','nx',last?'Finish':'Next'); nx.type='button';
+    sw.querySelector('.qnav').appendChild(nx);
     nx.onclick=function(){
       if(last){ finish(); }
       else { sess.i++; renderCard(); }
     };
+    return nx;
+  }
+  if(sess.answered){
+    var was=Array.prototype.filter.call(sw.querySelectorAll('.opts button'),function(x){ return x.dataset.optionId===seen.pick.id && Array.prototype.indexOf.call(x.parentNode.children,x)===seen.pick.i; })[0];
+    show(was).focus({preventScroll:true});
+    return;
+  }
+  sw.querySelector('.opts').onclick=function(ev){
+    var b=ev.target.closest('button'); if(!b||sess.answered) return;
+    sess.answered=true;
+    seen.pick={id:b.dataset.optionId, i:Array.prototype.indexOf.call(b.parentNode.children,b)};
+    var right=b.dataset.r==='1';
+    var r=sess.result[e.brief.id]; r.n++; if(right) r.ok++;
+    show(b).focus({preventScroll:true});
   };
   var first=sw.querySelector('.opts button'); if(first) first.focus({preventScroll:true});
 }
@@ -1184,10 +1263,6 @@ function finish(){
   box.querySelector('.sb').scrollTop=0;
   sw.querySelector('.nx').focus({preventScroll:true});
   sw.querySelector('.nx').onclick=function(){ endSession(false); };
-  sw.onclick=function(ev){
-    var a=ev.target.closest('a.jump'); if(!a) return;
-    endSession(false);
-  };
   sess.briefs=[];                 /* already graded; closing must not double-score */
   sess.result={};
 }
@@ -1196,21 +1271,6 @@ function finish(){
 function boot(){
   if(!document.querySelector('.brief')) return;
   buildPanel();
-  var nav=document.getElementById('nav');
-  var search=document.getElementById('search');
-  /* Beneath the shelf selector and the three switches: what you choose
-     before you read sits together, and Review is the larger control. */
-  var sp=document.querySelector('#nav #modes')||document.querySelector('#nav .shelfpick');
-  var lau=buildLauncher('side');
-  if(sp && sp.parentNode) sp.parentNode.insertBefore(lau, sp.nextSibling);
-  else if(nav && search) nav.insertBefore(lau, search.nextSibling);
-  chip=chips[0];
-
-  /* And again in the masthead, under its shelf row — the sidebar does not
-     exist on a phone, and even on a desktop this is what gets read first. */
-  var msp=document.querySelector('.masthead .shelfpick');
-  if(msp && msp.parentNode) msp.parentNode.insertBefore(buildLauncher('mast'), msp.nextSibling);
-
   /* phone: the Review tab, between Browse and Settings, opens the same panel */
   var bar=document.getElementById('mbar');
   if(bar){
@@ -1220,8 +1280,8 @@ function boot(){
     bar.insertBefore(b, set||null);
     b.addEventListener('click',function(){ panelOpen()?closePanel():openPanel(b); });
   }
-  paintChip();
-  try{ syncRoster(function(){ paintChip(); }); }catch(e){ mark('off'); }
+  paintBadge();
+  try{ syncRoster(function(){ paintBadge(); }); }catch(e){ mark('off'); }
   /* the status-bar Review sheet drives this scheduler through window.axRv */
   window.axRv={
     current:current, nameOf:nameOf, initials:initials,
@@ -1234,8 +1294,8 @@ function boot(){
         if(out.length<6 && !out.some(function(x){ return x.id===p.id; })) out.push(p); });
       return out.slice(0,6);
     },
-    refresh:function(then){ syncRoster(function(){ syncPull(current(), function(){ paintChip(); if(then) then(); }); }); },
-    use:function(pid,then){ setActive(pid); paintChip(); syncPull(pid,function(){ paintChip(); if(then) then(); }); },
+    refresh:function(then){ syncRoster(function(){ syncPull(current(), function(){ paintBadge(); if(then) then(); }); }); },
+    use:function(pid,then){ setActive(pid); paintBadge(); syncPull(pid,function(){ paintBadge(); if(then) then(); }); },
     needsPin:function(pid){ var p=profiles().filter(function(x){ return x.id===pid; })[0]; return !!(p && p.hasPin && !p.pin); },
     tryPin:function(pid,pin,then){
       setPin(pid,pin);
@@ -1247,8 +1307,8 @@ function boot(){
     },
     start:function(){ var w=current(); if(w) startReview(w); },
     quiz:function(){ var w=current(); if(w) startQuiz(w); },
-    signOut:function(){ signOut(); paintChip(); },
-    add:function(name){ var id=addProfile(name); paintChip(); return id; },
+    signOut:function(){ signOut(); paintBadge(); },
+    add:function(name){ var id=addProfile(name); paintBadge(); return id; },
     open:function(anchor){ openPanel(anchor); }
   };
 
@@ -1256,13 +1316,13 @@ function boot(){
      never a timer: a poll that outlives the page it serves is a leak, and the
      shelf only ever changes through a click or the hash. */
   document.addEventListener('click',function(e){
-    if(e.target.closest && e.target.closest('.shelfpick')) setTimeout(paintChip,0);
+    if(e.target.closest && e.target.closest('.shelfpick')) setTimeout(paintBadge,0);
   });
-  window.addEventListener('hashchange',function(){ setTimeout(paintChip,0); });
+  window.addEventListener('hashchange',function(){ setTimeout(paintBadge,0); });
   /* shelf, Board-style only and review all re-run applyShelf, which announces itself */
-  document.addEventListener('ax-shelf',function(){ setTimeout(paintChip,0); });
+  document.addEventListener('ax-shelf',function(){ setTimeout(paintBadge,0); });
   window.addEventListener('storage',function(e){
-    if(e.key && e.key.indexOf('ax-')===0) paintChip();     /* another tab */
+    if(e.key && e.key.indexOf('ax-')===0) paintBadge();     /* another tab */
   });
 
   window.__axRev={profiles:profiles,current:current,split:split,pool:pool,
@@ -1271,7 +1331,7 @@ function boot(){
                  mergeBox:mergeBox,syncRoster:syncRoster,syncPull:syncPull,syncPush:syncPush,
                  SYNC:SYNC,setPin:setPin,pinOf:pinOf,
                  decodeCode:decodeCode,dataOf:dataOf,putData:putData,
-                 openPanel:function(){ openPanel(chip); },closePanel:closePanel,
+                 openPanel:function(){ openPanel(trigger()); },closePanel:closePanel,
                  recents:recents,signOut:signOut,mineOnly:mineOnly,setActive:setActive,
                  BOXES:BOXES};
 }

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""s148g (site layer, Jonathan 2026-10-20; claude/pending/SITE_S148G.md): writes repair/s148g/*.json from the live page.
+"""s148g (site layer, 2026-10-20; claude/pending/SITE_S148G.md): writes repair/s148g/*.json from the live page.
 
   10_bold_bl.json    bottom lines bold their key words and criteria (data/bold_bl.json; bold only: removing the new <b>
                      tags gives back each bottom line exactly), one brief-scoped replace per brief
@@ -20,14 +20,14 @@ from pagelib import read_page, briefs  # noqa: E402
 import blbold  # noqa: E402
 import w5split  # noqa: E402
 
-NOTE = 's148g (site layer, Jonathan 2026-10-20)'
+NOTE = 's148g (site layer, 2026-10-20)'
 
 # ---- page script patches: (find, with, why); each find occurs exactly once in the live page
 PATCHES = [
     # 1. mcq(): the choice's reason, from the item's data-key-why / data-d1-why / data-d2-why, inside its button
     ("        b.appendChild(document.createTextNode(optionDefs[oi].label));\n        o.appendChild(b);",
      "        b.appendChild(document.createTextNode(optionDefs[oi].label));\n"
-     "        /* s148g: the choice's one-line reason, shown under it once the answer is revealed (Jonathan 2026-10-20) */\n"
+     "        /* s148g: the choice's one-line reason, shown under it once the answer is revealed (2026-10-20) */\n"
      "        var rsn=norm(li.getAttribute(['data-key-why','data-d1-why','data-d2-why'][oi])||'');\n"
      "        if(rsn){ var rs=document.createElement('span'); rs.className='qx-rsn'; rs.textContent=rsn; b.appendChild(rs); box.classList.add('qx-hr'); }\n"
      "        o.appendChild(b);",
@@ -72,7 +72,7 @@ PATCHES = [
      "          r.querySelector('.qx-rb').appendChild(ch);\n"
      "        }",
      'Review: the choices with their reasons'),
-    # 4. the linked-brief preview: Open brief moves to the card's top row (Jonathan 2026-10-20)
+    # 4. the linked-brief preview: Open brief moves to the card's top row (2026-10-20)
     ("    pv.innerHTML = '<span class=\"qx-pk\">Linked brief</span><span class=\"qx-pt\"></span>' + (q ? '<span class=\"qx-pq\"></span>' : '') +\n"
      "      '<button type=\"button\" class=\"qx-po\">Open brief</button>';",
      "    pv.innerHTML = '<span class=\"qx-ph\"><span class=\"qx-pk\">Linked brief</span><button type=\"button\" class=\"qx-po\">Open brief</button></span>' +\n"

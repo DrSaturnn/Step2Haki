@@ -1,0 +1,39 @@
+{
+  "_doc": "s170 pilot: TEXTBOOK_STYLE approved rows applied as written (C6 heading rename applied). Line prefixes: '# ' block heading, '> ' arrow line (the page arrow is prepended), else a plain line. Inline HTML allowed. Hovers keyed by id: title and lines; drop_kicker removes a kicker naming a source (C7).",
+  "hovers": {
+    "pcssri-pop-1": {"row": "T1", "title": "SSRI effects by serotonin (5-HT) receptor", "lines": ["5-HT1: antidepressant, anxiolytic effect", "5-HT2: anxiety, insomnia, sexual dysfunction", "5-HT3: nausea, headache", "Dopamine, norepinephrine reuptake: little effect"]},
+    "pcssri-pop-3": {"row": "T3", "title": "Other common adverse effects (sertraline)", "drop_kicker": true, "lines": ["Diarrhea, tremor, dyspepsia, ↓ appetite, sweating"]},
+    "pcssri-pop-4": {"row": "T4", "title": "SSRI sexual dysfunction", "lines": ["In practice: sexual dysfunction in more than half of patients", "Most common type: difficulty reaching orgasm"]},
+    "pcssri-pop-5": {"row": "T5", "title": "Drug causes of SIADH", "lines": ["Mnemonic: <b>C</b>an't <b>C</b>oncentrate <b>S</b>erum <b>N</b>a⁺", "<b>C</b>arbamazepine, <b>C</b>yclophosphamide, <b>S</b>SRIs, <b>N</b>onsteroidal anti-inflammatory drugs (NSAIDs)"]},
+    "pcssri-pop-6": {"row": "T6, P20", "title": "Citalopram QT precautions", "drop_kicker": true, "lines": ["Avoid in: congenital long QT syndrome, bradycardia, hypokalemia, hypomagnesemia, uncompensated heart failure", "Avoid with: other QT-prolonging drugs", "Monitor: potassium, magnesium in patients at risk of low levels"]},
+    "pcssri-pop-7": {"row": "T7, P17", "title": "Late-pregnancy exposure", "lines": ["# Late-pregnancy SSRI exposure", "> ↑ risk of persistent pulmonary hypertension of the newborn", "# Late third-trimester exposure", "> some newborns need prolonged hospitalization, respiratory support, tube feeding"]},
+    "pcssri-pop-8": {"row": "T8, P21", "title": "Adequate trial", "drop_kicker": true, "lines": ["Full dose: 6 weeks before considering a change"]},
+    "pcssri-pop-9": {"row": "T9, P22", "title": "Mechanism of SSRI-associated bleeding", "lines": ["SSRI → ↓ platelet serotonin uptake", "Platelets need serotonin for hemostasis"]},
+    "pctca-pop-1": {"row": "T10", "title": "Tertiary and secondary amines", "lines": ["Tertiary amines: more serotonin reuptake blockade; more anticholinergic, more sedating", "Secondary amines: more norepinephrine reuptake blockade; less anticholinergic, less sedating"]},
+    "pctca-pop-2": {"row": "T11, P23", "title": "Similarity to class IA antiarrhythmics", "lines": ["Na⁺ channel blockade: similar to class IA antiarrhythmics such as quinidine"]},
+    "pctca-pop-3": {"row": "T12, P24", "title": "Line of therapy for pain and headache", "lines": ["Neuropathic pain: first-line TCA or gabapentinoid", "Migraine prophylaxis: second-line TCA", "Chronic tension headache: first-line amitriptyline for prevention", "TCAs: also used for diarrhea-predominant irritable bowel syndrome, fibromyalgia"]},
+    "pctca-pop-4": {"row": "T13", "title": "Doxepin for insomnia", "drop_kicker": true, "lines": ["Low-dose doxepin <span class=\"pc-tn\">Silenor</span>: approved for sleep-maintenance insomnia"]},
+    "pctca-pop-6": {"row": "T15, P25", "title": "Seizure risk", "drop_kicker": true, "lines": ["Clomipramine: seizure is the most significant risk"]}
+  },
+  "keypoints": {
+    "pc-snri": {"rows": "P1 to P3", "replace": 3, "lines": [
+      "<b>Serotonin-norepinephrine reuptake inhibitors</b> (SNRIs): serotonin and norepinephrine reuptake blockade → <b>dose-dependent ↑ blood pressure</b>",
+      "<b>Venlafaxine</b>: typically avoided in hypertension",
+      "# SNRI discontinuation syndrome",
+      "Onset: within days of an <b>abrupt stop</b>",
+      "Highest risk: <b>venlafaxine</b> (short half-life)",
+      "Symptoms: <b>flu-like illness</b>; no seizures",
+      "Prevention: <b>slow taper</b>",
+      "<b>Selective serotonin reuptake inhibitors</b> (SSRIs), SNRIs: first line for <b>generalized anxiety disorder</b>, <b>panic disorder</b>, <b>social anxiety disorder</b>, <b>posttraumatic stress disorder</b>",
+      "<b>Duloxetine</b>: also used for <b>diabetic neuropathy</b>, <b>fibromyalgia</b>"]},
+    "pc-antidep": {"rows": "P7 to P9", "replace": 3, "lines": [
+      "# Bupropion",
+      "Adverse effect: ↓ <b>seizure threshold</b>",
+      "Avoid in: <b>seizure disorder</b>, <b>bulimia nervosa</b>, <b>anorexia nervosa</b>",
+      "Avoid during: abrupt withdrawal from alcohol, benzodiazepines, barbiturates, antiepileptics",
+      "<b>Trazodone</b>: <b>alpha-1</b> blockade → <b>priapism</b>, <b>orthostatic hypotension</b>",
+      "Erection lasting over <b>4 hours</b>: urologic emergency",
+      "<b>Mirtazapine</b>: sedation, ↑ <b>appetite</b>, <b>weight gain</b>",
+      "Antidepressants without sexual dysfunction: <b>bupropion</b>, <b>mirtazapine</b>"]}
+  }
+}

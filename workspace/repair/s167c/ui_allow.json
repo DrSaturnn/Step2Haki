@@ -1,0 +1,398 @@
+[
+{
+"sel": "#nav .navsub.aq",
+"prop": "(count)"
+},
+{
+"sel": "#nav a.aq",
+"prop": "(count)"
+},
+{
+"sel": "#nav a.bs",
+"prop": "(count)"
+},
+{
+"sel": ".aqband",
+"prop": "(count)"
+},
+{
+"sel": ".aqband .lbl",
+"prop": "(count)"
+},
+{
+"sel": ".aqband .n",
+"prop": "(count)"
+},
+{
+"sel": ".brief.bs > h4::after",
+"prop": "background-image"
+},
+{
+"sel": ".brief.bs > h4::after",
+"prop": "border-bottom-left-radius"
+},
+{
+"sel": ".brief.bs > h4::after",
+"prop": "border-bottom-right-radius"
+},
+{
+"sel": ".brief.bs > h4::after",
+"prop": "border-top-left-radius"
+},
+{
+"sel": ".brief.bs > h4::after",
+"prop": "border-top-right-radius"
+},
+{
+"sel": ".brief.bs > h4::after",
+"prop": "box-shadow"
+},
+{
+"sel": ".brief.bs > h4::after",
+"prop": "color"
+},
+{
+"sel": ".brief.bs > h4::after",
+"prop": "content"
+},
+{
+"sel": ".brief.bs > h4::after",
+"prop": "display"
+},
+{
+"sel": ".brief.bs > h4::after",
+"prop": "font-size"
+},
+{
+"sel": ".brief.bs > h4::after",
+"prop": "letter-spacing"
+},
+{
+"sel": ".brief.bs > h4::after",
+"prop": "margin-left"
+},
+{
+"sel": ".brief.bs > h4::after",
+"prop": "padding-bottom"
+},
+{
+"sel": ".brief.bs > h4::after",
+"prop": "padding-left"
+},
+{
+"sel": ".brief.bs > h4::after",
+"prop": "padding-right"
+},
+{
+"sel": ".brief.bs > h4::after",
+"prop": "padding-top"
+},
+{
+"sel": ".brief.sp .sp-pop.sp-a",
+"prop": "(count)"
+},
+{
+"sel": ".brief.sp .sp-pop.sp-a:hover",
+"prop": "(count)"
+},
+{
+"sel": ".brief.sp .sp-vl",
+"prop": "(count)"
+},
+{
+"sel": ".brief.sp .sp-vl .sp-ct",
+"prop": "(count)"
+},
+{
+"sel": ".brief.sp .sp-vl .sp-ct::after",
+"prop": "(count)"
+},
+{
+"sel": ".brief.sp .sp-vl.sp-in",
+"prop": "(count)"
+},
+{
+"sel": ".brief.sp .sp-vl.sp-in::after",
+"prop": "(count)"
+},
+{
+"sel": ".brief.sp .sp-vl.sp-in::before",
+"prop": "(count)"
+},
+{
+"sel": ".brief[data-src=\"aquifer\"] > h4::after",
+"prop": "background-image"
+},
+{
+"sel": ".brief[data-src=\"aquifer\"] > h4::after",
+"prop": "border-bottom-left-radius"
+},
+{
+"sel": ".brief[data-src=\"aquifer\"] > h4::after",
+"prop": "border-bottom-right-radius"
+},
+{
+"sel": ".brief[data-src=\"aquifer\"] > h4::after",
+"prop": "border-top-left-radius"
+},
+{
+"sel": ".brief[data-src=\"aquifer\"] > h4::after",
+"prop": "border-top-right-radius"
+},
+{
+"sel": ".brief[data-src=\"aquifer\"] > h4::after",
+"prop": "box-shadow"
+},
+{
+"sel": ".brief[data-src=\"aquifer\"] > h4::after",
+"prop": "color"
+},
+{
+"sel": ".brief[data-src=\"aquifer\"] > h4::after",
+"prop": "content"
+},
+{
+"sel": ".brief[data-src=\"aquifer\"] > h4::after",
+"prop": "display"
+},
+{
+"sel": ".brief[data-src=\"aquifer\"] > h4::after",
+"prop": "font-size"
+},
+{
+"sel": ".brief[data-src=\"aquifer\"] > h4::after",
+"prop": "letter-spacing"
+},
+{
+"sel": ".brief[data-src=\"aquifer\"] > h4::after",
+"prop": "margin-left"
+},
+{
+"sel": ".brief[data-src=\"aquifer\"] > h4::after",
+"prop": "padding-bottom"
+},
+{
+"sel": ".brief[data-src=\"aquifer\"] > h4::after",
+"prop": "padding-left"
+},
+{
+"sel": ".brief[data-src=\"aquifer\"] > h4::after",
+"prop": "padding-right"
+},
+{
+"sel": ".brief[data-src=\"aquifer\"] > h4::after",
+"prop": "padding-top"
+},
+{
+"sel": ".bsband",
+"prop": "(count)"
+},
+{
+"sel": ".bsband .lbl",
+"prop": "(count)"
+},
+{
+"sel": ".bsband .n",
+"prop": "(count)"
+},
+{
+"sel": ".bsband .t",
+"prop": "(count)"
+},
+{
+"sel": ".lcw .wax",
+"prop": "(count)"
+},
+{
+"sel": ".lcw .wax .rax",
+"prop": "(count)"
+},
+{
+"sel": ":is(.sp-pop-b, .sp-card) .sp-k",
+"prop": "(count)"
+},
+{
+"sel": ":is(.sp-pop-b, .sp-card) .sp-k.dup",
+"prop": "(count)"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "(count)"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "(element)"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "@box"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "background-color"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "block-size"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "border-bottom-left-radius"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "border-bottom-right-radius"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "border-end-end-radius"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "border-end-start-radius"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "border-start-end-radius"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "border-start-start-radius"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "border-top-left-radius"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "border-top-right-radius"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "bottom"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "box-shadow"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "display"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "height"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "inline-size"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "inset-block-end"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "inset-block-start"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "inset-inline-end"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "inset-inline-start"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "left"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "margin-block-end"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "margin-block-start"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "margin-bottom"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "margin-top"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "padding-block-end"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "padding-block-start"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "padding-bottom"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "padding-inline-end"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "padding-inline-start"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "padding-left"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "padding-right"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "padding-top"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "perspective-origin"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "position"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "right"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "top"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "transform-origin"
+},
+{
+"sel": "[data-theme=\"dark\"] .axm-flat",
+"prop": "width"
+},
+{
+"sel": "body .aqband.axm-flat",
+"prop": "(count)"
+},
+{
+"sel": "body .axm-flat #modes .flatt .knob",
+"prop": "(element)"
+},
+{
+"sel": "body .axm-study #modes .study .knob",
+"prop": "(element)"
+},
+{
+"sel": "body .bsband.axm-flat",
+"prop": "(count)"
+}
+]

@@ -8,8 +8,13 @@ var CH = [
   ['layout', 'Layout', [['solo', 'One brief per screen'], ['long', 'One long page']], get('layout', 'solo')],
   ['bars', 'Bars while reading', [['stay', 'Always shown'], ['hide', 'Hide while scrolling down']], get('bars', 'stay')],
   ['rail', 'Side rail', [['off', 'Off'], ['on', 'Numbered rail, drag to scrub']], get('rail', 'off')],
-  ['dx', 'Differential', [['now', 'As now'], ['a', 'A: tighter cards'], ['b', 'B: one card, hairline rows']], get('dx', 'now')]
+  ['dx', 'Differential', [['now', 'As now'], ['a', 'A: tighter cards'], ['b', 'B: one card, hairline rows']], get('dx', 'now')],
+  ['home', 'Home (r4)', [['tiles', 'Tiles'], ['list', 'List (r3)']], get('home', 'tiles')],
+  ['tabs', 'Tab bar (r4)', [['float', 'Floating capsule'], ['dock', 'Docked (r3)']], get('tabs', 'float')],
+  ['surf', 'Surface (r4, light only)', [['now', 'Sculpted (now)'], ['axbx', 'AxBx deck']], get('surf', 'now')]
 ];
+if(!H.getAttribute('data-ph-home')) H.setAttribute('data-ph-home', 'tiles');
+if(!H.getAttribute('data-ph-tabs')) H.setAttribute('data-ph-tabs', 'float');
 function mount(){
   var s = document.getElementById('axdisp'); if(!s || s.querySelector('.php')) return !!s;
   var box = document.createElement('div'); box.className = 'php';
@@ -31,6 +36,65 @@ function mount(){
   return true;
 }
 var n = 0; (function w(){ if(!mount() && ++n < 40) setTimeout(w, 150); })();
+
+/* r4 Home as tiles (after the iOS Fitness Summary and Sharing screens): a large title with the profile button, a Review
+   card, the Presentations groups as a row of cards, the systems as a two-column grid. Every tile is built from the
+   page's own section cards and opens what they open; nothing is stored. */
+(function(){
+  if(get('home', 'tiles') !== 'tiles' || get('layout', 'solo') === 'long') return;
+  var mw = document.querySelector('main .masthead .wrap'); if(!mw) return;
+  var box = document.createElement('div'); box.id = 'phhome'; mw.insertBefore(box, mw.firstChild);
+  var CHEV = '<i class="hh-go" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></i>';
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]; }); }
+  function off(e){ return e.style.display === 'none'; }
+  function draw(){
+    var meta = [].map.call(document.querySelectorAll('.masthead .meta > span'), function(s){ return s.textContent.trim(); });
+    var shelves = [].map.call(document.querySelectorAll('.masthead .shelfpick [data-shelf]'), function(b){
+      return {id: b.dataset.shelf, on: b.classList.contains('on'), soon: b.classList.contains('soon'), t: (b.firstChild && b.firstChild.textContent || b.textContent).trim()}; });
+    var cur = shelves.filter(function(s){ return s.on; })[0] || {t: ''};
+    var due = 0, me = '';
+    try{ due = window.axRv.due() || 0; var id = window.axRv.current(); if(id) me = window.axRv.initials(window.axRv.nameOf(id)) || ''; }catch(e){}
+    var secs = [].filter.call(document.querySelectorAll('main .wrap > .sectwrap'), function(w){ return !off(w); }).map(function(w){
+      var h = w.querySelector('h3.system'), n = h && h.querySelector('.n');
+      var t = h ? [].map.call(h.childNodes, function(c){ return c === n ? '' : c.textContent; }).join('').trim() : '';
+      return {el: w, id: h ? h.id : '', t: t, n: n ? parseInt(n.textContent, 10) || 0 : null, num: (w.querySelector('.tab b') || {}).textContent || '', code: (w.querySelector('.tab i') || {}).textContent || ''}; });
+    var groups = [].filter.call(document.querySelectorAll('main .wrap > .psub'), function(p){ return !off(p); }).map(function(p){
+      return {el: p, t: (p.querySelector('.t') || p).textContent.trim(), n: (p.querySelector('.n') || {}).textContent || ''}; });
+    var pres = secs.filter(function(s){ return s.id === 'presentations'; })[0];
+    var guide = secs.filter(function(s){ return s.n === null; });
+    var sys = secs.filter(function(s){ return s !== pres && s.n !== null; });
+    var els = [];
+    function ref(el){ els.push(el); return ' data-i="' + (els.length - 1) + '"'; }
+    var h = '<div class="hh-top"><h1>Step2Haki</h1><button type="button" class="hh-me" data-do="review" aria-label="Review and profiles">' +
+      (me ? esc(me) : '<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8.2" r="4.2"/><path d="M3.8 20.5c.7-4.2 4.1-6.6 8.2-6.6s7.500 2.400 8.2 6.600z"/></svg>') + '</button></div>' +
+      '<div class="hh-sub"><span>' + esc(meta.slice(0, 2).join(' · ')) + '</span><label class="hh-shelf"><span>' + esc(cur.t) + '</span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 9.500l5-5 5 5M7 14.500l5 5 5-5"/></svg>' +
+      '<select aria-label="Shelf">' + shelves.map(function(s){ return '<option value="' + s.id + '"' + (s.on ? ' selected' : '') + (s.soon ? ' disabled' : '') + '>' + esc(s.t) + (s.soon ? ' (soon)' : '') + '</option>'; }).join('') + '</select></label></div>' +
+      '<button type="button" class="hh-card hh-hero" data-do="review"><span class="hh-ct">Review' + CHEV + '</span><span class="hh-hr"><span class="hh-big"><b>' + due + '</b><em>due</em></span>' +
+      '<span class="hh-ms"><span><i>Shelf</i><b>' + esc(cur.t) + '</b></span>' + meta.slice(0, 2).map(function(m){ var p = /^(\S+)\s+(.*)$/.exec(m) || [0, m, '']; return '<span><i>' + esc(p[2].charAt(0).toUpperCase() + p[2].slice(1)) + '</i><b>' + esc(p[1]) + '</b></span>'; }).join('') + '</span></span></button>';
+    if(pres && groups.length){
+      h += '<div class="hh-h"><h2>Presentations</h2><span>' + pres.n + ' topics, by complaint</span></div><div class="hh-row">' + groups.map(function(g){
+        return '<button type="button" class="hh-card hh-g"' + ref(g.el) + '><span class="hh-ct">' + esc(g.t) + '</span><span class="hh-n"><b>' + esc(g.n) + '</b><em>' + (g.n === '1' ? 'topic' : 'topics') + '</em></span></button>'; }).join('') + '</div>';
+    }
+    h += '<div class="hh-h"><h2>Systems</h2><span>' + sys.length + ' in ' + esc(cur.t) + '</span></div><div class="hh-grid">' + sys.map(function(s){
+      return '<button type="button" class="hh-card hh-t"' + ref(s.el) + '><span class="hh-ct">' + esc(s.t) + CHEV + '</span><span class="hh-n"><b>' + s.n + '</b><em>' + (s.n === 1 ? 'topic' : 'topics') + '</em></span><span class="hh-f">' + esc(s.code || s.num) + '</span></button>'; }).join('') + '</div>';
+    if(guide.length){
+      h += '<div class="hh-h"><h2>Guides</h2></div>' + guide.map(function(s){ return '<button type="button" class="hh-card hh-l"' + ref(s.el) + '><span class="hh-ct">' + esc(s.t) + CHEV + '</span></button>'; }).join('');
+    }
+    box.innerHTML = h; box._els = els;
+  }
+  box.addEventListener('click', function(e){
+    var b = e.target.closest('button'); if(!b) return;
+    if(b.dataset['do'] === 'review'){ var r = document.querySelector('#mbar [data-act="review"]'); if(r) r.click(); return; }
+    var el = box._els && box._els[+b.dataset.i]; if(el) el.dispatchEvent(new MouseEvent('click', {bubbles: true, cancelable: true}));
+  });
+  box.addEventListener('change', function(e){
+    if(e.target.tagName !== 'SELECT') return;
+    var b = document.querySelector('.masthead .shelfpick [data-shelf="' + e.target.value + '"]'); if(b) b.click();
+    setTimeout(draw, 60);
+  });
+  draw(); setTimeout(draw, 1200);
+  document.addEventListener('ax-shelf', function(){ setTimeout(draw, 30); });
+})();
 
 /* numbered side rail: shows while scrolling, fades; drag scrubs through the brief; a tap snaps to the nearest stop */
 if(get('rail', 'off') !== 'on') return;

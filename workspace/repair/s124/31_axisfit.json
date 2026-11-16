@@ -3,7 +3,7 @@
   {
    "op": "replace_global",
    "find": "</head>",
-   "with": "<style id=\"ax-s124\">\n/* ============ Timeline axis labels (s124, Jonathan 2026-10-09: \"fix timing charts\") ============\n   Close ticks made their labels run into each other (eg \"Last drink\", \"6 h\", \"12 h\" on a phone). axisfit.js drops a\n   colliding label to a second line (.lo) and, if neither line has room, hides it (.gone; its tick stays). */\n.rax.fit2{height:28px}\n.rax span.lo{top:13px}\n.rax span.gone{visibility:hidden}\n/* the label row sat 3 px under the rail, exactly where the ticks end, so tick lines touched the labels: leave a 5 px gap */\n.lcw .rail + .rax{margin-top:1px}\n</style>\n</head>",
+   "with": "<style id=\"ax-s124\">\n/* ============ Timeline axis labels (s124, 2026-10-09) ============\n   Close ticks made their labels run into each other (eg \"Last drink\", \"6 h\", \"12 h\" on a phone). axisfit.js drops a\n   colliding label to a second line (.lo) and, if neither line has room, hides it (.gone; its tick stays). */\n.rax.fit2{height:28px}\n.rax span.lo{top:13px}\n.rax span.gone{visibility:hidden}\n/* the label row sat 3 px under the rail, exactly where the ticks end, so tick lines touched the labels: leave a 5 px gap */\n.lcw .rail + .rax{margin-top:1px}\n</style>\n</head>",
    "note": "timeline axis label styles"
   },
   {

@@ -1,7 +1,8 @@
 """docs_path.py: where the internal documents live (the private repo DrSaturnn/Step2Haki-private, folder docs/).
 
-DECISIONS_DIGEST, STANDING_DIRECTIONS, BATCH_RUNBOOK, STEP2HAKI_HANDOFF, RESUME, OPEN_WORK and ui/ (the UI refactor
-plan, architecture and fit-to-screen notes) are kept out of the public repo. The private clone sits beside the public
+DECISIONS_DIGEST, STANDING_DIRECTIONS, BATCH_RUNBOOK, STEP2HAKI_HANDOFF, RESUME, OPEN_WORK, ui/ (the UI refactor
+plan, architecture and fit-to-screen notes) and batches/<batch>/ (each batch's plan and record) are kept out of the
+public repo. The private clone sits beside the public
 clone (cloud: /home/claude/step2haki-private; Mac: ~/step2haki-private); S2H_PRIVATE overrides.
 
   from docs_path import doc        doc('DECISIONS_DIGEST.md') -> absolute path
@@ -30,6 +31,20 @@ def docs_dir():
 
 def doc(name):
     return os.path.join(docs_dir(), name)
+
+
+def batch_dir(batch):
+    """the folder of a batch's plan and record: docs/batches/<batch>/ in the private repo"""
+    return os.path.join(docs_dir(), 'batches', batch)
+
+
+def batch_file(batch):
+    """a batch's record: S<BATCH>.md or PLAN.md in its private folder; None when the batch has neither"""
+    for name in (batch.upper() + '.md', 'PLAN.md'):
+        p = os.path.join(batch_dir(batch), name)
+        if os.path.exists(p):
+            return p
+    return None
 
 
 if __name__ == '__main__':

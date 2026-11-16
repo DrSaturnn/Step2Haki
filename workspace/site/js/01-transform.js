@@ -13,34 +13,30 @@ var VERIFY = /jsdom/i.test(navigator.userAgent) || /[?&]axcheck\b/.test(location
 var BEFORE = (VERIFY && document.body) ? norm(document.body.innerText) : "";
 function norm(s){ return (s||"").replace(/\s+/g," ").trim(); }
 
-/* ---------- 0. sidebar mode switches ---------- */
+/* ---------- 0. sidebar mode switches ----------
+   #modes holds the reader's display controls; each carries data-g (its group in the display sheet: layout, appearance,
+   study) and data-o (its order in the group). Recall mode is a switch; Surface (Sculpted, Flat) is a choice row. */
 function switches(){
   var nav=document.getElementById('nav'); if(!nav) return;
   var brand=nav.querySelector('.brand');
   var box=document.createElement('div'); box.id='modes';
   box.innerHTML =
-    '<button class="bsonly" type="button" aria-pressed="false" title="Show only board-style briefs"><span class="track"><span class="knob"></span></span><span class="nm">BOARD-STYLE ONLY</span></button>'+
-    '<button class="study" type="button" aria-pressed="false"><span class="track"><span class="knob"></span></span><span class="nm">RECALL MODE</span></button>'+
-    '<button class="flatt" type="button" aria-pressed="false"><span class="track"><span class="knob"></span></span><span class="nm">FLAT THEME</span></button>';
-  brand ? brand.after(box) : nav.prepend(box);
+    '<button class="study" type="button" aria-pressed="false" data-g="study" data-o="1"><span class="track"><span class="knob"></span></span><span class="nm">Recall mode</span></button>';
   var b=document.body;
+  var surf=AX.ui.seg('Surface',[['0','Sculpted'],['1','Flat']],'0',function(v){
+    b.classList.toggle('flat',v==='1'); AX.settings.set('flat',v==='1'?'1':'0'); sync();
+  });
+  surf.classList.add('surf'); surf.dataset.g='appearance'; surf.dataset.o='2';
+  box.appendChild(surf);
+  brand ? brand.after(box) : nav.prepend(box);
   function sync(){
-    box.querySelector('.bsonly').setAttribute('aria-pressed',boardOnly?'true':'false');
     box.querySelector('.study').setAttribute('aria-pressed',b.classList.contains('study')?'true':'false');
-    box.querySelector('.flatt').setAttribute('aria-pressed',b.classList.contains('flat')?'true':'false');
+    surf.set(b.classList.contains('flat')?'1':'0');
   }
   if(AX.settings.get('study')==='1') b.classList.add('study');
-  if(AX.settings.get('flat')==='1') b.classList.add('flat');   // sculpted is the default; flat only when the reader turned it on
-  /* Board-style only joins the shelf rule in shelfEligible(); it lasts for this visit only (not saved). */
-  box.querySelector('.bsonly').addEventListener('click',function(){
-    boardOnly=!boardOnly;
-    sync(); keepPlace(function(){ applyShelf(shelf); });
-  });
+  if(AX.settings.get('flat')==='1') b.classList.add('flat');   // sculpted is the default; flat only when the reader chose it
   box.querySelector('.study').addEventListener('click',function(){
     b.classList.toggle('study'); AX.settings.set('study',b.classList.contains('study')?'1':'0'); sync();
-  });
-  box.querySelector('.flatt').addEventListener('click',function(){
-    b.classList.toggle('flat'); AX.settings.set('flat',b.classList.contains('flat')?'1':'0'); sync();
   });
   sync();
   if(!window.__axModeObserver){
@@ -65,7 +61,8 @@ function axmCarriers(){
   (function walk(el){
     for(var c=el.firstElementChild;c;c=c.nextElementSibling){
       if(c.tagName==='SCRIPT'||c.tagName==='STYLE') continue;
-      if(c.classList.contains('brief')||!c.querySelector('.brief')) out.push(c); else walk(c);
+      if(c.classList.contains('brief')||!c.querySelector('.brief')) out.push(c);
+      else { c.classList.remove('axm-flat','axm-study'); walk(c); }   /* an element that now holds a brief is no longer a carrier */
     }
   })(document.body);
   return out;
@@ -132,19 +129,11 @@ var reviewSet=null;   /* fixed brief IDs while an active review is running */
 /* Search no longer filters the page: it lists results in the sidebar (see 0c).
    searchTerm stays empty so applyShelf's composition is unchanged. */
 var searchTerm='';
-var boardOnly=false;
-/* BOARD-STYLE ONLY starts off on every visit: a remembered switch could hide whole shelves on one device. */
-try{ localStorage.removeItem('ax-bsonly'); }catch(e){}
+try{ localStorage.removeItem('ax-bsonly'); }catch(e){}   /* s167c: the board-style switch is retired; clears an old saved value */
 
-/* Board-style = the set the title badge calls Board (or UWorld): .brief.bs
-   without an Aquifer source, the same split the masthead counts use. */
-function isBoardStyle(b){
-  return b.classList.contains('bs') && b.getAttribute('data-src')!=='aquifer';
-}
 function shelfEligible(b,s){
   if(!b || !b.id) return false;
   if(reviewSet) return !!reviewSet[b.id];
-  if(boardOnly && !isBoardStyle(b)) return false;
   if(s==='step2') return true;
   return (b.getAttribute('data-shelf')||'').split(/\s+/).indexOf(s)>-1;
 }
@@ -253,53 +242,11 @@ function applyShelf(s){
     var swd=(n||(total===0&&!sw.querySelector('h3.system .n')))?'':'none'; if(sw.style.display!==swd) sw.style.display=swd; if(sw.dataset.count!==String(n)) sw.dataset.count=n;
     if(total>0&&n) liveSystems++;
   });
-  document.querySelectorAll('.bsband').forEach(function(bb){
-    var n=0,el=bb.nextElementSibling,aq=bb.classList.contains('aqband');
-    while(el&&el.classList.contains('brief')){
-      if((aq?el.dataset.src==='aquifer':el.classList.contains('bs'))&&el.style.display!=='none')n++;
-      el=el.nextElementSibling;
-    }
-    bb.style.display=n?'':'none';
-    var c=bb.querySelector('.n'); if(c)c.textContent=n+(n===1?' brief':' briefs');
-  });
-  document.querySelectorAll('#navlinks a[href^="#"]').forEach(function(a){
-    var t=document.getElementById(a.getAttribute('href').slice(1));
-    var eligible=!!(t&&(!t.classList.contains('brief')||t.style.display!=='none'));
-    if(a.dataset.eligible!==(eligible?'1':'0')) a.dataset.eligible=eligible?'1':'0';
-    if(a.style.display!==(eligible?'':'none')) a.style.display=eligible?'':'none';
-  });
-  /* Each system group shows how many of its links are live under the current
-     shelf, Board-style only and review filters, so the index never advertises
-     briefs it is hiding. */
-  var navHost=document.getElementById('navlinks');
-  if(navHost){
-    var group=null,live=0,sub=null,subLive=0;
-    function closeSub(){ if(sub)sub.style.display=subLive?'':'none'; sub=null; subLive=0; }
-    function closeGroup(){
-      if(!group) return;
-      group.style.display=live?'':'none';
-      var gc=group.querySelector('.count'); if(gc) gc.textContent=live;
-    }
-    Array.prototype.slice.call(navHost.children).forEach(function(el){
-      if(el.classList.contains('sect')){
-        closeSub(); closeGroup();
-        group=el;live=0;
-      }else if(el.tagName==='A'&&el.style.display!=='none'){live++;subLive++;}
-      else if(el.classList.contains('navsub')){ closeSub(); sub=el; }
-    });
-    closeSub(); closeGroup();
-  }
   var meta=document.querySelector('.masthead .meta');
   if(meta){
-    var bs=0,aq=0;
-    document.querySelectorAll('.brief').forEach(function(b){
-      if(b.style.display==='none')return;
-      if(b.dataset.src==='aquifer')aq++; else if(b.classList.contains('bs'))bs++;
-    });
-    meta.innerHTML='<span><b>'+(visible-bs-aq)+'</b> topics</span>'+
-      '<span><b>'+bs+'</b> board-style</span>'+(aq?'<span><b>'+aq+'</b> Aquifer</span>':'')+'<span><b>'+liveSystems+'</b> systems</span>'+
+    meta.innerHTML='<span><b>'+visible+'</b> topics</span><span><b>'+liveSystems+'</b> systems</span>'+
       '<span><b>10</b> named trap species</span><span>Viewing <b>'+
-      (SHELVES.filter(function(x){return x[0]===s;})[0]||['','Step 2'])[1]+'</b>'+(boardOnly&&!reviewSet?' &middot; board-style only':'')+'</span>';
+      (SHELVES.filter(function(x){return x[0]===s;})[0]||['','Step 2'])[1]+'</b>'+'</span>';
   }
   document.querySelectorAll('.shelfpick button').forEach(function(b){b.classList.toggle('on',b.dataset.shelf===s);});
   document.querySelectorAll('.shelfsel').forEach(function(sel){if(sel.value!==s)sel.value=s;});
@@ -1010,7 +957,7 @@ function sxRender(){
     stat.textContent='Loading search\u2026'; list.innerHTML=''; foot.innerHTML='';
     res.hidden=false; nav.classList.add('sxon'); return;
   }
-  var scope=sxShelfName()+(boardOnly && !reviewSet ? ', board-style only' : '');
+  var scope=sxShelfName();
   stat.innerHTML=hits.length ? ('<b>'+hits.length+'</b> '+(hits.length===1?'brief':'briefs')+' in '+sxEsc(scope))
                              : ('No matches in '+sxEsc(scope)+'.');
   var h='';
@@ -1345,7 +1292,15 @@ function masks(R){ var D=R||document;
   if(!window.__axMaskClick){
     document.addEventListener('click',function(e){
       if(!document.body.classList.contains('study')) return;
-      var mask=e.target.closest?e.target.closest('.mask'):null; if(!mask) return;
+      var mask=e.target.closest?e.target.closest('.mask'):null;
+      if(!mask && e.target.querySelectorAll){
+        /* a hidden answer's region is inert, so a click on it lands on the element around the mask (a workup test cell) */
+        Array.prototype.some.call(e.target.querySelectorAll(':scope > .mask'),function(m){
+          return Array.prototype.some.call(m.getClientRects(),function(r){
+            if(e.clientX>=r.left&&e.clientX<=r.right&&e.clientY>=r.top&&e.clientY<=r.bottom){ mask=m; return true; } return false; });
+        });
+      }
+      if(!mask) return;
       var btn=e.target.closest('.mask-toggle');
       if(!btn && e.target.closest('a,button,input,select,textarea,summary')) return;
       mask.dataset.revealed=mask.dataset.revealed==='1'?'0':'1'; syncMaskRegions(mask.parentNode);
@@ -1692,7 +1647,7 @@ function transformBrief(b){ columnize(b); mnemonics(b); tables(b); masks(b); mcq
   switches(); mobileNav(); sections(); columnize(); mnemonics(); tables(); masks(); mcq(); accessibilityEnhance(); unavailableInline(); xrefs(); scalepeeks(); figures(); wire(); shelfInit();
   AX.brief.each('transform',transformBrief);
   var AFTER=VERIFY?norm(document.body.innerText):"";
-  var addedUI=/STUDY MODE|RECALL MODE|FLAT THEME|REVEAL|From this brief|Distractors are entities/;
+  var addedUI=/STUDY MODE|Recall mode|Surface|Sculpted|REVEAL|From this brief|Distractors are entities/;
   var a=BEFORE.split(' ').filter(Boolean).length;
   var b=AFTER.split(' ').filter(Boolean).length;
   console.log('[ax] words before',a,'after',b,'| mcq',window.__ax.made,'reveal-only',window.__ax.kept);

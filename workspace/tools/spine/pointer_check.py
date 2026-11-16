@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""pointer_check (s150c S8 audit class "pointer not actionable"; Jonathan 2026-10-24, fewer lead calls): in a running
+"""pointer_check (s150c S8 audit class "pointer not actionable"; 2026-10-24, fewer lead calls): in a running
 page, click every drawer button (.sp-drw) of the named briefs through the page script and confirm the drawer shows the
 target brief (its <h4> title); and confirm every "Pairs with" block rendered as an owner list with no unlinked rows.
 

@@ -54,7 +54,7 @@ PY = sys.executable
 # MIGRATION_CONTRACT V1 allowlist, plus Roman numerals and clock times
 ACR_OK = {'CRASH', 'ST', 'GI', 'COVID', 'SARS', 'II', 'III', 'HR', 'RR', 'BP', 'IV', 'US', 'NBME',
           'VI', 'VII', 'VIII', 'IX', 'XI', 'XII', 'AM', 'PM'}
-# the shared allowlist (Jonathan 2026-10-12): very common labs and imaging written short; everything else spelled out
+# the shared allowlist (2026-10-12): very common labs and imaging written short; everything else spelled out
 ABBREV = os.path.join(HERE, '..', '..', 'repair', 'efficiency', 'ABBREV.json')
 if os.path.exists(ABBREV):
     _ab = json.load(open(ABBREV, encoding='utf-8'))
@@ -73,8 +73,8 @@ def load_baseline():
     return out
 
 
-def sh(args, cwd=WS):
-    r = subprocess.run(args, cwd=cwd, capture_output=True, text=True)
+def sh(args, cwd=WS, env=None):
+    r = subprocess.run(args, cwd=cwd, capture_output=True, text=True, env=env)
     return r.returncode, (r.stdout + r.stderr).strip()
 
 
@@ -298,7 +298,7 @@ class Verify:
                     or text[max(0, m.start() - 1):m.start()] == '*':          # a genotype (PI*ZZ)
                 continue
             seen.add(a)
-            if re.search(r'\(%s\b|\b%s\)|, %s[;),]|\b%s\s*\(' % (a, a, a, a), everything):   # (ACR), ACR (...), (long name, ACR)
+            if re.search(r'\(%ss?\b|\b%ss?\)|, %ss?[;),]|\b%ss?\s*\(' % (a, a, a, a), everything):   # (ACR), ACR (...), (long name, ACR); plural (ACRs) too
                 continue
             words = [w for w in re.findall(r'[A-Za-z]+', everything)]
             initials = ''.join(w[0] for w in words).upper()
@@ -328,12 +328,29 @@ class Verify:
     # ---- 8c. prose (D-20261106-9, D-20261106-11): a brief with prose lint hits is not READY
     def prose(self):
         import prose_lint
-        hits = prose_lint.lint_brief(self.brief_html)
+        hits = prose_lint.lint_brief(self.brief_html, touched=True)
         if hits:
             eg = '; '.join('%s: %s' % (h['pattern'], h['text'][:50]) for h in hits[:4])
             self.F('prose', '%d prose lint hit(s) (tools/spine/prose_lint.py PAGE --brief %s): %s' % (len(hits), self.bid, eg))
         else:
             self.G('prose', 'no prose lint hits (TEXTBOOK_STYLE.md)')
+
+    # ---- 8d. meaning lock (s170 T2, TEXTBOOK_STYLE rule 7): a delta marked "meaning_lock" keeps every token of each
+    # changed line (numbers, hedges, negations, sides, names), or names where it went (carried_by, lock_ok, cut)
+    def lock(self):
+        import meaning_lock as ML
+        for p in sorted(glob.glob(os.path.join(self.d, 'delta_*.json'))):
+            d = json.load(open(p, encoding='utf-8'))
+            if not d.get('meaning_lock'):
+                continue
+            fails = ML.check_delta(d)
+            if fails:
+                eg = '; '.join('change %d %s drops %s' % (i, d['changes'][i].get('uid', ''), ', '.join('%s %s' % x for x in m))
+                               for i, m in fails[:4])
+                self.F('meaning_lock', '%d of %d change(s) in %s (tools/spine/meaning_lock.py %s): %s' % (
+                    len(fails), len(d['changes']), os.path.basename(p), os.path.relpath(p, WS), eg))
+            else:
+                self.G('meaning_lock', '%s: %d change(s) keep every token' % (os.path.basename(p), len(d['changes'])))
 
     # ---- 9. preview build and page checks
     def preview(self):
@@ -352,12 +369,13 @@ class Verify:
         P.write_page(pv, new)
         self.G('build', 'preview %+d chars' % (len(new) - len(page)))
         for name, args, okf in [
-                ('gate', [PY, 'tools/gate.py', pv], lambda rc, o: rc == 0),
+                ('gate', [PY, 'tools/gate.py', pv, '--no-doc-lint'], lambda rc, o: rc == 0),
                 ('render.js', ['node', 'tools/render.js', pv], lambda rc, o: rc == 0),
                 ('preflight', [PY, 'tools/preflight.py', pv, '--base', 'HEAD'], lambda rc, o: self.p1_ok(o, new)),
                 ('vendor_scan', [PY, 'tools/vendor_scan.py', '--page', pv], lambda rc, o: rc == 0 and ' 0 flagged' in o),
                 ('numbers', [PY, os.path.join(HERE, 'numbers.py'), pv, '--brief', self.bid], lambda rc, o: rc == 0)]:
-            rc, out = sh(args)
+            # s170: a one-brief preview has no search.json beside it; the ship and patch.py s3 gate the built page's index
+            rc, out = sh(args, env=dict(os.environ, AXBX_GATE_SKIP_INDEX='1') if name == 'gate' else None)
             if okf(rc, out):
                 self.G(name, last(out.splitlines()[0] if name in ('vendor_scan', 'numbers') else out))
             else:
@@ -396,6 +414,7 @@ class Verify:
                 self.v1()
                 self.lint()
                 self.prose()
+                self.lock()
                 if not self.fast:
                     self.preview()
         finally:
@@ -410,7 +429,7 @@ class Verify:
     # ---- 10. the whole-picture gate: mechanical checks are necessary, never sufficient
     PARTS = {'acc': ('brief', 'live', 'bank', 'facts', 'claims', 'specs'), 'read': ('brief', 'live', 'siblings', 'specs'),
              'display': ('brief', 'live', 'display', 'specs'), 'flags': ('outline', 'facts', 'live')}
-    # Jonathan 2026-10-24 (no screenshots): READY needs acc, read and flags; a display receipt counts only when it is
+    # 2026-10-24 (no screenshots): READY needs acc, read and flags; a display receipt counts only when it is
     # current (a layout or new display-pattern batch still runs the display part, and its FAIL still blocks)
     OPTIONAL = ('display',)
     PAGE = os.path.join(WS, 'index.html')
@@ -420,7 +439,7 @@ class Verify:
     def deps(self, html=None, claims=None, outline=None):
         """the dependency hashes each review part is bound to (10 hex characters each). 'live' is the brief as it
         stands on the page: any edit to the live brief, however small (an approval-gated fix between rebuilds), makes
-        every receipt of that brief stale, so it is reviewed again in R5 or R7 (Jonathan 2026-10-12)."""
+        every receipt of that brief stale, so it is reviewed again in R5 or R7 (2026-10-12)."""
         def h(b):
             return hashlib.sha1(b if isinstance(b, bytes) else b.encode('utf-8')).hexdigest()[:10]
 
@@ -448,7 +467,7 @@ class Verify:
 
     def holistic(self):
         """READY needs the current acc, read and flags receipts to say PASS on what each judged; display counts only when
-        its receipt is current (Jonathan 2026-10-24: no screenshots)"""
+        its receipt is current (2026-10-24: no screenshots)"""
         self.ready = 'no review'
         bid = getattr(self, 'bid', None)
         if not bid or not getattr(self, 'brief_html', ''):
@@ -552,7 +571,11 @@ def presentations_link(page, bid):
     if not m or 'data-entry="hub"' not in m.group(0):
         return page
     g = re.search(r'(    <div class="sect">Presentations <span class="count">)(\d+)(</span></div>\n)((?:    <a [^\n]*\n)*)', page)
-    if not g or ('href="#%s"' % bid) in g.group(4):
+    if not g:
+        return page
+    # s170: since s161c the group holds div.navsub sub-headers, so group(4) stops at the first one; look in the whole group
+    nxt = page.find('<div class="sect', g.end())
+    if ('href="#%s"' % bid) in page[g.start():nxt if nxt > 0 else len(page)]:
         return page
     h4 = re.search(r'<h4[^>]*>(.*?)</h4>', page[m.end():m.end() + 20000], re.S)
     title = re.sub(r'<[^>]+>', '', h4.group(1)).strip() if h4 else bid
@@ -593,7 +616,33 @@ def p1_residual(d, bid, old_page, new_page):
             t = txt(c.get('text', ''))
             if t and t not in nt:
                 held.update(h.lower() for h in PF.HEDGES.findall(t) if h.lower() in MODAL)
+    held.update(lock_held(d, PF))
     return sum((lost - held).values())
+
+
+def lock_held(d, PF):
+    """s170 chat 4: hedge words a content-rewrite line dropped with the meaning lock's approval. The folder's build.py
+    replays repair/migration/spine/<batch>_delta.py; in that batch's delta_<batch>.json (meaning_lock true) a change whose
+    lock_ok names the hedge word, with its lock_reason, holds the words that change lost (the per-line judgement the
+    meaning lock records, which the acc reviewer checks). Returns a Counter of held words."""
+    from collections import Counter
+    held = Counter()
+    bp = os.path.join(d, 'build.py')
+    m = re.search(r'from (s\w+)_delta import', open(bp, encoding='utf-8').read()) if os.path.exists(bp) else None
+    dp = os.path.join(d, 'delta_%s.json' % m.group(1)) if m else ''
+    if not (dp and os.path.exists(dp)):
+        return held
+    dl = json.load(open(dp, encoding='utf-8'))
+    if not dl.get('meaning_lock'):
+        return held
+    for c in dl.get('changes', []):
+        ok = {w.lower() for x in c.get('lock_ok', []) for w in re.split(r'[\s/]+', x)}
+        if not (ok and c.get('lock_reason')):
+            continue
+        lost = Counter(h.lower() for h in PF.HEDGES.findall(c.get('old', ''))) - \
+            Counter(h.lower() for h in PF.HEDGES.findall(c.get('new', '')))
+        held.update({w: n for w, n in lost.items() if w in MODAL and w in ok})
+    return held
 
 
 def spine_dirs():
@@ -641,6 +690,18 @@ def main(argv):
             shutil.rmtree(v.tmp, ignore_errors=True)
         print(v.deps_line(part))
         return 0
+    # s171b (D-20261109-4): a full run that ends READY writes a stamp of its inputs (tools/stamps.py), so ready_gate.py
+    # accepts the S8 verdict at the ship and runs verify again only when an input changed. The key is taken before and
+    # after the run; a run whose inputs moved under it writes no stamp.
+    stamp = not fast and '--mech' not in argv and '--no-stamp' not in argv   # --no-stamp: tools/test_stamps.py
+    argv = [a for a in argv if a != '--no-stamp']
+    if stamp:
+        import stamps as ST
+        try:
+            g0 = ST.verify_groups(argv[0])
+        except Exception as ex:  # noqa: BLE001  a stamp error writes no stamp; verify itself is unchanged
+            print('stamp: not written (%s: %s)' % (type(ex).__name__, str(ex)[:160]))
+            stamp = False
     v = Verify(argv[0], fast, keep).run()
     for line in v.ok + v.base + v.warn + v.fix:
         print(line)
@@ -654,8 +715,18 @@ def main(argv):
         print('verify %s: MECHANICAL PASS, NOT READY: %s' % (v.bid, v.ready))
         return 2
     note = getattr(v, 'ready_note', '')
-    print('verify %s: READY (mechanical checks pass and the acc, read and flags receipts are current and PASS)%s'
-          % (v.bid, ' [conditional PASS replayed: %s]' % note if note else ''))
+    line = 'verify %s: READY (mechanical checks pass and the acc, read and flags receipts are current and PASS)%s' % (
+        v.bid, ' [conditional PASS replayed: %s]' % note if note else '')
+    if stamp:
+        try:
+            g1 = ST.verify_groups(argv[0])
+        except Exception:  # noqa: BLE001
+            g1 = None
+        if g1 == g0:
+            ST.write('verify', ST.folder_name(argv[0]), g0, summary=line, bid=v.bid)
+        else:
+            print('stamp: not written (inputs changed during the run: %s)' % ', '.join(sorted(k for k in g0 if g0[k] != (g1 or {}).get(k))))
+    print(line)
     return 0
 
 

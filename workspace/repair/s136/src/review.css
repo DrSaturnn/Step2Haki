@@ -1,4 +1,4 @@
-/* s136: Review in the status bar (Jonathan 2026-10-14), iOS-style liquid glass. The old sidebar tile and masthead card
+/* s136: Review in the status bar (2026-10-14), iOS-style liquid glass. The old sidebar tile and masthead card
    give way to a pill in the glass toolbar and one sheet; the phone bar's Review button opens the same sheet. */
 #rvlaunch,.rvmast{display:none !important}
 :root{--rv-on:#FFFFFF;--rv-key:rgba(255,255,255,.62);--rv-key-on:rgba(255,255,255,.95);--rv-sep:rgba(24,28,30,.08)}

@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""patch: one command per step of a patch batch (Jonathan 2026-10-24: "we need to be even more token efficient with the
+"""patch: one command per step of a patch batch (2026-10-24: "we need to be even more token efficient with the
 whole process"; runbook section 8b). The lead runs these and reads only their one-line outputs; details go to files.
 
-  python3 tools/spine/patch.py setup <batch>                  hooks (install, /root copy, tests), start-up context
-  python3 tools/spine/patch.py s3 <batch> <folder>...         facts_from_spec + build + copy 10_*.json, verify --mech,
-                                                              batch page, gate, render, preflight, vendor, squeeze
+  python3 tools/spine/patch.py setup <batch>                  the live hook probe (stops when no hook fired on this
+                                                              command), the git guard, hook tests, start-up context
+  python3 tools/spine/patch.py s3 <batch> <folder>... [--jobs N] (folders min(3, cores) at a time) facts_from_spec + build + copy 10_*.json, verify --mech,
+                                                              batch page, search index, gate, render, preflight, vendor, squeeze
   python3 tools/spine/patch.py review <batch> <round> --opus <folder,...> --sonnet <folder,...> [--since-round K]
                                  [--per-lane N] [--note FILE]   (s154c: lanes of at most N briefs; FILE appended to INSTRUCTIONS.md)
                                                               packets (--since), one combined lane per model,
@@ -20,7 +21,7 @@ whole process"; runbook section 8b). The lead runs these and reads only their on
 Folders hold the s150e layout: facts_spec_<batch>.json, delta_<batch>.json, baseline_<batch>.html,
 baseline_brief_text_<batch>.txt and a build.py that runs repair/migration/spine/<batch>_delta.py.
 
-Combined review (patches only, Jonathan 2026-10-24 "One reviewer per lane (patches)"): one reviewer judges the acc, read
+Combined review (patches only, 2026-10-24 "One reviewer per lane (patches)"): one reviewer judges the acc, read
 and flags parts of every changed line in its lane and writes one receipt.md with a section per brief and part. Lanes
 holding a changed number, dose or next step run as patch-review-opus; the rest as patch-review (Sonnet).
 """
@@ -69,47 +70,196 @@ def logdir(batch):
 
 
 # ---------------------------------------------------------------- setup
+HOOK_MARK = 'tools/hooks/callgate.py'
+PROBE_WINDOW = 120   # seconds between the hook's mark and this command starting
+
+
+def _settings():
+    out = []
+    if os.environ.get('AX_HOOK_STATE') and os.environ.get('AX_SETTINGS'):   # test_hooks.py only
+        return [p for p in os.environ['AX_SETTINGS'].split(os.pathsep) if os.path.isfile(p)]
+    for p in (os.path.expanduser('~/.claude/settings.json'), '/home/claude/.claude/settings.json', '/root/.claude/settings.json'):
+        if p not in out and os.path.isfile(p):
+            out.append(p)
+    return out
+
+
+def _settings_hooks(p):
+    try:
+        return HOOK_MARK in open(p, encoding='utf-8').read()
+    except OSError:
+        return False
+
+
+def _strip_settings(p):
+    """remove the Step2Haki hooks install.sh wrote from one settings file; anything else in the file stays"""
+    cfg = json.load(open(p, encoding='utf-8'))
+    hooks = cfg.get('hooks') or {}
+    for ev in list(hooks):
+        hooks[ev] = [h for h in hooks[ev] if 'tools/hooks/' not in json.dumps(h)]
+        if not hooks[ev]:
+            del hooks[ev]
+    if not hooks:
+        cfg.pop('hooks', None)
+    json.dump(cfg, open(p, 'w', encoding='utf-8'), indent=1)
+
+
 def setup(batch):
-    sh('bash tools/hooks/install.sh', check=True)
-    os.makedirs('/root/.claude', exist_ok=True)
-    os.makedirs('/home/claude/.config/axbx/hooks', exist_ok=True)
-    shutil.copy('/home/claude/.claude/settings.json', '/root/.claude/settings.json')
-    t = sh([sys.executable, 'tools/hooks/test_hooks.py']).stdout.strip().splitlines()[-1:]
+    """the live hook probe first: the PreToolUse hook marks this very command (callgate.beat writes
+    setup_probe.json when the lead's command is `patch.py setup`). No fresh mark means the harness did not run the
+    hooks, and setup stops with a non-zero exit instead of reporting "hooks installed" (once the settings fallback was
+    installed, this harness never ran it, and the plugin's own hooks deferred to it, so no hook fired all batch)."""
+    import time
+    sys.path.insert(0, os.path.join(WS, 'tools', 'hooks'))
+    import common as C
+    now = time.time()
+    pp, sp = C.state('setup_probe.json'), C.state('setup_state.json')
+    try:
+        probe = json.load(open(pp, encoding='utf-8'))
+        os.remove(pp)                               # a mark proves one command only
+    except (OSError, ValueError):
+        probe = None
+    try:
+        st = json.load(open(sp, encoding='utf-8'))
+    except (OSError, ValueError):
+        st = {}
+    live = bool(probe) and -5 <= now - probe.get('epoch', 0) <= PROBE_WINDOW
+    with_hooks = [p for p in _settings() if _settings_hooks(p)]
+    if not live:
+        if with_hooks:
+            for p in with_hooks:
+                _strip_settings(p)
+            st['settings_dead'] = True
+            json.dump(st, open(sp, 'w', encoding='utf-8'))
+            C.log_event('setup-probe', live=False, batch=batch, action='removed settings hooks')
+            print('setup %s: HOOKS NOT LIVE. The settings hooks (%s) did not fire on this command, so this harness does '
+                  'not run them, and while they are installed the plugin\'s hooks defer to them (plugin hooks/run.sh). '
+                  'They are removed. Run this command once more: the plugin\'s hooks get the next call.' % (batch, ', '.join(with_hooks)))
+            sys.exit(3)
+        if not st.get('settings_dead'):
+            sh('bash tools/hooks/install.sh', check=True)
+            os.makedirs('/root/.claude', exist_ok=True)
+            if os.path.abspath(os.path.expanduser('~/.claude/settings.json')) != '/home/claude/.claude/settings.json':
+                shutil.copy('/home/claude/.claude/settings.json', os.path.expanduser('~/.claude/settings.json'))
+            st['installed'] = True
+            json.dump(st, open(sp, 'w', encoding='utf-8'))
+            C.log_event('setup-probe', live=False, batch=batch, action='installed settings hooks')
+            print('setup %s: HOOKS NOT LIVE yet. No hook marked this command (no plugin hooks in this session); the '
+                  'settings hooks are installed. Run this command once more to probe them.' % batch)
+            sys.exit(3)
+        C.log_event('setup-probe', live=False, batch=batch, action='stop')
+        print('setup %s: HOOKS NOT LIVE. Neither the plugin\'s hooks nor the settings hooks fire in this harness. STOP: no '
+              'agent launch, no approval record and no context alarm will work (runbook section 6: a required hook '
+              'test fails). Tell the owner; do not run the batch.' % batch)
+        sys.exit(4)
+    route = 'settings' if with_hooks else 'plugin'
+    sh('bash tools/hooks/install.sh --no-settings', check=True)
+    C.log_event('setup-probe', live=True, batch=batch, route=route)
+    t = sh([sys.executable, 'tools/hooks/test_hooks.py'])
+    tl = t.stdout.strip().splitlines()[-1:]
     c = sh([sys.executable, 'tools/hooks/usage_ledger.py', '--context']).stdout.strip().splitlines()[-1:]
-    print('setup %s: hooks installed (/root/.claude copy); %s; context %s' % (batch, ' '.join(t), ' '.join(c)))
+    notes = []
+    try:
+        h6 = json.load(open(C.state('h6_live.json'), encoding='utf-8'))
+        if now - h6.get('epoch', 0) > 900:
+            h6 = None
+    except (OSError, ValueError):
+        h6 = None
+    if not h6:
+        notes.append('WARNING H6 context alarm NOT LIVE (no PostToolUse hook fired in the last 15 min; the plugin '
+                     'carries it from 0.3.1): watch the context by hand and restart by section 7')
+    if not probe.get('transcript'):
+        notes.append('WARNING no transcript file on disk in this harness (%s): H6, the usage ledger and the per-agent '
+                     'call gate cannot measure here' % (probe.get('transcript_path') or 'the hook input names none'))
+    kinds = set()
+    try:
+        kinds = {json.loads(l).get('kind') for l in open(C.state('events.jsonl'), encoding='utf-8') if l.strip()}
+    except (OSError, ValueError):
+        pass
+    if 'prompt-seen' not in kinds:
+        notes.append('note: no prompt-seen event yet (the approval hook is proven at the owner\'s next message)')
+    print('setup %s: HOOKS LIVE (%s route; the launch gate and call gate marked this command); %s; context %s%s' % (
+        batch, route, ' '.join(tl), ' '.join(c) or 'not measured', ''.join('\n  ' + n for n in notes)))
+    if t.returncode:
+        sys.exit(1)
 
 
 # ---------------------------------------------------------------- s3
-def s3(batch, folders):
+def outline_guard(f, batch):
+    """a rewrite moves outline.json to outline_before_<batch>.json so verify builds from the delta; a restore from the
+    private copy can bring the old file back. Removes it when it equals the moved copy; returns a STOP message when the
+    two differ, None when there is nothing to do."""
+    o, b = os.path.join(f, 'outline.json'), os.path.join(f, 'outline_before_%s.json' % batch)
+    if not (os.path.exists(o) and os.path.exists(b)):
+        return None
+    if open(o, 'rb').read() == open(b, 'rb').read():
+        os.remove(o)
+        return 'removed a restored outline.json (same as outline_before_%s.json)' % batch
+    return 'STOP: outline.json and outline_before_%s.json differ; verify would render the outline, not the rewrite' % batch
+
+
+def stale_delta(f, batch):
+    """True when the lane file was edited after the delta was last collected"""
+    rw = os.path.join(f, 'rewrite_%s' % batch, 'rewrite_%s.json' % batch)
+    d = os.path.join(f, 'delta_%s.json' % batch)
+    return os.path.exists(rw) and (not os.path.exists(d) or os.path.getmtime(rw) > os.path.getmtime(d))
+
+
+def mech_one(batch, x, L):
+    """one folder's S3 work (outline guard, stale-lane collect, facts, build.py, verify --mech); result lines"""
+    out = []
+    f = folder(x)
+    b = brief_id(f, batch)
+    g = outline_guard(f, batch)
+    if g and g.startswith('STOP'):
+        out.append('%s %s' % (b, g))
+        return out
+    if g:
+        out.append('%s %s' % (b, g))
+    if stale_delta(f, batch):
+        r = sh([sys.executable, 'tools/spine/rewrite_lanes.py', 'check', batch, b])
+        fx = [l for l in (r.stdout + r.stderr).splitlines() if l.startswith('FIX')]
+        if r.returncode:
+            out.append('%s lane check FAIL (the lane file was newer than its delta): %s' % (b, ' | '.join(fx)[:300]))
+            return out
+        out.append('%s delta re-collected (the lane file was newer)' % b)
+    spec = os.path.join(f, 'facts_spec_%s.json' % batch)
+    if os.path.exists(spec):
+        r = sh([sys.executable, 'tools/spine/facts_from_spec.py', spec])
+        if r.returncode:
+            out.append('%s facts FAIL: %s' % (b, (r.stdout + r.stderr).strip()[-300:]))
+            return out
+    sh([sys.executable, os.path.join(f, 'build.py')], check=True)
+    for j in glob.glob(os.path.join(f, '10_*_spine.json')):
+        shutil.copy(j, os.path.join(WS, 'repair', batch))
+    r = sh([sys.executable, 'tools/spine/verify.py', f, '--mech'])
+    log = os.path.join(L, 'mech_%s.log' % b)
+    open(log, 'w').write(r.stdout + r.stderr)
+    fixes = [l for l in (r.stdout + r.stderr).splitlines() if l.startswith('FIX')]
+    out.append('%s mech %s%s' % (b, 'PASS' if r.returncode == 0 else 'FAIL', (': ' + ' | '.join(fixes))[:400] if fixes else ''))
+    return out
+
+
+def s3(batch, folders, jobs=None):
     L = logdir(batch)
     os.makedirs(os.path.join(WS, 'repair', batch), exist_ok=True)
     res = []
-    for x in folders:
-        f = folder(x)
-        b = brief_id(f, batch)
-        spec = os.path.join(f, 'facts_spec_%s.json' % batch)
-        if os.path.exists(spec):
-            r = sh([sys.executable, 'tools/spine/facts_from_spec.py', spec])
-            if r.returncode:
-                res.append('%s facts FAIL: %s' % (b, (r.stdout + r.stderr).strip()[-300:]))
-                continue
-        sh([sys.executable, os.path.join(f, 'build.py')], check=True)
-        for j in glob.glob(os.path.join(f, '10_*_spine.json')):
-            shutil.copy(j, os.path.join(WS, 'repair', batch))
-        r = sh([sys.executable, 'tools/spine/verify.py', f, '--mech'])
-        log = os.path.join(L, 'mech_%s.log' % b)
-        open(log, 'w').write(r.stdout + r.stderr)
-        fixes = [l for l in (r.stdout + r.stderr).splitlines() if l.startswith('FIX')]
-        res.append('%s mech %s%s' % (b, 'PASS' if r.returncode == 0 else 'FAIL', (': ' + ' | '.join(fixes))[:400] if fixes else ''))
+    import concurrent.futures as cf
+    jobs = jobs or max(1, min(3, os.cpu_count() or 1))
+    with cf.ThreadPoolExecutor(jobs) as ex:
+        for lines in ex.map(lambda x: mech_one(batch, x, L), folders):
+            res += lines
     page = os.path.join(L, 'index.html')
     out = []
     for name, cmd in (('build', [sys.executable, 'repair/build.py', batch, '--out', page]),
+                      ('search', ['node', 'tools/search_index.js', page, os.path.join(L, 'search.json')]),
                       ('gate', [sys.executable, 'tools/gate.py', page, '--base', 'HEAD']),
                       ('render', ['node', 'tools/render.js', page]),
                       ('preflight', [sys.executable, 'tools/preflight.py', page, '--base', 'HEAD']),
                       ('vendor', [sys.executable, 'tools/vendor_scan.py', '--page', page]),
                       ('squeeze', [sys.executable, 'tools/spine/squeeze_check.py', page,
-                                   ','.join(brief_id(folder(x), batch) for x in folders)])):
+                                   ','.join(brief_id(folder(x), batch) for x in folders)]),
+                      ('size', [sys.executable, 'tools/spine/size_check.py', page])):
         r = sh(cmd)
         open(os.path.join(L, 's3_%s.log' % name), 'w').write(r.stdout + r.stderr)
         lines = [l for l in (r.stdout + r.stderr).splitlines() if l.strip()]
@@ -338,8 +488,13 @@ def file_receipts(batch, rnd):
 
 
 # ---------------------------------------------------------------- sync
+PUBLIC_SYNC = 'chore: update the batch records'   # the public repo's side of a sync: budget, ledger and baseline files
+
+
 def sync(batch, msg, folders):
-    tail = '\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>'
+    """msg is the private repo's commit message; the public commit, when the sync leaves anything to commit there, takes
+    the conventional subject PUBLIC_SYNC with the batch in a trailer (tools/githooks/commit-msg)"""
+    tail = '\n\nCo-Authored-By: %s' % os.environ.get('AX_COAUTHOR', 'Claude Opus 5.5 <noreply@anthropic.com>')
     sess = os.environ.get('AX_SESSION')
     if sess:
         tail += '\nClaude-Session: ' + sess
@@ -349,8 +504,16 @@ def sync(batch, msg, folders):
         dst = os.path.join(PRIV, 'local-only', rel)
         os.makedirs(dst, exist_ok=True)
         sh(['cp', '-a', f + '/.', dst + '/'], check=True)
-    for extra in ('repair/migration/spine/%s_delta.py' % batch, 'local/%s' % batch,
-                  'repair/migration/spine/packets', 'repair/migration/spine/reviews'):
+        if os.path.exists(os.path.join(f, 'outline_before_%s.json' % batch)) and not os.path.exists(os.path.join(f, 'outline.json')):
+            stale = os.path.join(dst, 'outline.json')
+            if os.path.exists(stale):
+                os.remove(stale)
+    # s170 chat 4: the lane receipts (repair/efficiency/lanes/<batch>) and label caches fetched in the batch
+    # (repair/sources/web) are gitignored in the public repo; chat 3 lost both with its container.
+    # local/stamps: the check stamps (tools/stamps.py), so the next chat's restore starts with them
+    for extra in ('repair/migration/spine/%s_delta.py' % batch, 'local/%s' % batch, 'local/stamps',
+                  'repair/migration/spine/packets', 'repair/migration/spine/reviews',
+                  'repair/efficiency/lanes/%s' % batch, 'repair/sources/web'):
         s = os.path.join(WS, extra)
         if os.path.exists(s):
             d = os.path.join(PRIV, 'local-only', extra)
@@ -363,7 +526,8 @@ def sync(batch, msg, folders):
     for repo in (REPO, PRIV):
         sh(['git', 'add', '-A'], cwd=repo)
         if sh(['git', 'diff', '--cached', '--quiet'], cwd=repo).returncode:
-            sh(['git'] + GIT_ID + ['commit', '-q', '-m', msg + tail], cwd=repo, check=True)
+            m = msg if repo == PRIV else PUBLIC_SYNC + '\n\nBatch: %s' % batch
+            sh(['git'] + GIT_ID + ['commit', '-q', '-m', m + tail], cwd=repo, check=True)
         br = sh(['git', 'branch', '--show-current'], cwd=repo).stdout.strip()
         r = sh(['git', 'push', '-q', '-u', 'origin', 'HEAD:refs/heads/' + br], cwd=repo)
         head = sh(['git', 'rev-parse', '--short', 'HEAD'], cwd=repo).stdout.strip()
@@ -406,7 +570,13 @@ def main(a):
     if cmd == 'setup':
         setup(batch)
     elif cmd == 's3':
-        s3(batch, a[2:])
+        rest = a[2:]
+        jobs = None
+        if '--jobs' in rest:
+            k = rest.index('--jobs')
+            jobs = int(rest[k + 1])
+            rest = rest[:k] + rest[k + 2:]
+        s3(batch, rest, jobs)
     elif cmd == 'review':
         rnd = int(a[2])
         opt = {k: v for k, v in zip(a[3::2], a[4::2])}

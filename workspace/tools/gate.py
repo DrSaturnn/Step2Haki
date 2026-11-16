@@ -2,7 +2,7 @@
 """gate.py: mechanical invariants of the AxBx page (study-page-builder + board-brief contract).
 
 Usage
-  python3 tools/gate.py [page] [--base REF|FILE] [--attr-only REF|FILE] [--allow FILE] [--list]
+  python3 tools/gate.py [page] [--base REF|FILE] [--attr-only REF|FILE] [--allow FILE] [--no-doc-lint] [--list]
     page         default: <repo>/index.html
     --base       comparison for never-delete / id-immutability / version-bump checks (default HEAD;
                  'none' skips). A git ref resolves to REF:index.html; an existing path is read as a file.
@@ -70,7 +70,7 @@ CATALOG = {
     'no-letters-pct': ('no option letters or vendor selection percentages in .vignette Q lines or .trapline',
                        'drop "(A)", "choice C", "22% chose"; keep labeled clinical probabilities only'),
     'anchor': ('every static href="#x" and .scaleref data-scale resolves to an id', 'point it at an existing id'),
-    'no-emdash': ('no em dash (U+2014, &mdash;, &#8212;) in visible page text or visible attributes (Jonathan: no em dashes; s103 converted them to spaced en dashes, which columnize() also splits on)',
+    'no-emdash': ('no em dash (U+2014, &mdash;, &#8212;) in visible page text or visible attributes (no em dashes; s103 converted them to spaced en dashes, which columnize also splits on)',
                   'use a spaced en dash (&ndash;) or a colon'),
     'mode-css': ('no CSS selector styles page content through body.flat or body.study (s92: it restyled every brief at once and froze the switches)', 'write the rule as body .axm-flat X, body X.axm-flat (or axm-study); rules on body itself may stay body.flat'),
     'pairs-with': ('each <b> in a "Pairs with" block matches a brief <h4> (quoted/question discriminators exempt)',
@@ -113,12 +113,24 @@ CATALOG = {
                 'replace the old rule instead of adding an override; time motion with var(--spr), var(--bnc) or var(--snp); a batch that lowers a count tightens the baseline (ship.sh does it)'),
     'ui-site': ('site/css: themes hold only custom properties on theme selectors (hard), and components\' raw colors do not rise above the baseline (tools/spine/ui_lint.py --site; D-20261105-10)',
                 'put the color in a theme token and reference it with var(); a theme file never names a component'),
-    'doc-lint': ('DECISIONS_DIGEST and STANDING_DIRECTIONS hold one live answer per question: supersession marked both ways, no citation of a superseded or missing id (tools/spine/doc_lint.py; D-20261105-2)',
+    'ui-retired': ('nothing in the Retired table of docs/ui/UI_MAP.md is back in the page: no retired selector, id, class prefix, custom property or label (tools/spine/ui_retired.py; D-20261105-1, s169)',
+                   'remove what came back, or, when the item is live again on purpose, take its row out of the Retired table in the same commit with the decision that brought it back'),
+    'doc-lint': ('DECISIONS_DIGEST and STANDING_DIRECTIONS hold one live answer per question: supersession marked both ways, no citation of a superseded or missing id; the rule documents name no path that does not exist; the RESUME batch line equals the handoff State and the State stays capped (tools/spine/doc_lint.py; D-20261105-2, D-20261110-1)',
                  'mark the old line "(superseded by D-...)" in the same commit, or cite the live id in STANDING_DIRECTIONS'),
     'prose-lint': ('no brief\'s prose lint count (tools/spine/prose_lint.py, review-book register) rises above tools/spine/prose_baseline.json, and a brief new to the baseline has none (D-20261106-9, D-20261106-11)',
                    'rewrite the flagged lines per repair/efficiency/TEXTBOOK_STYLE.md; a permitted near miss goes in the lint\'s ALLOW list with a test'),
     'prose-touched': ('a brief whose text (hover text included) changed against the base has zero prose lint hits; markup-only changes and --attr-only ships are exempt (D-20261106-11)',
                       'rewrite every flagged line in the brief you changed per repair/efficiency/TEXTBOOK_STYLE.md, or show the hit is a permitted near miss and add it to the lint\'s ALLOW list with a test'),
+    'nbme-block': ('a brief\'s NBME blocks outside the bank and outside pause points do not rise in count against the base, and a brief whose text changed has none unless its hash is in repair/*/nbme_keep.json (tools/spine/content_gate.py; s170 T6, N5)',
+                   'carry the block\'s separating stem details into the brief\'s lines (symptom, mimic, next-step) and remove the block, or move it into a pause point; a block kept on purpose gets a nbme_keep.json row {brief, hash, reason}'),
+    'step2-workup': ('a brief whose text changed has no workup ladder (figure.w5a or div.w5t) inside step 2, Diagnostic criteria (tools/spine/content_gate.py; s170 T6, N10)',
+                     'move the ladder to the Workup step and record the move in repair/<batch>/step_moves.json'),
+    'step-moves': ('a top-level block that sits in a different step than on the base has a row in repair/*/step_moves.json {brief, hash, from, to, class, reason} (tools/spine/content_gate.py; s170 T6, N10, N20)',
+                   'add the row (hash from tools/spine/content_gate.py PAGE --base BASE), with the class the block was sorted as (criteria, workup, severity, script, differential) and the reason'),
+    'card-format': ('a psych pharm class card keeps the card layout (CARD_SPEC.md): pc-lcw charts with one axis per chart',
+                    'rebuild the card from its spec; a chart carries one div.wax axis (s167c) or the same axis on every row'),
+    'nav-sys': ('each brief\'s data-sys names the h3.system section it sits in (s167c N20: the sidebar is built from the body)',
+                'move the brief into the section its data-sys names, or change data-sys in a batch that records the move'),
     'K3': ('every mnemonic names the widely taught source it comes from (data-mn-src)',
            'add data-mn-src="First Aid" / "AnKing" / "AMBOSS" / "source explanation" / a URL; a mnemonic with no such source is removed, never invented'),
 }
@@ -346,26 +358,34 @@ def check_page(page, g, page_path):
         if '<div class="sect">Presentations' in nav:
             for bid in sorted(hubs - set(pres)):
                 g.fail('nav-link', bid, '%s is a hub but has no link in Presentations' % bid)
+        placed = {b.id for b in bl if b.attrs.get('data-sys') == 'presentations'}   # s167c N11, N13: placed by tag
         for bid, cls in pres.items():
-            if bid not in hubs:
-                g.fail('nav-link', bid, '%s is in Presentations but is not a hub (data-entry="hub")' % bid)
+            if bid not in hubs and bid not in placed:
+                g.fail('nav-link', bid, '%s is in Presentations but is not a hub (data-entry="hub") or data-sys="presentations"' % bid)
             elif cls != ['']:
                 g.fail('nav-link', bid, '%s needs exactly one plain link in Presentations, has %r' % (bid, cls))
-        # s161c (Jonathan 2026-11-03, "remove all duplicated briefs"): every brief has exactly one link in the sidebar,
+        # s161c (2026-11-03): every brief has exactly one link in the sidebar,
         # a hub in Presentations (plain), any other brief in its system (classed by kind); was s146c (a hub in both)
         for b in bl:
-            want = 'aq' if (b.kind == 'aq' or b.attrs.get('data-src') == 'aquifer') else ('bs' if b.kind == 'bs' else '')
+            want = ''   # s167c N13: the board-style and Aquifer link classes are retired
             got = links.get(b.id, [])
             n_all = len(got) + len(pres.get(b.id, []))
             if n_all != 1:
                 g.fail('nav-link', b.id, '%s has %d nav links' % (b.id, n_all))
             elif got and got[0] != want:
                 g.fail('nav-link', b.id, '%s nav link class=%r, expected %r' % (b.id, got[0], want))
+        h3at = [(m.start(), m.group(1)) for m in re.finditer(r'<h3 class="system" id="([^"]+)"', page)]
+        for b in bl:
+            if 'data-sys' not in b.attrs:
+                continue
+            sect = [i for at, i in h3at if at < b.start]
+            if not sect or sect[-1] != b.attrs['data-sys']:
+                g.fail('nav-sys', b.id, '%s has data-sys="%s" but sits in section %s' % (b.id, b.attrs['data-sys'], sect[-1] if sect else 'none'))
         for sec in re.split(r'<div class="sect(?: [a-z0-9 -]+)?">', nav)[1:]:
             m = re.match(r'(.*?)\s*<span class="count">(\d+)</span>', sec, re.S)
             if not m:
                 continue
-            plain = len([1 for t in re.findall(r'<a\b[^>]*>', sec) if 'class=' not in t])
+            plain = len(re.findall(r'<a\b[^>]*>', sec))
             if int(m.group(2)) != plain:
                 g.fail('nav-count', text(m.group(1)), '.sect "%s" count %s but %d topic links' % (text(m.group(1)), m.group(2), plain))
 
@@ -406,7 +426,7 @@ def check_page(page, g, page_path):
                 g.fail('item-options', iid, '%s (%s): key/d1/d2 empty or not distinct: %r / %r / %r' % (iid, i.brief_id, k, d1, d2))
         if 'data-lead-in' in a and not norm(a['data-lead-in']):
             g.fail('item-leadin', iid, '%s has an empty data-lead-in' % iid)
-        # s148g per-choice reasons (Jonathan 2026-10-20): all three or none, each one non-empty line
+        # s148g per-choice reasons (2026-10-20): all three or none, each one non-empty line
         why = [a.get(k) for k in ('data-key-why', 'data-d1-why', 'data-d2-why')]
         if any(w is not None for w in why):
             if not all(w is not None and norm(w) for w in why):
@@ -526,7 +546,7 @@ def check_page(page, g, page_path):
     # ---- nbme coverage
     cov = os.path.join(os.path.dirname(os.path.abspath(page_path)), 'repair', 'nbme', 'coverage.csv')
     if not os.path.exists(cov):
-        cov = os.path.join(REPO, 'repair', 'nbme', 'coverage.csv')
+        cov = os.environ.get('AXBX_NBME_COVERAGE') or os.path.join(REPO, 'repair', 'nbme', 'coverage.csv')
     page_n = set()
     for v in re.findall(r'data-nbme="([^"]*)"', body):
         page_n.update(v.split())
@@ -607,7 +627,7 @@ def check_base(page, ref_html, bl, it, g):
         if b.id and b.id not in cur_b and b.id not in replaced:
             g.fail('never-delete', b.id, 'brief %s existed at base and is missing now' % b.id)
     cur = {i.id: i for i in it}
-    # retired items (Jonathan 2026-09-30: psych briefs cut to the tested core): an item leaves the page only through the
+    # retired items (2026-09-30: psych briefs cut to the tested core): an item leaves the page only through the
     # tracked ledger tools/retired_items.csv, with its full <li> HTML kept in the archive file the row names
     led = os.environ.get('AXBX_RETIRED') or os.path.join(os.path.dirname(os.path.abspath(__file__)), 'retired_items.csv')
     retired = {}
@@ -675,14 +695,16 @@ def check_attr_only(page, ref_html, g):
 
 
 
-def check_lints(page, page_path, ref_html, g, attr_only=False):
+def check_lints(page, page_path, ref_html, g, attr_only=False, docs=True):
     """UI, doc and prose ratchets (D-20261106-11): counts may fall, never rise; a brief whose text changed carries no
     prose hits (skipped under --attr-only, which already forbids text changes). A missing baseline or rule file fails."""
     spine = os.path.join(REPO, 'tools', 'spine')
     if spine not in sys.path:
         sys.path.insert(0, spine)
     import ui_lint, doc_lint, prose_lint  # noqa: E401
-    base_path = os.path.join(spine, 'ui_baseline.json')
+    # AXBX_UI_BASELINE, AXBX_PROSE_BASELINE, AXBX_NBME_COVERAGE: tools/test_gate_rules.py only (the counts and the
+    # coverage rows of the page its cases run on)
+    base_path = os.environ.get('AXBX_UI_BASELINE') or os.path.join(spine, 'ui_baseline.json')
     if not os.path.exists(base_path):
         g.fail('ui-lint', 'baseline', 'tools/spine/ui_baseline.json is missing; restore it from git')
     base = json.load(open(base_path, encoding='utf-8')) if os.path.exists(base_path) else {}
@@ -699,16 +721,32 @@ def check_lints(page, page_path, ref_html, g, attr_only=False):
         rc_base = base.get('component_raw_color')
         if rc_base is not None and counts.get('component_raw_color', 0) > rc_base:
             g.fail('ui-site', 'component_raw_color', 'raw colors in site/css/components rose from %d to %d' % (rc_base, counts['component_raw_color']))
+    import ui_retired
+    try:
+        um = docs_path.doc(os.path.join('ui', 'UI_MAP.md'))
+    except FileNotFoundError:
+        um = ''
+    if os.path.exists(um):
+        try:
+            for cell, it, where in ui_retired.check(open(page_path, encoding='utf-8').read(), open(um, encoding='utf-8').read()):
+                g.fail('ui-retired', it[:60], '%s: %s (Retired table row "%s")' % (it, where, cell))
+        except ValueError as e:
+            g.fail('ui-retired', 'table', str(e))
+    else:
+        g.fail('ui-retired', 'missing', 'docs/ui/UI_MAP.md is missing from the private docs/ (tools/docs_path.py)')
     try:
         dg, st = docs_path.doc('DECISIONS_DIGEST.md'), docs_path.doc('STANDING_DIRECTIONS.md')
     except FileNotFoundError:
         dg = st = ''
-    if os.path.exists(dg) and os.path.exists(st):
-        for e in doc_lint.errors(dg, st) + doc_lint.rule_doc_errors(dg, REPO):
+    if not docs:   # --no-doc-lint (verify's preview): the documents are judged by the ship gate and the launch gate
+        pass
+    elif os.path.exists(dg) and os.path.exists(st):
+        dd = os.path.dirname(dg)   # stale paths in the rule documents; RESUME against the State; the State cap
+        for e in doc_lint.stable_errors(dg, st, REPO) + doc_lint.state_errors(dd, REPO):
             g.fail('doc-lint', e[:80], e)
     else:
         g.fail('doc-lint', 'missing', 'DECISIONS_DIGEST.md or STANDING_DIRECTIONS.md is missing from the private docs/ (tools/docs_path.py)')
-    pbase_path = os.path.join(spine, 'prose_baseline.json')
+    pbase_path = os.environ.get('AXBX_PROSE_BASELINE') or os.path.join(spine, 'prose_baseline.json')
     if not os.path.exists(pbase_path):
         g.fail('prose-lint', 'baseline', 'tools/spine/prose_baseline.json is missing; restore it from git')
     pbase = json.load(open(pbase_path, encoding='utf-8')) if os.path.exists(pbase_path) else None
@@ -720,15 +758,24 @@ def check_lints(page, page_path, ref_html, g, attr_only=False):
                 g.fail('prose-lint', bid, '%s: %d prose hits (baseline %s); run tools/spine/prose_lint.py PAGE --brief %s' % (bid, n, 'none' if was is None else was, bid))
     if ref_html is not None and not attr_only:
         for b in prose_lint.changed_briefs(ref_html, page):
-            hits = prose_lint.lint_brief(b.inner)
+            hits = prose_lint.lint_brief(b.inner, touched=True)
             if hits:
                 eg = '; '.join('%s: %s' % (h['pattern'], h['text'][:60]) for h in hits[:3])
                 g.fail('prose-touched', b.id, '%s changed and has %d prose hits (%s)' % (b.id, len(hits), eg))
+    import content_gate
+    changed = {b.id for b in prose_lint.changed_briefs(ref_html, page)} if (ref_html is not None and not attr_only) else set()
+    try:
+        for code, key, msg in content_gate.check(ref_html, page, changed, root=REPO):
+            g.fail(code, key, msg)
+    except ValueError as e:
+        g.fail('step-moves', 'json', 'a repair/*/nbme_keep.json or step_moves.json file does not parse: %s' % e)
 
 def main(argv):
     args, page_path, base, attr_ref = list(argv), None, 'HEAD', None
     allow_path = os.path.join(REPO, 'tools', 'gate_allowlist.txt')
     base_given = False
+    no_docs = '--no-doc-lint' in args
+    args = [a for a in args if a != '--no-doc-lint']
     if '--list' in args:
         for k, (d, fx) in CATALOG.items():
             print('%-18s %s\n%-18s fix: %s' % (k, d, '', fx))
@@ -757,7 +804,7 @@ def main(argv):
     ref_html = load_ref(base)
     if ref_html is not None:
         check_base(page, ref_html, bl, it, g)
-    check_lints(page, page_path, ref_html, g, attr_only=bool(attr_ref))
+    check_lints(page, page_path, ref_html, g, attr_only=bool(attr_ref), docs=not no_docs)
     n_attr = None
     if attr_ref:
         n_attr = check_attr_only(page, load_ref(attr_ref), g)

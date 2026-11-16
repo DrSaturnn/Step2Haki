@@ -113,6 +113,26 @@ try:
     expect('NBME block above owners', has(card(kp, sc, nbq_ok, own), 'NBME block sits'))
     expect('empty NBME block', has(card(kp, sc, own, '<div class="pc-nbq">nothing</div>'), 'no logged NBME item'))
     expect('lint_card is card_check', L.lint_card(good) == [])
+    # s167c N16: one shared axis per chart (div.wax before the rows; rows carry no axis)
+    sys.path.insert(0, os.path.join(HERE, '..', '..', 'repair', 'pilots', 's167c'))
+    import timelines
+    lcs, st = timelines.transform(lc)
+    expect('shared axis: transform keeps one axis', st['shared'] == 1 and lcs.count('<div class="wax"') == 1
+           and lcs.count('<div class="rax"') == 1, st)
+    expect('shared axis: card passes', L.card_check(card(kp, sc, lcs, own)) == [], L.card_check(card(kp, sc, lcs, own)))
+    noax = re.sub(r'(<div class="wax"[^>]*><div class="rax"[^>]*>).*?(</div>)', r'\1\2', lcs, count=1, flags=re.S)
+    expect('shared axis with no tick labels', has(card(kp, sc, noax, own), 'shared axis has no tick labels'))
+    rep = lcs.replace('<li class="wr">', '<li class="wr"><div class="rax"><span>0</span><span>1 wk</span></div>', 1)
+    expect('shared axis repeated on a row', has(card(kp, sc, rep, own), 'repeats the axis'))
+    # s167c chat 3: two hovers on one term anchor once (no button inside a button)
+    import hovers
+    hb = ' '.join('w%d' % i for i in range(40))
+    def hpop(i, lab):
+        return ('<button class="sp-pop" aria-controls="h%d">%s</button><div class="sp-pop-b" id="h%d" hidden>'
+                '<b class="sp-ct">T%d</b> %s</div>' % (i, lab, i, i, hb))
+    hnew, hst, _ = hovers.transform('<p>Lithium level rises ' + hpop(1, 'Lithium') + hpop(2, 'Lithium') + '</p>')
+    expect('hovers: one anchor per term', not re.search(r'<button[^>]*sp-a[^>]*><button', hnew)
+           and hst['A_label'] == 1 and hst['A_none'] == 1, hst)
 
     # ------------------------------------------------------------ outline_check card entry
     def oc_errors(body, steps=None):

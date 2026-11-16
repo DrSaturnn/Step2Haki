@@ -9,9 +9,9 @@ Every rule in STANDING_DIRECTIONS that is not about the decision spine still app
 board answer first, "In practice:" hovers, bold key words, hovers on touch, layers not totals, masks, theme tokens,
 other names, abbreviations, no emojis, no em dashes).
 
-Wording: every label and line on a card follows TEXTBOOK_STYLE.md (D-20261106-9). The section labels this spec
-prescribes ("Combined with | Result | Rule", "Where the choice is made") are on TEXTBOOK_STYLE's header list for renaming;
-they change here and on the page in the same content batch.
+Wording: every label and line on a card follows TEXTBOOK_STYLE.md (D-20261106-9). Section labels follow
+repair/efficiency/HEADERS.json (s170 renames: H20 "Drug | Effect | Management", H24 no "Shows" tag and "Rationale" for
+"Why", H27 "Drug choice by condition", H29 "Treatment response timeline").
 
 ## 1. What a card is
 - One short card per drug class, grouped under the Psych Pocket headers in the standalone sidebar and page section
@@ -21,7 +21,7 @@ they change here and on the page in the same content batch.
   (Benzodiazepines, Other anxiety agents); 05 ADHD and sleep (ADHD, Sleep agents, Orexin antagonists); 06 Substance use
   and other (Substance use and cessation, Other agents). 18 cards.
 - A card holds what the drug does. The choice of drug stays in the disease briefs and is reached through "Where the
-  choice is made". No numbered steps, stepper, differential, workup, pause point or bottom line.
+  choice is made". No numbered steps, stepper, differential, workup or bottom line; a pause point only for a fence case (item 10).
 - Content: what the pharm documents show (Psych Pocket 1.7.2, the Medication List, Caplan and Stern 2008), plus what
   Step 2 tests about these drugs that the documents leave out. The documents are a seed only and are never cited:
   every fact is checked against a board source (NBME, UWorld, AnKing) or a primary source (FDA label on DailyMed,
@@ -48,16 +48,19 @@ they change here and on the page in the same content batch.
    extra for the one trap to remember. A reaction owned by another brief carries a drawer chip to it.
 5. **Toxicity and withdrawal timeline** (`figure.lcw.pc-lcw`, block `lcw`), when the class has timed toxicity,
    overdose, withdrawal or discontinuation windows: hours or days axis ("not to scale" when it is not), event names
-   masked (mask "name"), one bar per window, a "Shows" line per row.
-6. **Interactions table** (`div.sp-dx.pc-tbl`, block `table` with cls "sp-dx pc-tbl"), heads Combined with |
-   Result | Rule, Rule masked; when the class has board-tested interactions.
+   masked (mask "name"), one bar per window, a finding line per row (H24).
+6. **Interactions table** (`div.sp-dx.pc-tbl`, block `table` with cls "sp-dx pc-tbl"), heads Drug |
+   Effect | Management, Management masked (H20); when the class has board-tested interactions.
 7. **Washout, diet or monitoring-window timeline** (second `figure.lcw.pc-lcw`), weeks axis, window text masked
-   (mask "win"), a "Why" line per row; when the class has washouts or timed limits.
+   (mask "win"), a rationale line per row (H24); when the class has washouts or timed limits.
 8. **Monitoring table** (`div.sp-dx.pc-tbl`), heads When | Check | Why, Check masked; when the class has monitoring.
-9. **Where the choice is made** (`div.pc-owners`, block `owners`): one line per decision owned elsewhere, each ending
+9. **Drug choice by condition** (`div.pc-owners`, H27, block `owners`): one line per decision owned elsewhere, each ending
    in a drawer to the owning brief (or card). At least one.
 10. **NBME question block** (`div.pc-nbq`, labelled "NBME question N" since s163 D8): only when a logged NBME item belongs to the class (repair/nbme/misses.csv,
-    source nbme, subject the class's drug effect); never an empty block. How a card shows an NBME item owned by
+    source nbme, subject the class's drug effect), and only as a pause point for a fence case (one stem detail flips
+    the answer between two otherwise matching options; STANDING "Pause point content", N5); any other block is removed
+    once every fact it carries is stated on the card (s170: pc-ssri's paroxetine discontinuation block carried into
+    its Discontinuation lines); never an empty block. How a card shows an NBME item owned by
     another brief is decided before B2 (PSYCH_PHARM_BATCHES.md section 6).
 11. **Practice**: the card's own bank (`h5.authored-hdr` "Practice", `ol.bank.authored`), at the end of the card.
     Items from the retired s157 brief move here with ids unchanged; new items reach about three per card where the
@@ -72,7 +75,7 @@ the card (default off, 2026-10-30).
   withdrawal chart); never the dot-on-line sp-on style.
 - Toxicity and withdrawal onset in one chart (hours or days); washouts and diet or monitoring windows in a second
   chart (weeks), when the class has them.
-- Tick labels repeat on every row, the same ticks down one chart (one axis per chart); the first tick is 0.
+- One shared axis per chart, with the bars stacked per row (N16, D-20261107-9); the first tick is 0.
 - Times come from a board source; else a primary source (label, StatPearls) named in the batch report. A board answer
   that differs from a label is taught, with the label in an "In practice:" hover.
 - One owner per timed window: a window is drawn once on the card; a table that needs it states the window in plain words, with no pointer to a step or block (s163 C6)

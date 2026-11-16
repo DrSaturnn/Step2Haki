@@ -1,6 +1,6 @@
 /* ====================== AxBx NBME ======================================
    Everything here is computed from tags on the page; nothing is typed by hand.
-   · section-header counts (topics, board-style, Aquifer) from the briefs themselves
+   · section-header counts (topics) from the briefs themselves
    · "NBME xN" chip on a brief = distinct NBME ids linked to its questions
    · blueprint panel: briefs and questions per NBME system for the shelf in view
    Source of weights: repair/nbme/outlines.json (NBME content outlines).        */
@@ -76,7 +76,7 @@ function headerCounts(){
     var n=h.querySelector('.n'); if(!n) return;
     var c={topic:0,bs:0,aq:0}; briefsIn(h).forEach(function(b){c[kind(b)]++;});
     if(!c.topic&&!c.bs&&!c.aq) return;
-    n.innerHTML=c.topic+' topics'+(c.bs?' <span style="color:#9A5B0E">+ '+c.bs+' board-style</span>':'')+(c.aq?' <span style="color:#1F6A7E">+ '+c.aq+' Aquifer</span>':'');
+    n.textContent=(c.topic+c.bs+c.aq)+' topics';
   });
 }
 function nbmeIds(root){ var ids={};

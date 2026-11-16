@@ -1,9 +1,9 @@
 # The S8 audit of Codex-led work (before any ship)
 
 Written 2026-10-21 with CODEX_LEAD.md; run by Claude for s150 (2026-10-22, record in repair/s150/S150.md "Codex
-audit"). Since 2026-10-23 (Jonathan: "ill have codex ship") it is run at S8 by a fresh Codex audit task (GPT-6.1 Sol,
+audit"). Since 2026-10-23 it is run at S8 by a fresh Codex audit task (GPT-6.1 Sol,
 xhigh), never the lead's own session, before approval.py present (CODEX_LEAD.md section 5). Claude runs it only when
-Jonathan asks. Accuracy is non-negotiable (Jonathan): nothing ships until this audit passes. The auditor writes
+The owner asks. Accuracy is non-negotiable: nothing ships until this audit passes. The auditor writes
 repair/sNN/AUDIT.md with every finding by kind; the lead fixes or answers each one and copies the summary into the
 batch file under "Audit", so CODEX_LEAD.md section 7 can be tightened.
 
@@ -26,10 +26,10 @@ before them; a Pairs with card reading "And"; meta-worded ladder rungs.
 5. **Bank.** ids unchanged; version bumps where a key or choice changed; reasons on every item and none contradicting
    the body.
 6. **Reviews.** Read each brief's latest acc receipt against the brief: any claim the auditor finds unsupported that
-   the receipt passed is a finding against the review, recorded by role. (A Claude auditor, when Jonathan asks for one,
+   the receipt passed is a finding against the review, recorded by role. (A Claude auditor, when the owner asks for one,
    instead re-runs the acc lane with the Claude lean-reviewer on each brief, budget permitting.)
 7. **Display.** shots_all.py and the phone sheets: no squeezed columns, masks intact in study mode.
-8. **Consistency across authors** (Jonathan 2026-10-22: Claude evaluates Codex's final briefs "for any additional
+8. **Consistency across authors** (2026-10-22: Claude evaluates Codex's final briefs "for any additional
    considerations regarding specific Codex rules in order to maintain consistency across brief authorships"). Compare
    each Codex brief side by side with the nearest Claude-built brief of its entry type (disease: septic-hip, sjia and
    the golden scfe; hub: limp), from the built page and the phone sheets, not from Codex's notes:
@@ -49,8 +49,8 @@ before them; a Pairs with card reading "And"; meta-worded ladder rungs.
    allow both ways). Patterns go to step 9.
 9. **Rule feedback.** Turn every defect kind that a mechanical check could not catch, and every pattern that should be
    fixed one way, into a proposed numbered addition to CODEX_LEAD.md section 7 (the s149 items 19 to 27 are the
-   model: the rule, then the case that showed it). Present them to Jonathan in the report as options with a
+   model: the rule, then the case that showed it). Present them to the owner in the report as options with a
    recommendation; write the ones he approves into CODEX_LEAD.md and a digest line, before Codex's next launch.
 10. **Report.** Present with approval.py present only after 1 to 8 pass and every fix has had its follow-up round; the
    report adds an "Audit" section (findings by kind, what was fixed, the consistency comparison, the proposed rules).
-   Then ship on Jonathan's plain "ship" (CODEX_LEAD.md section 5).
+   Then ship on the owner's plain "ship" (CODEX_LEAD.md section 5).

@@ -21,4 +21,11 @@ assert presentations_link(out, 'scrotum') == out; ok += 1
 # 4. no Presentations group: unchanged
 plain = NAV.replace('Presentations', 'Pulmonary') + HUB
 assert presentations_link(plain, 'scrotum') == plain; ok += 1
-print('test_verify_presentations: %d/4 passed' % ok)
+# 5. (s170) listed after a navsub sub-header (s161c): unchanged, no second link
+SUB = ('<div id="navlinks">\n\n    <div class="sect">Presentations <span class="count">2</span></div>\n'
+       '    <div class="navsub">Cardiovascular</div>\n    <a href="#cough">Chronic Cough</a>\n'
+       '    <div class="navsub">Psychiatric</div>\n    <a href="#voices">Hears Voices</a>\n\n'
+       '    <div class="sect">Renal <span class="count">0</span></div>\n</div>\n')
+VO = '<div class="brief sp" id="voices" data-entry="hub"><h4>Hears Voices</h4></div>'
+assert presentations_link(SUB + VO, 'voices') == SUB + VO; ok += 1
+print('test_verify_presentations: %d/5 passed' % ok)

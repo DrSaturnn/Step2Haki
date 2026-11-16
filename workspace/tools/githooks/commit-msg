@@ -1,0 +1,114 @@
+#!/usr/bin/env python3
+"""Public-repo commit message check (Conventional Commits).
+
+  subject   type(scope): summary      scope optional; at most 72 characters; no final period
+            types: feat, fix, content, style, refactor, test, docs, chore
+            summary: imperative ("add", not "added" or "adding"), starts with a lower-case letter or a digit,
+            and names no batch id; the batch goes in the "Batch: <id>" trailer
+  body      required when the staged change is more than 30 lines or 3 files: what changed and why, lines of at
+            most 72 characters (a line holding a URL and a trailer line are exempt)
+  trailers  Batch: <id>, Decision: <digest id>, Co-Authored-By, Claude-Session
+  never     a name or pattern listed in the private guard file (docs/public_guard.txt), anywhere in the message
+
+Git's own "Merge ..." and "Revert ..." subjects pass. Installed with the pre-commit guard (core.hooksPath).
+
+  commit-msg FILE                 the hook (git passes the message file)
+  commit-msg --check "MESSAGE"    the same checks on a message given as text (ship.sh, before its checks run);
+                                  exit 1 with the reasons
+"""
+import os
+import re
+import subprocess
+import sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+TYPES = ('feat', 'fix', 'content', 'style', 'refactor', 'test', 'docs', 'chore')
+SUBJECT = re.compile(r'^(%s)(\([a-z0-9][a-z0-9-]*\))?: (.+)$' % '|'.join(TYPES))
+BATCH_ID = re.compile(r'\bs\d{2,3}[a-z]?\b')
+TRAILER = re.compile(r'^[A-Za-z][A-Za-z-]*: \S')
+NOT_VERBS = {'embed', 'bring', 'feed', 'seed', 'need', 'speed', 'string', 'shed', 'exceed', 'proceed'}
+BODY_LINES, BODY_FILES = 30, 3
+
+
+def guard_patterns():
+    """regexes from the private guard file, one per line ('#' starts a comment); none when the file is absent"""
+    p = os.environ.get('S2H_PUBLIC_GUARD')
+    if not p:
+        try:
+            sys.path.insert(0, os.path.dirname(HERE))
+            import docs_path
+            p = docs_path.doc('public_guard.txt')
+        except Exception:  # noqa: BLE001  a clone with no private repo beside it has no guard list
+            return []
+    if not os.path.exists(p):
+        return []
+    out = []
+    for ln in open(p, encoding='utf-8'):
+        ln = ln.split('#', 1)[0].strip()
+        if ln:
+            out.append(re.compile(ln))
+    return out
+
+
+def staged_size():
+    r = subprocess.run(['git', 'diff', '--cached', '--numstat'], capture_output=True, text=True).stdout
+    rows = [l.split('\t') for l in r.splitlines() if l.strip()]
+    return sum(int(a) + int(b) for a, b, *_ in rows if a.isdigit() and b.isdigit()), len(rows)
+
+
+def errors(msg, size=None):
+    lines = [l for l in msg.split('\n') if not l.startswith('#')]
+    while lines and not lines[0].strip():
+        lines.pop(0)
+    if not lines:
+        return ['the message is empty']
+    subj = lines[0].rstrip()
+    errs = []
+    for pat in guard_patterns():
+        if pat.search('\n'.join(lines)):
+            errs.append('the message matches a guarded pattern (a name or a quoted reply): cite the decision id in a '
+                        '"Decision:" trailer')
+            break
+    if re.match(r'^(Merge|Revert) ', subj):
+        return errs
+    m = SUBJECT.match(subj)
+    if not m:
+        return errs + ['subject "%s" is not "type(scope): summary" with a type of: %s' % (subj[:80], ', '.join(TYPES))]
+    summary = m.group(3)
+    first = summary.split()[0].lower()
+    if len(subj) > 72:
+        errs.append('subject is %d characters (at most 72)' % len(subj))
+    if subj.endswith('.'):
+        errs.append('subject ends with a period')
+    if not re.match(r'[a-z0-9]', summary):
+        errs.append('summary starts with "%s": start with a lower-case imperative verb' % summary[:1])
+    if first not in NOT_VERBS and re.search(r'(ed|ing)$', first):
+        errs.append('summary starts with "%s": use the imperative ("add", "fix", "move")' % first)
+    if BATCH_ID.search(subj):
+        errs.append('subject names a batch id: put it in a "Batch: <id>" trailer')
+    if len(lines) > 1 and lines[1].strip():
+        errs.append('the line after the subject is not blank')
+    body = [l for l in lines[2:] if l.strip() and not TRAILER.match(l)]
+    for l in body:
+        if len(l) > 72 and '://' not in l:
+            errs.append('body line of %d characters (wrap at 72): "%s..."' % (len(l), l[:40]))
+            break
+    n, files = size if size is not None else (0, 0)
+    if (n > BODY_LINES or files > BODY_FILES) and not body:
+        errs.append('a change of %d lines in %d files needs a body: what changed and why' % (n, files))
+    return errs
+
+
+def main(a):
+    if a and a[0] == '--check':
+        errs = errors(a[1], (0, 0))
+    else:
+        errs = errors(open(a[0], encoding='utf-8').read(), staged_size())
+    if errs:
+        sys.stderr.write('COMMIT MESSAGE refused (tools/githooks/commit-msg):\n' + ''.join('  %s\n' % e for e in errs))
+        return 1
+    return 0
+
+
+if __name__ == '__main__':
+    sys.exit(main(sys.argv[1:]))

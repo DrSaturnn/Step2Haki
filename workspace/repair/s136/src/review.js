@@ -1,4 +1,4 @@
-/* s136: Review in the status bar (Jonathan 2026-10-14: "reinvent the brief review and login with pin using the same apple
+/* s136: Review in the status bar (2026-10-14: "reinvent the brief review and login with pin using the same apple
    ios 27 stylized look and put it on the top status bar"; "very quick to jump into the 3 most recommended reviews rather
    than 5"; "Do not include the total briefs count"). A Review pill in the glass toolbar (desktop) and the phone bar's
    Review button open one glass sheet: who is studying (with a passcode pad when the name has a PIN), the 3 briefs the

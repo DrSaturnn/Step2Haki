@@ -19,7 +19,7 @@ only negate the theme are not theme rules):
   that longhand right after the shorthand, as a token holding the shorthand's own component (light unchanged);
 - a theme value using a custom property that is redefined below the root (the Flat look's --e2, --inner on .axm-flat):
   the token is also defined on `<theme prefix> <that selector>`, so var() is resolved where the variable is set
-  (`scoped_tokens`; a call for Jonathan's approval, the alternative being the Flat-look variables moved to the root);
+  (`scoped_tokens`; a call for the owner's approval, the alternative being the Flat-look variables moved to the root);
 - a theme declaration with no light rule to carry it: listed (`no_light_rule`), kept in the theme file for now;
 - an important theme declaration: kept on its rule (`important_kept`); the rule routes to its component's file;
 - an in-between light rule B (same subject compound and property as the theme key K, a different selector the theme rule

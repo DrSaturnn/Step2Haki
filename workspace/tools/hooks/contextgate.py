@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""H6, context alarm (PostToolUse, every tool; Jonathan 2026-10-26 after s154f chat 3 ran to about 240k unnoticed;
-rebased 2026-10-27, Jonathan: "yes lets make those changes", after the lead reported that a fresh chat already measured
+"""H6, context alarm (PostToolUse, every tool; 2026-10-26 after s154f chat 3 ran to about 240k unnoticed;
+rebased 2026-10-27, the owner, after the lead reported that a fresh chat already measured
 129k before any batch work, so the fixed 200k/225k marks left about 70k of working room and would force a restart
 in the middle of a review round).
 Reads the lead's own transcript after each tool call and measures its current context (input + cache write + cache
@@ -52,6 +52,13 @@ def main():
     except ValueError:
         return 0
     tp = d.get('transcript_path') or ''
+    if not d.get('agent_id') and '/subagents/' not in tp:   # the lead's PostToolUse reached this hook (patch.py setup reads it)
+        try:
+            import time
+            json.dump({'epoch': time.time(), 'transcript': bool(tp and os.path.isfile(tp))},
+                      open(C.state('h6_live.json'), 'w', encoding='utf-8'))
+        except OSError:
+            pass
     if d.get('agent_id') or '/subagents/' in tp or not tp:
         return 0
     n = current(tp)

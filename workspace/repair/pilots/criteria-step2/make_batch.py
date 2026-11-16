@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""s163 generator (CRITERIA_STEP2.md Part E; Jonathan 2026-11-04, D1 and D5: "would the prototype then simply be what
+"""s163 generator (CRITERIA_STEP2.md Part E; 2026-11-04, D1 and D5: "would the prototype then simply be what
 is shipped?"). Built from the prototype claude/pending/criteria_step2/move_criteria.py. Reads the live page and writes
 repair/s163/*.json as small brief-scoped edits (never replace_brief, so the READY gate is not involved):
 

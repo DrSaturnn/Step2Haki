@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""s148g First step split on the page (Jonathan 2026-10-20; SITE_BODY_GLANCE item 2): rewrite one 5a First step band
+"""s148g First step split on the page (2026-10-20; SITE_BODY_GLANCE item 2): rewrite one 5a First step band
 of a brief into one row group per order, each spanning only its own results, from a pairing (one order number per
 finding). The markup is exactly what tools/spine/outline_render.w5a writes for a band with "pair", so later builds from
 an outline give the same bytes. Text, masks and hovers are carried byte for byte; only the grouping changes.

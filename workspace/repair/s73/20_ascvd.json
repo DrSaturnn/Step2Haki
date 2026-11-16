@@ -16,7 +16,7 @@
     "q_ae18a366ba6a50b0b9e0"
    ],
    "ledger": "repair/migration/merge/ascvd/claim_map.json + repair/migration/merge/hiv-vax/claim_map.json (local-only)",
-   "note": "merge (Jonathan 2026-10-03: generalized titles, merge similar briefs): lipid-screen split; lipid half into ascvd, vaccine-eligibility half into hiv-vax"
+   "note": "merge (2026-10-03: generalized titles, merge similar briefs): lipid-screen split; lipid half into ascvd, vaccine-eligibility half into hiv-vax"
   },
   {
    "op": "replace_global",

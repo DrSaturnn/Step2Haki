@@ -1,4 +1,4 @@
-/* s143: the Lithium Glance mockup's sidebar and canvas, ported as the site's own components (Jonathan 2026-10-15:
+/* s143: the Lithium Glance mockup's sidebar and canvas, ported as the site's own components (2026-10-15:
    "the navigation, scroll behavior, size, tile style etc should be the new step2haki components from this mockup").
    One component (#nav.axn) replaces the layered s136 to s141 sidebar styling; its script is the s143 axnav block.
    Values are the mockup's (index.html of Lithium_Glance.zip): brand row, search pill, systems that fold, brief tiles,

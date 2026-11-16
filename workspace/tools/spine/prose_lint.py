@@ -67,7 +67,8 @@ def vis(el):
                 out.append(str(c))
             elif isinstance(c, Tag):
                 cl = _cls(c)
-                if c.name in SKIP_TAGS or 'sp-pop-b' in cl or c.get('aria-hidden') == 'true' \
+                if (c.name in SKIP_TAGS and 'sp-a' not in cl) or 'sp-pop-b' in cl or 'sp-vl' in cl or 'sp-k' in cl \
+                        or c.get('aria-hidden') == 'true' \
                         or 'sp-n' in cl or 'subq' in cl or 'alias' in cl or 'cap-sub' in cl:
                     continue
                 if 'op' in cl:               # cause-and-effect arrow glyph
@@ -407,12 +408,110 @@ def text_checks(text, region, tag='', mnemonic=False, mn_frags=()):
     return hits
 
 
+
+# --------------------------------------------------------------------------------------------------------------------
+# 3b. s170: the header list as data (T3), hover lines (T4), source kickers (T5)
+# --------------------------------------------------------------------------------------------------------------------
+HEADERS_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
+                            'repair', 'efficiency', 'HEADERS.json')
+STRUCT_TAGS = {'th', 'caption', 'figcaption', 'h5', 'span.lbl', 'span.sk', 'p.kick', 'p.w5z', 'span.w5z',
+               'div.ttl>span', 'p.wg', 'summary', 'b.pp-t', 'p.wl>b'}
+_HDR = None
+
+
+def hnorm(t):
+    return re.sub(r'\s+', ' ', (t or '').strip().lower())
+
+
+def headers_data():
+    global _HDR
+    if _HDR is None:
+        try:
+            d = json.load(open(HEADERS_PATH, encoding='utf-8'))
+        except (OSError, ValueError):
+            d = {}
+        _HDR = {'retired': {hnorm(x) for x in d.get('retired', [])},
+                'patterns': [re.compile(p) for p in d.get('retired_patterns', [])],
+                'ok': {hnorm(x) for x in d.get('allowed', []) + d.get('known', [])},
+                'loaded': bool(d)}
+    return _HDR
+
+
+def retired_pattern(t, pats=None):
+    pats = [re.compile(p) for p in pats] if pats is not None else headers_data()['patterns']
+    return any(p.search(t or '') for p in pats)
+
+
+def structural_headers(inner_html):
+    """[(tag, text)] for the brief's structural headers: column heads, captions, step and tile labels, timeline titles
+    and tags. Practice items and chrome excluded."""
+    soup = BeautifulSoup(inner_html, 'lxml') if isinstance(inner_html, str) else inner_html
+    out = []
+    for el in (soup.body or soup).find_all(True):
+        if is_practice_container(el) or _anc(el, is_practice_container) or 'sp-pop-b' in _cls(el) or \
+                _anc(el, lambda t: 'sp-pop-b' in _cls(t)):
+            continue
+        if el.name == 'p' and 'wl' in _cls(el):
+            lb = el.find('b')
+            if lb is not None and lb.parent is el and el.contents and el.contents[0] is lb:
+                out.append(('p.wl>b', vis(lb)))
+            continue
+        c = classify(el)
+        if c is None or c[0] != 'header' or c[1] not in STRUCT_TAGS:
+            continue
+        el2 = el
+        if c[1] in ('caption', 'figcaption') and el.find(['ol', 'ul', 'div', 'table', 'figure']):
+            el2 = BeautifulSoup(str(el), 'lxml').find(c[1])
+            for blk in el2.find_all(['ol', 'ul', 'div', 'table', 'figure']):
+                blk.decompose()
+        t = vis(el2)
+        if t:
+            out.append((c[1], t))
+    return out
+
+
+SRC_KICK = re.compile(r"^(?:Label|.*\blabel\b|AnKing|UWorld|NBME|Merck|MSD|StatPearls|First Aid|Pocket Medicine|"
+                      r"UpToDate|Step 2 answer)", re.I)
+ANCHOR_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
+                           'repair', 'efficiency', 'ANCHOR_ALLOW.json')
+ANCHOR_STOP = set('a an the of and or to in on for with by at as is are be from that this its it into than then when if '
+                  'not no after before over under per vs versus also only more most less first second why what which how'.split())
+_ANCHOR = None
+
+
+def anchor_allow():
+    """keys 'trigger|title' judged to fit in the s170 anchor pass although they share no content word"""
+    global _ANCHOR
+    if _ANCHOR is None:
+        try:
+            _ANCHOR = set(json.load(open(ANCHOR_PATH, encoding='utf-8')).get('fits', []))
+        except (OSError, ValueError):
+            _ANCHOR = set()
+    return _ANCHOR
+
+
+def anchor_stems(t):
+    return {w[:5] for w in re.findall(r'[a-z0-9][a-z0-9-]+', t.lower()) if w not in ANCHOR_STOP and len(w) > 2}
+
+
+HOVER_LINE_MAX = 16          # TEXTBOOK_STYLE rule 6: hover line about 12 words; counted over 16
+
+
+def hover_lines(copy):
+    """the hover body's lines: span.sp-l elements when present, else its sentences."""
+    ls = copy.find_all('span', class_='sp-l')
+    if ls:
+        return [re.sub(r'\s+', ' ', vis(x)).strip() for x in ls]
+    return None
+
+
 # --------------------------------------------------------------------------------------------------------------------
 # 4. Brief and page API
 # --------------------------------------------------------------------------------------------------------------------
-def lint_brief(inner_html, report_only=False):
+def lint_brief(inner_html, report_only=False, touched=False):
     """Hits for one brief's inner HTML: [{'pattern', 'region', 'text', 'match', 'tag'}]. Practice items are excluded.
-    report_only=True also returns the uncounted header_wh_template hits."""
+    report_only=True also returns the uncounted header_wh_template hits. touched=True (the brief's text changed: the
+    prose-touched check and verify.py) adds header_new, a structural header in neither HEADERS.json allowed nor known."""
     soup = BeautifulSoup(inner_html, 'lxml')
     for t in soup(['style', 'script']):
         t.decompose()
@@ -487,16 +586,33 @@ def lint_brief(inner_html, report_only=False):
 
     # hover cards: title is a header, body is prose
     pops = {e.get('id'): e for e in soup.select('span.sp-pop-b')}
-    for btn in soup.select('button.sp-pop'):
-        body = pops.get(btn.get('aria-controls'))
+    # s167c: a short hover shown as a visible line (span.sp-vl) is linted as the hover it was
+    pairs = [(b, pops.get(b.get('aria-controls'))) for b in soup.select('button.sp-pop')] + \
+            [(v, v) for v in soup.select('span.sp-vl')]
+    for btn, body in pairs:
         if body is None or _anc(btn, is_practice_container) or 'nbd' in _cls(btn):
             continue
         ct = body.find('span', class_='sp-ct')
         htitle = vis(ct) if ct is not None else ''
-        copy = BeautifulSoup(str(body), 'lxml').find('span', class_='sp-pop-b')
+        copy = BeautifulSoup(str(body), 'lxml').find('span', class_=body.get('class'))
         first = copy.find('span', class_='sp-ct')
         if first is not None:
             first.decompose()
+        for k in copy.find_all('span', class_='sp-k'):   # s167c: the old trigger label, kept as the card's kicker
+            kt = vis(k)
+            if SRC_KICK.match(kt) and not _anc(btn, is_practice_container):
+                emit('hover_title', 'span.sp-k', kt, [('source_kicker', kt)])    # s170 T5 (N4, C7)
+            k.decompose()
+        hl = hover_lines(copy)
+        # s170 A1 (D-20261108-5): the trigger names what its card explains; a trigger sharing no content word with the
+        # card's title, kicker or first line is counted unless the anchor pass judged it a fit (ANCHOR_ALLOW.json)
+        if btn.name == 'button':
+            trig = vis(btn)
+            kick = ' '.join(vis(k) for k in body.find_all('span', class_='sp-k'))
+            first_l = vis(hl[0]) if hl and not isinstance(hl[0], str) else (hl[0] if hl else vis(copy)[:160])
+            if trig and not (anchor_stems(trig) & anchor_stems(htitle + ' ' + kick + ' ' + first_l)) and \
+                    (trig + '|' + htitle) not in anchor_allow():
+                emit('hover_title', 'button.sp-pop', trig, [('hover_anchor', '%s -> %s' % (trig[:40], htitle[:40]))])
         parts = []
 
         def walkb(n):
@@ -509,21 +625,39 @@ def lint_brief(inner_html, report_only=False):
                     if 'op' in _cls(c):
                         parts.append(' -> ')
                         continue
-                    blk = c.name in BLOCK_TAGS or 'sp-why-l' in _cls(c)
+                    blk = c.name in BLOCK_TAGS or 'sp-why-l' in _cls(c) or 'sp-l' in _cls(c)
+                    # a hover line (span.sp-l) ends its sentence: ' · ' is the line boundary DOT_SPLIT splits on, so
+                    # the length check counts each line, not lines joined without a period (s170 pc-snri lane)
+                    end = ' · ' if 'sp-l' in _cls(c) else ' '
                     if blk:
                         parts.append(' ')
                     walkb(c)
                     if blk:
-                        parts.append(' ')
+                        parts.append(end)
         walkb(copy)
         btxt = re.sub(r'\s+', ' ', ''.join(parts)).strip()
-        has_break = bool(copy.find(['br', 'div', 'p', 'ol', 'ul', 'li']) or copy.find(class_='sp-why-l'))
+        has_break = bool(copy.find(['br', 'div', 'p', 'ol', 'ul', 'li']) or copy.find(class_=['sp-why-l', 'sp-l']))
         if htitle:
             emit('hover_title', 'span.sp-ct', htitle, header_checks(htitle, 'span.sp-ct') +
                  [(p, m) for p, m in text_checks(htitle, 'header') if p in ('source_narration', 'meta_words')])
         emit('hover', 'span.sp-pop-b', btxt, text_checks(btxt, 'hover', 'span.sp-pop-b'))
         if nwords(btxt) > 30 and not has_break:
             emit('hover', 'span.sp-pop-b', btxt, [('hover_no_break_over_30', '%d words, no break' % nwords(btxt))])
+        # s170 T4: one idea per hover line, about 12 words; a line over 16 words is counted (sentences when the body
+        # has no span.sp-l lines)
+        for ln in (hl if hl is not None else [x for s0 in sentences(btxt) for x in DOT_SPLIT.split(s0)]):
+            if nwords(ln) > HOVER_LINE_MAX:
+                emit('hover', 'span.sp-pop-b', btxt, [('hover_line_long', '%d words: %s...' % (nwords(ln), ln[:50]))])
+
+    # s170 T3: structural headers against repair/efficiency/HEADERS.json
+    hd = headers_data()
+    if hd['loaded']:
+        for tag, t in structural_headers(soup):
+            n = hnorm(t)
+            if n in hd['retired'] or retired_pattern(t):
+                emit('header', tag, t, [('header_retired', t)])
+            elif touched and n not in hd['ok']:
+                emit('header', tag, t, [('header_new', t)])
     return hits
 
 
@@ -532,7 +666,11 @@ def text_key(inner_html):
     soup = BeautifulSoup(inner_html, 'lxml')
     for t in soup(['style', 'script']):
         t.decompose()
-    return re.sub(r'\s+', ' ', soup.get_text(' ')).strip()
+    for t in soup.find_all(attrs={'aria-hidden': 'true'}):   # chart furniture (axis labels, arrows) is not text (s167c)
+        t.decompose()
+    t = re.sub(r'\s+', ' ', soup.get_text(' ')).strip()
+    # tag boundaries add a space before closing punctuation and after an opening parenthesis (s167c anchors); not text
+    return re.sub(r'\( ', '(', re.sub(r' ([;:,.!?)])', r'\1', t))
 
 
 def changed_briefs(ref_html, page_html):
@@ -602,7 +740,7 @@ def main(a):
     if '--touched' in a:
         bad = 0
         for b in changed_briefs(read_page(_arg(a, '--touched')), page):
-            hs = lint_brief(b.inner)
+            hs = lint_brief(b.inner, touched=True)
             if hs:
                 bad += 1
                 print('PROSE-LINT touched brief %s has %d hits:' % (b.id, len(hs)))

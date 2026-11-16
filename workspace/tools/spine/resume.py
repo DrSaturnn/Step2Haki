@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""What a continuation chat reads, and nothing more (Jonathan 2026-10-26, after s154f chat 3 ran past the restart point
+"""What a continuation chat reads, and nothing more (2026-10-26, after s154f chat 3 ran past the restart point
 reading whole docs). Run once after the clone, before anything else:
 
   python3 /home/claude/Step2Haki/workspace/tools/spine/resume.py [batch]
 
 Prints: the handoff State; the open batch's file as an outline (headings with line ranges) plus its chunk table; the
 DIGEST lines that name the batch; and the reading rules. Then read only the batch-file section the State names as next,
-by line range (sed -n A,Bp). The batch defaults to the first "**sNNN OPEN**" in the State.
+by line range (sed -n A,Bp). The batch defaults to the first State entry when its head reads "sNNN OPEN <date>".
 """
 import os
 import re
@@ -34,16 +34,24 @@ def section(text, head):
 
 def main(argv):
     hand = open(docs_path.doc('STEP2HAKI_HANDOFF.md'), encoding='utf-8').read()
-    st = section(hand, 'State')
-    st = st.split('\n- **s', 1)[0] + ''.join('\n- **s' + p for p in st.split('\n- **s')[1:2])  # the open batch and the next item
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import doc_lint
+    ents = doc_lint.state_entries(hand)   # the State holds the open batch (or last ship) and the one before it
+    st = '## State\n\n' + '\n'.join(b for _, b in ents[:2])
     print(st, '\n')
-    m = re.search(r'\*\*(s\d+[a-z]?) OPEN\*\*', st)
+    for e in doc_lint.state_errors(docs_path.docs_dir(), WS):
+        print('STATE-LINT', e)
+    print('Core rules (STANDING_DIRECTIONS):')
+    for l in doc_lint.core_rules(open(docs_path.doc('STANDING_DIRECTIONS.md'), encoding='utf-8').read()):
+        print('  ' + l)
+    print()
+    m = re.search(r'^(s\d+[a-z]?) OPEN\b', ents[0][0]) if ents else None
     batch = argv[0] if argv else (m.group(1) if m else None)
     if not batch:
-        print('No open batch in the State: a launch reads the full runbook read order.')
+        print('No open batch in the State: a launch runs python3 tools/spine/launch.py <type> for its read order.')
         print(RULES)
         return 0
-    bf = os.path.join(WS, 'repair', batch, batch.upper() + '.md')
+    bf = docs_path.batch_file(batch) or os.path.join(docs_path.batch_dir(batch), batch.upper() + '.md')
     if os.path.exists(bf):
         lines = open(bf, encoding='utf-8').read().split('\n')
         heads = [(i + 1, l) for i, l in enumerate(lines) if l.startswith('## ')]

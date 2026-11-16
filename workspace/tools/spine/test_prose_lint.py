@@ -80,9 +80,35 @@ clean('even as concession', '<p>Mood improves even as sleep worsens.</p>')
 clean('even with concession', '<p>Mortality is 20% even with treatment.</p>')
 clean('above all three as quantity', '<p>Ferritin is above all three cutoffs.</p>')
 expect('caption header text leaves out a nested timeline',
-       [h['text'] for h in P.lint_brief('<table><caption>Follow-up decisions<ol class="sp-trk"><li><b>under 4 wk</b>'
+       [h['text'] for h in P.lint_brief('<table><caption>Follow-up<ol class="sp-trk"><li><b>under 4 wk</b>'
                                         '<span>too early to judge</span></li></ol></caption></table>', report_only=True)
         if h['region'] == 'header'] == [])
+# s170 T3 to T5: header list, hover lines, source kickers
+catches('retired header (H13)', '<table><tr><th>Decides it</th></tr></table>', 'header_retired')
+catches('retired caption pattern (H2)', '<table><caption>Seizure mimics, most tempting first</caption></table>', 'header_retired')
+catches('retired timeline tag (H24)', '<figure class="lcw"><p class="wl"><b>Shows</b>agitation in some patients</p></figure>', 'header_retired')
+clean('approved header (C1)', '<table><tr><th>Distinguishing feature</th></tr></table>')
+expect('new header counted only on a touched brief',
+       'header_new' in [h['pattern'] for h in P.lint_brief('<table><tr><th>Zxq header</th></tr></table>', touched=True)]
+       and 'header_new' not in [h['pattern'] for h in P.lint_brief('<table><tr><th>Zxq header</th></tr></table>')])
+expect('known header passes on a touched brief',
+       'header_new' not in [h['pattern'] for h in P.lint_brief('<table><tr><th>Diagnosis</th></tr></table>', touched=True)])
+POPB = ('<p><button class="sp-pop" aria-controls="x1">Title</button><span class="sp-pop-b" id="x1" hidden>%s'
+        '<span class="sp-ct">Title</span>%s</span></p>')
+catches('hover line over 16 words', POPB % ('', '<span class="sp-l">%s</span>' % words(17)), 'hover_line_long')
+clean('hover lines of 12 words', POPB % ('', '<span class="sp-l">%s</span><span class="sp-l">%s</span>' % (words(12), words(12))))
+clean('hover lines without periods are separate sentences (length_over_30)',
+      POPB % ('', ''.join('<span class="sp-l">%s</span>' % words(12) for _ in range(3))))
+catches('hover sentence over 16 words, no lines', POPB % ('', words(18) + '.'), 'hover_line_long')
+catches('source kicker', POPB % ('<span class="sp-k">Label</span>', '<span class="sp-l">Diarrhea, tremor</span>'), 'source_kicker')
+clean('kicker naming no source', POPB % ('<span class="sp-k">Mnemonic</span>', '<span class="sp-l">Diarrhea, tremor</span>'))
+ANC = ('<p>Nocturnal, eased by shaking; <button class="sp-pop sp-a" aria-controls="a1">%s</button><span class="sp-pop-b" '
+       'id="a1" hidden><span class="sp-ct">Phalen and Tinel</span><span class="sp-l">Phalen: wrist flexion</span></span></p>')
+catches('hover anchor: trigger shares no word with its card', ANC % 'Nocturnal', 'hover_anchor')
+clean('hover anchor: trigger on the card term', ANC % 'Tinel and Phalen signs')
+P._ANCHOR = {'Nocturnal|Phalen and Tinel'}
+clean('hover anchor: allow-listed fit', ANC % 'Nocturnal')
+P._ANCHOR = None
 catches('wh header', '<h5>What raises the stakes</h5>', 'header_wh_word')
 catches('P14 hedge', '<table><tr><td>A monoamine oxidase inhibitor (MAOI), or one stopped inside its washout</td>'
         '</tr></table>', 'hedged_narration')
@@ -93,7 +119,18 @@ catches('two semicolons', '<table><tr><td>Painful shallow ulcers with a gray bas
 catches('hover paragraph', '<p>Term <button type="button" class="sp-pop" aria-controls="h1">More</button>'
         '<span class="sp-pop-b" id="h1" hidden><span class="sp-ct">More</span>%s.</span></p>' % words(32),
         'hover_no_break_over_30')
-catches('branch otherwise', '<table><tr><td>Refer for airway surgery; otherwise reassure</td></tr></table>', 'branch')
+# s167c N7: a hover anchored on a term (button.sp-a) is line text; a short hover shown as a line (span.sp-vl) is linted
+# as the hover it was; the old label kept as a kicker (span.sp-k) is neither
+catches('anchor button text is line text', '<p>Toxicity <button type="button" class="sp-pop sp-a" aria-controls="h2">'
+        'even</button> at usual doses<span class="sp-pop-b" id="h2" hidden>Card text here.</span></p>', 'intensifier')
+catches('visible line linted as a hover', '<p>Term <span class="sp-vl"><span class="sp-k">More</span>%s.</span></p>'
+        % words(32), 'hover_no_break_over_30')
+clean('kicker and visible line stay out of the line', '<p>Lithium level <span class="sp-vl"><span class="sp-k">Why</span>'
+      'Narrow window.</span></p>')
+expect('text_key: aria-hidden chart furniture and tag-boundary spaces are not text',
+       P.text_key('<p><b>Lithium</b>, renal (<i>x</i>)<span aria-hidden="true">0 1 wk</span></p>')
+       == P.text_key('<p>Lithium, renal (x)</p>'))
+catches('branch otherwise','<table><tr><td>Refer for airway surgery; otherwise reassure</td></tr></table>', 'branch')
 catches('branch if not', '<p>Is it glomerular, and if not, does a symptom name the cause?</p>', 'branch')
 catches('intensifier even', '<table><tr><td>Toxicity even at usual doses</td></tr></table>', 'intensifier')
 for w in ('really', 'truly', 'actually', 'most of all', 'above all', 'crucially', 'importantly'):
