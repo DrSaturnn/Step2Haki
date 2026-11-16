@@ -104,9 +104,9 @@ html[data-ph-tabs="float"] body.navset #nav #axdisp{bottom:calc(var(--tab-h) + 2
 
 /* AxBx deck surface (values read from the deck's XML): flat #ECEDF1 canvas, #F3F4F8 cards with a white hairline edge and one
    shadow straight down (blur 14, offset 6, #545A78 at 32%), ink #1C1D22. Token values only; light theme only. */
-html[data-ph-surf="axbx"]:not([data-theme="dark"]){
+html[data-ph-surf^="axbx"]:not([data-theme="dark"]){
 --canvas-a:#ECEDF1;--canvas-b:#ECEDF1;--porcelain:#F3F4F8;--card:#F3F4F8;--raised:#F3F4F8;--recess:#E4E6EC;--recess-2:#DDDFE7;
---hair:rgba(84,90,120,.16);--ink:#1C1D22;--ink-2:#2E3038;--muted:#6A6F7E;--faint:#8C91A0;
+--hair:rgba(84,90,120,.16);--ink:#1C1D22;--ink-2:#2E3038;--muted:#5C6170;--faint:#8C91A0;
 --lt:rgba(255,255,255,0);--lt-soft:rgba(255,255,255,0);--dk:rgba(84,90,120,.20);--dk-soft:rgba(84,90,120,.14);
 --e1:0 6px 14px rgba(84,90,120,.30),inset 0 0 0 1px rgba(255,255,255,.95);
 --e2:0 4px 10px rgba(84,90,120,.26),inset 0 0 0 1px rgba(255,255,255,.95);
@@ -114,11 +114,32 @@ html[data-ph-surf="axbx"]:not([data-theme="dark"]){
 --inner:inset 0 1px 3px rgba(84,90,120,.26),inset 0 0 0 1px rgba(84,90,120,.08);--inner-2:inset 0 1px 2px rgba(84,90,120,.22),inset 0 0 0 1px rgba(84,90,120,.07);
 --lip:inset 0 0 0 1px rgba(255,255,255,.95);--r-card:14px;--ph-r:14px;--ph-glass:rgba(243,244,248,.80);
 --p-F4F5F5:#F3F4F8;--p-F3F4F4:#F3F4F8;--p-EEF0F0:#F3F4F8;--p-EDEEEE:#F3F4F8;--p-E9EBEB:#F3F4F8;--p-E7E9E9:#F3F4F8;--p-F2F4F4:#F3F4F8;--p-EFF1F1:#F3F4F8;--p-EDEFEF:#F3F4F8;--p-E6E8E8:#F1F2F6;--p-E2E5E5:#E4E6EC;--p-E0E3E3:#E4E6EC;--p-DCDFDF:#DDDFE7;--p-EFF0F0-a0:rgba(243,244,248,0)}
-html[data-ph-surf="axbx"]:not([data-theme="dark"]) #phhome .hh-go{border-radius:6px;background:#DDDFE7;color:#2E3038}
-html[data-ph-surf="axbx"]:not([data-theme="dark"]) #phhome .hh-n b,html[data-ph-surf="axbx"]:not([data-theme="dark"]) #phhome .hh-big b{color:#1C1D22}
-html[data-ph-surf="axbx"]:not([data-theme="dark"]) #phhome .hh-n em,html[data-ph-surf="axbx"]:not([data-theme="dark"]) #phhome .hh-big em{color:#6A6F7E}
-html[data-ph-surf="axbx"]:not([data-theme="dark"]) #phhome .hh-hero{background:#1C1D22;box-shadow:0 6px 14px rgba(84,90,120,.32);color:#FFFFFF}
-html[data-ph-surf="axbx"]:not([data-theme="dark"]) #phhome .hh-hero :is(.hh-ct,.hh-ms b,.hh-big b){color:#FFFFFF}
-html[data-ph-surf="axbx"]:not([data-theme="dark"]) #phhome .hh-hero :is(.hh-ms i,.hh-big em){color:#B4B8C4}
-html[data-ph-surf="axbx"]:not([data-theme="dark"]) #phhome .hh-hero .hh-ms>span{border-top-color:rgba(255,255,255,.14)}
-html[data-ph-surf="axbx"]:not([data-theme="dark"]) #phhome .hh-hero .hh-go{background:#2E3038;color:#FFFFFF}
+html[data-ph-surf^="axbx"]:not([data-theme="dark"]) #phhome .hh-go{border-radius:6px;background:#DDDFE7;color:#2E3038}
+html[data-ph-surf^="axbx"]:not([data-theme="dark"]) #phhome .hh-n b,html[data-ph-surf^="axbx"]:not([data-theme="dark"]) #phhome .hh-big b{color:#1C1D22}
+html[data-ph-surf^="axbx"]:not([data-theme="dark"]) #phhome .hh-n em,html[data-ph-surf^="axbx"]:not([data-theme="dark"]) #phhome .hh-big em{color:#6A6F7E}
+html[data-ph-surf^="axbx"]:not([data-theme="dark"]) #phhome .hh-hero{background:#1C1D22;box-shadow:0 6px 14px rgba(84,90,120,.32);color:#FFFFFF}
+html[data-ph-surf^="axbx"]:not([data-theme="dark"]) #phhome .hh-hero :is(.hh-ct,.hh-ms b,.hh-big b){color:#FFFFFF}
+html[data-ph-surf^="axbx"]:not([data-theme="dark"]) #phhome .hh-hero :is(.hh-ms i,.hh-big em){color:#B4B8C4}
+html[data-ph-surf^="axbx"]:not([data-theme="dark"]) #phhome .hh-hero .hh-ms>span{border-top-color:rgba(255,255,255,.14)}
+html[data-ph-surf^="axbx"]:not([data-theme="dark"]) #phhome .hh-hero .hh-go{background:#2E3038;color:#FFFFFF}
+
+/* ===== r5 (2026-11-15): Browse as a side drawer (over the page, or the page slides aside); deck surface follow-ups ===== */
+html[data-ph-surf="axbx24"]:not([data-theme="dark"]){--r-card:24px;--ph-r:22px}
+@media (max-width:1100px){
+html[data-ph-surf^="axbx"]:not([data-theme="dark"]) #mbar{background:#F3F4F8;box-shadow:0 -4px 14px rgba(84,90,120,.20),inset 0 1px 0 rgba(255,255,255,.95)}
+html[data-ph-surf^="axbx"][data-ph-tabs="float"]:not([data-theme="dark"]) #mbar{background:var(--ph-glass);box-shadow:0 6px 14px rgba(84,90,120,.32),inset 0 0 0 1px rgba(255,255,255,.95)}
+html[data-ph-surf^="axbx"]:not([data-theme="dark"]) #nav{background:#F3F4F8}
+#phscrim{display:none}
+html:is([data-ph-nav="drawer"],[data-ph-nav="push"]){--dw:min(86vw,340px)}
+html:is([data-ph-nav="drawer"],[data-ph-nav="push"]) #phscrim{display:block;position:fixed;left:0;right:0;top:0;bottom:var(--tab-h);z-index:149;background:rgba(18,20,28,.36);opacity:0;pointer-events:none;transition:opacity .3s var(--snp)}
+html:is([data-ph-nav="drawer"],[data-ph-nav="push"]) body.navopen:not(.navset) #phscrim{opacity:1;pointer-events:auto}
+html:is([data-ph-nav="drawer"],[data-ph-nav="push"]) body:not(.navset) #nav{right:auto;width:var(--dw);opacity:1;transform:translateX(-104%);transition:transform .42s var(--spr),visibility 0s .42s;border-radius:0 20px 0 0;outline:none;box-shadow:8px 0 30px rgba(18,20,28,.22),inset -1px 0 0 rgba(255,255,255,.7)}
+html:is([data-ph-nav="drawer"],[data-ph-nav="push"]) body.navopen:not(.navset) #nav{transform:none;transition:transform .42s var(--spr),visibility 0s}
+html:is([data-ph-nav="drawer"],[data-ph-nav="push"]) body.navopen:not(.navset) #phead.on{transform:none}
+html[data-ph-nav="push"] main,html[data-ph-nav="push"] #phead{transition:transform .42s var(--spr)}
+html[data-ph-nav="push"] body.navopen:not(.navset) main,html[data-ph-nav="push"] body.navopen:not(.navset) #phead.on{transform:translateX(var(--dw))}
+html[data-ph-nav="push"] body:not(.navset) #nav{box-shadow:inset -1px 0 0 var(--hair);border-radius:0}
+html[data-ph-nav="push"] #phscrim{background:rgba(18,20,28,.22)}
+html[data-ph-nav="push"] body.navopen:not(.navset) #phscrim{left:var(--dw)}
+@media (prefers-reduced-motion:reduce){html:is([data-ph-nav="drawer"],[data-ph-nav="push"]) #nav,html[data-ph-nav="push"] main,html[data-ph-nav="push"] #phead{transition-duration:.01s!important}}
+}

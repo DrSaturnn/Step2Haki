@@ -9,12 +9,13 @@ var CH = [
   ['bars', 'Bars while reading', [['stay', 'Always shown'], ['hide', 'Hide while scrolling down']], get('bars', 'stay')],
   ['rail', 'Side rail', [['off', 'Off'], ['on', 'Numbered rail, drag to scrub']], get('rail', 'off')],
   ['dx', 'Differential', [['now', 'As now'], ['a', 'A: tighter cards'], ['b', 'B: one card, hairline rows']], get('dx', 'now')],
-  ['home', 'Home (r4)', [['tiles', 'Tiles'], ['list', 'List (r3)']], get('home', 'tiles')],
-  ['tabs', 'Tab bar (r4)', [['float', 'Floating capsule'], ['dock', 'Docked (r3)']], get('tabs', 'float')],
-  ['surf', 'Surface (r4, light only)', [['now', 'Sculpted (now)'], ['axbx', 'AxBx deck']], get('surf', 'now')]
+  ['nav', 'Browse opens as (r5)', [['drawer', 'Side drawer over the page'], ['push', 'Side drawer, page slides aside'], ['screen', 'Full screen (r3)']], get('nav', 'drawer')],
+  ['surf', 'Surface (r5, light only)', [['axbx', 'AxBx deck'], ['axbx24', 'AxBx deck, 24 px corners'], ['now', 'Sculpted (now)']], get('surf', 'axbx')],
+  ['home', 'Home (r4)', [['list', 'List (r3)'], ['tiles', 'Tiles']], get('home', 'list')],
+  ['tabs', 'Tab bar (r4)', [['dock', 'Docked (r3)'], ['float', 'Floating capsule']], get('tabs', 'dock')]
 ];
-if(!H.getAttribute('data-ph-home')) H.setAttribute('data-ph-home', 'tiles');
-if(!H.getAttribute('data-ph-tabs')) H.setAttribute('data-ph-tabs', 'float');
+if(!H.getAttribute('data-ph-nav')) H.setAttribute('data-ph-nav', 'drawer');
+if(!H.getAttribute('data-ph-surf')) H.setAttribute('data-ph-surf', 'axbx');
 function mount(){
   var s = document.getElementById('axdisp'); if(!s || s.querySelector('.php')) return !!s;
   var box = document.createElement('div'); box.className = 'php';
@@ -37,11 +38,70 @@ function mount(){
 }
 var n = 0; (function w(){ if(!mount() && ++n < 40) setTimeout(w, 150); })();
 
+/* r5 Browse as a side drawer: the sidebar slides in from the left over the page (drawer) or the page slides aside with
+   it (push). It opens from the Browse tab or a swipe to the right on the page, and closes from the Browse tab, a tap on
+   the dimmed page, or a swipe to the left. A swipe that starts in the left 20 px is left to Safari's Back gesture, and
+   one that starts inside a table or figure that scrolls sideways is left to that element. */
+(function(){
+  var mode = get('nav', 'drawer'); if(mode === 'screen') return;
+  var nav = document.getElementById('nav'), B = document.body; if(!nav) return;
+  var sc = document.createElement('div'); sc.id = 'phscrim'; sc.setAttribute('aria-hidden', 'true'); B.appendChild(sc);
+  sc.addEventListener('click', function(){ AX.emit('nav:close'); });
+  var main = document.querySelector('main'), g = null;
+  function isOpen(){ return B.classList.contains('navopen'); }
+  function dw(){ return nav.getBoundingClientRect().width || Math.min(innerWidth * 0.86, 340); }
+  function sideScroller(el){
+    for(; el && el !== B; el = el.parentElement){
+      if(el.scrollWidth > el.clientWidth + 4){ var o = getComputedStyle(el).overflowX; if(o === 'auto' || o === 'scroll') return true; }
+    }
+    return false;
+  }
+  function set(f){
+    nav.style.transition = 'none'; nav.style.visibility = 'visible'; nav.style.transform = 'translateX(' + ((f - 1) * 104).toFixed(2) + '%)';
+    sc.style.transition = 'none'; sc.style.opacity = f.toFixed(3);
+    if(mode === 'push'){ var x = 'translateX(' + (f * g.w).toFixed(1) + 'px)'; main.style.transition = 'none'; main.style.transform = x; var h = document.getElementById('phead'); if(h && h.classList.contains('on')){ h.style.transition = 'none'; h.style.transform = x; } }
+  }
+  function clear(){
+    [nav, sc, main, document.getElementById('phead')].forEach(function(e){ if(e){ e.style.transition = ''; e.style.transform = ''; e.style.visibility = ''; e.style.opacity = ''; } });
+  }
+  document.addEventListener('touchstart', function(e){
+    g = null;
+    if(e.touches.length !== 1 || B.classList.contains('navset')) return;
+    var t = e.touches[0], open = isOpen();
+    if(!open){
+      if(t.clientX < 20 || e.target.closest('#mbar,#phead,#rvpanel,#rvsession,input,select,textarea,.hh-row') || sideScroller(e.target)) return;
+    } else if(!e.target.closest('#nav,#phscrim')) return;
+    g = {x: t.clientX, y: t.clientY, open: open, lock: false, f: open ? 1 : 0, w: open ? dw() : Math.min(innerWidth * 0.86, 340), t: Date.now(), lx: t.clientX, v: 0};
+  }, {passive: true});
+  document.addEventListener('touchmove', function(e){
+    if(!g) return;
+    var t = e.touches[0], dx = t.clientX - g.x, dy = t.clientY - g.y;
+    if(!g.lock){
+      if(Math.abs(dy) > 10 && Math.abs(dy) >= Math.abs(dx)){ g = null; return; }
+      if(Math.abs(dx) < 12 || Math.abs(dx) < 1.6 * Math.abs(dy)) return;
+      if(g.open ? dx > 0 : dx < 0){ g = null; return; }
+      g.lock = true;
+    }
+    if(e.cancelable) e.preventDefault();
+    var now = Date.now(); g.v = (t.clientX - g.lx) / Math.max(1, now - g.t); g.lx = t.clientX; g.t = now;
+    g.f = Math.max(0, Math.min(1, (g.open ? g.w + dx : dx) / g.w));
+    set(g.f);
+  }, {passive: false});
+  function end(){
+    if(!g || !g.lock){ g = null; return; }
+    var want = g.v > 0.35 ? true : g.v < -0.35 ? false : g.f > 0.5, was = g.open; g = null;
+    nav.getBoundingClientRect();
+    clear();
+    if(want && !was) AX.emit('nav:open'); else if(!want && was) AX.emit('nav:close');
+  }
+  document.addEventListener('touchend', end); document.addEventListener('touchcancel', end);
+})();
+
 /* r4 Home as tiles (after the iOS Fitness Summary and Sharing screens): a large title with the profile button, a Review
    card, the Presentations groups as a row of cards, the systems as a two-column grid. Every tile is built from the
    page's own section cards and opens what they open; nothing is stored. */
 (function(){
-  if(get('home', 'tiles') !== 'tiles' || get('layout', 'solo') === 'long') return;
+  if(get('home', 'list') !== 'tiles' || get('layout', 'solo') === 'long') return;
   var mw = document.querySelector('main .masthead .wrap'); if(!mw) return;
   var box = document.createElement('div'); box.id = 'phhome'; mw.insertBefore(box, mw.firstChild);
   var CHEV = '<i class="hh-go" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></i>';
