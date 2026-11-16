@@ -142,21 +142,38 @@ var n = 0; (function w(){ if(!mount() && ++n < 40) setTimeout(w, 150); })();
       var ARW = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>';
       var rc = recent().filter(function(o){ var el = document.getElementById(o.id); if(!el) return false; var w = el.closest('.sectwrap'); return !off(el) && !(w && off(w)); }), who = !!me;
       var hasCc = !!(pres && groups.length), view = hasCc && (seg === 'cc' || !sys.length) ? 'cc' : 'sys';
-      var d = '<div class="hh-top"><h1>Step2Haki</h1><button type="button" class="hh-me" data-do="review" aria-label="Review and profiles">' +
-        (me ? esc(me) : '<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8.2" r="4.2"/><path d="M3.8 20.5c.7-4.2 4.1-6.6 8.2-6.6s7.500 2.400 8.2 6.600z"/></svg>') + '</button></div>' +
-        '<div class="hh-sub"><span>' + esc(meta.slice(0, 2).join(' · ')) + '</span><label class="hh-shelf"><span>' + esc(cur.t) + '</span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 9.500l5-5 5 5M7 14.500l5 5 5-5"/></svg>' +
-        '<select aria-label="Shelf">' + shelves.map(function(s){ return '<option value="' + s.id + '"' + (s.on ? ' selected' : '') + (s.soon ? ' disabled' : '') + '>' + esc(s.t) + (s.soon ? ' (soon)' : '') + '</option>'; }).join('') + '</select></label></div>' +
+      var bar = document.getElementById('phbar');
+      if(!bar){ bar = document.createElement('div'); bar.id = 'phbar'; B2.appendChild(bar); bar.addEventListener('click', onClick); bar.addEventListener('change', onChange);
+        window.addEventListener('scroll', function(){ bar.classList.toggle('sm', (window.pageYOffset || 0) > 24); }, {passive: true}); }
+      bar.innerHTML = '<div class="hh-top"><button type="button" class="hh-ttl" data-do="top">Step2Haki</button><label class="hh-shelf"><span>' + esc(cur.t) + '</span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 9.500l5-5 5 5M7 14.500l5 5 5-5"/></svg>' +
+        '<select aria-label="Shelf">' + shelves.map(function(s){ return '<option value="' + s.id + '"' + (s.on ? ' selected' : '') + (s.soon ? ' disabled' : '') + '>' + esc(s.t) + (s.soon ? ' (soon)' : '') + '</option>'; }).join('') + '</select></label>' +
+        '<button type="button" class="hh-me" data-do="review" aria-label="Review and profiles">' + (me ? esc(me) : '<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8.2" r="4.2"/><path d="M3.8 20.5c.7-4.2 4.1-6.6 8.2-6.6s7.500 2.400 8.2 6.600z"/></svg>') + '</button></div>' +
         '<button type="button" class="hh-s" data-do="search"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.500"/><path d="M16 16l4.500 4.500"/></svg><span>Search topics, findings, drugs</span></button>';
+      var pad = Math.max(12, Math.round(mw.getBoundingClientRect().left + parseFloat(getComputedStyle(mw).paddingLeft || 0)));
+      bar.style.paddingLeft = bar.style.paddingRight = pad + 'px';
+      var wasSm = bar.classList.contains('sm'); bar.classList.remove('sm'); H.style.setProperty('--phbar-h', Math.round(bar.getBoundingClientRect().height || 126) + 'px'); if(wasSm) bar.classList.add('sm');
+      var d = '';
       if(rc.length){
         d += '<div class="hh-card hh-list"><button type="button" class="hh-c" data-do="go" data-h="' + esc(rc[0].h) + '"><span class="hh-cx"><em>Continue</em><b>' + esc(rc[0].t) + '</b>' + (rc[0].l ? '<i>' + esc((rc[0].n ? rc[0].n + ' · ' : '') + rc[0].l) + '</i>' : '') + '</span><span class="hh-play">' + ARW + '</span></button>' +
           rc.slice(1).map(function(o){ return '<button type="button" class="hh-r" data-do="go" data-h="' + esc(o.id) + '"><span>' + esc(o.t) + '</span><span class="hh-ch">' + ARW + '</span></button>'; }).join('') + '</div>';
       }
       d += '<button type="button" class="hh-card hh-rv" data-do="review"><span class="hh-cx"><b>Review</b><i>' + (who ? (due ? due + ' due in ' + esc(cur.t) : 'Nothing due in ' + esc(cur.t)) : 'Choose who is studying to schedule reviews') + '</i></span><span class="hh-pill' + (who && due ? ' on' : '') + '">' + (who ? (due ? 'Start' : 'Open') : 'Set up') + '</span></button>';
-      d += '<div class="hh-h"><h2>Browse</h2><span>' + esc(cur.t) + '</span></div><div class="hh-card hh-list">' +
+      d += '<div class="hh-h"><h2>Browse</h2><span>' + esc(meta.slice(0, 2).join(' \u00b7 ')) + '</span></div><div class="hh-card hh-list">' +
         (sys.length && hasCc ? '<div class="hh-seg" role="group" aria-label="Browse by"><button type="button" data-do="seg" data-v="sys" aria-pressed="' + (view === 'sys') + '">By system</button><button type="button" data-do="seg" data-v="cc" aria-pressed="' + (view === 'cc') + '">By complaint</button></div>' : '') +
         (!sys.length && !hasCc ? '<p class="hh-none">No topics in ' + esc(cur.t) + ' yet.</p>' : '') +
         (view === 'cc' ? groups.map(function(g){ return '<button type="button" class="hh-r"' + ref(g.el) + '><span>' + esc(g.t) + '</span><span class="hh-b">' + esc(g.n) + '</span><span class="hh-ch">' + ARW + '</span></button>'; }).join('')
           : sys.map(function(s){ return '<button type="button" class="hh-r"' + ref(s.el) + '><span>' + esc(s.t) + '</span><span class="hh-b">' + s.n + '</span><span class="hh-ch">' + ARW + '</span></button>'; }).join('')) + '</div>';
+      var bp = AX.blueprint, seen = null; try{ seen = window.axRv.seen(); }catch(e){}
+      if(bp && bp.rows.length){
+        var tb = 0, ts = 0;
+        d += '<div class="hh-h"><h2>Coverage</h2><span>' + esc(bp.name) + '</span></div><div class="hh-card hh-list hh-mx" role="table" aria-label="Coverage by system"><div class="mx-h" role="row"><span role="columnheader">System</span><span role="columnheader">Exam</span><span role="columnheader">Briefs</span><span role="columnheader">Reviewed</span></div>' +
+          bp.rows.map(function(r){
+            var n = r.briefs.length, k = seen ? r.briefs.filter(function(id){ return seen.indexOf(id) > -1; }).length : 0; tb += n; ts += k;
+            return '<div class="mx-r' + (r.gap ? ' gap' : '') + '" role="row"><span class="mx-n" role="rowheader">' + esc(r.label) + '</span><span role="cell">' + (r.range ? r.range[0] + '–' + r.range[1] + '%' : '–') + '</span><span role="cell">' + n + '</span><span role="cell">' + (seen ? k + '/' + n : '–') + '</span><i class="mx-b" aria-hidden="true"><b style="width:' + (seen && n ? Math.round(100 * k / n) : 0) + '%"></b></i></div>';
+          }).join('') +
+          '<div class="mx-r mx-t" role="row"><span class="mx-n" role="rowheader">All rows</span><span role="cell"></span><span role="cell">' + tb + '</span><span role="cell">' + (seen ? ts + '/' + tb : '–') + '</span></div>' +
+          '<p class="mx-f">' + (seen ? 'Reviewed counts the briefs taken through Review at least once.' : 'Choose who is studying, under Review, to fill the Reviewed column.') + ' A marked row has no brief yet or sits below its exam range.</p></div>';
+      }
       d += '<div class="hh-h"><h2>Guides</h2></div>';
       box.innerHTML = d; box._els = els;
       var ft = document.getElementById('phfoot');
@@ -182,21 +199,26 @@ var n = 0; (function w(){ if(!mount() && ++n < 40) setTimeout(w, 150); })();
     }
     box.innerHTML = h; box._els = els;
   }
-  box.addEventListener('click', function(e){
+  var B2 = document.body;
+  function onClick(e){
     var b = e.target.closest('button'); if(!b) return;
+    if(b.dataset['do'] === 'top'){ window.scrollTo({top: 0, behavior: 'smooth'}); return; }
     if(b.dataset['do'] === 'seg'){ seg = b.dataset.v; draw(); return; }
     if(b.dataset['do'] === 'go'){ location.hash = '#' + b.dataset.h; return; }
     if(b.dataset['do'] === 'search'){ AX.emit('nav:open'); var q = document.querySelector('#nav input[type="search"], #nav #search, #nav .axn-srch input'); if(q) q.focus(); return; }
     if(b.dataset['do'] === 'review'){ var r = document.querySelector('#mbar [data-act="review"]'); if(r) r.click(); return; }
     var el = box._els && box._els[+b.dataset.i]; if(el) el.dispatchEvent(new MouseEvent('click', {bubbles: true, cancelable: true}));
-  });
-  box.addEventListener('change', function(e){
+  }
+  box.addEventListener('click', onClick);
+  function onChange(e){
     if(e.target.tagName !== 'SELECT') return;
     var b = document.querySelector('.masthead .shelfpick [data-shelf="' + e.target.value + '"]'); if(b) b.click();
     setTimeout(draw, 60);
-  });
+  }
+  box.addEventListener('change', onChange);
   draw(); setTimeout(draw, 1200);
   document.addEventListener('ax-shelf', function(){ setTimeout(draw, 30); });
+  AX.on('blueprint:set', function(){ setTimeout(draw, 0); });
   function back(){ setTimeout(function(){ if(!H.classList.contains('ph-open')) draw(); }, 80); }
   window.addEventListener('hashchange', back); window.addEventListener('popstate', back); AX.on('phone:home', back);
 })();

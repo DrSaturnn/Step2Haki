@@ -1285,7 +1285,8 @@ function boot(){
   /* the status-bar Review sheet drives this scheduler through window.axRv */
   window.axRv={
     current:current, nameOf:nameOf, initials:initials,
-    due:function(){ var id=current(); return id?split(id).due.length:0; },   /* scheduled reviews only, never the shelf total */
+    due:function(){ var id=current(); return id?split(id).due.length:0; },
+    seen:function(){ var id=current(); return id?Object.keys(dataOf(id).box):null; },   /* ids of the briefs with a review record; null when no one is chosen */   /* scheduled reviews only, never the shelf total */
     pick:function(){ var id=current(); return id?previewPick(id):[]; },
     people:function(){
       var mine=mineOnly(), out=[];

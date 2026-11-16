@@ -88,6 +88,7 @@ function route(){
     if(!solo){ homeY = window.pageYOffset || 0; fromHome = routed; }
     if(solo && solo !== b) solo.classList.remove('ph-cur');
     solo = b; b.classList.add('ph-cur'); H.classList.add('ph-open');
+    [0, 120, 500].forEach(function(ms){ setTimeout(function(){ window.dispatchEvent(new Event('scroll')); }, ms); });   // the header reads the open brief at once
   } else if(solo){
     solo.classList.remove('ph-cur'); solo = null; H.classList.remove('ph-open');
     paint(null);

@@ -112,15 +112,15 @@ function blueprint(){
   var host=document.querySelector('#bpview .bptable'); if(!host) return;
   var shelf=(window.axShelf&&window.axShelf())||'step2';
   var O=BP[shelf]||BP.step2;
-  var rows=O.rows.map(function(r){ return {r:r,p:0,s:0,q:0,n:0}; });
-  var unl={r:{label:'Not in this outline',r:null},p:0,s:0,q:0,n:0,unl:1};
+  var rows=O.rows.map(function(r){ return {r:r,p:0,s:0,q:0,n:0,ids:[]}; });
+  var unl={r:{label:'Not in this outline',r:null},p:0,s:0,q:0,n:0,unl:1,ids:[]};
   function rowFor(code){ for(var i=0;i<rows.length;i++) if(rows[i].r.codes.indexOf(code)>-1) return rows[i];
     for(i=0;i<rows.length;i++) if(rows[i].r.rest) return rows[i]; return unl; }
   var tasks=O.tasks.map(function(t){ return {t:t,q:0}; }), tother={}, total=0;
   document.querySelectorAll('.brief').forEach(function(b){
     if(b.style.display==='none') return;
     var bp=(b.getAttribute('data-bp')||'').split(/\s+/); if(!bp[0]||!CODES[bp[0]]) return;
-    var row=rowFor(bp[0]); row.p++;
+    var row=rowFor(bp[0]); row.p++; if(b.id) row.ids.push(b.id);
     if(bp[1]&&CODES[bp[1]]){ var r2=rowFor(bp[1]); if(r2!==row) r2.s++; }
     var qs=AX.brief.items(b); row.q+=qs.length; row.n+=nbmeIds(AX.brief.content(b)).length;
     qs.forEach(function(m){ var ty=m.type; total++;
@@ -142,6 +142,9 @@ function blueprint(){
   Object.keys(tother).forEach(function(k){ h+=bpRow('bpna',esc(k),[[O.share,'–'],['Bank share',share(tother[k])],['Questions',tother[k]]]); });
   h+='</div>';
   host.innerHTML=h;
+  AX.blueprint={name:O.name, share:O.share, rows:rows.concat(unl.p?[unl]:[]).map(function(x){ var sh=total?100*x.q/total:0;
+    return {label:x.r.label, range:x.r.r||null, briefs:x.ids.slice(), questions:x.q, gap:!x.unl&&(x.p===0||!!(total&&x.r.r&&sh<x.r.r[0]))}; })};
+  AX.emit('blueprint:set');
 }
 function run(){ headerCounts(); chips(); blueprint();
   document.addEventListener('ax-shelf',function(){ blueprint(); }); }

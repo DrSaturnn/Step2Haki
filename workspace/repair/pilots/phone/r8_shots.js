@@ -18,7 +18,7 @@ const { serve } = require('../../../tools/serve_page.js');
     await p.evaluate(() => scrollTo(0, 300)); await p.tap('#phhome .hh-seg [data-v="cc"]'); await shot('5complaint');
     await p.tap('#phhome .hh-seg ~ .hh-r'); await shot('6row_drawer'); const o1 = await p.evaluate(() => document.body.classList.contains('navopen'));
     await p.tap('#mbar [data-act="index"]'); await p.waitForTimeout(500); await p.evaluate(() => scrollTo(0, 0));
-    await p.tap('#phhome .hh-s'); await shot('7search'); const f = await p.evaluate(() => (document.activeElement || {}).tagName);
+    await p.tap('#phbar .hh-s'); await shot('7search'); const f = await p.evaluate(() => (document.activeElement || {}).tagName);
     await p.tap('#mbar [data-act="index"]'); await p.waitForTimeout(500);
     await p.tap('#phhome .hh-c'); await p.waitForTimeout(1500); await shot('8continue');
     console.log(tag, JSON.stringify({ row_opens_drawer: o1, search_focus: f, continue_hash: await p.evaluate(() => location.hash) }));

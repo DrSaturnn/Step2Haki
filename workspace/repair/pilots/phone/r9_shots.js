@@ -20,9 +20,9 @@ const { serve } = require('../../../tools/serve_page.js');
   const shelves = await p.evaluate(() => [...document.querySelectorAll('.masthead .shelfpick [data-shelf]')].map(b => ({ id: b.dataset.shelf, soon: b.classList.contains('soon') })));
   for (const s of shelves.filter(x => !x.soon)) {
     await p.evaluate(() => scrollTo(0, 0));
-    await p.selectOption('#phhome .hh-shelf select', s.id); await p.waitForTimeout(900);
+    await p.selectOption('#phbar select', s.id); await p.waitForTimeout(900);
     const r = { shelf: s.id };
-    r.sub = await p.evaluate(() => document.querySelector('#phhome .hh-sub').innerText.replace(/\n/g, ' | '));
+    r.sub = await p.evaluate(() => document.querySelector('#phbar .hh-top').innerText.replace(/\n/g, ' | '));
     r.rows = await p.evaluate(() => [...document.querySelectorAll('#phhome .hh-h + .hh-list .hh-r')].map(e => e.firstChild.textContent.slice(0, 14) + ' ' + (e.querySelector('.hh-b') || {}).textContent).join(', '));
     r.sum = await p.evaluate(() => [...document.querySelectorAll('#phhome .hh-h + .hh-list .hh-r .hh-b')].reduce((a, e) => a + (+e.textContent), 0));
     const hasSeg = await p.$('#phhome .hh-seg');
@@ -50,12 +50,12 @@ const { serve } = require('../../../tools/serve_page.js');
     console.log(JSON.stringify(r));
   }
   // Continue lists only briefs of the shelf in view
-  await p.selectOption('#phhome .hh-shelf select', shelves[0].id); await p.waitForTimeout(800);
+  await p.selectOption('#phbar select', shelves[0].id); await p.waitForTimeout(800);
   console.log('continue_rows_all_shelf', await p.evaluate(() => document.querySelectorAll('#phhome .hh-c, #phhome .hh-c ~ .hh-r').length));
   // a future shelf: a long name on a listed shelf, then a shelf whose sections are all filtered out
   await p.evaluate(() => { const b = document.querySelector('.masthead .shelfpick [data-shelf].on'); b.firstChild.textContent = 'Emergency Medicine and Critical Care'; document.dispatchEvent(new Event('ax-shelf')); });
   await p.waitForTimeout(400); await p.evaluate(() => scrollTo(0, 0)); await shot('future_longname');
-  console.log('long_name', JSON.stringify(await p.evaluate(() => ({ overflow: document.documentElement.scrollWidth > innerWidth, shelf_w: Math.round(document.querySelector('#phhome .hh-shelf').getBoundingClientRect().width), right: Math.round(document.querySelector('#phhome .hh-shelf').getBoundingClientRect().right) }))));
+  console.log('long_name', JSON.stringify(await p.evaluate(() => ({ overflow: document.documentElement.scrollWidth > innerWidth, shelf_w: Math.round(document.querySelector('#phbar .hh-shelf').getBoundingClientRect().width), right: Math.round(document.querySelector('#phbar .hh-shelf').getBoundingClientRect().right) }))));
   await p.evaluate(() => { document.querySelectorAll('main .wrap > .sectwrap, main .wrap > .psub').forEach(e => { e.style.display = 'none'; }); document.dispatchEvent(new Event('ax-shelf')); });
   await p.waitForTimeout(400); await shot('future_empty');
   console.log('empty_shelf', JSON.stringify(await p.evaluate(() => ({ rows: document.querySelectorAll('#phhome .hh-h + .hh-list .hh-r').length, none: (document.querySelector('#phhome .hh-none') || {}).textContent || null, seg: !!document.querySelector('#phhome .hh-seg') }))));

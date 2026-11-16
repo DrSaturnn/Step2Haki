@@ -94,6 +94,10 @@
       var r = rec.el.getBoundingClientRect();
       if(r.top <= th && r.bottom > th) pick = rec;
     });
+    if(!pick && !wide){   // one brief per screen: the open brief is the one being read from its first line
+      var solo = document.querySelector('main .wrap > .brief.ph-cur');
+      if(solo) live.forEach(function(rec){ if(rec.el === solo) pick = rec; });
+    }
     active = pick;
     if(!pick){ if(!wide) AX.emit('brief:step', null); return; }
     var r = pick.el.getBoundingClientRect();
