@@ -4,7 +4,7 @@ whole process"; runbook section 8b). The lead runs these and reads only their on
 
   python3 tools/spine/patch.py setup <batch>                  the live hook probe (stops when no hook fired on this
                                                               command), the git guard, hook tests, start-up context
-  python3 tools/spine/patch.py s3 <batch> <folder>...         facts_from_spec + build + copy 10_*.json, verify --mech,
+  python3 tools/spine/patch.py s3 <batch> <folder>... [--jobs N] (folders min(3, cores) at a time) facts_from_spec + build + copy 10_*.json, verify --mech,
                                                               batch page, search index, gate, render, preflight, vendor, squeeze
   python3 tools/spine/patch.py review <batch> <round> --opus <folder,...> --sonnet <folder,...> [--since-round K]
                                  [--per-lane N] [--note FILE]   (s154c: lanes of at most N briefs; FILE appended to INSTRUCTIONS.md)
@@ -205,40 +205,50 @@ def stale_delta(f, batch):
     return os.path.exists(rw) and (not os.path.exists(d) or os.path.getmtime(rw) > os.path.getmtime(d))
 
 
-def s3(batch, folders):
+def mech_one(batch, x, L):
+    """one folder's S3 work (outline guard, stale-lane collect, facts, build.py, verify --mech); result lines"""
+    out = []
+    f = folder(x)
+    b = brief_id(f, batch)
+    g = outline_guard(f, batch)
+    if g and g.startswith('STOP'):
+        out.append('%s %s' % (b, g))
+        return out
+    if g:
+        out.append('%s %s' % (b, g))
+    if stale_delta(f, batch):
+        r = sh([sys.executable, 'tools/spine/rewrite_lanes.py', 'check', batch, b])
+        fx = [l for l in (r.stdout + r.stderr).splitlines() if l.startswith('FIX')]
+        if r.returncode:
+            out.append('%s lane check FAIL (the lane file was newer than its delta): %s' % (b, ' | '.join(fx)[:300]))
+            return out
+        out.append('%s delta re-collected (the lane file was newer)' % b)
+    spec = os.path.join(f, 'facts_spec_%s.json' % batch)
+    if os.path.exists(spec):
+        r = sh([sys.executable, 'tools/spine/facts_from_spec.py', spec])
+        if r.returncode:
+            out.append('%s facts FAIL: %s' % (b, (r.stdout + r.stderr).strip()[-300:]))
+            return out
+    sh([sys.executable, os.path.join(f, 'build.py')], check=True)
+    for j in glob.glob(os.path.join(f, '10_*_spine.json')):
+        shutil.copy(j, os.path.join(WS, 'repair', batch))
+    r = sh([sys.executable, 'tools/spine/verify.py', f, '--mech'])
+    log = os.path.join(L, 'mech_%s.log' % b)
+    open(log, 'w').write(r.stdout + r.stderr)
+    fixes = [l for l in (r.stdout + r.stderr).splitlines() if l.startswith('FIX')]
+    out.append('%s mech %s%s' % (b, 'PASS' if r.returncode == 0 else 'FAIL', (': ' + ' | '.join(fixes))[:400] if fixes else ''))
+    return out
+
+
+def s3(batch, folders, jobs=None):
     L = logdir(batch)
     os.makedirs(os.path.join(WS, 'repair', batch), exist_ok=True)
     res = []
-    for x in folders:
-        f = folder(x)
-        b = brief_id(f, batch)
-        g = outline_guard(f, batch)
-        if g and g.startswith('STOP'):
-            res.append('%s %s' % (b, g))
-            continue
-        if g:
-            res.append('%s %s' % (b, g))
-        if stale_delta(f, batch):
-            r = sh([sys.executable, 'tools/spine/rewrite_lanes.py', 'check', batch, b])
-            fx = [l for l in (r.stdout + r.stderr).splitlines() if l.startswith('FIX')]
-            if r.returncode:
-                res.append('%s lane check FAIL (the lane file was newer than its delta): %s' % (b, ' | '.join(fx)[:300]))
-                continue
-            res.append('%s delta re-collected (the lane file was newer)' % b)
-        spec = os.path.join(f, 'facts_spec_%s.json' % batch)
-        if os.path.exists(spec):
-            r = sh([sys.executable, 'tools/spine/facts_from_spec.py', spec])
-            if r.returncode:
-                res.append('%s facts FAIL: %s' % (b, (r.stdout + r.stderr).strip()[-300:]))
-                continue
-        sh([sys.executable, os.path.join(f, 'build.py')], check=True)
-        for j in glob.glob(os.path.join(f, '10_*_spine.json')):
-            shutil.copy(j, os.path.join(WS, 'repair', batch))
-        r = sh([sys.executable, 'tools/spine/verify.py', f, '--mech'])
-        log = os.path.join(L, 'mech_%s.log' % b)
-        open(log, 'w').write(r.stdout + r.stderr)
-        fixes = [l for l in (r.stdout + r.stderr).splitlines() if l.startswith('FIX')]
-        res.append('%s mech %s%s' % (b, 'PASS' if r.returncode == 0 else 'FAIL', (': ' + ' | '.join(fixes))[:400] if fixes else ''))
+    import concurrent.futures as cf
+    jobs = jobs or max(1, min(3, os.cpu_count() or 1))
+    with cf.ThreadPoolExecutor(jobs) as ex:
+        for lines in ex.map(lambda x: mech_one(batch, x, L), folders):
+            res += lines
     page = os.path.join(L, 'index.html')
     out = []
     for name, cmd in (('build', [sys.executable, 'repair/build.py', batch, '--out', page]),
@@ -560,7 +570,13 @@ def main(a):
     if cmd == 'setup':
         setup(batch)
     elif cmd == 's3':
-        s3(batch, a[2:])
+        rest = a[2:]
+        jobs = None
+        if '--jobs' in rest:
+            k = rest.index('--jobs')
+            jobs = int(rest[k + 1])
+            rest = rest[:k] + rest[k + 2:]
+        s3(batch, rest, jobs)
     elif cmd == 'review':
         rnd = int(a[2])
         opt = {k: v for k, v in zip(a[3::2], a[4::2])}
