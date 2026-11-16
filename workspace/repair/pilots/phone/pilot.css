@@ -143,3 +143,10 @@ html[data-ph-nav="push"] #phscrim{background:rgba(18,20,28,.22)}
 html[data-ph-nav="push"] body.navopen:not(.navset) #phscrim{left:var(--dw)}
 @media (prefers-reduced-motion:reduce){html:is([data-ph-nav="drawer"],[data-ph-nav="push"]) #nav,html[data-ph-nav="push"] main,html[data-ph-nav="push"] #phead{transition-duration:.01s!important}}
 }
+
+/* r7: with the floating capsule the drawer and the dimmed page run to the bottom of the screen behind it */
+@media (max-width:1100px){
+html[data-ph-tabs="float"]:is([data-ph-nav="drawer"],[data-ph-nav="push"]) #phscrim{bottom:0}
+html[data-ph-tabs="float"]:is([data-ph-nav="drawer"],[data-ph-nav="push"]) body:not(.navset) #nav{border-radius:0 20px 20px 0}
+html[data-ph-tabs="float"][data-ph-nav="push"] body:not(.navset) #nav{border-radius:0}
+}

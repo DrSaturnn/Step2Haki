@@ -11,11 +11,11 @@ var CH = [
   ['dx', 'Differential', [['now', 'As now'], ['a', 'A: tighter cards'], ['b', 'B: one card, hairline rows']], get('dx', 'now')],
   ['nav', 'Browse opens as (r5)', [['drawer', 'Side drawer over the page'], ['push', 'Side drawer, page slides aside'], ['screen', 'Full screen (r3)']], get('nav', 'drawer')],
   ['surf', 'Surface (r5, light only)', [['axbx', 'AxBx deck'], ['axbx24', 'AxBx deck, 24 px corners'], ['now', 'Sculpted (now)']], get('surf', 'axbx')],
-  ['home', 'Home (r4)', [['tiles', 'Tiles'], ['list', 'List (r3)']], get('home', 'tiles')],
-  ['tabs', 'Tab bar (r4)', [['dock', 'Docked (r3)'], ['float', 'Floating capsule']], get('tabs', 'dock')]
+  ['home', 'Home (r4)', [['list', 'List (r3)'], ['tiles', 'Tiles']], get('home', 'list')],
+  ['tabs', 'Tab bar (r4)', [['float', 'Floating capsule'], ['dock', 'Docked (r3)']], get('tabs', 'float')]
 ];
 if(!H.getAttribute('data-ph-nav')) H.setAttribute('data-ph-nav', 'drawer');
-if(!H.getAttribute('data-ph-home')) H.setAttribute('data-ph-home', 'tiles');
+if(!H.getAttribute('data-ph-tabs')) H.setAttribute('data-ph-tabs', 'float');
 if(!H.getAttribute('data-ph-surf')) H.setAttribute('data-ph-surf', 'axbx');
 function mount(){
   var s = document.getElementById('axdisp'); if(!s || s.querySelector('.php')) return !!s;
@@ -102,7 +102,7 @@ var n = 0; (function w(){ if(!mount() && ++n < 40) setTimeout(w, 150); })();
    card, the Presentations groups as a row of cards, the systems as a two-column grid. Every tile is built from the
    page's own section cards and opens what they open; nothing is stored. */
 (function(){
-  if(get('home', 'tiles') !== 'tiles' || get('layout', 'solo') === 'long') return;
+  if(get('home', 'list') !== 'tiles' || get('layout', 'solo') === 'long') return;
   var mw = document.querySelector('main .masthead .wrap'); if(!mw) return;
   var box = document.createElement('div'); box.id = 'phhome'; mw.insertBefore(box, mw.firstChild);
   var CHEV = '<i class="hh-go" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></i>';
