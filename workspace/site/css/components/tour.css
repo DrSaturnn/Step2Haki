@@ -1,0 +1,93 @@
+/* The welcome card and the tour stops. One root (#axtour) holds the dimmed, blurred backdrop, the card, the ring and
+   the stop panel; .on shows the root, .in runs the entrance and data-m names the stage (card or stop).
+   The card is centered on desktop and a sheet rising from the bottom edge on phones. During a stop the backdrop is
+   clear, the ring's outer shadow dims the page around the tagged elements, and the stop text sits in a panel above the
+   tab capsule on phones and in a popover beside the ring on desktop. .go turns on the ring's move between stops;
+   .lost (no visible target) hides the ring and centers the panel over the backdrop; .wait hides the ring while the
+   page moves to the next stop's screen; .far (the ring has left the popover's anchor) hides the popover's pointer.
+   #axtourpill is the tour offer on a direct link to a brief; .axtourbtn is the replay row of the display sheet. */
+#axtour{position:fixed;left:0;right:0;top:0;bottom:0;z-index:10010;display:flex;align-items:center;justify-content:center;visibility:hidden;pointer-events:none;overscroll-behavior:contain}
+#axtour.on{visibility:visible;pointer-events:auto}
+#axtour .tr-scrim{position:absolute;left:0;right:0;top:0;bottom:0;background:var(--t-tour-scrim);-webkit-backdrop-filter:blur(20px) saturate(140%);backdrop-filter:blur(20px) saturate(140%);opacity:0;touch-action:none;transition:opacity .35s var(--snp)}
+#axtour.in[data-m=card] .tr-scrim,#axtour.in.lost .tr-scrim{opacity:1}
+#axtour .tr-card{position:relative;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;width:min(440px,calc(100vw - 48px));max-height:calc(100vh - 48px);overflow-y:auto;overscroll-behavior:contain;touch-action:pan-y;padding:40px 36px 20px;border-radius:24px;background:var(--t-axdisp-bg);-webkit-backdrop-filter:blur(40px) saturate(190%);backdrop-filter:blur(40px) saturate(190%);box-shadow:var(--t-axdisp-sh);color:var(--ink);font-family:var(--sans);text-align:center;opacity:0;transform:translateY(16px) scale(.96);transition:opacity .3s var(--spr),transform .5s var(--spr)}
+#axtour .tr-card:focus,#axtour .tr-panel:focus{outline:none}
+#axtour.in[data-m=card] .tr-card{opacity:1;transform:none}
+#axtour button{all:unset;box-sizing:border-box;cursor:pointer;-webkit-tap-highlight-color:transparent;font-family:var(--sans)}
+#axtour button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#axtour .tr-grab{display:none}
+#axtour .tr-x{position:absolute;top:14px;right:14px;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--axn-fld);color:var(--muted);transition:background .3s var(--spr),color .3s var(--spr)}
+#axtour .tr-x::after{content:"";position:absolute;left:-7px;right:-7px;top:-7px;bottom:-7px}
+#axtour .tr-x:hover{color:var(--ink)}
+#axtour .tr-x svg{width:12px;height:12px}
+#axtour .tr-mark{flex:none;width:60px;height:60px;border-radius:17px;display:flex;align-items:center;justify-content:center;background:var(--accent);color:var(--rv-on);font:800 23px/1 var(--sans);letter-spacing:-.01em;box-shadow:0 10px 22px -10px color-mix(in srgb,var(--accent) 80%,transparent)}
+#axtour .tr-h{margin:20px 0 0;font:750 28px/1.15 var(--sans);letter-spacing:-.022em;color:var(--ink)}
+#axtour .tr-p{margin:10px 0 0;max-width:36ch;font:500 15.5px/1.45 var(--sans);color:var(--muted)}
+#axtour .tr-rows{list-style:none;align-self:stretch;margin:22px 0 0;padding:0 16px;border-radius:18px;background:var(--axn-fld);text-align:left}
+#axtour .tr-rows li{display:flex;align-items:center;gap:13px;min-height:54px;padding:9px 0;box-sizing:border-box}
+#axtour .tr-rows li + li{border-top:1px solid var(--hair)}
+#axtour .tr-rows .n{flex:none;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent);font:750 14px/1 var(--sans)}
+#axtour .tr-rows .t{font:600 15px/1.35 var(--sans);color:var(--ink)}
+#axtour .tr-f{margin:14px 0 0;font:500 13px/1.4 var(--sans);color:var(--muted)}
+#axtour .tr-go{display:block;align-self:stretch;height:50px;margin:22px 0 0;border-radius:999px;background:var(--accent);color:var(--rv-on);font:650 16px/50px var(--sans);letter-spacing:-.005em;text-align:center;box-shadow:inset 0 1px 0 var(--p-FFFFFF-a28),0 8px 20px -10px color-mix(in srgb,var(--accent) 80%,transparent);transition:transform .25s var(--bnc),filter .2s var(--snp)}
+#axtour .tr-go:hover{filter:brightness(1.06)}
+#axtour .tr-go:active{transform:scale(.98)}
+#axtour .tr-skip{min-height:44px;margin:4px 0 0;padding:0 22px;border-radius:12px;font:600 15px/44px var(--sans);color:var(--muted);transition:color .3s var(--spr)}
+#axtour .tr-skip:hover{color:var(--ink)}
+#axtour .tr-ring{position:absolute;left:0;top:0;width:0;height:0;border-radius:18px;box-shadow:0 0 0 2px var(--accent),0 0 0 200vmax var(--t-tour-dim);opacity:0;pointer-events:none;transition:opacity .35s var(--snp)}
+#axtour.go .tr-ring{transition:opacity .35s var(--snp),left .5s var(--spr),top .5s var(--spr),width .5s var(--spr),height .5s var(--spr)}
+#axtour.in[data-m=stop] .tr-ring{opacity:1}
+#axtour.lost .tr-ring{visibility:hidden}
+#axtour.in.wait .tr-ring{opacity:0}
+#axtour .tr-panel{position:absolute;box-sizing:border-box;width:320px;padding:18px 18px 12px;border-radius:20px;background:var(--t-axdisp-bg);-webkit-backdrop-filter:blur(40px) saturate(190%);backdrop-filter:blur(40px) saturate(190%);box-shadow:var(--t-axdisp-sh);color:var(--ink);font-family:var(--sans);text-align:left;touch-action:pan-y;opacity:0;visibility:hidden;transform:scale(.96);transform-origin:0 var(--tr-ay,50%);transition:opacity .25s var(--snp),transform .45s var(--spr),visibility 0s .45s}
+#axtour[data-side=b] .tr-panel{transform-origin:var(--tr-ay,50%) 0}
+#axtour.go .tr-panel{transition:opacity .25s var(--snp),transform .45s var(--spr),visibility 0s .45s,left .5s var(--spr),top .5s var(--spr)}
+#axtour.in[data-m=stop] .tr-panel{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+#axtour .tr-panel::before{content:"";position:absolute;left:-6px;top:var(--tr-ay,50%);width:14px;height:14px;margin-top:-7px;border-radius:3px;background:var(--t-axdisp-bg);transform:rotate(45deg);clip-path:polygon(0 0,0 100%,100% 100%)}
+#axtour[data-side=b] .tr-panel::before{left:var(--tr-ay,50%);top:-6px;margin:0 0 0 -7px;clip-path:polygon(0 0,100% 0,0 100%)}
+#axtour.lost .tr-panel{left:50%;top:50%;margin:-90px 0 0 -160px}
+#axtour.lost .tr-panel::before,#axtour.far .tr-panel::before{display:none}
+#axtour .tr-sh{margin:0 34px 0 0;font:700 17px/1.25 var(--sans);letter-spacing:-.012em;color:var(--ink)}
+#axtour .tr-sp{margin:6px 0 0;font:500 14.5px/1.42 var(--sans);color:var(--muted)}
+#axtour .tr-foot{display:flex;align-items:center;gap:4px;margin:10px 0 0;min-height:44px}
+#axtour .tr-dots{display:flex;align-items:center;gap:6px;margin-right:auto}
+#axtour .tr-dots i{width:6px;height:6px;border-radius:3px;background:var(--muted);opacity:.3;transition:width .4s var(--spr),opacity .3s var(--snp),background .3s var(--snp)}
+#axtour .tr-dots i.on{width:18px;background:var(--accent);opacity:1}
+#axtour .tr-back{min-height:44px;padding:0 12px;border-radius:12px;font:600 15px/44px var(--sans);color:var(--muted);transition:color .3s var(--spr)}
+#axtour .tr-back:hover{color:var(--ink)}
+#axtour .tr-back[hidden]{display:none}
+#axtour .tr-next{position:relative;height:36px;min-width:76px;padding:0 18px;border-radius:999px;background:var(--accent);color:var(--rv-on);font:650 15px/36px var(--sans);text-align:center;box-shadow:inset 0 1px 0 var(--p-FFFFFF-a28);transition:transform .25s var(--bnc),filter .2s var(--snp)}
+#axtour .tr-next::after{content:"";position:absolute;left:0;right:0;top:-4px;bottom:-4px}
+#axtour .tr-next:hover{filter:brightness(1.06)}
+#axtour .tr-next:active{transform:scale(.97)}
+#axtourpill{position:fixed;right:24px;bottom:24px;z-index:150;display:flex;align-items:center;gap:2px;padding:4px 4px 4px 16px;border-radius:999px;background:var(--t-axdisp-bg);-webkit-backdrop-filter:blur(40px) saturate(190%);backdrop-filter:blur(40px) saturate(190%);box-shadow:var(--t-axdisp-sh);font-family:var(--sans);opacity:0;transform:translateY(10px) scale(.97);transition:opacity .3s var(--snp),transform .45s var(--spr)}
+#axtourpill.in{opacity:1;transform:none}
+#axtourpill button{all:unset;box-sizing:border-box;cursor:pointer;-webkit-tap-highlight-color:transparent}
+#axtourpill button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#axtourpill .tp-go{min-height:44px;font:650 14.5px/44px var(--sans);color:var(--accent);white-space:nowrap}
+#axtourpill .tp-x{width:44px;height:44px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+#axtourpill .tp-x:hover{color:var(--ink)}
+#axtourpill .tp-x svg{width:11px;height:11px}
+#axdisp #modes .axtourbtn .go{display:flex;color:var(--axn-mute)}
+#axdisp #modes .axtourbtn .go svg{width:7px;height:11px}
+@media (--narrow){
+#axtour{align-items:flex-end}
+#axtourpill{right:auto;bottom:auto;left:50%;top:calc(98px + env(safe-area-inset-top,0px));transform:translate(-50%,-10px) scale(.97)}
+#axtourpill.in{transform:translate(-50%,0)}
+#axtour .tr-panel{left:14px;right:14px;bottom:calc(84px + env(safe-area-inset-bottom,0px));width:auto;max-width:480px;margin:0 auto;max-height:200px;overflow-y:auto;overscroll-behavior:contain;padding:22px 18px 8px;border-radius:24px;transform:translateY(24px);transform-origin:50% 100%}
+#axtour .tr-panel::before{display:none}
+#axtour.top .tr-panel{top:calc(8px + env(safe-area-inset-top,0px));bottom:auto}
+#axtour.lost .tr-panel{left:14px;top:auto;bottom:50%;margin:0 auto -90px}
+#axtour .tr-panel .tr-grab{top:7px}
+#axtour .tr-card{width:min(480px,calc(100vw - 20px));max-height:calc(100vh - 40px - env(safe-area-inset-top,0px));margin-bottom:calc(10px + env(safe-area-inset-bottom,0px));padding:30px 20px 8px;border-radius:28px;transform:translateY(calc(100% + 30px));transition:opacity .2s var(--snp),transform .5s var(--spr)}
+#axtour .tr-grab{display:block;position:absolute;top:8px;left:50%;width:36px;height:5px;margin-left:-18px;border-radius:3px;background:var(--muted);opacity:.32}
+#axtour .tr-mark{width:48px;height:48px;border-radius:14px;font-size:18px}
+#axtour .tr-h{margin-top:14px;font-size:24px}
+#axtour .tr-p{margin-top:8px;font-size:15px;line-height:1.4}
+#axtour .tr-rows{margin-top:16px;padding:0 14px}
+#axtour .tr-rows li{min-height:46px;padding:7px 0;gap:12px}
+#axtour .tr-rows .t{font-size:14.5px;line-height:1.3}
+#axtour .tr-f{margin-top:12px;font-size:12.5px}
+#axtour .tr-go{margin-top:16px}
+#axtour .tr-skip{margin-top:2px}
+}

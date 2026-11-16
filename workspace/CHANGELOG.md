@@ -2,6 +2,18 @@
 
 Newest first. Each entry is the commit body written by tools/ship.sh.
 
+## 2026-11-16 s176f: feat(site): welcome card and tour for first-time readers
+
+```
+Page: 209 briefs, 2342 items -> 209 briefs, 2342 items
+Other page changes (nav, headers, scripts): +24664 chars
+Site: discriminator-briefs-site/index.html updated (Vercel deploys on push)
+Checks:
+  gate: PASS 209 briefs, 2342 items (943 with reasons), 1 scripts, 54 checks, base HEAD | allowlisted 21 | 0 failure(s)
+  render: PASS jsdom 24.1.3 | briefs 209 | bankwraps 209 | mcq 2342 (reasons 943) (axCheck 2342, reveal-only 0) | malformed 0 | crit gridded 126/126 | vignette gridded 49/49 | vignette masks 0 | dead anchors 0 | js errors 0
+  vendor: clean (808907 source shingles; page 0.009%)
+```
+
 ## 2026-11-16 s176e: fix(tools): recut the gate fixture and plant the prose-touched hit
 
 ```

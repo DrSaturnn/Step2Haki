@@ -178,7 +178,7 @@
   function toolbar(){
     if(document.getElementById('axbar')) return;
     var edge = document.createElement('div'); edge.id = 'axedge'; edge.setAttribute('aria-hidden', 'true');
-    bar = document.createElement('div'); bar.id = 'axbar'; bar.setAttribute('role', 'toolbar'); bar.setAttribute('aria-label', 'Brief controls');
+    bar = document.createElement('div'); bar.id = 'axbar'; bar.setAttribute('data-tour', 'bar'); bar.setAttribute('role', 'toolbar'); bar.setAttribute('aria-label', 'Brief controls');
     bar.innerHTML = '<span class="axcur" aria-live="polite"><span class="axbn"></span><span class="axcn"></span><span class="axcl"></span></span><span class="axsep"></span>' +
       '<div class="axseg"><span class="axth" aria-hidden="true"></span><button type="button" data-m="read">Read</button><button type="button" data-m="study">Recall</button></div>' +
       '<span class="axsep"></span><button type="button" class="axall">Expand all</button>';

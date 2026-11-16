@@ -60,7 +60,7 @@ function draw(){
   }
   h += '<button type="button" class="hh-card hh-rv" data-do="review"><span class="hh-cx"><b>Review</b><i>' +
     (d.me ? (d.due ? d.due + ' due in ' + esc(d.cur.t) : 'Nothing due in ' + esc(d.cur.t)) : 'Choose who is studying to schedule reviews') + '</i></span><span class="hh-pill' + (d.me && d.due ? ' on' : '') + '">' + (d.me ? (d.due ? 'Start' : 'Open') : 'Set up') + '</span></button>';
-  h += '<div class="hh-h"><h2>Browse</h2><span>' + esc(d.meta.slice(0, 2).join(' · ')) + '</span></div><div class="hh-card hh-list">' +
+  h += '<div class="hh-h"><h2>Browse</h2><span>' + esc(d.meta.slice(0, 2).join(' · ')) + '</span></div><div class="hh-card hh-list" data-tour="browse">' +
     (d.sys.length && hasCc ? '<div class="hh-seg" role="group" aria-label="Browse by"><button type="button" data-do="seg" data-v="sys" aria-pressed="' + (view === 'sys') + '">By system</button><button type="button" data-do="seg" data-v="cc" aria-pressed="' + (view === 'cc') + '">By complaint</button></div>' : '') +
     (!d.sys.length && !hasCc ? '<p class="hh-none">No topics in ' + esc(d.cur.t) + ' yet.</p>' : '') +
     (view === 'cc' ? d.groups : d.sys).map(row).join('') + '</div>';
@@ -96,7 +96,7 @@ function onShelf(){ later(40); }
 function start(){
   if(box || !NARROW.matches) return;
   box = document.createElement('div'); box.id = 'phhome'; mw.insertBefore(box, mw.firstChild);
-  bar = document.createElement('div'); bar.id = 'phbar'; B.appendChild(bar);
+  bar = document.createElement('div'); bar.id = 'phbar'; bar.setAttribute('data-tour', 'find'); B.appendChild(bar);
   foot = document.createElement('button'); foot.type = 'button'; foot.id = 'phfoot';
   var tail = document.querySelectorAll('main .wrap'); tail[tail.length - 1].appendChild(foot);
   foot.addEventListener('click', function(){ var l = document.querySelector('.masthead .axlogbtn'); if(l) l.click(); });

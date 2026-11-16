@@ -149,7 +149,7 @@ if RENDER=$(st render --page "$TMP/index.html"); then RENDER=$(echo "$RENDER" | 
 # replaces the live page as the parity reference; UI_GATE_SKIP=parity (a content batch); each is disclosed in the report.
 UA=(); [ -f "repair/$B/ui_allow.json" ] && UA=(--allow "repair/$B/ui_allow.json"); [ -n "${UI_GATE_SKIP:-}" ] && UA+=(--skip "$UI_GATE_SKIP")
 UIG=$(python3 tools/ui_gate.py "$TMP/index.html" "${UI_GATE_BASE:-$SITE}" "${UA[@]}" 2>&1); UIRC=$?; echo "$UIG" > "$TMP/ui_gate.txt"; tm ui-gate
-[[ $UIRC -eq 0 ]] || fail ui-gate "$UIG"; echo "$UIG" | grep -E '^(parity|theme|a11y|perf|twopane|UI-GATE)'
+[[ $UIRC -eq 0 ]] || fail ui-gate "$UIG"; echo "$UIG" | grep -E '^(parity|theme|a11y|perf|twopane|tour|tourfit|UI-GATE)'
 TRACKED_LO=$(python3 - "$WS" <<'PY'
 import os, subprocess, sys
 sys.path.insert(0, os.path.join(sys.argv[1], 'tools'))

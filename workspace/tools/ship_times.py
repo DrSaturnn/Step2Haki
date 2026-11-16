@@ -32,7 +32,7 @@ def ui_tests(path):
     out = []
     if path and os.path.exists(path):
         for line in open(path, encoding='utf-8').read().splitlines():
-            m = re.match(r'(parity|theme|a11y|perf|twopane)\s+(PASS|FAIL)\b.*?(?:\((\d+) s\))?$', line)
+            m = re.match(r'(parity|theme|a11y|perf|twopane|tourfit|tour)\s+(PASS|FAIL)\b.*?(?:\((\d+) s\))?$', line)
             if m:
                 out.append({'test': m.group(1), 'verdict': m.group(2), 'seconds': int(m.group(3)) if m.group(3) else 0,
                             'ran': bool(m.group(3))})

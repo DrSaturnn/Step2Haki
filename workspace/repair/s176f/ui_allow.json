@@ -1,0 +1,186 @@
+[
+ {
+  "sel": "#axtour",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour.on",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-scrim",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour.in[data-m=\"card\"] .tr-scrim",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-card",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-card:focus",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-panel:focus",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour.in[data-m=\"card\"] .tr-card",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour button",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour button:focus-visible",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-grab",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-x",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-x::after",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-x:hover",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-x svg",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-mark",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-h",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-p",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-rows",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-rows li",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-rows li + li",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-rows .n",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-rows .t",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-f",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-go",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-go:hover",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-go:active",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-skip",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-skip:hover",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-ring",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-panel",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-panel::before",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-sh",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-sp",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-foot",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-dots",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-dots i",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-back",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-back:hover",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-next",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-next::after",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-next:hover",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-next:active",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axdisp #modes .axtourbtn .go",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axdisp #modes .axtourbtn .go svg",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#axtour .tr-panel .tr-grab",
+  "prop": "(count)"
+ }
+]

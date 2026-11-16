@@ -17,7 +17,7 @@ function hashId(){ var id = location.hash.slice(1); try{ id = decodeURIComponent
 
 /* ---------- the header ---------- */
 function makeHead(){
-  head = document.createElement('div'); head.id = 'phead';
+  head = document.createElement('div'); head.id = 'phead'; head.setAttribute('data-tour', 'brief');
   head.innerHTML = '<div class="ph-t"><button type="button" class="ph-back" aria-label="Back">' + svg('<path d="M15 5l-7 7 7 7"/>', 24) + '</button>' +
     '<button type="button" class="ph-ti"><b></b><span></span></button>' +
     '<button type="button" class="ph-rec" aria-pressed="false">' + svg('<path d="M2.5 12s3.5-6.5 9.5-6.5S21.5 12 21.5 12s-3.5 6.5-9.5 6.5S2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/>', 16) + '<span>Recall</span></button></div>' +

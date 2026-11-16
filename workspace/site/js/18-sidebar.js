@@ -37,13 +37,13 @@
     var col = el('button', 'axn-col', SVG_COL); col.type = 'button'; col.setAttribute('aria-label', 'Collapse sidebar'); col.title = 'Collapse sidebar';
     col.addEventListener('click', function(e){ e.stopPropagation(); AX.emit('nav:collapse'); });
     tools.appendChild(col);
-    var cfg = el('button', 'axn-cfg', SVG_CFG); cfg.type = 'button'; cfg.id = 'axcfg';
+    var cfg = el('button', 'axn-cfg', SVG_CFG); cfg.type = 'button'; cfg.id = 'axcfg'; cfg.setAttribute('data-tour', 'replay');
     cfg.setAttribute('aria-label', 'Display settings'); cfg.setAttribute('aria-expanded', 'false'); cfg.setAttribute('aria-controls', 'axdisp');
     tools.appendChild(cfg);
     h.appendChild(tools);
     top.insertBefore(h, top.firstChild);
     if(search){
-      var pill = el('div', 'axn-srch', SVG_SRCH);
+      var pill = el('div', 'axn-srch', SVG_SRCH); pill.setAttribute('data-tour', 'find');
       top.insertBefore(pill, search); pill.appendChild(search);
       var ph = function(){ search.setAttribute('placeholder', 'Search topics, findings, drugs'); };
       ph(); window.addEventListener('load', ph);
@@ -57,7 +57,7 @@
   var SVG_SHELF = '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2.5v9.5M6 2.5v9.5M9.2 3.2l2.6 8.8M1.5 14h13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path></svg>';
   var SVG_DOWN = '<svg width="12" height="8" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>';
   function shelfCard(before, sel){   // before: the search pill, which stays on top
-    var row = el('div', 'axn-shelfrow');
+    var row = el('div', 'axn-shelfrow'); row.setAttribute('data-tour', 'find');
     row.appendChild(el('span', 'ic', SVG_SHELF));
     var t = el('span', 'tx'); t.appendChild(el('span', 'k')).textContent = 'Shelf'; var v = t.appendChild(el('span', 'v')); row.appendChild(t);
     row.appendChild(el('span', 'ch', SVG_DOWN)); row.appendChild(sel);
@@ -68,7 +68,7 @@
   }
 
   /* ---------- the display sheet ---------- */
-  var GROUPS = [['layout', 'Layout'], ['appearance', 'Appearance'], ['study', 'Study']];
+  var GROUPS = [['layout', 'Layout'], ['appearance', 'Appearance'], ['study', 'Study'], ['help', 'Help']];
   function sheet(btn, brand){
     var s = el('div'); s.id = 'axdisp'; s.setAttribute('role', 'dialog'); s.setAttribute('aria-label', 'Display settings'); s.tabIndex = -1;
     s.appendChild(el('div', 'axd-h')).textContent = 'Display';
@@ -187,7 +187,7 @@
     if(b && !AX.brief.isBuilt(b)){ railWait = it; return; }
     var steps = b ? stepsOf(b) : [];
     if(!steps.length) return;
-    var root = el('div', 'axn-rail'), trk = el('div', 'axn-trk'), fill = el('div', 'axn-fill'), rows = el('div', 'axn-rows'), lens = el('div', 'axn-lens'), rl = el('div', 'axn-rl');
+    var root = el('div', 'axn-rail'); root.setAttribute('data-tour', 'brief'); var trk = el('div', 'axn-trk'), fill = el('div', 'axn-fill'), rows = el('div', 'axn-rows'), lens = el('div', 'axn-lens'), rl = el('div', 'axn-rl');
     lens.setAttribute('aria-hidden', 'true'); trk.appendChild(fill); rows.appendChild(lens); rows.appendChild(rl); root.appendChild(trk); root.appendChild(rows);
     var links = steps.map(function(s, i){
       var a = el('a', 'axn-s', '<span class="n"></span><span class="l"></span><span class="u"></span>');
