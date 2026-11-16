@@ -255,3 +255,21 @@ body .brief.sp tr > .sp-tray{order:2}
 #pc-antidep .pc-tbl th:nth-child(2){width:42%}
 #pc-antidep .pc-tbl th:nth-child(3){width:28%}
 }
+
+@media (--narrow){
+/* differential on phones: one card, a hairline between diagnoses; name, key features, then the distinguishing feature after an arrow */
+.brief.sp .sp-dx table.dense tbody:not(.first){background:var(--raised);border-radius:20px;overflow:hidden;box-shadow:var(--e2)}
+.brief.sp .sp-dx table.dense:not(.cluet)>tbody:not(.first):not(.grp)>tr{margin:0;border-radius:0;box-shadow:none;background:transparent;padding:10px 14px 9px;row-gap:0;border-top:1px solid var(--hair)}
+.brief.sp .sp-dx table.dense:not(.cluet)>tbody:not(.first):not(.grp)>tr:first-child{border-top:0}
+.brief.sp .sp-dx table.dense tbody:not(.first) td:not(:first-child):not([data-label="Order"])::before{display:none}
+.brief.sp .sp-dx table.dense tbody:not(.first) td{line-height:21px}
+.brief.sp .sp-dx table.dense tbody:not(.first) td:first-child{padding:0 0 2px}
+.brief.sp .sp-dx table.dense tbody:not(.first) td:nth-child(2):not([data-label="Order"]){padding:1px 0;color:var(--ink-2)}
+.brief.sp .sp-dx table.dense tbody:not(.first) td:nth-child(3):not([data-label="Order"]){padding:2px 0 1px 20px;position:relative}
+.brief.sp .sp-dx table.dense tbody:not(.first) td:nth-child(3):not([data-label="Order"])::after{content:"\2192";position:absolute;left:0;top:2px;font:700 15px/21px var(--sans);color:var(--accent)}
+.brief.sp .sp-dx table.dense thead{position:static;clip:auto;height:auto;width:auto;overflow:visible;margin:0 2px 8px}
+.brief.sp .sp-dx table.dense thead tr{display:flex;gap:14px;align-items:baseline}
+.brief.sp .sp-dx table.dense thead th{display:block;padding:0;font:600 12.5px/1.3 var(--sans);color:var(--muted);text-transform:none;letter-spacing:0;background:none;border:0}
+.brief.sp .sp-dx table.dense thead th:first-child{display:none}
+.brief.sp .sp-dx table.dense thead th:nth-child(3)::before{content:"\2192\00a0";color:var(--accent);font-weight:700}
+}

@@ -23,7 +23,7 @@ const BRIEF = 'delirium', QUERY = 'lithium';
       await shot('1-masthead');
       await p.goto(srv.url + '#' + BRIEF, { waitUntil: 'load' }); await p.waitForTimeout(4000);
       await shot('2-brief');
-      if (phone && !(await p.isVisible('#search'))) { await p.click('#navtab'); await p.waitForTimeout(700); }
+      if (phone && !(await p.isVisible('#search'))) { await p.click('#mbar [data-act="index"]'); await p.waitForTimeout(700); }
       await p.fill('#search', QUERY); await p.waitForTimeout(2500);
       await shot('3-search');
       await p.goto(srv.url + '#' + BRIEF, { waitUntil: 'load' }); await p.waitForTimeout(4000);

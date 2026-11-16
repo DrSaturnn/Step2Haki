@@ -399,6 +399,7 @@ var anchorEl=null, panel, lastFocus=null, sessionFocus=null;
 
 function dueFor(id){ var s=split(id); return s.due.length+s.fresh.length; }
 function paintBadge(){
+  AX.emit('review:state');
   var bdg=document.querySelector('#mbar [data-act="review"] .bdg');
   if(bdg){ var id=current(), rd=id?split(id).due.length:0; bdg.textContent=rd; bdg.setAttribute('data-n', rd?'1':'0'); }   /* scheduled reviews only, never the shelf total */
 }
@@ -1107,7 +1108,7 @@ function buildSessionShell(){
     var id=a.getAttribute('href').slice(1); try{ id=decodeURIComponent(id); }catch(x){}
     if(!id || !(AX.brief.ensure(id)||briefFor(id))) return;
     e.preventDefault(); e.stopPropagation();
-    var x=document.body.classList.contains('navopen') && document.querySelector('#nav .navclose'); if(x) x.click();   /* the phone index closes as it does for a page jump */
+    if(document.body.classList.contains('navopen')) AX.emit('nav:close');   /* Browse closes as it does for a page jump */
     if(wide() && !autoBrief()) AX.settings.set('quizbrief','1');   /* a brief asked for by name shows the column */
     openSource(id, true); paintTab();
   },true);
@@ -1271,13 +1272,13 @@ function finish(){
 function boot(){
   if(!document.querySelector('.brief')) return;
   buildPanel();
-  /* phone: a fourth bar button opens the same panel */
+  /* phone: the Review tab, between Browse and Settings, opens the same panel */
   var bar=document.getElementById('mbar');
   if(bar){
     var b=el('button'); b.type='button'; b.dataset.act='review';
-    b.innerHTML='<span>Review<i class="bdg" data-n="0">0</i></span>';
-    var top=bar.querySelector('[data-act="top"]');
-    bar.insertBefore(b, top||null);
+    b.innerHTML='<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="6.5" width="14" height="13.5" rx="2.4"/><path d="M8.5 3.8h7"/><path d="M9.2 13.2l2 2 3.8-4"/></svg><span>Review<i class="bdg" data-n="0">0</i></span>';
+    var set=bar.querySelector('[data-act="settings"]');
+    bar.insertBefore(b, set||null);
     b.addEventListener('click',function(){ panelOpen()?closePanel():openPanel(b); });
   }
   paintBadge();
@@ -1285,7 +1286,8 @@ function boot(){
   /* the status-bar Review sheet drives this scheduler through window.axRv */
   window.axRv={
     current:current, nameOf:nameOf, initials:initials,
-    due:function(){ var id=current(); return id?split(id).due.length:0; },   /* scheduled reviews only, never the shelf total */
+    due:function(){ var id=current(); return id?split(id).due.length:0; },
+    seen:function(){ var id=current(); return id?Object.keys(dataOf(id).box):null; },   /* ids of the briefs with a review record; null when no one is chosen */   /* scheduled reviews only, never the shelf total */
     pick:function(){ var id=current(); return id?previewPick(id):[]; },
     people:function(){
       var mine=mineOnly(), out=[];
