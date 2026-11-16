@@ -35,7 +35,7 @@ function start(e){
   if(!NARROW.matches || e.touches.length !== 1 || B.classList.contains('navset')) return;
   var t = e.touches[0], open = B.classList.contains('navopen');
   if(!open){
-    if(t.clientX < 20 || e.target.closest('#mbar,#phead,#phbar,#rvpanel,#rvsession,input,select,textarea') || sideScroller(e.target)) return;
+    if(t.clientX < 20 || e.target.closest('#mbar,#phead,#phbar,#rvpanel,#rvsession,#axtour,input,select,textarea') || sideScroller(e.target)) return;
   } else if(!e.target.closest('#nav,#phscrim')) return;
   g = {x: t.clientX, y: t.clientY, open: open, lock: false, f: open ? 1 : 0, w: width(), t: Date.now(), lx: t.clientX, v: 0};
 }
