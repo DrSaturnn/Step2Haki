@@ -96,7 +96,7 @@ function onShelf(){ later(40); }
 function start(){
   if(box || !NARROW.matches) return;
   box = document.createElement('div'); box.id = 'phhome'; mw.insertBefore(box, mw.firstChild);
-  bar = document.createElement('div'); bar.id = 'phbar'; B.appendChild(bar);
+  bar = document.createElement('div'); bar.id = 'phbar'; bar.setAttribute('data-tour', 'find'); B.appendChild(bar);
   foot = document.createElement('button'); foot.type = 'button'; foot.id = 'phfoot';
   var tail = document.querySelectorAll('main .wrap'); tail[tail.length - 1].appendChild(foot);
   foot.addEventListener('click', function(){ var l = document.querySelector('.masthead .axlogbtn'); if(l) l.click(); });

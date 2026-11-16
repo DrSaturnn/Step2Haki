@@ -18,7 +18,8 @@ const PH = { viewport: { width: 393, height: 852 }, hasTouch: true, isMobile: tr
       if (how === 'x') await pg.click('#axtour .tr-x'); else if (how === 'skip') await pg.click('#axtour .tr-skip'); else if (how === 'go') await pg.click('#axtour .tr-go');
       else if (how === 'esc') await pg.keyboard.press('Escape'); else await pg.mouse.click(8, 8);
       await pg.waitForTimeout(800); s = await state(pg);
-      ok(nm + ' exit by ' + how, !s.on && s.flag === '1' && s.inert === 0, JSON.stringify(s));
+      if (how === 'go') ok(nm + ' the primary button starts stop 1 and sets the flag', s.on && s.flag === '1' && s.inert > 5 && await pg.evaluate(() => document.getElementById('axtour').getAttribute('data-m') === 'stop'), JSON.stringify(s));
+      else ok(nm + ' exit by ' + how, !s.on && s.flag === '1' && s.inert === 0, JSON.stringify(s));
       if (how === 'x') {
         await pg.reload(); await pg.waitForTimeout(2600); s = await state(pg); ok(nm + ' second load shows no card', !s.on);
         await pg.evaluate(() => window.AX.emit('tour:open')); await pg.waitForTimeout(700); s = await state(pg); ok(nm + ' replay opens with the flag set', s.on && s.flag === '1');

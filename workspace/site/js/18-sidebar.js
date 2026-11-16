@@ -43,7 +43,7 @@
     h.appendChild(tools);
     top.insertBefore(h, top.firstChild);
     if(search){
-      var pill = el('div', 'axn-srch', SVG_SRCH);
+      var pill = el('div', 'axn-srch', SVG_SRCH); pill.setAttribute('data-tour', 'find');
       top.insertBefore(pill, search); pill.appendChild(search);
       var ph = function(){ search.setAttribute('placeholder', 'Search topics, findings, drugs'); };
       ph(); window.addEventListener('load', ph);
@@ -57,7 +57,7 @@
   var SVG_SHELF = '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2.5v9.5M6 2.5v9.5M9.2 3.2l2.6 8.8M1.5 14h13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path></svg>';
   var SVG_DOWN = '<svg width="12" height="8" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>';
   function shelfCard(before, sel){   // before: the search pill, which stays on top
-    var row = el('div', 'axn-shelfrow');
+    var row = el('div', 'axn-shelfrow'); row.setAttribute('data-tour', 'find');
     row.appendChild(el('span', 'ic', SVG_SHELF));
     var t = el('span', 'tx'); t.appendChild(el('span', 'k')).textContent = 'Shelf'; var v = t.appendChild(el('span', 'v')); row.appendChild(t);
     row.appendChild(el('span', 'ch', SVG_DOWN)); row.appendChild(sel);
