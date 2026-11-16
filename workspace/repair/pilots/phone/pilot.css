@@ -180,3 +180,16 @@ html[data-ph-home="desk"] #phhome .hh-h h2{font-size:20px}
 html[data-ph-home="desk"].ph-solo:not(.ph-open) #phfoot{all:unset;display:block;box-sizing:border-box;width:100%;margin:18px 0 0;text-align:center;font:500 12.5px/1.4 var(--sans);color:var(--muted);cursor:pointer}
 html[data-ph-home="desk"].ph-solo:not(.ph-open) main .wrap>div:last-of-type:not([class]):not([id]){font-size:12.5px}
 }
+
+/* r9: shelf names of any length, a shelf with no topics, the first row of a Browse card without the switch */
+@media (max-width:1100px){
+#phhome .hh-sub>span:first-child{flex:0 0 auto;white-space:nowrap}
+#phhome .hh-shelf{flex:0 1 auto;min-width:0}
+#phhome .hh-shelf>span{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#phhome .hh-shelf svg{flex:none}
+#phhome .hh-h{min-width:0}
+#phhome .hh-h h2{flex:none}
+#phhome .hh-h span{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#phhome .hh-none{margin:0;padding:18px 16px;font:500 15px/1.4 var(--sans);color:var(--muted)}
+#phhome .hh-list>.hh-r:first-child{border-top:0}
+}

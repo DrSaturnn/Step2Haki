@@ -8,16 +8,16 @@ var CH = [
   ['layout', 'Layout', [['solo', 'One brief per screen'], ['long', 'One long page']], get('layout', 'solo')],
   ['bars', 'Bars while reading', [['stay', 'Always shown'], ['hide', 'Hide while scrolling down']], get('bars', 'stay')],
   ['rail', 'Side rail', [['off', 'Off'], ['on', 'Numbered rail, drag to scrub']], get('rail', 'off')],
-  ['dx', 'Differential', [['now', 'As now'], ['a', 'A: tighter cards'], ['b', 'B: one card, hairline rows']], get('dx', 'now')],
-  ['nav', 'Browse opens as (r5)', [['drawer', 'Side drawer over the page'], ['push', 'Side drawer, page slides aside'], ['screen', 'Full screen (r3)']], get('nav', 'drawer')],
-  ['surf', 'Surface (r5, light only)', [['axbx', 'AxBx deck'], ['axbx24', 'AxBx deck, 24 px corners'], ['now', 'Sculpted (now)']], get('surf', 'axbx')],
+  ['dx', 'Differential', [['now', 'As now'], ['a', 'A: tighter cards'], ['b', 'B: one card, hairline rows']], get('dx', 'b')],
+  ['nav', 'Browse opens as (r5)', [['drawer', 'Side drawer over the page'], ['push', 'Side drawer, page slides aside'], ['screen', 'Full screen (r3)']], get('nav', 'push')],
+  ['surf', 'Surface (r5, light only)', [['axbx', 'AxBx deck'], ['axbx24', 'AxBx deck, 24 px corners'], ['now', 'Sculpted (now)']], get('surf', 'axbx24')],
   ['home', 'Home (r4)', [['desk', 'Study desk (r8)'], ['list', 'List (r3)'], ['tiles', 'Tiles (r4)']], get('home', 'desk')],
   ['tabs', 'Tab bar (r4)', [['float', 'Floating capsule'], ['dock', 'Docked (r3)']], get('tabs', 'float')]
 ];
-if(!H.getAttribute('data-ph-nav')) H.setAttribute('data-ph-nav', 'drawer');
+if(!H.getAttribute('data-ph-nav')) H.setAttribute('data-ph-nav', 'push');
 if(!H.getAttribute('data-ph-tabs')) H.setAttribute('data-ph-tabs', 'float');
 if(!H.getAttribute('data-ph-home')) H.setAttribute('data-ph-home', 'desk');
-if(!H.getAttribute('data-ph-surf')) H.setAttribute('data-ph-surf', 'axbx');
+if(!H.getAttribute('data-ph-surf')) H.setAttribute('data-ph-surf', 'axbx24');
 function mount(){
   var s = document.getElementById('axdisp'); if(!s || s.querySelector('.php')) return !!s;
   var box = document.createElement('div'); box.className = 'php';
@@ -45,7 +45,7 @@ var n = 0; (function w(){ if(!mount() && ++n < 40) setTimeout(w, 150); })();
    the dimmed page, or a swipe to the left. A swipe that starts in the left 20 px is left to Safari's Back gesture, and
    one that starts inside a table or figure that scrolls sideways is left to that element. */
 (function(){
-  var mode = get('nav', 'drawer'); if(mode === 'screen') return;
+  var mode = get('nav', 'push'); if(mode === 'screen') return;
   var nav = document.getElementById('nav'), B = document.body; if(!nav) return;
   var sc = document.createElement('div'); sc.id = 'phscrim'; sc.setAttribute('aria-hidden', 'true'); B.appendChild(sc);
   sc.addEventListener('click', function(){ AX.emit('nav:close'); });
@@ -128,17 +128,20 @@ var n = 0; (function w(){ if(!mount() && ++n < 40) setTimeout(w, 150); })();
     var secs = [].filter.call(document.querySelectorAll('main .wrap > .sectwrap'), function(w){ return !off(w); }).map(function(w){
       var h = w.querySelector('h3.system'), n = h && h.querySelector('.n');
       var t = h ? [].map.call(h.childNodes, function(c){ return c === n ? '' : c.textContent; }).join('').trim() : '';
-      return {el: w, id: h ? h.id : '', t: t, n: n ? parseInt(n.textContent, 10) || 0 : null, num: (w.querySelector('.tab b') || {}).textContent || '', code: (w.querySelector('.tab i') || {}).textContent || ''}; });
+      var live = 0, tot = 0, x = w.nextElementSibling;
+      for(; x && !x.classList.contains('sectwrap'); x = x.nextElementSibling) if(x.classList.contains('brief')){ tot++; if(!off(x)) live++; }
+      return {el: w, id: h ? h.id : '', t: t, n: n ? (tot ? live : parseInt(n.textContent, 10) || 0) : null, num: (w.querySelector('.tab b') || {}).textContent || '', code: (w.querySelector('.tab i') || {}).textContent || ''}; });
     var groups = [].filter.call(document.querySelectorAll('main .wrap > .psub'), function(p){ return !off(p); }).map(function(p){
       return {el: p, t: (p.querySelector('.t') || p).textContent.trim(), n: (p.querySelector('.n') || {}).textContent || ''}; });
     var pres = secs.filter(function(s){ return s.id === 'presentations'; })[0];
     var guide = secs.filter(function(s){ return s.n === null; });
-    var sys = secs.filter(function(s){ return s !== pres && s.n !== null; });
+    var sys = secs.filter(function(s){ return s !== pres && s.n; });
     var els = [];
     function ref(el){ els.push(el); return ' data-i="' + (els.length - 1) + '"'; }
     if(hmode === 'desk'){
       var ARW = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>';
-      var rc = recent(), who = !!me;
+      var rc = recent().filter(function(o){ var el = document.getElementById(o.id); if(!el) return false; var w = el.closest('.sectwrap'); return !off(el) && !(w && off(w)); }), who = !!me;
+      var hasCc = !!(pres && groups.length), view = hasCc && (seg === 'cc' || !sys.length) ? 'cc' : 'sys';
       var d = '<div class="hh-top"><h1>Step2Haki</h1><button type="button" class="hh-me" data-do="review" aria-label="Review and profiles">' +
         (me ? esc(me) : '<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8.2" r="4.2"/><path d="M3.8 20.5c.7-4.2 4.1-6.6 8.2-6.6s7.500 2.400 8.2 6.600z"/></svg>') + '</button></div>' +
         '<div class="hh-sub"><span>' + esc(meta.slice(0, 2).join(' · ')) + '</span><label class="hh-shelf"><span>' + esc(cur.t) + '</span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 9.500l5-5 5 5M7 14.500l5 5 5-5"/></svg>' +
@@ -149,11 +152,12 @@ var n = 0; (function w(){ if(!mount() && ++n < 40) setTimeout(w, 150); })();
           rc.slice(1).map(function(o){ return '<button type="button" class="hh-r" data-do="go" data-h="' + esc(o.id) + '"><span>' + esc(o.t) + '</span><span class="hh-ch">' + ARW + '</span></button>'; }).join('') + '</div>';
       }
       d += '<button type="button" class="hh-card hh-rv" data-do="review"><span class="hh-cx"><b>Review</b><i>' + (who ? (due ? due + ' due in ' + esc(cur.t) : 'Nothing due in ' + esc(cur.t)) : 'Choose who is studying to schedule reviews') + '</i></span><span class="hh-pill' + (who && due ? ' on' : '') + '">' + (who ? (due ? 'Start' : 'Open') : 'Set up') + '</span></button>';
-      d += '<div class="hh-h"><h2>Browse</h2><span>' + esc(cur.t) + '</span></div><div class="hh-card hh-list"><div class="hh-seg" role="group" aria-label="Browse by"><button type="button" data-do="seg" data-v="sys" aria-pressed="' + (seg === 'sys') + '">By system</button>' +
-        (pres && groups.length ? '<button type="button" data-do="seg" data-v="cc" aria-pressed="' + (seg === 'cc') + '">By complaint</button>' : '') + '</div>' +
-        (seg === 'cc' && pres ? groups.map(function(g){ return '<button type="button" class="hh-r"' + ref(g.el) + '><span>' + esc(g.t) + '</span><span class="hh-b">' + esc(g.n) + '</span><span class="hh-ch">' + ARW + '</span></button>'; }).join('')
+      d += '<div class="hh-h"><h2>Browse</h2><span>' + esc(cur.t) + '</span></div><div class="hh-card hh-list">' +
+        (sys.length && hasCc ? '<div class="hh-seg" role="group" aria-label="Browse by"><button type="button" data-do="seg" data-v="sys" aria-pressed="' + (view === 'sys') + '">By system</button><button type="button" data-do="seg" data-v="cc" aria-pressed="' + (view === 'cc') + '">By complaint</button></div>' : '') +
+        (!sys.length && !hasCc ? '<p class="hh-none">No topics in ' + esc(cur.t) + ' yet.</p>' : '') +
+        (view === 'cc' ? groups.map(function(g){ return '<button type="button" class="hh-r"' + ref(g.el) + '><span>' + esc(g.t) + '</span><span class="hh-b">' + esc(g.n) + '</span><span class="hh-ch">' + ARW + '</span></button>'; }).join('')
           : sys.map(function(s){ return '<button type="button" class="hh-r"' + ref(s.el) + '><span>' + esc(s.t) + '</span><span class="hh-b">' + s.n + '</span><span class="hh-ch">' + ARW + '</span></button>'; }).join('')) + '</div>';
-      d += '<div class="hh-h"><h2>Guides</h2></div>' + (guide.length ? '<div class="hh-card hh-list">' + guide.map(function(s){ return '<button type="button" class="hh-r"' + ref(s.el) + '><span>' + esc(s.t) + '</span><span class="hh-ch">' + ARW + '</span></button>'; }).join('') + '</div>' : '');
+      d += '<div class="hh-h"><h2>Guides</h2></div>';
       box.innerHTML = d; box._els = els;
       var ft = document.getElementById('phfoot');
       if(!ft){ ft = document.createElement('button'); ft.type = 'button'; ft.id = 'phfoot'; var w = document.querySelector('main .wrap:not(.masthead .wrap)') || document.querySelector('main'); w.appendChild(ft);

@@ -465,7 +465,8 @@ function mobileNav(){
     }
     if(a==='settings'){
       if(!navOpen){ openNav(); navSettings(true); }
-      else navSettings(!document.body.classList.contains('navset'));
+      else if(document.body.classList.contains('navset')) closeNav();
+      else navSettings(true);
     }
   });
   AX.on('nav:open',function(){ if(document.body.classList.contains('navset')) navSettings(false); openNav(); });
