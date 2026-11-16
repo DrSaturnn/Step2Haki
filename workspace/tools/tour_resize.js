@@ -1,18 +1,18 @@
 // the resize and zoom pass: five cases, each with a screenshot and the measured ring, panel and target.
 // 1 rotate a phone mid-stop (stops 1 to 3); 2 cross 1100 px mid-stop and back (stops 2 and 4); 3 browser zoom 200%
 // (a 640x360 CSS viewport at device scale 2) at each stop; 4 pinch zoom 2x at stop 1; 5 a removed tag at stop 2.
-// Usage: node resize_shots.js <page> <shots dir>
+// Usage: node tour_resize.js <page> [shots dir]
 'use strict';
 const path = require('path');
-const { chromium } = require('/opt/npm-tools/node_modules/playwright');
-const { serve } = require(path.join(__dirname, '../../../tools/serve_page'));
+const { chromium } = require('playwright');
+const { serve } = require(path.join(__dirname, 'serve_page'));
 const PAGE = process.argv[2], OUT = process.argv[3];
 const TAGS = ['find', 'browse', 'brief', 'bar'];
 const ph = (w, h) => ({ viewport: { width: w, height: h }, hasTouch: true, isMobile: true, deviceScaleFactor: 2 });
 (async () => {
   const srv = await serve(PAGE), res = [], rows = []; let bad = 0;
   const ok = (name, v, note) => { res.push((v ? 'PASS ' : 'FAIL ') + name + (note ? ' (' + note + ')' : '')); if (!v) bad++; };
-  const br = await chromium.launch({ executablePath: '/usr/bin/google-chrome' });
+  const br = await chromium.launch();
   const state = (pg, tag) => pg.evaluate(tag => {
     const R = e => { const r = e.getBoundingClientRect(); return { l: Math.round(r.left), t: Math.round(r.top), r: Math.round(r.right), b: Math.round(r.bottom), w: Math.round(r.width), h: Math.round(r.height) }; };
     const root = document.getElementById('axtour'), ring = R(root.querySelector('.tr-ring')), p = root.querySelector('.tr-panel'), pr = R(p);
@@ -26,7 +26,7 @@ const ph = (w, h) => ({ viewport: { width: w, height: h }, hasTouch: true, isMob
   const load = async opt => { const cx = await br.newContext(opt); const pg = await cx.newPage(); const errs = []; pg.on('pageerror', e => errs.push(e.message)); await pg.goto(srv.url); await pg.waitForSelector('#axtour.in', { timeout: 15000 }); await pg.waitForTimeout(900); await pg.evaluate(() => document.querySelector('#axtour .tr-go').click()); await pg.waitForTimeout(1200); return { cx, pg, errs }; };
   const next = async pg => { await pg.evaluate(() => document.querySelector('#axtour .tr-next').click()); await pg.waitForTimeout(1400); };
   const to = async (pg, i) => { for (let k = 0; k < i; k++) await next(pg); };
-  const shot = async (pg, name) => { await pg.screenshot({ path: path.join(OUT, name + '.png') }); };
+  const shot = async (pg, name) => { if (OUT) await pg.screenshot({ path: path.join(OUT, name + '.png') }); };
   const onScreen = s => s.panel.l >= 0 && s.panel.t >= 0 && s.panel.r <= s.vw && s.panel.b <= s.vh;
   const note = (name, s) => rows.push({ name, vw: s.vw, vh: s.vh, title: s.title, ring: [s.ring.l, s.ring.t, s.ring.w, s.ring.h].join(','), panel: [s.panel.l, s.panel.t, s.panel.w, s.panel.h].join(','), lost: s.lost, top: s.up, see: s.see, holds: s.holds, over: s.over, scroll: s.scroll });
   const judge = (name, s, i) => {
@@ -96,7 +96,7 @@ const ph = (w, h) => ({ viewport: { width: w, height: h }, hasTouch: true, isMob
     ok('removed tag ' + nm + ' Next reaches stop 3 on its target', t.dot === 2 && !t.lost && t.holds, t.hash);
     ok('removed tag ' + nm + ' no page error', !errs.length, errs.join('; ')); await cx.close();
   }
-  console.log(JSON.stringify(rows, null, 0).replace(/\},\{/g, '},\n{'));
-  console.log(res.join('\n')); console.log('RESIZE CHECK ' + (bad ? 'FAIL ' + bad : 'PASS ' + res.length));
+  if (OUT) console.log(JSON.stringify(rows, null, 0).replace(/\},\{/g, '},\n{'));
+  console.log(res.join('\n')); console.log('TOUR RESIZE ' + (bad ? 'FAIL ' + bad : 'PASS ' + res.length));
   await br.close(); srv.close(); process.exit(bad ? 1 : 0);
 })();

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """ui_gate.py: the standing UI tests run before a ship (UI_REFACTOR_PLAN 6b).
 
-  python3 tools/ui_gate.py PAGE BASE [--allow ALLOW.json] [--views desk,phone] [--skip parity,theme,a11y,perf,twopane]
+  python3 tools/ui_gate.py PAGE BASE [--allow ALLOW.json] [--views desk,phone] [--skip parity,theme,a11y,perf,twopane,tour,tourfit]
                                      [--fresh]
 
-PAGE is the candidate build, BASE the live page (../discriminator-briefs-site/index.html). Four tests, in order, one
+PAGE is the candidate build, BASE the live page (../discriminator-briefs-site/index.html). The tests, in order, one
 browser job at a time:
   parity  tools/ui_check.js css BASE PAGE, then run on desk and phone in every setting (300 elements a check): every
           computed-style difference between the live page and the candidate fails unless ALLOW.json lists it (the batch's
@@ -18,6 +18,11 @@ browser job at a time:
   perf    tools/perf_budget.py PAGE: size and elements at load not above the baseline, load times within 15%.
   twopane tools/two_pane_check.js PAGE: every brief keeps its text in the Two-pane layout and after returning to
           Scrolling (about 4 minutes).
+  tour    tools/tour_check.js PAGE: the welcome card and the four tour stops at two phone and two desktop sizes (every
+          tag resolves, the ring holds its target, the phone panel stays in budget), the seen flag, the Help row, replay
+          and the direct-link pill.
+  tourfit tools/tour_resize.js PAGE: the tour through a phone rotation, a crossing of 1100 px, 200% browser zoom, pinch
+          zoom and a removed tag.
 Exit 1 when any test fails; every test runs and prints its verdict line.
 
 Faster runs (s169, D-20261107-14; measured on the live page in a two-core container, 18.6 min before):
@@ -48,7 +53,7 @@ def run(name, cmd, ok_word):
     lines = [l for l in out.splitlines() if l.strip()]
     verdict = next((l for l in reversed(lines) if ok_word in l or 'WORSE' in l or 'DIFFER' in l or 'FAIL' in l), lines[-1] if lines else '')
     ok = r.returncode == 0 and ok_word in out
-    print('%-6s %s %s (%d s)' % (name, 'PASS' if ok else 'FAIL', verdict.strip()[:300], time.time() - t))
+    print('%-7s %s %s (%d s)' % (name, 'PASS' if ok else 'FAIL', verdict.strip()[:300], time.time() - t))
     if not ok:
         print('\n'.join('       ' + l for l in lines[-25:]))
     return ok
@@ -57,7 +62,9 @@ def run(name, cmd, ok_word):
 TOOLS = {'parity': ['tools/ui_check.js'], 'theme': ['tools/theme_gate.js'],
          'a11y': ['tools/a11y_scan.js', 'tools/spine/a11y_baseline.json'],
          'perf': ['tools/perf_budget.py', 'tools/perf_load.js', 'tools/spine/perf_baseline.json'],
-         'twopane': ['tools/two_pane_check.js', 'tools/serve_page.js']}
+         'twopane': ['tools/two_pane_check.js', 'tools/serve_page.js'],
+         'tour': ['tools/tour_check.js', 'tools/serve_page.js'],
+         'tourfit': ['tools/tour_resize.js', 'tools/serve_page.js']}
 
 
 def digest(path, page=False):
@@ -92,10 +99,10 @@ def main(argv):
             continue
         hit, changed = (None, ['--fresh']) if fresh else ST.lookup('ui_gate', t, keys[t])
         if hit:
-            print('%-6s PASS (stamp %s: same page, base, allow list, views and tools)' % (t, hit['date']))
+            print('%-7s PASS (stamp %s: same page, base, allow list, views and tools)' % (t, hit['date']))
             skip.add(t)
         else:
-            print('%-6s runs (stamp miss: %s)' % (t, ', '.join(changed)))
+            print('%-7s runs (stamp miss: %s)' % (t, ', '.join(changed)))
     passed = []
 
     def run_t(t, cmd, word):
@@ -143,6 +150,10 @@ def main(argv):
             ok &= run_t('perf', [sys.executable, 'tools/perf_budget.py', page], 'PERF PASS')
         if 'twopane' not in skip:
             ok &= run_t('twopane', ['node', 'tools/two_pane_check.js', page], 'TWO-PANE PASS')
+        if 'tour' not in skip:
+            ok &= run_t('tour', ['node', 'tools/tour_check.js', page], 'TOUR CHECK PASS')
+        if 'tourfit' not in skip:
+            ok &= run_t('tourfit', ['node', 'tools/tour_resize.js', page], 'TOUR RESIZE PASS')
     for t in passed:
         if t != 'theme':
             ST.write('ui_gate', t, keys[t], summary='%s PASS' % t)

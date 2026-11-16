@@ -18,7 +18,7 @@ miss (a deliberate cold run); passes still write stamps. callgate refuses hand w
   python3 tools/stamps.py show [CHECK]               list the stamps
 
 Checks (ship.sh): rules-migrate, rules-gate, rules-stamps, gate, render, vendor-scan, vendor-orphan; verify (one stamp
-per spine folder, written by verify.py on READY); ui_gate tests (parity, a11y, perf, twopane; theme keeps
+per spine folder, written by verify.py on READY); ui_gate tests (parity, a11y, perf, twopane, tour, tourfit; theme keeps
 style_surface's record). Each group holds only what its check opens (spec() below): the code closure of the
 check's entry scripts, its data and documents, its page, folder or tree. tools/test_stamps.py (ship step rules-stamps)
 traces each check and fails on a file opened outside its groups. Files opened and left out on purpose are listed in

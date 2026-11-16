@@ -3,15 +3,15 @@
 // Usage: node tour_check.js <page> [shots dir]
 'use strict';
 const path = require('path');
-const { chromium } = require('/opt/npm-tools/node_modules/playwright');
-const { serve } = require(path.join(__dirname, '../../../tools/serve_page'));
+const { chromium } = require('playwright');
+const { serve } = require(path.join(__dirname, 'serve_page'));
 const PAGE = process.argv[2], OUT = process.argv[3];
 const ph = (w, h) => ({ viewport: { width: w, height: h }, hasTouch: true, isMobile: true, deviceScaleFactor: 2 }), dt = (w, h) => ({ viewport: { width: w, height: h } });
 const TAGS = ['find', 'browse', 'brief', 'bar'];
 (async () => {
   const srv = await serve(PAGE), res = []; let bad = 0;
   const ok = (name, v, note) => { res.push((v ? 'PASS ' : 'FAIL ') + name + (note ? ' (' + note + ')' : '')); if (!v) bad++; };
-  const br = await chromium.launch({ executablePath: '/usr/bin/google-chrome' });
+  const br = await chromium.launch();
   const state = (pg, tag) => pg.evaluate(tag => {
     const R = e => { const r = e.getBoundingClientRect(); return { l: r.left, t: r.top, r: r.right, b: r.bottom, w: r.width, h: r.height }; };
     const root = document.getElementById('axtour'); if (!root) return { on: false, hash: location.hash, flag: window.AX.settings.get('tour'), pill: !!document.getElementById('axtourpill') };
