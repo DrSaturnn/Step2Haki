@@ -220,14 +220,17 @@ print(('ok  ' if hit else 'BAD ') + 'a rail in the old order: expects gate FAIL 
 o = gate(PAGE[:_sb.inner_end] + '<p>Fix the class, not the instance.</p>' + PAGE[_sb.inner_end:])[1]
 hit = '[prose-lint] %s' % _sb.id in o
 print(('ok  ' if hit else 'BAD ') + 'a brief whose prose count rose above its baseline: expects gate FAIL prose-lint'); bad += not hit
-_d = tempfile.mkdtemp(); _bp = os.path.join(_d, 'base.html'); open(_bp, 'w', encoding='utf-8').write(PAGE)
-_mp = os.path.join(_d, 'index.html'); open(_mp, 'w', encoding='utf-8').write(PAGE[:_sb.inner_end] + '<p>Onset within days.</p>' + PAGE[_sb.inner_end:])
+# the base page carries a planted prose hit, so both prose-touched cases hold on a page whose briefs have none
+_hit = '<p>Fix the class, not the instance.</p>'
+_d = tempfile.mkdtemp(); _bp = os.path.join(_d, 'base.html'); open(_bp, 'w', encoding='utf-8').write(PAGE[:_sb.inner_end] + _hit + PAGE[_sb.inner_end:])
+_mp = os.path.join(_d, 'index.html'); open(_mp, 'w', encoding='utf-8').write(PAGE[:_sb.inner_end] + _hit + '<p>Onset within days.</p>' + PAGE[_sb.inner_end:])
 _r = subprocess.run([sys.executable, os.path.join(HERE, 'gate.py'), _mp, '--base', _bp], capture_output=True, text=True,
                     env=dict(ENV, AXBX_GATE_SKIP_INDEX='1'))
 hit = '[prose-touched] %s' % _sb.id in _r.stdout
 print(('ok  ' if hit else 'BAD ') + 'a changed brief that still has prose hits: expects gate FAIL prose-touched'); bad += not hit
 _seg2 = PAGE[_sb.start:_sb.end]; _j = _seg2.find('<p', _seg2.find('<h5'))
-open(_mp, 'w', encoding='utf-8').write(PAGE[:_sb.start] + _seg2[:_j] + '<p data-zz="1"' + _seg2[_j + 2:] + PAGE[_sb.end:])
+_k = _sb.inner_end - _sb.start
+open(_mp, 'w', encoding='utf-8').write(PAGE[:_sb.start] + _seg2[:_j] + '<p data-zz="1"' + _seg2[_j + 2:_k] + _hit + _seg2[_k:] + PAGE[_sb.end:])
 _r = subprocess.run([sys.executable, os.path.join(HERE, 'gate.py'), _mp, '--base', _bp], capture_output=True, text=True,
                     env=dict(ENV, AXBX_GATE_SKIP_INDEX='1'))
 hit = '[prose-touched]' not in _r.stdout
