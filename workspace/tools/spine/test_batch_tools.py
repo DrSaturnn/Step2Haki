@@ -51,7 +51,7 @@ p = BL.prompt({'plan_step': 's999', 'budget': 90}, {'id': 'x'}, '/w/repair/migra
 expect('build prompt: gate lines first', p.splitlines()[:4] == ['Role: brief-build', 'Plan step: s999',
                                                                  'Lane: /w/repair/migration/x/spine', 'Budget: 90'])
 roles = json.load(open(os.path.join(WS, 'tools', 'hooks', 'roles.json')))['roles']
-expect('roles: brief-build is opus, 90 calls, lean-builder', roles.get('brief-build') == {
-    'model': 'opus', 'budget': 90, 'agent': 'lean-builder'})
+expect('roles: brief-build is opus, 100 calls, lean-builder', roles.get('brief-build') == {
+    'model': 'opus', 'budget': 100, 'agent': 'lean-builder'})
 print('test_batch_tools: %d passed, %d failed' % (ok, bad))
 sys.exit(1 if bad else 0)

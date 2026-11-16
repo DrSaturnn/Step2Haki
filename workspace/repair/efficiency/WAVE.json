@@ -1,21 +1,21 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). The owner sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
- "id": "s176b",
+ "id": "s176c",
  "open": false,
- "plan_step": "s176b",
+ "plan_step": "s176c",
  "roles": [
   "probe"
  ],
  "max_agents": 2,
  "max_calls": 20,
  "max_tokens": 500000,
- "set_by": "D-20261115-6",
+ "set_by": "D-20261115-8",
  "previous": {
-  "id": "s176",
-  "note": "s176 content: Presentations hubs C; shipped 0c2e0ac 2026-11-15"
+  "id": "s176b",
+  "note": "s176b tools: pair tool and pipeline guards; shipped 08d2d6b 2026-11-15"
  },
- "opened": "2026-11-15 18:05 EST",
- "note": "s176b tools: pair tool, restore guard, stale delta, size at S3, lost claim ids, condpass across tags",
+ "opened": "2026-11-15 19:05 EST",
+ "note": "s176c tools: S3 mech checks in parallel; roles test",
  "batch_budgets": {
   "s138": {
    "agents": 20,
@@ -505,6 +505,12 @@
    "calls": 20,
    "tokens": 500000,
    "lead_tokens": 15000000
+  },
+  "s176c": {
+   "agents": 2,
+   "calls": 20,
+   "tokens": 500000,
+   "lead_tokens": 5000000
   }
  },
  "max_lead_tokens": 55000000,
