@@ -76,6 +76,7 @@
 #axtourpill.in{transform:translate(-50%,0)}
 #axtour .tr-panel{left:14px;right:14px;bottom:calc(84px + env(safe-area-inset-bottom,0px));width:auto;max-width:480px;margin:0 auto;max-height:200px;overflow-y:auto;overscroll-behavior:contain;padding:22px 18px 8px;border-radius:24px;transform:translateY(24px);transform-origin:50% 100%}
 #axtour .tr-panel::before{display:none}
+#axtour.top .tr-panel{top:calc(8px + env(safe-area-inset-top,0px));bottom:auto}
 #axtour.lost .tr-panel{left:14px;top:auto;bottom:50%;margin:0 auto -90px}
 #axtour .tr-panel .tr-grab{top:7px}
 #axtour .tr-card{width:min(480px,calc(100vw - 20px));max-height:calc(100vh - 40px - env(safe-area-inset-top,0px));margin-bottom:calc(10px + env(safe-area-inset-bottom,0px));padding:30px 20px 8px;border-radius:28px;transform:translateY(calc(100% + 30px));transition:opacity .2s var(--snp),transform .5s var(--spr)}

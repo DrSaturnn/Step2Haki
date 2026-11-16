@@ -3,6 +3,8 @@
    the elements tagged data-tour for the stop, and the stop text sits in a panel above the tab capsule on phones and in a
    popover beside the ring on desktop. A stop stores no position; it measures its tagged elements when shown and again on
    resize, scroll, zoom and any size change of a target. A stop with no visible target shows its text as a centered card.
+   On a short phone-layout screen where the docked panel would leave under 64 px of the target in view, the panel docks
+   at the top and the page scrolls the target into the space between the panel and the tab capsule.
    Stops 1 and 2 need the phone starting screen and stop 3 needs an open brief, so the tour moves there first: stop 3
    opens the brief the reader was in, or the first brief the sidebar lists. A first visit ends inside that brief; a replay
    returns the reader to where the tour started. On the last stop the ring moves from the bar to the settings control.
@@ -33,9 +35,9 @@ var STOPS = [
     wideText: 'Read and Recall switch the study mode. Review schedules what to see again. This tutorial replays from the settings button.'}
 ];
 var PILL = 'New here? Take the tour';
-var DOTS = STOPS.length, PAD = 6, GAP = 14, EDGE = 16;
+var DOTS = STOPS.length, PAD = 6, GAP = 14, EDGE = 16, SEE = 64;
 var SVG_X = '<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8"/></svg>';
-var root = null, scrim = null, card = null, ring = null, panel = null, isOpen = false, mode = 'card', at = 0, back = null, held = [], hideT = 0, drag = null, raf = 0, ro = null, watched = [], ringTag = '', thenT = 0, pollT = 0, seq = 0, replay = false, was = null, pill = null, rpT = 0;
+var root = null, scrim = null, card = null, ring = null, panel = null, isOpen = false, mode = 'card', at = 0, back = null, held = [], hideT = 0, drag = null, raf = 0, ro = null, watched = [], ringTag = '', thenT = 0, pollT = 0, seq = 0, replay = false, was = null, pill = null, rpT = 0, nudged = '';
 
 function el(tag, cls, html){ var e = document.createElement(tag); if(cls) e.className = cls; if(html) e.innerHTML = html; return e; }
 function seen(){ return AX.settings.get('tour') !== null; }
@@ -146,23 +148,47 @@ function watch(els){
   watched.forEach(function(e){ ro.unobserve(e); }); watched = els; els.forEach(function(e){ ro.observe(e); });
 }
 function px(n){ return Math.round(n) + 'px'; }
+function scroller(e){
+  for(var p = e.parentElement; p && p !== B && p !== document.documentElement; p = p.parentElement){
+    var o = getComputedStyle(p).overflowY;
+    if((o === 'auto' || o === 'scroll') && p.scrollHeight > p.clientHeight + 1) return p;
+  }
+  return document.scrollingElement || document.documentElement;
+}
 function place(){
   raf = 0;
   if(!isOpen || mode !== 'stop') return;
   var st = STOPS[at], els = targets(ringTag), base = ringTag === st.tag ? els : targets(st.tag), vw = window.innerWidth, vh = window.innerHeight, ps = panel.style;
   watch(els);
   root.classList.toggle('lost', !els.length);
+  root.classList.remove('top');
   ps.left = ps.top = ps.bottom = ''; ps.removeProperty('--tr-ay');
   if(!els.length) return;
   var b = box(els), rs = ring.style;
   if(NARROW.matches){
     var bar = document.getElementById('mbar'), br = bar && bar.getBoundingClientRect();
+    var up = false;
     if(br && br.height && br.top > vh / 2){
-      var a = base.length ? box(base) : b, edge = a.t > vh / 2 && a.t < br.top && a.t + a.h > br.top ? a.t : br.top;
-      ps.bottom = px(vh - edge + 8);
+      var a = base.length ? box(base) : b, ph0 = panel.offsetHeight, dock = br.top - 8 - ph0;
+      var above = a.t > vh / 2 && a.t < br.top && a.t + a.h > br.top;
+      var see = a.t >= br.top - PAD - 1 ? SEE : above ? br.top - 8 - a.t : Math.min(a.t + a.h, dock - 8) - a.t;
+      if(see < SEE){
+        root.classList.add('top');
+        var free = panel.offsetTop + ph0 + 8;
+        if(br.top - 8 - free >= SEE){
+          up = true;
+          var key = at + ':' + vw + 'x' + vh;
+          if(nudged !== key){ nudged = key; scroller(els[0]).scrollTop += a.t - free; b = box(els); }
+          var end = Math.min(b.t + b.h, br.top - 8);
+          b.t = Math.max(b.t, free); b.h = Math.max(0, end - b.t);
+        } else root.classList.remove('top');
+      }
+      if(!up) ps.bottom = px(vh - (above ? a.t : br.top) + 8);
     }
-    var lim = panel.getBoundingClientRect().top - 8;
-    if(b.t + 40 < lim) b.h = Math.min(b.h, lim - b.t);
+    if(!up){
+      var lim = panel.getBoundingClientRect().top - 8;
+      if(b.t + 40 < lim) b.h = Math.min(b.h, lim - b.t);
+    }
   } else {
     var c = base.length ? box(base) : b, pw = panel.offsetWidth, ph = panel.offsetHeight, x, y, side;
     if(c.l + c.w + GAP + pw <= vw - EDGE){ side = 'r'; x = c.l + c.w + GAP; y = c.t + c.h / 2 - ph / 2; }
@@ -200,7 +226,7 @@ function stop(i){
       if(off) off.scrollIntoView({block: 'center'});
       if(n < 20){ if(from === 'stop') root.classList.add('wait'); pollT = setTimeout(function(){ wait(n + 1); }, 80); return; }
     }
-    at = i; ringTag = s.tag; render();
+    at = i; ringTag = s.tag; nudged = ''; render();
     root.classList.remove('wait', 'far');
     if(from === 'card'){ ring.style.transition = 'none'; panel.style.transition = 'none'; }
     setMode('stop'); place();
@@ -224,7 +250,7 @@ function open(again){
   if(!root) build();
   clearTimeout(hideT); isOpen = true;
   back = document.activeElement;
-  root.classList.remove('go', 'lost', 'wait', 'far'); setMode('card');
+  root.classList.remove('go', 'lost', 'wait', 'far', 'top'); setMode('card');
   root.classList.add('on'); hold(true);
   root.getBoundingClientRect();
   root.classList.add('in');
