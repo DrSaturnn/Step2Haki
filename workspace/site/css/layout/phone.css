@@ -1,32 +1,27 @@
-body .axm-flat #mbar{background:#FBFBFB;background-color:var(--t-body-mbar-bgc);background-image:var(--t-body-mbar-bgi)}
-body #mbar.axm-flat{background:#FBFBFB;background-color:var(--t-body-mbar-bgc-2);background-image:var(--t-body-mbar-bgi-2)}
 #mbar button:focus-visible{outline:var(--t-mbar-button-focus-visible-outline,2px solid var(--accent));outline-offset:-3px}
-#mbar,#phead{display:none}
+#mbar,#phead,#phbar,#phscrim{display:none}
 @media (--narrow){
-:root{--tab-h:calc(56px + env(safe-area-inset-bottom,0px));--ph-row:46px;--ph-h:calc(86px + env(safe-area-inset-top,0px))}
+:root{--tab-h:calc(82px + env(safe-area-inset-bottom,0px));--dw:min(86vw,340px);--ph-row:46px;--ph-h:calc(86px + env(safe-area-inset-top,0px))}
 
-/* bottom tabs: Home, Browse, Review, Settings */
-#mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:160;gap:0;height:var(--tab-h);box-sizing:border-box;padding:0 6px env(safe-area-inset-bottom,0px);background:linear-gradient(180deg,#F2F3F3,#E7E9E9);background-image:var(--t-mbar-bgi);border-top:var(--t-mbar-border-top);box-shadow:var(--t-mbar-sh);transition:transform .42s var(--spr)}
-#mbar button{all:unset;cursor:pointer;flex:1 1 0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;margin:5px 2px;border-radius:12px;font:800 9.5px/1 var(--sans);letter-spacing:1px;text-transform:uppercase;color:var(--t-mbar-button-fg,var(--muted));-webkit-tap-highlight-color:transparent;transition:color .2s var(--snp)}
+/* bottom tabs: Home, Browse, Review, Settings, in a capsule inset from the edges; the current tab sits in a pill */
+#mbar{display:flex;position:fixed;left:14px;right:14px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:160;gap:0;height:62px;box-sizing:border-box;padding:5px;border-radius:31px;background:var(--glass);-webkit-backdrop-filter:blur(22px) saturate(1.6);backdrop-filter:blur(22px) saturate(1.6);box-shadow:var(--glass-edge)}
+#mbar button{all:unset;cursor:pointer;flex:1 1 0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;border-radius:26px;font:800 9.5px/1 var(--sans);letter-spacing:1px;text-transform:uppercase;color:var(--t-mbar-button-fg,var(--muted));-webkit-tap-highlight-color:transparent;transition:color .3s var(--snp),background .3s var(--snp)}
 #mbar button svg{display:block;width:22px;height:22px;flex:none}
-#mbar button[aria-current="page"]{color:var(--accent)}
-#mbar button:active{background:rgba(24,28,30,.06);background-color:var(--t-mbar-button-active-bgc)}
+#mbar button[aria-current="page"]{color:var(--accent);background:color-mix(in srgb,var(--ink) 8%,transparent)}
 #mbar button[data-act="review"] span{position:relative;display:inline-block}
-#mbar button[data-act="review"] .bdg{position:absolute;top:-30px;left:calc(50% + 6px);min-width:15px;padding:1px 4px;border-radius:99px;background:var(--t-mbar-button-data-act-review-bdg-bg,var(--accent));color:var(--t-mbar-button-data-act-review-bdg-fg);font-size:9px;font-weight:800;letter-spacing:0;line-height:1.45;font-variant-numeric:tabular-nums;font-style:normal}
+#mbar button[data-act="review"] .bdg{position:absolute;top:-28px;left:calc(50% + 6px);min-width:15px;padding:1px 4px;border-radius:99px;background:var(--t-mbar-button-data-act-review-bdg-bg,var(--accent));color:var(--t-mbar-button-data-act-review-bdg-fg);font-size:9px;font-weight:800;letter-spacing:0;line-height:1.45;font-variant-numeric:tabular-nums;font-style:normal}
 #mbar button[data-act="review"] .bdg[data-n="0"]{display:none}
-html.ph-bars-hide body.ph-down:not(.navopen) #mbar{transform:translateY(100%)}
 main{padding-bottom:calc(var(--tab-h) + 22px)}
 
 /* Browse and Settings are screens above the tabs; the display sheet fills the screen in Settings */
 #nav.axn .axn-tools{display:none}
 body.navset #navscroll,body.navset #navtop .axn-srch,body.navset #navtop .axn-shelfrow{display:none}
-body.navset #nav #axdisp{top:calc(64px + env(safe-area-inset-top,0px));bottom:12px;max-height:none}
+body.navset #nav #axdisp{top:calc(64px + env(safe-area-inset-top,0px));bottom:calc(var(--tab-h) + 2px);max-height:none}
 
 /* reading header: back, title and current step, Recall; then the brief's steps */
 #phead{display:block;position:fixed;left:0;right:0;top:0;z-index:120;padding-top:env(safe-area-inset-top,0px);background:var(--raised);box-shadow:var(--e2);border-radius:0 0 16px 16px;transform:translateY(-105%);transition:transform .42s var(--spr)}
 #phead.on{transform:none}
-body.navopen #phead{transform:translateY(-105%)}
-html.ph-bars-hide body.ph-down #phead.on{transform:translateY(calc(-1 * var(--ph-row)))}
+body.navset #phead{transform:translateY(-105%)}
 #phead button{all:unset;box-sizing:border-box;cursor:pointer;-webkit-tap-highlight-color:transparent}
 #phead button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:9px}
 #phead .ph-t{display:flex;align-items:center;gap:6px;height:var(--ph-row);padding:0 10px 0 14px}
@@ -57,9 +52,32 @@ html.ph-open #phead .ph-back{display:flex}
 html.ph-solo main .wrap>:is(.sectwrap,.psub){cursor:pointer}
 html.ph-open main{padding-top:calc(var(--ph-h) + 12px)}
 html.ph-open .brief .bb-end .bb-next{font-weight:700}
+
+/* Browse is a drawer from the left; the page, the reading header and Home's bar slide aside with it and dim */
+main,#phbar{transition:transform .42s var(--spr)}
+body.navopen:not(.navset) main,body.navopen:not(.navset) #phead.on,body.navopen:not(.navset) #phbar{transform:translateX(var(--dw))}
+#phscrim{display:block;position:fixed;left:0;right:0;top:0;bottom:0;z-index:149;background:rgba(18,20,28,.22);opacity:0;pointer-events:none;transition:opacity .3s var(--snp)}
+body.navopen:not(.navset) #phscrim{left:var(--dw);opacity:1;pointer-events:auto}
+
+/* Home's bar: title, shelf, profile and search stay fixed; the page scrolls behind a blurred fill */
+html.ph-home.ph-solo:not(.ph-open) #phbar{display:block;position:fixed;left:0;right:0;top:0;z-index:119;box-sizing:border-box;padding:calc(env(safe-area-inset-top,0px) + 12px) var(--phbar-x,18px) 10px;background:color-mix(in srgb,var(--canvas-a) 74%,transparent);-webkit-backdrop-filter:blur(20px) saturate(1.6);backdrop-filter:blur(20px) saturate(1.6)}
+#phbar::after{content:"";position:absolute;left:0;right:0;top:100%;height:14px;pointer-events:none;background:linear-gradient(180deg,color-mix(in srgb,var(--canvas-a) 60%,transparent),transparent)}
+#phbar button{all:unset;box-sizing:border-box;cursor:pointer;-webkit-tap-highlight-color:transparent}
+#phbar button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#phbar .hh-top{display:flex;align-items:center;gap:10px;height:48px;transition:height .32s var(--snp)}
+#phbar .hh-ttl{flex:1 1 auto;min-width:0;font:800 32px/1.1 var(--sans);letter-spacing:-.02em;color:var(--ink);transition:font-size .32s var(--snp)}
+#phbar .hh-shelf{position:relative;flex:0 1 auto;min-width:0;display:inline-flex;align-items:center;gap:5px;min-height:36px;font:650 15px/1 var(--sans);color:var(--accent)}
+#phbar .hh-shelf>span{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#phbar .hh-shelf svg{flex:none}
+#phbar .hh-shelf select{position:absolute;inset:0;width:100%;height:100%;opacity:0;font-size:16px}
+#phbar .hh-me{flex:none;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--raised);box-shadow:var(--e2);font:800 14px/1 var(--sans);color:var(--ink-2);transition:width .32s var(--snp),height .32s var(--snp)}
+#phbar .hh-s{display:flex;align-items:center;gap:10px;width:100%;height:44px;padding:0 14px;margin:8px 0 0;border-radius:14px;background:var(--recess);box-shadow:var(--inner-2);font:500 16px/1 var(--sans);color:var(--muted)}
+#phbar.sm .hh-top{height:38px}
+#phbar.sm .hh-ttl{font-size:21px}
+#phbar.sm .hh-me{width:34px;height:34px}
 }
 @media (--reduced-motion){
-#mbar,#phead{transition:opacity .15s var(--snp)}
+#nav,main,#phead,#phbar,#mbar,#phscrim{transition:none}
 }
 html[data-theme="dark"][data-glass="tinted"] #phead{background:color-mix(in srgb,var(--accent) 12%,#15171E);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
 html[data-theme="dark"][data-glass="tinted"] #mbar{background:color-mix(in srgb,var(--accent) 12%,#15171E)}

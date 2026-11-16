@@ -24,8 +24,6 @@
 [data-theme="dark"]{--t-body-mcq-rv-bgi:none;--t-body-mcq-rv-bgi-2:none}
 [data-theme="dark"]{--t-body-mcq-button-right-bg:var(--confirm-bg);--t-body-mcq-button-right-bg-2:var(--confirm-bg)}
 [data-theme="dark"]{--t-body-mcq-button-wrong-bg:var(--caution-bg);--t-body-mcq-button-wrong-bg-2:var(--caution-bg)}
-[data-theme="dark"]{--t-body-mbar-bgc:#161616;--t-body-mbar-bgc-2:#161616}
-[data-theme="dark"]{--t-body-mbar-bgi:none;--t-body-mbar-bgi-2:none}
 [data-theme="dark"]{--t-body-tw-tbody-tr-bgi:none;--t-body-tw-tbody-tr-bgi-3:none;--t-body-tw-tbody-tr-bgi-2:none;--t-body-tw-tbody-tr-bgi-4:none}
 @media (--phone){
 [data-theme="dark"]{--t-body-tw-tbody-tr-bgc:#161616;--t-body-tw-tbody-tr-bgc-2:#161616}
@@ -39,7 +37,7 @@
 [data-theme="dark"]{--t-nav-a-td:none}
 [data-theme="dark"]{--t-nav-a-active-border-left-color:var(--accent)}
 [data-theme="dark"]{--t-nav-a-active-bg:rgba(var(--acc-rgb),.22);--t-nav-a-active-bg-2:rgba(var(--acc-rgb),.22)}
-[data-theme="dark"]{--t-body-axm-study-modes-study-track-bg:var(--accent);--t-body-modes-axm-study-study-track-bg:var(--accent);}
+[data-theme="dark"]{--t-body-axm-study-modes-study-track-bg:var(--accent);--t-body-modes-axm-study-study-track-bg:var(--accent)}
 [data-theme="dark"]{--t-masthead-bg:none}
 [data-theme="dark"]{--t-masthead-fg:var(--ink)}
 [data-theme="dark"]{--t-masthead-kicker-fg:var(--accent)}
@@ -260,11 +258,7 @@
 [data-theme="dark"]{--t-rows-dt-border-bottom:none;--t-rows-dt-border-bottom-2:none}
 }
 @media (--narrow){
-[data-theme="dark"]{--t-mbar-bgi:linear-gradient(180deg,#1C1D1D,#242525)}
-[data-theme="dark"]{--t-mbar-border-top:1px solid rgba(215,221,223,0.1)}
-[data-theme="dark"]{--t-mbar-sh:0 -8px 24px -10px rgba(0,0,0,0.33)}
 [data-theme="dark"]{--t-mbar-button-fg:var(--muted)}
-[data-theme="dark"]{--t-mbar-button-active-bgc:rgba(215,221,223,0.06)}
 [data-theme="dark"]{--t-mbar-button-data-act-review-bdg-bg:var(--accent)}
 [data-theme="dark"]{--t-mbar-button-data-act-review-bdg-fg:#131313}
 }

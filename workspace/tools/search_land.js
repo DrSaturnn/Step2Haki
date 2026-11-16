@@ -23,7 +23,7 @@ const { serve } = require('./serve_page');
     await p.evaluate(()=>window.scrollTo({top:0,behavior:'instant'})); await p.waitForTimeout(1500);
     const top=await p.evaluate(q=>{ const h=window.__axSearch.search(q).hits[0]; return h? {id:h.r.id,lazy:!!h.r.lazy,label:h.r.blocks[h.best.bi].label}:null; },q);
     await p.evaluate(()=>{ document.querySelectorAll('[data-sxt]').forEach(e=>e.removeAttribute('data-sxt')); if(!window.__mo){ window.__mo=new MutationObserver(ms=>ms.forEach(m=>{ if(m.target.classList&&m.target.classList.contains('sxflash')) m.target.setAttribute('data-sxt','1'); })); __mo.observe(document.body,{subtree:true,attributes:true,attributeFilter:['class']}); } });
-    if(phone && !(await p.isVisible('#search'))){ await p.click('#navtab'); await p.waitForTimeout(600); }   // the phone search sits in the navigation panel
+    if(phone && !(await p.isVisible('#search'))){ await p.click('#mbar [data-act="index"]'); await p.waitForTimeout(600); }   // the phone search sits in the navigation panel
     await p.fill('#search',q); await p.press('#search','Enter'); await p.waitForTimeout(4500);
     const r=await p.evaluate(id=>{ const b=document.getElementById(id); const f=document.querySelector('[data-sxt]');
       const rc=f&&f.getBoundingClientRect(); return {built:!b.querySelector(':scope > template.axl'), flashIn: f? b.contains(f):null, flashTop: rc? Math.round(rc.top):null, vh:innerHeight, hash:location.hash, unbuilt:document.querySelectorAll('.brief > template.axl').length}; },top.id);

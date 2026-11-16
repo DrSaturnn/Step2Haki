@@ -108,6 +108,26 @@ function bpRow(cls,name,cells){
     cells.map(function(c){ return '<span class="bc" role="cell" data-l="'+c[0]+'">'+c[1]+'</span>'; }).join('')+'</div>';
 }
 function bpHead(cols){ return '<div class="bpr bphd" role="row">'+cols.map(function(c,i){ return '<span class="'+(i?'bc':'bn')+'" role="columnheader">'+c+'</span>'; }).join('')+'</div>'; }
+/* Coverage matrix: one row per row of the shelf's exam outline, with the exam share, the briefs in the row and how many of
+   them the person chosen under Review has reviewed at least once. A marked row has no brief yet or sits below its share. */
+var LAST=null;
+function matrix(){
+  if(!LAST) return '';
+  var seen=null; try{ seen=window.axRv?window.axRv.seen():null; }catch(e){}
+  var tb=0, ts=0;
+  var h='<div class="bpmx" role="table" aria-label="Coverage by system, '+esc(LAST.name)+'"><div class="mx-h" role="row"><span role="columnheader">System</span><span role="columnheader">Exam</span><span role="columnheader">Briefs</span><span role="columnheader">Reviewed</span></div>';
+  LAST.rows.forEach(function(r){
+    var n=r.briefs.length, k=seen?r.briefs.filter(function(id){ return seen.indexOf(id)>-1; }).length:0; tb+=n; ts+=k;
+    h+='<div class="mx-r'+(r.gap?' gap':'')+'" role="row"><span class="mx-n" role="rowheader">'+esc(r.label)+'</span><span role="cell">'+pct(r.range)+'</span><span role="cell">'+n+'</span><span role="cell">'+(seen?k+'/'+n:'–')+'</span><i class="mx-b" aria-hidden="true"><b style="width:'+(seen&&n?Math.round(100*k/n):0)+'%"></b></i></div>';
+  });
+  h+='<div class="mx-r mx-t" role="row"><span class="mx-n" role="rowheader">All rows</span><span role="cell"></span><span role="cell">'+tb+'</span><span role="cell">'+(seen?ts+'/'+tb:'–')+'</span></div>'+
+     '<p class="mx-f">'+(seen?'Reviewed counts the briefs taken through Review at least once.':'Choose who is studying, under Review, to fill the Reviewed column.')+' A marked row has no brief yet or sits below its exam range.</p></div>';
+  return h;
+}
+function repaint(){
+  var m=matrix(); if(!m) return;
+  document.querySelectorAll('.bpmx').forEach(function(n){ var t=document.createElement('div'); t.innerHTML=m; n.replaceWith(t.firstChild); });
+}
 function blueprint(){
   var host=document.querySelector('#bpview .bptable'); if(!host) return;
   var shelf=(window.axShelf&&window.axShelf())||'step2';
@@ -129,24 +149,22 @@ function blueprint(){
       tother[k]=(tother[k]||0)+1; });
   });
   function share(q){ return total?Math.round(100*q/total)+'%':'–'; }
-  var h='<p class="bpnote bpsrc"><b>'+esc(O.name)+'</b> outline. Exam share is the published range; bank share is the part of this shelf’s question bank in that row. A row in amber has no brief yet or sits below its range.'+(O.note?' '+esc(O.note):'')+'</p>';
-  h+='<div class="bpg bpsys" role="table" aria-label="Coverage by system, '+esc(O.name)+'"><div class="bpcap">Coverage by system</div>'+
-     bpHead(['System',O.share,'Bank share','Questions','Briefs']);
-  rows.concat(unl.p?[unl]:[]).forEach(function(x){
-    var sh=total?100*x.q/total:0, gap=!x.unl&&(x.p===0||(total&&x.r.r&&sh<x.r.r[0]));
-    h+=bpRow(gap?'bpgap':'',esc(x.r.label),[[O.share,pct(x.r.r)],['Bank share',share(x.q)],['Questions',x.q],['Briefs',x.p||'<b>0</b>']]);
-  });
-  h+='</div><div class="bpg bptask" role="table" aria-label="Questions by physician task, '+esc(O.name)+'"><div class="bpcap">Questions by physician task</div>'+
+  var h='<p class="bpnote bpsrc"><b>'+esc(O.name)+'</b> outline. Exam share is the published range.'+(O.note?' '+esc(O.note):'')+'</p>';
+  LAST={name:O.name, rows:rows.concat(unl.p?[unl]:[]).map(function(x){ var sh=total?100*x.q/total:0;
+    return {label:x.r.label, range:x.r.r||null, briefs:x.ids.slice(), gap:!x.unl&&(x.p===0||!!(total&&x.r.r&&sh<x.r.r[0]))}; })};
+  h+=matrix();
+  h+='<div class="bpg bptask" role="table" aria-label="Questions by physician task, '+esc(O.name)+'"><div class="bpcap">Questions by physician task</div>'+
      bpHead(['Task',O.share,'Bank share','Questions']);
   tasks.forEach(function(x){ h+=bpRow(x.t.types?'':'bpna',esc(x.t.label),[[O.share,pct(x.t.r)],['Bank share',x.t.types?share(x.q):'–'],['Questions',x.t.types?x.q:'not tagged']]); });
   Object.keys(tother).forEach(function(k){ h+=bpRow('bpna',esc(k),[[O.share,'–'],['Bank share',share(tother[k])],['Questions',tother[k]]]); });
   h+='</div>';
   host.innerHTML=h;
-  AX.blueprint={name:O.name, share:O.share, rows:rows.concat(unl.p?[unl]:[]).map(function(x){ var sh=total?100*x.q/total:0;
-    return {label:x.r.label, range:x.r.r||null, briefs:x.ids.slice(), questions:x.q, gap:!x.unl&&(x.p===0||!!(total&&x.r.r&&sh<x.r.r[0]))}; })};
+  AX.emit('blueprint:set');
   AX.emit('blueprint:set');
 }
-function run(){ headerCounts(); chips(); blueprint();
-  document.addEventListener('ax-shelf',function(){ blueprint(); }); }
+function run(){ AX.blueprint={html:matrix, name:function(){ return LAST?LAST.name:''; }};
+  headerCounts(); chips(); blueprint();
+  document.addEventListener('ax-shelf',function(){ blueprint(); });
+  var q=0; AX.on('review:state',function(){ if(!q) q=setTimeout(function(){ q=0; repaint(); },80); }); }
 if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run); else run();
 })();

@@ -51,7 +51,7 @@ if (!page) { console.error('usage: jump_land.js PAGE [--phone] [--http]'); proce
   }
   // ids from a probe load
   const probe = await open('');
-  if (phone) { await probe.p.click('#navtab'); await probe.p.waitForTimeout(700); }
+  if (phone) { await probe.p.click('#mbar [data-act="index"]'); await probe.p.waitForTimeout(700); }
   const ids = await probe.p.evaluate(() => {
     const all = Array.from(document.querySelectorAll('.brief')).filter(b => b.id && b.offsetParent !== null);
     const side = Array.from(document.querySelectorAll('#nav a[data-id]')).filter(a => { const r = a.getBoundingClientRect(); return r.height > 4 && r.width > 4 && (!a.checkVisibility || a.checkVisibility({ checkOpacity: true, checkVisibilityCSS: true })); }).map(a => a.dataset.id);   // links a reader can see (open groups)
@@ -73,7 +73,7 @@ if (!page) { console.error('usage: jump_land.js PAGE [--phone] [--http]'); proce
   }
   for (const id of ids.side) {
     const { ctx, p, errors } = await open('');
-    if (phone) { await p.click('#navtab'); await p.waitForTimeout(700); }
+    if (phone) { await p.click('#mbar [data-act="index"]'); await p.waitForTimeout(700); }
     const a = p.locator('#nav a[data-id="' + id + '"]').first();
     await a.scrollIntoViewIfNeeded(); await a.click(); await p.waitForTimeout(4000);
     report('sidebar', id, await measure(p, id), errors);

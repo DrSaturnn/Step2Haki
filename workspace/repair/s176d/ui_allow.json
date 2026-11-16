@@ -1,0 +1,311 @@
+[
+ {
+  "setting": "phone:flat-light-read"
+ },
+ {
+  "setting": "phone:sculpted-light-read"
+ },
+ {
+  "setting": "phone:flat-dark-read"
+ },
+ {
+  "setting": "phone:sculpted-dark-read"
+ },
+ {
+  "setting": "phone:flat-tinted-read"
+ },
+ {
+  "setting": "phone:flat-light-recall"
+ },
+ {
+  "setting": "phone:flat-dark-recall"
+ },
+ {
+  "sel": "#navscrim",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#navtab",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".brief .bb-bar",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".brief .bb-rail",
+  "prop": "(element)"
+ },
+ {
+  "sel": ".brief .bb-end",
+  "prop": "(element)"
+ },
+ {
+  "sel": ".navclose",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".navclose:focus-visible",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#nav.axn .navclose",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#nav.axn .navclose:focus-visible",
+  "prop": "(count)"
+ },
+ {
+  "sel": "body #mbar.axm-flat",
+  "prop": "background-color"
+ },
+ {
+  "sel": "#mbar",
+  "prop": "background-color"
+ },
+ {
+  "sel": "#mbar button[data-act=\"review\"] .bdg",
+  "prop": "(element)"
+ },
+ {
+  "sel": "#mbar button[data-act=\"index\"]",
+  "prop": "(element)"
+ },
+ {
+  "sel": "#navtab::before",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#navtab::after",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#navtab span",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#navtab:focus-visible",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".brief .bb-bar button",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".brief .bb-bar button:focus-visible",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".brief .bb-bar .bb-idx",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".brief .bb-bar .bb-idx::before",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".brief .bb-bar .bb-t",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".brief .bb-bar .bb-sec",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".brief .bb-bar .bb-sec .bb-l",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".brief .bb-bar .bb-sec .bb-c",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".brief .bb-bar .bb-sec::after",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".brief .bb-prog",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".brief .bb-prog i",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".brief .bb-menu",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".brief .bb-menu[hidden]",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".brief .bb-menu button",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".brief .bb-menu button b",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".brief .bb-menu button.off",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phscrim",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#mbar button svg",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#mbar button[aria-current=\"page\"]",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".bpmx",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".bpmx .mx-h",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".bpmx .mx-r",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".bpmx .mx-h span:not(:first-child)",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".bpmx .mx-r > span:not(.mx-n)",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".bpmx .mx-n",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".bpmx .mx-r.gap .mx-n",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".bpmx .mx-r.gap::before",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".bpmx .mx-b",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".bpmx .mx-b b",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".bpmx .mx-t",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".bpmx .mx-t .mx-n",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".bpmx .mx-f",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".brief.sp .sp-dx table.dense tbody:not(.first)",
+  "prop": "@box"
+ },
+ {
+  "sel": ".brief.sp .sp-dx table.dense tbody:not(.first)",
+  "prop": "(element)"
+ },
+ {
+  "sel": ".brief.sp .sp-dx table.dense:not(.cluet) > tbody:not(.first):not(.grp) > tr",
+  "prop": "(element)"
+ },
+ {
+  "sel": ".brief.sp .sp-dx table.dense:not(.cluet) > tbody:not(.first):not(.grp) > tr:first-child",
+  "prop": "@box"
+ },
+ {
+  "sel": ".brief.sp .sp-dx table.dense:not(.cluet) > tbody:not(.first):not(.grp) > tr:first-child",
+  "prop": "(element)"
+ },
+ {
+  "sel": ".brief.sp .sp-dx table.dense tbody:not(.first) td:not(:first-child):not([data-label=\"Order\"])::before",
+  "prop": "(element)"
+ },
+ {
+  "sel": ".brief.sp .sp-dx table.dense tbody:not(.first) td",
+  "prop": "(element)"
+ },
+ {
+  "sel": ".brief.sp .sp-dx table.dense tbody:not(.first) td",
+  "prop": "@box"
+ },
+ {
+  "sel": ".brief.sp .sp-dx table.dense tbody:not(.first) td:first-child",
+  "prop": "(element)"
+ },
+ {
+  "sel": ".brief.sp .sp-dx table.dense tbody:not(.first) td:nth-child(2):not([data-label=\"Order\"])",
+  "prop": "(element)"
+ },
+ {
+  "sel": ".brief.sp .sp-dx table.dense tbody:not(.first) td:nth-child(3):not([data-label=\"Order\"])",
+  "prop": "(element)"
+ },
+ {
+  "sel": ".brief.sp .sp-dx table.dense tbody:not(.first) td:nth-child(3):not([data-label=\"Order\"])",
+  "prop": "@box"
+ },
+ {
+  "sel": ".brief.sp .sp-dx table.dense tbody:not(.first) td:nth-child(3):not([data-label=\"Order\"])::after",
+  "prop": "(element)"
+ },
+ {
+  "sel": ".brief.sp .sp-dx table.dense thead",
+  "prop": "@box"
+ },
+ {
+  "sel": ".brief.sp .sp-dx table.dense thead",
+  "prop": "(element)"
+ },
+ {
+  "sel": ".brief.sp .sp-dx table.dense thead tr",
+  "prop": "@box"
+ },
+ {
+  "sel": ".brief.sp .sp-dx table.dense thead tr",
+  "prop": "(element)"
+ },
+ {
+  "sel": ".brief.sp .sp-dx table.dense thead th",
+  "prop": "(element)"
+ },
+ {
+  "sel": ".brief.sp .sp-dx table.dense thead th:first-child",
+  "prop": "@box"
+ },
+ {
+  "sel": ".brief.sp .sp-dx table.dense thead th:first-child",
+  "prop": "(element)"
+ },
+ {
+  "sel": ".brief.sp .sp-dx table.dense thead th:nth-child(3)::before",
+  "prop": "(element)"
+ },
+ {
+  "sel": "#mbar button:focus-visible",
+  "prop": "outline-offset"
+ },
+ {
+  "sel": "body #mbar.axm-study button[data-act=\"study\"]",
+  "prop": "(count)"
+ }
+]

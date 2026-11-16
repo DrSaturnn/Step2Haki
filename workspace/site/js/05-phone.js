@@ -2,18 +2,14 @@
    The header shows the brief being read, its current step and a Recall switch, with the brief's steps beneath; a step
    is current once its heading passes the reading line (09-brief-bounds). With one brief per screen, a link to a brief
    (its hash) shows that brief alone; Back and Home return to the section list at the place it was left.
-   html attributes: ph-layout="long" keeps every brief on one long page; ph-bars="hide" slides the tabs and the
-   header's top row away while scrolling down.
    Events: listens to brief:step (the brief being read), phone:home (the Home tab while no screen is open);
    emits nav:open and nav:reveal {id, pres} (Browse at the group holding a brief). */
 return (function(){
 'use strict';
 var NARROW = window.matchMedia('(max-width:1100px)');
 var H = document.documentElement, B = document.body;
-var SOLO = H.getAttribute('data-ph-layout') !== 'long';
-var HIDE = H.getAttribute('data-ph-bars') === 'hide';
 var head = null, steps = null, ti = null, sub = null, rec = null;
-var shown = null, solo = null, fromHome = false, homeY = 0, lastY = 0, offs = [];
+var shown = null, solo = null, fromHome = false, homeY = 0, offs = [];
 
 function svg(d, w){ return '<svg viewBox="0 0 24 24" width="' + w + '" height="' + w + '" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">' + d + '</svg>'; }
 function reduced(){ return window.matchMedia('(prefers-reduced-motion: reduce)').matches; }
@@ -81,7 +77,7 @@ function paint(s){
 
 /* ---------- one brief per screen ---------- */
 function route(){
-  var want = SOLO && NARROW.matches;
+  var want = NARROW.matches;
   H.classList.toggle('ph-solo', want);
   var b = want ? AX.brief.holder(hashId()) : null;
   if(b && b.closest('main')){
@@ -108,7 +104,7 @@ function back(){ if(solo && fromHome && history.length > 1) history.back(); else
 
 /* Home lists the sections: a section and the Presentations groups open Browse at their group */
 function reveal(e){
-  if(!SOLO || !NARROW.matches || solo || e.defaultPrevented) return;
+  if(!NARROW.matches || solo || e.defaultPrevented) return;
   var t = e.target.closest && e.target.closest('main .wrap > :is(.sectwrap,.psub)'); if(!t) return;
   if(e.target.closest('a,button,select,input,details')) return;
   var pres = t.classList.contains('psub'), n = t.nextElementSibling;
@@ -123,23 +119,11 @@ function reveal(e){
   AX.emit('nav:reveal', {id: n.id, pres: pres});
 }
 
-/* ---------- scrolling ---------- */
-function onScroll(){
-  var y = window.pageYOffset || 0;
-  if(HIDE){
-    if(y > lastY + 6 && y > 120) B.classList.add('ph-down');
-    else if(y < lastY - 6) B.classList.remove('ph-down');
-  }
-  if(Math.abs(y - lastY) > 6) lastY = y;
-}
-
 function start(){
   if(head) return;
-  if(HIDE) H.classList.add('ph-bars-hide');
   makeHead();
   offs.push(AX.on('brief:step', paint));
   offs.push(AX.on('phone:home', home));
-  window.addEventListener('scroll', onScroll, {passive: true});
   document.addEventListener('click', reveal, true);
   measure();
 }
@@ -152,9 +136,9 @@ if(NARROW.matches){ if(document.readyState === 'loading') document.addEventListe
 
 return {teardown: function(){
   window.removeEventListener('hashchange', route); window.removeEventListener('popstate', route);
-  window.removeEventListener('scroll', onScroll); document.removeEventListener('click', reveal, true);
+  document.removeEventListener('click', reveal, true);
   offs.forEach(function(f){ f(); }); offs = [];
   if(head){ head.remove(); head = null; }
-  H.classList.remove('ph-solo', 'ph-open', 'ph-bars-hide');
+  H.classList.remove('ph-solo', 'ph-open');
 }};
 })();

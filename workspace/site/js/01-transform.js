@@ -15,7 +15,8 @@ function norm(s){ return (s||"").replace(/\s+/g," ").trim(); }
 
 /* ---------- 0. sidebar mode switches ----------
    #modes holds the reader's display controls; each carries data-g (its group in the display sheet: layout, appearance,
-   study) and data-o (its order in the group). Recall mode is a switch; Surface (Sculpted, Flat) is a choice row. */
+   study) and data-o (its order in the group). Recall mode is a switch; Surface (Sculpted, Flat, Deck) is a choice row.
+   Deck is a set of light-theme token values (html data-surface="deck") and is the surface a phone starts on. */
 function switches(){
   var nav=document.getElementById('nav'); if(!nav) return;
   var brand=nav.querySelector('.brand');
@@ -23,18 +24,22 @@ function switches(){
   box.innerHTML =
     '<button class="study" type="button" aria-pressed="false" data-g="study" data-o="1"><span class="track"><span class="knob"></span></span><span class="nm">Recall mode</span></button>';
   var b=document.body;
-  var surf=AX.ui.seg('Surface',[['0','Sculpted'],['1','Flat']],'0',function(v){
-    b.classList.toggle('flat',v==='1'); AX.settings.set('flat',v==='1'?'1':'0'); sync();
+  var root=document.documentElement;
+  function deck(on){ if(on) root.setAttribute('data-surface','deck'); else root.removeAttribute('data-surface'); }
+  var surf=AX.ui.seg('Surface',[['0','Sculpted'],['1','Flat'],['2','Deck']],'0',function(v){
+    b.classList.toggle('flat',v==='1'); AX.settings.set('flat',v==='1'?'1':'0');
+    deck(v==='2'); AX.settings.set('surface',v==='2'?'deck':'std'); sync();
   });
   surf.classList.add('surf'); surf.dataset.g='appearance'; surf.dataset.o='2';
   box.appendChild(surf);
   brand ? brand.after(box) : nav.prepend(box);
   function sync(){
     box.querySelector('.study').setAttribute('aria-pressed',b.classList.contains('study')?'true':'false');
-    surf.set(b.classList.contains('flat')?'1':'0');
+    surf.set(b.classList.contains('flat')?'1':(root.getAttribute('data-surface')==='deck'?'2':'0'));
   }
   if(AX.settings.get('study')==='1') b.classList.add('study');
-  if(AX.settings.get('flat')==='1') b.classList.add('flat');   // sculpted is the default; flat only when the reader chose it
+  if(AX.settings.get('flat')==='1') b.classList.add('flat');   // flat only when the reader chose it
+  else deck((AX.settings.get('surface') || (window.matchMedia('(max-width:1100px)').matches ? 'deck' : 'std')) === 'deck');
   box.querySelector('.study').addEventListener('click',function(){
     b.classList.toggle('study'); AX.settings.set('study',b.classList.contains('study')?'1':'0'); sync();
   });

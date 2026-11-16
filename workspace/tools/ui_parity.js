@@ -78,7 +78,7 @@ async function chrome(p, dir, view) {
   if (view === 'desk') {
     await p.evaluate(() => document.querySelectorAll('#nav .sect[aria-expanded="false"]').forEach(s => s.click()));
   } else {
-    const t = await p.$('#navtab'); if (t) await t.click().catch(() => {});
+    const t = await p.$('#mbar [data-act="index"]'); if (t) await t.click().catch(() => {});
   }
   await p.waitForTimeout(2500);
   await p.evaluate(() => { const n = document.getElementById('nav'); if (n) for (const e of [n, ...n.querySelectorAll('*')]) if (e.scrollTop) e.scrollTop = Math.round(e.scrollTop / 40) * 40; });

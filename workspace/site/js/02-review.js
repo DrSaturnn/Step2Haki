@@ -399,6 +399,7 @@ var anchorEl=null, panel, lastFocus=null, sessionFocus=null;
 
 function dueFor(id){ var s=split(id); return s.due.length+s.fresh.length; }
 function paintBadge(){
+  AX.emit('review:state');
   var bdg=document.querySelector('#mbar [data-act="review"] .bdg');
   if(bdg){ var id=current(), rd=id?split(id).due.length:0; bdg.textContent=rd; bdg.setAttribute('data-n', rd?'1':'0'); }   /* scheduled reviews only, never the shelf total */
 }
