@@ -15,14 +15,16 @@ function norm(s){ return (s||"").replace(/\s+/g," ").trim(); }
 
 /* ---------- 0. sidebar mode switches ----------
    #modes holds the reader's display controls; each carries data-g (its group in the display sheet: layout, appearance,
-   study) and data-o (its order in the group). Recall mode is a switch; Surface (Sculpted, Flat, Deck) is a choice row.
+   study, help) and data-o (its order in the group). Replay tutorial emits tour:open. Recall mode is a switch; Surface (Sculpted, Flat, Deck) is a choice row.
    Deck is a set of light-theme token values (html data-surface="deck") and is the surface a phone starts on. */
 function switches(){
   var nav=document.getElementById('nav'); if(!nav) return;
   var brand=nav.querySelector('.brand');
   var box=document.createElement('div'); box.id='modes';
   box.innerHTML =
-    '<button class="study" type="button" aria-pressed="false" data-g="study" data-o="1"><span class="track"><span class="knob"></span></span><span class="nm">Recall mode</span></button>';
+    '<button class="study" type="button" aria-pressed="false" data-g="study" data-o="1"><span class="track"><span class="knob"></span></span><span class="nm">Recall mode</span></button>'+
+    '<button class="axtourbtn" type="button" data-g="help" data-o="1"><span class="go"><svg viewBox="0 0 8 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1.5 1.5L6 6l-4.5 4.5"/></svg></span><span class="nm">Replay tutorial</span></button>';
+  box.querySelector('.axtourbtn').addEventListener('click',function(){ AX.emit('tour:open'); });
   var b=document.body;
   var root=document.documentElement;
   function deck(on){ if(on) root.setAttribute('data-surface','deck'); else root.removeAttribute('data-surface'); }
@@ -439,7 +441,7 @@ function mobileNav(){
   /* Pinned head (brand, search) above one scrolling body (shelf,
      switches, review, then the systems list or the search results). */
   var top=document.createElement('div'); top.id='navtop';
-  var body=document.createElement('div'); body.id='navscroll';
+  var body=document.createElement('div'); body.id='navscroll'; body.setAttribute('data-tour','browse');
   var brand=nav.querySelector('.brand'), search=document.getElementById('search');
   Array.prototype.slice.call(nav.childNodes).forEach(function(n){ if(n!==brand && n!==search) body.appendChild(n); });
   if(brand) top.appendChild(brand);
@@ -450,11 +452,11 @@ function mobileNav(){
   var links=document.getElementById('navlinks');
   if(links && links.parentNode===body) body.insertBefore(res,links); else body.appendChild(res);
 
-  var bar=document.createElement('nav'); bar.id='mbar'; bar.setAttribute('aria-label','Tabs');
+  var bar=document.createElement('nav'); bar.id='mbar'; bar.setAttribute('aria-label','Tabs'); bar.setAttribute('data-tour','bar');
   bar.innerHTML =
     '<button type="button" data-act="home">'+TAB_ICON.home+'<span>Home</span></button>'+
     '<button type="button" data-act="index" aria-expanded="false" aria-controls="nav">'+TAB_ICON.index+'<span>Browse</span></button>'+
-    '<button type="button" data-act="settings">'+TAB_ICON.settings+'<span>Settings</span></button>';
+    '<button type="button" data-act="settings" data-tour="replay">'+TAB_ICON.settings+'<span>Settings</span></button>';
   document.body.appendChild(bar);
   navBar=bar;
   paintTabs();

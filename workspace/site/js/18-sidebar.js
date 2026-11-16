@@ -37,7 +37,7 @@
     var col = el('button', 'axn-col', SVG_COL); col.type = 'button'; col.setAttribute('aria-label', 'Collapse sidebar'); col.title = 'Collapse sidebar';
     col.addEventListener('click', function(e){ e.stopPropagation(); AX.emit('nav:collapse'); });
     tools.appendChild(col);
-    var cfg = el('button', 'axn-cfg', SVG_CFG); cfg.type = 'button'; cfg.id = 'axcfg';
+    var cfg = el('button', 'axn-cfg', SVG_CFG); cfg.type = 'button'; cfg.id = 'axcfg'; cfg.setAttribute('data-tour', 'replay');
     cfg.setAttribute('aria-label', 'Display settings'); cfg.setAttribute('aria-expanded', 'false'); cfg.setAttribute('aria-controls', 'axdisp');
     tools.appendChild(cfg);
     h.appendChild(tools);
@@ -68,7 +68,7 @@
   }
 
   /* ---------- the display sheet ---------- */
-  var GROUPS = [['layout', 'Layout'], ['appearance', 'Appearance'], ['study', 'Study']];
+  var GROUPS = [['layout', 'Layout'], ['appearance', 'Appearance'], ['study', 'Study'], ['help', 'Help']];
   function sheet(btn, brand){
     var s = el('div'); s.id = 'axdisp'; s.setAttribute('role', 'dialog'); s.setAttribute('aria-label', 'Display settings'); s.tabIndex = -1;
     s.appendChild(el('div', 'axd-h')).textContent = 'Display';
@@ -187,7 +187,7 @@
     if(b && !AX.brief.isBuilt(b)){ railWait = it; return; }
     var steps = b ? stepsOf(b) : [];
     if(!steps.length) return;
-    var root = el('div', 'axn-rail'), trk = el('div', 'axn-trk'), fill = el('div', 'axn-fill'), rows = el('div', 'axn-rows'), lens = el('div', 'axn-lens'), rl = el('div', 'axn-rl');
+    var root = el('div', 'axn-rail'); root.setAttribute('data-tour', 'brief'); var trk = el('div', 'axn-trk'), fill = el('div', 'axn-fill'), rows = el('div', 'axn-rows'), lens = el('div', 'axn-lens'), rl = el('div', 'axn-rl');
     lens.setAttribute('aria-hidden', 'true'); trk.appendChild(fill); rows.appendChild(lens); rows.appendChild(rl); root.appendChild(trk); root.appendChild(rows);
     var links = steps.map(function(s, i){
       var a = el('a', 'axn-s', '<span class="n"></span><span class="l"></span><span class="u"></span>');

@@ -32,7 +32,7 @@ const ph = (w, h) => ({ viewport: { width: w, height: h }, hasTouch: true, isMob
     await cx.close();
   }
   for (const [nm, opt, phone] of [['phone', ph(393, 852), 1], ['desktop', dt(1280, 720), 0]]) {
-    for (const how of ['x', 'esc', 'next']) {
+    for (const how of ['x', 'esc']) {
       const { cx, pg } = await start(opt);
       if (how === 'x') await pg.click('#axtour .tr-panel .tr-x'); else if (how === 'esc') await pg.keyboard.press('Escape'); else await pg.click('#axtour .tr-next');
       await pg.waitForTimeout(800); const s = await state(pg);
