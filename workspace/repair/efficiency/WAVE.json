@@ -1,21 +1,21 @@
 {
  "_doc": "The open wave for the launch gate (tools/hooks/agentgate.py). The owner sets each wave's budget; tokens = input + cache write + cache read + output, measured from the agent transcripts.",
- "id": "s176f",
+ "id": "s176g",
  "open": false,
- "plan_step": "s176f",
+ "plan_step": "s176g",
  "roles": [
   "probe"
  ],
  "max_agents": 0,
  "max_calls": 0,
  "max_tokens": 0,
- "set_by": "D-20261116-4",
+ "set_by": "D-20261116-10",
  "previous": {
-  "id": "s176e",
-  "note": "s176e tools: gate fixture recut, prose-touched self-test case, UI_MAP retired rows; shipped 5bbe37f 2026-11-16"
+  "id": "s176f",
+  "note": "s176f site: welcome card and tour; shipped b7a7383 2026-11-16"
  },
- "opened": "2026-11-16 11:13 EST",
- "note": "s176f site: welcome card and tour; lead only; no lead budget named at launch",
+ "opened": "2026-11-16 19:02 EST",
+ "note": "s176g site: the sidebar topic list follows the selected shelf; lead only; no lead budget named at launch",
  "batch_budgets": {
   "s138": {
    "agents": 20,
@@ -519,6 +519,11 @@
    "lead_tokens": 20000000
   },
   "s176f": {
+   "agents": 0,
+   "calls": 0,
+   "tokens": 0
+  },
+  "s176g": {
    "agents": 0,
    "calls": 0,
    "tokens": 0

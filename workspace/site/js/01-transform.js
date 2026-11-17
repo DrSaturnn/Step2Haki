@@ -225,6 +225,25 @@ function keepPlace(fn){
     }
   }
 }
+/* The topic list (#navlinks; the sidebar mirrors it) follows the shelf: a topic row shows when its brief is on the shelf
+   or is the pinned brief, a group label shows when one of its rows shows, and a section shows its own count. */
+function navShelf(s,pin){
+  var host=document.getElementById('navlinks'); if(!host) return;
+  var sect=null, sub=null, nSect=0, nSub=0;
+  function show(n,on){ var d=on?'':'none'; if(n.style.display!==d) n.style.display=d; }
+  function endSub(){ if(sub) show(sub,nSub>0); sub=null; nSub=0; }
+  function endSect(){ endSub(); if(sect){ show(sect,nSect>0); var c=sect.querySelector('.count'); if(c&&c.textContent!==String(nSect)) c.textContent=nSect; } sect=null; nSect=0; }
+  Array.prototype.forEach.call(host.children,function(n){
+    if(n.classList.contains('sect')){ endSect(); sect=n; return; }
+    if(n.classList.contains('navsub')){ endSub(); sub=n; return; }
+    if(n.tagName!=='A') return;
+    var b=document.getElementById((n.getAttribute('href')||'').slice(1));
+    if(!b||!b.classList.contains('brief')) return;
+    var on=shelfEligible(b,s)||(!reviewSet&&b.id===pin);
+    show(n,on); if(on){ nSect++; nSub++; }
+  });
+  endSect();
+}
 function applyShelf(s){
   shelf=s;
   AX.settings.set('shelf',s);
@@ -238,6 +257,7 @@ function applyShelf(s){
     b.classList.toggle('pinned',!!(!reviewSet&&b.id===pin&&!eligible));
     if(on) visible++;
   });
+  navShelf(s,pin);
   var liveSystems=0;
   document.querySelectorAll('.sectwrap').forEach(function(sw){
     var n=0,total=0,el=sw.nextElementSibling;
