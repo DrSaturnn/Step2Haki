@@ -137,9 +137,10 @@ function pool(){
   });
   return out;
 }
-function split(id){
+function split(id,only){   /* only: a list of brief ids that limits the pool (a Coverage row) */
   var d=dataOf(id), t=today(), fresh=[], due=[], later=[];
   pool().forEach(function(b){
+    if(only && only.indexOf(b.id)<0) return;
     var r=d.box[b.id];
     if(!r) fresh.push(b);
     else if(r.due<=t) due.push({b:b,over:t-r.due});
@@ -160,8 +161,9 @@ function previewPick(id){
   PREPICK={id:id, list:pick};
   return pick.map(function(b,i){ return {id:b.id, title:b.title, kind:kind[i]}; });
 }
-function buildSession(id){
-  var s=split(id), pick=[];
+function buildSession(id,only){
+  if(only) PREPICK=null;
+  var s=split(id,only), pick=[];
   var due=s.due.map(function(x){ return x.b; });
   var fresh=shuffle(s.fresh.slice());
   var later=s.later.map(function(x){ return x.b; });
@@ -846,9 +848,9 @@ function renderPanel(){
    applyShelf, which review hooks rather than reimplements.               */
 var rev=null, bar=null;
 
-function startReview(who){
-  if(!window.__axShelf){ return startQuiz(who); }      /* transform too old */
-  var built=buildSession(who);
+function startReview(who,only){
+  if(!window.__axShelf){ return startQuiz(who,only); }      /* transform too old */
+  var built=buildSession(who,only);
   if(!built.briefs.length){
     openPanel(trigger());
     var s0=panel.querySelector('#rvio');
@@ -959,9 +961,9 @@ function endReview(save){
 /* ---------- the quiz overlay (cold retrieval, no context) ---------- */
 var sess=null, box=null;
 
-function startQuiz(who){
+function startQuiz(who,only){
   sessionFocus=document.activeElement;
-  var built=buildSession(who);
+  var built=buildSession(who,only);
   if(!built.queue.length){
     openPanel(trigger());
     var slot=panel.querySelector('#rvio');
@@ -1287,7 +1289,8 @@ function boot(){
   window.axRv={
     current:current, nameOf:nameOf, initials:initials,
     due:function(){ var id=current(); return id?split(id).due.length:0; },
-    seen:function(){ var id=current(); return id?Object.keys(dataOf(id).box):null; },   /* ids of the briefs with a review record; null when no one is chosen */   /* scheduled reviews only, never the shelf total */
+    state:function(){ var id=current(); if(!id) return null;   /* per brief with a review record: box, days until due, answers right and given; null when no one is chosen */
+      var bx=dataOf(id).box, t=today(), o={}; Object.keys(bx).forEach(function(k){ var r=bx[k]; if(r) o[k]={b:r.b,wait:r.due-t,ok:r.ok||0,n:r.n||0}; }); return o; },
     pick:function(){ var id=current(); return id?previewPick(id):[]; },
     people:function(){
       var mine=mineOnly(), out=[];
@@ -1307,8 +1310,12 @@ function boot(){
         then(r && r.needPin ? false : null);
       });
     },
-    start:function(){ var w=current(); if(w) startReview(w); },
-    quiz:function(){ var w=current(); if(w) startQuiz(w); },
+    start:function(only){ var w=current(); if(w) startReview(w,only); },
+    quiz:function(only){ var w=current(); if(w) startQuiz(w,only); },
+    /* Mark as reviewed: the record a "known" mark in brief Review writes (up one box, next due date). Returns the prior record for put(). */
+    mark:function(bid){ var w=current(); if(!w) return null; var d=dataOf(w), t=today(), was=d.box[bid]||null, nb=Math.min(5,Math.max(1,was?was.b:0)+1);
+      d.box[bid]={b:nb,due:t+BOXES[nb],ok:was?was.ok||0:0,n:was?was.n||0:0}; putData(w,d); syncPush(w); paintBadge(); return {was:was}; },
+    put:function(bid,rec){ var w=current(); if(!w) return; var d=dataOf(w); if(rec) d.box[bid]=rec; else delete d.box[bid]; putData(w,d); syncPush(w); paintBadge(); },
     signOut:function(){ signOut(); paintBadge(); },
     add:function(name){ var id=addProfile(name); paintBadge(); return id; },
     open:function(anchor){ openPanel(anchor); }

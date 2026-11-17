@@ -161,22 +161,6 @@ html.cv .brief{content-visibility:auto;contain-intrinsic-size:auto 7000px}
 .brief[data-src="aquifer"] h5{color:var(--t-brief-data-src-aquifer-h5-fg,var(--aquifer))}
 .brief.bs[data-nid]:not([data-src="aquifer"]) > h4::after{content:"UWorld"}
 #bpview .bpnote{font-size:13px;color:var(--t-bpview-bpnote-fg,var(--ink-2));margin:6px 0 10px}
-#bpview .bpg{margin:10px 0 22px;font-family:var(--sans);font-size:13px;color:var(--t-bpview-bpg-fg,var(--ink))}
-#bpview .bpcap{font-weight:800;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--t-bpview-bpcap-fg,var(--muted));margin:0 0 6px}
-#bpview .bpr{display:grid;grid-template-columns:minmax(0,1fr) repeat(4,84px);gap:4px 12px;align-items:baseline;padding:8px 10px;border-bottom:var(--t-bpview-bpr-border-bottom)}
-#bpview .bptask .bpr{grid-template-columns:minmax(0,1fr) repeat(3,84px)}
-#bpview .bphd{font-size:10px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:var(--t-bpview-bphd-fg,var(--muted));border-bottom:var(--t-bpview-bphd-border-bottom)}
-#bpview .bc{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
-#bpview .bpr.bpgap .bn{color:var(--t-bpview-bpr-bpgap-bn-fg);font-weight:700}
-#bpview .bpr.bpna{color:var(--t-bpview-bpr-bpna-fg,var(--muted))}
-@media (--phone){
-#bpview .bphd{display:none}
-#bpview .bpr{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px 10px;padding:10px 4px}
-#bpview .bptask .bpr{grid-template-columns:repeat(3,minmax(0,1fr))}
-#bpview .bn{grid-column:1/-1;font-weight:700;line-height:1.3}
-#bpview .bc{text-align:left;white-space:normal;font-size:14px}
-#bpview .bc::before{content:attr(data-l);display:block;font-size:9.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--t-bpview-bc-before-fg,var(--muted));margin-bottom:1px}
-}
 nav.jump{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 16px}
 nav.jump a{font:600 12px/1 var(--sans,system-ui);padding:7px 10px;border-radius:999px;background:var(--p-E3EEE5);background-color:var(--t-nav-jump-a-bgc);color:var(--t-nav-jump-a-fg);text-decoration:var(--t-nav-jump-a-td)}
 h5.tsec{font-family:var(--serif);font-size:20px;font-weight:600;text-transform:none;letter-spacing:-.15px;color:var(--t-h5-tsec-fg,var(--ink));line-height:1.2;margin:32px 0 10px;padding:1px 0 1px 11px;border:var(--t-h5-tsec-border);border-left:var(--t-h5-tsec-border-left,3px solid var(--accent));scroll-margin-top:12px}
