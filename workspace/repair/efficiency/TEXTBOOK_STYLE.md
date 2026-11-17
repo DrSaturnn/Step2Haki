@@ -8,11 +8,30 @@ stems also follow "Original stems" in STANDING_DIRECTIONS. Conversation replies 
 Enforcement:
 - tools/spine/prose_lint.py: the gate's prose-lint check (no brief's count rises above tools/spine/prose_baseline.json)
   and prose-touched check (a brief whose text, hover text included, changed against the base has zero hits; a
-  markup-only change is exempt); ship.sh tightens the baseline. The header word caps and meta words are report-only (no header word cap: D-20261107-2).
+  markup-only change and a removal the owner waived are exempt, see Waivers); ship.sh tightens the baseline. The header word caps and meta words are report-only (no header word cap: D-20261107-2).
 - tools/spine/verify.py: a brief with prose hits is not READY, so ship.sh refuses it.
 - The card below is copied into every builder's INSTRUCTIONS.md (tools/spine/build_lanes.py), every review-round and
   patch lane's INSTRUCTIONS.md (lanes.py, patch.py) and every reviewer's RULES.md (tools/spine/review_packet.py). This
   file is the only copy; edit it here.
+
+## Waivers (D-20261116-15)
+
+The owner may waive the prose-touched check and the brief review rounds for a change that removes named elements from
+briefs and edits nothing else. The waiver is recorded, and the lint proves its scope.
+- Record: one entry in tools/spine/text_waivers.json: an id W-YYYYMMDD-N, the reference page by hash
+  (`python3 tools/spine/prose_lint.py REF.html --ref-hash`), the removed elements as tag.class selectors (span.pill),
+  never phrases, and the id of the DECISIONS_DIGEST line that quotes his words; the entry's words must appear verbatim
+  in that line, or the waiver does not apply.
+- Effect: a brief that differs from the reference page only by removed copies of those elements is not "changed".
+  The gate's prose-touched check and its changed-brief content checks skip that brief. The batch runs no accuracy,
+  read or display review round for it; a screenshot of the changed block in a sample of the waived briefs, at a phone
+  and a desktop width, stands in for the display review.
+- Proof: prose_lint.changed_briefs removes the elements from both pages and compares each brief's text. Any other
+  difference in the brief, a removed word outside the elements included, makes it changed, and every check and review
+  pass then applies to it.
+- Limits: the total-count baseline check is never waived. A waiver names one reference page, so it covers one ship.
+  Claude never writes a waiver on an inference; the digest line quotes a message in which the owner names the change and
+  says the passes are skipped.
 
 <!-- card:start -->
 ## Writing card (read before writing or reviewing any line)

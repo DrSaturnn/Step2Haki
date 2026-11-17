@@ -41,7 +41,7 @@ function switches(){
   }
   if(AX.settings.get('study')==='1') b.classList.add('study');
   if(AX.settings.get('flat')==='1') b.classList.add('flat');   // flat only when the reader chose it
-  else deck((AX.settings.get('surface') || (window.matchMedia('(max-width:1100px)').matches ? 'deck' : 'std')) === 'deck');
+  else deck((AX.settings.get('surface') || 'deck') === 'deck');
   box.querySelector('.study').addEventListener('click',function(){
     b.classList.toggle('study'); AX.settings.set('study',b.classList.contains('study')?'1':'0'); sync();
   });
@@ -272,7 +272,7 @@ function applyShelf(s){
   var meta=document.querySelector('.masthead .meta');
   if(meta){
     meta.innerHTML='<span><b>'+visible+'</b> topics</span><span><b>'+liveSystems+'</b> systems</span>'+
-      '<span><b>10</b> named trap species</span><span>Viewing <b>'+
+      '<span>Viewing <b>'+
       (SHELVES.filter(function(x){return x[0]===s;})[0]||['','Step 2'])[1]+'</b>'+'</span>';
   }
   document.querySelectorAll('.shelfpick button').forEach(function(b){b.classList.toggle('on',b.dataset.shelf===s);});
@@ -1086,7 +1086,7 @@ function sxWire(){
 
 /* ---------- 1. section headers get a protruding numbered tab ---------- */
 var SHORT={presentations:'CC',msk:'MSK',peds:'PEDS',cv:'CV',pulm:'PULM',gi:'GI',renal:'RENAL',endo:'ENDO',
-           id:'ID',neuro:'NEURO',derm:'DERM',obgyn:'OBGYN',prev:'PREV',strategy:'START',heme:'HEME',psych:'PSYCH'};
+           id:'ID',neuro:'NEURO',derm:'DERM',obgyn:'OBGYN',prev:'PREV',heme:'HEME',psych:'PSYCH'};
 function sections(){
   var n=0;
   document.querySelectorAll('h3.system').forEach(function(h){

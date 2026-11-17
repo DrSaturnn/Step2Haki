@@ -20,12 +20,20 @@ Usage:
   python3 prose_lint.py PAGE.html --write-baseline B.json
   python3 prose_lint.py PAGE.html --tighten B.json       # rewrite B with min(baseline, current); drop gone briefs
   python3 prose_lint.py PAGE.html --touched BASE.html    # exit 1 if a brief whose text changed has any hit
+  python3 prose_lint.py BASE.html --ref-hash             # the reference id a waiver in text_waivers.json names
 
 Public API: lint_brief(inner_html) -> [{'pattern', 'region', 'text', 'match', 'tag'}]; page_counts(page_html) ->
 {brief_id: hit_count}; text_key(inner_html) -> the brief's whole text, hover bodies included; changed_briefs(ref_html,
 page_html) -> the briefs whose text_key differs from REF (new briefs included).
+
+Waivers (text_waivers.json; repair/efficiency/TEXTBOOK_STYLE.md, Waivers): a waiver names elements by CSS selector
+(span.pill) whose removal from briefs is waived against one reference page, and the DECISIONS_DIGEST line that quotes
+the owner's words. A brief whose text differs from that reference only by removed copies of those elements is not
+"changed": prose-touched and the changed-brief content checks skip it. Any other difference makes it changed as
+before. The total-count baseline check is never waived.
 """
 import collections
+import hashlib
 import json
 import os
 import re
@@ -673,15 +681,104 @@ def text_key(inner_html):
     return re.sub(r'\( ', '(', re.sub(r' ([;:,.!?)])', r'\1', t))
 
 
-def changed_briefs(ref_html, page_html):
-    """Briefs on page_html whose text differs from ref_html, plus briefs new since ref_html."""
+WAIVERS = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'text_waivers.json')
+WAIVER_ID = re.compile(r'^W-\d{8}-\d+$')
+SELECTOR = re.compile(r'^[a-z][a-z0-9]*(?:\.[A-Za-z][\w-]*)+$')   # tag.class[.class]: an element, never a phrase
+
+
+def ref_hash(ref_html):
+    """The id of a reference page in text_waivers.json: the first 16 hex digits of its SHA-256."""
+    return hashlib.sha256(ref_html.encode('utf-8')).hexdigest()[:16]
+
+
+def _digest_lines():
+    path = os.environ.get('AXBX_WAIVER_DIGEST')
+    if not path:
+        try:
+            sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+            from docs_path import doc
+            path = doc('DECISIONS_DIGEST.md')
+        except (ImportError, FileNotFoundError):
+            return {}
+    if not os.path.exists(path):
+        return {}
+    out = {}
+    for line in open(path, encoding='utf-8'):
+        m = re.search(r'\[(D-\d{8}-\d+)\]', line)
+        if m:
+            out[m.group(1)] = line
+    return out
+
+
+def waiver_selectors(ref_html, path=None):
+    """Selectors whose removal is waived against this reference page. An entry applies only when its id has the
+    W-YYYYMMDD-N form, it names this page by hash, every removed item is a tag.class selector, and the digest line of
+    its decision id quotes its words verbatim. A waiver names one reference page, so it covers one ship."""
+    path = path or os.environ.get('AXBX_TEXT_WAIVERS') or WAIVERS
+    if not os.path.exists(path):
+        return []
+    h, out, dig = ref_hash(ref_html), [], None
+    for w in json.load(open(path, encoding='utf-8')).get('waivers', []):
+        sel = w.get('removed') or []
+        if w.get('ref_sha256') != h or not WAIVER_ID.match(w.get('id', '')) or not w.get('words', '').strip():
+            continue
+        if not sel or not all(isinstance(x, str) and SELECTOR.match(x) for x in sel):
+            continue
+        dig = _digest_lines() if dig is None else dig
+        if w['words'] not in dig.get(w.get('decision', ''), ''):
+            continue
+        out += sel
+    return sorted(set(out))
+
+
+def _strip(inner_html, selectors):
+    """(the brief's html with every element matching the selectors removed, how many were removed)"""
+    soup = BeautifulSoup(inner_html, 'lxml')
+    n = 0
+    for sel in selectors:
+        for t in soup.select(sel):
+            t.decompose(); n += 1
+    return str(soup), n
+
+
+def only_waived(ref_inners, cur_inners, selectors):
+    """True when the brief's text differs from the reference only by removed elements that match the selectors."""
+    if not selectors:
+        return False
+    r = [_strip(x, selectors) for x in ref_inners]
+    c = [_strip(x, selectors) for x in cur_inners]
+    if sum(n for _, n in c) > sum(n for _, n in r):   # an added copy is not a removal
+        return False
+    return ''.join(text_key(x) for x, _ in r) == ''.join(text_key(x) for x, _ in c)
+
+
+def _pairs(ref_html, page_html):
     ref = {}
     for b in briefs(ref_html):
-        ref[b.id] = ref.get(b.id, '') + text_key(b.inner)
+        ref.setdefault(b.id, []).append(b)
     cur = collections.OrderedDict()
     for b in briefs(page_html):
         cur.setdefault(b.id, []).append(b)
-    return [b for bid, bs in cur.items() if ref.get(bid) != ''.join(text_key(x.inner) for x in bs) for b in bs]
+    for bid, bs in cur.items():
+        rs = ref.get(bid)
+        rt = None if rs is None else ''.join(text_key(x.inner) for x in rs)
+        yield bs, rs, rt, ''.join(text_key(x.inner) for x in bs)
+
+
+def changed_briefs(ref_html, page_html, waivers=None):
+    """Briefs on page_html whose text differs from ref_html, plus briefs new since ref_html. A brief whose only
+    difference is the removal of elements waived for this reference page (text_waivers.json) is not changed."""
+    sel = waiver_selectors(ref_html, waivers)
+    return [b for bs, rs, rt, ct in _pairs(ref_html, page_html)
+            if rt != ct and not (rs is not None and only_waived([x.inner for x in rs], [x.inner for x in bs], sel))
+            for b in bs]
+
+
+def waived_briefs(ref_html, page_html, waivers=None):
+    """Ids of the briefs that changed_briefs leaves out because a waiver covers their whole difference."""
+    sel = waiver_selectors(ref_html, waivers)
+    return [bs[0].id for bs, rs, rt, ct in _pairs(ref_html, page_html)
+            if rs is not None and rt != ct and only_waived([x.inner for x in rs], [x.inner for x in bs], sel)]
 
 
 def page_counts(page_html):
@@ -737,9 +834,17 @@ def main(a):
         _print_hits(bid, hs)
         return 0
 
+    if '--ref-hash' in a:
+        print(ref_hash(page))
+        return 0
+
     if '--touched' in a:
         bad = 0
-        for b in changed_briefs(read_page(_arg(a, '--touched')), page):
+        ref_page = read_page(_arg(a, '--touched'))
+        wv = waived_briefs(ref_page, page)
+        if wv:
+            print('PROSE-LINT touched: %d brief(s) differ only by removals waived in tools/spine/text_waivers.json' % len(wv))
+        for b in changed_briefs(ref_page, page):
             hs = lint_brief(b.inner, touched=True)
             if hs:
                 bad += 1

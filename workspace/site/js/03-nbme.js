@@ -74,7 +74,7 @@ function kind(b){ return (b.dataset.src==='aquifer'||b.classList.contains('aq'))
 function headerCounts(){
   document.querySelectorAll('h3.system').forEach(function(h){
     var n=h.querySelector('.n'); if(!n) return;
-    var c={topic:0,bs:0,aq:0}; briefsIn(h).forEach(function(b){c[kind(b)]++;});
+    var c={topic:0,bs:0,aq:0}; briefsIn(h).forEach(function(b){ if(b.style.display!=='none') c[kind(b)]++; });   // the briefs the shelf shows
     if(!c.topic&&!c.bs&&!c.aq) return;
     n.textContent=(c.topic+c.bs+c.aq)+' topics';
   });
@@ -152,7 +152,6 @@ function blueprint(){
   var h='<p class="bpnote bpsrc"><b>'+esc(O.name)+'</b> outline. Exam share is the published range.'+(O.note?' '+esc(O.note):'')+'</p>';
   LAST={name:O.name, rows:rows.concat(unl.p?[unl]:[]).map(function(x){ var sh=total?100*x.q/total:0;
     return {label:x.r.label, range:x.r.r||null, briefs:x.ids.slice(), gap:!x.unl&&(x.p===0||!!(total&&x.r.r&&sh<x.r.r[0]))}; })};
-  h+=matrix();
   h+='<div class="bpg bptask" role="table" aria-label="Questions by physician task, '+esc(O.name)+'"><div class="bpcap">Questions by physician task</div>'+
      bpHead(['Task',O.share,'Bank share','Questions']);
   tasks.forEach(function(x){ h+=bpRow(x.t.types?'':'bpna',esc(x.t.label),[[O.share,pct(x.t.r)],['Bank share',x.t.types?share(x.q):'–'],['Questions',x.t.types?x.q:'not tagged']]); });
@@ -164,7 +163,7 @@ function blueprint(){
 }
 function run(){ AX.blueprint={html:matrix, name:function(){ return LAST?LAST.name:''; }};
   headerCounts(); chips(); blueprint();
-  document.addEventListener('ax-shelf',function(){ blueprint(); });
+  document.addEventListener('ax-shelf',function(){ headerCounts(); blueprint(); });
   var q=0; AX.on('review:state',function(){ if(!q) q=setTimeout(function(){ q=0; repaint(); },80); }); }
 if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run); else run();
 })();

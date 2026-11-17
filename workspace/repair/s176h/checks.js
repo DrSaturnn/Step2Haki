@@ -1,0 +1,33 @@
+// s176h checks: starting surface, Continue on desktop (dwell), fast scroll writes nothing, Review and Guides rows, resize across 1100, phone Home rows.
+// node repair/s176h/checks.js PAGE.html   (run from workspace/; NODE_PATH=/opt/npm-tools/node_modules in the cloud container)
+const path=require('path');const {chromium}=require('playwright');const {serve}=require(path.resolve('tools/serve_page'));
+(async()=>{const srv=await serve(process.argv[2]);const br=await chromium.launch();let bad=0;const ok=(n,v,note)=>{console.log((v?'PASS ':'FAIL ')+n+(note?' ('+note+')':''));if(!v)bad++;};
+const open=async(w,h,s,url)=>{const cx=await br.newContext({viewport:{width:w,height:h}});await cx.addInitScript(s=>{if(!localStorage.getItem('ax-settings'))localStorage.setItem('ax-settings',JSON.stringify({v:1,s:s}));},s);const pg=await cx.newPage();const errs=[];pg.on('pageerror',e=>errs.push(e.message));await pg.goto(srv.url+(url||''));await pg.waitForTimeout(2600);return {cx,pg,errs};};
+let r=await open(1440,900,{tour:'1'});
+ok('empty storage at 1440 starts on Deck',await r.pg.evaluate(()=>document.documentElement.dataset.surface==='deck'));
+ok('first visit: no Continue card, Review and Coverage drawn',await r.pg.evaluate(()=>!document.querySelector('#phhome .hh-c')&&!!document.querySelector('#phhome .hh-rv')&&!!document.querySelector('#phhome .bpmx')));
+ok('no Browse card and no phone bar on desktop',await r.pg.evaluate(()=>!document.querySelector('#phhome [data-tour=browse]')&&getComputedStyle(document.getElementById('phbar')).display==='none'&&getComputedStyle(document.getElementById('phfoot')).display==='none'));
+await r.pg.evaluate(()=>{location.hash='#backpain';});await r.pg.waitForTimeout(900);await r.pg.evaluate(()=>{location.hash='#limp';});await r.pg.waitForTimeout(900);await r.pg.evaluate(()=>window.scrollTo(0,0));await r.pg.waitForTimeout(3200);
+ok('two briefs passed in under the dwell record nothing',await r.pg.evaluate(()=>!localStorage.getItem('ax-recent')),await r.pg.evaluate(()=>localStorage.getItem('ax-recent')));
+await r.pg.evaluate(()=>{location.hash='#backpain';});await r.pg.waitForTimeout(5200);
+const rec=await r.pg.evaluate(()=>JSON.parse(localStorage.getItem('ax-recent')||'[]'));
+ok('a brief held for the dwell is recorded',rec.length===1&&rec[0].id==='backpain',JSON.stringify(rec));
+await r.pg.evaluate(()=>window.scrollTo(0,0));await r.pg.waitForTimeout(900);
+ok('Continue shows that brief on return to the top',await r.pg.evaluate(()=>{const b=document.querySelector('#phhome .hh-c b');return !!b&&/Low Back Pain/.test(b.textContent)&&document.querySelector('#phhome .hh-c').getBoundingClientRect().height>0;}));
+await r.pg.click('#phhome .hh-c');await r.pg.waitForTimeout(1200);
+ok('Continue opens the brief at the step last read',await r.pg.evaluate(()=>{const t=document.getElementById(location.hash.slice(1));return !!t&&!!t.closest('#backpain')&&scrollY>1000;}),await r.pg.evaluate(()=>location.hash+' y'+scrollY));
+await r.pg.evaluate(()=>window.scrollTo(0,0));await r.pg.waitForTimeout(600);
+await r.pg.click('#phhome .hh-rv');await r.pg.waitForTimeout(900);
+ok('Review card opens the Review sheet',await r.pg.evaluate(()=>[...document.querySelectorAll('[class*=rv],[id*=rv]')].some(e=>e.id!=='rvpanel'&&!e.closest('#phhome')&&!e.closest('#axbar')&&!e.hidden&&e.getBoundingClientRect().height>80&&getComputedStyle(e).position!=='static')));
+await r.pg.keyboard.press('Escape');await r.pg.waitForTimeout(500);await r.pg.mouse.click(700,700);await r.pg.waitForTimeout(400);
+await r.pg.evaluate(()=>document.querySelectorAll('#phhome [data-do=guide]')[0].click());await r.pg.waitForTimeout(1300);
+ok('Guides row opens its guide and scrolls to it',await r.pg.evaluate(()=>{const g=document.getElementById('bpview'),t=g.getBoundingClientRect().top;return g.open&&t>=-5&&t<400;}));
+ok('the open blueprint guide shows no second matrix',await r.pg.evaluate(()=>{const m=document.querySelector('#bpview .bpmx');return !m||getComputedStyle(m).display==='none';}));
+await r.pg.evaluate(()=>{history.replaceState(null,'',location.pathname);window.scrollTo(0,0);});await r.pg.reload();await r.pg.waitForTimeout(2600);await r.pg.setViewportSize({width:900,height:800});await r.pg.waitForTimeout(1500);await r.pg.evaluate(()=>window.scrollTo(0,0));
+ok('resize to 900: the phone Home is drawn (Browse card, bar)',await r.pg.evaluate(()=>{return !!document.querySelector('#phhome [data-tour=browse]')&&!document.querySelector('#phhome .hh-hd')&&getComputedStyle(document.getElementById('phbar')).display!=='none';}));
+await r.pg.setViewportSize({width:1440,height:900});await r.pg.waitForTimeout(1500);
+ok('resize back to 1440: the desktop Home is drawn',await r.pg.evaluate(()=>!!document.querySelector('#phhome .hh-hd')&&!document.querySelector('#phhome [data-tour=browse]')));
+ok('no page error (desktop run)',!r.errs.length,r.errs.join('; '));await r.cx.close();
+r=await open(1440,900,{tour:'1',surface:'std'});ok('a stored Sculpted choice is kept',await r.pg.evaluate(()=>document.documentElement.dataset.surface!=='deck'));await r.cx.close();
+r=await open(1440,900,{tour:'1',layout:'two'},'#backpain');ok('two-pane layout: no page error',!r.errs.length,r.errs.join(';'));await r.cx.close();
+console.log(bad?bad+' FAILED':'all passed');await br.close();srv.close();})();

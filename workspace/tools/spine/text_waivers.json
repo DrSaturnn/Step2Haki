@@ -1,0 +1,17 @@
+{
+ "_doc": "Text waivers for the prose-touched check and the changed-brief content checks (tools/spine/prose_lint.py, changed_briefs). One entry per say-so from the owner. An entry names one reference page (ref_sha256: python3 tools/spine/prose_lint.py REF.html --ref-hash), the elements whose removal is waived as tag.class selectors, and the DECISIONS_DIGEST id whose line quotes the owner's words verbatim (words). A brief that differs from the reference only by removed copies of those elements is not changed. Entries stay as the record after the ship; they are inert once the reference page changes. Rule: repair/efficiency/TEXTBOOK_STYLE.md, Waivers.",
+ "waivers": [
+  {
+   "id": "W-20261116-1",
+   "batch": "s176h",
+   "decision": "D-20261116-15",
+   "date": "2026-11-16",
+   "words": "lets remove it and amend the prose lint and other brief reviews rules that state these passes can be skipped upon my say so. No brief content is touched otherwise so no further passes should be required.",
+   "what": "The trap species labels (span.pill) are removed from every trap line; a traps row that held only labels leaves with them. The method guide that defined them leaves the page.",
+   "ref_sha256": "ac068d8dc00dfda8",
+   "removed": [
+    "span.pill"
+   ]
+  }
+ ]
+}

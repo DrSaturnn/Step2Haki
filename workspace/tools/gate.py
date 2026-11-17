@@ -77,10 +77,8 @@ CATALOG = {
                    'use the exact partner <h4> text in <b>, or <i> for a partner that does not exist yet'),
     'vendor-image': ('no <img>/<image>/<picture>/<object>/<embed> and no raster data: URI (figures are redrawn inline SVG)',
                      'redraw as inline svg.axfig, a table or a decision spine'),
-    'residue': ('no raw markdown (**), escaped tag markup (&lt;b&gt;), bare pills, or emoji in briefs',
-                'convert markdown to <b>, unescape allowlisted tags, map bare pills to a named species, remove emoji'),
-    'trap-count': ('"<b>N</b> named trap species" appears at least twice (static + transform) with one N',
-                   'update both copies together'),
+    'residue': ('no raw markdown (**), escaped tag markup (&lt;b&gt;), trap species pills, or emoji in briefs',
+                'convert markdown to <b>, unescape allowlisted tags, delete the pill and keep the trap line, remove emoji'),
     'scripts': ('every executable inline <script> passes node --check; JSON blocks skipped', 'fix the syntax error'),
     'search-index': ('a page whose briefs load on demand has search.json beside it, listing every brief and equal to a '
                      'fresh dump of the page (tools/search_index.js --check; s164c, D-20261106-4)',
@@ -119,7 +117,7 @@ CATALOG = {
                  'mark the old line "(superseded by D-...)" in the same commit, or cite the live id in STANDING_DIRECTIONS'),
     'prose-lint': ('no brief\'s prose lint count (tools/spine/prose_lint.py, review-book register) rises above tools/spine/prose_baseline.json, and a brief new to the baseline has none (D-20261106-9, D-20261106-11)',
                    'rewrite the flagged lines per repair/efficiency/TEXTBOOK_STYLE.md; a permitted near miss goes in the lint\'s ALLOW list with a test'),
-    'prose-touched': ('a brief whose text (hover text included) changed against the base has zero prose lint hits; markup-only changes and --attr-only ships are exempt (D-20261106-11)',
+    'prose-touched': ('a brief whose text (hover text included) changed against the base has zero prose lint hits; markup-only changes, --attr-only ships and removals the owner waived in tools/spine/text_waivers.json are exempt (D-20261106-11)',
                       'rewrite every flagged line in the brief you changed per repair/efficiency/TEXTBOOK_STYLE.md, or show the hit is a permitted near miss and add it to the lint\'s ALLOW list with a test'),
     'nbme-block': ('a brief\'s NBME blocks outside the bank and outside pause points do not rise in count against the base, and a brief whose text changed has none unless its hash is in repair/*/nbme_keep.json (tools/spine/content_gate.py; s170 T6, N5)',
                    'carry the block\'s separating stem details into the brief\'s lines (symptom, mimic, next-step) and remove the block, or move it into a pause point; a block kept on purpose gets a nbme_keep.json row {brief, hash, reason}'),
@@ -491,8 +489,8 @@ def check_page(page, g, page_path):
             g.fail('residue', b.id + ':md', '%s contains raw markdown **' % b.id)
         if re.search(r'&lt;/?(?:b|i|span|sup|sub|div|p|br|em|strong)\b', inn):
             g.fail('residue', b.id + ':esc', '%s contains escaped tag markup' % b.id)
-        if re.search(r'<span class="pill">', inn):
-            g.fail('residue', b.id + ':pill', '%s has a bare pill (no p-* species class)' % b.id)
+        if re.search(r'<span class="pill\b', inn):
+            g.fail('residue', b.id + ':pill', '%s has a trap species pill (the labels are retired, W-20261116-1)' % b.id)
         emo = [c for c in H.unescape(re.sub(r'<[^>]+>', '', inn)) if ord(c) >= 0x1F000 or c == '️']
         if emo:
             g.fail('residue', b.id + ':emoji', '%s contains emoji %r' % (b.id, ''.join(sorted(set(emo)))))
@@ -505,10 +503,6 @@ def check_page(page, g, page_path):
     for m in re.finditer(r'data:image/(?!svg\+xml)[a-z]+', page, re.I):
         g.fail('vendor-image', 'offset%d' % m.start(), 'raster data URI at offset %d' % m.start())
 
-    # ---- trap species count
-    tc = re.findall(r'<b>(\d+)</b> named trap species', page)
-    if len(tc) < 2 or len(set(tc)) != 1:
-        g.fail('trap-count', '*', '"named trap species" counts %r (need >= 2 copies, one value)' % tc)
 
     # ---- div balance
     op, cl = len(re.findall(r'<div\b', body)), len(re.findall(r'</div\s*>', body))
