@@ -1,0 +1,254 @@
+[
+ {
+  "sel": "#phhome",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome button",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome button:focus-visible",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-card",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-list",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-cx",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-cx b",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-cx i",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-r",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-list > .hh-r:first-child",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-r > span:first-child",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-r:active",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-ch",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-rv",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-pill",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-h",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-h:first-child",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-h h2",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-h span",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .bpmx",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phfoot",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".trapdex td:first-child",
+  "prop": "(count)"
+ },
+ {
+  "sel": "body .axm-flat .pill",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".pill",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".p-number",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".p-trump",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".p-seq",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".p-uniform",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".p-test",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".p-class",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".traps .trapline",
+  "prop": "display"
+ },
+ {
+  "sel": ".traps .trapline",
+  "prop": "align-items"
+ },
+ {
+  "sel": ".traps .trapline",
+  "prop": "row-gap"
+ },
+ {
+  "sel": ".traps .trapline",
+  "prop": "column-gap"
+ },
+ {
+  "sel": ".traps .trapline",
+  "prop": "margin-bottom"
+ },
+ {
+  "sel": ".traps .trapline",
+  "prop": "@box"
+ },
+ {
+  "sel": ".traps .trapwhy",
+  "prop": "(element)"
+ },
+ {
+  "sel": ".traps:has(> .trapline)",
+  "prop": "display"
+ },
+ {
+  "sel": ".traps:has(> .trapline)",
+  "prop": "grid-template-columns"
+ },
+ {
+  "sel": ".traps:has(> .trapline)",
+  "prop": "column-gap"
+ },
+ {
+  "sel": ".traps:has(> .trapline)",
+  "prop": "row-gap"
+ },
+ {
+  "sel": ".traps:has(> .trapline)",
+  "prop": "align-items"
+ },
+ {
+  "sel": ".traps:has(> .trapline)",
+  "prop": "@box"
+ },
+ {
+  "sel": ".traps:has(> .trapline) > .trapline",
+  "prop": "display"
+ },
+ {
+  "sel": ".traps:has(> .trapline) > .trapline",
+  "prop": "margin-bottom"
+ },
+ {
+  "sel": ".traps:has(> .trapline) > .trapline",
+  "prop": "@box"
+ },
+ {
+  "sel": ".traps .trapline .pill",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".traps .trapline .trapwhy",
+  "prop": "(element)"
+ },
+ {
+  "sel": "html.ph-home .masthead",
+  "prop": "(count)"
+ },
+ {
+  "sel": "html.ph-home .masthead .wrap > :not(#phhome)",
+  "prop": "(count)"
+ },
+ {
+  "sel": "html.ph-home #phhome",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-hd",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-hd h2",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-hd p",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-hd button",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-hd button:hover",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-g",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-ga .hh-h",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-ga .hh-r",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-gb .hh-h",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .hh-r:hover",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phfoot",
+  "prop": "@box"
+ },
+ {
+  "sel": "html.ph-home.ph-solo #bpview .bpmx",
+  "prop": "(count)"
+ }
+]
