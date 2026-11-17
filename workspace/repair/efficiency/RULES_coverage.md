@@ -61,7 +61,7 @@ Where CURRENT_STATE.md's standing rules (the user's newer rules) differ from a s
 | F1 to F6 and the F6 test | W14 |
 | 4.3 dual rendering; one authored bank | W20 (single chain line) |
 | 4.4 distractor analysis and pattern catalog | W25 |
-| New pattern naming | W25 (pill only when a species fits) |
+| New pattern naming | W25 (no label: trap species labels retired, W-20261116-1) |
 | 5.1 discriminator table spec; data-mask | W23, W2 |
 | 5.2 management block (classify first, fingerprint, ladder, gates, exit ramps, de-escalation) | W9, W10, W23, W2 |
 | 5.3 criteria tile scale rule | W27, W21, W22 |
@@ -105,7 +105,7 @@ Where CURRENT_STATE.md's standing rules (the user's newer rules) differ from a s
 | Distractors hand-authored; cue review; capitalizing the key is safe; keyed = segment 2 | W14, W18, W20 |
 | One prompt, existing tables | W17, W2 |
 | Labels and revealed explanations; verify consumers | W18, W11 |
-| Trapline form (`{option} — {why}`); bare pills upgraded | W25 |
+| Trapline form (`{option} — {why}`), no label | W25 |
 | Pairs-with exact h4; reverse mention; `<i>` for a missing partner | W26 |
 | Preserve study interaction | W23, W24 |
 | Column-driven masking | W23 |
@@ -119,7 +119,7 @@ Where CURRENT_STATE.md's standing rules (the user's newer rules) differ from a s
 | Clinical rule guard | W9 |
 | Adding a Part II brief; bands | omitted: no new briefs |
 | Sidebar and counts | omitted: no new briefs |
-| Distractor-pattern pills; adding a species costs four edits | W25 (existing species only) |
+| Distractor-pattern labels | W25 (retired: no label, W-20261116-1) |
 | Mapping board-brief output onto the page (distractor analysis to traplines, vignette never absorbed) | W24, W25, W26, W21 |
 | Bulk insertions / converter / mask trap / pairs-with titles | omitted: batch tooling; mask trap in W23, titles in W26 |
 | Merging two briefs: the stem the .dp argues about stays; the other lives in the bank | W5 |

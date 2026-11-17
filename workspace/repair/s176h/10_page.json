@@ -1,0 +1,2135 @@
+{
+ "_doc": "s176h page text edits, written by repair/s176h/gen_edits.py; waiver W-20261116-1 covers the brief edits",
+ "edits": [
+  {
+   "op": "replace_global",
+   "find": "<details class=\"fmdrop\">\n<summary><span class=\"t\">Method guide &ndash; the three habits, question verbs &amp; the trap species</span><span class=\"hint\">tap to expand</span></summary>\n\n<div class=\"strat\">\n  <h4>The three habits</h4>\n  <ol>\n    <li><b>The assassin scan.</b> For each answer choice, find the sentence in the stem that makes it <i>impossible</i>. When every option but one has an assassin, the question is finished &ndash; no forward reasoning required. A stem's \"normal\" findings are eliminations, not filler.</li>\n    <li><b>The switch rule.</b> Change an answer only when rereading reveals a <b>misread fact</b> &ndash; never when it reveals a <b>new possibility</b>. A detail that is merely <i>compatible</i> with another diagnosis is flavor. Incompatibility, not plausibility.</li>\n    <li><b>Store the discriminator, not the outcome.</b> Learn \"limping child → <i>score Kocher</i>,\" never \"limping child → <i>aspirate</i>.\" Rules stored as outcomes fire on the benign mirror-twin stem and get you twice.</li>\n  </ol>\n</div>\n\n<div class=\"strat\">\n  <h4>Read the verb before the choices</h4>\n  <ol>\n    <li><b>\"Most likely diagnosis\"</b> → the diagnosis that explains <i>all</i> findings, not the most findings.</li>\n    <li><b>\"Most sensitive / screening\"</b> → lowest detection threshold. <b>\"Most accurate / definitive / confirms\"</b> → tissue, or the gold-standard test.</li>\n    <li><b>\"Next step in management\"</b> → the next rung on the ladder. <b>\"Next step in diagnosis\"</b> → the test whose result changes what you do tonight.</li>\n    <li><b>\"Most beneficial / reduces mortality\"</b> → match the intervention's time-to-benefit to the outcome's time horizon. Lipids = years. BP, volume, GDMT = weeks to months.</li>\n    <li><b>\"Underlying cause\"</b> → the trunk of the causal tree, not a branch.</li>\n  </ol>\n</div>\n\n<h5>The ten trap species</h5>\n<table class=\"trapdex\" data-mask=\"3\">\n<thead><tr><th>Species</th><th>How it works</th><th>Antidote</th></tr></thead>\n<tbody>\n<tr><td><span class=\"pill p-salient\">Salient decoy</span></td><td>A vivid, concrete detail &ndash; occupation, travel, family history &ndash; that is <i>compatible</i> with the right answer but <i>suggests</i> a wrong one. <span class=\"ex\">Camping in Georgia → Lyme, when the answer is rheumatic fever.</span></td><td>Ask what job the detail is doing. If it's making you nervous rather than deciding anything, it's bait.</td></tr>\n<tr><td><span class=\"pill p-number\">Treat-the-number</span></td><td>An abnormal lab planted so you medicate the value instead of the outcome. <span class=\"ex\">Low HDL → niacin. High A1c → metformin. High Hct → phlebotomy.</span></td><td>Ask which intervention changes the <i>outcome named in the question</i>.</td></tr>\n<tr><td><span class=\"pill p-trump\">Trump-card inversion</span></td><td>A risk calculator offered when a categorical indication already decides it. <span class=\"ex\">10-year risk 4.9% in a diabetic &ndash; diabetes already earned the statin.</span></td><td>Check trump cards before calculators: prior event, LDL ≥190, diabetes 40–75.</td></tr>\n<tr><td><span class=\"pill p-slot\">True-fact-wrong-slot</span></td><td>A real association placed where the timeline or findings forbid it. <span class=\"ex\">Post-URI in a 12-month history. Fibroids causing postmenopausal bleeding.</span></td><td>Verify the interval and the physiologic state before you use the association.</td></tr>\n<tr><td><span class=\"pill p-mirror\">Mirror twin</span></td><td>The benign version of a stem you just learned the dangerous version of. <span class=\"ex\">Transient synovitis right after septic arthritis.</span></td><td>Store the scoring rule, not the action.</td></tr>\n<tr><td><span class=\"pill p-seq\">Sequencing trap</span></td><td>A correct action offered one step out of order. <span class=\"ex\">MRI before conservative therapy. Antibiotics before aspiration. Imaging before airway.</span></td><td>Name the ladder out loud before choosing a rung.</td></tr>\n<tr><td><span class=\"pill p-uniform\">Uniform-answer doubt</span></td><td>An \"all yes\" or \"no further testing\" option rejected because it feels too easy. <span class=\"ex\">HIV vaccine grid &ndash; the answer really was yes to all four.</span></td><td>Reject it only with a <i>named disqualifying criterion</i> you can say out loud.</td></tr>\n<tr><td><span class=\"pill p-test\">Test-overrides-findings</span></td><td>A normal or discordant test offered against classic findings. <span class=\"ex\">Negative scaphoid film. Negative nitrite. Negative Phalen. Normal creatinine in early nephropathy. A nonfocal neuro exam in brain abscess.</span></td><td>A negative result lowers probability according to the test's performance. It supports ruling out disease only when the remaining probability is sufficiently low for the decision.</td></tr>\n<tr><td><span class=\"pill p-attr\">Unchecked attribute</span></td><td>The right <i>category</i> is retrieved and then never checked against the one attribute that separates its members &ndash; direction, age, duration, grade, timing, or kind. The option is the correct disease family with the wrong value on the deciding axis.</td><td>Name the attribute the stem specified, out loud, before choosing: which direction, at what age, over how long, at which grade.</td></tr>\n<tr><td><span class=\"pill p-class\">Class-vs-member</span></td><td>The right drug <i>class</i> represented by the wrong <i>member</i>, making a keyed answer look like it contradicts a guideline. <span class=\"ex\">\"NSAIDs are first-line for OA\" &ndash; but the only NSAID offered is <b>ketorolac</b>, a 5-day drug, so acetaminophen wins.</span></td><td>Read which specific agent represents each class before rejecting the class.</td></tr>\n</tbody>\n</table>\n\n<div class=\"rule\">\n  <span class=\"lbl\">The recurring failure mode</span>\n  Fast-and-wrong misses cluster where the deciding fact is in the <b>background</b> &ndash; the past medical history, the gestational age, the menopausal status, the duration &ndash; rather than in the foreground finding. Recognition speed is not the problem; the missing step is a deliberate <b>10-second completion pass</b>: read the entire lab panel and the entire PMH before locking.\n</div>\n\n</details>\n",
+   "with": "",
+   "note": "the method guide card leaves the page"
+  },
+  {
+   "op": "replace_global",
+   "find": "<h3 class=\"system\" id=\"strategy\">How to Use This</h3>\n<p class=\"system-note\">The clinical content is downstream of the method. Read this section once, then let the briefs reinforce it.</p>\n",
+   "with": "",
+   "note": "the \"How to Use This\" header and note leave the page"
+  },
+  {
+   "op": "replace_global",
+   "find": "      <span><b>10</b> named trap species</span>\n",
+   "with": "",
+   "note": "the species count leaves the page header"
+  },
+  {
+   "op": "replace_global",
+   "find": "<summary><span class=\"t\">NBME blueprint: coverage by system and how questions are worded</span>",
+   "with": "<summary><span class=\"t\">NBME questions: physician tasks, wording, presentations</span>",
+   "note": "NBME card title"
+  },
+  {
+   "op": "replace_global",
+   "find": "<p class=\"bpnote\">Counts and ranges follow the shelf you are viewing: each clerkship shows its own NBME subject exam outline, and Step 2 shows the USMLE Step 2 CK outline. A low NBME count means not yet seen on a form you have logged, not untested.</p>",
+   "with": "<p class=\"bpnote\">Ranges follow the shelf in view. Clerkship shelf: its NBME subject exam outline. Step 2: the USMLE Step 2 CK outline.</p>",
+   "note": "NBME card note"
+  },
+  {
+   "op": "replace",
+   "brief": "ped-murmur",
+   "find": "<span class=\"pill p-uniform\">Uniform-answer doubt</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "ped-murmur",
+   "find": "<span class=\"pill p-mirror\">Mirror twin</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "ped-murmur",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">A",
+   "with": "<span class=\"trapwhy\">A",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "ped-murmur",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-cyanosis",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span><span class=\"trapwhy\">L",
+   "with": "<span class=\"trapwhy\">L",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-cyanosis",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-cyanosis",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">T",
+   "with": "<span class=\"trapwhy\">T",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-cyanosis",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Coa",
+   "with": "<span class=\"trapwhy\">Coa",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-cyanosis",
+   "find": "<span class=\"pill p-mirror\">Mirror twin</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-cyanosis",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-cyanosis",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "newborn-cyanosis",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "myocarditis",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "myocarditis",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "myocarditis",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">K",
+   "with": "<span class=\"trapwhy\">K",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "myocarditis",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-shock",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-shock",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "airway",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">B",
+   "with": "<span class=\"trapwhy\">B",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "airway",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "airway",
+   "find": "<span class=\"pill p-seq\">Sequencing trap</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "cholestasis",
+   "find": "<div class=\"traps\"><span class=\"pill p-seq\">Sequencing trap</span></div>\n",
+   "with": "",
+   "note": "W-20261116-1: a traps row of labels only leaves"
+  },
+  {
+   "op": "replace",
+   "brief": "infant-stool",
+   "find": "<span class=\"pill p-seq\">Sequencing trap</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "infant-stool",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "infant-stool",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "infant-stool",
+   "find": "<span class=\"pill p-uniform\">Uniform-answer doubt</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "<span class=\"pill p-test\">Test-overrides-findings</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "rlq-pain",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-constipation",
+   "find": "<span class=\"pill p-seq\">Sequencing trap</span><span class=\"trapwhy\">Obtain an",
+   "with": "<span class=\"trapwhy\">Obtain an",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-constipation",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-constipation",
+   "find": "<span class=\"pill p-seq\">Sequencing trap</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-constipation",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "cyclic-vomiting",
+   "find": "<span class=\"pill p-unchecked\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "cyclic-vomiting",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">F",
+   "with": "<span class=\"trapwhy\">F",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "<span class=\"pill p-seq\">Sequencing trap</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "occult-gi-bleed",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-umbilical",
+   "find": "<span class=\"pill p-mirror\">Mirror twin</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-umbilical",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-umbilical",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-umbilical",
+   "find": "<span class=\"pill p-seq\">Redundant workup</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-bruising",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-bruising",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">D",
+   "with": "<span class=\"trapwhy\">D",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-bruising",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">A",
+   "with": "<span class=\"trapwhy\">A",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-bruising",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">C",
+   "with": "<span class=\"trapwhy\">C",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-bruising",
+   "find": "<span class=\"pill p-test\">Test-overrides-findings</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-bruising",
+   "find": "<span class=\"pill p-mirror\">Mirror twin</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-bruising",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-bruising",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-genital-ulcer",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">P",
+   "with": "<span class=\"trapwhy\">P",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-genital-ulcer",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-genital-ulcer",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-genital-ulcer",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">V",
+   "with": "<span class=\"trapwhy\">V",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-genital-ulcer",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-infant-hypotonia",
+   "find": "<span class=\"pill p-test\">Test-overrides-findings</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-infant-hypotonia",
+   "find": "<span class=\"pill p-mirror\">Mirror twin</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-infant-hypotonia",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-infant-hypotonia",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-child-headache",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-child-headache",
+   "find": "<span class=\"pill p-mirror\">Mirror twin</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-child-headache",
+   "find": "<span class=\"pill p-test\">Test-overrides-findings</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "aq-child-headache",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-eyelid-lump",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-eyelid-lump",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-eyelid-lump",
+   "find": "<span class=\"pill p-seq\">Sequencing trap</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-eyelid-lump",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-reye",
+   "find": "<div class=\"traps\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"pill p-salient\">Salient decoy</span></div>\n",
+   "with": "",
+   "note": "W-20261116-1: a traps row of labels only leaves"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-learning",
+   "find": "<span class=\"pill p-mirror\">Mirror twin</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-learning",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "pmr",
+   "find": "<div class=\"traps\"><span class=\"pill p-seq\">Sequencing trap</span><span class=\"pill p-number\">Treat-the-number</span></div>\n",
+   "with": "",
+   "note": "W-20261116-1: a traps row of labels only leaves"
+  },
+  {
+   "op": "replace",
+   "brief": "oa-pharm",
+   "find": "<div class=\"traps\"><span class=\"pill p-class\">Class-vs-member</span></div>\n",
+   "with": "",
+   "note": "W-20261116-1: a traps row of labels only leaves"
+  },
+  {
+   "op": "replace",
+   "brief": "growth",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">L",
+   "with": "<span class=\"trapwhy\">L",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "growth",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">F",
+   "with": "<span class=\"trapwhy\">F",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "growth",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "growth",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-preterm-followup",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-preterm-followup",
+   "find": "<span class=\"pill p-number\">Treat-the-number</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-preterm-followup",
+   "find": "<span class=\"pill p-uniform\">Uniform-answer doubt</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "chf",
+   "find": "<div class=\"traps\"><span class=\"pill p-number\">Treat-the-number</span></div>\n",
+   "with": "",
+   "note": "W-20261116-1: a traps row of labels only leaves"
+  },
+  {
+   "op": "replace",
+   "brief": "ascvd",
+   "find": "<div class=\"traps\"><span class=\"pill p-number\">Treat-the-number</span><span class=\"pill p-trump\">Trump-card inversion</span></div>\n",
+   "with": "",
+   "note": "W-20261116-1: a traps row of labels only leaves"
+  },
+  {
+   "op": "replace",
+   "brief": "angina",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "ie-ppx",
+   "find": "<div class=\"traps\"><span class=\"pill p-trump\">Trump-card inversion</span></div>\n",
+   "with": "",
+   "note": "W-20261116-1: a traps row of labels only leaves"
+  },
+  {
+   "op": "replace",
+   "brief": "dvt",
+   "find": "<span class=\"pill p-test\">Test-overrides-findings</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "kawasaki",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "arf",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "del22q11",
+   "find": "<span class=\"pill p-mirror\">Mirror twin</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "del22q11",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "del22q11",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">D",
+   "with": "<span class=\"trapwhy\">D",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "del22q11",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-bp",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-bp",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-bp",
+   "find": "<span class=\"pill p-seq\">Sequencing trap</span><span class=\"trapwhy\">A",
+   "with": "<span class=\"trapwhy\">A",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-bp",
+   "find": "<span class=\"pill p-seq\">Sequencing trap</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "liver-preg",
+   "find": "<div class=\"traps\"><span class=\"pill p-salient\">Salient decoy</span></div>\n",
+   "with": "",
+   "note": "W-20261116-1: a traps row of labels only leaves"
+  },
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "zenker",
+   "find": "<span class=\"pill p-seq\">Sequencing trap</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">P",
+   "with": "<span class=\"trapwhy\">P",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">NE",
+   "with": "<span class=\"trapwhy\">NE",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">N",
+   "with": "<span class=\"trapwhy\">N",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Bilious v",
+   "with": "<span class=\"trapwhy\">Bilious v",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">A m",
+   "with": "<span class=\"trapwhy\">A m",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">A",
+   "with": "<span class=\"trapwhy\">A",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span><span class=\"trapwhy\">I",
+   "with": "<span class=\"trapwhy\">I",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<span class=\"pill p-uniform\">Redundant workup</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<span class=\"pill p-seq\">Sequencing trap</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "neonatal-bowel",
+   "find": "<span class=\"pill p-unchecked\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-impaction",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">S",
+   "with": "<span class=\"trapwhy\">S",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">P",
+   "with": "<span class=\"trapwhy\">P",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "<span class=\"pill p-seq\">Sequencing trap</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tef",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-wilson",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-wilson",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bph",
+   "find": "<div class=\"traps\"><span class=\"pill p-number\">Treat-the-number</span></div>\n",
+   "with": "",
+   "note": "W-20261116-1: a traps row of labels only leaves"
+  },
+  {
+   "op": "replace",
+   "brief": "nephropathy",
+   "find": "<div class=\"traps\"><span class=\"pill p-test\">Test-overrides-findings</span><span class=\"pill p-salient\">Salient decoy</span></div>\n",
+   "with": "",
+   "note": "W-20261116-1: a traps row of labels only leaves"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-aki",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-aki",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puv",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">V",
+   "with": "<span class=\"trapwhy\">V",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puv",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puv",
+   "find": "<span class=\"pill p-mirror\">Mirror twin</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puv",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puv",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puv",
+   "find": "<span class=\"pill p-trump\">Trump-card inversion</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-puv",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "gynecomastia",
+   "find": "<div class=\"traps\"><span class=\"pill p-slot\">True-fact-wrong-slot</span></div>\n",
+   "with": "",
+   "note": "W-20261116-1: a traps row of labels only leaves"
+  },
+  {
+   "op": "replace",
+   "brief": "congenital-hypothyroid",
+   "find": "<span class=\"pill p-test\">Test-overrides-findings</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "congenital-hypothyroid",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "congenital-hypothyroid",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "congenital-hypothyroid",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Ce",
+   "with": "<span class=\"trapwhy\">Ce",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">A",
+   "with": "<span class=\"trapwhy\">A",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">C",
+   "with": "<span class=\"trapwhy\">C",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">M",
+   "with": "<span class=\"trapwhy\">M",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">B",
+   "with": "<span class=\"trapwhy\">B",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">A",
+   "with": "<span class=\"trapwhy\">A",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span><span class=\"trapwhy\">N",
+   "with": "<span class=\"trapwhy\">N",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">S",
+   "with": "<span class=\"trapwhy\">S",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "tumor-syndromes",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "anemia-thrombocytopenia",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">D",
+   "with": "<span class=\"trapwhy\">D",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "anemia-thrombocytopenia",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "anemia-thrombocytopenia",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "anemia-thrombocytopenia",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "anemia-thrombocytopenia",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "dipstick-mismatch",
+   "find": "<span class=\"pill p-mirror\">Mirror twin</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "dipstick-mismatch",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "dipstick-mismatch",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "microcytic-anemia",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "microcytic-anemia",
+   "find": "<span class=\"pill p-seq\">Sequencing trap</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "factor-inhibitor",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">F",
+   "with": "<span class=\"trapwhy\">F",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "factor-inhibitor",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "factor-inhibitor",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "transfusion",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "transfusion",
+   "find": "<span class=\"pill p-seq\">Redundant workup</span><span class=\"trapwhy\">P",
+   "with": "<span class=\"trapwhy\">P",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "transfusion",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "transfusion",
+   "find": "<span class=\"pill p-seq\">Redundant workup</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-leukemia",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">T",
+   "with": "<span class=\"trapwhy\">T",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-leukemia",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-leukemia",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-leukemia",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "tb",
+   "find": "<div class=\"traps\"><span class=\"pill p-seq\">Sequencing trap</span></div>\n",
+   "with": "",
+   "note": "W-20261116-1: a traps row of labels only leaves"
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">HI",
+   "with": "<span class=\"trapwhy\">HI",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">T",
+   "with": "<span class=\"trapwhy\">T",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">C",
+   "with": "<span class=\"trapwhy\">C",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "meningitis",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "hiv-vax",
+   "find": "<div class=\"traps\"><span class=\"pill p-uniform\">Uniform-answer doubt</span><span class=\"pill p-mirror\">Mirror twin</span></div>\n",
+   "with": "",
+   "note": "W-20261116-1: a traps row of labels only leaves"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">C",
+   "with": "<span class=\"trapwhy\">C",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">T",
+   "with": "<span class=\"trapwhy\">T",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">C",
+   "with": "<span class=\"trapwhy\">C",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Ch",
+   "with": "<span class=\"trapwhy\">Ch",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">Common variable immunodeficiency: I",
+   "with": "<span class=\"trapwhy\">Common variable immunodeficiency: I",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Wiskott-Aldrich syndrome: P",
+   "with": "<span class=\"trapwhy\">Wiskott-Aldrich syndrome: P",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span><span class=\"trapwhy\">S",
+   "with": "<span class=\"trapwhy\">S",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span><span class=\"trapwhy\">W",
+   "with": "<span class=\"trapwhy\">W",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">I",
+   "with": "<span class=\"trapwhy\">I",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "ig-panel",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">M",
+   "with": "<span class=\"trapwhy\">M",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">D",
+   "with": "<span class=\"trapwhy\">D",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "<span class=\"pill p-seq\">Sequencing trap</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">Se",
+   "with": "<span class=\"trapwhy\">Se",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "<span class=\"pill p-number\">Treat-the-number</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "rmsf",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">F",
+   "with": "<span class=\"trapwhy\">F",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">S",
+   "with": "<span class=\"trapwhy\">S",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span><span class=\"trapwhy\">I",
+   "with": "<span class=\"trapwhy\">I",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "cgd",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-pta",
+   "find": "<span class=\"pill p-mirror\">Mirror twin</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-pta",
+   "find": "<span class=\"pill p-seq\">Sequencing trap</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\"><",
+   "with": "<span class=\"trapwhy\"><",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">C",
+   "with": "<span class=\"trapwhy\">C",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\"><",
+   "with": "<span class=\"trapwhy\"><",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">G",
+   "with": "<span class=\"trapwhy\">G",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-torch",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-anaphylaxis",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-anaphylaxis",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-anaphylaxis",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">Imm",
+   "with": "<span class=\"trapwhy\">Imm",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-anaphylaxis",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-isolation",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">N",
+   "with": "<span class=\"trapwhy\">N",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-isolation",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-isolation",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-isolation",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">C",
+   "with": "<span class=\"trapwhy\">C",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-foodborne",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "cluster",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "cluster",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">V",
+   "with": "<span class=\"trapwhy\">V",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">O",
+   "with": "<span class=\"trapwhy\">O",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">O",
+   "with": "<span class=\"trapwhy\">O",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "<span class=\"pill p-seq\">Sequencing trap</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-headache-imaging",
+   "find": "<span class=\"pill p-mirror\">Mirror twin</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "febrile-seizure",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">I",
+   "with": "<span class=\"trapwhy\">I",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "febrile-seizure",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "febrile-seizure",
+   "find": "<span class=\"pill p-mirror\">Mirror twin</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "febrile-seizure",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "cerebral-palsy",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "cerebral-palsy",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "cerebral-palsy",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "cerebral-palsy",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "abrs-complications",
+   "find": "<div class=\"traps\"><span class=\"pill p-test\">Test-overrides-findings</span><span class=\"pill p-seq\">Sequencing trap</span></div>\n",
+   "with": "",
+   "note": "W-20261116-1: a traps row of labels only leaves"
+  },
+  {
+   "op": "replace",
+   "brief": "vpshunt",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "vpshunt",
+   "find": "<span class=\"pill p-mirror\">Mirror twin</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "vpshunt",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "vpshunt",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\"><",
+   "with": "<span class=\"trapwhy\"><",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "vpshunt",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "vpshunt",
+   "find": "<span class=\"pill p-seq\">Sequencing trap</span><span class=\"trapwhy\">E",
+   "with": "<span class=\"trapwhy\">E",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "vpshunt",
+   "find": "<span class=\"pill p-seq\">Sequencing trap</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "retinitis-pigmentosa",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "retinitis-pigmentosa",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">R",
+   "with": "<span class=\"trapwhy\">R",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "retinitis-pigmentosa",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "retinitis-pigmentosa",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tethered",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tethered",
+   "find": "<span class=\"pill p-mirror\">Mirror twin</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-tethered",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-peds-stroke",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-peds-stroke",
+   "find": "<span class=\"pill p-mirror\">Mirror twin</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-peds-stroke",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-imprinting",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-imprinting",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-imprinting",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">C",
+   "with": "<span class=\"trapwhy\">C",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-imprinting",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-imprinting",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "psoriasis",
+   "find": "<div class=\"traps\"><span class=\"pill p-salient\">Salient decoy</span></div>\n",
+   "with": "",
+   "note": "W-20261116-1: a traps row of labels only leaves"
+  },
+  {
+   "op": "replace",
+   "brief": "eczemaherp",
+   "find": "<div class=\"traps\"><span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"pill p-test\">Test-overrides-findings</span></div>\n",
+   "with": "",
+   "note": "W-20261116-1: a traps row of labels only leaves"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-alopecia",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">D",
+   "with": "<span class=\"trapwhy\">D",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-alopecia",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-alopecia",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span><span class=\"trapwhy\">C",
+   "with": "<span class=\"trapwhy\">C",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-alopecia",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "peds-alopecia",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">K",
+   "with": "<span class=\"trapwhy\">K",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">F",
+   "with": "<span class=\"trapwhy\">F",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">T",
+   "with": "<span class=\"trapwhy\">T",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span><span class=\"trapwhy\">D",
+   "with": "<span class=\"trapwhy\">D",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span><span class=\"trapwhy\">U",
+   "with": "<span class=\"trapwhy\">U",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "<span class=\"pill p-class\">Class-vs-member</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "teratogens",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "primary-amenorrhea",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "primary-amenorrhea",
+   "find": "<span class=\"pill p-mirror\">Mirror twin</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "primary-amenorrhea",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "primary-amenorrhea",
+   "find": "<span class=\"pill p-uniform\">Uniform-answer doubt</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "primary-amenorrhea",
+   "find": "<span class=\"pill p-seq\">Sequencing trap</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "smoking",
+   "find": "<div class=\"traps\"><span class=\"pill p-number\">Treat-the-number</span></div>\n",
+   "with": "",
+   "note": "W-20261116-1: a traps row of labels only leaves"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nat-fracture",
+   "find": "<span class=\"pill p-slot\">True-fact-wrong-slot</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nat-fracture",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span><span class=\"trapwhy\">O",
+   "with": "<span class=\"trapwhy\">O",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nat-fracture",
+   "find": "<span class=\"pill p-salient\">Salient decoy</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-nat-fracture",
+   "find": "<span class=\"pill p-attr\">Unchecked attribute</span>",
+   "with": "",
+   "note": "W-20261116-1: trap species label leaves the trap line"
+  },
+  {
+   "op": "replace",
+   "brief": "bs-adolescent-confid",
+   "find": "<div class=\"traps\"><span class=\"pill p-trump\">Trump-card inversion</span><span class=\"pill p-seq\">Sequencing trap</span></div>\n",
+   "with": "",
+   "note": "W-20261116-1: a traps row of labels only leaves"
+  }
+ ]
+}

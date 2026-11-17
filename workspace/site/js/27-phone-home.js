@@ -1,15 +1,18 @@
-/* Home on phones. A fixed bar (title, shelf selector, profile, search) over: Continue (the last briefs read), Review, one
+/* Home. On phones: a fixed bar (title, shelf selector, profile, search) over: Continue (the last briefs read), Review, one
    Browse card switched between By system and By complaint, the Coverage matrix, then the page's own guides. Every row is
    read from the page at each draw: the shelf buttons, the section cards with the briefs the shelf shows, the Presentations
    groups. A row dispatches a click on the section card it stands for, so Browse opens at that group; nothing here names a
    shelf or a system. The last four briefs read are kept in localStorage (ax-recent).
-   Events: listens to brief:step, phone:home, blueprint:set, review:state; emits nav:open. */
+   On desktop (over 1100 px) the same box holds a title line, Continue, Review and Guides beside the Coverage matrix; the
+   sidebar carries search, the shelf and every topic, so the bar and the Browse card are not drawn. A brief counts as read
+   on desktop after it has held the reading line for DWELL ms (the page scrolls through every brief).
+   Events: listens to brief:step, brief:read, phone:home, blueprint:set, review:state; emits nav:open. */
 return (function(){
 'use strict';
 var NARROW = window.matchMedia('(max-width:1100px)');
 var H = document.documentElement, B = document.body;
 var mw = document.querySelector('main .masthead .wrap'); if(!mw) return null;
-var box = null, bar = null, foot = null, seg = 'sys', offs = [], timer = 0;
+var box = null, bar = null, foot = null, seg = 'sys', offs = [], timer = 0, dwell = 0, DWELL = 2500, held = '', kept = '', pend = null;
 var CHEV = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>';
 var UPDOWN = '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 9.5l5-5 5 5M7 14.5l5 5 5-5"/></svg>';
 var PERSON = '<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8.2" r="4.2"/><path d="M3.8 20.5c.7-4.2 4.1-6.6 8.2-6.6s7.5 2.4 8.2 6.6z"/></svg>';
@@ -23,6 +26,12 @@ function remember(st){
   var x = st.secs[st.cur] || {}, r = recent().filter(function(o){ return o.id !== st.el.id; });
   r.unshift({id: st.el.id, t: st.title, n: x.n || '', l: x.l || '', h: x.el && x.el.id ? x.el.id : st.el.id});
   try{ localStorage.setItem('ax-recent', JSON.stringify(r.slice(0, 4))); }catch(e){}
+}
+function dwellOn(st){   // desktop: record a brief once it has held the reading line for DWELL ms, then follow its steps
+  var id = st && st.el ? st.el.id : '';
+  if(id && id === held){ pend = st; if(kept === id){ remember(st); later(40); } return; }
+  clearTimeout(dwell); held = id; pend = st; kept = '';
+  if(id) dwell = setTimeout(function(){ kept = held; remember(pend); later(40); }, DWELL);
 }
 function read(){
   var meta = [].map.call(document.querySelectorAll('.masthead .meta > span'), function(s){ return s.textContent.trim(); });
@@ -42,7 +51,32 @@ function read(){
   return {meta: meta, shelves: shelves, cur: shelves.filter(function(s){ return s.on; })[0] || {t: ''}, groups: pres ? groups : [],
     sys: secs.filter(function(s){ return s !== pres && s.n; }), due: due, me: me};
 }
+function contCard(rc){
+  if(!rc.length) return '';
+  return '<div class="hh-card hh-list"><button type="button" class="hh-c" data-do="go" data-h="' + esc(rc[0].h) + '"><span class="hh-cx"><em>Continue</em><b>' + esc(rc[0].t) + '</b>' +
+    (rc[0].l ? '<i>' + esc((rc[0].n ? rc[0].n + ' · ' : '') + rc[0].l) + '</i>' : '') + '</span><span class="hh-play">' + CHEV + '</span></button>' +
+    rc.slice(1, 3).map(function(o){ return '<button type="button" class="hh-r" data-do="go" data-h="' + esc(o.id) + '"><span>' + esc(o.t) + '</span><span class="hh-ch">' + CHEV + '</span></button>'; }).join('') + '</div>';
+}
+function rvCard(d){
+  return '<button type="button" class="hh-card hh-rv" data-do="review"><span class="hh-cx"><b>Review</b><i>' +
+    (d.me ? (d.due ? d.due + ' due in ' + esc(d.cur.t) : 'Nothing due in ' + esc(d.cur.t)) : 'Choose who is studying to schedule reviews') + '</i></span><span class="hh-pill' + (d.me && d.due ? ' on' : '') + '">' + (d.me ? (d.due ? 'Start' : 'Open') : 'Set up') + '</span></button>';
+}
+function drawDesk(d, rc){
+  var mx = AX.blueprint ? AX.blueprint.html() : '', els = [];
+  var gd = [].map.call(document.querySelectorAll('main .wrap > details.fmdrop'), function(g){ var t = g.querySelector('summary'), c = t && t.firstElementChild; return {el: g, t: ((c || t || g).textContent || '').trim()}; }).filter(function(g){ return g.t && !off(g.el); });
+  box.innerHTML = '<div class="hh-hd"><h2>Step2Haki</h2><p><span>' + esc([d.meta[0], d.meta[1], d.cur.t].filter(Boolean).join(' · ')) + '</span>' +
+    (d.meta[3] ? '<button type="button" data-do="log">' + esc(d.meta[3]) + '</button>' : '') + '</p></div>' +
+    '<div class="hh-g"><div class="hh-ga">' + contCard(rc) + rvCard(d) +
+    (gd.length ? '<div class="hh-h"><h2>Guides</h2></div><div class="hh-card hh-list">' + gd.map(function(g){ els.push(g.el); return '<button type="button" class="hh-r" data-do="guide" data-i="' + (els.length - 1) + '"><span>' + esc(g.t) + '</span><span class="hh-ch">' + CHEV + '</span></button>'; }).join('') + '</div>' : '') + '</div>' +
+    (mx ? '<div class="hh-gb"><div class="hh-h"><h2>Coverage</h2><span>' + esc(AX.blueprint.name()) + '</span></div>' + mx + '</div>' : '') + '</div>';
+  box._els = els;
+}
 function draw(){
+  if(!box) return;
+  if(!NARROW.matches){ drawDesk(read(), recent().filter(function(o){ var el = document.getElementById(o.id); return el && !off(el); })); return; }
+  drawPhone();
+}
+function drawPhone(){
   if(!box) return;
   var d = read(), els = [];
   function ref(el){ els.push(el); return ' data-i="' + (els.length - 1) + '"'; }
@@ -53,13 +87,7 @@ function draw(){
     '<button type="button" class="hh-s" data-do="search">' + LENS + '<span>Search topics, findings, drugs</span></button>';
   var rc = recent().filter(function(o){ var el = document.getElementById(o.id); return el && !off(el); });
   var hasCc = d.groups.length > 0, view = hasCc && (seg === 'cc' || !d.sys.length) ? 'cc' : 'sys', h = '';
-  if(rc.length){
-    h += '<div class="hh-card hh-list"><button type="button" class="hh-c" data-do="go" data-h="' + esc(rc[0].h) + '"><span class="hh-cx"><em>Continue</em><b>' + esc(rc[0].t) + '</b>' +
-      (rc[0].l ? '<i>' + esc((rc[0].n ? rc[0].n + ' · ' : '') + rc[0].l) + '</i>' : '') + '</span><span class="hh-play">' + CHEV + '</span></button>' +
-      rc.slice(1, 3).map(function(o){ return '<button type="button" class="hh-r" data-do="go" data-h="' + esc(o.id) + '"><span>' + esc(o.t) + '</span><span class="hh-ch">' + CHEV + '</span></button>'; }).join('') + '</div>';
-  }
-  h += '<button type="button" class="hh-card hh-rv" data-do="review"><span class="hh-cx"><b>Review</b><i>' +
-    (d.me ? (d.due ? d.due + ' due in ' + esc(d.cur.t) : 'Nothing due in ' + esc(d.cur.t)) : 'Choose who is studying to schedule reviews') + '</i></span><span class="hh-pill' + (d.me && d.due ? ' on' : '') + '">' + (d.me ? (d.due ? 'Start' : 'Open') : 'Set up') + '</span></button>';
+  h += contCard(rc) + rvCard(d);
   h += '<div class="hh-h"><h2>Browse</h2><span>' + esc(d.meta.slice(0, 2).join(' · ')) + '</span></div><div class="hh-card hh-list" data-tour="browse">' +
     (d.sys.length && hasCc ? '<div class="hh-seg" role="group" aria-label="Browse by"><button type="button" data-do="seg" data-v="sys" aria-pressed="' + (view === 'sys') + '">By system</button><button type="button" data-do="seg" data-v="cc" aria-pressed="' + (view === 'cc') + '">By complaint</button></div>' : '') +
     (!d.sys.length && !hasCc ? '<p class="hh-none">No topics in ' + esc(d.cur.t) + ' yet.</p>' : '') +
@@ -68,7 +96,7 @@ function draw(){
   if(mx) h += '<div class="hh-h"><h2>Coverage</h2><span>' + esc(AX.blueprint.name()) + '</span></div>' + mx;
   h += '<div class="hh-h"><h2>Guides</h2></div>';
   box.innerHTML = h; box._els = els;
-  foot.textContent = [d.meta[4], d.meta[2]].filter(Boolean).join(' · ');
+  foot.textContent = d.meta[3] || '';
   var r = mw.getBoundingClientRect();
   if(r.width) H.style.setProperty('--phbar-x', Math.max(12, Math.round(r.left + parseFloat(getComputedStyle(mw).paddingLeft || 0))) + 'px');
   var sm = bar.classList.contains('sm'); bar.classList.remove('sm');
@@ -83,7 +111,9 @@ function onClick(e){
   if(act === 'seg'){ seg = b.dataset.v; draw(); return; }
   if(act === 'go'){ location.hash = '#' + b.dataset.h; return; }
   if(act === 'search'){ AX.emit('nav:open'); var q = document.querySelector('#nav input[type="search"], #nav #search, #nav .axn-srch input'); if(q) q.focus(); return; }
-  if(act === 'review'){ var r = document.querySelector('#mbar [data-act="review"]'); if(r) r.click(); return; }
+  if(act === 'review'){ var r = document.querySelector('#axbar .axrvb'); if(!r || !r.offsetParent) r = document.querySelector('#mbar [data-act="review"]'); if(r) r.click(); return; }
+  if(act === 'guide'){ var g = box._els && box._els[+b.dataset.i]; if(g){ g.open = true; g.scrollIntoView({behavior: 'smooth', block: 'start'}); } return; }
+  if(act === 'log'){ var l = document.querySelector('.masthead .axlogbtn'); if(l) l.click(); return; }
   var el = box._els && box._els[+b.dataset.i]; if(el) el.dispatchEvent(new MouseEvent('click', {bubbles: true, cancelable: true}));
 }
 function onChange(e){
@@ -94,7 +124,7 @@ function onChange(e){
 function onScroll(){ if(bar) bar.classList.toggle('sm', (window.pageYOffset || 0) > 24); }
 function onShelf(){ later(40); }
 function start(){
-  if(box || !NARROW.matches) return;
+  if(box){ draw(); return; }
   box = document.createElement('div'); box.id = 'phhome'; mw.insertBefore(box, mw.firstChild);
   bar = document.createElement('div'); bar.id = 'phbar'; bar.setAttribute('data-tour', 'find'); B.appendChild(bar);
   foot = document.createElement('button'); foot.type = 'button'; foot.id = 'phfoot';
@@ -105,14 +135,14 @@ function start(){
   window.addEventListener('scroll', onScroll, {passive: true});
   document.addEventListener('ax-shelf', onShelf);
   window.addEventListener('hashchange', onShelf); window.addEventListener('popstate', onShelf);
-  offs.push(AX.on('brief:step', remember), AX.on('phone:home', onShelf), AX.on('blueprint:set', onShelf), AX.on('review:state', onShelf));
+  offs.push(AX.on('brief:step', remember), AX.on('brief:read', dwellOn), AX.on('phone:home', onShelf), AX.on('blueprint:set', onShelf), AX.on('review:state', onShelf));
   draw(); later(1200);
 }
 if(NARROW.addEventListener) NARROW.addEventListener('change', start);
 if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 
 return {teardown: function(){
-  clearTimeout(timer);
+  clearTimeout(timer); clearTimeout(dwell);
   document.removeEventListener('click', onClick); document.removeEventListener('change', onChange);
   window.removeEventListener('scroll', onScroll); document.removeEventListener('ax-shelf', onShelf);
   window.removeEventListener('hashchange', onShelf); window.removeEventListener('popstate', onShelf);

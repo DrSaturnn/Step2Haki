@@ -269,6 +269,64 @@ try:
     expect('touched: a hover text change is a touch', rc == 1 and 'touched brief b' in out)
     rc, out = run([base, '--brief', 'a'])
     expect('--brief lists the hit text', rc == 0 and 'Fix the class, not the instance.' in out)
+
+    # waivers (text_waivers.json): the removal of named elements is waived against one reference page
+    LAB = '<div class="traps"><div class="trapline"><span class="pill p-seq">Sequencing trap</span><span class="trapwhy">%s</span></div></div>'
+    BARE = '<div class="traps"><div class="trapline"><span class="trapwhy">%s</span></div></div>'
+    ROWL = '<div class="traps"><span class="pill p-seq">Sequencing trap</span></div>\n'
+    WHY = 'Magnetic resonance imaging: ordered before conservative therapy'
+    wref = write('wref.html', page(brief('a', BAD1 + LAB % WHY), brief('b', OK + ROWL + OK)))
+    wcur = write('wcur.html', page(brief('a', BAD1 + BARE % WHY), brief('b', OK + OK)))
+    wedit = write('wedit.html', page(brief('a', BAD1 + BARE % WHY.replace('conservative', 'physical')), brief('b', OK + OK)))
+    wadd = write('wadd.html', page(brief('a', BAD1 + LAB % WHY + LAB % WHY), brief('b', OK + OK)))
+    wphr = write('wphr.html', page(brief('a', BAD1 + BARE % WHY.replace('conservative ', '')), brief('b', OK + OK)))
+    wf = os.path.join(tmp, 'w.json')
+    WORDS = 'skip the passes on my say so'
+
+    def waive(**kw):
+        e = {'id': 'W-20261116-9', 'decision': 'D-20261116-99', 'words': WORDS,
+             'ref_sha256': P.ref_hash(P.read_page(wref)), 'removed': ['span.pill']}
+        e.update(kw)
+        with open(wf, 'w', encoding='utf-8') as f:
+            json.dump({'waivers': [e]}, f)
+        os.environ['AXBX_TEXT_WAIVERS'] = wf
+
+    os.environ['AXBX_TEXT_WAIVERS'] = os.path.join(tmp, 'none.json')
+    rc, out = run([wcur, '--touched', wref])
+    expect('waiver: with no waiver a removed label is a touch', rc == 1 and 'touched brief a' in out)
+    waive()
+    rc, out = run([wcur, '--touched', wref])
+    expect('waiver: a brief that differs only by removed waived elements is not touched', rc == 0 and '2 brief(s) differ only by removals waived' in out)
+    expect('waiver: waived_briefs names both briefs (a label on a trap line; a row of labels only)', P.waived_briefs(P.read_page(wref), P.read_page(wcur)) == ['a', 'b'])
+    rc, out = run([wedit, '--touched', wref])
+    expect('waiver: any other text change in the brief is still a touch', rc == 1 and 'touched brief a' in out)
+    rc, out = run([wphr, '--touched', wref])
+    expect('waiver: a removed word outside the waived element is a touch', rc == 1 and 'touched brief a' in out)
+    rc, out = run([wadd, '--touched', wref])
+    expect('waiver: an added copy of the waived element is a touch', rc == 1 and 'touched brief a' in out)
+    waive(ref_sha256='0' * 16)
+    rc, out = run([wcur, '--touched', wref])
+    expect('waiver: a waiver for another reference page does not apply', rc == 1)
+    waive(removed=['Sequencing trap'])
+    rc, out = run([wcur, '--touched', wref])
+    expect('waiver: a phrase in place of a tag.class selector does not apply', rc == 1)
+    waive(words='')
+    rc, out = run([wcur, '--touched', wref])
+    expect('waiver: a waiver with no quoted words does not apply', rc == 1)
+    waive(decision='')
+    rc, out = run([wcur, '--touched', wref])
+    expect('waiver: a waiver with no decision id does not apply', rc == 1)
+    waive(id='waiver-1')
+    rc, out = run([wcur, '--touched', wref])
+    expect('waiver: an id outside the W-YYYYMMDD-N form does not apply', rc == 1)
+    waive()
+    bl2 = os.path.join(tmp, 'b2.json')
+    run([wref, '--write-baseline', bl2])
+    rc, out = run([write('wrise.html', page(brief('a', BAD2 + BARE % WHY), brief('b', OK + OK))), '--baseline', bl2])
+    expect('waiver: the total-count baseline is never waived', rc == 1)
+    os.environ.pop('AXBX_TEXT_WAIVERS', None)
+    rc, out = run([wref, '--ref-hash'])
+    expect('--ref-hash prints the reference id', rc == 0 and out.strip() == P.ref_hash(P.read_page(wref)))
 finally:
     shutil.rmtree(tmp)
 

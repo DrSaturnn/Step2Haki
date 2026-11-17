@@ -43,13 +43,9 @@ expect('read packet copies ALIASES.json and ABBREV.json', sorted(_c) == ['ABBREV
     filecmp.cmp(os.path.join(_d, f), os.path.join(_eff, f), shallow=False) for f in _c))
 expect('read rules point to the two tables', 'ALIASES.json (other names) and ABBREV.json' in RP.part_rules('read'))
 
-# s148: the trap tag row reads as a labelled tag list, not a run-on fragment
-_t = RP.text_of('<div class="pearls">Pearls x</div>\n<div class="traps"><span class="pill p-seq">Sequencing trap</span><span class="pill p-number">Treat-the-number</span></div>')
-expect('trap tags labelled and separated', '[trap tags: Sequencing trap · Treat-the-number]' in _t and 'trapTreat' not in _t)
-
-# s148 S7: a trapline keeps its explanation (the tag-list pattern no longer swallows a nested trapline)
-_t = RP.text_of('<div class="traps"><div class="trapline"><span class="pill p-class">Class-vs-member</span><span class="trapwhy">Wilms explains one finding.</span></div>\n<div class="trapline"><span class="pill p-seq">Sequencing trap</span><span class="trapwhy">Image first.</span></div></div>')
-expect('trapline keeps its explanation', 'Class-vs-member: Wilms explains one finding.' in _t and 'Sequencing trap: Image first.' in _t and '[trap tags' not in _t)
+# trap lines carry no label: each trapline reads as its explanation alone
+_t = RP.text_of('<div class="traps"><div class="trapline"><span class="trapwhy">Wilms explains one finding.</span></div>\n<div class="trapline"><span class="trapwhy">Image first.</span></div></div>')
+expect('trapline keeps its explanation', 'Wilms explains one finding.' in _t and 'Image first.' in _t and '[trap tags' not in _t)
 
 # s151b S5: the intro line after the bottom line is labelled (a reviewer counted it as a fourth bottom-line line)
 _t = RP.text_of('<div class="sp-bl"><p>one</p></div><p class="sp-intro">DSM-5 groups it</p>')

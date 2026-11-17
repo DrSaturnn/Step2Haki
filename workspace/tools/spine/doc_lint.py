@@ -179,7 +179,29 @@ def core_rules(standing_text):
 def stable_errors(digest, standing, ws):
     """Every check on the documents that change only by decision: the gate and the launch gate run this."""
     return (errors(digest, standing) + rule_doc_errors(digest, ws) + path_errors(os.path.dirname(os.path.abspath(digest)), ws)
-            + unfiled_errors(digest, ws) + allow_errors(digest, ws))
+            + unfiled_errors(digest, ws) + allow_errors(digest, ws) + waiver_errors(digest, ws))
+
+
+def waiver_errors(digest, ws):
+    """Each text waiver (tools/spine/text_waivers.json; TEXTBOOK_STYLE.md, Waivers) names a digest id whose line quotes
+    the waiver's words verbatim."""
+    import json
+    wp = os.path.join(ws, 'tools', 'spine', 'text_waivers.json')
+    if not os.path.exists(wp):
+        return []
+    d = parse(digest); lines = {}
+    for raw in open(digest, encoding='utf-8').read().splitlines():
+        m = LINE.match(raw)
+        if m:
+            lines[m.group(2)] = raw
+    errs = []
+    for w in json.load(open(wp, encoding='utf-8')).get('waivers', []):
+        wid, did, words = w.get('id', '?'), w.get('decision', ''), w.get('words', '')
+        if did not in d:
+            errs.append('text_waivers.json: %s names decision %r, which is not in the digest' % (wid, did))
+        elif not words.strip() or words not in lines[did]:
+            errs.append('text_waivers.json: %s: the digest line %s does not quote its words verbatim' % (wid, did))
+    return errs
 
 
 def state_entries(handoff_text):

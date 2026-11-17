@@ -1,8 +1,7 @@
-/* Home on phones: Continue, Review, one Browse card (by system or by complaint), Coverage. Built by the phone-home module
-   from the page's own section cards. */
+/* Home: Continue, Review, Coverage; on phones also one Browse card (by system or by complaint). Built by the home module
+   (27-phone-home.js) from the page's own section cards. Shared card rules first, then the phone screen, then desktop. */
 #phhome{display:none}
-@media (--narrow){
-html.ph-home.ph-solo #phhome{display:block;padding-top:calc(var(--phbar-h,126px) + 10px)}
+#phfoot{display:none}
 #phhome button{all:unset;box-sizing:border-box;cursor:pointer;-webkit-tap-highlight-color:transparent}
 #phhome button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 #phhome .hh-card{display:flex;flex-direction:column;background:var(--raised);box-shadow:var(--e2);border-radius:22px;color:var(--ink)}
@@ -32,7 +31,27 @@ html.ph-home.ph-solo #phhome{display:block;padding-top:calc(var(--phbar-h,126px)
 #phhome .hh-h span{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font:500 14px/1.2 var(--sans);color:var(--muted)}
 #phhome .hh-none{margin:0;padding:18px 16px;font:500 15px/1.4 var(--sans);color:var(--muted)}
 #phhome .bpmx{margin:0 0 12px}
-#phfoot{display:none}
+@media (--narrow){
+html.ph-home.ph-solo #phhome{display:block;padding-top:calc(var(--phbar-h,126px) + 10px)}
 html.ph-home.ph-solo:not(.ph-open) #phfoot{all:unset;display:block;box-sizing:border-box;width:100%;margin:18px 0 0;text-align:center;font:500 12.5px/1.4 var(--sans);color:var(--muted);cursor:pointer}
-html.ph-home.ph-solo #bpview .bpmx{display:none}
+}
+@media (--desktop){
+html.ph-home .masthead{padding:92px 0 0;margin-bottom:26px}
+html.ph-home .masthead .wrap>:not(#phhome){display:none}
+html.ph-home #phhome{display:block;container-type:inline-size}
+#phhome .hh-hd{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 18px;margin:0 0 22px}
+#phhome .hh-hd h2{flex:none;margin:0;font:800 34px/1.1 var(--sans);letter-spacing:-.02em;color:var(--ink);text-shadow:none}
+#phhome .hh-hd p{flex:1 1 auto;display:flex;align-items:baseline;justify-content:space-between;gap:16px;min-width:0;max-width:none;margin:0;font:500 14px/1.3 var(--sans);color:var(--muted)}
+#phhome .hh-hd button{font:500 13px/1.3 var(--sans);color:var(--muted);white-space:nowrap}
+#phhome .hh-hd button:hover{color:var(--ink)}
+#phhome .hh-g{display:grid;grid-template-columns:minmax(0,1fr);gap:0 28px;align-items:start}
+#phhome .hh-rv{margin:0 0 12px}
+#phhome .hh-ga .hh-h{margin:14px 0 10px}
+#phhome .hh-ga .hh-r{min-height:50px;padding-top:9px;padding-bottom:9px}
+#phhome .hh-gb .hh-h{margin:4px 0 10px}
+#phhome .hh-r:hover,#phhome .hh-c:hover{background:var(--recess)}
+@container (min-width:800px){
+#phhome .hh-g{grid-template-columns:minmax(300px,5fr) minmax(0,7fr)}
+#phhome .hh-gb .hh-h{margin-top:0}
+}
 }

@@ -101,5 +101,19 @@ e = doc_lint.allow_errors(os.path.join(u, 'docs', 'DECISIONS_DIGEST.md'), w2)
 ok(len(e) == 2 and any('a.json holds 3 entries, baseline 2' in x for x in e) and any('D-19990101-9' in x for x in e),
    'an allow list above its baseline fails; a baseline row naming an unknown id fails (%d)' % len(e))
 
+# text waivers: each names a digest id whose line quotes its words verbatim
+WDG = '- 2026-01-05 [D-20260105-1] {prose-lint} waiver (owner: "skip the passes on my say so")\n'
+ud = tree({'docs/DECISIONS_DIGEST.md': WDG})
+def wv(**kw):
+    e = {'id': 'W-20260105-1', 'decision': 'D-20260105-1', 'words': 'skip the passes on my say so'}; e.update(kw)
+    return tree({'tools/spine/text_waivers.json': __import__('json').dumps({'waivers': [e]})})
+dgp = os.path.join(ud, 'docs', 'DECISIONS_DIGEST.md')
+ok(doc_lint.waiver_errors(dgp, wv()) == [], 'a waiver whose digest line quotes its words passes')
+e = doc_lint.waiver_errors(dgp, wv(words='skip every pass on my say so'))
+ok(len(e) == 1 and 'verbatim' in e[0], 'a waiver whose words the digest line does not quote fails')
+e = doc_lint.waiver_errors(dgp, wv(decision='D-20260105-9'))
+ok(len(e) == 1 and 'not in the digest' in e[0], 'a waiver naming an unknown decision id fails')
+ok(doc_lint.waiver_errors(dgp, tree({'x.txt': ''})) == [], 'no text_waivers.json: nothing to check')
+
 print('%d failures' % bad)
 sys.exit(1 if bad else 0)

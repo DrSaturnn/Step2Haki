@@ -35,7 +35,7 @@ repo directly:
 ## Checks an agent will meet
 - Launch gate and call gate (workspace/tools/hooks/): an agent launch needs its role's model, a lane and a budget; an
   agent writes only inside its lane.
-- The gate (workspace/tools/gate.py): 54 checks on the page, plus the document checks of
+- The gate (workspace/tools/gate.py): 53 checks on the page, plus the document checks of
   workspace/tools/spine/doc_lint.py.
 - Approval (workspace/tools/hooks/approval.py): ship.sh refuses a batch without the owner's recorded "ship".
 

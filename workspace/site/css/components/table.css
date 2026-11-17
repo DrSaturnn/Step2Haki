@@ -35,7 +35,6 @@ tbody td:first-child{font-weight:600;color:var(--t-tbody-td-first-child-fg,var(-
 tbody td b{color:var(--t-tbody-td-b-fg,var(--ink));font-weight:700}
 td .ex{display:block;font-size:12px;color:var(--t-td-ex-fg,var(--muted));font-style:italic;font-weight:400;margin-top:3px}
 .tierT td:first-child{width:40px;color:var(--t-tiert-td-first-child-fg,var(--accent));font-family:var(--serif);font-size:18px}
-.trapdex td:first-child{width:26%}
 body .axm-study td .mask,body td.axm-study .mask{display:inline-block}
 tbody tr.em td{background:var(--t-tbody-tr-em-td-bg)}
 @media (--phone){

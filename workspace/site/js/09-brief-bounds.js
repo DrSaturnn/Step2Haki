@@ -87,6 +87,7 @@
     rec.fill.style.height = Math.max(0, a.getBoundingClientRect().bottom - r0.top - off).toFixed(1) + 'px';
   }
 
+  var readAt = '';
   function update(){
     raf = 0;
     var vh = window.innerHeight, wide = WIDE.matches, th = wide ? 120 : (parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--ph-top')) || 64), pick = null;
@@ -99,7 +100,7 @@
       if(solo) live.forEach(function(rec){ if(rec.el === solo) pick = rec; });
     }
     active = pick;
-    if(!pick){ if(!wide) AX.emit('brief:step', null); return; }
+    if(!pick){ if(!wide) AX.emit('brief:step', null); else if(readAt){ readAt = ''; AX.emit('brief:read', null); } return; }
     var r = pick.el.getBoundingClientRect();
     var p = Math.max(0, Math.min(1, (vh - r.top) / r.height));
     // current section: the last one whose heading has reached the threshold
@@ -114,6 +115,7 @@
     }
     var n = nextVisible(pick);
     if(n){ pick.next.hidden = false; pick.next.querySelector('b').textContent = n.title; pick.next.setAttribute('href', '#' + n.el.id); } else pick.next.hidden = true;
+    if(wide && readAt !== pick.el.id + ':' + cur){ readAt = pick.el.id + ':' + cur; AX.emit('brief:read', {el: pick.el, title: pick.title, secs: pick.secs, cur: cur}); }   // desktop: the brief and step at the reading line, once per change (Home's Continue)
     if(!wide) AX.emit('brief:step', {el: pick.el, title: pick.title, secs: pick.secs, cur: cur, p: p, past: pick.h4.getBoundingClientRect().bottom < 0, go: go});
   }
   function kick(){ if(!raf) raf = requestAnimationFrame(update); }
