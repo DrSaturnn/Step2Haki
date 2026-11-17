@@ -27,8 +27,8 @@ Public API: lint_brief(inner_html) -> [{'pattern', 'region', 'text', 'match', 't
 page_html) -> the briefs whose text_key differs from REF (new briefs included).
 
 Waivers (text_waivers.json; repair/efficiency/TEXTBOOK_STYLE.md, Waivers): a waiver names elements by CSS selector
-(span.pill) whose removal from briefs is waived against one reference page, and the DECISIONS_DIGEST line that quotes
-the owner's words. A brief whose text differs from that reference only by removed copies of those elements is not
+(span.pill) whose removal from briefs is waived against one reference page, and the DECISIONS_DIGEST id whose line
+quotes the owner's words (that line is checked by doc_lint.waiver_errors, in the gate's document checks). A brief whose text differs from that reference only by removed copies of those elements is not
 "changed": prose-touched and the changed-brief content checks skip it. Any other difference makes it changed as
 before. The total-count baseline check is never waived.
 """
@@ -691,41 +691,22 @@ def ref_hash(ref_html):
     return hashlib.sha256(ref_html.encode('utf-8')).hexdigest()[:16]
 
 
-def _digest_lines():
-    path = os.environ.get('AXBX_WAIVER_DIGEST')
-    if not path:
-        try:
-            sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-            from docs_path import doc
-            path = doc('DECISIONS_DIGEST.md')
-        except (ImportError, FileNotFoundError):
-            return {}
-    if not os.path.exists(path):
-        return {}
-    out = {}
-    for line in open(path, encoding='utf-8'):
-        m = re.search(r'\[(D-\d{8}-\d+)\]', line)
-        if m:
-            out[m.group(1)] = line
-    return out
-
-
 def waiver_selectors(ref_html, path=None):
     """Selectors whose removal is waived against this reference page. An entry applies only when its id has the
-    W-YYYYMMDD-N form, it names this page by hash, every removed item is a tag.class selector, and the digest line of
-    its decision id quotes its words verbatim. A waiver names one reference page, so it covers one ship."""
+    W-YYYYMMDD-N form, it names this page by hash, it carries words and a decision id, and every removed item is a
+    tag.class selector. The gate's document checks (doc_lint.waiver_errors) fail an entry whose decision line does not
+    quote its words verbatim. A waiver names one reference page, so it covers one ship."""
     path = path or os.environ.get('AXBX_TEXT_WAIVERS') or WAIVERS
     if not os.path.exists(path):
         return []
-    h, out, dig = ref_hash(ref_html), [], None
+    h, out = ref_hash(ref_html), []
     for w in json.load(open(path, encoding='utf-8')).get('waivers', []):
         sel = w.get('removed') or []
         if w.get('ref_sha256') != h or not WAIVER_ID.match(w.get('id', '')) or not w.get('words', '').strip():
             continue
-        if not sel or not all(isinstance(x, str) and SELECTOR.match(x) for x in sel):
+        if not re.match(r'^D-\d{8}-\d+$', w.get('decision', '')):
             continue
-        dig = _digest_lines() if dig is None else dig
-        if w['words'] not in dig.get(w.get('decision', ''), ''):
+        if not sel or not all(isinstance(x, str) and SELECTOR.match(x) for x in sel):
             continue
         out += sel
     return sorted(set(out))

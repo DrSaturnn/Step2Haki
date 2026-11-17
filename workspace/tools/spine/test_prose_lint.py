@@ -280,11 +280,8 @@ try:
     wedit = write('wedit.html', page(brief('a', BAD1 + BARE % WHY.replace('conservative', 'physical')), brief('b', OK + OK)))
     wadd = write('wadd.html', page(brief('a', BAD1 + LAB % WHY + LAB % WHY), brief('b', OK + OK)))
     wphr = write('wphr.html', page(brief('a', BAD1 + BARE % WHY.replace('conservative ', '')), brief('b', OK + OK)))
-    wf, dg = os.path.join(tmp, 'w.json'), os.path.join(tmp, 'digest.md')
+    wf = os.path.join(tmp, 'w.json')
     WORDS = 'skip the passes on my say so'
-    with open(dg, 'w', encoding='utf-8') as f:
-        f.write('- 2026-11-16 [D-20261116-99] {prose-lint} waiver (owner: "%s")\n' % WORDS)
-    os.environ['AXBX_WAIVER_DIGEST'] = dg
 
     def waive(**kw):
         e = {'id': 'W-20261116-9', 'decision': 'D-20261116-99', 'words': WORDS,
@@ -313,25 +310,21 @@ try:
     waive(removed=['Sequencing trap'])
     rc, out = run([wcur, '--touched', wref])
     expect('waiver: a phrase in place of a tag.class selector does not apply', rc == 1)
-    waive(words='skip every pass on my say so')
+    waive(words='')
     rc, out = run([wcur, '--touched', wref])
-    expect('waiver: words that the digest line does not quote verbatim do not apply', rc == 1)
-    waive(decision='D-20261116-98')
+    expect('waiver: a waiver with no quoted words does not apply', rc == 1)
+    waive(decision='')
     rc, out = run([wcur, '--touched', wref])
-    expect('waiver: a decision id with no digest line does not apply', rc == 1)
+    expect('waiver: a waiver with no decision id does not apply', rc == 1)
     waive(id='waiver-1')
     rc, out = run([wcur, '--touched', wref])
     expect('waiver: an id outside the W-YYYYMMDD-N form does not apply', rc == 1)
     waive()
-    os.environ['AXBX_WAIVER_DIGEST'] = os.path.join(tmp, 'no_digest.md')
-    rc, out = run([wcur, '--touched', wref])
-    expect('waiver: with no digest to read the waiver does not apply', rc == 1)
-    os.environ['AXBX_WAIVER_DIGEST'] = dg
     bl2 = os.path.join(tmp, 'b2.json')
     run([wref, '--write-baseline', bl2])
     rc, out = run([write('wrise.html', page(brief('a', BAD2 + BARE % WHY), brief('b', OK + OK))), '--baseline', bl2])
     expect('waiver: the total-count baseline is never waived', rc == 1)
-    os.environ.pop('AXBX_TEXT_WAIVERS', None); os.environ.pop('AXBX_WAIVER_DIGEST', None)
+    os.environ.pop('AXBX_TEXT_WAIVERS', None)
     rc, out = run([wref, '--ref-hash'])
     expect('--ref-hash prints the reference id', rc == 0 and out.strip() == P.ref_hash(P.read_page(wref)))
 finally:

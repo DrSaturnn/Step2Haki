@@ -20,8 +20,8 @@ The owner may waive the prose-touched check and the brief review rounds for a ch
 briefs and edits nothing else. The waiver is recorded, and the lint proves its scope.
 - Record: one entry in tools/spine/text_waivers.json: an id W-YYYYMMDD-N, the reference page by hash
   (`python3 tools/spine/prose_lint.py REF.html --ref-hash`), the removed elements as tag.class selectors (span.pill),
-  never phrases, and the id of the DECISIONS_DIGEST line that quotes his words; the entry's words must appear verbatim
-  in that line, or the waiver does not apply.
+  never phrases, and the id of the DECISIONS_DIGEST line that quotes his words; the gate's doc-lint fails an entry
+  whose words do not appear verbatim in that line.
 - Effect: a brief that differs from the reference page only by removed copies of those elements is not "changed".
   The gate's prose-touched check and its changed-brief content checks skip that brief. The batch runs no accuracy,
   read or display review round for it; a screenshot of the changed block in a sample of the waived briefs, at a phone
