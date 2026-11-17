@@ -1,0 +1,110 @@
+[
+ {
+  "sel": ".bpmx .mx-h span:not(:first-child)",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".bpmx .mx-r > span:not(.mx-n)",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".bpmx .mx-b",
+  "prop": "(element)"
+ },
+ {
+  "sel": ".bpmx .mx-b b",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#bpview .bpg",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#bpview .bpcap",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#bpview .bpr",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#bpview .bptask .bpr",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#bpview .bphd",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#bpview .bc",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#bpview .bpr.bpna",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#bpview .bn",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#bpview .bc::before",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".bpmx .mx-seg",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .bpmx .mx-seg button",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .bpmx .mx-seg button[aria-pressed=\"true\"]",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".bpmx .mx-b b.s",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .bpmx .mx-o",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .bpmx .mx-o::after",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .bpmx .mx-o:focus-visible",
+  "prop": "(count)"
+ },
+ {
+  "sel": "#phhome .bpmx .mx-o:focus-visible::after",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".bpmx .mx-r:has(.mx-o):hover",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".bpmx .mx-ch",
+  "prop": "(count)"
+ },
+ {
+  "sel": ".bpmx",
+  "prop": "@box"
+ },
+ {
+  "sel": ".bpmx",
+  "prop": "padding-top"
+ },
+ {
+  "sel": ".bpmx .mx-h",
+  "prop": "(element)"
+ },
+ {
+  "sel": ".bpmx .mx-r",
+  "prop": "(element)"
+ }
+]

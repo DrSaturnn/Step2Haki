@@ -71,7 +71,7 @@
 #phhome .bpmx .mx-o:focus-visible{outline:0}
 #phhome .bpmx .mx-o:focus-visible::after{outline:2px solid var(--accent);outline-offset:-2px;border-radius:6px}
 .bpmx .mx-r:has(.mx-o):hover,.bpmx .mx-r.open{background:var(--recess)}
-.bpmx .mx-ch{color:var(--faint);transition:transform .15s}
+.bpmx .mx-ch{color:var(--faint);transition:transform .2s var(--snp)}
 .bpmx .mx-r.open .mx-ch{transform:rotate(90deg)}
 .bpmx .mx-d{background:var(--recess);padding:2px 16px 14px 18px}
 .bpmx .mx-s{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:0 0 8px}
