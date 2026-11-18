@@ -1,0 +1,13 @@
+const WS='/home/claude/Step2Haki/workspace';const {chromium}=require('playwright');const {serve}=require(WS+'/tools/serve_page');
+const [id,W,H]=[process.argv[2]||'hpv',+(process.argv[3]||1512),+(process.argv[4]||945)];
+(async()=>{const srv=await serve(process.env.PAGE||WS+'/index.html');const b=await chromium.launch();
+const p=await b.newPage({viewport:{width:W,height:H}});await p.addInitScript(()=>localStorage.setItem('ax-settings',JSON.stringify({v:1,s:{tour:'1'}})));
+await p.goto(srv.url+'#'+id);await p.waitForTimeout(1800);
+await p.evaluate(()=>document.querySelector('#modes .layout button[data-v="two"]').click());await p.waitForTimeout(1500);
+console.log(await p.evaluate(()=>{const B=document.querySelector('.brief.ax2-cur');let hit=null;
+ B.querySelectorAll('.ax2-col:not(.ax2-hold)').forEach(c=>{const R=c.getBoundingClientRect().right;[...c.children].forEach(u=>{if([...u.getClientRects()].some(q=>q.left>=R-1)&&!hit)hit=[u,R];});});
+ if(!hit)return 'none';const [u,R]=hit;
+ const dump=(e,d)=>{if(d>5)return '';const rs=[...e.getClientRects()].map(r=>Math.round(r.left)+'/'+Math.round(r.top)+'/'+Math.round(r.width)+'x'+Math.round(r.height)).join('|');
+  const cs=getComputedStyle(e);return '  '.repeat(d)+e.tagName.toLowerCase()+'.'+(e.className||'').toString().replace(/ /g,'.')+' ['+cs.display+(cs.breakInside!=='auto'?' bi:'+cs.breakInside:'')+'] '+rs+'\n'+[...e.children].slice(0,12).map(k=>dump(k,d+1)).join('');};
+ return 'R='+R+'\n'+dump(u,0);}));
+await b.close();srv.close();})();

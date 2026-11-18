@@ -7,7 +7,8 @@
    opens its briefs in a panel over the page, Search opens the sidebar over the page.
    Settings: layout ('scroll' or 'two'), twonav ('1' while the sidebar is kept expanded).
    Events: emits nav:ask, nav:search, layout:step; listens to nav:sections, nav:collapse, layout:hold (true while the quiz
-   is open: the page returns to Scrolling underneath it and the sidebar stays in view; false lays the brief out again). */
+   is open: the page returns to Scrolling underneath it and the sidebar stays in view; false lays the brief out again),
+   shelf:set (a shelf that hides the open brief opens the shelf's first brief). */
 return (function(){
 'use strict';
 var WIDE = window.matchMedia('(min-width:1101px)');
@@ -15,7 +16,7 @@ var root = document.documentElement;
 var want = AX.settings.get('layout') === 'two';
 var held = false, B = null, S = null, rail = null, fly = null, flyFor = null, tip = null, secs = [], ctl = null, offs = [], lastStep = null;
 var HEAD = '.bb-bar,.bb-rail,.alias,h4,.sub,nav';
-var WHOLE = 'tr,p,dd,dt,h1,h2,h3,h4,h5,h6,caption,thead,.mcq,.mcqwrap,svg,img,canvas,a,b,i,em,strong,span,button,label';   // never cut inside
+var WHOLE = 'tr,p,dd,dt,h1,h2,h3,h4,h5,h6,caption,thead,.mcq,.mcqwrap,.sp-rung,svg,img,canvas,a,b,i,em,strong,span,button,label';   // never cut inside
 var GAP = 12, BREAK = 0.3;
 var ICON_EXPAND = '<svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 4h9M2 9h6M2 14h9M12 6.5 15 9l-3 2.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>';
 var ICON_SEARCH = '<svg width="17" height="17" viewBox="0 0 17 17" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.7"></circle><path d="m11 11 4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path></svg>';
@@ -121,10 +122,25 @@ function cut(box, R){
   }
   return null;
 }
+// put back every cut made after the first n
+function undoTo(n){
+  while(S.undo.length > n){ var u = S.undo.pop(); u.from.classList.remove('ax2-open-b'); u.moved.forEach(function(x){ u.from.appendChild(x); }); if(u.clone.parentNode) u.clone.parentNode.removeChild(u.clone); }
+}
+// a table or grid sizes its columns from the rows it holds, so the part a cut leaves can re-wrap taller and run past R
+// again: then the cut is undone and made again with the column a little shorter, and the column gets its height back
+function cutFit(col, box, R, H){
+  var carry = null;
+  for(var t = 1; t <= 8; t++){
+    var n = S.undo.length; carry = cut(box, R);
+    if(!carry || carry === ALL || where(box, R) === 'in' || t === 8) break;
+    undoTo(n); col.style.height = H * (1 - 0.08 * t) + 'px';
+  }
+  col.style.height = H + 'px';
+  return carry;
+}
 function restore(){
   if(!S) return;
-  for(var k = S.undo.length - 1; k >= 0; k--){ var u = S.undo[k]; u.from.classList.remove('ax2-open-b'); u.moved.forEach(function(n){ u.from.appendChild(n); }); if(u.clone.parentNode) u.clone.parentNode.removeChild(u.clone); }
-  S.undo = [];
+  undoTo(0);
   each(S.flow.querySelectorAll('.ax2-brk'), function(x){ x.classList.remove('ax2-brk'); });
   S.units.forEach(function(u){ S.flow.appendChild(u); });
   each(S.flow.querySelectorAll('.ax2-page'), function(p){ p.remove(); });
@@ -157,7 +173,7 @@ function fill(col, rest, k, H){
   var R = col.getBoundingClientRect().right, nxt = [], carry = null;
   for(var i = 0; i < rest.length; i++){
     var w = where(rest[i], R); if(w === 'in') continue;
-    if(w === 'straddle'){ carry = cut(rest[i], R); if(carry === ALL){ carry = null; nxt = rest.slice(i); } else nxt = rest.slice(i + 1); }
+    if(w === 'straddle'){ carry = cutFit(col, rest[i], R, H); if(carry === ALL){ carry = null; nxt = rest.slice(i); } else nxt = rest.slice(i + 1); }
     else nxt = rest.slice(i);
     break;
   }
@@ -325,7 +341,7 @@ function set(v){
 }
 function apply(byReader){
   if(on()){
-    if(!S){ makeRail(); B = fromHash() || inView() || document.querySelector('main .wrap > .brief'); build(); }
+    if(!S){ makeRail(); B = fromHash() || inView() || document.querySelector('main .wrap > .brief'); build(); paintRail(); }
   } else if(S){
     var b = B; unbuild();
     if(byReader && b) requestAnimationFrame(function(){ b.scrollIntoView({block: 'start'}); });
@@ -341,6 +357,13 @@ function show(b){
 offs.push(AX.on('nav:sections', function(list){ secs = list || []; drawRail(); }));
 offs.push(AX.on('nav:collapse', function(){ expand(false); }));
 offs.push(AX.on('layout:hold', function(v){ held = !!v; if(held){ if(S) unbuild(); } else if(on()) apply(); }));
+offs.push(AX.on('shelf:set', function(){
+  if(!S || B.style.display !== 'none') return;
+  var first = Array.prototype.filter.call(document.querySelectorAll('main .wrap > .brief'), function(b){ return b.style.display !== 'none'; })[0];
+  if(!first) return;
+  try{ history.replaceState(null, '', location.pathname + location.search + '#' + first.id); }catch(e){}
+  show(first); jump(0);
+}));
 function onHash(){
   if(!on()) return;
   var b = fromHash();

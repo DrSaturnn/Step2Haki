@@ -279,6 +279,7 @@ function applyShelf(s){
   document.querySelectorAll('.shelfsel').forEach(function(sel){if(sel.value!==s)sel.value=s;});
   setSearchMessage(visible,!!(reviewSet&&pin&&!reviewSet[pin]));
   try{ document.dispatchEvent(new CustomEvent('ax-shelf',{detail:{shelf:s,visible:visible}})); }catch(e){}
+  AX.emit('shelf:set',{shelf:s,visible:visible});
 }
 window.axApplyShelf=function(){ applyShelf(shelf); };
 window.axShelf=function(){ return shelf; };
