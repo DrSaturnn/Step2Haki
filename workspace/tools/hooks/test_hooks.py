@@ -366,8 +366,13 @@ try:
     open(os.path.join(PD, 'STANDING_DIRECTIONS.md'), 'w').write('- rule [D-20260101-1]\n')
     import json as _json   # the scratch digest also holds the ids tools/spine/allow_baseline.json names
     _ab = sorted({r['id'] for r in _json.load(open(os.path.join(WS, 'tools', 'spine', 'allow_baseline.json'))).values()})
+    _tw = os.path.join(WS, 'tools', 'spine', 'text_waivers.json')   # and the ids the text waivers name, with their words
+    _wv = _json.load(open(_tw)).get('waivers', []) if os.path.exists(_tw) else []
     open(os.path.join(PD, 'DECISIONS_DIGEST.md'), 'w').write('- 2026-01-01 [D-20260101-1] {t} a\n' + ''.join(
-        '- %s-%s-%s [%s] {process} allow list baseline\n' % (i[2:6], i[6:8], i[8:10], i) for i in _ab))
+        '- %s-%s-%s [%s] {process} allow list baseline\n' % (i[2:6], i[6:8], i[8:10], i) for i in _ab if i not in
+        {w.get('decision') for w in _wv}) + ''.join(
+        '- %s-%s-%s [%s] {process} waiver: %s\n' % (d[2:6], d[6:8], d[8:10], d, ' '.join(w.get('words', '') for w in _wv
+        if w.get('decision') == d)) for d in sorted({w.get('decision', '') for w in _wv})))
     ENV['S2H_PRIVATE'] = os.path.dirname(PD)
     expect('H1 launch allowed when doc_lint passes', blaunch('lean-builder', 'opus', ' 4'), 0)
     open(os.path.join(PD, 'DECISIONS_DIGEST.md'), 'a').write('- 2026-01-02 [D-20260102-1] {t} b, supersedes D-20260101-1\n')

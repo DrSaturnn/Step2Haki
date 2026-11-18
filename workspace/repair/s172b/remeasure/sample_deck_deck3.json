@@ -1,0 +1,1231 @@
+{
+ "1440x900 rail": {
+  "n": 24,
+  "pages": 116,
+  "labels": 127,
+  "held": 0,
+  "textdiff": [],
+  "over": [
+   [
+    "dementia",
+    "section.ax2-u",
+    775,
+    632,
+    "4Differential"
+   ]
+  ],
+  "rungcut": [
+   [
+    "chf",
+    3
+   ]
+  ],
+  "squeezed": [],
+  "col": 632,
+  "per": {
+   "scaphoid": [
+    4,
+    6
+   ],
+   "shoulder-rom": [
+    4,
+    5
+   ],
+   "uri": [
+    4,
+    5
+   ],
+   "bs-umbilical": [
+    5,
+    6
+   ],
+   "herpangina": [
+    5,
+    7
+   ],
+   "dementia": [
+    6,
+    7
+   ],
+   "myositis-ossificans": [
+    5,
+    6
+   ],
+   "chf": [
+    5,
+    6
+   ],
+   "del22q11": [
+    5,
+    6
+   ],
+   "zenker": [
+    6,
+    5
+   ],
+   "nephropathy": [
+    6,
+    8
+   ],
+   "prolactin": [
+    2,
+    0
+   ],
+   "drug-hemolysis": [
+    6,
+    9
+   ],
+   "hiv-vax": [
+    3,
+    0
+   ],
+   "bs-anaphylaxis": [
+    7,
+    8
+   ],
+   "cerebral-palsy": [
+    5,
+    3
+   ],
+   "psoriasis": [
+    2,
+    1
+   ],
+   "hpv": [
+    4,
+    5
+   ],
+   "vegan": [
+    8,
+    13
+   ],
+   "cluster-c": [
+    6,
+    7
+   ],
+   "delirium": [
+    7,
+    10
+   ],
+   "suicide-risk": [
+    4,
+    4
+   ],
+   "pc-antichol": [
+    3,
+    0
+   ],
+   "sud-meds": [
+    4,
+    0
+   ]
+  },
+  "errs": 0
+ },
+ "1512x945 rail": {
+  "n": 24,
+  "pages": 130,
+  "labels": 148,
+  "held": 0,
+  "textdiff": [],
+  "over": [
+   [
+    "prolactin",
+    "section.ax2-u",
+    1520,
+    661,
+    ""
+   ],
+   [
+    "hpv",
+    "section.ax2-u",
+    1520,
+    661,
+    ""
+   ]
+  ],
+  "rungcut": [],
+  "squeezed": [],
+  "col": 661,
+  "per": {
+   "scaphoid": [
+    5,
+    6
+   ],
+   "shoulder-rom": [
+    5,
+    8
+   ],
+   "uri": [
+    5,
+    6
+   ],
+   "bs-umbilical": [
+    5,
+    8
+   ],
+   "herpangina": [
+    5,
+    7
+   ],
+   "dementia": [
+    7,
+    11
+   ],
+   "myositis-ossificans": [
+    5,
+    6
+   ],
+   "chf": [
+    4,
+    4
+   ],
+   "del22q11": [
+    6,
+    7
+   ],
+   "zenker": [
+    6,
+    6
+   ],
+   "nephropathy": [
+    7,
+    9
+   ],
+   "prolactin": [
+    3,
+    1
+   ],
+   "drug-hemolysis": [
+    7,
+    10
+   ],
+   "hiv-vax": [
+    3,
+    0
+   ],
+   "bs-anaphylaxis": [
+    8,
+    14
+   ],
+   "cerebral-palsy": [
+    6,
+    3
+   ],
+   "psoriasis": [
+    3,
+    1
+   ],
+   "hpv": [
+    4,
+    5
+   ],
+   "vegan": [
+    9,
+    14
+   ],
+   "cluster-c": [
+    7,
+    7
+   ],
+   "delirium": [
+    8,
+    11
+   ],
+   "suicide-risk": [
+    5,
+    4
+   ],
+   "pc-antichol": [
+    3,
+    0
+   ],
+   "sud-meds": [
+    4,
+    0
+   ]
+  },
+  "errs": 0
+ },
+ "1280x800 rail": {
+  "n": 24,
+  "pages": 145,
+  "labels": 168,
+  "held": 0,
+  "textdiff": [],
+  "over": [
+   [
+    "dementia",
+    "section.ax2-u",
+    1287,
+    552,
+    ""
+   ],
+   [
+    "hpv",
+    "section.ax2-u",
+    1287,
+    552,
+    "Platform and gates"
+   ],
+   [
+    "delirium",
+    "section.ax2-u",
+    1287,
+    552,
+    "4Differential"
+   ]
+  ],
+  "rungcut": [],
+  "squeezed": [],
+  "col": 552,
+  "per": {
+   "scaphoid": [
+    6,
+    8
+   ],
+   "shoulder-rom": [
+    5,
+    6
+   ],
+   "uri": [
+    5,
+    6
+   ],
+   "bs-umbilical": [
+    6,
+    10
+   ],
+   "herpangina": [
+    6,
+    9
+   ],
+   "dementia": [
+    8,
+    13
+   ],
+   "myositis-ossificans": [
+    6,
+    7
+   ],
+   "chf": [
+    5,
+    5
+   ],
+   "del22q11": [
+    6,
+    8
+   ],
+   "zenker": [
+    7,
+    8
+   ],
+   "nephropathy": [
+    8,
+    11
+   ],
+   "prolactin": [
+    3,
+    0
+   ],
+   "drug-hemolysis": [
+    8,
+    11
+   ],
+   "hiv-vax": [
+    3,
+    0
+   ],
+   "bs-anaphylaxis": [
+    9,
+    12
+   ],
+   "cerebral-palsy": [
+    7,
+    4
+   ],
+   "psoriasis": [
+    3,
+    2
+   ],
+   "hpv": [
+    4,
+    5
+   ],
+   "vegan": [
+    10,
+    16
+   ],
+   "cluster-c": [
+    7,
+    10
+   ],
+   "delirium": [
+    9,
+    11
+   ],
+   "suicide-risk": [
+    6,
+    6
+   ],
+   "pc-antichol": [
+    3,
+    0
+   ],
+   "sud-meds": [
+    5,
+    0
+   ]
+  },
+  "errs": 0
+ },
+ "1512x945 open-today": {
+  "n": 24,
+  "pages": 147,
+  "labels": 180,
+  "held": 1,
+  "textdiff": [],
+  "over": [
+   [
+    "dementia",
+    "section.ax2-u",
+    953,
+    524,
+    ""
+   ],
+   [
+    "cerebral-palsy",
+    "section.ax2-u",
+    1520,
+    524,
+    ""
+   ],
+   [
+    "hpv",
+    "section.ax2-u",
+    1520,
+    524,
+    ""
+   ]
+  ],
+  "rungcut": [],
+  "squeezed": [
+   [
+    "zenker",
+    4
+   ],
+   [
+    "bs-anaphylaxis",
+    3
+   ]
+  ],
+  "col": 524,
+  "per": {
+   "scaphoid": [
+    6,
+    8
+   ],
+   "shoulder-rom": [
+    5,
+    8
+   ],
+   "uri": [
+    5,
+    7
+   ],
+   "bs-umbilical": [
+    7,
+    11
+   ],
+   "herpangina": [
+    7,
+    10
+   ],
+   "dementia": [
+    8,
+    14
+   ],
+   "myositis-ossificans": [
+    7,
+    8
+   ],
+   "chf": [
+    5,
+    5
+   ],
+   "del22q11": [
+    6,
+    9
+   ],
+   "zenker": [
+    7,
+    8
+   ],
+   "nephropathy": [
+    8,
+    11
+   ],
+   "prolactin": [
+    3,
+    0
+   ],
+   "drug-hemolysis": [
+    6,
+    8
+   ],
+   "hiv-vax": [
+    3,
+    0
+   ],
+   "bs-anaphylaxis": [
+    9,
+    14
+   ],
+   "cerebral-palsy": [
+    8,
+    4
+   ],
+   "psoriasis": [
+    4,
+    2
+   ],
+   "hpv": [
+    4,
+    5
+   ],
+   "vegan": [
+    10,
+    17
+   ],
+   "cluster-c": [
+    7,
+    10
+   ],
+   "delirium": [
+    9,
+    14
+   ],
+   "suicide-risk": [
+    5,
+    7
+   ],
+   "pc-antichol": [
+    3,
+    0
+   ],
+   "sud-meds": [
+    5,
+    0
+   ]
+  },
+  "errs": 0
+ },
+ "1440x900 open-today": {
+  "n": 24,
+  "pages": 134,
+  "labels": 153,
+  "held": 0,
+  "textdiff": [],
+  "over": [
+   [
+    "dementia",
+    "section.ax2-u",
+    1447,
+    508,
+    ""
+   ],
+   [
+    "cerebral-palsy",
+    "section.ax2-u",
+    1447,
+    508,
+    ""
+   ],
+   [
+    "hpv",
+    "section.ax2-u",
+    1447,
+    508,
+    "Platform and gates"
+   ]
+  ],
+  "rungcut": [],
+  "squeezed": [
+   [
+    "zenker",
+    4
+   ],
+   [
+    "drug-hemolysis",
+    1
+   ],
+   [
+    "cerebral-palsy",
+    2
+   ],
+   [
+    "psoriasis",
+    1
+   ]
+  ],
+  "col": 508,
+  "per": {
+   "scaphoid": [
+    5,
+    6
+   ],
+   "shoulder-rom": [
+    5,
+    6
+   ],
+   "uri": [
+    5,
+    6
+   ],
+   "bs-umbilical": [
+    6,
+    8
+   ],
+   "herpangina": [
+    6,
+    9
+   ],
+   "dementia": [
+    7,
+    12
+   ],
+   "myositis-ossificans": [
+    6,
+    6
+   ],
+   "chf": [
+    5,
+    5
+   ],
+   "del22q11": [
+    6,
+    7
+   ],
+   "zenker": [
+    6,
+    7
+   ],
+   "nephropathy": [
+    7,
+    10
+   ],
+   "prolactin": [
+    3,
+    1
+   ],
+   "drug-hemolysis": [
+    7,
+    10
+   ],
+   "hiv-vax": [
+    3,
+    0
+   ],
+   "bs-anaphylaxis": [
+    8,
+    12
+   ],
+   "cerebral-palsy": [
+    7,
+    3
+   ],
+   "psoriasis": [
+    3,
+    1
+   ],
+   "hpv": [
+    4,
+    5
+   ],
+   "vegan": [
+    9,
+    15
+   ],
+   "cluster-c": [
+    6,
+    9
+   ],
+   "delirium": [
+    8,
+    12
+   ],
+   "suicide-risk": [
+    5,
+    3
+   ],
+   "pc-antichol": [
+    3,
+    0
+   ],
+   "sud-meds": [
+    4,
+    0
+   ]
+  },
+  "errs": 0
+ },
+ "1280x800 open-today": {
+  "n": 24,
+  "pages": 176,
+  "labels": 212,
+  "held": 2,
+  "textdiff": [],
+  "over": [
+   [
+    "dementia",
+    "section.ax2-u",
+    1287,
+    428,
+    ""
+   ],
+   [
+    "drug-hemolysis",
+    "section.ax2-u",
+    1287,
+    428,
+    "Diagnosis"
+   ],
+   [
+    "cerebral-palsy",
+    "section.ax2-u",
+    1287,
+    428,
+    ""
+   ]
+  ],
+  "rungcut": [
+   [
+    "chf",
+    3
+   ]
+  ],
+  "squeezed": [
+   [
+    "dementia",
+    2
+   ],
+   [
+    "del22q11",
+    1
+   ],
+   [
+    "zenker",
+    4
+   ],
+   [
+    "cerebral-palsy",
+    2
+   ],
+   [
+    "psoriasis",
+    3
+   ]
+  ],
+  "col": 428,
+  "per": {
+   "scaphoid": [
+    7,
+    9
+   ],
+   "shoulder-rom": [
+    7,
+    9
+   ],
+   "uri": [
+    7,
+    10
+   ],
+   "bs-umbilical": [
+    9,
+    14
+   ],
+   "herpangina": [
+    8,
+    13
+   ],
+   "dementia": [
+    9,
+    15
+   ],
+   "myositis-ossificans": [
+    7,
+    10
+   ],
+   "chf": [
+    7,
+    9
+   ],
+   "del22q11": [
+    8,
+    11
+   ],
+   "zenker": [
+    8,
+    10
+   ],
+   "nephropathy": [
+    9,
+    14
+   ],
+   "prolactin": [
+    4,
+    1
+   ],
+   "drug-hemolysis": [
+    6,
+    7
+   ],
+   "hiv-vax": [
+    4,
+    0
+   ],
+   "bs-anaphylaxis": [
+    11,
+    16
+   ],
+   "cerebral-palsy": [
+    10,
+    5
+   ],
+   "psoriasis": [
+    4,
+    2
+   ],
+   "hpv": [
+    6,
+    8
+   ],
+   "vegan": [
+    9,
+    13
+   ],
+   "cluster-c": [
+    8,
+    12
+   ],
+   "delirium": [
+    11,
+    15
+   ],
+   "suicide-risk": [
+    7,
+    9
+   ],
+   "pc-antichol": [
+    4,
+    0
+   ],
+   "sud-meds": [
+    6,
+    0
+   ]
+  },
+  "errs": 0
+ },
+ "1440x900 P1+P2": {
+  "n": 24,
+  "pages": 126,
+  "labels": 138,
+  "held": 0,
+  "textdiff": [],
+  "over": [
+   [
+    "dementia",
+    "section.ax2-u",
+    1447,
+    574,
+    ""
+   ],
+   [
+    "chf",
+    "section.ax2-u",
+    1447,
+    574,
+    ""
+   ]
+  ],
+  "rungcut": [
+   [
+    "chf",
+    3
+   ]
+  ],
+  "squeezed": [],
+  "col": 574,
+  "per": {
+   "scaphoid": [
+    5,
+    7
+   ],
+   "shoulder-rom": [
+    5,
+    7
+   ],
+   "uri": [
+    5,
+    6
+   ],
+   "bs-umbilical": [
+    5,
+    8
+   ],
+   "herpangina": [
+    5,
+    7
+   ],
+   "dementia": [
+    6,
+    8
+   ],
+   "myositis-ossificans": [
+    5,
+    6
+   ],
+   "chf": [
+    5,
+    7
+   ],
+   "del22q11": [
+    6,
+    7
+   ],
+   "zenker": [
+    6,
+    5
+   ],
+   "nephropathy": [
+    6,
+    8
+   ],
+   "prolactin": [
+    3,
+    1
+   ],
+   "drug-hemolysis": [
+    6,
+    9
+   ],
+   "hiv-vax": [
+    3,
+    0
+   ],
+   "bs-anaphylaxis": [
+    8,
+    9
+   ],
+   "cerebral-palsy": [
+    6,
+    3
+   ],
+   "psoriasis": [
+    3,
+    1
+   ],
+   "hpv": [
+    4,
+    5
+   ],
+   "vegan": [
+    9,
+    13
+   ],
+   "cluster-c": [
+    6,
+    8
+   ],
+   "delirium": [
+    8,
+    9
+   ],
+   "suicide-risk": [
+    4,
+    4
+   ],
+   "pc-antichol": [
+    3,
+    0
+   ],
+   "sud-meds": [
+    4,
+    0
+   ]
+  },
+  "errs": 0
+ },
+ "1512x945 P1+P2": {
+  "n": 24,
+  "pages": 135,
+  "labels": 158,
+  "held": 0,
+  "textdiff": [],
+  "over": [
+   [
+    "dementia",
+    "section.ax2-u",
+    885,
+    607,
+    ""
+   ],
+   [
+    "hpv",
+    "section.ax2-u",
+    1520,
+    607,
+    ""
+   ]
+  ],
+  "rungcut": [],
+  "squeezed": [],
+  "col": 607,
+  "per": {
+   "scaphoid": [
+    5,
+    7
+   ],
+   "shoulder-rom": [
+    5,
+    7
+   ],
+   "uri": [
+    5,
+    6
+   ],
+   "bs-umbilical": [
+    6,
+    9
+   ],
+   "herpangina": [
+    6,
+    9
+   ],
+   "dementia": [
+    7,
+    11
+   ],
+   "myositis-ossificans": [
+    6,
+    6
+   ],
+   "chf": [
+    5,
+    5
+   ],
+   "del22q11": [
+    6,
+    8
+   ],
+   "zenker": [
+    7,
+    8
+   ],
+   "nephropathy": [
+    7,
+    10
+   ],
+   "prolactin": [
+    3,
+    1
+   ],
+   "drug-hemolysis": [
+    7,
+    10
+   ],
+   "hiv-vax": [
+    3,
+    0
+   ],
+   "bs-anaphylaxis": [
+    8,
+    12
+   ],
+   "cerebral-palsy": [
+    6,
+    3
+   ],
+   "psoriasis": [
+    3,
+    1
+   ],
+   "hpv": [
+    4,
+    5
+   ],
+   "vegan": [
+    9,
+    13
+   ],
+   "cluster-c": [
+    7,
+    10
+   ],
+   "delirium": [
+    8,
+    12
+   ],
+   "suicide-risk": [
+    5,
+    5
+   ],
+   "pc-antichol": [
+    3,
+    0
+   ],
+   "sud-meds": [
+    4,
+    0
+   ]
+  },
+  "errs": 0
+ },
+ "1280x800 P1+P2": {
+  "n": 24,
+  "pages": 152,
+  "labels": 180,
+  "held": 2,
+  "textdiff": [],
+  "over": [
+   [
+    "uri",
+    "section.ax2-u",
+    1287,
+    494,
+    ""
+   ],
+   [
+    "cerebral-palsy",
+    "section.ax2-u",
+    1287,
+    494,
+    ""
+   ],
+   [
+    "delirium",
+    "section.ax2-u",
+    768,
+    494,
+    ""
+   ]
+  ],
+  "rungcut": [
+   [
+    "cluster-c",
+    1
+   ]
+  ],
+  "squeezed": [
+   [
+    "zenker",
+    4
+   ],
+   [
+    "psoriasis",
+    1
+   ]
+  ],
+  "col": 494,
+  "per": {
+   "scaphoid": [
+    6,
+    9
+   ],
+   "shoulder-rom": [
+    5,
+    6
+   ],
+   "uri": [
+    5,
+    7
+   ],
+   "bs-umbilical": [
+    7,
+    10
+   ],
+   "herpangina": [
+    7,
+    9
+   ],
+   "dementia": [
+    9,
+    14
+   ],
+   "myositis-ossificans": [
+    7,
+    9
+   ],
+   "chf": [
+    5,
+    5
+   ],
+   "del22q11": [
+    7,
+    9
+   ],
+   "zenker": [
+    7,
+    9
+   ],
+   "nephropathy": [
+    8,
+    12
+   ],
+   "prolactin": [
+    3,
+    1
+   ],
+   "drug-hemolysis": [
+    6,
+    8
+   ],
+   "hiv-vax": [
+    4,
+    0
+   ],
+   "bs-anaphylaxis": [
+    9,
+    16
+   ],
+   "cerebral-palsy": [
+    8,
+    4
+   ],
+   "psoriasis": [
+    4,
+    2
+   ],
+   "hpv": [
+    5,
+    6
+   ],
+   "vegan": [
+    8,
+    10
+   ],
+   "cluster-c": [
+    8,
+    12
+   ],
+   "delirium": [
+    10,
+    15
+   ],
+   "suicide-risk": [
+    6,
+    7
+   ],
+   "pc-antichol": [
+    3,
+    0
+   ],
+   "sud-meds": [
+    5,
+    0
+   ]
+  },
+  "errs": 0
+ }
+}

@@ -7,23 +7,24 @@
    opens its briefs in a panel over the page, Search opens the sidebar over the page.
    Settings: layout ('scroll' or 'two'), twonav ('1' while the sidebar is kept expanded).
    Events: emits nav:ask, nav:search, layout:step; listens to nav:sections, nav:collapse, layout:hold (true while the quiz
-   is open: the page returns to Scrolling underneath it and the sidebar stays in view; false lays the brief out again). */
+   is open: the page returns to Scrolling underneath it and the sidebar stays in view; false lays the brief out again),
+   shelf:set (a shelf that hides the open brief opens the shelf's first brief), bank:change (lays the pages out again
+   and seats the page that holds the current card).
+   Practice questions show as Stack only; List and Review stay for Scrolling. Laying out again keeps keyboard focus. */
 return (function(){
 'use strict';
 var WIDE = window.matchMedia('(min-width:1101px)');
 var root = document.documentElement;
 var want = AX.settings.get('layout') === 'two';
-var held = false, B = null, S = null, rail = null, fly = null, flyFor = null, tip = null, secs = [], ctl = null, offs = [], lastStep = null;
+var held = false, B = null, S = null, rail = null, fly = null, flyFor = null, tip = null, secs = [], ctl = null, offs = [], lastStep = null, sheetMo = null;
 var HEAD = '.bb-bar,.bb-rail,.alias,h4,.sub,nav';
-var WHOLE = 'tr,p,dd,dt,h1,h2,h3,h4,h5,h6,caption,thead,.mcq,.mcqwrap,svg,img,canvas,a,b,i,em,strong,span,button,label';   // never cut inside
+var WHOLE = 'tr,p,dd,dt,h1,h2,h3,h4,h5,h6,caption,thead,.mcq,.mcqwrap,.sp-rung,svg,img,canvas,a,b,i,em,strong,span,button,label';   // never cut inside
 var GAP = 12, BREAK = 0.3;
 var ICON_EXPAND = '<svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 4h9M2 9h6M2 14h9M12 6.5 15 9l-3 2.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>';
 var ICON_SEARCH = '<svg width="17" height="17" viewBox="0 0 17 17" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.7"></circle><path d="m11 11 4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path></svg>';
-var SHORT = {'Presentations': 'Pres', 'Musculoskeletal': 'MSK', 'Pediatrics': 'Peds', 'Cardiovascular': 'CV', 'Pulmonary': 'Pulm',
-  'GI & Hepatology': 'GI', 'Renal & GU': 'Renal', 'Endocrine & Bone': 'Endo', 'Hematology': 'Heme', 'Infectious Disease': 'ID',
-  'Neuro & HEENT': 'Neuro', 'Neurology': 'Neuro', 'Dermatology & Wounds': 'Derm', 'Dermatology': 'Derm', 'OB / GYN': 'OB',
-  'Obstetrics & Gynecology': 'OB', 'Preventive & Ethics': 'Prev', 'Psychiatry & Behavioral Health': 'Psych',
-  'Psychiatry': 'Psych', 'Psych Pharmacology': 'Pharm'};
+// a section's tile shows the first two letters of its name; these sections take another pair
+var MONO = {'Musculoskeletal': 'MS', 'Cardiovascular': 'CV', 'Renal & GU': 'GU', 'Infectious Disease': 'ID',
+  'Obstetrics & Gynecology': 'OB', 'Preventive & Ethics': 'Pv', 'Psych Pharmacology': 'Rx'};
 
 function el(tag, cls, html){ var e = document.createElement(tag); if(cls) e.className = cls; if(html != null) e.innerHTML = html; return e; }
 function txt(n){ return (n && n.textContent || '').replace(/\s+/g, ' ').trim(); }
@@ -48,9 +49,21 @@ function fromHash(){
 
 /* ---------- units: the brief's steps (a heading and what follows it), blocks that stand alone, and the practice set ---------- */
 function unit(name, cls){ var u = el('section', 'ax2-u' + (cls ? ' ' + cls : '')); u.dataset.name = name || ''; return u; }
+// Two-pane shows practice questions as Stack only; the bank's own view comes back in Scrolling
+function stackOnly(on){
+  each(B.querySelectorAll('.bankwrap'), function(bw){
+    var v = 'stack';
+    if(on){ bw.dataset.ax2v = bw.classList.contains('review') ? 'review' : bw.classList.contains('stack') ? 'stack' : 'quiz'; }
+    else if(bw.dataset.ax2v){ v = bw.dataset.ax2v; delete bw.dataset.ax2v; }
+    else return;
+    bw.classList.toggle('review', v === 'review'); bw.classList.toggle('stack', v === 'stack');
+    each(bw.querySelectorAll('.bkmode'), function(m){ m.classList.toggle('on', m.dataset.v === v); });
+  });
+}
 function build(){
   if(S || !B) return;
   AX.brief.ensure(B);
+  stackOnly(true);
   var nodes = Array.prototype.slice.call(B.childNodes), kids = Array.prototype.slice.call(B.children), units = [], end = [], cur = null, prac = null, started = false;
   kids.forEach(function(c){
     if(!started && c.matches(HEAD)) return;
@@ -67,6 +80,7 @@ function build(){
   B.classList.add('ax2-cur');
   root.setAttribute('data-layout', 'two');
   root.classList.toggle('ax2-nav', AX.settings.get('twonav') === '1');
+  paintRail();
   lay(true);
   setTimeout(function(){ if(S) lay(); }, 700);   // parts that size themselves after they are drawn
   if(document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ if(S) lay(); });
@@ -78,6 +92,7 @@ function unbuild(){
   var endCap = B.querySelector(':scope > .bb-end'); if(endCap) B.appendChild(endCap);   // an end cap drawn after the layout began stays last
   S.flow.remove(); S = null;
   B.classList.remove('ax2-cur');
+  stackOnly(false);
   root.removeAttribute('data-layout'); root.classList.remove('ax2-nav', 'ax2-over');
   closeFly(); lastStep = null;
 }
@@ -121,10 +136,25 @@ function cut(box, R){
   }
   return null;
 }
+// put back every cut made after the first n
+function undoTo(n){
+  while(S.undo.length > n){ var u = S.undo.pop(); u.from.classList.remove('ax2-open-b'); u.moved.forEach(function(x){ u.from.appendChild(x); }); if(u.clone.parentNode) u.clone.parentNode.removeChild(u.clone); }
+}
+// a table or grid sizes its columns from the rows it holds, so the part a cut leaves can re-wrap taller and run past R
+// again: then the cut is undone and made again with the column a little shorter, and the column gets its height back
+function cutFit(col, box, R, H){
+  var carry = null;
+  for(var t = 1; t <= 8; t++){
+    var n = S.undo.length; carry = cut(box, R);
+    if(!carry || carry === ALL || where(box, R) === 'in' || t === 8) break;
+    undoTo(n); col.style.height = H * (1 - 0.08 * t) + 'px';
+  }
+  col.style.height = H + 'px';
+  return carry;
+}
 function restore(){
   if(!S) return;
-  for(var k = S.undo.length - 1; k >= 0; k--){ var u = S.undo[k]; u.from.classList.remove('ax2-open-b'); u.moved.forEach(function(n){ u.from.appendChild(n); }); if(u.clone.parentNode) u.clone.parentNode.removeChild(u.clone); }
-  S.undo = [];
+  undoTo(0);
   each(S.flow.querySelectorAll('.ax2-brk'), function(x){ x.classList.remove('ax2-brk'); });
   S.units.forEach(function(u){ S.flow.appendChild(u); });
   each(S.flow.querySelectorAll('.ax2-page'), function(p){ p.remove(); });
@@ -157,7 +187,7 @@ function fill(col, rest, k, H){
   var R = col.getBoundingClientRect().right, nxt = [], carry = null;
   for(var i = 0; i < rest.length; i++){
     var w = where(rest[i], R); if(w === 'in') continue;
-    if(w === 'straddle'){ carry = cut(rest[i], R); if(carry === ALL){ carry = null; nxt = rest.slice(i); } else nxt = rest.slice(i + 1); }
+    if(w === 'straddle'){ carry = cutFit(col, rest[i], R, H); if(carry === ALL){ carry = null; nxt = rest.slice(i); } else nxt = rest.slice(i + 1); }
     else nxt = rest.slice(i);
     break;
   }
@@ -199,12 +229,22 @@ function frame(){
   if(bar && h){ var room = bar.getBoundingClientRect().left - h.getBoundingClientRect().left - 24; root.style.setProperty('--ax2-tw', (room > 240 ? room / zoomOf(h) : 2000) + 'px'); }
 }
 
-function lay(first){
+// keep: a part the reader just acted on; its page is seated after the layout, so the part stays on screen.
+// Moving the brief's nodes drops keyboard focus, so focus goes back to the part that had it.
+function lay(first, keep){
   if(!S) return;
-  var pi = first ? 0 : pageInView();
+  var pi = first ? 0 : pageInView(), f = document.activeElement;
+  if(!f || !S.flow.contains(f)) f = null;
   jump(0);
   frame(); paginate();
-  if(pi > 0 && S.pages[pi]) seatPage(S.pages[pi]); else jump(0);
+  var pg = keep && S.flow.contains(keep) ? keep.closest('.ax2-page') : null;
+  if(pg){
+    if(pg === S.pages[0]) jump(0); else seatPage(pg);
+    var r = keep.getBoundingClientRect();   // far down a held column: bring the part itself under the toolbar
+    if(r.top > window.innerHeight - 80) jump(window.scrollY + r.top - barBottom() - GAP);
+  }
+  else if(pi > 0 && S.pages[pi]) seatPage(S.pages[pi]); else jump(0);
+  if(f && f.isConnected && document.activeElement !== f) try{ f.focus({preventScroll: true}); }catch(e){}
   mark();
 }
 function pageInView(){
@@ -218,7 +258,8 @@ function seatPage(p){ jump(window.scrollY + p.getBoundingClientRect().top - (bar
 /* the step at the top of the page in view: the sidebar's step rail marks it */
 function mark(){
   if(!S || !S.pages.length) return;
-  var p = S.pages[pageInView()], u = p && p.querySelector('.ax2-u'), id = null;
+  var at = pageInView(), p = S.pages[at], u = p && p.querySelector('.ax2-u'), id = null;
+  if(rail) rail.style.setProperty('--ax2-at', ((at + 1) / S.pages.length * 100) + '%');
   for(var x = u; x && !id; x = x.nextElementSibling) if(x.classList.contains('ax2-u')) id = x.dataset.hid || null;
   if(id !== lastStep){ lastStep = id; AX.emit('layout:step', id); }
 }
@@ -252,20 +293,36 @@ function makeRail(){
     if(b.classList.contains('ex')) expand(true);
     else if(b.classList.contains('sr')) over();
     else if(b.classList.contains('sec')) openFly(b);
+    else if(b.classList.contains('cfg')){ e.stopPropagation(); closeFly(); root.classList.add('ax2-over'); AX.emit('settings:set', true); watchSheet(); }   // the sheet lives in the sidebar, so the sidebar opens over the page
   });
   drawRail();
 }
+// the sheet opened from the rail takes the sidebar with it when it closes, and focus returns to the rail's tile
+function watchSheet(){
+  var s = document.getElementById('axdisp'); if(!s || sheetMo) return;
+  sheetMo = new MutationObserver(function(){
+    if(s.classList.contains('on')) return;
+    sheetMo.disconnect(); sheetMo = null;
+    if(!root.classList.contains('ax2-over')) return;
+    root.classList.remove('ax2-over');
+    var c = rail && rail.querySelector('.cfg'); if(c) c.focus();
+  });
+  sheetMo.observe(s, {attributes: true, attributeFilter: ['class']});
+}
 function drawRail(){
   if(!rail) return;
-  rail.innerHTML = '<button type="button" class="ex tool" aria-label="Expand sidebar" data-tip="Expand sidebar">' + ICON_EXPAND + '</button>' +
+  rail.innerHTML = '<span class="mk" aria-hidden="true">S2</span><button type="button" class="ex tool" aria-label="Expand sidebar" data-tip="Expand sidebar">' + ICON_EXPAND + '</button>' +
                    '<button type="button" class="sr" aria-label="Search" data-tip="Search">' + ICON_SEARCH + '</button><span class="hr" aria-hidden="true"></span>';
   secs.forEach(function(sc, i){
     var b = el('button', 'sec'); b.type = 'button'; b.dataset.i = i;
-    b.textContent = SHORT[sc.name] || sc.name.split(/[\s&\/]+/)[0].slice(0, 5);
+    b.textContent = MONO[sc.name] || sc.name.replace(/[^A-Za-z]/g, '').slice(0, 2);
     b.setAttribute('data-tip', sc.name + (sc.count ? '  ·  ' + sc.count : ''));
     b.setAttribute('aria-label', sc.name); b.setAttribute('aria-haspopup', 'dialog'); b.setAttribute('aria-expanded', 'false');
     rail.appendChild(b);
   });
+  rail.appendChild(el('span', 'sp'));
+  var src = document.getElementById('axcfg'), cfg = el('button', 'cfg tool', src ? src.innerHTML : ''); cfg.type = 'button';   // the sidebar's settings icon cfg.setAttribute('aria-label', 'Display settings'); cfg.setAttribute('aria-haspopup', 'dialog'); cfg.setAttribute('data-tip', 'Display settings');
+  rail.appendChild(cfg);
   paintRail();
 }
 // the current brief's home section: the first section listing it, Presentations last
@@ -334,13 +391,21 @@ function apply(byReader){
 function show(b){
   if(!b || b === B) return;
   if(S) unbuild();
-  B = b; build(); paintRail();
+  B = b; build();
 }
 
 /* ---------- wiring ---------- */
 offs.push(AX.on('nav:sections', function(list){ secs = list || []; drawRail(); }));
 offs.push(AX.on('nav:collapse', function(){ expand(false); }));
 offs.push(AX.on('layout:hold', function(v){ held = !!v; if(held){ if(S) unbuild(); } else if(on()) apply(); }));
+offs.push(AX.on('bank:change', function(bw){ if(S && bw && S.flow.contains(bw)) relay(bw.querySelector('.mcq.sk-cur') || bw); }));
+offs.push(AX.on('shelf:set', function(){
+  if(!S || B.style.display !== 'none') return;
+  var first = Array.prototype.filter.call(document.querySelectorAll('main .wrap > .brief'), function(b){ return b.style.display !== 'none'; })[0];
+  if(!first) return;
+  try{ history.replaceState(null, '', '#' + first.id); }catch(e){}
+  show(first); jump(0);
+}));
 function onHash(){
   if(!on()) return;
   var b = fromHash();
@@ -354,7 +419,7 @@ function onResize(e){
   lw = window.innerWidth; lh = window.innerHeight;
   clearTimeout(rt); rt = setTimeout(function(){ if(!WIDE.matches){ if(S) unbuild(); return; } if(!S) apply(); else lay(); }, 200);
 }
-function relay(){ if(S){ clearTimeout(rt); rt = setTimeout(lay, 150); } }
+function relay(keep){ if(S){ clearTimeout(rt); rt = setTimeout(function(){ lay(false, keep); }, 150); } }
 function onToggle(e){ if(S && S.flow.contains(e.target)) relay(); }
 function onDown(e){
   if(fly && !fly.contains(e.target) && !(rail && rail.contains(e.target))) closeFly();
@@ -386,7 +451,7 @@ return {teardown: function(){
   if(S) unbuild();
   window.removeEventListener('hashchange', onHash); window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onResize);
   document.removeEventListener('toggle', onToggle, true); document.removeEventListener('mousedown', onDown, true); document.removeEventListener('keydown', onKey);
-  mo.disconnect(); offs.forEach(function(f){ f(); }); offs = [];
+  mo.disconnect(); if(sheetMo){ sheetMo.disconnect(); sheetMo = null; } offs.forEach(function(f){ f(); }); offs = [];
   if(rail){ rail.remove(); rail = null; } if(tip){ tip.remove(); tip = null; }
 }, on: on};
 })();

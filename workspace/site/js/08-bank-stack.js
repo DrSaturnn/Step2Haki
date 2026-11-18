@@ -33,19 +33,23 @@
   function init(){
     AX.brief.each('bank-stack', function(b){ Array.prototype.forEach.call(b.querySelectorAll('.bankwrap'), function(bw){ toolbar(bw); show(bw, 0); }); });
   }
+  // bank:change goes out after a button or arrow-key action inside a bank, once the bank has redrawn, so a layout can
+  // measure it again; a click on the text of a card (a selection) is no action
+  function changed(bw){ setTimeout(function(){ AX.emit('bank:change', bw); }, 0); }
   document.addEventListener('click', function(e){
     var t = e.target; if(!t || !t.closest) return;
+    var bw = t.closest('.bankwrap'); if(!bw) return;
     var nb = t.closest('.bknav button');
-    if(nb){ var bw = nb.closest('.bankwrap'), d = parseInt(nb.getAttribute('data-sk'), 10); show(bw, (bw._sk || 0) + d, d); return; }
-    var bw2 = t.closest('.bankwrap'); if(!bw2) return;
-    if(t.closest('.bkfilter') || t.closest('.bkmode')){ setTimeout(function(){ show(bw2, 0); }, 0); return; }
-    if(t.closest('.mcq')) setTimeout(function(){ show(bw2, bw2._sk || 0); }, 0);
+    if(nb){ var d = parseInt(nb.getAttribute('data-sk'), 10); show(bw, (bw._sk || 0) + d, d); }
+    else if(t.closest('.bkfilter') || t.closest('.bkmode')) setTimeout(function(){ show(bw, 0); }, 0);
+    else if(t.closest('.mcq')) setTimeout(function(){ show(bw, bw._sk || 0); }, 0);
+    if(t.closest('button')) changed(bw);
   });
   document.addEventListener('keydown', function(e){
     if(e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
     var a = document.activeElement; if(!a || !a.closest || /INPUT|TEXTAREA|SELECT/.test(a.tagName)) return;
     var bw = a.closest('.bankwrap.stack'); if(!bw) return;
-    var d = e.key === 'ArrowRight' ? 1 : -1; show(bw, (bw._sk || 0) + d, d); e.preventDefault();
+    var d = e.key === 'ArrowRight' ? 1 : -1; show(bw, (bw._sk || 0) + d, d); changed(bw); e.preventDefault();
   });
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function(){ setTimeout(init, 0); });
   else setTimeout(init, 0);
