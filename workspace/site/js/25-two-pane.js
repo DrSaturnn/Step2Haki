@@ -21,11 +21,12 @@ var WHOLE = 'tr,p,dd,dt,h1,h2,h3,h4,h5,h6,caption,thead,.mcq,.mcqwrap,.sp-rung,s
 var GAP = 12, BREAK = 0.3;
 var ICON_EXPAND = '<svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 4h9M2 9h6M2 14h9M12 6.5 15 9l-3 2.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>';
 var ICON_SEARCH = '<svg width="17" height="17" viewBox="0 0 17 17" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.7"></circle><path d="m11 11 4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path></svg>';
-var SHORT = {'Presentations': 'Pres', 'Musculoskeletal': 'MSK', 'Pediatrics': 'Peds', 'Cardiovascular': 'CV', 'Pulmonary': 'Pulm',
-  'GI & Hepatology': 'GI', 'Renal & GU': 'Renal', 'Endocrine & Bone': 'Endo', 'Hematology': 'Heme', 'Infectious Disease': 'ID',
-  'Neuro & HEENT': 'Neuro', 'Neurology': 'Neuro', 'Dermatology & Wounds': 'Derm', 'Dermatology': 'Derm', 'OB / GYN': 'OB',
-  'Obstetrics & Gynecology': 'OB', 'Preventive & Ethics': 'Prev', 'Psychiatry & Behavioral Health': 'Psych',
-  'Psychiatry': 'Psych', 'Psych Pharmacology': 'Pharm'};
+var MONO = {'Presentations': 'Pr', 'Musculoskeletal': 'MS', 'Pediatrics': 'Pe', 'Cardiovascular': 'CV', 'Pulmonary': 'Pu',
+  'GI & Hepatology': 'GI', 'Renal & GU': 'GU', 'Endocrine & Bone': 'En', 'Hematology': 'He', 'Infectious Disease': 'ID',
+  'Neuro & HEENT': 'Ne', 'Neurology': 'Ne', 'Dermatology & Wounds': 'De', 'Dermatology': 'De', 'OB / GYN': 'OB',
+  'Obstetrics & Gynecology': 'OB', 'Preventive & Ethics': 'Pv', 'Psychiatry & Behavioral Health': 'Ps',
+  'Psychiatry': 'Ps', 'Psych Pharmacology': 'Rx'};
+var ICON_CFG = '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4.5h7M12 4.5h2M2 11.5h2M7 11.5h7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path><circle cx="10.5" cy="4.5" r="1.8" fill="none" stroke="currentColor" stroke-width="1.6"></circle><circle cx="5.5" cy="11.5" r="1.8" fill="none" stroke="currentColor" stroke-width="1.6"></circle></svg>';
 
 function el(tag, cls, html){ var e = document.createElement(tag); if(cls) e.className = cls; if(html != null) e.innerHTML = html; return e; }
 function txt(n){ return (n && n.textContent || '').replace(/\s+/g, ' ').trim(); }
@@ -248,7 +249,8 @@ function seatPage(p){ jump(window.scrollY + p.getBoundingClientRect().top - (bar
 /* the step at the top of the page in view: the sidebar's step rail marks it */
 function mark(){
   if(!S || !S.pages.length) return;
-  var p = S.pages[pageInView()], u = p && p.querySelector('.ax2-u'), id = null;
+  var at = pageInView(), p = S.pages[at], u = p && p.querySelector('.ax2-u'), id = null;
+  if(rail) rail.style.setProperty('--ax2-at', ((at + 1) / S.pages.length * 100) + '%');
   for(var x = u; x && !id; x = x.nextElementSibling) if(x.classList.contains('ax2-u')) id = x.dataset.hid || null;
   if(id !== lastStep){ lastStep = id; AX.emit('layout:step', id); }
 }
@@ -282,20 +284,24 @@ function makeRail(){
     if(b.classList.contains('ex')) expand(true);
     else if(b.classList.contains('sr')) over();
     else if(b.classList.contains('sec')) openFly(b);
+    else if(b.classList.contains('cfg')){ e.stopPropagation(); closeFly(); root.classList.add('ax2-over'); AX.emit('settings:set', true); }   // the sheet lives in the sidebar, so the sidebar opens over the page
   });
   drawRail();
 }
 function drawRail(){
   if(!rail) return;
-  rail.innerHTML = '<button type="button" class="ex tool" aria-label="Expand sidebar" data-tip="Expand sidebar">' + ICON_EXPAND + '</button>' +
+  rail.innerHTML = '<span class="mk" aria-hidden="true">S2</span><button type="button" class="ex tool" aria-label="Expand sidebar" data-tip="Expand sidebar">' + ICON_EXPAND + '</button>' +
                    '<button type="button" class="sr" aria-label="Search" data-tip="Search">' + ICON_SEARCH + '</button><span class="hr" aria-hidden="true"></span>';
   secs.forEach(function(sc, i){
     var b = el('button', 'sec'); b.type = 'button'; b.dataset.i = i;
-    b.textContent = SHORT[sc.name] || sc.name.split(/[\s&\/]+/)[0].slice(0, 5);
+    b.textContent = MONO[sc.name] || sc.name.replace(/[^A-Za-z]/g, '').slice(0, 2);
     b.setAttribute('data-tip', sc.name + (sc.count ? '  ·  ' + sc.count : ''));
     b.setAttribute('aria-label', sc.name); b.setAttribute('aria-haspopup', 'dialog'); b.setAttribute('aria-expanded', 'false');
     rail.appendChild(b);
   });
+  rail.appendChild(el('span', 'sp'));
+  var cfg = el('button', 'cfg tool', ICON_CFG); cfg.type = 'button'; cfg.setAttribute('aria-label', 'Display settings'); cfg.setAttribute('data-tip', 'Display settings');
+  rail.appendChild(cfg);
   paintRail();
 }
 // the current brief's home section: the first section listing it, Presentations last
