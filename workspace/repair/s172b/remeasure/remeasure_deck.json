@@ -1,0 +1,511 @@
+{
+ "page": "/home/claude/Step2Haki/workspace/index.html",
+ "surface": "deck",
+ "size": "1512x945",
+ "f5": {
+  "tiles": 16,
+  "home": [],
+  "cur": "chf"
+ },
+ "f7": {
+  "scrolling": "block",
+  "twopane": "none",
+  "surface": "deck"
+ },
+ "i1": [
+  {
+   "id": "chf",
+   "to": "psych",
+   "sidebarOpen": false,
+   "before": {
+    "cur": "chf",
+    "shelf": "step2"
+   },
+   "after": {
+    "shelf": "psych",
+    "cur": "chf",
+    "curShown": false,
+    "briefsOnScreen": 0,
+    "mainH": 48,
+    "hash": "",
+    "railHome": [],
+    "sideRowsShown": 52,
+    "sideRowsHiddenBrief": 0
+   },
+   "errs": 0
+  },
+  {
+   "id": "chf",
+   "to": "psych",
+   "sidebarOpen": true,
+   "before": {
+    "cur": "chf",
+    "shelf": "step2"
+   },
+   "after": {
+    "shelf": "psych",
+    "cur": "chf",
+    "curShown": false,
+    "briefsOnScreen": 0,
+    "mainH": 48,
+    "hash": "",
+    "railHome": [],
+    "sideRowsShown": 52,
+    "sideRowsHiddenBrief": 0
+   },
+   "errs": 0
+  },
+  {
+   "id": "mdd",
+   "to": "peds",
+   "sidebarOpen": false,
+   "before": {
+    "cur": "mdd",
+    "shelf": "step2"
+   },
+   "after": {
+    "shelf": "peds",
+    "cur": "mdd",
+    "curShown": false,
+    "briefsOnScreen": 0,
+    "mainH": 48,
+    "hash": "",
+    "railHome": [],
+    "sideRowsShown": 113,
+    "sideRowsHiddenBrief": 0
+   },
+   "errs": 0
+  },
+  {
+   "id": "mdd",
+   "to": "peds",
+   "sidebarOpen": true,
+   "before": {
+    "cur": "mdd",
+    "shelf": "step2"
+   },
+   "after": {
+    "shelf": "peds",
+    "cur": "mdd",
+    "curShown": false,
+    "briefsOnScreen": 0,
+    "mainH": 48,
+    "hash": "",
+    "railHome": [],
+    "sideRowsShown": 113,
+    "sideRowsHiddenBrief": 0
+   },
+   "errs": 0
+  }
+ ],
+ "i2": [
+  {
+   "id": "chf",
+   "steps": [
+    {
+     "name": "start",
+     "ok": true,
+     "startN": 0,
+     "sample": null
+    },
+    {
+     "name": "answer",
+     "ok": true,
+     "startN": 13,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "reveal-toggle-1",
+     "ok": true,
+     "startN": 0,
+     "sample": null
+    },
+    {
+     "name": "reveal-toggle-2",
+     "ok": true,
+     "startN": 13,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "reveal-all",
+     "ok": true,
+     "startN": 13,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "next",
+     "ok": true,
+     "startN": 13,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "filter-chip",
+     "ok": false,
+     "startN": 13,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "view-list",
+     "ok": true,
+     "startN": 150,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "view-review",
+     "ok": true,
+     "startN": 134,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "relayout",
+     "ok": true,
+     "startN": 0,
+     "sample": null
+    }
+   ],
+   "views": [
+    "stack*",
+    "quiz",
+    "review"
+   ],
+   "errs": 0
+  },
+  {
+   "id": "mdd",
+   "steps": [
+    {
+     "name": "start",
+     "ok": true,
+     "startN": 0,
+     "sample": null
+    },
+    {
+     "name": "answer",
+     "ok": true,
+     "startN": 8,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "reveal-toggle-1",
+     "ok": true,
+     "startN": 0,
+     "sample": null
+    },
+    {
+     "name": "reveal-toggle-2",
+     "ok": true,
+     "startN": 8,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "reveal-all",
+     "ok": true,
+     "startN": 8,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "next",
+     "ok": true,
+     "startN": 8,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "filter-chip",
+     "ok": true,
+     "startN": 8,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "view-list",
+     "ok": true,
+     "startN": 56,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "view-review",
+     "ok": true,
+     "startN": 38,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "relayout",
+     "ok": true,
+     "startN": 0,
+     "sample": null
+    }
+   ],
+   "views": [
+    "stack*",
+    "quiz",
+    "review"
+   ],
+   "errs": 0
+  },
+  {
+   "id": "hpv",
+   "steps": [
+    {
+     "name": "start",
+     "ok": true,
+     "startN": 22,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "answer",
+     "ok": true,
+     "startN": 25,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "reveal-toggle-1",
+     "ok": true,
+     "startN": 22,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "reveal-toggle-2",
+     "ok": true,
+     "startN": 25,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "reveal-all",
+     "ok": true,
+     "startN": 25,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "next",
+     "ok": true,
+     "startN": 25,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "filter-chip",
+     "ok": true,
+     "startN": 25,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "view-list",
+     "ok": true,
+     "startN": 197,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "view-review",
+     "ok": true,
+     "startN": 93,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "relayout",
+     "ok": true,
+     "startN": 22,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    }
+   ],
+   "views": [
+    "stack*",
+    "quiz",
+    "review"
+   ],
+   "errs": 0
+  },
+  {
+   "id": "dementia",
+   "steps": [
+    {
+     "name": "start",
+     "ok": true,
+     "startN": 0,
+     "sample": null
+    },
+    {
+     "name": "answer",
+     "ok": true,
+     "startN": 49,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "reveal-toggle-1",
+     "ok": true,
+     "startN": 0,
+     "sample": null
+    },
+    {
+     "name": "reveal-toggle-2",
+     "ok": true,
+     "startN": 49,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "reveal-all",
+     "ok": true,
+     "startN": 49,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "next",
+     "ok": true,
+     "startN": 48,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "filter-chip",
+     "ok": true,
+     "startN": 49,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "view-list",
+     "ok": true,
+     "startN": 163,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "view-review",
+     "ok": true,
+     "startN": 139,
+     "sample": [
+      "unit",
+      1520,
+      661
+     ]
+    },
+    {
+     "name": "relayout",
+     "ok": true,
+     "startN": 0,
+     "sample": null
+    }
+   ],
+   "views": [
+    "stack*",
+    "quiz",
+    "review"
+   ],
+   "errs": 0
+  }
+ ]
+}
