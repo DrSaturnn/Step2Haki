@@ -33,7 +33,8 @@
   function init(){
     AX.brief.each('bank-stack', function(b){ Array.prototype.forEach.call(b.querySelectorAll('.bankwrap'), function(bw){ toolbar(bw); show(bw, 0); }); });
   }
-  // bank:change goes out after every action inside a bank, once the bank has redrawn, so a layout can measure it again
+  // bank:change goes out after a button or arrow-key action inside a bank, once the bank has redrawn, so a layout can
+  // measure it again; a click on the text of a card (a selection) is no action
   function changed(bw){ setTimeout(function(){ AX.emit('bank:change', bw); }, 0); }
   document.addEventListener('click', function(e){
     var t = e.target; if(!t || !t.closest) return;
@@ -42,7 +43,7 @@
     if(nb){ var d = parseInt(nb.getAttribute('data-sk'), 10); show(bw, (bw._sk || 0) + d, d); }
     else if(t.closest('.bkfilter') || t.closest('.bkmode')) setTimeout(function(){ show(bw, 0); }, 0);
     else if(t.closest('.mcq')) setTimeout(function(){ show(bw, bw._sk || 0); }, 0);
-    changed(bw);
+    if(t.closest('button')) changed(bw);
   });
   document.addEventListener('keydown', function(e){
     if(e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;

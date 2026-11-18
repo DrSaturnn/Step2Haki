@@ -26,4 +26,5 @@ html[data-layout="two"] body .ax2-cols .ax2-open-b{border-bottom-left-radius:0;b
 html[data-layout="two"] body .ax2-cols .ax2-open-t{border-top-left-radius:0;border-top-right-radius:0}
 html[data-layout="two"] body .brief.ax2-cur > .ax2-flow + .bb-end{margin-top:20px}
 html[data-layout="two"] .ax2-cols .bkmode:not([data-v="stack"]){display:none}
+html[data-layout="two"] .ax2-cols dl.rows:not(.rows-short,.mnem){grid-template-columns:fit-content(40%) minmax(0,1fr)}
 }

@@ -36,14 +36,14 @@ html[data-layout="two"] #ax2tip:not([hidden]){display:block}
 #ax2rail button{all:unset;box-sizing:border-box;position:relative;display:grid;place-items:center;flex:none;width:44px;height:36px;border-radius:12px;cursor:pointer;font:700 13px/1 var(--sans);color:var(--axn-ink);transition:background .3s var(--spr),color .3s var(--spr)}
 #ax2rail button:hover{background:var(--axn-hov)}
 #ax2rail button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
-#ax2rail .tool{width:36px;height:34px;border-radius:11px;background:var(--axn-fld)}
-#ax2rail .sr{width:36px;height:34px;border-radius:11px}
+#ax2rail :is(.tool,.sr,.sec,.mk){width:36px;height:34px;border-radius:11px}
+#ax2rail .tool{background:var(--axn-fld)}
 #ax2rail .hr{flex:none;width:28px;height:1px;margin:4px 0;background:var(--hair)}
-#ax2rail .mk{width:36px;height:36px;margin-bottom:4px;font-size:14px}
-#ax2rail .sp{flex:1 1 0;min-height:4px}
+#ax2rail .mk{height:36px;margin-bottom:4px;font-size:14px}
+#ax2rail .sp{flex:1;min-height:4px}
 #ax2rail .cfg{border-radius:999px}
-#ax2rail .sec{width:36px;height:36px;border-radius:11px;background:var(--axn-tile);box-shadow:0 1px 2px rgba(0,0,0,.07),inset 0 0 0 1px rgba(24,28,30,.08);font:700 12.5px/1 var(--sans);letter-spacing:.2px;color:var(--axn-ink)}
-#ax2rail .sec:hover,#ax2rail .sec.open{background:var(--axn-lens);box-shadow:0 1px 3px rgba(0,0,0,.10),inset 0 0 0 1px rgba(var(--acc-rgb),.35)}
+#ax2rail .sec{flex-shrink:1;height:36px;min-height:24px;background:var(--axn-tile);box-shadow:0 1px 2px rgba(0,0,0,.07),inset 0 0 0 1px rgba(24,28,30,.08);font:700 12.5px/1 var(--sans);letter-spacing:.2px;color:var(--axn-ink)}
+#ax2rail .sec:is(:hover,.open){background:var(--axn-lens);box-shadow:0 1px 3px rgba(0,0,0,.10),inset 0 0 0 1px rgba(var(--acc-rgb),.35)}
 #ax2rail .sec.home{background:var(--axn-lens);color:var(--accent);box-shadow:inset 0 0 0 1.5px rgba(var(--acc-rgb),.55),0 4px 16px rgba(var(--acc-rgb),.24)}
 #ax2rail .sec.home::before{content:"";position:absolute;left:-8px;top:0;bottom:0;width:4px;border-radius:4px;background:linear-gradient(var(--accent) 0 var(--ax2-at,0%),var(--axn-trk) var(--ax2-at,0%) 100%)}
 #ax2fly{position:fixed;left:92px;z-index:96;width:300px;max-height:calc(100vh - 32px);flex-direction:column;border-radius:18px;background:var(--t-axdisp-bg);-webkit-backdrop-filter:blur(40px) saturate(190%);backdrop-filter:blur(40px) saturate(190%);box-shadow:var(--t-axdisp-sh);color:var(--axn-ink);overflow:hidden}
@@ -57,8 +57,7 @@ html[data-layout="two"] #ax2tip:not([hidden]){display:block}
 #ax2fly .fi:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
 #ax2tip{position:fixed;left:92px;z-index:96;padding:7px 11px;border-radius:9px;white-space:nowrap;background:var(--ink);color:var(--card);font:600 12.5px/1 var(--sans);box-shadow:var(--e2);pointer-events:none;transform:translateY(-50%)}
 html[data-layout="two"].ax2-nav #nav{width:198px}
-html[data-layout="two"].ax2-nav .ax2-cols{column-gap:28px}
-html[data-layout="two"].ax2-nav .ax2-col{column-gap:28px}
+html[data-layout="two"].ax2-nav :is(.ax2-cols,.ax2-col){column-gap:28px}
 html[data-layout="two"].ax2-nav main{margin-left:calc(var(--ax2-left) - 12px)}
 html[data-layout="two"].ax2-nav #nav.axn .axn-head{padding:14px 12px 10px;gap:8px}
 html[data-layout="two"].ax2-nav #nav.axn .axn-head > div:nth-child(2){display:none}
@@ -70,12 +69,11 @@ html[data-layout="two"].ax2-nav #nav.axn .axn-shelfrow .ic{width:28px;height:28p
 html[data-layout="two"].ax2-nav #nav.axn .axn-shelfrow .v{font-size:14px}
 html[data-layout="two"].ax2-nav #nav.axn #navscroll{padding:4px 6px 18px}
 html[data-layout="two"].ax2-nav #axn .axn-sys{height:30px;padding:0 8px;gap:6px}
-html[data-layout="two"].ax2-nav #axn .axn-sys .nm{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+html[data-layout="two"].ax2-nav #axn :is(.axn-sys .nm,a.axn-s .l){font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 html[data-layout="two"].ax2-nav #axn a.axn-b{padding:5px 8px 5px 12px;font-size:13px;line-height:17px;min-height:30px}
 html[data-layout="two"].ax2-nav #axn a.axn-b[data-also]::before{left:3px}
 html[data-layout="two"].ax2-nav #axn .axn-rail{padding:4px 0 6px 10px;gap:6px}
 html[data-layout="two"].ax2-nav #axn a.axn-s{padding:0 8px;grid-template-columns:16px minmax(0,1fr) auto}
-html[data-layout="two"].ax2-nav #axn a.axn-s .l{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 }
 #nav .axn-col{display:none}
 #nav.axn .axn-col{align-items:center;justify-content:center;width:34px;height:34px;padding:0;margin:0;border:0;border-radius:999px;background:var(--axn-fld);color:var(--axn-ink);cursor:pointer;flex:none}
@@ -84,7 +82,5 @@ html[data-layout="two"].ax2-nav #axn a.axn-s .l{font-size:13px;white-space:nowra
 html[data-layout="two"] #nav,html[data-layout="two"]:not(.ax2-nav):not(.ax2-over) #nav{transition:opacity .2s var(--spr),visibility 0s}
 }
 @media (--desktop) and (max-height:899px){
-#ax2rail :is(.sec,.tool,.sr,.mk){width:32px}
-#ax2rail :is(.sec,.mk){height:32px}
-#ax2rail :is(.tool,.sr){height:32px}
+#ax2rail :is(.sec,.tool,.sr,.mk){width:32px;height:32px}
 }

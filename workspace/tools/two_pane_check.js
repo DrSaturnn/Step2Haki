@@ -5,7 +5,10 @@
 // Cases at each size: the first switch marks the rail; a shelf that hides the open brief opens the shelf's first brief
 // (sidebar closed and open); answer, Reveal, Reveal all, Next and a filter chip in Stack leave no part past its
 // column's right edge; Two-pane shows the Stack view alone and keeps a saved List view for Scrolling; over every ninth
-// brief, rail and sidebar open: no part past a column's edge, no ladder step cut, and the pages, labels and held columns.
+// brief, rail and sidebar open: no part past a column's edge, no ladder step cut, no term list with its text column
+// squeezed, and the pages, labels and held columns. An answer keeps its card on screen and keyboard focus on the option;
+// selecting text in a card lays nothing out again. The rail fits the window with Display settings in view, and the
+// sheet it opens closes with Escape, sidebar included, focus back on the tile.
 // The brief chrome (.bb-bar, .bb-rail, .bb-end) is left out: it carries the current step and the next brief.
 //   node tools/two_pane_check.js PAGE [WIDTHxHEIGHT ...]     (default 1512x945)   -> TWO-PANE PASS | TWO-PANE FAIL, exit 1
 'use strict';
@@ -62,6 +65,9 @@ if (!page) { console.log('usage: node tools/two_pane_check.js PAGE [WxH ...]'); 
         if (q.width && q.left >= R - 1 && hits.length < 3) hits.push(x.tagName.toLowerCase() + (typeof x.className === 'string' && x.className ? '.' + x.className.split(' ')[0] : '') + ' at x ' + Math.round(q.left)); }))); });
     return hits; });
   const railHome = p => p.evaluate(() => document.querySelectorAll('#ax2rail .sec.home').length);
+  // term lists (dl.rows) of the open brief whose text column is under 110 px wide
+  const squeezed = p => p.evaluate(() => [...document.querySelectorAll('.brief.ax2-cur .ax2-cols dl.rows')].filter(d => getComputedStyle(d).display === 'grid' &&
+    [...d.querySelectorAll(':scope > dd')].some(x => x.getBoundingClientRect().width < 110 && x.textContent.trim().length > 20)).length);
   const cases = async (Wd, Ht) => {
     const bad = [], errs = [];
     // the first switch to Two-pane marks the open brief's section on the rail
@@ -99,6 +105,32 @@ if (!page) { console.log('usage: node tools/two_pane_check.js PAGE [WxH ...]'); 
       }
       errs.push(...p.errs); await p.close();
     }
+    // an answer made between two pages keeps its card on screen and focus on the option; a selection is no action
+    { const p = await open(Wd, Ht, 'chf'); await toTwo(p);
+      await p.evaluate(() => { const pg = document.querySelector('.brief.ax2-cur .mcq.sk-cur').closest('.ax2-page'); window.scrollTo({ top: scrollY + pg.getBoundingClientRect().top - innerHeight * 0.45, behavior: 'instant' }); });
+      await p.waitForTimeout(300);
+      await p.locator('.brief.ax2-cur .mcq.sk-cur .opts button').first().click(); await p.waitForTimeout(700);
+      const a = await p.evaluate(() => { const q = document.querySelector('.brief.ax2-cur .mcq.sk-cur'), r = q.getBoundingClientRect(), f = document.activeElement;
+        return { top: Math.round(r.top), vh: innerHeight, focus: q.contains(f) && f.matches('.opts button') }; });
+      if (a.top < 0 || a.top > a.vh - 80) bad.push(`answer between pages: the card sits at y ${a.top} of ${a.vh}`);
+      if (!a.focus) bad.push('answer: keyboard focus left the option');
+      await p.evaluate(() => { window.__pg = document.querySelector('.brief.ax2-cur .ax2-page'); });
+      await p.locator('.brief.ax2-cur .mcq.sk-cur .stem').first().click({ clickCount: 3, position: { x: 40, y: 10 } }); await p.waitForTimeout(600);
+      const t = await p.evaluate(() => ({ same: window.__pg.isConnected, sel: String(getSelection()).trim().length }));
+      if (!t.same || !t.sel) bad.push(`selection in a card: ${t.same ? '' : 'pages laid out again'}${t.sel ? '' : ' selection lost'}`);
+      errs.push(...p.errs); await p.close(); }
+    // the rail fits the window with Display settings in view; the sheet it opens closes with Escape, sidebar and all
+    { const p = await open(Wd, Ht, 'chf'); await toTwo(p);
+      const f = await p.evaluate(() => { const R = document.getElementById('ax2rail'), c = R.querySelector('.cfg');
+        return { fits: R.scrollHeight <= R.clientHeight + 1, cfg: !!c && c.getBoundingClientRect().bottom <= R.getBoundingClientRect().bottom + 1 }; });
+      if (!f.fits || !f.cfg) bad.push(`rail: ${f.fits ? '' : 'scrolls'}${f.cfg ? '' : ' Display settings out of view'}`);
+      await p.locator('#ax2rail .cfg').click(); await p.waitForTimeout(700);
+      const o = await p.evaluate(() => document.documentElement.classList.contains('ax2-over') && document.getElementById('axdisp').classList.contains('on'));
+      await p.keyboard.press('Escape'); await p.waitForTimeout(500);
+      const c = await p.evaluate(() => ({ over: document.documentElement.classList.contains('ax2-over'), on: document.getElementById('axdisp').classList.contains('on'), focus: document.activeElement.matches('#ax2rail .cfg') }));
+      if (!o) bad.push('Display settings tile: the sheet did not open');
+      else if (c.over || c.on || !c.focus) bad.push(`Display settings tile after Escape: ${c.on ? 'sheet open ' : ''}${c.over ? 'sidebar still over the page ' : ''}${c.focus ? '' : 'focus not on the tile'}`);
+      errs.push(...p.errs); await p.close(); }
     // question views: Stack alone in Two-pane, all three in Scrolling, a saved List view kept for Scrolling
     { const p = await open(Wd, Ht, 'chf', { bankview: 'list' });
       const views = () => p.evaluate(() => { const B = document.getElementById('chf'), w = B.querySelector('.bankwrap');
@@ -120,8 +152,10 @@ if (!page) { console.log('usage: node tools/two_pane_check.js PAGE [WxH ...]'); 
             cut: [...B.querySelectorAll('.sp-rung')].filter(x => !x.querySelector(':scope > .sp-node')).length }; });
         if (!r || r.id !== id) { bad.push(`sample ${id}: not shown`); continue; }
         tot.pages += r.pages; tot.labels += r.labels; tot.held += r.held;
-        const h = await past(p); if (h.length) bad.push(`sample ${id}${nav ? ' (sidebar open)' : ''}: ${h[0]}`);
+        let h = await past(p); if (h.length) { await p.waitForTimeout(700); h = await past(p); }   // a slow page lays out once more
+        if (h.length) bad.push(`sample ${id}${nav ? ' (sidebar open)' : ''}: ${h[0]}`);
         if (r.cut) bad.push(`sample ${id}${nav ? ' (sidebar open)' : ''}: ${r.cut} ladder steps cut`);
+        const sq = await squeezed(p); if (sq) bad.push(`sample ${id}${nav ? ' (sidebar open)' : ''}: ${sq} term lists with the text column squeezed`);
       }
       console.log(`  sample ${Wd}x${Ht} ${nav ? 'sidebar open' : 'rail'}: ${ids.length} briefs, ${tot.pages} pages, ${tot.labels} labels, ${tot.held} held`);
       errs.push(...p.errs); await p.close();
