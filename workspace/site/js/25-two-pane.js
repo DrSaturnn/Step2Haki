@@ -8,7 +8,8 @@
    Settings: layout ('scroll' or 'two'), twonav ('1' while the sidebar is kept expanded).
    Events: emits nav:ask, nav:search, layout:step; listens to nav:sections, nav:collapse, layout:hold (true while the quiz
    is open: the page returns to Scrolling underneath it and the sidebar stays in view; false lays the brief out again),
-   shelf:set (a shelf that hides the open brief opens the shelf's first brief). */
+   shelf:set (a shelf that hides the open brief opens the shelf's first brief), bank:change (lays the pages out again).
+   Practice questions show as Stack only; List and Review stay for Scrolling. */
 return (function(){
 'use strict';
 var WIDE = window.matchMedia('(min-width:1101px)');
@@ -49,9 +50,21 @@ function fromHash(){
 
 /* ---------- units: the brief's steps (a heading and what follows it), blocks that stand alone, and the practice set ---------- */
 function unit(name, cls){ var u = el('section', 'ax2-u' + (cls ? ' ' + cls : '')); u.dataset.name = name || ''; return u; }
+// Two-pane shows practice questions as Stack only; the bank's own view comes back in Scrolling
+function stackOnly(on){
+  each(B.querySelectorAll('.bankwrap'), function(bw){
+    var v = 'stack';
+    if(on){ bw.dataset.ax2v = bw.classList.contains('review') ? 'review' : bw.classList.contains('stack') ? 'stack' : 'quiz'; }
+    else if(bw.dataset.ax2v){ v = bw.dataset.ax2v; delete bw.dataset.ax2v; }
+    else return;
+    bw.classList.toggle('review', v === 'review'); bw.classList.toggle('stack', v === 'stack');
+    each(bw.querySelectorAll('.bkmode'), function(m){ m.classList.toggle('on', m.dataset.v === v); });
+  });
+}
 function build(){
   if(S || !B) return;
   AX.brief.ensure(B);
+  stackOnly(true);
   var nodes = Array.prototype.slice.call(B.childNodes), kids = Array.prototype.slice.call(B.children), units = [], end = [], cur = null, prac = null, started = false;
   kids.forEach(function(c){
     if(!started && c.matches(HEAD)) return;
@@ -79,6 +92,7 @@ function unbuild(){
   var endCap = B.querySelector(':scope > .bb-end'); if(endCap) B.appendChild(endCap);   // an end cap drawn after the layout began stays last
   S.flow.remove(); S = null;
   B.classList.remove('ax2-cur');
+  stackOnly(false);
   root.removeAttribute('data-layout'); root.classList.remove('ax2-nav', 'ax2-over');
   closeFly(); lastStep = null;
 }
@@ -357,6 +371,7 @@ function show(b){
 offs.push(AX.on('nav:sections', function(list){ secs = list || []; drawRail(); }));
 offs.push(AX.on('nav:collapse', function(){ expand(false); }));
 offs.push(AX.on('layout:hold', function(v){ held = !!v; if(held){ if(S) unbuild(); } else if(on()) apply(); }));
+offs.push(AX.on('bank:change', function(bw){ if(S && bw && S.flow.contains(bw)) relay(); }));
 offs.push(AX.on('shelf:set', function(){
   if(!S || B.style.display !== 'none') return;
   var first = Array.prototype.filter.call(document.querySelectorAll('main .wrap > .brief'), function(b){ return b.style.display !== 'none'; })[0];
