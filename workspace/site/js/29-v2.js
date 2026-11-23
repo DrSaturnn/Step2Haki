@@ -1,6 +1,7 @@
-/* Briefs drawn in format v2 (class v2, tools/render_v2.py): drawers, hover reasons, brief links, the phone step strip
-   and the practice view switch. The practice questions are the live bank (01-transform mcq, 08-bank-stack): the
-   switch above them presses the bank's own view buttons, so answers, progress and review stay the bank's. */
+/* Briefs drawn in format v2 (class v2, tools/render_v2.py): drawers, hover reasons, brief links, the phone step strip,
+   the practice view switch, and Recall's waits and section Resets. The practice questions are the live bank
+   (01-transform mcq, 08-bank-stack): the switch above them presses the bank's own view buttons, so answers, progress
+   and review stay the bank's. */
 (function(){
   function v2(el){ return el && el.closest && el.closest('.brief.v2'); }
   function scroller(el){
@@ -66,7 +67,70 @@
     });
   }
 
-  function built(b){ if(!b.classList.contains('v2')) return; drawers(b); strip(b); practice(b); }
+  // Recall: an item drawn as waiting on a mask (.rw[data-wait]) stays blurred and inert until that mask is revealed; a tap
+  // on it pulses the mask it waits on. A section with a revealed mask shows its Reset, which masks the section again.
+  var RESET = '<svg viewBox="0 0 20 20" width="17" height="17" aria-hidden="true"><path d="M4.6 8.2A6 6 0 1 1 4.4 12" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><path d="M4.3 3.9v4.6h4.6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  function study(){ return document.body.classList.contains('study'); }
+  function keyed(b, k){ return b.querySelector('.mask[data-mk="' + k + '"]'); }
+  function shown(m){ return !!m && m.dataset.revealed === '1'; }
+  function waits(b){
+    var s = study();
+    Array.prototype.forEach.call(b.querySelectorAll('.rw[data-wait]'), function(w){
+      var on = s && !shown(keyed(b, w.dataset.wait));
+      if(w.classList.contains('wt') !== on) w.classList.toggle('wt', on);
+      if(w.inert !== on) w.inert = on;
+      if(on) w.setAttribute('aria-hidden', 'true'); else w.removeAttribute('aria-hidden');
+    });
+    Array.prototype.forEach.call(b.querySelectorAll('.blk > .rcr'), function(r){
+      var k = r.parentNode, on = s && !!k.querySelector('.mask[data-revealed="1"]');
+      if(k.classList.contains('rvd') !== on) k.classList.toggle('rvd', on);
+      r.tabIndex = on ? 0 : -1;
+    });
+  }
+  function resets(b){
+    Array.prototype.forEach.call(b.querySelectorAll('.blk'), function(k){
+      var h = k.querySelector(':scope > h2.st');
+      if(!h || !k.querySelector('.mask') || k.querySelector(':scope > .rcr')) return;
+      var r = document.createElement('button'); r.type = 'button'; r.className = 'rcr'; r.tabIndex = -1;
+      r.setAttribute('aria-label', 'Reset ' + h.textContent.trim()); r.innerHTML = RESET;
+      h.tabIndex = -1; h.insertAdjacentElement('afterend', r);
+    });
+  }
+  function recall(b){
+    resets(b); waits(b);
+    var q = false;
+    new MutationObserver(function(){ if(q) return; q = true; requestAnimationFrame(function(){ q = false; waits(b); }); })
+      .observe(b, {subtree: true, attributes: true, attributeFilter: ['data-revealed']});
+  }
+  function pulse(m){
+    if(!m) return;
+    m.classList.remove('pz'); void m.offsetWidth; m.classList.add('pz');
+    clearTimeout(m._pz); m._pz = setTimeout(function(){ m.classList.remove('pz'); }, 700);
+  }
+  // a waiting item is inert, so a tap on it lands on the element around it: find the wait under the pointer
+  function under(t, e){
+    var w = t.closest('.rw.wt'); if(w) return w;
+    return Array.prototype.filter.call(t.querySelectorAll('.rw.wt'), function(x){
+      return Array.prototype.some.call(x.getClientRects(), function(r){ return e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom; });
+    })[0] || null;
+  }
+  new MutationObserver(function(){ Array.prototype.forEach.call(document.querySelectorAll('.brief.v2'), function(b){ if(b.querySelector('.v2r')) waits(b); }); })
+    .observe(document.body, {attributes: true, attributeFilter: ['class']});
+  document.addEventListener('click', function(e){
+    var t = e.target; if(!t || !t.closest || !study()) return;
+    var b = v2(t); if(!b) return;
+    var r = t.closest('.rcr');
+    if(r){
+      var k = r.parentNode;
+      Array.prototype.forEach.call(k.querySelectorAll('.mask'), function(m){ m.dataset.revealed = '0'; });
+      AX.emit('masks:sync', k); waits(b);
+      k.querySelector(':scope > h2.st').focus();
+      return;
+    }
+    var w = under(t, e); if(w) pulse(keyed(b, w.dataset.wait));
+  });
+
+  function built(b){ if(!b.classList.contains('v2')) return; drawers(b); strip(b); practice(b); recall(b); }
 
   document.addEventListener('click', function(e){
     var t = e.target; if(!t || !t.closest) return;

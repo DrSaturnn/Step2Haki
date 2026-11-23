@@ -144,6 +144,12 @@
     return el && el.closest ? el.closest('main .brief') : null;
   }
   function panels(b){ return b ? Array.prototype.slice.call(b.querySelectorAll('details')) : []; }
+  /* a v2 brief in Recall: its masks, which the all button reveals or hides together from any mix; otherwise null */
+  function recallMasks(b){
+    if(!b || !b.classList.contains('v2') || !document.body.classList.contains('study')) return null;
+    var ms = Array.prototype.slice.call(b.querySelectorAll('.mask[data-disclosure]'));
+    return ms.length ? ms : null;
+  }
   function paintBar(){
     raf = 0; if(!bar || !WIDE.matches) return;
     var b = currentBrief(), n = '', label = '', practice = false;
@@ -161,10 +167,11 @@
     cl.textContent = label || 'Step2Haki';
     var bn = bar.querySelector('.axbn'), hh = b ? b.querySelector('h4') : null, nm = hh ? hh.textContent.trim() : '';   
     bn.textContent = nm; bn.title = nm; bn.hidden = !nm || nm === label;
-    var ps = panels(b), all = bar.querySelector('.axall');
-    all.hidden = !ps.length;
-    var seps = bar.querySelectorAll('.axsep'); if(seps[1]) seps[1].hidden = !ps.length;
-    all.textContent = ps.length && ps.every(function(d){ return d.open; }) ? 'Collapse all' : 'Expand all';
+    var ps = panels(b), all = bar.querySelector('.axall'), ms = recallMasks(b);
+    all.hidden = !ps.length && !ms;
+    var seps = bar.querySelectorAll('.axsep'); if(seps[1]) seps[1].hidden = all.hidden;
+    if(ms) all.textContent = ms.some(function(m){ return m.dataset.revealed !== '1'; }) ? 'Reveal all' : 'Hide all';
+    else all.textContent = ps.length && ps.every(function(d){ return d.open; }) ? 'Collapse all' : 'Expand all';
     bar.classList.toggle('st', document.body.classList.contains('study'));
     bar.querySelector('[data-m="read"]').setAttribute('aria-pressed', document.body.classList.contains('study') ? 'false' : 'true');
     bar.querySelector('[data-m="study"]').setAttribute('aria-pressed', document.body.classList.contains('study') ? 'true' : 'false');
@@ -194,14 +201,22 @@
           if(s) s.click(); else { document.body.classList.toggle('study', want); AX.settings.set('study', want ? '1' : '0'); }
         }
       } else if(t.classList.contains('axall')){
-        var ps = panels(currentBrief()), open = !ps.every(function(d){ return d.open; });
-        ps.forEach(function(d){ d.open = open; });
+        var cb = currentBrief(), ms = recallMasks(cb);
+        if(ms){
+          var on = ms.some(function(x){ return x.dataset.revealed !== '1'; }) ? '1' : '0';
+          ms.forEach(function(x){ x.dataset.revealed = on; });
+          AX.emit('masks:sync', cb);
+        } else {
+          var ps = panels(cb), open = !ps.every(function(d){ return d.open; });
+          ps.forEach(function(d){ d.open = open; });
+        }
       }
       kick();
     });
     window.addEventListener('scroll', kick, { passive: true });
     window.addEventListener('resize', kick);
     document.addEventListener('toggle', kick, true);
+    document.addEventListener('click', kick, true);     /* a single reveal, rehide or section Reset changes the all button */
     new MutationObserver(kick).observe(document.body, { attributes: true, attributeFilter: ['class'] });
     kick();
   }

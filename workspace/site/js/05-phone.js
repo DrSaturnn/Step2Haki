@@ -26,6 +26,15 @@ function makeHead(){
   steps = head.querySelector('.ph-steps');
   ti = head.querySelector('.ph-ti b'); sub = head.querySelector('.ph-ti span'); rec = head.querySelector('.ph-rec');
   rec.addEventListener('click', function(){
+    var b = shown && shown.el && shown.el.classList.contains('v2') ? shown.el : null;
+    var ms = b ? Array.prototype.slice.call(b.querySelectorAll('.mask[data-disclosure]')) : [];
+    if(b && B.classList.contains('study') && ms.some(function(m){ return m.dataset.revealed !== '1'; })){
+      /* a v2 brief in Recall: reveal every item from any mix; the next tap returns to Read */
+      ms.forEach(function(m){ m.dataset.revealed = '1'; });
+      AX.emit('masks:sync', b);
+      return;
+    }
+    if(b && !B.classList.contains('study')) ms.forEach(function(m){ m.dataset.revealed = '0'; });   /* Recall starts masked */
     B.classList.toggle('study');
     AX.settings.set('study', B.classList.contains('study') ? '1' : '0');
     paintRec();

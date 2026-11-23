@@ -1317,6 +1317,10 @@ function masks(R){ var D=R||document;
     Array.prototype.slice.call(el.childNodes).forEach(function(n){ if(n!==lead) sp.appendChild(n); });
     el.appendChild(sp);
   });
+  maskDisclosures(R);
+}
+/* every .mask under R becomes a disclosure; a v2 brief draws its own masks (tools/render_v2.py) and runs this part only */
+function maskDisclosures(R){ var D=R||document;
   D.querySelectorAll('.mask').forEach(makeMaskDisclosure);
   if(!window.__axMaskClick){
     document.addEventListener('click',function(e){
@@ -1671,11 +1675,12 @@ function figures(R){
     });
   });
 }
+AX.on('masks:sync',function(R){ syncMaskRegions(R); });   /* a control that sets data-revealed elsewhere (29-v2) */
 function transformBrief(b){ columnize(b); mnemonics(b); tables(b); masks(b); mcq(b); accessibilityEnhance(b); unavailableInline(b); xrefs(b); scalepeeks(b); figures(b); }
   function run(){
   switches(); mobileNav(); sections(); columnize(); mnemonics(); tables(); masks(); mcq(); accessibilityEnhance(); unavailableInline(); xrefs(); scalepeeks(); figures(); wire(); shelfInit();
   AX.brief.each('transform',transformBrief);
-  AX.brief.each('transform-v2',function(b){ if(b.classList.contains('v2')) mcq(b); },true);   // a v2 brief: its practice list only
+  AX.brief.each('transform-v2',function(b){ if(b.classList.contains('v2')){ mcq(b); maskDisclosures(b); } },true);   // a v2 brief: its practice list and its own masks
   var AFTER=VERIFY?norm(document.body.innerText):"";
   var addedUI=/STUDY MODE|Recall mode|Surface|Sculpted|REVEAL|From this brief|Distractors are entities/;
   var a=BEFORE.split(' ').filter(Boolean).length;

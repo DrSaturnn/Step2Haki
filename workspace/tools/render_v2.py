@@ -194,14 +194,22 @@ def table(t, caption=True, cls=''):
     cap = sub(t['caption']) if caption and t.get('caption') else ''
     return '%s<table class="c3 tb%s">%s<tbody>%s</tbody></table>' % (cap, cls, head, rows)
 
-def drawer(d, extra='', plain=False):
+def drawer(d, extra='', plain=False, act=False):
+    """act: a follow-up drawer, its actions masked in Recall (times and labels stay visible)"""
+    A_ = (lambda h, **kw: M(h, 'follow-up action', **kw)) if act else (lambda h, **kw: h)
+    def act_text(x):
+        """a follow-up action; in "situation: action" the situation stays visible as the clue"""
+        if isinstance(x, str) and ': ' in x:
+            a_, b_ = x.split(': ', 1)
+            return E(a_ + ': ') + A_(E(b_))
+        return A_(text(x))
     body = [''.join(kv(r) for r in d.get('rows', []))]
     tl = d.get('timeline')
     if tl and any(x.get('why') for x in tl):
         body.append('<ol class="tlv mon">%s</ol>' % ''.join('<li><b>%s</b><span>%s</span>%s</li>' % (
-            E(x['when']), text(x['text']), '<em>%s</em>' % text(x['why']) if x.get('why') else '') for x in tl))
+            E(x['when']), act_text(x['text']), '<em>%s</em>' % text(x['why']) if x.get('why') else '') for x in tl))
     elif tl:
-        body.append('<ol class="tlv">%s</ol>' % ''.join('<li><b>%s</b>%s</li>' % (E(x['when']), text(x['text'])) for x in tl))
+        body.append('<ol class="tlv">%s</ol>' % ''.join('<li><b>%s</b>%s</li>' % (E(x['when']), act_text(x['text'])) for x in tl))
     if d.get('table') and plain:                  # disease layout: a plain table with no caption
         t = d['table']
         body.append('<table><thead><tr>%s</tr></thead><tbody>%s</tbody></table>' % (''.join('<th>%s</th>' % E(h) for h in t['head']),
@@ -211,14 +219,105 @@ def drawer(d, extra='', plain=False):
     for it in d.get('items', []):
         if it.get('avoid') or it.get('why'):
             body.append('<div class="mg"><b>%s</b>%s%s%s</div>' % (
-                text(it['label']), stack(it['text']),
+                text(it['label']), A_(stack(it['text']), bk=True),
                 '<div class="avr"><i>Avoid</i><span>%s</span></div>' % text(it['avoid']) if it.get('avoid') else '',
                 '<em>%s</em>' % text(it['why']) if it.get('why') else ''))
         else:
-            body.append('<div class="ln"><b>%s</b><br>%s</div>' % (text(it['label']), text(it['text'])))
+            body.append('<div class="ln"><b>%s</b><br>%s</div>' % (text(it['label']), A_(text(it['text']))))
     for ln in d.get('lines', []):
-        body.append(line(ln, plain=plain))
+        if act and isinstance(ln, str) and ': ' in ln:
+            body.append('<div class="ln">%s</div>' % act_text(ln))
+        else:
+            body.append(line(ln, plain=plain))
     return '<div class="dz"><button type="button">%s</button><div class="body%s">%s%s</div></div>' % (E(d['title']), ' thr' if d.get('rows') else '', extra, ''.join(body))
+
+# ---------- Recall: masks by slot (record.schema.json x-recall) ----------
+class Recall:
+    """one brief's masks: a key per masked item, the count per slot, the cutoff strings masked in the criteria"""
+    def __init__(self):
+        self.n, self.slots, self.cut = 0, Counter(), []
+RC = Recall()
+plain_of = lambda h: H.unescape(re.sub(r'<[^>]+>', '', h))
+
+def mk(h, slot, n=False, bk=False):
+    """h inside one mask; returns (html, key). bk: the mask holds block content (a line div, stacked lines)"""
+    if not plain_of(h).strip():
+        return h, None
+    RC.n += 1
+    RC.slots[slot] += 1
+    k = 'k%d' % RC.n
+    return '<span class="mask%s%s" data-mk="%s">%s</span>' % (' n' if n else '', ' bk' if bk else '', k, h), k
+
+def M(h, slot, **kw):
+    return mk(h, slot, **kw)[0]
+
+def wt(h, k, bk=False):
+    """h waits on the mask k: blurred in Recall until that mask is revealed"""
+    if not k or not plain_of(h).strip():
+        return h
+    return '<span class="rw%s" data-wait="%s">%s</span>' % (' bk' if bk else '', k, h)
+
+UNIT = (r'mg/dL|mEq/L|mL/kg/hr|mm Hg|g/dL|mg/g|mL/min/1\.73 m²|%|hours?|days?|weeks?|months?|years?|times')
+CUT = re.compile(r'(?<![\w.])(?P<c>(?:[<>≤≥]=?|more than|less than|at least)\s*)?\d+(?:\.\d+)?'
+                 r'(?P<r>\s*(?:to|of|–|-)\s*\d+(?:\.\d+)?)?(?P<u>\s*(?:%s)(?![\w/]))?' % UNIT)
+VOID = {'br', 'img', 'input', 'hr', 'wbr', 'source', 'col', 'meta', 'link'}
+SKIP = re.compile(r'class="[^"]*\b(?:mask|yp|lb)\b|data-k="prac"|^<(?:svg|nav|button|script|style)\b')
+TOK = re.compile(r'<[^>]+>|[^<]+')
+
+def in_text(h, sub_):
+    """apply sub_ to each text stretch of h outside a mask, a hover card, a row label, Practice and the chrome"""
+    out, stack = [], []
+    for m in TOK.finditer(h):
+        t = m.group()
+        if t.startswith('</'):
+            if stack: stack.pop()
+        elif t.startswith('<'):
+            nm = re.match(r'<([a-zA-Z0-9]+)', t)
+            if nm and nm.group(1).lower() not in VOID and not t.endswith('/>'):
+                stack.append(bool(SKIP.search(t)))
+        elif not any(stack):
+            t = sub_(t)
+        out.append(t)
+    return ''.join(out)
+
+def cutoffs(h, slot):
+    """criteria cutoffs, number and unit only, each in a one-line mask; the masked strings repeat-mask the brief"""
+    def one(seg):
+        raw = H.unescape(seg)
+        hits = [x for x in CUT.finditer(raw) if x.group('c') or x.group('r') or x.group('u')]
+        if not hits:
+            return seg
+        out, last = [], 0
+        for x in hits:
+            s = x.group().strip()
+            out.append(E(raw[last:x.start()]))
+            out.append(M(E(s), slot, n=True))
+            out.append(E(raw[x.start() + len(s):x.end()]))
+            last = x.end()
+            if s not in RC.cut:
+                RC.cut.append(s)
+        return ''.join(out) + E(raw[last:])
+    return in_text(h, one)
+
+def repeats(h):
+    """a cutoff masked in the criteria is masked wherever it repeats in the brief, Practice excepted"""
+    if not RC.cut:
+        return h
+    pat = re.compile('(?<![\\w.])(%s)(?![\\w])' % '|'.join(re.escape(s) for s in sorted(RC.cut, key=len, reverse=True)))
+    def one(seg):
+        raw = H.unescape(seg)
+        if not pat.search(raw):
+            return seg
+        out, last = [], 0
+        for x in pat.finditer(raw):
+            out.append(E(raw[last:x.start()]))
+            out.append(M(E(x.group()), 'repeated cutoff', n=True))
+            last = x.end()
+        return ''.join(out) + E(raw[last:])
+    return in_text(h, one)
+
+def no_test(x):
+    return plain_of(text(x) if not isinstance(x, dict) else '').lstrip().startswith('No test')
 
 # ---------- slots ----------
 def script(s, drug=False):
@@ -262,7 +361,7 @@ def score(sc):
     out = ['<table class="wl"><thead><tr><th>%s</th><th>%s</th></tr></thead><tbody>\n%s\n</tbody></table>' % (E(sc['name']), E(sc['points_head']), rows)]
     for t in sc['cutoffs']:
         sub_ = '<em>%s</em>' % arrow.join(text(x) for x in t['sub']) if t.get('sub') else ''
-        out.append('<div class="tot"><b>%s</b><span>%s%s</span></div>' % (E(t['range']), arrow.join(text(x) for x in t['chain']), sub_))
+        out.append('<div class="tot"><b>%s</b><span>%s%s</span></div>' % (cutoffs(E(t['range']), 'cutoff'), arrow.join(text(x) for x in t['chain']), sub_))
     return '\n'.join(out)
 
 def criteria(c, drug=False):
@@ -280,7 +379,7 @@ def criteria(c, drug=False):
             rows.append(h)
         inner = ''.join(rows) + ('' if m.get('under') in [r['k'] for r in c['rows']] else '<div class="ln">%s</div>' % cardh.replace(' style="margin-top:8px"', ''))
         return blk(c['title'], card(inner))
-    inner = (sub(c['label']) if c.get('label') else '') + ''.join(kv(r) for r in c['rows'])
+    inner = (sub(c['label']) if c.get('label') else '') + ''.join(kv(r) if drug else cutoffs(kv(r), 'cutoff') for r in c['rows'])    # a drug panel holds no criteria
     if c.get('mnemonic'):
         m = c['mnemonic']
         inner += drawer({'title': m['title']}, '<div class="mn"%s>%s</div>' % (' id="%s"' % A(m['ref']) if m.get('ref') else '', ''.join('<b>%s</b><span>%s</span>' % (E(x['l']), text(x['text'])) for x in m['letters'])))
@@ -308,22 +407,30 @@ def workup(w, plain=False):
             rows.append('<tr class="grp"><td colspan="3"><b>%s</b>%s</td></tr>' % (E(g['label']), q))
         for r in g['rows']:
             cond = '<span class="cond2"><i>If</i> %s</span>' % text(r['if']) if r.get('if') else ''
+            test, k = mk(text(r['test']), 'workup test')
             if not r['results']:                                  # a test with no result line on the page: empty cells
-                rows.append('<tr><td>%s%s</td><td></td><td></td></tr>' % (text(r['test']), cond)); continue
+                rows.append('<tr><td>%s%s</td><td></td><td></td></tr>' % (test, cond)); continue
+            res = lambda x: (wt(text(x['result']), k), wt(M(text(x['means']), 'workup meaning'), k))   # both wait on the test
             first, rest = r['results'][0], r['results'][1:]
             span = ' rowspan="%d"' % len(r['results']) if rest else ''   # the test cell spans its result rows
-            rows.append('<tr><td%s>%s%s</td><td>%s</td><td>%s</td></tr>' % (span, text(r['test']), cond, text(first['result']), text(first['means'])))
-            rows += ['<tr class="cont rs"><td>%s</td><td>%s</td></tr>' % (text(x['result']), text(x['means'])) for x in rest]
+            rows.append('<tr><td%s>%s%s</td><td>%s</td><td>%s</td></tr>' % ((span, test, cond) + res(first)))
+            rows += ['<tr class="cont rs"><td>%s</td><td>%s</td></tr>' % res(x) for x in rest]
     head = '<thead><tr>%s</tr></thead>' % ''.join('<th>%s</th>' % E(h) for h in w['head'])
-    also = ''.join('<div class="ln"><span class="cond2"><i>If</i> %s</span>%s</div>' % (text(a['if']), '<br>'.join('<b>%s</b>' % text(x) for x in a['tests']))
+    also = ''.join('<div class="ln"><span class="cond2"><i>If</i> %s</span>%s</div>' % (text(a['if']), '<br>'.join('<b>%s</b>' % M(text(x), 'workup test') for x in a['tests']))
                    for a in w.get('also', []))          # tests the source gives no result for
     skip = ('<div class="lad avd"><div>%s</div><div>%s</div></div>' % (E(w['skip']['label']), ''.join('<span>%s</span>' % text(x) for x in w['skip']['lines']))
             if w.get('skip') else '')
     notes = w.get('notes', [])
+    def note(x, **kw):
+        h = line(x, **kw)
+        if not no_test(x):
+            return h
+        a = h.index('>') + 1                       # the line that no test makes the diagnosis: one mask
+        return h[:a] + M(h[a:-len('</div>')], 'workup no-test') + '</div>'
     if plain:
-        notes = ''.join(line(x, plain=True, style='' if (k or also) else 'border-top:0;padding-top:14px') for k, x in enumerate(notes))
+        notes = ''.join(note(x, plain=True, style='' if (k or also) else 'border-top:0;padding-top:14px') for k, x in enumerate(notes))
     else:
-        notes = ''.join(line(x) for x in notes)
+        notes = ''.join(note(x) for x in notes)
     panels = ''.join('<div class="sub gr" style="margin-top:14px"><b>%s</b></div><div class="thr">%s</div>' % (E(p_['label']), ''.join(kv(r) for r in p_['rows']))
                      for p_ in w.get('panels', []))           # a titled panel of labeled rows under the table
     return '<table class="c3">%s<tbody>%s</tbody></table>%s%s%s%s' % (head, ''.join(rows), also, notes, skip, panels)
@@ -334,7 +441,7 @@ def treatment(t, plain=False):
         if s.get('group'):                         # a titled group of rungs, by diagnosis or situation: the bold sub-header
             out.append('<div class="sub lg"><b>%s</b>%s</div>' % (E(s['group']), '<span class="hq">%s</span>' % text(s['group_q']) if s.get('group_q') else ''))
         do = s['do']
-        do = '<div class="it">%s</div>' % (it_text(do) if plain else text(do)) if not isinstance(do, str) else '<b class="act">%s</b>' % E(do)
+        do = M('<div class="it">%s</div>' % (it_text(do) if plain else text(do)), 'treatment action', bk=True) if not isinstance(do, str) else '<b class="act">%s</b>' % M(E(do), 'treatment action')
         out.append('<div class="lad"><div><span class="ck%s">%s</span></div><div><span class="wh">%s</span>%s</div></div>'
                    % ((' g' if s.get('tone') == 'confirm' else '') + (' wr' if len(s['chip']) > 12 else ''), E(s['chip']), text(s['when']), do))   # a long chip wraps in its column
     if t.get('avoid'):
@@ -342,7 +449,7 @@ def treatment(t, plain=False):
         out.append('<div class="lad avd"><div>Avoid</div><div>%s</div></div>' % items)
     out += [drawer(d, plain=plain) for d in t.get('drawers', [])]
     if t.get('followup'):
-        out.append(drawer(t['followup'], plain=plain))
+        out.append(drawer(t['followup'], plain=plain, act=True))
     return ''.join(out)
 
 def answer_changes(ac):
@@ -352,8 +459,9 @@ def answer_changes(ac):
         for r in rows:
             chip = '<b class="ul">Urgent</b>' if r.get('urgent') else ''
             src = ' data-src="%s"' % A(r['src']) if r.get('src') else ''
+            then, k = mk(text(r['then']), 'answer')
             out.append('<div class="wc%s"%s>%s<span><i>If</i> %s</span><b>%s</b>%s</div>'
-                       % (' urg' if chip else '', src, chip, bare(r['if']) if any(x.get('c') == 'fr' for x in (r['if'] if isinstance(r['if'], list) else [])) else text(r['if']), text(r['then']), '<em>%s</em>' % text(r['why']) if r.get('why') else ''))
+                       % (' urg' if chip else '', src, chip, bare(r['if']) if any(x.get('c') == 'fr' for x in (r['if'] if isinstance(r['if'], list) else [])) else text(r['if']), then, '<em>%s</em>' % wt(text(r['why']), k) if r.get('why') else ''))
     return ''.join(out)
 
 def dx_name(x):
@@ -372,7 +480,7 @@ def dxtable(d, zebra=False):
         for r in g['rows']:
             z = ' class="z"' if zebra and n % 2 == 0 else ''
             name = dx_name(r['dx']) if zebra else text(r['dx'])
-            rows.append('<tr%s><td>%s</td><td>%s</td><td>%s</td></tr>' % (z, name, text(r['features']), text(r['decides'])))
+            rows.append('<tr%s><td>%s</td><td>%s</td><td>%s</td></tr>' % (z, name, text(r['features']), M(text(r['decides']), 'decides')))
             n += 1
     return '<table class="c3%s">%s<tbody>%s</tbody></table>' % (' zb' if zebra else '', head, ''.join(rows))
 
@@ -416,7 +524,7 @@ def figure(f):
                 body += ''.join('<em%s style="left:%s;top:%gpx">%s</em>' % (' class="k"' if l.get('key') else '', pc(x[0]), x[1], E(l['text']))
                                 for x, l in zip(lx, lab))
             out.append('<div class="swl"><div class="nm"><b>%s</b><span>%s</span></div><div class="tl%s">%s%s%s</div></div>'
-                       % (E(ln['name']), text(ln['sub']), ' rq' if ln['form'] == 'requirement' else '', body, ticks, u))
+                       % (M(E(ln['name']), 'figure lane'), text(ln['sub']), ' rq' if ln['form'] == 'requirement' else '', body, ticks, u))
     if f.get('legend'):
         out.append('<p class="swk"><span class="k mk"></span>%s</p>' % text(f['legend']))
     return '<div class="sw">%s</div>' % ''.join(out)
@@ -549,8 +657,9 @@ def hub_changes(groups):
         out.append(sub(g['label']))
         for r in g['rows']:
             offer = '<span>%s</span>' % bare(r['offer']) if r.get('offer') else ''
+            then, k = mk(bare(r['then']), 'answer')
             out.append('<div class="wc"><span><i>If</i> %s</span>%s<b>%s</b>%s</div>'
-                       % (bare(r['if']), offer, bare(r['then']), '<em>%s</em>' % bare(r['why']) if r.get('why') else ''))
+                       % (bare(r['if']), offer, then, '<em>%s</em>' % wt(bare(r['why']), k) if r.get('why') else ''))
     return ''.join(out)
 
 def num(v):
@@ -590,7 +699,7 @@ def hub_table(d):
     """the differential table form of a complaint overview: zebra rows, plain runs as bare text"""
     head = '<thead><tr>%s</tr></thead>' % ''.join('<th>%s</th>' % E(h) for h in d['head'])
     rows = [r for g in d['groups'] for r in g['rows']]
-    body = ''.join('<tr%s><td>%s</td><td>%s</td><td>%s</td></tr>' % (' class="z"' if n % 2 == 0 else '', bare(r['dx']), bare(r['features']), bare(r['decides']))
+    body = ''.join('<tr%s><td>%s</td><td>%s</td><td>%s</td></tr>' % (' class="z"' if n % 2 == 0 else '', bare(r['dx']), bare(r['features']), M(bare(r['decides']), 'decides'))
                    for n, r in enumerate(rows))
     return '<table class="c3 zb">%s<tbody>%s</tbody></table>' % (head, body)
 
@@ -641,14 +750,19 @@ def render(rec, bank=''):
     """the brief's inner markup: title line, then the layout's rows; returns (html, rail, css). bank is the brief's own
     practice list from the page (ol.bank), kept byte for byte so question ids and progress carry over; the live bank
     code builds the questions from it inside .qhost"""
+    global RC
+    RC = Recall()
     body, rail, extra = LAYOUTS[rec['entry']](rec)
+    body = [repeats(x) for x in body]
     if bank:
         body = [x.replace('<div class="qhost"></div>', '<div class="qhost">%s</div>' % bank, 1) for x in body]
     head = ('<div class="head"><div><h1>%s</h1>\n<p>%s</p></div>\n<div class="legend"><span>Dotted line</span>: hover or tap for the reason</div></div>'
             % (E(rec['title']), E(rec['lead'])))
     rl = ''.join('<button type="button" data-k="%s"><i>%s</i>%s</button>' % (k, n, E(lbl)) for k, n, lbl in rail)
     inner = '<div class="v2r"><nav class="v2rail" hidden>%s</nav>%s%s</div>' % (rl, head, '\n'.join(body))
+    MASKS[rec['id'] if rec.get('id') else rec['title']] = dict(RC.slots)
     return inner, rail, extra.get('css', '')
+MASKS = {}
 
 BRIEF = re.compile(r'<div class="(brief\b[^"]*)" id="([^"]+)"([^>]*)><template class="axl">')
 
@@ -681,6 +795,9 @@ def write(page, recs, host=None):
 def visible(inner):
     from bs4 import BeautifulSoup
     sc = BeautifulSoup(inner, 'lxml')
+    for x in sc.select('.mask, .rw'):               # Recall marks split a string: unwrapped and joined before the count
+        x.unwrap()
+    sc.smooth()
     for x in sc.find_all(['svg', 'script', 'style', 'nav']):
         x.decompose()
     for x in sc.select('.qhost'):                   # the practice list is checked by item id (bank_ids)
@@ -741,6 +858,11 @@ def main():
         for s in list(added)[:8]:
             print('  drawn, not in record:', repr(s[:90]))
         bad += bool(lost or added)
+        sl = MASKS.get(rid, {})
+        print('  recall: %d masks; %s' % (sum(sl.values()), ', '.join('%s %d' % kv_ for kv_ in sorted(sl.items())) or 'none'))
+        pq = inner.find('<div class="blk v-stack" data-k="prac">')
+        if pq >= 0 and re.search(r'class="(?:mask|rw)\b', inner[slice(*div_span(inner, pq))]):
+            print('  recall: A MASK IN PRACTICE'); bad += 1
         want, got = bank_ids(recs[rid], inner)
         if bid == rid:
             ok = want == got

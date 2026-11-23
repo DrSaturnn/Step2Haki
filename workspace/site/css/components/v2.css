@@ -1,8 +1,3 @@
-.brief.v2 .rcsw>*{cursor:pointer;background:none}
-.brief.v2 .rcsw>b{background:var(--v2-pill)}
-.brief.v2 .rcm{display:inline}
-.brief.v2 .wc em>[data-wait]{display:inline}
-.brief.v2 .rcm.rcn{white-space:nowrap}
 .brief.v2 .blk>h2.st:has(+.rcr){padding-right:34px}
 .brief.v2 .rcr{position:absolute;top:0;right:0;width:28px;height:28px;display:grid;place-items:center;padding:0;margin:0;border:0;border-radius:8px;background:none;color:var(--muted);cursor:pointer;visibility:hidden;opacity:0;transition:opacity .32s var(--spr),visibility 0s var(--snp) .32s}
 .brief.v2 .rcr:hover{background:rgba(var(--muted-rgb),.10)}
@@ -693,3 +688,11 @@
 .brief.v2 .v2strip{display:none}
 @container frame (max-width:700px){.brief.v2 .v2strip{display:flex;position:sticky;top:8px;z-index:6;margin:0 0 14px}}
 .brief.v2 .v2bank .bktools .bkseg[role=group]{display:none}
+.brief.v2 .mask{position:static}
+.brief.v2 .mask.n{white-space:nowrap}
+.brief.v2 .mask.bk,.brief.v2 .mask.bk>.mask-region{display:block}
+.brief.v2 .mg .mask-region>span{display:block}
+.brief.v2 .rw.wt{filter:blur(8px);user-select:none}
+@keyframes v2pz{0%{box-shadow:0 0 0 0 rgba(var(--acc-rgb),0)}25%{box-shadow:0 0 0 2px rgba(var(--acc-rgb),.85)}100%{box-shadow:0 0 0 7px rgba(var(--acc-rgb),0)}}
+.brief.v2 .mask.pz{animation:v2pz .7s var(--spr)}
+.brief.v2 .blk.rvd>.rcr{visibility:visible;opacity:1;transition:opacity .32s var(--spr),visibility 0s var(--snp)}
