@@ -1,11 +1,13 @@
 """render_v2: draws format v2 brief records into the page.
 
-  python3 tools/render_v2.py PAGE RECORDS_DIR [--ids A,B] [--out FILE] [--check]
+  python3 tools/render_v2.py PAGE RECORDS_DIR [--ids A,B] [--host ID=RID,...] [--out FILE] [--check]
 
 RECORDS_DIR holds one RECORD_ID.json per brief (workspace/local/records_v2/). For each record whose id names a brief on
 the page, the brief's inner markup (inside its <template class="axl">) is replaced by the drawing and its root takes the
 class v2. Every other brief is left byte for byte. --check: each drawn brief's visible strings equal its record's
-strings, and the page outside the drawn briefs equals PAGE; exit 1 on any difference.
+strings, and the page outside the drawn briefs equals PAGE; exit 1 on any difference. --host ID=RID draws record RID
+in place of brief ID, for a record with no brief of its own on the page; test pages only, refused when the output is
+index.html.
 """
 import html as H
 import copy, json, os, re, sys
@@ -48,7 +50,8 @@ def tip_html(tip):
     if tip.get('title'):
         out.append('<b class="yt">%s</b>' % E(tip['title']))
     if tip.get('head'):
-        out.append('<i class="yh">%s</i>' % text(tip['head']))
+        h = '<i class="yh">%s</i>' % text(tip['head'])
+        out.insert(0, h) if tip.get('head_first') else out.append(h)     # head_first: the head line above the title
     for ln in tip.get('lines', []):
         out.append('<span class="yl">%s</span>' % text(ln))
     return '<span class="yp"%s>%s</span>' % (src, ''.join(out))
@@ -62,7 +65,7 @@ def run(r, cls=''):
     if r.get('tip') is not None:
         return pre + '<span class="it ti%s"%s><span class="y" role="button" tabindex="0">%s</span>%s</span>' % (cls, src, t, tip_html(r['tip']))
     if r.get('to'):
-        t = '<a class="lk" data-to="%s">%s</a>' % (A(r['to']), t)
+        t = '<a class="lk%s" data-to="%s">%s</a>' % (' sm' if r.get('c') == 'sm' else '', A(r['to']), t)   # sm: a small link after a name
     if r.get('ref'):
         t = '<a class="lk" href="#%s">%s</a>' % (A(r['ref']), t)
     if r.get('b'):
@@ -114,7 +117,10 @@ def line(x, cls='ln'):
         c = x['classic']
         return '<div class="%s"><div class="pc"><b class="pct">%s</b>%s</div></div>' % (cls, E(c['title']), ''.join('<span>%s</span>' % text(i) for i in c['items']))
     if isinstance(x, dict) and 'chip' in x:
-        return '<div class="%s urg"><b class="ul">%s</b>%s</div>' % (cls, E(x['chip']), text(x['text']))
+        mn = x.get('mnemonic')                     # a mnemonic card inside the line
+        card_ = ('<div class="pc" style="margin-top:8px"><b class="pct">%s</b>%s</div>' % (E(mn['title']), ''.join(
+            '<span><b>%s</b><span>%s</span></span>' % (E(l['l']), text(l['text'])) for l in mn['letters']))) if mn else ''
+        return '<div class="%s urg"><b class="ul">%s</b>%s%s</div>' % (cls, E(x['chip']), text(x['text']), card_)
     return '<div class="%s">%s</div>' % (cls, text(x))
 
 LIST_ROWS = ('Culprits', 'Used for')
@@ -223,9 +229,19 @@ def insight(i):
             out.append('<span>%s</span>' % text(x))
     return '<div class="ins"><b>%s</b>%s</div>' % (E(i['claim']), ''.join(out))
 
+def score(sc):
+    """a scoring rule: its items with points, then one line per cutoff range with the step it leads to"""
+    arrow = ' <i>→</i> '
+    rows = ''.join('<tr><td>%s</td><td>%s</td></tr>' % (text(x['item']), E(x['points'])) for x in sc['items'])
+    out = ['<table class="wl"><thead><tr><th>%s</th><th>%s</th></tr></thead><tbody>\n%s\n</tbody></table>' % (E(sc['name']), E(sc['points_head']), rows)]
+    for t in sc['cutoffs']:
+        sub_ = '<em>%s</em>' % arrow.join(text(x) for x in t['sub']) if t.get('sub') else ''
+        out.append('<div class="tot"><b>%s</b><span>%s%s</span></div>' % (E(t['range']), arrow.join(text(x) for x in t['chain']), sub_))
+    return '\n'.join(out)
+
 def criteria(c, drug=False):
     if c.get('score'):
-        raise NotImplementedError('criteria score form: not drawn by this pilot')
+        return blk(c['title'], card(score(c['score'])))
     if drug and c.get('mnemonic') and 'letters' in c['mnemonic']:
         m = c['mnemonic']                            # an open tinted card, never in a drawer
         cardh = '<div class="pc"%s style="margin-top:8px"><b class="pct">%s</b>%s</div>' % (
@@ -238,11 +254,25 @@ def criteria(c, drug=False):
             rows.append(h)
         inner = ''.join(rows) + ('' if m.get('under') in [r['k'] for r in c['rows']] else '<div class="ln">%s</div>' % cardh.replace(' style="margin-top:8px"', ''))
         return blk(c['title'], card(inner))
-    inner = ''.join(kv(r) for r in c['rows'])
+    inner = (sub(c['label']) if c.get('label') else '') + ''.join(kv(r) for r in c['rows'])
     if c.get('mnemonic'):
         m = c['mnemonic']
         inner += drawer({'title': m['title']}, '<div class="mn"%s>%s</div>' % (' id="%s"' % A(m['ref']) if m.get('ref') else '', ''.join('<b>%s</b><span>%s</span>' % (E(x['l']), text(x['text'])) for x in m['letters'])))
-    return blk(c['title'], card(inner))
+    more = ''
+    for x in c.get('cards', []):                    # further cards of the panel: a short table, or labeled rows
+        if 'table' in x:
+            more += card(wl_table(x['table']))
+        else:
+            more += card((sub(x['label']) if x.get('label') else '') + ''.join(kv(r) for r in x['rows']))
+    return blk(c['title'], card(inner) + more)
+
+def wl_table(t):
+    """a two-column lookup in the criteria panel; last_px fixes the last column's width with no wrap"""
+    fix = ' style="width:%dpx;white-space:nowrap"' % t['last_px'] if t.get('last_px') else ''
+    cell = lambda tag, v, last: '<%s%s>%s</%s>' % (tag, fix if last else '', v, tag)
+    head = ''.join(cell('th', E(h), k == len(t['head']) - 1) for k, h in enumerate(t['head']))
+    rows = ''.join('<tr>%s</tr>' % ''.join(cell('td', text(v), k == len(r) - 1) for k, v in enumerate(r)) for r in t['rows'])
+    return '<table class="wl"><thead><tr>%s</tr></thead><tbody>%s</tbody></table>' % (head, rows)
 
 def workup(w):
     rows = []
@@ -261,7 +291,9 @@ def workup(w):
     head = '<thead><tr>%s</tr></thead>' % ''.join('<th>%s</th>' % E(h) for h in w['head'])
     also = ''.join('<div class="ln"><span class="cond2"><i>If</i> %s</span>%s</div>' % (text(a['if']), '<br>'.join('<b>%s</b>' % text(x) for x in a['tests']))
                    for a in w.get('also', []))          # tests the source gives no result for
-    return '<table class="c3">%s<tbody>%s</tbody></table>%s%s' % (head, ''.join(rows), also, ''.join(line(x) for x in w.get('notes', [])))
+    skip = ('<div class="lad avd"><div>%s</div><div>%s</div></div>' % (E(w['skip']['label']), ''.join('<span>%s</span>' % text(x) for x in w['skip']['lines']))
+            if w.get('skip') else '')
+    return '<table class="c3">%s<tbody>%s</tbody></table>%s%s%s' % (head, ''.join(rows), also, ''.join(line(x) for x in w.get('notes', [])), skip)
 
 def treatment(t):
     out = []
@@ -440,7 +472,97 @@ def layout_drug(rec):
     return out, rail, {'css': DRUG_CSS}
 
 DRUG_CSS = ''     # drug styles live in site/css/components/v2.css
-LAYOUTS = {'disease': layout_disease, 'drug': layout_drug}
+
+def rule_out(r):
+    out = []
+    for x in r['rows']:
+        cond = '<span><i>If</i> %s</span>' % bare(x['if']) if x.get('if') else ''
+        then = '<b>%s</b>' % bare(x['then']) if x.get('then') else ''
+        out.append('<div class="wc ur"><strong>%s</strong><span>%s</span>%s%s<em><a class="lk" data-to="%s">%s</a></em></div>'
+                   % (bare(x['name']), bare(x['finding']), cond, then, A(x['to']), E(x['brief'])))
+    return ''.join(out)
+
+def hub_treatment(t):
+    return ''.join('<div class="mg"><b>%s</b>%s</div>' % (E(c['name']), ''.join('<span>%s</span>' % bare(x) for x in c['lines'])) for c in t['causes'])
+
+def hub_changes(groups):
+    out = []
+    for g in groups:
+        out.append(sub(g['label']))
+        for r in g['rows']:
+            offer = '<span>%s</span>' % bare(r['offer']) if r.get('offer') else ''
+            out.append('<div class="wc"><span><i>If</i> %s</span>%s<b>%s</b>%s</div>'
+                       % (bare(r['if']), offer, bare(r['then']), '<em>%s</em>' % bare(r['why']) if r.get('why') else ''))
+    return ''.join(out)
+
+def num(v):
+    return '%g' % v
+
+def ranges(f):
+    """lanes on one axis per section, each bar or line at its record position (percent of the track)"""
+    al = {'l': '0', 'c': '-50%', 'r': '-100%'}
+    out = []
+    for n, sec in enumerate(f['sections']):
+        ticks = ''.join('<s style="left:%s%%;transform:translateX(%s)">%s</s>' % (num(t['x']), al[t['align']], E(t['t'])) for t in sec['ticks'])
+        grid = ''.join('<q style="left:%s%%"></q>' % num(t['x']) for t in sec['ticks'])
+        h = ['<div class="sw tm">%s<div class="swl hd"><div class="nm"></div><div class="trk hdx">%s</div></div>' % (sub(sec['label']), ticks)]
+        for ln in sec['lanes']:
+            nm = '<b>%s</b><span>%s</span>%s' % (E(ln['name']), bare(ln['sub']), ''.join('<span class="nt"><b>%s</b>%s</span>' % (E(x['k']), bare(x['v'])) for x in ln.get('notes', [])))
+            marks = []
+            for m in ln['marks']:
+                if 'bar' in m:
+                    marks.append('<i class="%s" style="left:%s%%;width:%s%%"></i>' % (' '.join(['rb'] + m.get('tone', [])), num(m['bar'][0]), num(m['bar'][1])))
+                elif 'line' in m:
+                    marks.append('<i class="lead" style="left:0;width:%s%%"></i>' % num(m['line']))
+                elif 'dot' in m:
+                    marks.append('<u class="dot" style="left:%s"></u>' % ('0' if m['dot'] == 0 else num(m['dot']) + '%'))
+                elif 'cap' in m:
+                    marks.append('<span class="cap">%s</span>' % E(m['cap']))
+            h.append('<div class="swl"><div class="nm">%s</div><div class="trk%s">%s%s</div></div>'
+                     % (nm, ' dl' if ln.get('delayed') else '', grid + ticks if ln.get('grid') else '', ''.join(marks)))
+        if n == len(f['sections']) - 1 and f.get('legend'):
+            h.append('<p class="swk"><span class="k k-%s"></span>%s</p>' % (f['legend']['tone'], bare(f['legend']['text'])))
+        out.append(''.join(h) + '</div>')
+    return ''.join(out)
+
+def members(ms):
+    return '<div class="qrel card mbs"><b>Member briefs</b>%s</div>' % ''.join('<a class="lk" data-to="%s">%s</a>' % (A(m['to']), E(m['title'])) for m in ms)
+
+def hub_table(d):
+    """the differential table form of a complaint overview: zebra rows, plain runs as bare text"""
+    head = '<thead><tr>%s</tr></thead>' % ''.join('<th>%s</th>' % E(h) for h in d['head'])
+    rows = [r for g in d['groups'] for r in g['rows']]
+    body = ''.join('<tr%s><td>%s</td><td>%s</td><td>%s</td></tr>' % (' class="z"' if n % 2 == 0 else '', bare(r['dx']), bare(r['features']), bare(r['decides']))
+                   for n, r in enumerate(rows))
+    return '<table class="c3 zb">%s<tbody>%s</tbody></table>' % (head, body)
+
+def layout_hub(rec):
+    """the complaint overview: the five rows of every brief type, with Overview beside Rule out first"""
+    S = rec['slots']
+    out = [two(blk(S['overview']['title'], card(''.join(kv(r) for r in S['overview']['rows']))),
+               blk(S['rule_out']['title'], card(rule_out(S['rule_out']))), 'two', 'script')]
+    out.append(blk('Workup', card(workup(S['workup'])), 'work'))
+    t = S.get('treatment')
+    if t:
+        hint = '<p class="hint">%s</p>' % bare(t['hint']) if t.get('hint') else ''
+        out.append(two('<div class="blk" data-k="tx"><h2 class="st">Treatment</h2>%s%s</div>' % (card(hub_treatment(t)), hint),
+                       blk('When the answer changes', card(hub_changes(S['answer_changes']))) if S.get('answer_changes') else '', 'two eq'))
+    d = S['differential']
+    notes = d.get('notes', [])
+    rule = (sub('General rule').replace('"sub"', '"sub gr"') + line(notes[0]).replace('<div class="ln">', '<div class="ln" style="border-top:0;padding-top:6px">', 1)
+            + ''.join(line(x) for x in notes[1:])) if notes else ''
+    fig = ranges(d['ranges']) if d.get('ranges') else ''
+    out.append(blk('Differential', card(fig + hub_table(d['tables'][0]) + rule, 'bx card" style="padding-top:18px' if fig else 'bx card'), 'ddx'))
+    side = blk(S['side']['title'], card(hub_table(S['side']))) if S.get('side') else ''
+    prac = practice(rec)
+    if S.get('members'):
+        prac = prac[:-len('</div>')] + members(S['members']) + '</div>'
+    out.append(two(side, prac, 'two pq'))
+    rail = [('script', '1', 'Overview'), ('work', '2', 'Workup'), ('tx', '3', 'Treatment'), ('ddx', '4', 'Differential'), ('prac', '', 'Practice')]
+    if not t:
+        rail = [x for x in rail if x[0] != 'tx']
+    return out, rail, {}
+LAYOUTS = {'disease': layout_disease, 'drug': layout_drug, 'hub': layout_hub}
 
 # ---------- page ----------
 def div_span(h, start):
@@ -471,20 +593,23 @@ def brief_span(h, m):
     a = m.end()
     return a, h.index('</template>', a)
 
-def write(page, recs):
+def write(page, recs, host=None):
+    """host maps a page brief id to the record id drawn in its place; returns the page and {brief id: (record id, inner)}"""
+    host = host or {}
     out, last, drawn = [], 0, {}
     for m in BRIEF.finditer(page):
         rid = m.group(2)
-        if rid not in recs:
+        key = host.get(rid, rid if rid not in host.values() else None)
+        if key not in recs:
             continue
         a, b = brief_span(page, m)
-        inner, rail, css = render(recs[rid])
+        inner, rail, css = render(recs[key])
         cls = m.group(1) if ' v2' in ' ' + m.group(1) else m.group(1) + ' v2'
         out.append(page[last:m.start()])
         out.append('<div class="%s" id="%s"%s><template class="axl">' % (cls, rid, m.group(3)))
         out.append(inner)
         last = b
-        drawn[rid] = inner
+        drawn[rid] = (key, inner)
     out.append(page[last:])
     return ''.join(out), drawn
 
@@ -501,7 +626,7 @@ def check(rec, inner):
     pg = visible(inner)
     mine = Counter(s for s in strings({k: v for k, v in rec.items() if k not in ('legacy', 'practice')}) if s)
     chrome = CHROME | {'Drug script', 'Illness script', 'Adverse effects', 'Toxicity', 'Monitoring', 'Used for', 'Practice questions',
-                       'Related topics', 'Insights', 'Urgent', 'Means', 'Test', 'Result', 'When the answer changes', 'Delayed onset', 'General rule'}
+                       'Related topics', 'Insights', 'Urgent', 'Means', 'Test', 'Result', 'When the answer changes', 'Delayed onset', 'General rule', 'Member briefs'}
     for c in chrome:
         pg.pop(c, None); mine.pop(c, None)
     return mine - pg, pg - mine
@@ -517,23 +642,27 @@ def outside(h, ids):
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
     opt = lambda k: sys.argv[sys.argv.index(k) + 1] if k in sys.argv else None
-    for k in ('--ids', '--out'):
+    for k in ('--ids', '--out', '--host'):
         if opt(k) in args:
             args.remove(opt(k))
     page_path, rdir = args[:2]
     page = open(page_path, encoding='utf-8').read()
     want = set(opt('--ids').split(',')) if opt('--ids') else None
+    host = dict(x.split('=', 1) for x in opt('--host').split(',')) if opt('--host') else {}
+    out = opt('--out') or page_path
+    if host and os.path.basename(out) == 'index.html':
+        sys.exit('--host draws a record in place of another brief: test pages only, never index.html')
     recs = {}
     for f in sorted(os.listdir(rdir)):
         if f.endswith('.json') and f.count('.') == 1:
             rid = f[:-5]
             if want is None or rid in want:
                 recs[rid] = json.load(open(os.path.join(rdir, f), encoding='utf-8'))
-    new, drawn = write(page, recs)
+    new, drawn = write(page, recs, host)
     bad = 0
-    for rid, inner in drawn.items():
+    for bid, (rid, inner) in drawn.items():
         lost, added = check(recs[rid], inner)
-        print('%s: %d strings drawn, %d not drawn, %d drawn that the record lacks' % (rid, sum(visible(inner).values()), sum(lost.values()), sum(added.values())))
+        print('%s%s: %d strings drawn, %d not drawn, %d drawn that the record lacks' % (rid, ' (in %s)' % bid if bid != rid else '', sum(visible(inner).values()), sum(lost.values()), sum(added.values())))
         for s in list(lost)[:8]:
             print('  not drawn:', repr(s[:90]))
         for s in list(added)[:8]:
@@ -541,10 +670,9 @@ def main():
         bad += bool(lost or added)
     same = outside(new, set(drawn)) == outside(page, set(drawn))
     print('briefs drawn: %d of %d records; page outside them %s' % (len(drawn), len(recs), 'unchanged' if same else 'CHANGED'))
-    missing = sorted(set(recs) - set(drawn))
+    missing = sorted(set(recs) - {r for r, _ in drawn.values()})
     if missing:
         print('  no brief on the page for:', ', '.join(missing))
-    out = opt('--out') or page_path
     open(out, 'w', encoding='utf-8').write(new)
     print('wrote', out)
     sys.exit(1 if '--check' in sys.argv and (bad or not same) else 0)
