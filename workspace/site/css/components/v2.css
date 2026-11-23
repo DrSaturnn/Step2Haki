@@ -623,7 +623,7 @@
 @container frame (min-width:701px){.brief.v2 .rk{display:none}}
 @container frame (min-width:701px){.brief.v2.tx-ladder .rk{display:block}}
 @container frame (max-width:700px){.brief.v2{width:390px;height:844px;flex:none;border-radius:38px;box-shadow:0 0 0 10px var(--ink),0 20px 50px rgba(var(--ink-rgb),.25)}}
-@container frame (max-width:700px){.brief.v2 .v2r{padding:18px 14px 28px;padding:102px 14px 92px;overflow:visible}}
+@container frame (max-width:700px){.brief.v2 .v2r{padding:0 14px;overflow:visible}}
 @container frame (max-width:700px){.brief.v2 .head{display:block;margin-bottom:14px;margin-bottom:16px}}
 @container frame (max-width:700px){.brief.v2 .two{grid-template-columns:minmax(0,1fr);gap:22px;margin-bottom:22px}}
 @container frame (max-width:700px){.brief.v2 .two.eq{grid-template-columns:minmax(0,1fr);gap:22px;margin-bottom:22px}}
