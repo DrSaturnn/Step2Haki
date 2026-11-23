@@ -361,7 +361,7 @@
     var bw = e.target.closest && e.target.closest('.bankwrap'); if(!bw) return;
     setTimeout(function(){ if(bm) measure(bw); if(bw.classList.contains('review')) renderReview(bw); }, 0);
   });
-  function boot(){ scan(document); AX.brief.each('site-148f', scan); }
+  function boot(){ scan(document); AX.brief.each('site-148f', scan, true); }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
   // banks and briefs that render later (lazy sections, the drawer) are decorated when they appear
   new MutationObserver(function(ms){

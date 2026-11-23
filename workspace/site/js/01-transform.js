@@ -1675,6 +1675,7 @@ function transformBrief(b){ columnize(b); mnemonics(b); tables(b); masks(b); mcq
   function run(){
   switches(); mobileNav(); sections(); columnize(); mnemonics(); tables(); masks(); mcq(); accessibilityEnhance(); unavailableInline(); xrefs(); scalepeeks(); figures(); wire(); shelfInit();
   AX.brief.each('transform',transformBrief);
+  AX.brief.each('transform-v2',function(b){ if(b.classList.contains('v2')) mcq(b); },true);   // a v2 brief: its practice list only
   var AFTER=VERIFY?norm(document.body.innerText):"";
   var addedUI=/STUDY MODE|Recall mode|Surface|Sculpted|REVEAL|From this brief|Distractors are entities/;
   var a=BEFORE.split(' ').filter(Boolean).length;

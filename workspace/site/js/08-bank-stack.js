@@ -31,7 +31,7 @@
     if(f){ f.classList.add('bkseg'); tools.insertBefore(f, tools.querySelector('.bkall')); }
   }
   function init(){
-    AX.brief.each('bank-stack', function(b){ Array.prototype.forEach.call(b.querySelectorAll('.bankwrap'), function(bw){ toolbar(bw); show(bw, 0); }); });
+    AX.brief.each('bank-stack', function(b){ Array.prototype.forEach.call(b.querySelectorAll('.bankwrap'), function(bw){ toolbar(bw); show(bw, 0); }); }, true);
   }
   // bank:change goes out after a button or arrow-key action inside a bank, once the bank has redrawn, so a layout can
   // measure it again; a click on the text of a card (a selection) is no action

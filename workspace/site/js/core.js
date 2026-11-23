@@ -13,12 +13,15 @@ var AX = (function () {
   function teardown(name) { var m = mods[name]; if (m && m.api && typeof m.api.teardown === 'function') m.api.teardown(); }
 
   /* Briefs arrive in the page as <div class="brief"> shells holding a <template class="axl">. build() moves the
-     template content into the shell and runs every registered per-brief pass on it, in registration order. */
+     template content into the shell and runs every registered per-brief pass on it, in registration order. A brief
+     drawn in format v2 (class v2) runs only the passes registered for it (each(name, fn, true)). */
   var passes = [], building = false, queue = [], recent = [], clearing = 0;
   function tpl(b) { for (var t = b && b.firstElementChild; t; t = t.nextElementSibling) if (t.tagName === 'TEMPLATE' && t.classList.contains('axl')) return t; return null; }
   function isBuilt(b) { return !!b && !tpl(b); }
   function runPasses(b, from) {
+    var v2 = b.classList.contains('v2');
     for (var i = from || 0; i < passes.length; i++) {
+      if (v2 && !passes[i].v2) continue;
       try { passes[i].fn(b); } catch (e) { if (window.console) console.error('AX pass ' + passes[i].name + ' on ' + b.id + ':', e); }
     }
   }
@@ -34,10 +37,10 @@ var AX = (function () {
     if (queue.length) build(queue.shift());
     return b;
   }
-  function each(name, fn) {
-    passes.push({ name: name, fn: fn });
+  function each(name, fn, v2) {
+    passes.push({ name: name, fn: fn, v2: !!v2 });
     var all = document.querySelectorAll('.brief');
-    for (var i = 0; i < all.length; i++) { if (tpl(all[i])) continue; try { fn(all[i]); } catch (e) { if (window.console) console.error('AX pass ' + name + ':', e); } }
+    for (var i = 0; i < all.length; i++) { if (tpl(all[i]) || (!v2 && all[i].classList.contains('v2'))) continue; try { fn(all[i]); } catch (e) { if (window.console) console.error('AX pass ' + name + ':', e); } }
   }
   function briefs() { return document.querySelectorAll('.brief'); }
   function holder(id) {

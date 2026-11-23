@@ -577,9 +577,15 @@ def div_span(h, start):
 
 
 # ---------- page ----------
-def render(rec):
-    """the brief's inner markup: title line, then the layout's rows; returns (html, rail, css)"""
+BANK = re.compile(r'<ol class="bank\b[^"]*">.*?</ol>', re.S)
+
+def render(rec, bank=''):
+    """the brief's inner markup: title line, then the layout's rows; returns (html, rail, css). bank is the brief's own
+    practice list from the page (ol.bank), kept byte for byte so question ids and progress carry over; the live bank
+    code builds the questions from it inside .qhost"""
     body, rail, extra = LAYOUTS[rec['entry']](rec)
+    if bank:
+        body = [x.replace('<div class="qhost"></div>', '<div class="qhost">%s</div>' % bank, 1) for x in body]
     head = ('<div class="head"><div><h1>%s</h1>\n<p>%s</p></div>\n<div class="legend"><span>Dotted line</span>: hover or tap for the reason</div></div>'
             % (E(rec['title']), E(rec['lead'])))
     rl = ''.join('<button type="button" data-k="%s"><i>%s</i>%s</button>' % (k, n, E(lbl)) for k, n, lbl in rail)
@@ -603,7 +609,8 @@ def write(page, recs, host=None):
         if key not in recs:
             continue
         a, b = brief_span(page, m)
-        inner, rail, css = render(recs[key])
+        own = BANK.search(page, a, b) if key == rid else None      # a record drawn in another brief's place keeps no bank
+        inner, rail, css = render(recs[key], own.group() if own else '')
         cls = m.group(1) if ' v2' in ' ' + m.group(1) else m.group(1) + ' v2'
         out.append(page[last:m.start()])
         out.append('<div class="%s" id="%s"%s><template class="axl">' % (cls, rid, m.group(3)))
@@ -618,6 +625,8 @@ def visible(inner):
     sc = BeautifulSoup(inner, 'lxml')
     for x in sc.find_all(['svg', 'script', 'style', 'nav']):
         x.decompose()
+    for x in sc.select('.qhost'):                   # the practice list is checked by item id (bank_ids)
+        x.decompose()
     for x in sc.select('div.trk:not(.hdx) > s'):
         x.decompose()
     return Counter(norm(n) for n in sc.find_all(string=True) if norm(n))
@@ -630,6 +639,12 @@ def check(rec, inner):
     for c in chrome:
         pg.pop(c, None); mine.pop(c, None)
     return mine - pg, pg - mine
+
+def bank_ids(rec, inner):
+    """the record's practice item ids against the ids of the page list kept in the drawing"""
+    want = [it['id'] for it in rec['practice']['items'] if it.get('id')]
+    got = re.findall(r'data-item-id="([^"]+)"', inner)
+    return want, got
 
 def outside(h, ids):
     """the page with every named brief's template content removed and v2 classes undone"""
@@ -668,6 +683,11 @@ def main():
         for s in list(added)[:8]:
             print('  drawn, not in record:', repr(s[:90]))
         bad += bool(lost or added)
+        want, got = bank_ids(recs[rid], inner)
+        if bid == rid:
+            ok = want == got
+            print('  practice: %d page items kept, %s' % (len(got), 'ids equal to the record in order' if ok else 'IDS DIFFER from the record (%d)' % len(want)))
+            bad += not ok
     same = outside(new, set(drawn)) == outside(page, set(drawn))
     print('briefs drawn: %d of %d records; page outside them %s' % (len(drawn), len(recs), 'unchanged' if same else 'CHANGED'))
     missing = sorted(set(recs) - {r for r, _ in drawn.values()})
