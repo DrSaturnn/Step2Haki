@@ -35,7 +35,7 @@ tbody td:first-child:where(:not(.brief.v2 td),.qhost td){font-weight:600;color:v
 tbody td b:where(:not(.brief.v2 b),.qhost b){color:var(--t-tbody-td-b-fg,var(--ink));font-weight:700}
 td .ex{display:block;font-size:12px;color:var(--t-td-ex-fg,var(--muted));font-style:italic;font-weight:400;margin-top:3px}
 .tierT td:first-child{width:40px;color:var(--t-tiert-td-first-child-fg,var(--accent));font-family:var(--serif);font-size:18px}
-body .axm-study td .mask,body td.axm-study .mask{display:inline-block}
+body .axm-study td .mask:where(:not(.v2 *)),body td.axm-study .mask:where(:not(.v2 *)){display:inline-block}
 tbody tr.em td{background:var(--t-tbody-tr-em-td-bg)}
 @media (--phone){
 .tw tbody tr.em{box-shadow:var(--t-tw-tbody-tr-em-sh,var(--e2),inset 0 0 0 1.5px var(--p-8E3D2C-a25))}

@@ -1,13 +1,28 @@
 /* Brief boundaries. Builds, for every brief: a sticky section rail (>1100px) and an end cap; below 1100px it reports the
    brief being read and its current section as brief:step {el, title, secs, cur, p, past} for the phone header (05-phone).
    Sections: spine briefs follow their stepper (absent steps greyed); other briefs use their section headings, after an Overview
-   entry for the top of the brief. Built at load from the page itself; nothing is stored. Drawer clones strip both (spine.js). */
+   entry for the top of the brief. A brief drawn in format v2 gets neither rail nor end cap and reports brief:step on phones
+   only, its steps from its own rail (nav.v2rail) and its title from its h1. Built at load from the page itself; nothing is
+   stored. Drawer clones strip both (spine.js). */
 (function(){
   'use strict';
   var WIDE = window.matchMedia('(min-width:1101px)');
   var briefs = [], byId = {}, live = new Set(), active = null, raf = 0;
 
   function txt(n){ return (n ? n.textContent : '').replace(/\s+/g, ' ').trim(); }
+  function v2Sections(b){
+    var root = b.querySelector('.v2r'), out = [];
+    root.querySelectorAll(':scope > nav.v2rail button[data-k]').forEach(function(r){
+      var i = r.querySelector('i'), n = txt(i), l = txt(r).slice(n.length).trim(), el = null;
+      root.querySelectorAll('[data-k="' + r.dataset.k + '"]').forEach(function(x){ if(!el && !x.closest('nav.v2rail, .v2strip')) el = x; });
+      if(el) out.push({n:n, l:l, el:el});
+    });
+    return out;
+  }
+  function buildV2(b){
+    var h1 = b.querySelector('.v2r .head h1'); if(!h1 || !b.querySelector('.v2r > nav.v2rail')) return null;
+    return {el:b, h4:h1, title:txt(h1), secs:v2Sections(b), cur:-1, v2:true, links:[], next:null};
+  }
   function sectionsOf(b){
     var out = [], step = b.querySelector('.sp-step');
     if(step){
@@ -92,6 +107,7 @@
     raf = 0;
     var vh = window.innerHeight, wide = WIDE.matches, th = wide ? 120 : (parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--ph-top')) || 64), pick = null;
     live.forEach(function(rec){
+      if(wide && rec.v2) return;
       var r = rec.el.getBoundingClientRect();
       if(r.top <= th && r.bottom > th) pick = rec;
     });
@@ -113,8 +129,10 @@
       pick.cur = cur;
       pick.links.forEach(function(a, i){ a.classList.toggle('cur', i === cur); });
     }
-    var n = nextVisible(pick);
-    if(n){ pick.next.hidden = false; pick.next.querySelector('b').textContent = n.title; pick.next.setAttribute('href', '#' + n.el.id); } else pick.next.hidden = true;
+    if(pick.next){
+      var n = nextVisible(pick);
+      if(n){ pick.next.hidden = false; pick.next.querySelector('b').textContent = n.title; pick.next.setAttribute('href', '#' + n.el.id); } else pick.next.hidden = true;
+    }
     if(wide && readAt !== pick.el.id + ':' + cur){ readAt = pick.el.id + ':' + cur; AX.emit('brief:read', {el: pick.el, title: pick.title, secs: pick.secs, cur: cur}); }   // desktop: the brief and step at the reading line, once per change (Home's Continue)
     if(!wide) AX.emit('brief:step', {el: pick.el, title: pick.title, secs: pick.secs, cur: cur, p: p, past: pick.h4.getBoundingClientRect().bottom < 0, go: go});
   }
@@ -126,14 +144,14 @@
       kick();
     }, {rootMargin: '0px'});
     AX.brief.each('brief-bounds', function(b){
-      if(!b.id || !b.closest('main') || b.querySelector(':scope > .bb-rail')) return;
-      var rec = build(b); if(!rec) return;
+      if(!b.id || !b.closest('main') || b.querySelector(':scope > .bb-rail') || byId[b.id]) return;
+      var rec = b.classList.contains('v2') ? buildV2(b) : build(b); if(!rec) return;
       briefs.push(rec); byId[b.id] = rec;
-      io.observe(rec.el); if(WIDE.matches) railFit(rec);
+      io.observe(rec.el); if(WIDE.matches && rec.rail) railFit(rec);
       kick();
-    });
+    }, true);
     window.addEventListener('scroll', kick, {passive: true});
-    window.addEventListener('resize', function(){ briefs.forEach(function(rec){ rec.rail.style.marginBottom = ''; if(WIDE.matches) railFit(rec); }); kick(); });
+    window.addEventListener('resize', function(){ briefs.forEach(function(rec){ if(!rec.rail) return; rec.rail.style.marginBottom = ''; if(WIDE.matches) railFit(rec); }); kick(); });
     kick();
   }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function(){ setTimeout(init, 0); });

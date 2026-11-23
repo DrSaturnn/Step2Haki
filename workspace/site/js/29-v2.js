@@ -11,6 +11,9 @@
     return null;
   }
   function viewTop(box){ return box ? box.getBoundingClientRect().top : 0; }
+  // the step blocks of a brief (its rail and strip buttons carry the same data-k)
+  function steps(b){ return Array.prototype.filter.call(b.querySelectorAll('.v2r [data-k]'), function(x){ return !x.closest('nav.v2rail, .v2strip'); }); }
+  function headH(){ return parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--ph-top')) || 0; }
 
   // the phone step strip: one button per rail step, sticky above the brief; marks the step in view
   function strip(b){
@@ -33,13 +36,13 @@
     Array.prototype.forEach.call(document.querySelectorAll('.brief.v2 .v2strip'), function(s){
       if(!s.offsetParent) return;
       var b = s.closest('.brief'), line = s.getBoundingClientRect().bottom + 40, cur = 'script';
-      Array.prototype.forEach.call(b.querySelectorAll('.v2r [data-k]'), function(x){ if(x.getBoundingClientRect().top <= line) cur = x.dataset.k; });
+      steps(b).forEach(function(x){ if(x.getBoundingClientRect().top <= line) cur = x.dataset.k; });
       mark(b, cur);
     });
   }
   function go(b, k){
-    var t = b.querySelector('.v2r [data-k="' + k + '"]'); if(!t) return;
-    var s = b.querySelector('.v2strip'), box = scroller(b), off = (s ? s.getBoundingClientRect().height : 0) + 12;
+    var t = steps(b).filter(function(x){ return x.dataset.k === k; })[0]; if(!t) return;
+    var s = b.querySelector('.v2strip'), box = scroller(b), off = (s ? s.getBoundingClientRect().height : 0) + 12 + (box ? 0 : headH());
     hold = Date.now() + 700; mark(b, k);
     var y = t.getBoundingClientRect().top - viewTop(box) - off;
     if(box) box.scrollBy({top: y, behavior: 'smooth'}); else window.scrollBy({top: y, behavior: 'smooth'});
@@ -67,7 +70,7 @@
     });
   }
 
-  // Recall: an item drawn as waiting on a mask (.rw[data-wait]) stays blurred and inert until that mask is revealed; a tap
+  // Recall: an item drawn as waiting on a mask (.rwait[data-wait]) stays blurred and inert until that mask is revealed; a tap
   // on it pulses the mask it waits on. A section with a revealed mask shows its Reset, which masks the section again.
   var RESET = '<svg viewBox="0 0 20 20" width="17" height="17" aria-hidden="true"><path d="M4.6 8.2A6 6 0 1 1 4.4 12" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><path d="M4.3 3.9v4.6h4.6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   function study(){ return document.body.classList.contains('study'); }
@@ -75,7 +78,7 @@
   function shown(m){ return !!m && m.dataset.revealed === '1'; }
   function waits(b){
     var s = study();
-    Array.prototype.forEach.call(b.querySelectorAll('.rw[data-wait]'), function(w){
+    Array.prototype.forEach.call(b.querySelectorAll('.rwait[data-wait]'), function(w){
       var on = s && !shown(keyed(b, w.dataset.wait));
       if(w.classList.contains('wt') !== on) w.classList.toggle('wt', on);
       if(w.inert !== on) w.inert = on;
@@ -109,8 +112,8 @@
   }
   // a waiting item is inert, so a tap on it lands on the element around it: find the wait under the pointer
   function under(t, e){
-    var w = t.closest('.rw.wt'); if(w) return w;
-    return Array.prototype.filter.call(t.querySelectorAll('.rw.wt'), function(x){
+    var w = t.closest('.rwait.wt'); if(w) return w;
+    return Array.prototype.filter.call(t.querySelectorAll('.rwait.wt'), function(x){
       return Array.prototype.some.call(x.getClientRects(), function(r){ return e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom; });
     })[0] || null;
   }

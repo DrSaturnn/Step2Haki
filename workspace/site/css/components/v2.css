@@ -623,7 +623,7 @@
 @container frame (min-width:701px){.brief.v2 .rk{display:none}}
 @container frame (min-width:701px){.brief.v2.tx-ladder .rk{display:block}}
 @container frame (max-width:700px){.brief.v2{width:390px;height:844px;flex:none;border-radius:38px;box-shadow:0 0 0 10px var(--ink),0 20px 50px rgba(var(--ink-rgb),.25)}}
-@container frame (max-width:700px){.brief.v2 .v2r{padding:18px 14px 28px;padding:102px 14px 92px}}
+@container frame (max-width:700px){.brief.v2 .v2r{padding:18px 14px 28px;padding:102px 14px 92px;overflow:visible}}
 @container frame (max-width:700px){.brief.v2 .head{display:block;margin-bottom:14px;margin-bottom:16px}}
 @container frame (max-width:700px){.brief.v2 .two{grid-template-columns:minmax(0,1fr);gap:22px;margin-bottom:22px}}
 @container frame (max-width:700px){.brief.v2 .two.eq{grid-template-columns:minmax(0,1fr);gap:22px;margin-bottom:22px}}
@@ -686,13 +686,14 @@
 @container frame (min-width:701px){.brief.v2 .hq{display:inline;margin:0 0 0 8px}}
 @container frame (min-width:701px){.brief.v2 .sub.lg .hq{display:block;margin:2px 0 0}}
 .brief.v2 .v2strip{display:none}
-@container frame (max-width:700px){.brief.v2 .v2strip{display:flex;position:sticky;top:8px;z-index:6;margin:0 0 14px}}
+@container frame (max-width:700px){.brief.v2 .v2strip{display:flex;position:sticky;top:var(--ph-top,0px);z-index:6;margin:0 0 14px}}
 .brief.v2 .v2bank .bktools .bkseg[role=group]{display:none}
 .brief.v2 .mask{position:static}
 .brief.v2 .mask.n{white-space:nowrap}
 .brief.v2 .mask.bk,.brief.v2 .mask.bk>.mask-region{display:block}
 .brief.v2 .mg .mask-region>span{display:block}
-.brief.v2 .rw.wt{filter:blur(8px);user-select:none}
+.brief.v2 .rwait.bk{display:block}
+.brief.v2 .rwait.wt{filter:blur(8px);user-select:none}
 @keyframes v2pz{0%{box-shadow:0 0 0 0 rgba(var(--acc-rgb),0)}25%{box-shadow:0 0 0 2px rgba(var(--acc-rgb),.85)}100%{box-shadow:0 0 0 7px rgba(var(--acc-rgb),0)}}
 .brief.v2 .mask.pz{animation:v2pz .7s var(--spr)}
 .brief.v2 .blk.rvd>.rcr{visibility:visible;opacity:1;transition:opacity .32s var(--spr),visibility 0s var(--snp)}

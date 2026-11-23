@@ -1,6 +1,7 @@
 /* Phone layout (below 1100px): the reading header, one brief per screen, and Home as the list of sections.
    The header shows the brief being read, its current step and a Recall switch, with the brief's steps beneath; a step
-   is current once its heading passes the reading line (09-brief-bounds). With one brief per screen, a link to a brief
+   is current once its heading passes the reading line (09-brief-bounds). A brief drawn in format v2 gets no step row
+   here: its own step strip sits under the header. With one brief per screen, a link to a brief
    (its hash) shows that brief alone; Back and Home return to the section list at the place it was left.
    Events: listens to brief:step (the brief being read), phone:home (the Home tab while no screen is open);
    emits nav:open and nav:reveal {id, pres} (Browse at the group holding a brief). */
@@ -68,7 +69,12 @@ function paint(s){
   if(!head) return;
   var on = !!s && NARROW.matches && (solo ? s.el === solo : s.past);
   if(!on){ head.classList.remove('on'); head.setAttribute('aria-hidden', 'true'); shown = null; measure(); return; }
-  if(!shown || shown.el !== s.el){ ti.textContent = s.title; drawSteps(s); }
+  if(!shown || shown.el !== s.el){
+    var v2 = s.el.classList.contains('v2');
+    ti.textContent = s.title;
+    steps.hidden = v2;
+    if(v2) steps.innerHTML = ''; else drawSteps(s);
+  }
   shown = s;
   head.classList.add('on'); head.removeAttribute('aria-hidden');
   var btns = steps.children, x = s.secs[s.cur];

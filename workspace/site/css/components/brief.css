@@ -118,7 +118,7 @@ body .axm-study .mask.shown .mask-region,body .mask.shown.axm-study .mask-region
 body .axm-study .mask-toggle,body .mask-toggle.axm-study{display:block;position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 body .axm-study .mask:focus-within{outline:var(--t-body-axm-study-mask-focus-within-outline,2px solid var(--accent));outline-offset:3px}
 body .mask:focus-within.axm-study{outline:var(--t-body-mask-focus-within-axm-study-outline,2px solid var(--accent));outline-offset:3px}
-body .axm-study dd .mask,body dd.axm-study .mask,body .axm-study li .mask,body li.axm-study .mask{display:inline-block}
+body .axm-study dd .mask:where(:not(.v2 *)),body dd.axm-study .mask:where(:not(.v2 *)),body .axm-study li .mask:where(:not(.v2 *)),body li.axm-study .mask:where(:not(.v2 *)){display:inline-block}
 .chain{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:9px;margin:0 0 12px}
 .chain .node{background:linear-gradient(145deg,var(--p-F3F5F4) 0%,var(--p-EDF0EF) 52%,var(--p-E6EBEA) 100%);background-image:var(--t-chain-node-bgi);border-radius:9px;padding:8px 13px;font-size:13.5px;font-weight:600;color:var(--t-chain-node-fg,var(--ink-2));text-align:center;max-width:260px;box-shadow:var(--t-chain-node-sh,var(--ec))}
 .chain .node.dx{color:var(--t-chain-node-dx-fg);font-weight:800}

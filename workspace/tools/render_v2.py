@@ -255,7 +255,7 @@ def wt(h, k, bk=False):
     """h waits on the mask k: blurred in Recall until that mask is revealed"""
     if not k or not plain_of(h).strip():
         return h
-    return '<span class="rw%s" data-wait="%s">%s</span>' % (' bk' if bk else '', k, h)
+    return '<span class="rwait%s" data-wait="%s">%s</span>' % (' bk' if bk else '', k, h)
 
 UNIT = (r'mg/dL|mEq/L|mL/kg/hr|mm Hg|g/dL|mg/g|mL/min/1\.73 m²|%|hours?|days?|weeks?|months?|years?|times')
 CUT = re.compile(r'(?<![\w.])(?P<c>(?:[<>≤≥]=?|more than|less than|at least)\s*)?\d+(?:\.\d+)?'
@@ -795,7 +795,7 @@ def write(page, recs, host=None):
 def visible(inner):
     from bs4 import BeautifulSoup
     sc = BeautifulSoup(inner, 'lxml')
-    for x in sc.select('.mask, .rw'):               # Recall marks split a string: unwrapped and joined before the count
+    for x in sc.select('.mask, .rwait'):               # Recall marks split a string: unwrapped and joined before the count
         x.unwrap()
     sc.smooth()
     for x in sc.find_all(['svg', 'script', 'style', 'nav']):
@@ -861,7 +861,7 @@ def main():
         sl = MASKS.get(rid, {})
         print('  recall: %d masks; %s' % (sum(sl.values()), ', '.join('%s %d' % kv_ for kv_ in sorted(sl.items())) or 'none'))
         pq = inner.find('<div class="blk v-stack" data-k="prac">')
-        if pq >= 0 and re.search(r'class="(?:mask|rw)\b', inner[slice(*div_span(inner, pq))]):
+        if pq >= 0 and re.search(r'class="(?:mask|rwait)\b', inner[slice(*div_span(inner, pq))]):
             print('  recall: A MASK IN PRACTICE'); bad += 1
         want, got = bank_ids(recs[rid], inner)
         if bid == rid:
