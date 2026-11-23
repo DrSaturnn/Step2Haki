@@ -56,7 +56,17 @@
     Array.prototype.forEach.call(host.querySelectorAll('.qv button'), function(x){ x.classList.toggle('on', (x.dataset.v === 'list' ? 'quiz' : x.dataset.v) === v); });
   }
 
-  function built(b){ if(!b.classList.contains('v2')) return; strip(b); practice(b); }
+  // each drawer's content sits in one inner box: it slides in as the drawer opens and keeps the space below its last line
+  function drawers(b){
+    Array.prototype.forEach.call(b.querySelectorAll('.dz > .body'), function(d){
+      if(d.children.length === 1 && d.firstElementChild.classList.contains('in')) return;
+      var w = document.createElement('div'); w.className = 'in';
+      while(d.firstChild) w.appendChild(d.firstChild);
+      d.appendChild(w);
+    });
+  }
+
+  function built(b){ if(!b.classList.contains('v2')) return; drawers(b); strip(b); practice(b); }
 
   document.addEventListener('click', function(e){
     var t = e.target; if(!t || !t.closest) return;

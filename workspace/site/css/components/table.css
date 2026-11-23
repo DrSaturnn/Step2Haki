@@ -27,12 +27,12 @@ body .tw.axm-flat tbody tr{background:var(--p-FBFBFB);background-color:var(--t-b
 .rule .rows > dt{color:var(--t-rule-rows-dt-fg)}
 .crit .rows > dt{color:var(--t-crit-rows-dt-fg)}
 .tw{background:var(--t-tw-bg);background-color:var(--t-tw-bgc);background-image:var(--t-tw-bgi);border-radius:var(--r-sub);box-shadow:var(--t-tw-sh,var(--e2));padding:6px 5px 3px;margin:0 0 20px;overflow-x:auto}
-table{width:100%;border-collapse:var(--t-table-border-collapse);font-size:14.3px;margin:0}
-thead th{background:var(--t-thead-th-bg);text-align:left;padding:11px 15px 9px;font-size:10px;letter-spacing:1.4px;text-transform:uppercase;font-weight:800;color:var(--t-thead-th-fg,var(--muted));border:var(--t-thead-th-border);border-radius:0}
-tbody td{padding:12px 15px;border-top:var(--t-tbody-td-border-top,1px solid var(--hair));border-bottom:var(--t-tbody-td-border-bottom);vertical-align:top;line-height:1.5}
-tbody tr:nth-child(even){background:var(--p-15151B-a028);background-color:var(--t-tbody-tr-nth-child-even-bgc)}
-tbody td:first-child{font-weight:600;color:var(--t-tbody-td-first-child-fg,var(--ink));width:auto}
-tbody td b{color:var(--t-tbody-td-b-fg,var(--ink));font-weight:700}
+table:where(:not(.brief.v2 table),.qhost table){width:100%;border-collapse:var(--t-table-border-collapse);font-size:14.3px;margin:0}
+thead th:where(:not(.brief.v2 th),.qhost th){background:var(--t-thead-th-bg);text-align:left;padding:11px 15px 9px;font-size:10px;letter-spacing:1.4px;text-transform:uppercase;font-weight:800;color:var(--t-thead-th-fg,var(--muted));border:var(--t-thead-th-border);border-radius:0}
+tbody td:where(:not(.brief.v2 td),.qhost td){padding:12px 15px;border-top:var(--t-tbody-td-border-top,1px solid var(--hair));border-bottom:var(--t-tbody-td-border-bottom);vertical-align:top;line-height:1.5}
+tbody tr:nth-child(even):where(:not(.brief.v2 tr),.qhost tr){background:var(--p-15151B-a028);background-color:var(--t-tbody-tr-nth-child-even-bgc)}
+tbody td:first-child:where(:not(.brief.v2 td),.qhost td){font-weight:600;color:var(--t-tbody-td-first-child-fg,var(--ink));width:auto}
+tbody td b:where(:not(.brief.v2 b),.qhost b){color:var(--t-tbody-td-b-fg,var(--ink));font-weight:700}
 td .ex{display:block;font-size:12px;color:var(--t-td-ex-fg,var(--muted));font-style:italic;font-weight:400;margin-top:3px}
 .tierT td:first-child{width:40px;color:var(--t-tiert-td-first-child-fg,var(--accent));font-family:var(--serif);font-size:18px}
 body .axm-study td .mask,body td.axm-study .mask{display:inline-block}
@@ -212,7 +212,7 @@ body .brief .tw:not(.scriptcard .tw){background:var(--g-card);background-image:n
 }
 body :is(.brief.sp,.brief) :is(.dp,.pearls,.danger,.rule,.crit,.vignette) :is(p,li,dd,dt){font-size:16px;line-height:24px}
 body :is(.brief.sp,.brief) :is(.dp,.pearls,.danger,.rule,.crit,.vignette) .lbl{font-size:14px;line-height:20px;font-weight:650;letter-spacing:0;text-transform:none;margin-bottom:8px}
-body .brief table th{font-size:13px;line-height:18px;font-weight:700;letter-spacing:0;text-transform:none;color:var(--muted)}
+body .brief:where(:not(.v2)) table th{font-size:13px;line-height:18px;font-weight:700;letter-spacing:0;text-transform:none;color:var(--muted)}
 body .brief .tw td{font-size:16px;line-height:23px;font-weight:450}
 html:is([data-theme],:not([data-theme])) body .brief .tw td:first-child{font-weight:700}
 body.study .brief td .ex{color:var(--ink-2)}

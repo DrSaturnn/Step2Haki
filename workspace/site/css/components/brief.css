@@ -45,7 +45,7 @@ h3.system .n{font-size:11.5px;font-family:var(--sans);color:var(--t-h3-system-n-
 .brief{background:linear-gradient(145deg,var(--p-F3F4F4) 0%,var(--p-EDEEEE) 52%,var(--p-E7E9E9) 100%);background-color:var(--t-brief-bgc);border-radius:var(--r-card);box-shadow:var(--t-brief-sh,var(--e1));padding:30px 34px 26px;margin:0 0 26px;scroll-margin-top:22px}
 .brief + .brief{border-top:var(--t-brief-border-top);padding-top:30px}
 .brief > h4{font-family:var(--serif);font-size:25px;font-weight:600;color:var(--t-brief-h4-fg,var(--ink));margin:0 0 5px;letter-spacing:-.25px}
-.brief .sub{font-size:13.2px;color:var(--t-brief-sub-fg,var(--muted));margin:0 0 22px;letter-spacing:.2px}
+.brief:where(:not(.v2)) .sub{font-size:13.2px;color:var(--t-brief-sub-fg,var(--muted));margin:0 0 22px;letter-spacing:.2px}
 .brief.bs h5{color:var(--t-brief-bs-h5-fg,var(--board))}
 .brief.bs + .brief.bs{border-top:var(--t-brief-bs-bs-border-top)}
 .dp{border-radius:var(--r-sub);padding:19px 22px;margin:0 0 18px;box-shadow:var(--t-dp-sh,var(--inner));font-size:15px;line-height:1.68}
@@ -393,7 +393,7 @@ body .sp-chip .mask.axm-study:not(.shown){color:var(--t-body-sp-chip-mask-axm-st
 .brief.sp .sp-ins .ins > p::before{content:"";position:absolute;left:8px;top:.75em;width:5px;height:5px;border-radius:50%;background:var(--t-brief-sp-sp-ins-ins-p-before-bg,var(--criteria))}
 .brief.sp .sp-s2 .sv p{margin:0;padding:1px 0}
 .brief.sp .sp-s2 .sv p + p{margin-top:5px}
-.brief.sp .op{display:inline-block;padding:0 6px;color:var(--t-brief-sp-op-fg,var(--muted));font-weight:400}
+.brief.sp:where(:not(.v2)) .op{display:inline-block;padding:0 6px;color:var(--t-brief-sp-op-fg,var(--muted));font-weight:400}
 .brief.sp .op-a::before{content:"→"}
 .brief.sp .op-p::before{content:"+"}
 .brief.sp .sp-s2 .sp-nm{margin-left:2px}
@@ -470,7 +470,7 @@ body .axm-flat .brief{--g-card:var(--t-body-g-card)}
 body .brief.axm-flat{--g-card:var(--t-body-g-card-2)}
 body .brief > h4{font:800 48px/54px var(--sans);letter-spacing:-.9px;margin:0 0 8px;color:var(--ink)}
 html:is([data-theme],:not([data-theme])) body .brief > h4::after{line-height:1.2;vertical-align:14px}
-body .brief .sub{font-size:19px;line-height:26px;font-weight:500;letter-spacing:0;color:var(--muted);margin:0 0 30px}
+body .brief:where(:not(.v2)) .sub{font-size:19px;line-height:26px;font-weight:500;letter-spacing:0;color:var(--muted);margin:0 0 30px}
 body .brief .sub .subq{display:block;max-width:720px;margin-top:18px;font:700 23px/30px var(--sans);letter-spacing:-.2px;font-style:normal;color:var(--ink)}
 body .brief h5.tsec{font:700 30px/36px var(--sans);letter-spacing:-.5px;margin:64px 0 18px}
 body .brief.sp h5.sp-h{gap:14px;margin:64px 0 18px}
@@ -492,7 +492,7 @@ body .sp-card{max-width:360px;padding:14px 16px;border-radius:20px}
 @media (--phone){
 body .brief > h4{font-size:32px;line-height:38px;letter-spacing:-.5px}
 html:is([data-theme],:not([data-theme])) body .brief > h4::after{vertical-align:7px}
-body .brief .sub{font-size:16px;line-height:22px;margin-bottom:24px}
+body .brief:where(:not(.v2)) .sub{font-size:16px;line-height:22px;margin-bottom:24px}
 body .brief .sub .subq{font-size:19px;line-height:25px;margin-top:12px}
 body .brief h5.tsec{font-size:24px;line-height:30px;letter-spacing:-.3px;margin:44px 0 14px}
 body .brief.sp h5.sp-h{gap:12px;margin:44px 0 14px}
