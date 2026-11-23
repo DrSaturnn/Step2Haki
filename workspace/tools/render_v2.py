@@ -17,7 +17,7 @@ E = lambda s: H.escape(str(s), quote=False)
 A = lambda s: H.escape(str(s), quote=True)
 
 # ---------- record strings ----------
-STRUCT = {'geometry', 'c', 'under', 'assembled', 'empty', 'chrome', 'mark', 'ref', 'xdom', 'kind', 'align', 'x', 'lv', 'row', 'once', 'warn', 'format', 'id', 'entry', 'source', 'attrs', 'tone', 'form', 'task', 'to', 'src', 'version', 'status', 'urgent', 'correct', 'key', 'b', 'i', 'nbme', 'op', 'type', 'nl'}
+STRUCT = {'avoid_form', 'geometry', 'c', 'under', 'assembled', 'empty', 'chrome', 'mark', 'ref', 'xdom', 'kind', 'align', 'x', 'lv', 'row', 'once', 'warn', 'format', 'id', 'entry', 'source', 'attrs', 'tone', 'form', 'task', 'to', 'src', 'version', 'status', 'urgent', 'correct', 'key', 'b', 'i', 'nbme', 'op', 'type', 'nl'}
 CHROME = {'Dotted line', 'hover or tap for the reason', 'If', '→', 'Avoid', 'Chain and insights', 'Stack', 'List', 'Review', 'Related topics',
           'Illness script', 'Presentation', 'Workup', 'Treatment', 'When the answer changes', 'Diagnosis', 'Differential',
           'Practice questions'}
@@ -157,8 +157,14 @@ def bare(x):
         return E(x)
     return ''.join(('<br>' if r.get('nl') else '') + E(r['t']) if set(r) <= {'t', 'nl'} else run(r, tx=bare) for r in x)
 
+def uses(lines):
+    """one idea per line, a bold lead run drawn bold and plain runs as bare text"""
+    return '<div class="uses">%s</div>' % ''.join('<div>%s</div>' % bare(v) for v in lines)
+
 def kv(row, drug=False):
-    if drug and row['k'] == 'Mechanism':
+    if row.get('form') == 'list':
+        body = uses(row['v'])
+    elif drug and row['k'] == 'Mechanism':
         body = '<div class="mech">%s</div>' % ''.join('<div>%s</div>' % chain_line(v) for v in row['v'])
     elif drug and row['k'] in LIST_ROWS:
         body = '<div class="uses">%s</div>' % ''.join(
@@ -189,7 +195,7 @@ def table(t, caption=True, cls=''):
     return '%s<table class="c3 tb%s">%s<tbody>%s</tbody></table>' % (cap, cls, head, rows)
 
 def drawer(d, extra='', plain=False):
-    body = []
+    body = [''.join(kv(r) for r in d.get('rows', []))]
     tl = d.get('timeline')
     if tl and any(x.get('why') for x in tl):
         body.append('<ol class="tlv mon">%s</ol>' % ''.join('<li><b>%s</b><span>%s</span>%s</li>' % (
@@ -211,8 +217,8 @@ def drawer(d, extra='', plain=False):
         else:
             body.append('<div class="ln"><b>%s</b><br>%s</div>' % (text(it['label']), text(it['text'])))
     for ln in d.get('lines', []):
-        body.append(line(ln))
-    return '<div class="dz"><button type="button">%s</button><div class="body">%s%s</div></div>' % (E(d['title']), extra, ''.join(body))
+        body.append(line(ln, plain=plain))
+    return '<div class="dz"><button type="button">%s</button><div class="body%s">%s%s</div></div>' % (E(d['title']), ' thr' if d.get('rows') else '', extra, ''.join(body))
 
 # ---------- slots ----------
 def script(s, drug=False):
@@ -318,19 +324,22 @@ def workup(w, plain=False):
         notes = ''.join(line(x, plain=True, style='' if (k or also) else 'border-top:0;padding-top:14px') for k, x in enumerate(notes))
     else:
         notes = ''.join(line(x) for x in notes)
-    return '<table class="c3">%s<tbody>%s</tbody></table>%s%s%s' % (head, ''.join(rows), also, notes, skip)
+    panels = ''.join('<div class="sub gr" style="margin-top:14px"><b>%s</b></div><div class="thr">%s</div>' % (E(p_['label']), ''.join(kv(r) for r in p_['rows']))
+                     for p_ in w.get('panels', []))           # a titled panel of labeled rows under the table
+    return '<table class="c3">%s<tbody>%s</tbody></table>%s%s%s%s' % (head, ''.join(rows), also, notes, skip, panels)
 
 def treatment(t, plain=False):
     out = []
     for s in t.get('ladder', []):
-        if s.get('group'):                         # a titled group of rungs (ssri-effects): a header band, as a Workup group
-            out.append('<div class="lgp"><b>%s</b></div>' % E(s['group']))
+        if s.get('group'):                         # a titled group of rungs, by diagnosis or situation: the bold sub-header
+            out.append('<div class="sub lg"><b>%s</b>%s</div>' % (E(s['group']), '<span class="hq">%s</span>' % text(s['group_q']) if s.get('group_q') else ''))
         do = s['do']
         do = '<div class="it">%s</div>' % (it_text(do) if plain else text(do)) if not isinstance(do, str) else '<b class="act">%s</b>' % E(do)
         out.append('<div class="lad"><div><span class="ck%s">%s</span></div><div><span class="wh">%s</span>%s</div></div>'
                    % ((' g' if s.get('tone') == 'confirm' else '') + (' wr' if len(s['chip']) > 12 else ''), E(s['chip']), text(s['when']), do))   # a long chip wraps in its column
     if t.get('avoid'):
-        out.append('<div class="lad avd"><div>Avoid</div><div>%s</div></div>' % ''.join('<span>%s</span>' % text(x) for x in t['avoid']))
+        items = uses(t['avoid']) if t.get('avoid_form') == 'list' else ''.join('<span>%s</span>' % text(x) for x in t['avoid'])
+        out.append('<div class="lad avd"><div>Avoid</div><div>%s</div></div>' % items)
     out += [drawer(d, plain=plain) for d in t.get('drawers', [])]
     if t.get('followup'):
         out.append(drawer(t['followup'], plain=plain))
@@ -366,6 +375,12 @@ def dxtable(d, zebra=False):
             rows.append('<tr%s><td>%s</td><td>%s</td><td>%s</td></tr>' % (z, name, text(r['features']), text(r['decides'])))
             n += 1
     return '<table class="c3%s">%s<tbody>%s</tbody></table>' % (' zb' if zebra else '', head, ''.join(rows))
+
+def zebra(t):
+    """a lookup table beside Practice (phases, casts, complications): zebra rows; a two-column table is marked two"""
+    head = '<thead><tr>%s</tr></thead>' % ''.join('<th>%s</th>' % E(h) for h in t['head'])
+    rows = ''.join('<tr%s>%s</tr>' % (' class="z"' if n % 2 == 0 else '', ''.join('<td>%s</td>' % text(c) for c in r)) for n, r in enumerate(t['rows']))
+    return '<table class="c3 zb%s">%s<tbody>%s</tbody></table>' % (' two' if len(t['head']) == 2 else '', head, rows)
 
 CURVE = '<svg preserveAspectRatio="none" viewBox="0 0 100 60"><path class="a" d="M0,54 L6,54 C12,54 16,10 24,10 C32,10 36,40 46,40 L100,40 L100,60 L0,60 Z"></path><path class="l" d="M0,54 L6,54 C12,54 16,10 24,10 C32,10 36,40 46,40 L100,40"></path></svg>'
 
@@ -454,10 +469,13 @@ def layout_disease(rec):
     d = S.get('differential')
     if d:
         notes = ''.join(line(x, plain=True, style='' if k else 'border-top:0;padding-top:14px') for k, x in enumerate(d.get('notes', [])))
-        inner = (figure(d['figure']) if d.get('figure') else '') + dxtable(tables[0], zebra=True) + notes
+        more = ''.join('<div class="sub gr" style="margin-top:14px"><b>%s</b></div>%s' % (E(t['title']), dxtable(t, zebra=True)) for t in tables[1:])
+        inner = (figure(d['figure']) if d.get('figure') else '') + dxtable(tables[0], zebra=True) + more + notes
         out.append(blk('Differential', card(inner, 'bx card" style="padding-top:18px' if d.get('figure') else 'bx card'), 'ddx'))
-    extra = ''.join(blk(t['title'], card(dxtable(t, zebra=True))) for t in tables[1:])
-    out.append(two(extra, practice(rec), 'two pq'))
+    sd = S.get('side')
+    side = blk(sd['title'], ''.join(card((sub(c['label']) if c.get('label') else '') + (dxtable(c['table'], zebra=True) if 'groups' in c['table'] else zebra(c['table'])))
+                                     for c in sd['cards'])) if sd else ''
+    out.append(two(side, practice(rec), 'two pq'))
     rail = [('script', '1', 'Illness script'), ('work', '2', 'Workup'), ('tx', '3', 'Treatment'), ('ddx', '4', 'Differential'), ('prac', '', 'Practice')]
     return out, rail, {}
 
