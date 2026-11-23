@@ -122,6 +122,8 @@
     // current section: the last one whose heading has reached the threshold
     var cur = 0;
     var sth = Math.max(th + 8, vh * 0.32);   // a step is current once its heading passes 32% of the window, on desktop and phone: the same line as the sidebar index
+    var strip = pick.v2 && pick.el.querySelector('.v2strip');
+    if(strip && strip.offsetParent) sth = strip.getBoundingClientRect().bottom + 40;   // a v2 brief: the line its step strip marks by (29-v2.js)
     pick.secs.forEach(function(s, i){ if(s.el && s.el !== pick.el && s.el.getBoundingClientRect().top <= sth) cur = i; });
     if(pick.secs[0] && !pick.secs[0].el){ /* spine brief whose first step is absent: never */ }
     if(wide) fillTo(pick, cur);
