@@ -458,7 +458,8 @@ def div_span(h, start):
 def render(rec):
     """the brief's inner markup: title line, then the layout's rows; returns (html, rail, css)"""
     body, rail, extra = LAYOUTS[rec['entry']](rec)
-    head = '<div class="head"><div><h1>%s</h1>\n<p>%s</p></div></div>' % (E(rec['title']), E(rec['lead']))
+    head = ('<div class="head"><div><h1>%s</h1>\n<p>%s</p></div>\n<div class="legend"><span>Dotted line</span>: hover or tap for the reason</div></div>'
+            % (E(rec['title']), E(rec['lead'])))
     rl = ''.join('<button type="button" data-k="%s"><i>%s</i>%s</button>' % (k, n, E(lbl)) for k, n, lbl in rail)
     inner = '<div class="v2r"><nav class="v2rail" hidden>%s</nav>%s%s</div>' % (rl, head, '\n'.join(body))
     return inner, rail, extra.get('css', '')
