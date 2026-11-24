@@ -23,6 +23,7 @@ lead). A record line is one string or one run list of the record. The claim map 
   held      a line with no carrier that the editor would cut or cannot place: fails until listed in --held-ok
 Every record line outside Practice is named by a row ("new") or by an "added" entry whose "src" names where it comes
 from: {"at": "BLOCK.LINE"} or {"file": PATH, "n": LINE NUMBER, "text": THAT LINE}. A label of the pilots needs no source.
+An added entry with "held": REASON in place of "src" is a record line with no source found: it fails as held.
 """
 import copy
 import csv
@@ -476,6 +477,10 @@ def check_claims(rec, move, claims, env, others=None, sources=None, held_ok=()):
             out.append(('v2-source', 'an added entry names a line that is not in the record: %r' % t[:70]))
             continue
         named.add(t)
+        if a.get('held'):
+            if (rec.get('id'), 'added:' + t) not in held_ok:
+                out.append(('v2-held', 'record line held, no source found (%s): %r' % (a['held'], t[:70])))
+            continue
         if not a.get('src'):
             out.append(('v2-source', 'the added line %r names no source' % t[:70]))
             continue
@@ -529,7 +534,7 @@ def read_csv_set(path, n):
         return {}
     return {tuple(r[:n]) if n > 1 else r[0]: r for r in csv.reader(open(path, encoding='utf-8')) if r and not r[0].startswith('#') and r[0] != 'id'}
 
-def check_dir(rdir, env, ids=None, move_dir=None, sources=None, waive=None, held_ok=None, held_out=None):
+def check_dir(rdir, env, ids=None, move_dir=None, sources=None, waive=None, held_ok=None, held_out=None, claims_only=()):
     """{id: [(code, message)]} for every record of the folder"""
     recs = {}
     for f in sorted(os.listdir(rdir)):
@@ -556,11 +561,13 @@ def check_dir(rdir, env, ids=None, move_dir=None, sources=None, waive=None, held
         else:
             move = json.load(open(os.path.join(move_dir, rid + '.json'), encoding='utf-8'))
             claims = json.load(open(cp, encoding='utf-8'))
-            out += [('v2-identity', m) for m in check_identity(rec, move)]
+            if rid not in claims_only:
+                out += [('v2-identity', m) for m in check_identity(rec, move)]
             c = check_claims(rec, move, claims, env, recs, sources, ho)
             out += c
             P = page_lines(move)
             held += [(rid, str(r.get('at')), r.get('reason', ''), P.get(str(r.get('at')), ('',))[0]) for r in claims.get('rows', []) if r.get('status') == 'held']
+            held += [(rid, 'added:' + norm(x.get('text', '')), x['held'], norm(x.get('text', ''))) for x in claims.get('added', []) if x.get('held')]
         res[rid] = out
     if held_out:
         w = csv.writer(open(held_out, 'w', encoding='utf-8', newline=''))
@@ -777,6 +784,9 @@ def selftest(pdir, env):
         def d_srcneg(r, m, c):
             add_line(r, 'Troponin over 14 ng/L does not suggest myocardial injury.')
             c['added'].append({'text': 'Troponin over 14 ng/L does not suggest myocardial injury.', 'src': [{'file': 'source.md', 'n': 2, 'text': 'Troponin over 14 ng/L suggests myocardial injury.'}]})
+        def d_heldadd(r, m, c):
+            add_line(r, 'Troponin over 14 ng/L suggests myocardial injury.')
+            c['added'].append({'text': 'Troponin over 14 ng/L suggests myocardial injury.', 'held': 'no source found'})
         def d_ghost(r, m, c):
             c['added'].append({'text': 'A line that the record does not hold.', 'src': [{'at': '1.1'}]})
         def d_tobrief(r, m, c):
@@ -806,7 +816,7 @@ def selftest(pdir, env):
                  ('edit drops a number', 'v2-lock', d_number), ('edit adds a number', 'v2-source', d_newnum),
                  ('cut for a reason outside the list', 'v2-cut', d_cut), ('repeat cut whose carrier lacks the number', 'v2-lock', d_repeat),
                  ('a fact cut as chrome', 'v2-cut', d_chrome), ('a page block cut as off-page', 'v2-cut', d_offpage),
-                 ('held line with no decision', 'v2-held', d_held),
+                 ('held line with no decision', 'v2-held', d_held), ('record line held with no decision', 'v2-held', d_heldadd),
                  ('added line with no entry', 'v2-source', d_added), ('added line with no source', 'v2-source', d_nosrc),
                  ('source page line that does not exist', 'v2-source', d_srcat), ('source file that does not exist', 'v2-source', d_srcfile),
                  ('source line number past the file', 'v2-source', d_srcline), ('source text not on that line', 'v2-source', d_srcecho),
