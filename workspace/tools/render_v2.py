@@ -486,6 +486,12 @@ def dx_name(x):
         return '<span>%s</span>%s' % (E(x[0]['t'].rstrip()), run(x[1], ' stm'))
     return text(x)
 
+DECIDES = re.compile(r'decid|distinguish|sets it apart', re.I)
+
+def nd(head):
+    """a table whose last column is not a deciding feature: the phone draws that column in normal weight"""
+    return '' if DECIDES.search(head[-1]) else ' nd'
+
 def tiled(d):
     """a Dx table split into two or more named groups: one tbody per group, drawn as one tile per group on the phone"""
     return sum(bool(g.get('label')) for g in d.get('groups', [])) >= 2
@@ -504,14 +510,14 @@ def dxtable(d, zebra=False):
             n += 1
         bodies.append(''.join(rows))
     body = ''.join('<tbody>%s</tbody>' % b for b in bodies) if tiled(d) else '<tbody>%s</tbody>' % ''.join(bodies)
-    return '<table class="c3%s">%s%s</table>' % (' zb' if zebra else '', head, body)
+    return '<table class="c3%s">%s%s</table>' % (' zb' + nd(d['head']) if zebra else '', head, body)
 
 def zebra(t, label_col=False):
     """a lookup table beside Practice (phases, casts, complications): zebra rows; a two-column table is marked two,
     or k2 when its first column takes a fixed share of the width"""
     head = '<thead><tr>%s</tr></thead>' % ''.join('<th>%s</th>' % E(h) for h in t['head'])
     rows = ''.join('<tr%s>%s</tr>' % (' class="z"' if n % 2 == 0 else '', ''.join('<td>%s</td>' % text(c) for c in r)) for n, r in enumerate(t['rows']))
-    cls = ' k2' if label_col else ' two' if len(t['head']) == 2 else ''
+    cls = (' k2' if label_col else ' two' if len(t['head']) == 2 else '') + (nd(t['head']) if len(t['head']) > 2 else '')
     return '<table class="c3 zb%s">%s<tbody>%s</tbody></table>' % (cls, head, rows)
 
 CURVE = '<svg preserveAspectRatio="none" viewBox="0 0 100 60"><path class="a" d="M0,54 L6,54 C12,54 16,10 24,10 C32,10 36,40 46,40 L100,40 L100,60 L0,60 Z"></path><path class="l" d="M0,54 L6,54 C12,54 16,10 24,10 C32,10 36,40 46,40 L100,40"></path></svg>'
@@ -731,7 +737,7 @@ def hub_table(d):
     rows = [r for g in d['groups'] for r in g['rows']]
     body = ''.join('<tr%s><td>%s</td><td>%s</td><td>%s</td></tr>' % (' class="z"' if n % 2 == 0 else '', bare(r['dx']), bare(r['features']), M(bare(r['decides']), 'decides'))
                    for n, r in enumerate(rows))
-    return '<table class="c3 zb">%s<tbody>%s</tbody></table>' % (head, body)
+    return '<table class="c3 zb%s">%s<tbody>%s</tbody></table>' % (nd(d['head']), head, body)
 
 def layout_hub(rec):
     """the complaint overview: the five rows of every brief type, with Overview beside Rule out first"""

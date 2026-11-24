@@ -722,3 +722,6 @@
 @container frame (max-width:700px){.brief.v2 .bx .c3.zb td:nth-child(3)::before{margin:0 8px 0 0}}
 .brief.v2 .bx .c3.k2 td:first-child{width:34%}
 .brief.v2 .bx .c3.k2 td:nth-child(2){width:auto}
+@container frame (min-width:701px){.brief.v2 .sub.lg .hq{white-space:nowrap}}
+@container frame (max-width:700px){.brief.v2 .bx .c3.zb td:nth-child(3) b{font-weight:700}}
+@container frame (max-width:700px){.brief.v2 .bx .c3.zb.nd td:nth-child(3){font-weight:400}}
