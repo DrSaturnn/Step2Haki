@@ -399,6 +399,23 @@ def wl_table(t):
     rows = ''.join('<tr>%s</tr>' % ''.join(cell('td', text(v), k == len(r) - 1) for k, v in enumerate(r)) for r in t['rows'])
     return '<table class="wl"><thead><tr>%s</tr></thead><tbody>%s</tbody></table>' % (head, rows)
 
+def wk_cells(x, k):
+    """one Workup result: the finding cell (one finding per line) and the meaning cell (the diagnosis, then a muted
+    qualifier line); both wait on the test, and the diagnosis is masked"""
+    res = x['result']
+    res = '<br>'.join(text(l) for l in res['lines']) if isinstance(res, dict) else text(res)
+    m = x['means']
+    if isinstance(m, dict):
+        m = wt(M(text(m['dx']), 'workup meaning'), k) + '<span class="mq">%s</span>' % wt(text(m['q']), k)
+    else:
+        m = wt(M(text(m), 'workup meaning'), k)
+    return '<td class="r">%s</td><td class="m">%s</td>' % (wt(res, k), m)
+
+def wk_sv(x, sep):
+    """a short plain result (12 characters or fewer) keeps its meaning on its line on the phone"""
+    sv = isinstance(x['result'], str) and len(x['result']) <= 12
+    return (sep + 'sv' if sep else ' class="sv"') if sv else ''
+
 def workup(w, plain=False):
     rows = []
     for g in w['groups']:
@@ -409,12 +426,11 @@ def workup(w, plain=False):
             cond = '<span class="cond2"><i>If</i> %s</span>' % text(r['if']) if r.get('if') else ''
             test, k = mk(text(r['test']), 'workup test')
             if not r['results']:                                  # a test with no result line on the page: empty cells
-                rows.append('<tr><td>%s%s</td><td></td><td></td></tr>' % (test, cond)); continue
-            res = lambda x: (wt(text(x['result']), k), wt(M(text(x['means']), 'workup meaning'), k))   # both wait on the test
+                rows.append('<tr><td>%s%s</td><td class="r"></td><td class="m"></td></tr>' % (test, cond)); continue
             first, rest = r['results'][0], r['results'][1:]
             span = ' rowspan="%d"' % len(r['results']) if rest else ''   # the test cell spans its result rows
-            rows.append('<tr><td%s>%s%s</td><td>%s</td><td>%s</td></tr>' % ((span, test, cond) + res(first)))
-            rows += ['<tr class="cont rs"><td>%s</td><td>%s</td></tr>' % res(x) for x in rest]
+            rows.append('<tr%s><td%s>%s%s</td>%s</tr>' % (wk_sv(first, ''), span, test, cond, wk_cells(first, k)))
+            rows += ['<tr class="cont rs%s">%s</tr>' % (wk_sv(x, ' '), wk_cells(x, k)) for x in rest]
     head = '<thead><tr>%s</tr></thead>' % ''.join('<th>%s</th>' % E(h) for h in w['head'])
     also = ''.join('<div class="ln"><span class="cond2"><i>If</i> %s</span>%s</div>' % (text(a['if']), '<br>'.join('<b>%s</b>' % M(text(x), 'workup test') for x in a['tests']))
                    for a in w.get('also', []))          # tests the source gives no result for
@@ -433,7 +449,7 @@ def workup(w, plain=False):
         notes = ''.join(note(x) for x in notes)
     panels = ''.join('<div class="sub gr" style="margin-top:14px"><b>%s</b></div><div class="thr">%s</div>' % (E(p_['label']), ''.join(kv(r) for r in p_['rows']))
                      for p_ in w.get('panels', []))           # a titled panel of labeled rows under the table
-    return '<table class="c3">%s<tbody>%s</tbody></table>%s%s%s%s' % (head, ''.join(rows), also, notes, skip, panels)
+    return '<table class="c3 wk">%s<tbody>%s</tbody></table>%s%s%s%s' % (head, ''.join(rows), also, notes, skip, panels)
 
 def treatment(t, plain=False):
     out = []
@@ -470,25 +486,33 @@ def dx_name(x):
         return '<span>%s</span>%s' % (E(x[0]['t'].rstrip()), run(x[1], ' stm'))
     return text(x)
 
+def tiled(d):
+    """a Dx table split into two or more named groups: one tbody per group, drawn as one tile per group on the phone"""
+    return sum(bool(g.get('label')) for g in d.get('groups', [])) >= 2
+
 def dxtable(d, zebra=False):
     head = '<thead><tr>%s</tr></thead>' % ''.join('<th>%s</th>' % E(h) for h in d['head'])
-    rows, n = [], 0
+    bodies = []
     for g in d['groups']:
+        rows, n = [], 0
         if g.get('label'):
             rows.append(('<tr class="grp"><td colspan="3"><b>%s</b></td></tr>' if zebra else '<tr class="grp"><td colspan="3">%s</td></tr>') % E(g['label']))
-            n = 0                                  # the stripes start again under each group label
-        for r in g['rows']:
+        for r in g['rows']:                         # the stripes start again under each group label
             z = ' class="z"' if zebra and n % 2 == 0 else ''
             name = dx_name(r['dx']) if zebra else text(r['dx'])
             rows.append('<tr%s><td>%s</td><td>%s</td><td>%s</td></tr>' % (z, name, text(r['features']), M(text(r['decides']), 'decides')))
             n += 1
-    return '<table class="c3%s">%s<tbody>%s</tbody></table>' % (' zb' if zebra else '', head, ''.join(rows))
+        bodies.append(''.join(rows))
+    body = ''.join('<tbody>%s</tbody>' % b for b in bodies) if tiled(d) else '<tbody>%s</tbody>' % ''.join(bodies)
+    return '<table class="c3%s">%s%s</table>' % (' zb' if zebra else '', head, body)
 
-def zebra(t):
-    """a lookup table beside Practice (phases, casts, complications): zebra rows; a two-column table is marked two"""
+def zebra(t, label_col=False):
+    """a lookup table beside Practice (phases, casts, complications): zebra rows; a two-column table is marked two,
+    or k2 when its first column takes a fixed share of the width"""
     head = '<thead><tr>%s</tr></thead>' % ''.join('<th>%s</th>' % E(h) for h in t['head'])
     rows = ''.join('<tr%s>%s</tr>' % (' class="z"' if n % 2 == 0 else '', ''.join('<td>%s</td>' % text(c) for c in r)) for n, r in enumerate(t['rows']))
-    return '<table class="c3 zb%s">%s<tbody>%s</tbody></table>' % (' two' if len(t['head']) == 2 else '', head, rows)
+    cls = ' k2' if label_col else ' two' if len(t['head']) == 2 else ''
+    return '<table class="c3 zb%s">%s<tbody>%s</tbody></table>' % (cls, head, rows)
 
 CURVE = '<svg preserveAspectRatio="none" viewBox="0 0 100 60"><path class="a" d="M0,54 L6,54 C12,54 16,10 24,10 C32,10 36,40 46,40 L100,40 L100,60 L0,60 Z"></path><path class="l" d="M0,54 L6,54 C12,54 16,10 24,10 C32,10 36,40 46,40 L100,40"></path></svg>'
 
@@ -578,10 +602,16 @@ def layout_disease(rec):
     if d:
         notes = ''.join(line(x, plain=True, style='' if k else 'border-top:0;padding-top:14px') for k, x in enumerate(d.get('notes', [])))
         more = ''.join('<div class="sub gr" style="margin-top:14px"><b>%s</b></div>%s' % (E(t['title']), dxtable(t, zebra=True)) for t in tables[1:])
-        inner = (figure(d['figure']) if d.get('figure') else '') + dxtable(tables[0], zebra=True) + more + notes
-        out.append(blk('Differential', card(inner, 'bx card" style="padding-top:18px' if d.get('figure') else 'bx card'), 'ddx'))
+        fig = figure(d['figure']) if d.get('figure') else ''
+        fcls = 'bx card" style="padding-top:18px'
+        if tiled(tables[0]):                       # the grouped table alone in its card; the rest in a card after it
+            inner = (card(fig, fcls) if fig else '') + card(dxtable(tables[0], zebra=True), 'bx card tiles') + (card((more + notes).replace(' style="margin-top:14px"', '', 1)) if more or notes else '')
+            out.append(blk('Differential', inner, 'ddx'))
+        else:
+            inner = fig + dxtable(tables[0], zebra=True) + more + notes
+            out.append(blk('Differential', card(inner, fcls if fig else 'bx card'), 'ddx'))
     sd = S.get('side')
-    side = blk(sd['title'], ''.join(card((sub(c['label']) if c.get('label') else '') + (dxtable(c['table'], zebra=True) if 'groups' in c['table'] else zebra(c['table'])))
+    side = blk(sd['title'], ''.join(card((sub(c['label']) if c.get('label') else '') + (dxtable(c['table'], zebra=True) if 'groups' in c['table'] else zebra(c['table'], c.get('label_col'))))
                                      for c in sd['cards'])) if sd else ''
     out.append(two(side, practice(rec), 'two pq'))
     rail = [('script', '1', 'Illness script'), ('work', '2', 'Workup'), ('tx', '3', 'Treatment'), ('ddx', '4', 'Differential'), ('prac', '', 'Practice')]
