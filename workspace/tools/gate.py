@@ -760,7 +760,10 @@ def check_lints(page, page_path, ref_html, g, attr_only=False, docs=True):
             if (was is None and n > 0) or (was is not None and n > was):
                 g.fail('prose-lint', bid, '%s: %d prose hits (baseline %s); run tools/spine/prose_lint.py PAGE --brief %s' % (bid, n, 'none' if was is None else was, bid))
     if ref_html is not None and not attr_only:
+        v2ids = set(re.findall(r'<div class="brief\b[^"]*\bv2\b[^"]*" id="([^"]+)"', page))   # linted by record line (v2-prose; D-20261124-4)
         for b in prose_lint.changed_briefs(ref_html, page):
+            if b.id in v2ids:
+                continue
             hits = prose_lint.lint_brief(b.inner, touched=True)
             if hits:
                 eg = '; '.join('%s: %s' % (h['pattern'], h['text'][:60]) for h in hits[:3])

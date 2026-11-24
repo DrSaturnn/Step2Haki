@@ -59,9 +59,10 @@ def _soup(html):
     return s.body or s
 
 
-def nbme_blocks(inner):
+def nbme_blocks(inner, v2=False):
     """NBME blocks outside the question bank and outside pause points (div.sp-pause, .pp-b), outermost only:
-    [{kind, label, data_nbme, hash, words, text}] (content_audit.py section 6 detector)."""
+    [{kind, label, data_nbme, hash, words, text}] (content_audit.py section 6 detector). v2: a format v2 brief,
+    where an answer-change row (div.wc) holds what the pause points held and counts as one (D-20261124-4)."""
     soup = _soup(inner)
     for bank in soup.select('ol.bank'):
         bank.decompose()
@@ -77,6 +78,8 @@ def nbme_blocks(inner):
             continue
         seen.add(id(el))
         if el.find_parent('div', class_='sp-pause') or 'pp-b' in cl or el.find_parent(class_='pp-b'):
+            continue
+        if v2 and (('wc' in cl and el.name == 'div') or el.find_parent('div', class_='wc')):
             continue
         t = norm(el.get_text(' '))
         out.append({'kind': el.name + '.' + '.'.join(cl), 'label': labt[:40], 'data_nbme': el.get('data-nbme', ''),
@@ -156,11 +159,13 @@ def check(ref_html, page_html, changed_ids, root=None):
     if ref_html is not None:
         for b in briefs(ref_html):
             ref[b.id] = ref.get(b.id, '') + b.inner
-    cur = {}
+    cur, v2 = {}, set()
     for b in briefs(page_html):
         cur[b.id] = cur.get(b.id, '') + b.inner
+        if 'v2' in (getattr(b, 'classes', None) or []):
+            v2.add(b.id)
     for bid, inner in cur.items():
-        nb = nbme_blocks(inner)
+        nb = nbme_blocks(inner, bid in v2)
         if bid in ref:
             was = len(nbme_blocks(ref[bid]))
             if len(nb) > was:

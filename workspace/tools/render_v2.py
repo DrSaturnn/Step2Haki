@@ -451,7 +451,7 @@ def workup(w, plain=False):
         notes = ''.join(note(x, plain=True, style='' if (k or also) else 'border-top:0;padding-top:14px') for k, x in enumerate(notes))
     else:
         notes = ''.join(note(x) for x in notes)
-    panels = ''.join('<div class="sub gr" style="margin-top:14px"%s><b>%s</b></div><div class="thr">%s</div>' % (srcattr(p_), E(p_['label']), ''.join(kv(r) for r in p_['rows']))
+    panels = ''.join('<div class="sub gr" style="margin-top:14px"><b%s>%s</b></div><div class="thr">%s</div>' % (srcattr(p_), E(p_['label']), ''.join(kv(r) for r in p_['rows']))
                      for p_ in w.get('panels', []))           # a titled panel of labeled rows under the table
     return '<table class="c3 wk">%s<tbody>%s</tbody></table>%s%s%s%s' % (head, ''.join(rows), also, notes, skip, panels)
 

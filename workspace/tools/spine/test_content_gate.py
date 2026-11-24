@@ -43,6 +43,10 @@ nb = cg.nbme_blocks(inner)
 ok(len(nb) == 3, 'nbme_blocks: pc-nbq, NBME-labelled div and data-nbme div found; pause point, pp-b and bank skipped (%d)' % len(nb))
 ok(len(cg.nbme_blocks('<div class="pc-nbq"><div class="nbq">inner NBME block text</div></div>')) == 1, 'nbme_blocks: outermost only')
 ok(cg.nbme_blocks('<div class="pearls"><span class="lbl">Mnemonic</span> no board label</div>') == [], 'nbme_blocks: other labels ignored')
+wc = '<div class="wc" data-nbme="psych-form-000000"><span><i>If</i> a bait</span><b>Answer</b></div>'
+ok(len(cg.nbme_blocks(wc)) == 1, 'nbme_blocks: an answer-change row outside a v2 brief is a block')
+ok(cg.nbme_blocks(wc, v2=True) == [], 'nbme_blocks: an answer-change row in a v2 brief counts as a pause point (D-20261124-4)')
+ok(len(cg.nbme_blocks('<div class="sub" data-nbme="psych-form-000000">Title</div>', v2=True)) == 1, 'nbme_blocks: in a v2 brief, a data-nbme div that is no answer-change row is still a block')
 ok(nb[0]['hash'] == cg.h8(cg.norm('NBME question Setup: sertraline stopped, then dizziness.')), 'nbme_blocks: hash is h8 of normalized text')
 
 # workup_in_step2
