@@ -13,8 +13,8 @@ is the folder of move records (extract.py), the page's own text per brief. --sou
 folder per brief id with its source files. --waive lists records that carry no claim map, each with a reason.
 --held-ok lists held lines the owner has decided. Exit 0 pass, 1 fail.
 
-A page line is one visible line of a block of the move record, named "BLOCK.LINE" (block 0 is the title, lead and
-kicker). A record line is one string or one run list of the record. The claim map gives every page line one row:
+A page line is one visible line of a block of the move record, named "BLOCK.LINE" (block 0 is the title and the
+lead). A record line is one string or one run list of the record. The claim map gives every page line one row:
   carried   the same words, in the mapped slot          "new": [record line, ...]
   moved     the same words, in another slot or brief    "new": [...], optional "to_brief": ID
   edited    reworded; every number, hedge, negation, side and name of the page line is in "new" plus "also"
@@ -119,7 +119,7 @@ def html_lines(html):
 def page_lines(move):
     """{at: (text, html, is_label, fill)} in page order"""
     out = {}
-    env = [move.get('title'), move.get('lead'), move.get('kicker')] + list(move.get('aka') or [])
+    env = [move.get('title'), move.get('lead')]
     for i, s in enumerate(x for x in env if x and norm(x)):
         out['0.%d' % (i + 1)] = (norm(s), norm(s), i == 0, 'move')
     for b in move.get('legacy', []):
@@ -367,6 +367,9 @@ def check_identity(rec, move):
         out.append('record id %r, brief id %r' % (rec.get('id'), move.get('id')))
     if rec.get('attrs') != move.get('attrs'):
         out.append('brief attributes differ from the page')
+    for k in ('kicker', 'aka'):
+        if rec.get(k) != move.get(k):
+            out.append('%s differs from the page' % k)
     want = set(re.findall(r'data-nbme="([^"]+)"', ' '.join(b.get('html', '') for b in move.get('legacy', []))))
     have = json.dumps({k: v for k, v in rec.items() if k != 'legacy'})
     for n in sorted(want):
@@ -599,7 +602,7 @@ def fixture(rec):
                    'html': '<div class="vignette"><p>A 30-year-old man has 2 days of chest pain.</p></div>'})
     blocks.append({'block': str(len(blocks) + 1), 'section': 'Fixture', 'kind': 'div', 'slot': 'x', 'fill': 'edit', 'masks': '0',
                    'html': '<div><span class="lbl">Bottom line</span><p>Fever over 39 C for 5 days may suggest Kawasaki disease.</p></div>'})
-    move = {'id': rec['id'], 'attrs': copy.deepcopy(rec.get('attrs')), 'practice': copy.deepcopy(rec['practice']), 'legacy': blocks}
+    move = {'id': rec['id'], 'attrs': copy.deepcopy(rec.get('attrs')), 'kicker': rec.get('kicker'), 'aka': copy.deepcopy(rec.get('aka')), 'practice': copy.deepcopy(rec['practice']), 'legacy': blocks}
     P = page_lines(move)
     rows = []
     for at, (t, _, lab, fill) in P.items():
@@ -789,7 +792,9 @@ def selftest(pdir, env):
             relink(r, c, p, t)
         def d_nbme(r, m, c):
             m['legacy'][-2]['html'] = m['legacy'][-2]['html'].replace('<p>', '<p data-nbme="psych-form-000000">', 1)
-        tests = [('NBME coverage link dropped', 'v2-identity', d_nbme), ('contrast form added to a line', 'v2-prose', d_prose), ('required slot removed', 'v2-slots', d_slot), ('required inner slot emptied', 'v2-slots', d_sub),
+        def d_kicker(r, m, c):
+            r['kicker'] = 'changed'
+        tests = [('kicker changed', 'v2-identity', d_kicker), ('NBME coverage link dropped', 'v2-identity', d_nbme), ('contrast form added to a line', 'v2-prose', d_prose), ('required slot removed', 'v2-slots', d_slot), ('required inner slot emptied', 'v2-slots', d_sub),
                  ('legacy block left', 'v2-legacy', d_legacy), ('assembler notes left', 'v2-legacy', d_asm),
                  ('empty line', 'v2-empty', d_empty), ('source named in a line', 'v2-rules', d_mark),
                  ('record the schema refuses', 'v2-record', d_draw),
