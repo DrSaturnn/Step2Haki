@@ -124,6 +124,8 @@ def page_lines(move):
     for i, s in enumerate(x for x in env if x and norm(x)):
         out['0.%d' % (i + 1)] = (norm(s), norm(s), i == 0, 'move')
     for b in move.get('legacy', []):
+        if b.get('slot') == 'practice':          # a question bank: compared whole by the identity check
+            continue
         for i, (t, h, lab) in enumerate(html_lines(b['html'])):
             out['%s.%d' % (b.get('block'), i + 1)] = (t, h, lab, b.get('fill', ''))
     return out
@@ -350,7 +352,7 @@ def check_record(rec, env):
     if env.R and not any(c == 'v2-record' for c, _ in out):
         try:
             inner, _, _ = env.R.render(rec)
-            lost, added = env.R.check(rec, inner)
+            lost, added = env.R.check({k: v for k, v in rec.items() if k not in ENVELOPE}, inner)
             for s in list(lost)[:5]:
                 out.append(('v2-draw', 'not drawn: %r' % s[:80]))
             for s in list(added)[:5]:
@@ -361,6 +363,16 @@ def check_record(rec, env):
 
 # ---------- checks against the page: identity, claim map, lock, sources ----------
 STATUS = ('carried', 'moved', 'edited', 'cut', 'held')
+RETIRED = {'Diagnostic workup', 'Diagnostic test', 'Pause point', 'Chain', 'Insights', 'Bottom line', 'Offered as', 'Pearls',
+           'Common wrong answers', 'General rule', 'NBME framing', 'Key points', 'Related topics'}
+
+def is_chrome(text, lab, labels=()):
+    """a line the layout draws or drops: an arrow or other mark with no word, a retired or pilot label, a short label element"""
+    if not re.search(r'[^\W_]', text):
+        return True
+    if re.search(r'\d', text) or len(text.split()) > 6:
+        return False
+    return bool(lab) or text in RETIRED or text in labels
 
 def check_identity(rec, move):
     out = []
@@ -388,6 +400,7 @@ def check_claims(rec, move, claims, env, others=None, sources=None, held_ok=()):
     """[(code, message)] for the claim map of one converted brief"""
     out = []
     P = page_lines(move)
+    bank = set(str(b.get('block')) for b in move.get('legacy', []) if b.get('slot') == 'practice')
     RL = rec_lines(rec)
     rtext = {}
     for _, t, h in RL:
@@ -417,6 +430,8 @@ def check_claims(rec, move, claims, env, others=None, sources=None, held_ok=()):
 
     for r in rows:
         at = str(r.get('at'))
+        if at.split('.')[0] in bank:
+            continue
         if at not in P:
             out.append(('v2-claims', 'row %s names no page line' % at))
             continue
@@ -460,7 +475,7 @@ def check_claims(rec, move, claims, env, others=None, sources=None, held_ok=()):
                     if miss:
                         out.append(('v2-lock', '%s: the carriers of the cut lack %s' % (at, ', '.join('%s %s' % m for m in miss[:6]))))
             elif why == 'chrome':
-                if not (lab and len(text.split()) <= 6 and not re.search(r'\d', text)):
+                if not is_chrome(text, lab, env.labels):
                     out.append(('v2-cut', '%s: %r is not a label, so it cannot be cut as chrome' % (at, text[:60])))
             elif why == 'off-page':
                 if fill != 'off-page':
@@ -587,6 +602,8 @@ def seed(move, assembled):
         k = json.dumps(sorted(words(t).items()))
         if fill == 'off-page':
             r.update(status='cut', reason='off-page')
+        elif not re.search(r'[^\W_]', t) or t in RETIRED:
+            r.update(status='cut', reason='chrome')
         elif k in rt:
             r.update(status='carried', new=[rt[k]])
         rows.append(r)
@@ -605,17 +622,22 @@ def fixture(rec):
     for i in range(0, len(lines), 6):
         blocks.append({'block': str(len(blocks) + 1), 'section': 'Fixture', 'kind': 'div', 'slot': 'x', 'fill': 'edit', 'masks': '0',
                        'html': '<div>%s</div>' % ''.join('<p>%s</p>' % h for _, h in lines[i:i + 6])})
+    blocks.append({'block': str(len(blocks) + 1), 'section': 'Practice', 'kind': 'ol.bank', 'slot': 'practice', 'fill': 'move', 'masks': '0',
+                   'html': '<ol class="bank"><li>A 40-year-old woman has 3 weeks of cough.</li></ol>'})
+    blocks.append({'block': str(len(blocks) + 1), 'section': 'Fixture', 'kind': 'div', 'slot': 'x', 'fill': 'edit', 'masks': '0',
+                   'html': '<div><p>Chain</p><p>\u2192</p></div>'})
     blocks.append({'block': str(len(blocks) + 1), 'section': 'Fixture', 'kind': 'div.vignette', 'slot': '', 'fill': 'off-page', 'masks': '0',
                    'html': '<div class="vignette"><p>A 30-year-old man has 2 days of chest pain.</p></div>'})
     blocks.append({'block': str(len(blocks) + 1), 'section': 'Fixture', 'kind': 'div', 'slot': 'x', 'fill': 'edit', 'masks': '0',
                    'html': '<div><span class="lbl">Bottom line</span><p>Fever over 39 C for 5 days may suggest Kawasaki disease.</p></div>'})
+    rec['kicker'] = 'one · two · three'
     move = {'id': rec['id'], 'attrs': copy.deepcopy(rec.get('attrs')), 'kicker': rec.get('kicker'), 'aka': copy.deepcopy(rec.get('aka')), 'practice': copy.deepcopy(rec['practice']), 'legacy': blocks}
     P = page_lines(move)
     rows = []
     for at, (t, _, lab, fill) in P.items():
         if fill == 'off-page':
             rows.append({'at': at, 'line': t, 'status': 'cut', 'reason': 'off-page'})
-        elif t == 'Bottom line':
+        elif t in ('Bottom line', 'Chain', '\u2192'):
             rows.append({'at': at, 'line': t, 'status': 'cut', 'reason': 'chrome'})
         elif t.startswith('Fever over 39'):
             rows.append({'at': at, 'line': t, 'status': 'held', 'reason': 'no slot'})
