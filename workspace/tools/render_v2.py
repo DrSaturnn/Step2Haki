@@ -42,11 +42,15 @@ def strings(o, key=None):
 
 # source names in any case; authoring marks in capitals only ("conflict" is also a clinical word)
 
+def srcattr(o):
+    """a source link: data-nbme for an NBME coverage link (nbme: true), the page's coverage id; data-src otherwise"""
+    return ' data-%s="%s"' % ('nbme' if o.get('nbme') is True else 'src', A(o['src'])) if o.get('src') else ''
+
 def tip_html(tip, tx=None):
     tx = tx or text
     if isinstance(tip, str):
         return '<span class="yp">%s</span>' % E(tip)
-    src = ' data-src="%s"' % A(tip['src']) if tip.get('src') else ''
+    src = srcattr(tip)
     out = []
     if tip.get('title'):
         out.append('<b class="yt">%s</b>' % E(tip['title']))
@@ -62,7 +66,7 @@ def run(r, cls='', tx=None):
     if 'op' in r:
         return pre + '<span class="op %s" role="img" aria-label="%s"></span>' % ('op-a' if r['op'] == 'leads to' else 'op-p', r['op'])
     t = text(r['rich']) if 'rich' in r else E(r['t'])
-    src = ' data-src="%s"' % A(r['src']) if r.get('src') else ''
+    src = srcattr(r)
     if r.get('tip') is not None:
         return pre + '<span class="it ti%s"%s><span class="y" role="button" tabindex="0">%s</span>%s</span>' % (cls, src, t, tip_html(r['tip'], tx))
     if r.get('to'):
@@ -447,7 +451,7 @@ def workup(w, plain=False):
         notes = ''.join(note(x, plain=True, style='' if (k or also) else 'border-top:0;padding-top:14px') for k, x in enumerate(notes))
     else:
         notes = ''.join(note(x) for x in notes)
-    panels = ''.join('<div class="sub gr" style="margin-top:14px"><b>%s</b></div><div class="thr">%s</div>' % (E(p_['label']), ''.join(kv(r) for r in p_['rows']))
+    panels = ''.join('<div class="sub gr" style="margin-top:14px"%s><b>%s</b></div><div class="thr">%s</div>' % (srcattr(p_), E(p_['label']), ''.join(kv(r) for r in p_['rows']))
                      for p_ in w.get('panels', []))           # a titled panel of labeled rows under the table
     return '<table class="c3 wk">%s<tbody>%s</tbody></table>%s%s%s%s' % (head, ''.join(rows), also, notes, skip, panels)
 
@@ -474,7 +478,7 @@ def answer_changes(ac):
         out.append(sub(key[:1].upper() + key[1:]))
         for r in rows:
             chip = '<b class="ul">Urgent</b>' if r.get('urgent') else ''
-            src = ' data-src="%s"' % A(r['src']) if r.get('src') else ''
+            src = srcattr(r)
             then, k = mk(text(r['then']), 'answer')
             out.append('<div class="wc%s"%s>%s<span><i>If</i> %s</span><b>%s</b>%s</div>'
                        % (' urg' if chip else '', src, chip, bare(r['if']) if any(x.get('c') == 'fr' for x in (r['if'] if isinstance(r['if'], list) else [])) else text(r['if']), then, '<em>%s</em>' % wt(text(r['why']), k) if r.get('why') else ''))

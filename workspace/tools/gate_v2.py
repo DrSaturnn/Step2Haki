@@ -384,10 +384,20 @@ def check_identity(rec, move):
         if rec.get(k) != move.get(k):
             out.append('%s differs from the page' % k)
     want = set(re.findall(r'data-nbme="([^"]+)"', ' '.join(b.get('html', '') for b in move.get('legacy', []))))
-    have = json.dumps({k: v for k, v in rec.items() if k != 'legacy'})
-    for n in sorted(want):
-        if '"%s"' % n not in have:
-            out.append('NBME coverage link %s of the page is not in the record' % n)
+    have = set()                                       # links the renderer draws: src on an object with nbme: true
+    def walk(o):
+        if isinstance(o, dict):
+            if o.get('nbme') is True and isinstance(o.get('src'), str):
+                have.update(o['src'].split())
+            for v in o.values():
+                walk(v)
+        elif isinstance(o, list):
+            for v in o:
+                walk(v)
+    walk({k: v for k, v in rec.items() if k not in ('legacy', 'attrs')})     # data-nid in attrs is not a coverage link
+    want = set(x for v in want for x in v.split())
+    for n in sorted(want - have):
+        out.append('NBME coverage link %s of the page is not in the record (an object with src and nbme: true)' % n)
     a, b = rec.get('practice', {}).get('items', []), move.get('practice', {}).get('items', [])
     if [x.get('id') for x in a] != [x.get('id') for x in b]:
         out.append('practice item ids or their order differ from the page (%d against %d)' % (len(a), len(b)))
