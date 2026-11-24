@@ -549,6 +549,14 @@ def read_csv_set(path, n):
         return {}
     return {tuple(r[:n]) if n > 1 else r[0]: r for r in csv.reader(open(path, encoding='utf-8')) if r and not r[0].startswith('#') and r[0] != 'id'}
 
+def held_rows(rid, move, claims):
+    """[(id, at, reason, line)]: the held lines the owner decides. A row whose `at` is no page line (a question-bank
+    row: identity compares the bank whole) is not listed."""
+    P = page_lines(move)
+    out = [(rid, str(r.get('at')), r.get('reason', ''), P[str(r.get('at'))][0]) for r in claims.get('rows', [])
+           if r.get('status') == 'held' and str(r.get('at')) in P]
+    return out + [(rid, 'added:' + norm(x.get('text', '')), x['held'], norm(x.get('text', ''))) for x in claims.get('added', []) if x.get('held')]
+
 def check_dir(rdir, env, ids=None, move_dir=None, sources=None, waive=None, held_ok=None, held_out=None, claims_only=()):
     """{id: [(code, message)]} for every record of the folder"""
     recs = {}
@@ -580,9 +588,7 @@ def check_dir(rdir, env, ids=None, move_dir=None, sources=None, waive=None, held
                 out += [('v2-identity', m) for m in check_identity(rec, move)]
             c = check_claims(rec, move, claims, env, recs, sources, ho)
             out += c
-            P = page_lines(move)
-            held += [(rid, str(r.get('at')), r.get('reason', ''), P.get(str(r.get('at')), ('',))[0]) for r in claims.get('rows', []) if r.get('status') == 'held']
-            held += [(rid, 'added:' + norm(x.get('text', '')), x['held'], norm(x.get('text', ''))) for x in claims.get('added', []) if x.get('held')]
+            held += held_rows(rid, move, claims)
         res[rid] = out
     if held_out:
         w = csv.writer(open(held_out, 'w', encoding='utf-8', newline=''))
