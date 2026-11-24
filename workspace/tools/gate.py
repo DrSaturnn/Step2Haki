@@ -44,7 +44,7 @@ CATALOG = {
                     'add data-shelf with tokens from fm, peds, psych (e.g. "fm", "peds psych" or "fm peds")'),
     'brief-bp': ('every brief has data-bp; every token is an NBME code from the page OUT.codes map',
                  'add data-bp="<primary> [secondary]" using codes from the NBME script (gen immune heme ...)'),
-    'brief-h4': ('every brief has exactly one <h4> title', 'add a short <h4> topic name as the first child'),
+    'brief-h4': ('every brief has exactly one <h4> title (a format v2 brief: one <h1>)', 'add a short <h4> topic name as the first child'),
     'dup-id': ('element ids are unique in the static page', 'rename the NEW element id; never rename an existing brief id'),
     'nav-link': ('every brief has exactly one #navlinks link in its system, class bs (Part II), aq (Aquifer source) or none (topic); a hub also has one plain link in Presentations (s146c)',
                  'add/fix <a href="#id"> under the right .sect group; Part II class="bs", Aquifer-source class="aq"'),
@@ -318,7 +318,10 @@ def check_page(page, g, page_path):
             g.fail('brief-bp', b.id, '%s has no data-bp' % b.id)
         elif codes and not set(bp.split()) <= codes:
             g.fail('brief-bp', b.id, '%s data-bp=%r has unknown code(s) %s' % (b.id, bp, sorted(set(bp.split()) - codes)))
-        if len(re.findall(r'<h4\b', b.inner)) != 1:
+        if 'v2' in b.classes:                # a format v2 brief is titled by the renderer's one <h1>
+            if len(re.findall(r'<h1\b', b.inner)) != 1:
+                g.fail('brief-h4', b.id, '%s (format v2) has %d <h1>' % (b.id, len(re.findall(r'<h1\b', b.inner))))
+        elif len(re.findall(r'<h4\b', b.inner)) != 1:
             g.fail('brief-h4', b.id, '%s has %d <h4>' % (b.id, len(re.findall(r'<h4\b', b.inner))))
 
     # ---- page-wide ids and anchors
@@ -436,10 +439,13 @@ def check_page(page, g, page_path):
             g.fail('item-typed-no-id', 'offset%d' % m.start(), 'typed <li> without data-item-id at offset %d: %s' % (m.start(), m.group(0)[:90]))
 
     # ---- per-brief content rules
-    h4map = {nkey(b.title): b.id for b in bl}
+    def v2_title(b):
+        m = re.search(r'<h1>(.*?)</h1>', b.inner, re.S)
+        return H.unescape(re.sub(r'<[^>]+>', '', m.group(1))) if m else ''
+    h4map = {nkey(v2_title(b) if 'v2' in b.classes else b.title): b.id for b in bl}
     for b in bl:
         inn = b.inner
-        for m in re.finditer(r'<table\b[^>]*>', inn):
+        for m in re.finditer(r'<table\b[^>]*>', inn if 'v2' not in b.classes else ''):   # v2 tables are drawn from slots (gate_v2)
             cap = inn[m.end():].lstrip().startswith('<caption')
             pre = re.sub(r'<div class="tw[^"]*">\s*$', '', inn[:m.start()].rstrip()).rstrip()
             # a Type C section header (h5.tsec) opens a section; it is not the table's title
@@ -746,8 +752,11 @@ def check_lints(page, page_path, ref_html, g, attr_only=False, docs=True):
     pbase = json.load(open(pbase_path, encoding='utf-8')) if os.path.exists(pbase_path) else None
     cur = prose_lint.page_counts(page)
     if pbase is not None:
+        v2 = set(re.findall(r'<div class="brief\b[^"]*\bv2\b[^"]*" id="([^"]+)"', page))   # linted by record line (v2-prose)
         for bid, n in sorted(cur.items()):
             was = pbase.get(bid)
+            if bid in v2:
+                continue
             if (was is None and n > 0) or (was is not None and n > was):
                 g.fail('prose-lint', bid, '%s: %d prose hits (baseline %s); run tools/spine/prose_lint.py PAGE --brief %s' % (bid, n, 'none' if was is None else was, bid))
     if ref_html is not None and not attr_only:
@@ -764,6 +773,27 @@ def check_lints(page, page_path, ref_html, g, attr_only=False, docs=True):
     except ValueError as e:
         g.fail('step-moves', 'json', 'a repair/*/nbme_keep.json or step_moves.json file does not parse: %s' % e)
 
+def check_v2(page, g, rdir=None):
+    """slot checks on every brief drawn in format v2 (gate_v2.py); records in local/records_v2/"""
+    ids = re.findall(r'<div class="brief\b[^"]*\bv2\b[^"]*" id="([^"]+)"', page)
+    if not ids:
+        return
+    import gate_v2
+    CATALOG.update(gate_v2.CATALOG)
+    rdir = rdir or os.path.join(REPO, 'local', 'records_v2')
+    have = set(f[:-5] for f in os.listdir(rdir) if f.endswith('.json') and f.count('.') == 1) if os.path.isdir(rdir) else set()
+    for i in ids:
+        if i not in have:
+            g.fail('v2-record', i, '%s is drawn in format v2 and has no record in local/records_v2/' % i)
+    if not have:
+        return
+    res = gate_v2.check_dir(rdir, gate_v2.Env(), set(ids) & have, os.path.join(rdir, 'move'), os.path.join(rdir, 'sources'),
+                            os.path.join(rdir, 'WAIVE.csv'), os.path.join(rdir, 'HELD_OK.csv'))
+    for rid, fs in res.items():
+        for n, (code, msg) in enumerate(fs):
+            g.fail(code, '%s %d' % (rid, n), '%s: %s' % (rid, msg))
+
+
 def main(argv):
     args, page_path, base, attr_ref = list(argv), None, 'HEAD', None
     allow_path = os.path.join(REPO, 'tools', 'gate_allowlist.txt')
@@ -771,6 +801,8 @@ def main(argv):
     no_docs = '--no-doc-lint' in args
     args = [a for a in args if a != '--no-doc-lint']
     if '--list' in args:
+        import gate_v2
+        CATALOG.update(gate_v2.CATALOG)
         for k, (d, fx) in CATALOG.items():
             print('%-18s %s\n%-18s fix: %s' % (k, d, '', fx))
         return 0
@@ -798,6 +830,7 @@ def main(argv):
     ref_html = load_ref(base)
     if ref_html is not None:
         check_base(page, ref_html, bl, it, g)
+    check_v2(page, g)
     check_lints(page, page_path, ref_html, g, attr_only=bool(attr_ref), docs=not no_docs)
     n_attr = None
     if attr_ref:
