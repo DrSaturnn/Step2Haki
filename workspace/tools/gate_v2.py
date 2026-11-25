@@ -2,7 +2,7 @@
 """gate_v2: checks on format v2 brief records. Each check reads slots; none reads page markup for meaning.
 
   python3 tools/gate_v2.py check RECORDS_DIR [--ids A,B] [--move DIR] [--sources DIR] [--waive FILE] [--held-ok FILE]
-                                 [--schema FILE] [--lint DIR] [--no-draw] [--held-out FILE]
+                                 [--schema FILE] [--lint DIR] [--no-draw] [--held-out FILE] [--splits FILE]
   python3 tools/gate_v2.py seed MOVE.json ASSEMBLED.json OUT.claims.json     a claim map with every page line listed
   python3 tools/gate_v2.py lines FILE.json [--move]                          the lines of a record, or of a move record
   python3 tools/gate_v2.py selftest PILOTS_DIR [--schema FILE] [--lint DIR]  every check on a planted defect
@@ -11,7 +11,9 @@
 RECORDS_DIR holds ID.json (the record render_v2.py draws) and ID.claims.json (the claim map of the edit pass). --move
 is the folder of move records (extract.py), the page's own text per brief. --sources is the folder that holds one
 folder per brief id with its source files. --waive lists records that carry no claim map, each with a reason.
---held-ok lists held lines the owner has decided. Exit 0 pass, 1 fail.
+--held-ok lists held lines the owner has decided. --splits is a CSV (parent, id, part, title, v2_type, layout): a
+parent brief drawn as two or more part records, checked by one claim map (PARENT.claims.json) whose rows name their
+part in "to_brief". Exit 0 pass, 1 fail.
 
 A page line is one visible line of a block of the move record, named "BLOCK.LINE" (block 0 is the title and the
 lead). A record line is one string or one run list of the record. The claim map gives every page line one row:
@@ -67,6 +69,8 @@ CATALOG = {
                 'send the held list to the owner; a decided line goes in the held-ok file'),
     'v2-source': ('every record line is named by a claim row or by an added entry with a source line that exists and holds its numbers and names',
                   'name the page line or the source file line the wording comes from; wording with no source is removed'),
+    'v2-split': ('a split brief: every page line of the parent lands in exactly one part, each part has the id, title and type of its split row, and the parts share the parent\'s practice items and NBME links with none lost or doubled',
+                 'give each row of the parent claim map "to_brief": the part that carries it; a line two parts need is carried in one and sourced in the other as an added entry ({"at": BLOCK.LINE})'),
 }
 
 # ---------- text ----------
@@ -374,16 +378,10 @@ def is_chrome(text, lab, labels=()):
         return False
     return bool(lab) or text in RETIRED or text in labels
 
-def check_identity(rec, move):
-    out = []
-    if rec.get('id') != move.get('id'):
-        out.append('record id %r, brief id %r' % (rec.get('id'), move.get('id')))
-    if rec.get('attrs') != move.get('attrs'):
-        out.append('brief attributes differ from the page')
-    for k in ('kicker', 'aka'):
-        if rec.get(k) != move.get(k):
-            out.append('%s differs from the page' % k)
-    want = set(re.findall(r'data-nbme="([^"]+)"', ' '.join(b.get('html', '') for b in move.get('legacy', []))))
+def nbme_want(move):
+    return set(x for v in re.findall(r'data-nbme="([^"]+)"', ' '.join(b.get('html', '') for b in move.get('legacy', []))) for x in v.split())
+
+def nbme_have(rec):
     have = set()                                       # links the renderer draws: src on an object with nbme: true
     def walk(o):
         if isinstance(o, dict):
@@ -395,7 +393,18 @@ def check_identity(rec, move):
             for v in o:
                 walk(v)
     walk({k: v for k, v in rec.items() if k not in ('legacy', 'attrs')})     # data-nid in attrs is not a coverage link
-    want = set(x for v in want for x in v.split())
+    return have
+
+def check_identity(rec, move):
+    out = []
+    if rec.get('id') != move.get('id'):
+        out.append('record id %r, brief id %r' % (rec.get('id'), move.get('id')))
+    if rec.get('attrs') != move.get('attrs'):
+        out.append('brief attributes differ from the page')
+    for k in ('kicker', 'aka'):
+        if rec.get(k) != move.get(k):
+            out.append('%s differs from the page' % k)
+    want, have = nbme_want(move), nbme_have(rec)
     for n in sorted(want - have):
         out.append('NBME coverage link %s of the page is not in the record (an object with src and nbme: true)' % n)
     a, b = rec.get('practice', {}).get('items', []), move.get('practice', {}).get('items', [])
@@ -406,8 +415,9 @@ def check_identity(rec, move):
         out.append('%d practice item(s) differ from the page in attributes or markup' % n)
     return out
 
-def check_claims(rec, move, claims, env, others=None, sources=None, held_ok=()):
-    """[(code, message)] for the claim map of one converted brief"""
+def check_claims(rec, move, claims, env, others=None, sources=None, held_ok=(), cover=True, extra_labels=()):
+    """[(code, message)] for the claim map of one converted brief. cover=False (a part of a split brief): the split
+    check counts the rows of every page line across the parts; extra_labels are lines the split row supplies."""
     out = []
     P = page_lines(move)
     bank = set(str(b.get('block')) for b in move.get('legacy', []) if b.get('slot') == 'practice')
@@ -417,7 +427,7 @@ def check_claims(rec, move, claims, env, others=None, sources=None, held_ok=()):
         rtext.setdefault(t, h)
     rows = claims.get('rows', [])
     seen = Counter(str(r.get('at')) for r in rows)
-    for at in P:
+    for at in P if cover else ():
         if seen[at] != 1:
             out.append(('v2-claims', 'page line %s has %d rows: %r' % (at, seen[at], P[at][0][:60])))
     named = set()
@@ -519,7 +529,7 @@ def check_claims(rec, move, claims, env, others=None, sources=None, held_ok=()):
             out.append(('v2-source', 'the added line %r holds %s that its source lines do not' % (t[:50], ', '.join('%s %s' % m for m in back[:6]))))
     env_lines = set(norm(x) for x in [rec.get('title'), rec.get('lead')] if x)
     for _, t, _ in RL:
-        if t in named or t in env.labels:
+        if t in named or t in env.labels or t in extra_labels:
             continue
         if t in env_lines and any(P[a][0] == t for a in P if a.startswith('0.')):
             continue
@@ -567,8 +577,85 @@ def held_rows(rid, move, claims):
            if r.get('status') == 'held' and str(r.get('at')) in P]
     return out + [(rid, 'added:' + norm(x.get('text', '')), x['held'], norm(x.get('text', ''))) for x in claims.get('added', []) if x.get('held')]
 
-def check_dir(rdir, env, ids=None, move_dir=None, sources=None, waive=None, held_ok=None, held_out=None, claims_only=()):
-    """{id: [(code, message)]} for every record of the folder"""
+def read_splits(path):
+    """{parent id: [{id, part, title, v2_type, layout}, ...]} in part order, from a CSV with those columns plus parent"""
+    out = {}
+    if path and os.path.exists(path):
+        for r in csv.DictReader(open(path, encoding='utf-8')):
+            out.setdefault(r['parent'], []).append(r)
+    for v in out.values():
+        v.sort(key=lambda r: int(r.get('part') or 0))
+    return out
+
+def check_split(parent, parts, recs, move, claims, env, sources=None, held_ok=()):
+    """{part id: [(code, message)]} for one split brief. parts: its split rows; recs: {id: record}. The parent claim map
+    gives every page line one row with "to_brief" (the part that carries it); "added" entries name their part the same
+    way. Held lines are listed and decided under the parent id. The part that keeps the parent id keeps the page's attributes, kicker and aka."""
+    res = {p['id']: [] for p in parts}
+    first = parts[0]['id']
+    held_ok = set(held_ok) | set((p['id'], at) for x, at in held_ok if x == parent for p in parts)   # decided under the parent id
+    pid = set(res)
+    P = page_lines(move)
+    bank = set(str(b.get('block')) for b in move.get('legacy', []) if b.get('slot') == 'practice')
+    seen = Counter(str(r.get('at')) for r in claims.get('rows', []))
+    for at in P:
+        if seen[at] != 1:
+            res[first].append(('v2-split', 'page line %s of %s has %d rows across the parts: %r' % (at, parent, seen[at], P[at][0][:60])))
+    sub = {i: {'id': i, 'rows': [], 'added': []} for i in pid}
+    for key in ('rows', 'added'):
+        for r in claims.get(key, []):
+            at = str(r.get('at', 'added'))
+            if key == 'rows' and at.split('.')[0] in bank:
+                continue
+            tb = r.get('to_brief')
+            if tb not in pid:
+                res[first].append(('v2-split', '%s %s: to_brief %r is not a part of %s (%s)' % (key[:-1] if key == 'rows' else 'added', at if key == 'rows' else repr(norm(r.get('text', ''))[:50]), tb, parent, ', '.join(sorted(pid)))))
+                continue
+            sub[tb][key].append({k: v for k, v in r.items() if k != 'to_brief'})
+    items = move.get('practice', {}).get('items', [])
+    qk = lambda x: x.get('id') or json.dumps(x, sort_keys=True)      # a mockup item has no id
+    ids = [qk(x) for x in items]
+    owner = Counter()
+    for p in parts:
+        i = p['id']
+        rec = recs.get(i)
+        if rec is None:
+            res[i].append(('v2-split', 'part %s of %s has no record (%s.json)' % (i, parent, i)))
+            continue
+        if rec.get('id') != i:
+            res[i].append(('v2-split', 'file %s.json holds record id %r' % (i, rec.get('id'))))
+        if p.get('v2_type') and rec.get('entry') != p['v2_type']:
+            res[i].append(('v2-split', 'part %s is entry %r; its split row says %r' % (i, rec.get('entry'), p['v2_type'])))
+        if p.get('title') and norm(str(rec.get('title', ''))) != norm(p['title']):
+            res[i].append(('v2-split', 'part %s title %r; its split row says %r' % (i, norm(str(rec.get('title', '')))[:60], p['title'][:60])))
+        if i == parent:
+            for m in check_identity(dict(rec, practice=move.get('practice')), move):
+                if not m.startswith(('NBME', 'practice')):
+                    res[i].append(('v2-identity', m))
+        mine = [qk(x) for x in rec.get('practice', {}).get('items', [])]
+        pos = [ids.index(x) if x in ids else -1 for x in mine]
+        if -1 in pos:
+            res[i].append(('v2-split', 'part %s holds %d practice item(s) that are not the page items (ids, attributes or markup differ)' % (i, pos.count(-1))))
+        elif pos != sorted(pos):
+            res[i].append(('v2-split', 'part %s keeps its practice items out of the page order' % i))
+        else:
+            ch = [n for n, x in zip(pos, rec['practice']['items']) if x != items[n]]
+            if ch:
+                res[i].append(('v2-split', 'part %s: %d practice item(s) differ from the page in attributes or markup' % (i, len(ch))))
+        owner.update(mine)
+        res[i] += check_claims(rec, move, sub[i], env, None, sources, held_ok, cover=False, extra_labels={norm(p['title'])} if p.get('title') else ())
+    for x in ids:
+        if owner[x] != 1:
+            res[first].append(('v2-split', 'practice item %s of %s is in %d parts' % (x[:40], parent, owner[x])))
+    have = set().union(*[nbme_have(recs[p['id']]) for p in parts if p['id'] in recs])
+    for n in sorted(nbme_want(move) - have):
+        res[first].append(('v2-split', 'NBME coverage link %s of %s is in no part' % (n, parent)))
+    return res
+
+def check_dir(rdir, env, ids=None, move_dir=None, sources=None, waive=None, held_ok=None, held_out=None, claims_only=(), splits=None):
+    """{id: [(code, message)]} for every record of the folder. splits: read_splits(); a part is checked with its parent."""
+    splits = splits or {}
+    partof = {p['id']: par for par, ps in splits.items() for p in ps}
     recs = {}
     for f in sorted(os.listdir(rdir)):
         if f.endswith('.json') and f.count('.') == 1:
@@ -577,8 +664,26 @@ def check_dir(rdir, env, ids=None, move_dir=None, sources=None, waive=None, held
     env.prose_base = {k: v[1] for k, v in read_csv_set(os.path.join(rdir, 'PROSE_BASELINE.csv'), 1).items()}
     ho = set(read_csv_set(held_ok, 2))
     res, held = {}, []
+    for par, ps in splits.items():
+        if ids and par not in ids:
+            continue
+        sp = {p['id']: [] for p in ps}
+        for p in ps:
+            if p['id'] in recs:
+                sp[p['id']] += check_record(recs[p['id']], env)
+        mp, cp = os.path.join(move_dir or '', par + '.json'), os.path.join(rdir, par + '.claims.json')
+        if not move_dir or not os.path.exists(mp):
+            sp[ps[0]['id']].append(('v2-claims', 'no move record for %s: the page text cannot be compared' % par))
+        elif not os.path.exists(cp):
+            sp[ps[0]['id']].append(('v2-claims', 'no claim map (%s.claims.json) for the split brief' % par))
+        else:
+            move, claims = json.load(open(mp, encoding='utf-8')), json.load(open(cp, encoding='utf-8'))
+            for k, v in check_split(par, ps, recs, move, claims, env, sources, ho).items():
+                sp[k] += v
+            held += held_rows(par, move, claims)
+        res.update(sp)
     for rid, rec in recs.items():
-        if ids and rid not in ids:
+        if ids and rid not in ids and partof.get(rid) not in ids or rid in partof:
             continue
         out = []
         if rec.get('id') != rid:
@@ -897,6 +1002,7 @@ def selftest(pdir, env):
         f = run(ok_added[0], ok_added[1], ok_added[2], held, sd)
         rows.append((rid, 'added line with a true source line', 'none', 'passes' if not f else 'FAILS ' + str(f[:2])))
         bad += bool(f)
+    bad += split_selftest(pil, env, rows)
     for r in rows:
         if r[3] not in ('caught', 'passes'):
             print('  %-16s %-48s %-12s %s' % r)
@@ -907,6 +1013,88 @@ def selftest(pdir, env):
         print('codes with no caught defect:', ', '.join(miss)); bad += 1
     print('selftest %s' % ('PASS' if not bad else 'FAIL'))
     return 1 if bad else 0
+
+def split_fixture(rec):
+    """a parent brief made of two copies of a pilot: part 1 keeps the parent id, the first half of the practice items and
+    every claim row; part 2 holds the rest of the items and names each of its lines by an added entry"""
+    rec, move, claims, held = fixture(rec)
+    par = rec['id']
+    a, b = copy.deepcopy(rec), copy.deepcopy(rec)
+    b['id'] = par + '-p2'
+    b['title'] = 'Second Part of the Fixture'
+    items = move['practice']['items']
+    h = max(1, len(items) // 2)
+    a['practice']['items'], b['practice']['items'] = copy.deepcopy(items[:h]), copy.deepcopy(items[h:])
+    at_of = {}
+    for at, (t, _, _, _) in page_lines(move).items():
+        at_of.setdefault(t, at)
+    for r in claims['rows']:
+        r['to_brief'] = par
+    seen = set()
+    for _, t, _ in rec_lines(b):
+        if t in seen or t == norm(b['title']):
+            continue
+        seen.add(t)
+        claims['added'].append({'to_brief': b['id'], 'text': t, 'src': [{'at': at_of[t]}]} if t in at_of else {'to_brief': b['id'], 'text': t, 'held': 'fixture'})
+    parts = [{'parent': par, 'id': par, 'part': '1', 'title': norm(str(a.get('title', ''))), 'v2_type': a['entry'], 'layout': ''},
+             {'parent': par, 'id': b['id'], 'part': '2', 'title': b['title'], 'v2_type': b['entry'], 'layout': ''}]
+    return parts, {par: a, b['id']: b}, move, claims, held
+
+def split_selftest(pil, env, rows):
+    """planted defects of a split brief; each must give v2-split (or the code named)"""
+    bad = 0
+    for rid in [r for r in ('pe', 'limp') if r in pil]:
+        parts, recs, move, claims, held = split_fixture(pil[rid])
+        ok_held = {held} | set((rid, 'added:' + norm(x['text'])) for x in claims['added'] if x.get('held'))
+
+        def run(ps, rs, m, c):
+            out = []
+            for p in ps:
+                if p['id'] in rs:
+                    out += check_record(rs[p['id']], env)
+            return out + [x for v in check_split(rid, ps, rs, m, c, env, None, ok_held).values() for x in v]
+        clean = run(parts, recs, move, claims)
+        rows.append((rid, 'split brief, clean', 'none', 'passes' if not clean else 'FAILS ' + str(clean[:2])))
+        bad += bool(clean)
+        p2 = parts[1]['id']
+
+        def d_nopart(ps, rs, m, c): c['rows'][0].pop('to_brief')
+        def d_badpart(ps, rs, m, c): c['rows'][0]['to_brief'] = 'elsewhere'
+        def d_double(ps, rs, m, c): c['rows'].append(dict(c['rows'][0], to_brief=p2))
+        def d_lost(ps, rs, m, c): c['rows'].pop(0)
+        def d_qboth(ps, rs, m, c): rs[p2]['practice']['items'].insert(0, copy.deepcopy(rs[rid]['practice']['items'][0]))
+        def d_qnone(ps, rs, m, c): rs[p2]['practice']['items'].pop()
+        def d_qorder(ps, rs, m, c):
+            if len(rs[p2]['practice']['items']) < 2: raise LookupError
+            rs[p2]['practice']['items'].reverse()
+        def d_title(ps, rs, m, c): rs[p2]['title'] = 'Another Title'
+        def d_type(ps, rs, m, c): ps[1]['v2_type'] = 'drug'
+        def d_norec(ps, rs, m, c): rs.pop(p2)
+        def d_nbme(ps, rs, m, c): m['legacy'][0]['html'] = m['legacy'][0]['html'].replace('<div>', '<div data-nbme="N999">', 1)
+        def d_unnamed(ps, rs, m, c): c['added'] = [x for x in c['added'] if x['to_brief'] != p2][:0] + [x for x in c['added'] if x['to_brief'] != p2]
+        def d_attr(ps, rs, m, c): rs[rid]['attrs'] = dict(rs[rid].get('attrs') or {}, **{'data-shelf': 'zz'})
+        tests = [('row with no part', 'v2-split', d_nopart), ('row naming a brief that is not a part', 'v2-split', d_badpart),
+                 ('page line in two parts', 'v2-split', d_double), ('page line in no part', 'v2-split', d_lost),
+                 ('practice item in two parts', 'v2-split', d_qboth), ('practice item in no part', 'v2-split', d_qnone),
+                 ('practice items out of page order', 'v2-split', d_qorder), ('part title off its split row', 'v2-split', d_title),
+                 ('part type off its split row', 'v2-split', d_type), ('part with no record', 'v2-split', d_norec),
+                 ('NBME link in no part', 'v2-split', d_nbme), ('part lines named by nothing', 'v2-source', d_unnamed),
+                 ('parent part attributes changed', 'v2-identity', d_attr)]
+        for name, code, fn in tests:
+            ps, rs, m, c = copy.deepcopy(parts), copy.deepcopy(recs), copy.deepcopy(move), copy.deepcopy(claims)
+            try:
+                fn(ps, rs, m, c)
+            except (LookupError, KeyError, IndexError) as e:
+                rows.append((rid, 'split: ' + name, code, 'NOT PLANTED (%s)' % type(e).__name__)); bad += 1
+                continue
+            got = set(x[0] for x in run(ps, rs, m, c))
+            ok = code in got
+            rows.append((rid, 'split: ' + name, code, 'caught' if ok else 'MISSED (got %s)' % (', '.join(sorted(got)) or 'nothing')))
+            bad += not ok
+    u = nbme_have({'a': [{'src': 'N1 N2', 'nbme': True}]}) | nbme_have({'b': {'src': 'N3', 'nbme': True}})
+    ok = u == {'N1', 'N2', 'N3'}
+    rows.append(('split', 'NBME links of two parts join', 'none', 'passes' if ok else 'FAILS %s' % sorted(u)))
+    return bad + (not ok)
 
 def _scores(o):
     if isinstance(o, dict):
@@ -924,7 +1112,7 @@ def main(a):
             print('%-12s %s\n%-12s fix: %s' % (k, d, '', fx))
         return 0
     opt = lambda k: a[a.index(k) + 1] if k in a else None
-    flags = ('--ids', '--move', '--sources', '--waive', '--held-ok', '--schema', '--lint', '--held-out')
+    flags = ('--ids', '--move', '--sources', '--waive', '--held-ok', '--schema', '--lint', '--held-out', '--splits')
     pos = [x for i, x in enumerate(a) if not x.startswith('--') and (i == 0 or a[i - 1] not in flags)]
     cmd = pos[0] if pos else ''
     if cmd == 'lines':
@@ -947,7 +1135,7 @@ def main(a):
         return selftest(pos[1], env)
     if cmd == 'check':
         res = check_dir(pos[1], env, set(opt('--ids').split(',')) if opt('--ids') else None, opt('--move'), opt('--sources'),
-                        opt('--waive'), opt('--held-ok'), opt('--held-out'))
+                        opt('--waive'), opt('--held-ok'), opt('--held-out'), splits=read_splits(opt('--splits')))
         bad = 0
         for rid, f in res.items():
             print('%-20s %s' % (rid, 'PASS' if not f else 'FAIL %d' % len(f)))

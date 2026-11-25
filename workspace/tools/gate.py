@@ -791,7 +791,8 @@ def check_v2(page, g, rdir=None):
     if not have:
         return
     res = gate_v2.check_dir(rdir, gate_v2.Env(), set(ids) & have, os.path.join(rdir, 'move'), os.path.join(rdir, 'sources'),
-                            os.path.join(rdir, 'WAIVE.csv'), os.path.join(rdir, 'HELD_OK.csv'))
+                            os.path.join(rdir, 'WAIVE.csv'), os.path.join(rdir, 'HELD_OK.csv'),
+                            splits=gate_v2.read_splits(os.path.join(rdir, 'SPLITS.csv')))
     for rid, fs in res.items():
         for n, (code, msg) in enumerate(fs):
             g.fail(code, '%s %d' % (rid, n), '%s: %s' % (rid, msg))
